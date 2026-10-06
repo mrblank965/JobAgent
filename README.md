@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JobAgent AI 求职智能助手
 
-## Getting Started
+JobAgent 是五人课程小组共同开发的 AI 求职辅助网站。中期版本聚焦一条核心流程：上传简历、粘贴 JD、分析匹配情况、给出有依据的修改建议。
 
-First, run the development server:
+## 第一次运行
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+在浏览器打开 <http://localhost:3000>。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 中期版本范围
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- PDF/DOCX 简历上传和文本提取
+- JD 结构化解析
+- 简历与 JD 匹配分析
+- 已匹配、部分匹配、缺失项和修改建议展示
+- DeepSeek API 仅由服务端调用
 
-## Learn More
+暂不包含 OCR、招聘网站抓取、自动投递、用户登录和复杂数据库。
 
-To learn more about Next.js, take a look at the following resources:
+## 分支建议
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| 分支 | 负责内容 |
+| --- | --- |
+| `feature/resume-parser` | 简历上传和 PDF/DOCX 解析 |
+| `feature/jd-parser` | JD 结构化解析 |
+| `feature/match-analysis` | 匹配分析和建议生成 |
+| `feature/result-page` | 结果页和交互展示 |
+| `main` | 始终保持可运行的团队正式版本 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+每位成员从最新的 `main` 创建自己的功能分支。完成后先运行检查，再推送分支并发起 Pull Request；不要直接向 `main` 上传未检查的代码。
 
-## Deploy on Vercel
+## 安全要求
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- DeepSeek API Key 只写入本机 `.env.local`。
+- 不上传真实用户简历和个人信息。
+- `.env.local`、`node_modules` 和构建文件已经被 `.gitignore` 排除。
+- 仓库中的演示简历必须匿名化。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+更完整的协作方法见 [`docs/TEAM_WORKFLOW.md`](docs/TEAM_WORKFLOW.md)。
