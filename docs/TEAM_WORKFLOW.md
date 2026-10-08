@@ -26,3 +26,15 @@
 ## 统一数据格式
 
 数据类型集中放在 `src/types/analysis.ts`。各模块先遵守这一约定，后续如需修改，由涉及成员共同确认后再合并。
+
+## 五人模块分工
+
+| 成员 | 分支 | 主要目录 | 验收结果 |
+| --- | --- | --- | --- |
+| A 队长/集成 | `feature/integration` | `layout.tsx`、`components/layout`、`types`、部署配置 | 主分支始终能运行，各模块能组合 |
+| B 简历解析 | `feature/resume-parser` | `components/resume`、`api/parse-resume`、`lib/parsers` | PDF/DOCX 能提取文字并形成 ResumeData |
+| C JD 与 AI | `feature/jd-parser` | `components/jd`、`api/analyze-jd`、`lib/ai` | JD 能通过模型生成并校验 JDData |
+| D 匹配优化 | `feature/match-analysis` | `api/analyze-match`、部分 `components/analysis` | 生成 MatchResult，不编造经历 |
+| E 结果与测试 | `feature/result-page` | `app/match`、部分 `components/analysis`、`data/demo` | 结果页、异常状态、演示数据和测试通过 |
+
+每个人可以修改自己模块需要的多个文件，但如果要修改 `src/types/analysis.ts` 或公共布局，必须先在群里说明，因为这些文件会同时影响其他成员。

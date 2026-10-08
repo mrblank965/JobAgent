@@ -42,3 +42,5 @@ npm run dev
 - 仓库中的演示简历必须匿名化。
 
 更完整的协作方法见 [`docs/TEAM_WORKFLOW.md`](docs/TEAM_WORKFLOW.md)。
+
+仓库中每个文件夹和文件的中文说明见 [`docs/REPOSITORY_MAP.md`](docs/REPOSITORY_MAP.md)。
