@@ -1,8 +1,15 @@
+import mammoth from "mammoth";
+import { normalizeText } from "./resumeText";
+
 /**
  * 成员 B 负责：从 DOCX 文件中提取文字。
- * 这里故意不返回假数据；接入 DOCX 解析库后再替换实现。
+ *
+ * 用 mammoth 的 extractRawText，它按段落输出纯文字，一段一行。
+ * 段落结构正好是简历解析需要的，所以不做额外处理。
  */
-export async function extractTextFromDocx(_file: File): Promise<string> {
-  void _file;
-  throw new Error("DOCX 解析器尚未实现");
+export async function extractTextFromDocx(file: File): Promise<string> {
+  const buffer = Buffer.from(await file.arrayBuffer());
+  const result = await mammoth.extractRawText({ buffer });
+
+  return normalizeText(result.value);
 }
