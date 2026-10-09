@@ -1,23 +1,490 @@
 @import "tailwindcss";
 
+/*
+ * 设计系统：编辑式简约。
+ *
+ * 骨架、分区、组件范式完全对齐参考页 jobagent/index.html，
+ * 配色换成 Claude 的暖陶土色系，主色不再用墨绿。
+ * 改主题只动下面这一段变量。
+ */
 :root {
-  --background: #f4f7fb;
-  --foreground: #0f172a;
+  /* 表面 */
+  --page-bg: #f4efe4;
+  --surface-card: #fbf7ee;
+  --surface-nested: #f1ead9;
+
+  /* 文字 */
+  --text: #2b2a25;
+  --text-secondary: #6f675a;
+  --text-tertiary: #9a907e;
+
+  /* 主色：深松绿，和参考页一致 */
+  --accent: #2e4d3d;
+  --accent-2: #3f6b55;
+  --accent-muted: #e4ebe2;
+  --on-accent: #f6f2e7;
+
+  /* 辅助色 */
+  --clay: #b07a45;
+  --clay-muted: #f1e3d2;
+
+  /* 语义色：命中、缺口、部分匹配 */
+  --hit: #3f6b55;
+  --hit-bg: #e4ebe2;
+  --miss: #a85a48;
+  --miss-bg: #f5e2db;
+  --partial: #b07a45;
+  --partial-bg: #f3e8d6;
+
+  /* 模块色，五个都是同一调性的低饱和色，放在一起不打架 */
+  --module-1: #3f6b55;
+  --module-2: #7a6a4f;
+  --module-3: #8a5a44;
+  --module-4: #5a6b7a;
+  --module-5: #6b7a4f;
+
+  /* 线与危险态 */
+  --border: #e0d7c3;
+  --border-input: #c9bda3;
+  --danger: #a85a48;
+  --danger-muted: #f5e2db;
+
+  /* 侧边栏 */
+  --sidebar-bg: #2e4d3d;
+  --sidebar-bg2: #274234;
+  --sidebar-text: #e9e4d4;
+  --sidebar-muted: #a9b5a8;
+  --sidebar-active: #3a5c49;
+
+  /* 圆角与阴影 */
+  --radius-control: 6px;
+  --radius-tile: 10px;
+  --radius-card: 14px;
+  --radius-sheet: 18px;
+  --shadow-card: 0 1px 2px rgba(60, 50, 30, 0.05), 0 6px 20px -10px rgba(60, 50, 30, 0.18);
+  --shadow-overlay: 0 10px 40px -10px rgba(50, 42, 25, 0.35);
+
+  /* 字体 */
+  --font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --serif: "Songti SC", "STSong", "Noto Serif SC", "SimSun", serif;
+  --mono: "SF Mono", Menlo, "JetBrains Mono", Consolas, monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --color-page: var(--page-bg);
+  --color-surface: var(--surface-card);
+  --color-nested: var(--surface-nested);
+  --color-ink: var(--text);
+  --color-ink2: var(--text-secondary);
+  --color-ink3: var(--text-tertiary);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent-2);
+  --color-accentmuted: var(--accent-muted);
+  --color-line: var(--border);
+  --color-hit: var(--hit);
+  --color-miss: var(--miss);
+  --color-partial: var(--partial);
+
+  --font-sans: var(--font);
+  --font-serif: var(--serif);
+  --font-mono: var(--mono);
+
+  --radius-card: var(--radius-card);
+  --shadow-card: var(--shadow-card);
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
 
 body {
-  margin: 0;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font);
+  background: var(--page-bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-button, input, textarea { font: inherit; }
+/* 极淡的点阵底纹，让大块留白不显得空 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  z-index: 0;
+  background-image: radial-gradient(var(--accent) 0.5px, transparent 0.5px);
+  background-size: 14px 14px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-input);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- 骨架 ---------- */
+.app {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.side {
+  width: 222px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--sidebar-bg), var(--sidebar-bg2));
+  color: var(--sidebar-text);
+  padding: 26px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 21px;
+  letter-spacing: 1px;
+  padding: 0 10px 4px;
+}
+.brand small {
+  display: block;
+  font-family: var(--font);
+  font-size: 11px;
+  color: var(--sidebar-muted);
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-control);
+  color: var(--sidebar-muted);
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 13.5px;
+  transition: 0.15s;
+  text-decoration: none;
+}
+.nav-item .ni-num {
+  font-family: var(--serif);
+  font-size: 11px;
+  opacity: 0.7;
+  width: 16px;
+}
+.nav-item:hover {
+  color: var(--sidebar-text);
+  background: rgba(255, 255, 255, 0.06);
+}
+.nav-item.active {
+  background: var(--sidebar-active);
+  color: var(--sidebar-text);
+}
+
+.side-foot {
+  margin-top: auto;
+  padding: 10px;
+  font-size: 11px;
+  color: var(--sidebar-muted);
+  line-height: 1.7;
+}
+.dot-live {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  margin-right: 5px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px 36px 60px;
+  max-width: 1240px;
+}
+
+/* ---------- 页头 ---------- */
+.view-head {
+  margin-bottom: 20px;
+}
+/* 标题上方一小段色条，每个页面用不同的 Claude 系颜色 */
+.view-head::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+  margin-bottom: 12px;
+}
+.view-head.blue::before {
+  background: var(--module-2);
+}
+.view-head.teal::before {
+  background: var(--module-3);
+}
+.view-head.plum::before {
+  background: var(--module-4);
+}
+.view-head.clay::before {
+  background: var(--module-5);
+}
+.view-head h1 {
+  font-size: 25px;
+  margin-bottom: 4px;
+}
+.view-head p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* ---------- 容器 ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 18px;
+  box-shadow: var(--shadow-card);
+}
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.muted {
+  color: var(--text-secondary);
+}
+/* 卡片内的小节标题 */
+.subhead {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.tiny {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.gap8 {
+  gap: 8px;
+}
+.mt8 {
+  margin-top: 8px;
+}
+.mt12 {
+  margin-top: 12px;
+}
+.mt16 {
+  margin-top: 16px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mb12 {
+  margin-bottom: 12px;
+}
+
+/* ---------- 按钮 ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border-input);
+  background: var(--surface-card);
+  color: var(--text);
+  padding: 7px 14px;
+  border-radius: var(--radius-control);
+  transition: 0.15s;
+  text-decoration: none;
+}
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+.btn.primary:hover {
+  background: var(--accent-2);
+  color: var(--on-accent);
+}
+.btn.clay {
+  background: var(--clay);
+  border-color: var(--clay);
+  color: #fff;
+}
+.btn.ghost {
+  border-color: transparent;
+  background: transparent;
+  color: var(--text-secondary);
+}
+.btn.ghost:hover {
+  background: var(--surface-nested);
+  color: var(--text);
+}
+.btn.danger {
+  color: var(--danger);
+  border-color: var(--miss);
+}
+.btn.sm {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ---------- 表单 ---------- */
+.input,
+textarea.input,
+select.input {
+  width: 100%;
+  background: var(--surface-card);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-control);
+  padding: 8px 10px;
+  outline: none;
+  transition: 0.15s;
+}
+.input:focus,
+textarea.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-muted);
+}
+textarea.input {
+  line-height: 1.7;
+  resize: vertical;
+}
+label.fl {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 10px 0 4px;
+}
+
+/* ---------- 标签 ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--surface-nested);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  margin: 0 6px 6px 0;
+}
+.chip.hit {
+  background: var(--hit-bg);
+  color: var(--hit);
+  border-color: #cddccf;
+}
+.chip.miss {
+  background: var(--miss-bg);
+  color: var(--miss);
+  border-color: #e3c9c0;
+}
+.chip.partial {
+  background: var(--partial-bg);
+  color: var(--partial);
+  border-color: #e0d0b2;
+}
+.chip .x {
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 0.55;
+}
+.chip .x:hover {
+  opacity: 1;
+}
+
+.tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.tag.hit {
+  background: var(--hit-bg);
+  color: var(--hit);
+}
+.tag.miss {
+  background: var(--miss-bg);
+  color: var(--miss);
+}
+.tag.partial {
+  background: var(--partial-bg);
+  color: var(--partial);
+}

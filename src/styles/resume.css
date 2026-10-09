@@ -1,0 +1,197 @@
+/* 小动物头像选择。一排小圆钮，选中的描边加深 */
+.avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.avatar-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-card);
+  font-size: 15px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  transition: 0.15s;
+}
+.avatar-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.avatar-btn.active {
+  border-color: var(--accent);
+  background: var(--accent-muted);
+  box-shadow: 0 0 0 2px var(--accent-muted);
+}
+/* 标题前的小头像，选好了才会出现 */
+.avatar-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--accent-muted);
+  font-size: 14px;
+  line-height: 1;
+  vertical-align: -3px;
+}
+
+/* 候选优势的一行，压到很扁 */
+.candidate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+}
+.candidate .btn.sm {
+  width: 26px;
+  justify-content: center;
+  padding: 2px 0;
+  flex-shrink: 0;
+}
+
+.copyrow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.copyrow .k {
+  width: 110px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.copyrow .v {
+  flex: 1;
+  min-width: 0;
+}
+
+.warn-text {
+  color: var(--partial);
+}
+
+.rules summary {
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-secondary);
+  user-select: none;
+}
+.rules summary:hover {
+  color: var(--accent);
+}
+
+.ev {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  padding-left: 14px;
+  border-left: 2px solid var(--border);
+  margin: 4px 0 4px 6px;
+}
+
+table.t {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.t th,
+table.t td {
+  border-bottom: 1px solid var(--border);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+table.t th {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 12px;
+  background: var(--surface-nested);
+}
+
+/* ---------- 经历条目 ---------- */
+.entry {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-tile);
+  background: var(--surface-card);
+  padding: 14px;
+}
+/* 条目左侧竖线的配色变体，用来区分不同分区 */
+.entry.b {
+  border-left-color: var(--module-2);
+}
+.entry.t {
+  border-left-color: var(--module-3);
+}
+.entry.p {
+  border-left-color: var(--module-4);
+}
+.entry.c {
+  border-left-color: var(--module-5);
+}
+
+/* 统计数字的配色变体 */
+.stat .n.b {
+  color: var(--module-2);
+}
+.stat .n.t {
+  color: var(--module-3);
+}
+.stat .n.p {
+  color: var(--module-4);
+}
+.stat .n.c {
+  color: var(--module-5);
+}
+.entry-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+.entry-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+/* 条目里的字段网格。名称宽一些，职位窄一些 */
+.entry-fields {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8px;
+}
+/* 时间行：两个日期加中间一个至字，右侧留给操作按钮 */
+.entry-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.entry-time .input {
+  width: 148px;
+}
+/* 紧凑模式下的条目内边距 */
+.entry.tight {
+  padding: 12px;
+}
+
+@media (max-width: 1000px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .stat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

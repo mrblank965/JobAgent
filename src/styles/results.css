@@ -1,0 +1,140 @@
+/* ---------- 面试题 ---------- */
+.iq {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-tile);
+  padding: 14px;
+  margin-bottom: 10px;
+  background: var(--surface-card);
+}
+.iq .q {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 13.5px;
+}
+.iq .q::before {
+  content: "Q · ";
+  color: var(--clay);
+  font-family: var(--serif);
+}
+
+/* ---------- 投递看板 ---------- */
+.board {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(180px, 1fr));
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.kcol {
+  background: var(--surface-nested);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-tile);
+  padding: 10px;
+  min-height: 300px;
+}
+.kcol h4 {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 4px 10px;
+}
+.kcol h4 .cnt {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 11px;
+  padding: 0 8px;
+  color: var(--text-secondary);
+  font-family: var(--font);
+  font-weight: 400;
+}
+.kcol.dragover {
+  outline: 2px dashed var(--accent);
+  outline-offset: -3px;
+}
+.kcard {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  padding: 10px 11px;
+  margin-bottom: 8px;
+  cursor: grab;
+  box-shadow: var(--shadow-card);
+}
+.kcard:active {
+  cursor: grabbing;
+}
+.kcard .co {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.kcard .ti {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 2px 0 4px;
+}
+.kcard .ops {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+}
+
+/* ---------- 切换标签 ---------- */
+.itab {
+  padding: 4px 12px;
+  border: 1px solid var(--border-input);
+  background: var(--surface-card);
+  border-radius: 99px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  transition: 0.15s;
+}
+.itab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.itab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+/* ---------- 列表与提示 ---------- */
+.empty {
+  text-align: center;
+  color: var(--text-tertiary);
+  padding: 44px 20px;
+  border: 1px dashed var(--border-input);
+  border-radius: var(--radius-card);
+  background: rgba(255, 255, 255, 0.35);
+}
+.empty .big {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.errbox {
+  background: var(--danger-muted);
+  border: 1px solid #e3c9c0;
+  border-left: 3px solid var(--danger);
+  border-radius: var(--radius-tile);
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: #7a3f34;
+}
+.errbox b {
+  font-family: var(--serif);
+  font-size: 14px;
+}
+
+.warnbox {
+  background: var(--clay-muted);
+  border: 1px solid #e0c9a8;
+  border-radius: var(--radius-tile);
+  padding: 10px 14px;
+  font-size: 12.5px;
+  color: #7a5a30;
+}
+
