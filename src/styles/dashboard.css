@@ -1,0 +1,150 @@
+/* ---------- 概览页头 ---------- */
+.greet {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  min-height: 190px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 18px;
+}
+.greet .gb {
+  position: absolute;
+  inset: 0;
+  background: url("/images/greet-banner.jpg") right center / cover no-repeat;
+}
+.greet .gm {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 239, 228, 0.97) 0%,
+    rgba(244, 239, 228, 0.82) 42%,
+    rgba(244, 239, 228, 0.15) 75%
+  );
+  padding: 30px 32px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.greet h1 {
+  font-size: 30px;
+  line-height: 1.3;
+}
+.greet .sub {
+  color: var(--text-secondary);
+  margin-top: 6px;
+  max-width: 520px;
+}
+
+/* ---------- 上传区 ---------- */
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 150px;
+  margin-top: 10px;
+  border: 1px dashed var(--border-input);
+  border-radius: var(--radius-tile);
+  background: var(--surface-nested);
+  cursor: pointer;
+  transition: 0.15s;
+}
+.dropzone:hover {
+  border-color: var(--accent);
+}
+.dropzone .big {
+  font-size: 22px;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+
+/* ---------- 统计与进度 ---------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.stat {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-tile);
+  padding: 14px;
+  text-align: center;
+}
+.stat .n {
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--accent);
+}
+.stat .l {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.nextstep {
+  border-left: 3px solid var(--clay);
+  background: var(--clay-muted);
+  border-radius: 0 var(--radius-tile) var(--radius-tile) 0;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+.nextstep b {
+  font-family: var(--serif);
+}
+
+/* 圆环分数，用 conic-gradient 画进度 */
+.ring {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+.ring > span {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--surface-card);
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-size: 24px;
+  color: var(--accent);
+}
+
+/* 大号衬线数字，用于分数和统计值 */
+.bignum {
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1.2;
+  color: var(--accent);
+}
+.bignum small {
+  font-size: 18px;
+  margin-left: 2px;
+}
+
+.cards.c3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.scorebar {
+  height: 8px;
+  background: var(--surface-nested);
+  border-radius: 99px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+.scorebar > i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  border-radius: 99px;
+}
+
