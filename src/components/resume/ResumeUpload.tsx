@@ -1,23 +1,34 @@
 "use client";
 
-import { useState } from "react";
+type ResumeUploadProps = {
+  fileName: string;
+  onSelect: (file: File) => void;
+  disabled: boolean;
+};
 
-export function ResumeUpload() {
-  const [fileName, setFileName] = useState("");
-
+/**
+ * 上传按钮。样式和参考页的普通按钮一致，内部包一个隐藏的文件输入。
+ * 选完文件后清空 input 的值，这样同一个文件再选一次也能触发。
+ */
+export function ResumeUpload({ fileName, onSelect, disabled }: ResumeUploadProps) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <label className="flex min-h-64 cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-6 text-center transition hover:border-blue-400 hover:bg-blue-50/40">
-        <span className="mb-4 grid h-12 w-12 place-items-center rounded-full bg-blue-100 text-2xl text-blue-700">↑</span>
-        <span className="font-semibold">{fileName || "点击选择 PDF 或 DOCX 简历"}</span>
-        <span className="mt-2 text-sm text-slate-500">当前只完成文件选择；文字提取由简历解析模块接入。</span>
-        <input
-          className="sr-only"
-          type="file"
-          accept=".pdf,.docx"
-          onChange={(event) => setFileName(event.target.files?.[0]?.name ?? "")}
-        />
-      </label>
-    </div>
+    <label
+      className="btn"
+      style={{ cursor: disabled ? "not-allowed" : "pointer", opacity: disabled ? 0.45 : 1 }}
+    >
+      📄 上传 PDF / DOCX 提取
+      <input
+        type="file"
+        accept=".pdf,.docx"
+        className="sr-only"
+        disabled={disabled}
+        onChange={(event) => {
+          const file = event.target.files?.[0];
+          event.target.value = "";
+          if (file) onSelect(file);
+        }}
+      />
+      {fileName ? <span className="tiny">{fileName}</span> : null}
+    </label>
   );
 }
