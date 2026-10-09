@@ -1,46 +1,51 @@
-# JobAgent AI 求职智能助手
+# JobAgent AI 求职工作台
 
-JobAgent 是五人课程小组共同开发的 AI 求职辅助网站。中期版本聚焦一条核心流程：上传简历、粘贴 JD、分析匹配情况、给出有依据的修改建议。
+JobAgent 是面向课程协作的 Next.js 求职辅助网站，覆盖简历解析、岗位拆解、方向分析、匹配展示、简历定制、投递管理和面试练习。
 
-## 第一次运行
+## 本地运行
 
 ```bash
 npm install
-cp .env.example .env.local
 npm run dev
 ```
 
-在浏览器打开 <http://localhost:3000>。
+浏览器打开 <http://localhost:3000>。生产检查使用：
 
-## 中期版本范围
+```bash
+npm run lint
+npm run build -- --webpack
+```
 
-- PDF/DOCX 简历上传和文本提取
-- JD 结构化解析
-- 简历与 JD 匹配分析
-- 已匹配、部分匹配、缺失项和修改建议展示
-- DeepSeek API 仅由服务端调用
+## 当前功能
 
-暂不包含 OCR、招聘网站抓取、自动投递、用户登录和复杂数据库。
+- PDF、DOCX、纯文本和图片 OCR 简历解析
+- 简历教育、经历、项目、技能和优势的结构化编辑
+- JD 粘贴、公开网页读取、截图 OCR 和本地规则拆解
+- 岗位方向适配、关键词命中与能力缺口分析
+- 按目标 JD 定制简历
+- 投递看板与面试练习
+- 无 Key 的 Prompt 复制模式，以及只保存在页面内存中的 API 直连配置
 
-## 分支建议
+当前数据保存在浏览器页面内存中，刷新后清空；项目不包含账号和数据库。
+
+## 分支流程
 
 | 分支 | 负责内容 |
 | --- | --- |
-| `feature/resume-parser` | 简历上传和 PDF/DOCX 解析 |
-| `feature/jd-parser` | JD 结构化解析 |
-| `feature/match-analysis` | 匹配分析和建议生成 |
-| `feature/result-page` | 结果页和交互展示 |
-| `main` | 始终保持可运行的团队正式版本 |
+| `feature/integration` | 公共底座、完整联调和最终验收 |
+| `feature/resume-parser` | 简历上传、OCR、解析与编辑 |
+| `feature/jd-parser` | JD 获取、拆解与岗位信息分析 |
+| `feature/match-analysis` | 方向匹配与简历定制逻辑 |
+| `feature/result-page` | 结果展示、投递看板和面试页面 |
+| `main` | 经过验收的稳定版本 |
 
-每位成员从最新的 `main` 创建自己的功能分支。完成后先运行检查，再推送分支并发起 Pull Request；不要直接向 `main` 上传未检查的代码。
+功能分支先向 `feature/integration` 发起 Pull Request；完整版本通过 lint、生产构建和页面验收后，再由 `feature/integration` 向 `main` 发起 Pull Request。不要直接在 `main` 开发。
 
 ## 安全要求
 
-- DeepSeek API Key 只写入本机 `.env.local`。
-- 不上传真实用户简历和个人信息。
-- `.env.local`、`node_modules` 和构建文件已经被 `.gitignore` 排除。
-- 仓库中的演示简历必须匿名化。
+- 不提交 `.env.local`、API Key、Token 或密码。
+- 不提交真实简历、手机号、邮箱或其他个人隐私。
+- 不提交 `node_modules`、`.next` 或其他构建产物。
+- 页面中的 API Key 仅保存在当前内存状态，不写入仓库或本地存储。
 
-更完整的协作方法见 [`docs/TEAM_WORKFLOW.md`](docs/TEAM_WORKFLOW.md)。
-
-仓库中每个文件夹和文件的中文说明见 [`docs/REPOSITORY_MAP.md`](docs/REPOSITORY_MAP.md)。
+协作规则见 [`docs/TEAM_WORKFLOW.md`](docs/TEAM_WORKFLOW.md)，目录说明见 [`docs/REPOSITORY_MAP.md`](docs/REPOSITORY_MAP.md)。

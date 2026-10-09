@@ -1,40 +1,65 @@
 # 五人协作流程
 
+## 分支与职责
+
+| 角色 | 分支 | 主要职责 |
+| --- | --- | --- |
+| A 队长/集成 | `feature/integration` | 公共布局、共享状态、数据契约、联调和验收 |
+| B 简历解析 | `feature/resume-parser` | 简历上传、OCR、解析、结构化编辑 |
+| C JD 解析 | `feature/jd-parser` | JD 获取、拆解和岗位信息分析 |
+| D 匹配分析 | `feature/match-analysis` | 岗位方向、匹配和简历定制逻辑 |
+| E 结果展示 | `feature/result-page` | 匹配结果、投递看板、面试页面和交互测试 |
+
 ## 开始开发前
 
-1. 从仓库下载最新代码。
-2. 确认当前任务和自己的分支名称。
-3. 不在 `main` 分支直接开发。
-4. 不修改不属于自己任务的文件，确需修改时先在群里说明。
+1. 确认自己当前所在分支。
+2. 保证工作区没有来源不明的修改。
+3. 先同步公共底座，再开始本模块开发。
+4. 不直接在 `main` 开发或推送。
+5. 修改共享文件前先与集成人员确认。
 
-## 完成一个小功能后
+本机可以用一个目录切换分支，也可以为各分支建立 Git worktree。worktree 外层目录仅存在于本机，不会上传到 GitHub。
 
-1. 在自己的电脑上运行网页并检查功能。
-2. 查看本次修改文件，确认没有密钥、真实简历或无关文件。
-3. 使用清楚的中文提交信息，例如“新增简历上传组件”。
-4. 推送自己的分支，在 GitHub 创建 Pull Request。
-5. 至少由另一位成员运行检查后，才合并到 `main`。
+## Pull Request 顺序
+
+```text
+feature/resume-parser ─┐
+feature/jd-parser ─────┤
+feature/match-analysis ├─→ feature/integration ─→ main
+feature/result-page ───┘
+```
+
+功能分支的 PR 目标必须是 `feature/integration`。集成分支完成全站检查后，再向 `main` 创建最终 PR；未经负责人验收，不合并最终 PR。
+
+## 每次提交前检查
+
+1. 查看改动文件，确认都属于本次职责。
+2. 确认没有 `.env.local`、API Key、Token、真实简历和个人隐私。
+3. 确认没有 `node_modules`、`.next` 或临时文件。
+4. 运行 `npm run lint`。
+5. 运行 `npm run build -- --webpack`。
+6. 在 PR 中写明完成内容、测试方式、影响页面和已知限制。
+
+## 共享文件
+
+下列文件是冲突热点，由集成人员协调：
+
+- `src/app/layout.tsx`
+- `src/app/globals.css`
+- `src/styles/`
+- `src/components/layout/`
+- `src/lib/store.tsx`
+- `src/types/analysis.ts`
+- `src/lib/schemas/analysis.ts`
+- `package.json`、`package-lock.json`、`next.config.ts`
+
+如功能确实需要修改共享文件，应在 PR 说明中单独列出原因。
 
 ## 合并验收
 
-- `npm run lint` 通过。
-- `npm run build` 通过。
-- 首页可以打开，原有主流程没有损坏。
-- 没有上传 `.env.local`、真实简历或 API Key。
-- Pull Request 说明包含：完成内容、测试方法和页面截图。
-
-## 统一数据格式
-
-数据类型集中放在 `src/types/analysis.ts`。各模块先遵守这一约定，后续如需修改，由涉及成员共同确认后再合并。
-
-## 五人模块分工
-
-| 成员 | 分支 | 主要目录 | 验收结果 |
-| --- | --- | --- | --- |
-| A 队长/集成 | `feature/integration` | `layout.tsx`、`components/layout`、`types`、部署配置 | 主分支始终能运行，各模块能组合 |
-| B 简历解析 | `feature/resume-parser` | `components/resume`、`api/parse-resume`、`lib/parsers` | PDF/DOCX 能提取文字并形成 ResumeData |
-| C JD 与 AI | `feature/jd-parser` | `components/jd`、`api/analyze-jd`、`lib/ai` | JD 能通过模型生成并校验 JDData |
-| D 匹配优化 | `feature/match-analysis` | `api/analyze-match`、部分 `components/analysis` | 生成 MatchResult，不编造经历 |
-| E 结果与测试 | `feature/result-page` | `app/match`、部分 `components/analysis`、`data/demo` | 结果页、异常状态、演示数据和测试通过 |
-
-每个人可以修改自己模块需要的多个文件，但如果要修改 `src/types/analysis.ts` 或公共布局，必须先在群里说明，因为这些文件会同时影响其他成员。
+- lint 和生产构建通过。
+- 首页、导航和全部功能页面可以打开。
+- 简历、JD、匹配、定制、看板和面试流程能够组合。
+- 没有秘密、真实个人数据或构建产物。
+- 功能 PR 已合并到 `feature/integration`。
+- 最终 PR 由负责人确认后才合并到 `main`。
