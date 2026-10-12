@@ -12,7 +12,7 @@ export default function AnalysisPage() {
     return (
       <>
         <div className="view-head">
-          <h1>🧭 岗位分析</h1>
+          <h1>🧭 方向分析</h1>
         </div>
         <div className="empty">
           <span className="big">🪶</span>
@@ -30,7 +30,7 @@ export default function AnalysisPage() {
   return (
     <>
       <div className="view-head">
-        <h1>🧭 岗位分析</h1>
+        <h1>🧭 方向分析</h1>
         <p>基于你的技能，匹配金融求职八类方向：适配度 · 强项 · 补强方向 · 行动建议。</p>
       </div>
 

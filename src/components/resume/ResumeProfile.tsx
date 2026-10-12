@@ -27,7 +27,7 @@ export function ResumeProfile({ value, onChange }: ResumeProfileProps) {
           {profile.avatar ? <span className="avatar-badge">{profile.avatar}</span> : null}
           结构化画像
         </h3>
-        <span className="tiny">数据只在页面内存里，刷新即清空</span>
+        <span className="tiny">自动保存到本机浏览器</span>
       </div>
 
       <div className="avatar-row mt8">

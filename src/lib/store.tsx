@@ -2,23 +2,47 @@
 
 import {
   createContext,
+  useCallback,
   useContext,
+  useEffect,
   useMemo,
+  useRef,
   useState,
   type Dispatch,
   type ReactNode,
   type SetStateAction,
 } from "react";
+import {
+  clearWorkspaceSnapshot,
+  readWorkspaceSnapshot,
+  writeWorkspaceSnapshot,
+} from "@/lib/storage/workspace";
+import {
+  APPLICATION_STATUSES,
+  type AnswerBankEntry,
+  type Application,
+  type ApplicationDraft,
+  type ApplicationStatus,
+  type RecruitmentStage,
+  type ResumeVariant,
+} from "@/types/application";
+import { DIRECTIONS } from "@/lib/career";
+import type { RecognizedHeading } from "@/lib/parsers/resumeText";
+import type { ResumeData } from "@/types/analysis";
+
+export type { AnswerBankEntry, Application, ResumeVariant } from "@/types/application";
 
 /**
- * 页面内存里的共享状态。
- *
- * 只用 React state，不写 localStorage、不写数据库，刷新浏览器即清空。
- * 放在根布局的 Provider 里，所以同一个会话内跨页面切换不会丢。
+ * 页面共享状态。个人资料与求职流程保存在浏览器 IndexedDB，AI 密钥只保留在内存。
  */
 
 export type Profile = {
   name: string;
+  email: string;
+  phone: string;
+  location: string;
+  workAuthorization: string;
+  workAuthorizationConfirmed: boolean;
   /** 毕业年份。 */
   gradYear: string;
   school: string;
@@ -102,15 +126,6 @@ export type JDEntry = {
   keywords: string[];
 };
 
-export type Application = {
-  id: string;
-  company: string;
-  title: string;
-  /** 六列看板的状态，取值见 STATUSES。 */
-  status: string;
-  note: string;
-};
-
 export type InterviewRecord = {
   id: string;
   company: string;
@@ -119,7 +134,15 @@ export type InterviewRecord = {
   groups: Record<string, { q: string; a: string }[]>;
 };
 
-export const STATUSES = ["待投递", "已投递", "笔试", "面试", "Offer", "结束"];
+export type ResumeDraft = {
+  text: string;
+  fileName: string;
+  resume: ResumeData | null;
+  headings: RecognizedHeading[];
+  suspectedHeadings: string[];
+};
+
+export const STATUSES = APPLICATION_STATUSES;
 
 type StoreValue = {
   profile: Profile;
@@ -127,10 +150,26 @@ type StoreValue = {
   jds: JDEntry[];
   addJD: (entry: Omit<JDEntry, "id">) => string;
   apps: Application[];
-  addApp: (entry: Omit<Application, "id">) => void;
-  moveApp: (id: string, status: string) => void;
+  addApp: (entry: ApplicationDraft) => void;
+  moveApp: (id: string, status: ApplicationStatus) => void;
+  updateApp: (id: string, patch: Partial<Omit<Application, "id" | "timeline" | "createdAt">>) => void;
   updateAppNote: (id: string, note: string) => void;
   removeApp: (id: string) => void;
+  resumeVariants: ResumeVariant[];
+  addResumeVariant: (entry: Pick<ResumeVariant, "name" | "directionId" | "sourceText">) => void;
+  updateResumeVariant: (id: string, patch: Partial<Pick<ResumeVariant, "name" | "directionId" | "isDefault">>) => void;
+  removeResumeVariant: (id: string) => void;
+  answerBank: AnswerBankEntry[];
+  addAnswer: (entry: Pick<AnswerBankEntry, "question" | "answer" | "confirmed">) => void;
+  updateAnswer: (id: string, patch: Partial<Pick<AnswerBankEntry, "question" | "answer" | "confirmed">>) => void;
+  removeAnswer: (id: string) => void;
+  resumeDraft: ResumeDraft;
+  setResumeDraft: Dispatch<SetStateAction<ResumeDraft>>;
+  storageReady: boolean;
+  storageError: string;
+  exportWorkspace: () => string;
+  importWorkspace: (raw: string) => { ok: true } | { ok: false; error: string };
+  clearWorkspace: () => Promise<void>;
   interviews: InterviewRecord[];
   ensureInterview: (app: Application) => void;
   setInterviewAnswer: (id: string, group: string, index: number, answer: string) => void;
@@ -140,6 +179,11 @@ type StoreValue = {
 
 const emptyProfile: Profile = {
   name: "",
+  email: "",
+  phone: "",
+  location: "",
+  workAuthorization: "",
+  workAuthorizationConfirmed: false,
   gradYear: "",
   school: "",
   major: "",
@@ -156,18 +200,149 @@ const emptyProfile: Profile = {
 
 const emptyAI: AISettings = { apiBase: "https://api.deepseek.com/v1", apiKey: "", model: "deepseek-chat" };
 
+const emptyResumeDraft: ResumeDraft = {
+  text: "",
+  fileName: "",
+  resume: null,
+  headings: [],
+  suspectedHeadings: [],
+};
+
+const WORKSPACE_SCHEMA_VERSION = 1;
+
+type WorkspaceSnapshot = {
+  schemaVersion: number;
+  profile: Profile;
+  jds: JDEntry[];
+  apps: Application[];
+  interviews: InterviewRecord[];
+  resumeVariants: ResumeVariant[];
+  answerBank: AnswerBankEntry[];
+  resumeDraft?: ResumeDraft;
+};
+
 const StoreContext = createContext<StoreValue | null>(null);
 
 /** 简单的自增 id，只在页面内存里有效，不需要全局唯一。 */
 let seq = 0;
 const uid = (prefix: string) => `${prefix}_${(seq += 1)}_${Date.now().toString(36)}`;
 
+const now = () => new Date().toISOString();
+
+function createApplication(entry: ApplicationDraft): Application {
+  const createdAt = now();
+  return {
+    id: uid("app"),
+    company: entry.company,
+    title: entry.title,
+    status: entry.status ?? "待投递",
+    stage: entry.stage ?? "暂无",
+    note: entry.note ?? "",
+    jobUrl: entry.jobUrl ?? "",
+    jdId: entry.jdId ?? "",
+    resumeVariantId: entry.resumeVariantId ?? "",
+    nextAction: entry.nextAction ?? "",
+    deadline: entry.deadline ?? "",
+    blocker: entry.blocker ?? "",
+    createdAt,
+    updatedAt: createdAt,
+    timeline: [
+      { id: uid("event"), at: createdAt, type: "created", description: "创建申请记录" },
+    ],
+  };
+}
+
+function isWorkspaceSnapshot(value: unknown): value is WorkspaceSnapshot {
+  if (!value || typeof value !== "object") return false;
+  const item = value as Partial<WorkspaceSnapshot>;
+  return (
+    item.schemaVersion === WORKSPACE_SCHEMA_VERSION &&
+    !!item.profile &&
+    Array.isArray(item.jds) &&
+    Array.isArray(item.apps) &&
+    Array.isArray(item.interviews) &&
+    Array.isArray(item.resumeVariants) &&
+    Array.isArray(item.answerBank)
+  );
+}
+
+function normalizeResumeVariant(item: ResumeVariant): ResumeVariant {
+  const legacyDirection = DIRECTIONS.find((direction) => direction.name === item.targetRole);
+  return {
+    ...item,
+    directionId: item.directionId || legacyDirection?.id || "",
+  };
+}
+
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [profile, setProfile] = useState<Profile>(emptyProfile);
   const [jds, setJds] = useState<JDEntry[]>([]);
   const [apps, setApps] = useState<Application[]>([]);
   const [interviews, setInterviews] = useState<InterviewRecord[]>([]);
+  const [resumeVariants, setResumeVariants] = useState<ResumeVariant[]>([]);
+  const [answerBank, setAnswerBank] = useState<AnswerBankEntry[]>([]);
+  const [resumeDraft, setResumeDraftState] = useState<ResumeDraft>(emptyResumeDraft);
+  const resumeDraftEditedBeforeLoad = useRef(false);
+  const setResumeDraft = useCallback<Dispatch<SetStateAction<ResumeDraft>>>((next) => {
+    resumeDraftEditedBeforeLoad.current = true;
+    setResumeDraftState(next);
+  }, []);
   const [ai, setAI] = useState<AISettings>(emptyAI);
+  const [storageReady, setStorageReady] = useState(false);
+  const [storageError, setStorageError] = useState("");
+
+  useEffect(() => {
+    let cancelled = false;
+
+    readWorkspaceSnapshot()
+      .then((stored) => {
+        if (cancelled || !isWorkspaceSnapshot(stored)) return;
+        setProfile({ ...emptyProfile, ...stored.profile });
+        setJds(stored.jds);
+        setApps(stored.apps);
+        setInterviews(stored.interviews);
+        setResumeVariants(stored.resumeVariants.map(normalizeResumeVariant));
+        setAnswerBank(stored.answerBank);
+        if (!resumeDraftEditedBeforeLoad.current) {
+          setResumeDraftState(stored.resumeDraft ?? emptyResumeDraft);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setStorageError("本地数据读取失败，本次修改可能无法保留。");
+      })
+      .finally(() => {
+        if (!cancelled) setStorageReady(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const snapshot = useMemo<WorkspaceSnapshot>(
+    () => ({
+      schemaVersion: WORKSPACE_SCHEMA_VERSION,
+      profile,
+      jds,
+      apps,
+      interviews,
+      resumeVariants,
+      answerBank,
+      resumeDraft,
+    }),
+    [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft],
+  );
+
+  useEffect(() => {
+    if (!storageReady) return;
+    const timer = window.setTimeout(() => {
+      writeWorkspaceSnapshot(snapshot).catch(() => {
+        setStorageError("本地数据保存失败，请先导出备份。");
+      });
+    }, 200);
+
+    return () => window.clearTimeout(timer);
+  }, [snapshot, storageReady]);
 
   const value = useMemo<StoreValue>(() => {
     return {
@@ -183,16 +358,140 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
       apps,
       addApp(entry) {
-        setApps((current) => [...current, { ...entry, id: uid("app") }]);
+        setApps((current) => [
+          ...current,
+          createApplication({
+            ...entry,
+            resumeVariantId:
+              entry.resumeVariantId ?? resumeVariants.find((item) => item.isDefault)?.id ?? "",
+          }),
+        ]);
       },
       moveApp(id, status) {
-        setApps((current) => current.map((item) => (item.id === id ? { ...item, status } : item)));
+        setApps((current) =>
+          current.map((item) => {
+            if (item.id !== id || item.status === status) return item;
+            const updatedAt = now();
+            return {
+              ...item,
+              status,
+              updatedAt,
+              timeline: [
+                ...item.timeline,
+                { id: uid("event"), at: updatedAt, type: "status", description: `状态更新为「${status}」` },
+              ],
+            };
+          }),
+        );
+      },
+      updateApp(id, patch) {
+        setApps((current) =>
+          current.map((item) => {
+            if (item.id !== id) return item;
+            const updatedAt = now();
+            const stageChanged = patch.stage && patch.stage !== item.stage;
+            return {
+              ...item,
+              ...patch,
+              updatedAt,
+              timeline: stageChanged
+                ? [
+                    ...item.timeline,
+                    {
+                      id: uid("event"),
+                      at: updatedAt,
+                      type: "stage",
+                      description: `招聘阶段更新为「${patch.stage as RecruitmentStage}」`,
+                    },
+                  ]
+                : item.timeline,
+            };
+          }),
+        );
       },
       updateAppNote(id, note) {
         setApps((current) => current.map((item) => (item.id === id ? { ...item, note } : item)));
       },
       removeApp(id) {
         setApps((current) => current.filter((item) => item.id !== id));
+      },
+
+      resumeVariants,
+      addResumeVariant(entry) {
+        const timestamp = now();
+        setResumeVariants((current) => [
+          ...current,
+          {
+            ...entry,
+            id: uid("resume"),
+            isDefault: current.length === 0,
+            createdAt: timestamp,
+            updatedAt: timestamp,
+          },
+        ]);
+      },
+      updateResumeVariant(id, patch) {
+        setResumeVariants((current) =>
+          current.map((item) => ({
+            ...item,
+            ...(patch.isDefault ? { isDefault: false } : {}),
+          })).map((item) => (item.id === id ? { ...item, ...patch, updatedAt: now() } : item)),
+        );
+      },
+      removeResumeVariant(id) {
+        setResumeVariants((current) => {
+          const next = current.filter((item) => item.id !== id);
+          if (next.length > 0 && !next.some((item) => item.isDefault)) next[0] = { ...next[0], isDefault: true };
+          return next;
+        });
+      },
+
+      answerBank,
+      addAnswer(entry) {
+        setAnswerBank((current) => [...current, { ...entry, id: uid("answer"), updatedAt: now() }]);
+      },
+      updateAnswer(id, patch) {
+        setAnswerBank((current) =>
+          current.map((item) => (item.id === id ? { ...item, ...patch, updatedAt: now() } : item)),
+        );
+      },
+      removeAnswer(id) {
+        setAnswerBank((current) => current.filter((item) => item.id !== id));
+      },
+
+      resumeDraft,
+      setResumeDraft,
+
+      storageReady,
+      storageError,
+      exportWorkspace() {
+        return JSON.stringify(snapshot, null, 2);
+      },
+      importWorkspace(raw) {
+        try {
+          const imported: unknown = JSON.parse(raw);
+          if (!isWorkspaceSnapshot(imported)) return { ok: false, error: "文件格式或版本不受支持。" };
+          setProfile({ ...emptyProfile, ...imported.profile });
+          setJds(imported.jds);
+          setApps(imported.apps);
+          setInterviews(imported.interviews);
+          setResumeVariants(imported.resumeVariants.map(normalizeResumeVariant));
+          setAnswerBank(imported.answerBank);
+          setResumeDraftState(imported.resumeDraft ?? emptyResumeDraft);
+          return { ok: true };
+        } catch {
+          return { ok: false, error: "无法读取这个 JSON 文件。" };
+        }
+      },
+      async clearWorkspace() {
+        setProfile(emptyProfile);
+        setJds([]);
+        setApps([]);
+        setInterviews([]);
+        setResumeVariants([]);
+        setAnswerBank([]);
+        setResumeDraftState(emptyResumeDraft);
+        await clearWorkspaceSnapshot();
       },
 
       interviews,
@@ -228,7 +527,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       ai,
       setAI,
     };
-  }, [profile, jds, apps, interviews, ai]);
+  }, [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft, setResumeDraft, storageReady, storageError, snapshot, ai]);
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }
