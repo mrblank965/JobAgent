@@ -126,6 +126,8 @@ type StoreValue = {
   setProfile: Dispatch<SetStateAction<Profile>>;
   jds: JDEntry[];
   addJD: (entry: Omit<JDEntry, "id">) => string;
+  removeJD: (id: string) => void;
+  updateJD: (id: string, patch: Partial<Omit<JDEntry, "id">>) => void;
   apps: Application[];
   addApp: (entry: Omit<Application, "id">) => void;
   moveApp: (id: string, status: string) => void;
@@ -179,6 +181,14 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         const id = uid("jd");
         setJds((current) => [...current, { ...entry, id }]);
         return id;
+      },
+      removeJD(id) {
+        setJds((current) => current.filter((item) => item.id !== id));
+      },
+      updateJD(id, patch) {
+        setJds((current) =>
+          current.map((item) => (item.id === id ? { ...item, ...patch } : item)),
+        );
       },
 
       apps,
