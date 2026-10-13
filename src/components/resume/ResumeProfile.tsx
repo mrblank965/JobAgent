@@ -60,6 +60,26 @@ export function ResumeProfile({ value, onChange }: ResumeProfileProps) {
           />
         </div>
         <div>
+          <label className="fl">邮箱</label>
+          <input
+            className="input"
+            type="email"
+            value={value.email ?? ""}
+            onChange={(event) => onChange({ ...value, email: event.target.value })}
+            placeholder="未识别到邮箱，可以补充"
+          />
+        </div>
+        <div>
+          <label className="fl">手机号</label>
+          <input
+            className="input"
+            type="tel"
+            value={value.phone ?? ""}
+            onChange={(event) => onChange({ ...value, phone: event.target.value })}
+            placeholder="未识别到手机号，可以补充"
+          />
+        </div>
+        <div>
           <label className="fl">毕业年份</label>
           <input
             className="input"

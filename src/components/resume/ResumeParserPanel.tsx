@@ -58,13 +58,15 @@ export function ResumeParserPanel() {
     setProfile((current) => ({
       ...current,
       name: resume.name || current.name,
+      email: resume.email || current.email,
+      phone: resume.phone || current.phone,
       skills: resume.skills,
       strengths: resume.strengths,
       education: resume.education
         .map((item) => [DEGREE_LABELS[item.degree], item.school, item.major].filter(Boolean).join(" "))
         .join("；"),
       rawResume: text,
-      // 简历中明确识别出的非敏感字段同步到资料库；识别不到时保留原值。
+      // 只同步简历中明确识别出的字段；识别不到时保留资料库原值。
       school: first?.school || current.school,
       major: first?.major || current.major,
       degree: first ? DEGREE_LABELS[first.degree] : current.degree,
@@ -192,7 +194,7 @@ export function ResumeParserPanel() {
             <h3>结构化画像</h3>
             <div className="empty">
               <span className="big">🪶</span>
-              解析完成后，姓名、学校专业学历、技能与优势会显示在这里。
+              解析完成后，姓名、联系方式、学校专业学历、技能与优势会显示在这里。
             </div>
           </div>
         )}

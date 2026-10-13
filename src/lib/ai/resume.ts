@@ -24,6 +24,8 @@ export function buildResumePrompt(raw: string): string {
 
 {
   "name": "姓名，识别不到就空字符串",
+  "email": "邮箱，只填写简历原文中真实出现的邮箱，识别不到就空字符串",
+  "phone": "手机号，只填写简历原文中真实出现的号码，识别不到就空字符串",
   "gradYear": "毕业年份，四位数字，识别不到就空字符串",
   "school": "最高学历的学校",
   "major": "最高学历的专业",
@@ -169,6 +171,8 @@ export function normalizeAIResume(data: unknown): ResumeData | null {
   const raw = data as Record<string, unknown>;
   const resume: ResumeData = {
     name: asString(raw.name),
+    email: asString(raw.email),
+    phone: asString(raw.phone),
     education: Array.isArray(raw.education) ? raw.education.map(normalizeEducation) : [],
     honors: asStringArray(raw.honors),
     experiences: Array.isArray(raw.experiences) ? raw.experiences.map(normalizeExperience) : [],
@@ -178,6 +182,7 @@ export function normalizeAIResume(data: unknown): ResumeData | null {
   };
 
   const hasContent =
+    Boolean(resume.name || resume.email || resume.phone) ||
     resume.education.length > 0 ||
     resume.experiences.length > 0 ||
     resume.projects.length > 0 ||
