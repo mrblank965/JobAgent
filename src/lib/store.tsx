@@ -156,7 +156,9 @@ type StoreValue = {
   updateAppNote: (id: string, note: string) => void;
   removeApp: (id: string) => void;
   resumeVariants: ResumeVariant[];
-  addResumeVariant: (entry: Pick<ResumeVariant, "name" | "directionId" | "sourceText">) => void;
+  addResumeVariant: (
+    entry: Pick<ResumeVariant, "name" | "directionId" | "sourceText"> & Pick<Partial<ResumeVariant>, "structuredData">,
+  ) => void;
   updateResumeVariant: (id: string, patch: Partial<Pick<ResumeVariant, "name" | "directionId" | "isDefault">>) => void;
   removeResumeVariant: (id: string) => void;
   answerBank: AnswerBankEntry[];

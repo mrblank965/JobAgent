@@ -241,6 +241,7 @@ export function ResumeParserPanel() {
                     name: fileName ? fileName.replace(/\.[^.]+$/, "") : `${resume.name || "未命名"}的简历`,
                     directionId,
                     sourceText: text,
+                    structuredData: resume,
                   });
                   const directionName = DIRECTIONS.find((item) => item.id === directionId)?.name ?? "所选方向";
                   setSaveNotice(`已保存为「${directionName}」方向简历，基本资料也已同步。`);

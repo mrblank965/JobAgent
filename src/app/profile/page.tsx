@@ -2,7 +2,9 @@
 
 import { useState, type ChangeEvent } from "react";
 import { DIRECTIONS } from "@/lib/career";
+import { buildAutofillPackage } from "@/lib/autofill/package";
 import { DEGREE_OPTIONS, JOB_TYPES, useStore } from "@/lib/store";
+import type { AutofillPackageV1 } from "@/types/autofill";
 
 export default function ProfilePage() {
   const {
@@ -27,6 +29,8 @@ export default function ProfilePage() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [notice, setNotice] = useState("");
+  const [autofillResumeId, setAutofillResumeId] = useState("");
+  const [autofillPreview, setAutofillPreview] = useState<AutofillPackageV1 | null>(null);
   const directionGroups = DIRECTIONS.map((direction) => ({
     id: direction.id,
     name: direction.name,
@@ -35,6 +39,42 @@ export default function ProfilePage() {
   const uncategorizedResumes = resumeVariants.filter(
     (item) => !DIRECTIONS.some((direction) => direction.id === item.directionId),
   );
+  const effectiveAutofillResumeId =
+    autofillResumeId || resumeVariants.find((item) => item.isDefault)?.id || resumeVariants[0]?.id || "";
+
+  function createAutofillPackage() {
+    const resumeVariant = resumeVariants.find((item) => item.id === effectiveAutofillResumeId);
+    if (!resumeVariant) return null;
+    return buildAutofillPackage({ profile, resumeVariant, answerBank });
+  }
+
+  function previewAutofillPackage() {
+    const next = createAutofillPackage();
+    if (!next) {
+      setNotice("请先保存至少一个简历版本。");
+      return;
+    }
+    setAutofillPreview(next);
+    setNotice("资料包只包含预览中的字段；不会包含投递记录、API Key、密码或验证码。");
+  }
+
+  function downloadAutofillPackage() {
+    const next = createAutofillPackage();
+    if (!next) {
+      setNotice("请先保存至少一个简历版本。");
+      return;
+    }
+
+    const blob = new Blob([JSON.stringify(next, null, 2)], { type: "application/json" });
+    const link = document.createElement("a");
+    const safeName = next.resumeVariant.name.replace(/[^\p{L}\p{N}_-]+/gu, "-").replace(/^-|-$/g, "") || "resume";
+    link.href = URL.createObjectURL(blob);
+    link.download = `jobagent-autofill-${safeName}-${new Date().toISOString().slice(0, 10)}.json`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+    setAutofillPreview(next);
+    setNotice("网申资料包已导出。请在简历助手扩展中选择这个 JSON 文件导入。");
+  }
 
   function downloadBackup() {
     const blob = new Blob([exportWorkspace()], { type: "application/json" });
@@ -181,7 +221,7 @@ export default function ProfilePage() {
                   {group.resumes.map((item) => (
                     <div className="iq" key={item.id}>
                       <div className="spread">
-                        <div><b>{item.name}</b> {item.isDefault ? <span className="tag hit">默认</span> : null}<div className="tiny">{item.sourceText ? "已保存简历正文" : "仅版本记录"}</div></div>
+                        <div><b>{item.name}</b> {item.isDefault ? <span className="tag hit">默认</span> : null}<div className="tiny">{item.structuredData ? "已保存结构化资料" : item.sourceText ? "仅有简历正文" : "仅版本记录"}</div></div>
                         <div className="row">
                           <select className="input" style={{ width: 190 }} value={item.directionId} onChange={(event) => updateResumeVariant(item.id, { directionId: event.target.value })}>
                             <option value="">待分类</option>
@@ -197,6 +237,72 @@ export default function ProfilePage() {
               </div>
             ))}
           </div>
+        )}
+      </section>
+
+      <section className="card mt16">
+        <div className="spread">
+          <div>
+            <h3>同步到简历助手</h3>
+            <div className="tiny">第一版使用 JSON 文件交换；扩展只负责填写，不会自动提交网申。</div>
+          </div>
+          <span className="tag">jobagent-autofill-package v1</span>
+        </div>
+
+        {resumeVariants.length === 0 ? (
+          <div className="empty mt12">请先从“简历解析”页面保存一个带方向的简历版本。</div>
+        ) : (
+          <>
+            <div className="split mt12">
+              <div>
+                <label className="fl" htmlFor="autofill-resume">本次使用的简历版本</label>
+                <select
+                  id="autofill-resume"
+                  className="input"
+                  value={effectiveAutofillResumeId}
+                  onChange={(event) => {
+                    setAutofillResumeId(event.target.value);
+                    setAutofillPreview(null);
+                  }}
+                >
+                  {resumeVariants.map((item) => {
+                    const directionName = DIRECTIONS.find((direction) => direction.id === item.directionId)?.name ?? "待分类";
+                    return <option key={item.id} value={item.id}>{item.name} · {directionName}</option>;
+                  })}
+                </select>
+              </div>
+              <div className="nextstep">
+                <b>只导出必要资料</b>
+                <div className="tiny mt8">基本资料、所选简历的结构化经历，以及内容已核对的常用回答。</div>
+              </div>
+            </div>
+
+            {!resumeVariants.find((item) => item.id === effectiveAutofillResumeId)?.structuredData ? (
+              <div className="warnbox mt12">这个旧版本没有结构化经历。仍可导出基本资料，但建议回到简历解析页重新保存该版本。</div>
+            ) : null}
+
+            <div className="row mt12">
+              <button type="button" className="btn" onClick={previewAutofillPackage}>预览资料包</button>
+              <button type="button" className="btn primary" onClick={downloadAutofillPackage}>导出到简历助手</button>
+            </div>
+
+            {autofillPreview ? (
+              <div className="nextstep mt12">
+                <div className="spread">
+                  <div>
+                    <b>导出预览</b>
+                    <div className="tiny">
+                      教育 {autofillPreview.education.length} 条 · 实习/工作 {autofillPreview.experiences.length} 条 · 项目 {autofillPreview.projects.length} 条 · 已确认回答 {autofillPreview.confirmedAnswers.length} 条
+                    </div>
+                  </div>
+                  <span className="tag hit">仅保存在本机</span>
+                </div>
+                <pre style={{ marginTop: 12, maxHeight: 360, overflow: "auto", whiteSpace: "pre-wrap", fontSize: 12 }}>
+                  {JSON.stringify(autofillPreview, null, 2)}
+                </pre>
+              </div>
+            ) : null}
+          </>
         )}
       </section>
 
