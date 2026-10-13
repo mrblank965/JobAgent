@@ -104,8 +104,10 @@ export async function callChatJSON(settings: AISettings, prompt: string): Promis
     }),
   });
 
+  // 接口的错误正文里通常写清了原因（模型不存在、Key 无效、未开通），带出来省得对着状态码猜
   if (!response.ok) {
-    throw new Error(`接口返回 HTTP ${response.status}`);
+    const detail = (await response.text()).replace(/\s+/g, " ").trim().slice(0, 300);
+    throw new Error(`接口返回 HTTP ${response.status}${detail ? `：${detail}` : ""}`);
   }
 
   const data = (await response.json()) as { choices?: { message?: { content?: string } }[] };
