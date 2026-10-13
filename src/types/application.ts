@@ -1,3 +1,5 @@
+import type { ResumeData } from "@/types/analysis";
+
 export const APPLICATION_STATUSES = [
   "待投递",
   "填写中",
@@ -49,6 +51,8 @@ export type ResumeVariant = {
   /** 兼容第一版数据，读取后会自动映射为 directionId。 */
   targetRole?: string;
   sourceText: string;
+  /** 保存该版本时的结构化解析结果，供网申资料包和扩展填写使用。 */
+  structuredData?: ResumeData;
   isDefault: boolean;
   createdAt: string;
   updatedAt: string;
