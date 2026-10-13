@@ -3,8 +3,96 @@
 import { useState, type ChangeEvent } from "react";
 import { DIRECTIONS } from "@/lib/career";
 import { buildAutofillPackage } from "@/lib/autofill/package";
+import { DEGREE_LABELS } from "@/lib/parsers/resumeText";
 import { DEGREE_OPTIONS, JOB_TYPES, useStore } from "@/lib/store";
+import type { ExperienceEntry, ResumeData } from "@/types/analysis";
 import type { AutofillPackageV1 } from "@/types/autofill";
+
+const PROJECT_CATEGORY_LABELS = {
+  paper: "论文",
+  competition: "竞赛",
+  project: "项目",
+} as const;
+
+function ExperienceRows({ items, project = false }: { items: ExperienceEntry[]; project?: boolean }) {
+  if (items.length === 0) return <div className="tiny">这个版本没有保存此类经历。</div>;
+
+  return (
+    <div className="mt8">
+      {items.map((item, index) => (
+        <div className="iq" key={`${item.title}-${item.periodStart}-${index}`}>
+          <div className="spread">
+            <b>{item.title || "未命名条目"}</b>
+            <span className="tiny">
+              {project && item.category ? `${PROJECT_CATEGORY_LABELS[item.category]} · ` : ""}
+              {[item.periodStart, item.periodEnd].filter(Boolean).join(" — ") || "时间未填写"}
+            </span>
+          </div>
+          {item.role ? <div className="muted mt8">{item.role}</div> : null}
+          {item.bullets.length > 0 ? (
+            <ul className="tiny mt8" style={{ paddingLeft: 20 }}>
+              {item.bullets.map((bullet, bulletIndex) => <li key={`${bullet}-${bulletIndex}`}>{bullet}</li>)}
+            </ul>
+          ) : null}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ResumeVersionDetails({ data }: { data: ResumeData }) {
+  return (
+    <div className="mt12">
+      <div className="nextstep">
+        <b>教育经历</b>
+        {data.education.length === 0 ? <div className="tiny mt8">没有保存教育经历。</div> : (
+          <div className="mt8">
+            {data.education.map((item, index) => (
+              <div className="iq" key={`${item.school}-${item.periodStart}-${index}`}>
+                <b>{item.school || "学校未填写"}</b>
+                <div className="tiny mt8">
+                  {[DEGREE_LABELS[item.degree], item.college, item.major].filter(Boolean).join(" · ") || "学历信息未填写"}
+                  {item.periodStart || item.periodEnd ? ` · ${[item.periodStart, item.periodEnd].filter(Boolean).join(" — ")}` : ""}
+                </div>
+                {item.performance ? <div className="muted mt8">{item.performance}</div> : null}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="nextstep mt12">
+        <b>实习与工作经历</b>
+        <ExperienceRows items={data.experiences} />
+      </div>
+
+      <div className="nextstep mt12">
+        <b>项目、竞赛与论文</b>
+        <ExperienceRows items={data.projects} project />
+      </div>
+
+      <div className="nextstep mt12">
+        <b>荣誉与获奖</b>
+        <div className="mt8">
+          {data.honors.length > 0
+            ? data.honors.map((item) => <span className="chip hit" key={item}>{item}</span>)
+            : <span className="tiny">这个版本没有保存荣誉或获奖。</span>}
+        </div>
+      </div>
+
+      <div className="split mt12">
+        <div className="nextstep">
+          <b>技能</b>
+          <div className="mt8">{data.skills.length > 0 ? data.skills.map((item) => <span className="chip" key={item}>{item}</span>) : <span className="tiny">暂无</span>}</div>
+        </div>
+        <div className="nextstep">
+          <b>个人优势</b>
+          <div className="mt8">{data.strengths.length > 0 ? data.strengths.map((item) => <span className="chip" key={item}>{item}</span>) : <span className="tiny">暂无</span>}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function ProfilePage() {
   const {
@@ -18,6 +106,7 @@ export default function ProfilePage() {
     addAnswer,
     updateAnswer,
     removeAnswer,
+    resumeDraft,
     storageReady,
     storageError,
     exportWorkspace,
@@ -105,9 +194,28 @@ export default function ProfilePage() {
       {storageError ? <div className="errbox mb12">{storageError}</div> : null}
       {notice ? <div className="warnbox mb12">{notice}</div> : null}
 
+      <section className="card mb12">
+        <h3>资料如何分工</h3>
+        <div className="split mt12">
+          <div className="nextstep">
+            <b>① 简历解析 = 提取与校对</b>
+            <div className="tiny mt8">上传或粘贴简历后，先修正姓名、教育、实习、项目、荣誉等内容；没有点击“保存到资料库”前，只是编辑中的草稿。</div>
+          </div>
+          <div className="nextstep">
+            <b>② 网申资料库 = 通用资料 + 简历版本</b>
+            <div className="tiny mt8">联系方式等跨岗位共用；实习、项目、获奖、技能等跟随具体方向简历保存，不同版本互不覆盖。</div>
+          </div>
+          <div className="nextstep">
+            <b>③ 投递与扩展 = 按岗位取用</b>
+            <div className="tiny mt8">投递某个岗位时先选用哪份简历，再组合通用资料、该版本经历和已确认回答生成网申资料包。</div>
+          </div>
+        </div>
+      </section>
+
       <div className="split">
         <section className="card">
-          <h3>基本资料</h3>
+          <h3>通用网申资料</h3>
+          <p className="tiny mt8">姓名、联系方式、求职偏好等跨简历版本共用；从简历解析页保存版本时会同步明确识别出的内容，也可以在这里补充。</p>
           <div className="split">
             <div>
               <label className="fl">姓名</label>
@@ -152,7 +260,7 @@ export default function ProfilePage() {
           </div>
 
           <label className="fl">简历识别出的技能</label>
-          <div>{profile.skills.length > 0 ? profile.skills.map((item) => <span className="chip hit" key={item}>{item}</span>) : <span className="tiny">完成简历解析后自动同步。</span>}</div>
+          <div>{profile.skills.length > 0 ? profile.skills.map((item) => <span className="chip hit" key={item}>{item}</span>) : <span className="tiny">在简历解析页保存版本后自动同步。</span>}</div>
 
           <label className="fl">工作许可 / 签证情况</label>
           <textarea className="input" rows={3} value={profile.workAuthorization} onChange={(event) => setProfile((current) => ({ ...current, workAuthorization: event.target.value, workAuthorizationConfirmed: false }))} placeholder="不确定时请留空，不要让系统猜测" />
@@ -193,8 +301,8 @@ export default function ProfilePage() {
       <section className="card mt16">
         <div className="spread">
           <div>
-            <h3>简历版本</h3>
-            <div className="tiny">记录不同岗位方向使用的简历；正文可以从“简历解析”页保存。</div>
+            <h3>岗位方向简历库</h3>
+            <div className="tiny">每个版本独立保存完整教育、实习/工作、项目、获奖、技能与优势；投递时明确选择其中一份。</div>
           </div>
           <div className="row">
             <input className="input" style={{ width: 180 }} value={resumeName} onChange={(event) => setResumeName(event.target.value)} placeholder="版本名称" />
@@ -221,7 +329,14 @@ export default function ProfilePage() {
                   {group.resumes.map((item) => (
                     <div className="iq" key={item.id}>
                       <div className="spread">
-                        <div><b>{item.name}</b> {item.isDefault ? <span className="tag hit">默认</span> : null}<div className="tiny">{item.structuredData ? "已保存结构化资料" : item.sourceText ? "仅有简历正文" : "仅版本记录"}</div></div>
+                        <div>
+                          <b>{item.name}</b> {item.isDefault ? <span className="tag hit">默认</span> : null}
+                          <div className="tiny">
+                            {item.structuredData
+                              ? `教育 ${item.structuredData.education.length} · 实习/工作 ${item.structuredData.experiences.length} · 项目 ${item.structuredData.projects.length} · 荣誉 ${item.structuredData.honors.length}`
+                              : item.sourceText ? "仅有简历正文" : "仅版本记录"}
+                          </div>
+                        </div>
                         <div className="row">
                           <select className="input" style={{ width: 190 }} value={item.directionId} onChange={(event) => updateResumeVariant(item.id, { directionId: event.target.value })}>
                             <option value="">待分类</option>
@@ -231,6 +346,34 @@ export default function ProfilePage() {
                           <button type="button" className="btn sm danger" onClick={() => removeResumeVariant(item.id)}>删除</button>
                         </div>
                       </div>
+                      {item.structuredData ? (
+                        <details className="mt8">
+                          <summary style={{ cursor: "pointer", color: "var(--accent)", fontWeight: 700 }}>查看这份简历的完整资料</summary>
+                          <ResumeVersionDetails data={item.structuredData} />
+                        </details>
+                      ) : (
+                        <div className="warnbox mt8">
+                          <b>这个旧版本没有结构化经历。</b>
+                          {resumeDraft.resume ? (
+                            <>
+                              <div className="tiny mt8">当前“简历解析”工作区里有一份已解析结果。如果确认就是这份简历，可以直接补全教育、实习、项目、获奖、技能和优势。</div>
+                              <button
+                                type="button"
+                                className="btn sm mt8"
+                                onClick={() => {
+                                  updateResumeVariant(item.id, {
+                                    structuredData: resumeDraft.resume ?? undefined,
+                                    sourceText: resumeDraft.text || item.sourceText,
+                                  });
+                                  setNotice(`已用当前解析结果补全「${item.name}」；请展开版本核对经历内容。`);
+                                }}
+                              >
+                                用当前解析结果补全
+                              </button>
+                            </>
+                          ) : <div className="tiny mt8">请回到简历解析页重新解析、校对并保存。</div>}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

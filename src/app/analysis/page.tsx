@@ -16,7 +16,7 @@ export default function AnalysisPage() {
         </div>
         <div className="empty">
           <span className="big">🪶</span>
-          先到「简历解析」建立画像，才能算八个方向的适配度。
+          先到「简历解析」校对内容并保存到资料库，才能算八个方向的适配度。
           <div className="mt12">
             <Link className="btn primary" href="/resume">
               去简历解析
