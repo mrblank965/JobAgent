@@ -172,7 +172,7 @@ export default function ProfilePage() {
     link.download = `jobagent-backup-${new Date().toISOString().slice(0, 10)}.json`;
     link.click();
     URL.revokeObjectURL(link.href);
-    setNotice("本地数据备份已导出。API Key 不包含在备份中。");
+    setNotice("整站备份已导出，仅用于恢复 JobAgent 工作区，不能导入简历助手。API Key 不包含在备份中。");
   }
 
   async function importBackup(event: ChangeEvent<HTMLInputElement>) {
@@ -272,11 +272,11 @@ export default function ProfilePage() {
 
         <section className="card">
           <h3>本地数据管理</h3>
-          <p className="muted">资料保存在浏览器 IndexedDB。备份中不包含 AI API Key。</p>
+          <p className="muted">资料保存在浏览器 IndexedDB。这里导出的是整站恢复备份，不是简历助手使用的网申资料包；备份中不包含 AI API Key。</p>
           <div className="row mt16">
-            <button type="button" className="btn primary" onClick={downloadBackup}>导出 JSON 备份</button>
+            <button type="button" className="btn primary" onClick={downloadBackup}>导出整站备份（仅用于恢复）</button>
             <label className="btn">
-              导入备份
+              导入整站备份
               <input type="file" accept="application/json,.json" hidden onChange={importBackup} />
             </label>
             <button
@@ -422,7 +422,7 @@ export default function ProfilePage() {
 
         <div className="nextstep mt12">
           <b>使用顺序</b>
-          <div className="tiny mt8">① 在下面选择本次使用的简历版本 → ② 导出 JSON → ③ 点击浏览器工具栏里的简历助手 → ④ 更多设置 → JobAgent 资料包 → ⑤ 选择 JSON、核对预览并导入为新方案。</div>
+          <div className="tiny mt8">① 在下面选择本次使用的简历版本 → ② 导出网申资料包 JSON → ③ 点击浏览器工具栏里的简历助手 → ④ 更多设置 → JobAgent 资料包 → ⑤ 选择 JSON、核对预览并导入为新方案。</div>
         </div>
       </section>
 
@@ -469,8 +469,10 @@ export default function ProfilePage() {
 
             <div className="row mt12">
               <button type="button" className="btn" onClick={previewAutofillPackage}>预览资料包</button>
-              <button type="button" className="btn primary" onClick={downloadAutofillPackage}>导出到简历助手</button>
+              <button type="button" className="btn primary" onClick={downloadAutofillPackage}>导出网申资料包 JSON</button>
             </div>
+
+            <div className="tiny mt8">扩展中请选择文件名以 <b>jobagent-autofill-</b> 开头的 JSON；不要选择 <b>jobagent-backup-</b> 开头的整站备份。</div>
 
             {autofillPreview ? (
               <div className="nextstep mt12">
