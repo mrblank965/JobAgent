@@ -383,11 +383,54 @@ export default function ProfilePage() {
         )}
       </section>
 
+      <section className="card mt16" id="resume-assistant-install">
+        <div className="spread">
+          <div>
+            <h3>安装简历助手扩展</h3>
+            <div className="tiny">简历助手负责把网申资料包填写到招聘网站；它不会自动点击最终提交。</div>
+          </div>
+          <span className="tag hit">Chrome / Edge · v2.5.0</span>
+        </div>
+
+        <div className="split mt12">
+          <div className="nextstep">
+            <b>下载安装包</b>
+            <div className="tiny mt8">安装包只包含扩展代码，不包含你的简历、联系方式、投递记录或浏览器数据。</div>
+            <a
+              className="btn primary mt12"
+              href="/downloads/jobagent-resume-assistant-v2.5.0.zip"
+              download
+            >
+              下载简历助手 v2.5.0（ZIP）
+            </a>
+          </div>
+
+          <div className="nextstep">
+            <b>Chrome / Edge 安装步骤</b>
+            <ol className="tiny mt8" style={{ paddingLeft: 20, lineHeight: 1.8 }}>
+              <li>下载 ZIP 后解压，保留包含 manifest.json 的文件夹。</li>
+              <li>Chrome 打开 chrome://extensions；Edge 打开 edge://extensions。</li>
+              <li>打开右上角“开发者模式”，点击“加载已解压的扩展程序”。</li>
+              <li>选择刚解压的文件夹，确认扩展显示“简历助手 2.5.0”。</li>
+            </ol>
+          </div>
+        </div>
+
+        <div className="warnbox mt12">
+          如果扩展页仍显示 2.4.1 或“Service Worker（无效）”，请先移除旧版本，再加载新解压的 2.5.0 文件夹。不要直接双击 popup.html；那只是页面文件，不是已安装的扩展。
+        </div>
+
+        <div className="nextstep mt12">
+          <b>使用顺序</b>
+          <div className="tiny mt8">① 在下面选择本次使用的简历版本 → ② 导出 JSON → ③ 点击浏览器工具栏里的简历助手 → ④ 更多设置 → JobAgent 资料包 → ⑤ 选择 JSON、核对预览并导入为新方案。</div>
+        </div>
+      </section>
+
       <section className="card mt16">
         <div className="spread">
           <div>
             <h3>同步到简历助手</h3>
-            <div className="tiny">第一版使用 JSON 文件交换；扩展只负责填写，不会自动提交网申。</div>
+            <div className="tiny">第一版使用 JSON 文件交换；扩展只负责填写，不会自动提交网申。尚未安装时，请先使用上面的安装入口。</div>
           </div>
           <span className="tag">jobagent-autofill-package v1</span>
         </div>
