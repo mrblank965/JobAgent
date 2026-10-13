@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { DIRECTIONS } from "@/lib/career";
 import { DEGREE_LABELS, type RecognizedHeading } from "@/lib/parsers/resumeText";
 import { useStore } from "@/lib/store";
@@ -48,21 +48,20 @@ export function ResumeParserPanel() {
   }
 
   /**
-   * 解析结果同步到全局画像，方向分析、JD 拆解器、简历定制和资料库都读它。
+   * 只有用户明确点击“保存到资料库”时，才把跨版本共用的字段同步到全局画像。
+   * 实习、项目、荣誉等版本化内容则完整保存在 ResumeVariant.structuredData 中。
    */
-  useEffect(() => {
-    if (!resume) return;
-
-    const first = resume.education[0];
+  function syncCommonProfile(nextResume: ResumeData) {
+    const first = nextResume.education[0];
 
     setProfile((current) => ({
       ...current,
-      name: resume.name || current.name,
-      email: resume.email || current.email,
-      phone: resume.phone || current.phone,
-      skills: resume.skills,
-      strengths: resume.strengths,
-      education: resume.education
+      name: nextResume.name || current.name,
+      email: nextResume.email || current.email,
+      phone: nextResume.phone || current.phone,
+      skills: nextResume.skills,
+      strengths: nextResume.strengths,
+      education: nextResume.education
         .map((item) => [DEGREE_LABELS[item.degree], item.school, item.major].filter(Boolean).join(" "))
         .join("；"),
       rawResume: text,
@@ -72,7 +71,7 @@ export function ResumeParserPanel() {
       degree: first ? DEGREE_LABELS[first.degree] : current.degree,
       gradYear: first?.periodEnd?.slice(0, 4) || current.gradYear,
     }));
-  }, [resume, text, setProfile]);
+  }
 
   /** AI 增强解析的结果直接替换编辑区内容。 */
   function handleAIApply(next: ResumeData) {
@@ -222,8 +221,8 @@ export function ResumeParserPanel() {
           <div className="card mb12">
             <div className="spread" style={{ alignItems: "flex-end" }}>
               <div>
-                <b>保存为网申简历版本</b>
-                <div className="tiny">先选择适用方向，保存后会在资料库中按方向分类。</div>
+                <b>保存完整简历版本到资料库</b>
+                <div className="tiny">先在下方校对教育、实习、项目和荣誉，再选择适用方向保存。</div>
               </div>
               <div style={{ minWidth: 260 }}>
                 <label className="fl" htmlFor="resume-direction">适用方向</label>
@@ -237,13 +236,19 @@ export function ResumeParserPanel() {
                 className="btn primary"
                 disabled={!directionId}
                 onClick={() => {
+                  syncCommonProfile(resume);
                   addResumeVariant({
                     name: fileName ? fileName.replace(/\.[^.]+$/, "") : `${resume.name || "未命名"}的简历`,
                     directionId,
                     sourceText: text,
+                    structuredData: resume,
                   });
                   const directionName = DIRECTIONS.find((item) => item.id === directionId)?.name ?? "所选方向";
-                  setSaveNotice(`已保存为「${directionName}」方向简历，基本资料也已同步。`);
+                  setSaveNotice(
+                    `已保存为「${directionName}」方向简历：教育 ${resume.education.length} 条、` +
+                    `实习/工作 ${resume.experiences.length} 条、项目 ${resume.projects.length} 条、` +
+                    `荣誉 ${resume.honors.length} 条；姓名、邮箱、手机号等通用资料也已同步。`,
+                  );
                 }}
               >
                 保存到资料库
