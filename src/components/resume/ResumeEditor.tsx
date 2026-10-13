@@ -55,11 +55,11 @@ export function ResumeEditor({ value, onChange, headings, suspectedHeadings }: R
           />
 
           <TagEditor
-            label="荣誉奖励"
+            label="荣誉与奖项"
             items={value.honors}
             onChange={(honors) => onChange({ ...value, honors })}
-            placeholder="如：国家奖学金（2023）"
-            emptyHint="没有识别到奖学金或荣誉称号。"
+            placeholder="如：国家奖学金（2023）、优秀学生"
+            emptyHint="没有识别到奖学金、获奖或荣誉称号。竞赛获奖可在下方项目明细中标记为“竞赛”。"
           />
 
           <StrengthSuggestions resume={value} current={value.strengths} onAdd={addStrength} />
