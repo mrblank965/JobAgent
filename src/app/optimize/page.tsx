@@ -4,14 +4,25 @@ import Link from "next/link";
 import { useState } from "react";
 import { analyzeJD } from "@/lib/jd";
 import { useStore } from "@/lib/store";
+import { ExtraExperienceCard } from "@/components/optimize/ExtraExperienceCard";
+import { RewritePlanner } from "@/components/optimize/RewritePlanner";
+import { useSessionState } from "@/components/optimize/useSessionState";
 
 export default function OptimizePage() {
   const { profile, jds } = useStore();
 
-  const [activeJD, setActiveJD] = useState("");
-  const [notice, setNotice] = useState("");
+  /**
+   * 选中的 JD、手改过的草稿、其他经历都存进 sessionStorage。
+   * 切到别的页面再回来、或者按 F5 刷新，填过的东西都还在；关掉标签页才清除。
+   */
+  const [activeJD, setActiveJD] = useSessionState("jobagent.optimize.jd", "");
   /** 用户改过就用改过的，没改过就跟着画像里的原文走，避免用 effect 同步状态。 */
-  const [edited, setEdited] = useState<string | null>(null);
+  const [edited, setEdited] = useSessionState<string | null>("jobagent.optimize.draft", null);
+  /** 简历里没写、但用户想补进来的其他经历，改写时和简历一起作为材料。 */
+  const [extra, setExtra] = useSessionState("jobagent.optimize.extra", "");
+
+  const [notice, setNotice] = useState("");
+  const [showPlanner, setShowPlanner] = useState(false);
   const draft = edited ?? profile.rawResume;
 
   const jd = jds.find((item) => item.id === activeJD) ?? null;
@@ -151,17 +162,49 @@ export default function OptimizePage() {
             <button type="button" className="btn" onClick={download}>
               ⬇ 导出 txt
             </button>
-            <button type="button" className="btn primary" disabled>
+            <button
+              type="button"
+              className="btn primary"
+              onClick={() => {
+                if (!jd) {
+                  setNotice("先在上面选一份 JD，再生成变更清单。");
+                  return;
+                }
+                setShowPlanner(true);
+              }}
+            >
               ✨ AI 逐段改写
             </button>
           </div>
 
           <div className="tiny mt8">
-            AI 逐段改写待成员 C 的接口接入后启用。当前可以手动按命中点调整措辞。
+            AI 只提出变更建议，你在下面的清单里勾选同意哪几条，才会写进草稿。
           </div>
           {notice ? <div className="tiny mt8 warn-text">{notice}</div> : null}
         </div>
       </div>
+
+      <ExtraExperienceCard value={extra} onChange={setExtra} />
+
+      {showPlanner && jd ? (
+        <RewritePlanner
+          resumeText={draft}
+          extraText={extra}
+          jdRaw={jd.raw}
+          jdLabel={`${jd.company || "未知公司"} · ${jd.title || "未命名岗位"}`}
+          input={{
+            company: jd.company,
+            title: jd.title,
+            target: profile.target,
+            jobType: profile.jobType,
+            analysis,
+          }}
+          onApply={(text) => {
+            setEdited(text);
+            setNotice("已把勾选的变更写进简历草稿，可在上方继续手动润色。");
+          }}
+        />
+      ) : null}
     </>
   );
 }
