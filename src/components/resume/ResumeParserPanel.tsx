@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { DIRECTIONS } from "@/lib/career";
 import { DEGREE_LABELS, type RecognizedHeading } from "@/lib/parsers/resumeText";
 import { useStore } from "@/lib/store";
 import type { ResumeData } from "@/types/analysis";
@@ -17,20 +18,37 @@ import { ResumeTextInput } from "./ResumeTextInput";
  * 所以文件那条路不需要自己的一套界面。
  */
 export function ResumeParserPanel() {
-  const [text, setText] = useState("");
-  const [fileName, setFileName] = useState("");
-  const [resume, setResume] = useState<ResumeData | null>(null);
-  const [headings, setHeadings] = useState<RecognizedHeading[]>([]);
-  const [suspectedHeadings, setSuspectedHeadings] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [extracting, setExtracting] = useState(false);
   const [error, setError] = useState("");
+  const [directionId, setDirectionId] = useState("");
+  const [saveNotice, setSaveNotice] = useState("");
 
-  const { setProfile } = useStore();
+  const { setProfile, addResumeVariant, resumeDraft, setResumeDraft } = useStore();
+  const { text, fileName, resume, headings, suspectedHeadings } = resumeDraft;
+
+  function setText(next: string) {
+    setResumeDraft((current) => ({ ...current, text: next }));
+  }
+
+  function setFileName(next: string) {
+    setResumeDraft((current) => ({ ...current, fileName: next }));
+  }
+
+  function setResume(next: ResumeData | null) {
+    setResumeDraft((current) => ({ ...current, resume: next }));
+  }
+
+  function setHeadings(next: RecognizedHeading[]) {
+    setResumeDraft((current) => ({ ...current, headings: next }));
+  }
+
+  function setSuspectedHeadings(next: string[]) {
+    setResumeDraft((current) => ({ ...current, suspectedHeadings: next }));
+  }
 
   /**
-   * 解析结果同步到全局画像，岗位分析、JD 拆解器、简历定制都读它。
-   * 只放在页面内存里，不写 localStorage。
+   * 解析结果同步到全局画像，方向分析、JD 拆解器、简历定制和资料库都读它。
    */
   useEffect(() => {
     if (!resume) return;
@@ -39,24 +57,28 @@ export function ResumeParserPanel() {
 
     setProfile((current) => ({
       ...current,
-      name: resume.name ?? "",
+      name: resume.name || current.name,
+      email: resume.email || current.email,
+      phone: resume.phone || current.phone,
       skills: resume.skills,
       strengths: resume.strengths,
       education: resume.education
         .map((item) => [DEGREE_LABELS[item.degree], item.school, item.major].filter(Boolean).join(" "))
         .join("；"),
       rawResume: text,
-      // 求职意向类字段只在还是空的时候补，避免覆盖用户手填的内容
-      school: current.school || first?.school || "",
-      major: current.major || first?.major || "",
-      degree: current.degree || DEGREE_LABELS[first?.degree ?? "other"] || "本科",
-      gradYear: current.gradYear || first?.periodEnd?.slice(0, 4) || "",
+      // 只同步简历中明确识别出的字段；识别不到时保留资料库原值。
+      school: first?.school || current.school,
+      major: first?.major || current.major,
+      degree: first ? DEGREE_LABELS[first.degree] : current.degree,
+      gradYear: first?.periodEnd?.slice(0, 4) || current.gradYear,
     }));
   }, [resume, text, setProfile]);
 
   /** AI 增强解析的结果直接替换编辑区内容。 */
   function handleAIApply(next: ResumeData) {
     setError("");
+    setDirectionId("");
+    setSaveNotice("");
     setResume(next);
   }
 
@@ -146,6 +168,8 @@ export function ResumeParserPanel() {
     setHeadings([]);
     setSuspectedHeadings([]);
     setError("");
+    setDirectionId("");
+    setSaveNotice("");
   }
 
   return (
@@ -170,7 +194,7 @@ export function ResumeParserPanel() {
             <h3>结构化画像</h3>
             <div className="empty">
               <span className="big">🪶</span>
-              解析完成后，姓名、学校专业学历、技能与优势会显示在这里。
+              解析完成后，姓名、联系方式、学校专业学历、技能与优势会显示在这里。
             </div>
           </div>
         )}
@@ -195,6 +219,38 @@ export function ResumeParserPanel() {
 
       {resume ? (
         <div className="mt16">
+          <div className="card mb12">
+            <div className="spread" style={{ alignItems: "flex-end" }}>
+              <div>
+                <b>保存为网申简历版本</b>
+                <div className="tiny">先选择适用方向，保存后会在资料库中按方向分类。</div>
+              </div>
+              <div style={{ minWidth: 260 }}>
+                <label className="fl" htmlFor="resume-direction">适用方向</label>
+                <select id="resume-direction" className="input" value={directionId} onChange={(event) => setDirectionId(event.target.value)}>
+                  <option value="">— 请选择方向 —</option>
+                  {DIRECTIONS.map((direction) => <option key={direction.id} value={direction.id}>{direction.name}</option>)}
+                </select>
+              </div>
+              <button
+                type="button"
+                className="btn primary"
+                disabled={!directionId}
+                onClick={() => {
+                  addResumeVariant({
+                    name: fileName ? fileName.replace(/\.[^.]+$/, "") : `${resume.name || "未命名"}的简历`,
+                    directionId,
+                    sourceText: text,
+                  });
+                  const directionName = DIRECTIONS.find((item) => item.id === directionId)?.name ?? "所选方向";
+                  setSaveNotice(`已保存为「${directionName}」方向简历，基本资料也已同步。`);
+                }}
+              >
+                保存到资料库
+              </button>
+            </div>
+            {saveNotice ? <div className="warnbox mt12">{saveNotice}</div> : null}
+          </div>
           <ResumeEditor
             value={resume}
             onChange={setResume}

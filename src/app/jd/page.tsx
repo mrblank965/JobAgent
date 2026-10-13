@@ -149,6 +149,7 @@ export default function JDPage() {
                     title: openJD.title,
                     status: "待投递",
                     note: "",
+                    jdId: openJD.id,
                   });
                   setNotice("已加入投递看板");
                 }}

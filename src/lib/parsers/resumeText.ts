@@ -512,6 +512,17 @@ export function normalizeText(text: string): string {
   return text.replace(/[⺀-⻳⼀-⿕]/g, (char) => char.normalize("NFKC"));
 }
 
+/** 联系方式只从简历原文中提取，不根据姓名、学校等信息推测。 */
+function extractEmail(rawText: string): string {
+  return normalizeText(rawText).match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)?.[0] ?? "";
+}
+
+/** 支持带 +86、空格或连字符的中国大陆手机号，并统一保存为 11 位数字。 */
+function extractPhone(rawText: string): string {
+  const matched = normalizeText(rawText).match(/(?:\+?86[\s-]?)?(1[3-9]\d(?:[\s-]?\d){8})(?!\d)/);
+  return matched?.[1]?.replace(/[\s-]/g, "") ?? "";
+}
+
 /**
  * 把简历全文解析成 ResumeData。
  *
@@ -551,6 +562,8 @@ export function parseResumeText(rawText: string): ResumeData {
 
   return {
     name: extractName(lines, headingLines),
+    email: extractEmail(rawText),
+    phone: extractPhone(rawText),
     education: educationEntries,
     // 荣誉有两个来源，一个是教育段落里被挑出来的奖学金之类，一个是荣誉段落本身。
     // 每行再拆成一条条，一条一个标签。

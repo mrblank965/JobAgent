@@ -39,6 +39,8 @@ export type EducationEntry = {
 
 export type ResumeData = {
   name?: string;
+  email?: string;
+  phone?: string;
   education: EducationEntry[];
   /** 奖学金、荣誉称号这类，不属于学历，单独放。 */
   honors: string[];

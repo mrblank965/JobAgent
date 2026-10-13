@@ -27,7 +27,7 @@ export function ResumeProfile({ value, onChange }: ResumeProfileProps) {
           {profile.avatar ? <span className="avatar-badge">{profile.avatar}</span> : null}
           结构化画像
         </h3>
-        <span className="tiny">数据只在页面内存里，刷新即清空</span>
+        <span className="tiny">自动保存到本机浏览器</span>
       </div>
 
       <div className="avatar-row mt8">
@@ -57,6 +57,26 @@ export function ResumeProfile({ value, onChange }: ResumeProfileProps) {
             value={name}
             onChange={(event) => onChange({ ...value, name: event.target.value })}
             placeholder="未识别到姓名，可以补充"
+          />
+        </div>
+        <div>
+          <label className="fl">邮箱</label>
+          <input
+            className="input"
+            type="email"
+            value={value.email ?? ""}
+            onChange={(event) => onChange({ ...value, email: event.target.value })}
+            placeholder="未识别到邮箱，可以补充"
+          />
+        </div>
+        <div>
+          <label className="fl">手机号</label>
+          <input
+            className="input"
+            type="tel"
+            value={value.phone ?? ""}
+            onChange={(event) => onChange({ ...value, phone: event.target.value })}
+            placeholder="未识别到手机号，可以补充"
           />
         </div>
         <div>

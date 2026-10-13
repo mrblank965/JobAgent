@@ -61,6 +61,8 @@ export function isResumeData(value: unknown): value is ResumeData {
   const data = value as Partial<ResumeData>;
   return (
     isOptionalString(data.name) &&
+    isOptionalString(data.email) &&
+    isOptionalString(data.phone) &&
     isEducationArray(data.education) &&
     isStringArray(data.honors) &&
     isExperienceArray(data.experiences) &&

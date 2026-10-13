@@ -34,7 +34,7 @@ export function ResumeEditor({ value, onChange, headings, suspectedHeadings }: R
       <div className="card">
         <div className="spread">
           <h3>技能、优势与荣誉</h3>
-          <span className="tiny">改动只留在当前页面内存里，刷新即清空</span>
+          <span className="tiny">修改会自动保存到本机浏览器</span>
         </div>
 
         <div className="split mt8">
