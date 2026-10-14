@@ -95,6 +95,26 @@ const asString = (value: unknown): string => (typeof value === "string" ? value 
 const asStringArray = (value: unknown): string[] =>
   Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];
 
+/**
+ * 剥掉模型自己加的 markdown 标记。
+ *
+ * 模型经常把「加粗小标题」理解成写 markdown 的 **星号**，于是输出
+ * 「**行业数据归集**：……」，星号会被原样写进 Word，很出戏。
+ * 加粗应该由排版程序按「小标题：内容」这个格式自己完成，正文里不该出现标记符号。
+ */
+export function stripMarkdown(text: string): string {
+  return text
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/__([^_]+)__/g, "$1")
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/^\s*#{1,6}\s+/gm, "")
+    .trim();
+}
+
+const cleanString = (value: unknown): string => stripMarkdown(asString(value));
+
+const cleanStringArray = (value: unknown): string[] => asStringArray(value).map(stripMarkdown);
+
 /** 模型可能漏字段或把数组写成 null，这里逐条补全。 */
 function normalizeChange(value: unknown, index: number): ChangeItem | null {
   if (!value || typeof value !== "object") return null;
@@ -107,14 +127,15 @@ function normalizeChange(value: unknown, index: number): ChangeItem | null {
     id: `c${index}`,
     source: SOURCES.includes(source) ? source : "resume",
     kind: KINDS.includes(kind) ? kind : "rewrite",
-    section: asString(raw.section),
-    heading: asString(raw.heading),
+    section: cleanString(raw.section),
+    heading: cleanString(raw.heading),
+    // original 要保持原样，一个字都不能动，否则没法在草稿里定位替换。
     original: asString(raw.original),
-    rewritten: asString(raw.rewritten),
-    reasons: asStringArray(raw.reasons),
-    keywordsEmbedded: asStringArray(raw.keywordsEmbedded),
-    aiAdded: asStringArray(raw.aiAdded),
-    evidenceNeeded: asStringArray(raw.evidenceNeeded),
+    rewritten: cleanString(raw.rewritten),
+    reasons: cleanStringArray(raw.reasons),
+    keywordsEmbedded: cleanStringArray(raw.keywordsEmbedded),
+    aiAdded: cleanStringArray(raw.aiAdded),
+    evidenceNeeded: cleanStringArray(raw.evidenceNeeded),
   };
 
   // rewrite/add 没有改写后的文字就没法应用；remove 只需要原文。
@@ -171,8 +192,8 @@ export type ApplyResult = {
   unplaced: number;
 };
 
-/** 简历里常见的板块标题，用来判断一段经历到哪里结束。 */
-const SECTION_TITLES = [
+/** 简历里常见的板块标题。用来判断一段经历到哪里结束，导出 Word 时也靠它分板块。 */
+export const SECTION_TITLES = [
   "教育背景", "教育经历", "学历背景", "实习经历", "工作经历", "实习与工作经历", "实践经历",
   "项目经历", "项目经验", "科研经历", "研究经历", "校园经历", "社团经历", "学生工作",
   "获奖情况", "荣誉奖项", "专业技能", "技能特长", "技能", "证书", "个人优势", "自我评价",
@@ -444,8 +465,8 @@ export function buildOptimizePrompt(input: OptimizeInput): string {
 
   const styleGuide = STYLE_GUIDES.map((item) => `- ${item.label}：${item.guide}`).join("\n");
   const styleRequest = input.styleLabel
-    ? `本次由用户指定风格，请严格按「${input.styleLabel}」来写，不要自行改判。`
-    : "本次不指定风格，请你根据 JD 内容判断属于哪一类，并在 styleNotes 里说明判断依据。";
+    ? `本次由用户手动指定了风格：请严格按「${input.styleLabel}」来写，不要再自行改判。`
+    : "本次没有手动指定风格。请先从 JD 原文里读出它自己的语言特征，再照着那个语气写，并在 styleNotes 里说明你读到了什么。";
 
   const extraSection = extra
     ? `【用户补充的其他经历】
@@ -493,11 +514,48 @@ ${extra}
   这一条的 section **必须填它应该归入的板块标题**，并且与简历原文里的标题逐字一致，例如「实习经历」「项目经历」「校园经历」。
   判断依据是这条经历的性质，不是它原来放在哪里。简历里确实没有合适的板块时，才留空字符串。
 
-【语言风格】只改表达，不改事实。按岗位类型参考下列风格：
+【语言风格】只改表达，不改事实。
+第一步，先读懂**这份 JD 自己的语言**，写进 styleNotes：
+- 它在反复用哪些词？例如「尽职调查」「财务模型」「申报材料」，还是「数据驱动」「闭环」「结果导向」？
+- 语气偏向"结果与影响"，还是偏向"流程与合规"？
+- 句子是偏长、信息密集，还是短句、动词开头？
+改写时**优先照着这份 JD 自己的语气写**。每个公司、每个级别的岗位偏好都不一样，从它自己写的字里读，比套用行业模板准得多。
+
+第二步，把 JD 的语气和你熟悉的行业惯例对上。下面这张表是岗位类型的通用参考，**只在 JD 本身看不出特征时用来兜底**：
 ${styleGuide}
 - 判断不出类型：用中性、专业、动词开头的表达。
 ${styleRequest}
 用户画像里的求职方向是「${input.target || "未填写"}」，求职类型是「${input.jobType || "未填写"}」，仅作参考。
+
+【把话写活，但不许编】
+简历读起来干巴，通常不是词不够专业，而是没写清"做了什么、怎么做的、做到什么范围"。按这四条写：
+1. 每条要点写清：具体动作、用的方法或工具、覆盖的范围或产出。原文没提供的，不要补。
+2. 动词要具体。「搭建」「测算」「核查」「梳理」「撰写」「比对」「归集」比「负责」「参与」「协助」有信息量。原文写「参与」时，可以在不改变事实的前提下换成更准确的动作词，但不要升级成「主导」「独立负责」。
+3. 别堆名词。把「完成数据可视化展示」改成「用 Power BI 把结果做成图表」这种读得出口的说法。
+4. 一句话里不要塞超过三个专业名词，否则读起来像术语清单。
+注意：写得具体不等于编造。具体只能来自原文已有的动作、工具和范围；原文没有结果，就让它没有结果，不要补。
+
+【每条要点尽量带一个加粗小标题】
+简历排版时会把「小标题：具体内容」里冒号前面的部分加粗，让 HR 一眼看到重点。所以：
+- 能自然概括的，就写成「四到八个小标题：具体内容」，例如「财务状况核查：核对三年期报表与工商档案」「可比公司测算：搭建估值对比表，测算市盈率区间」。
+- 小标题必须**如实概括这条本身做了什么**，不许为了好看硬套一个不相干的名词。
+- 概括不出来就不要加，直接写内容，不要硬凑。
+- 一条要点最多一个冒号，不要写成层层嵌套。
+- **不要用 markdown 的星号或井号来标记加粗**，直接写「小标题：内容」这五个字加一个冒号就行。排版程序会自己把冒号前面变粗；你要是在文字里加 ** 或 ##，这些符号会原样印在简历上。
+
+【写法参考，只看句式，一个字都不许抄】
+下面几组是「干巴」和「写得具体」的对照。请模仿右边那一种的**句式**，但**绝对不要使用里面出现的任何内容**：
+
+- 干巴：负责数据的收集和整理工作
+  具体：从公开渠道归集三年可比公司经营数据，按业务线分类，整理成可复核的底稿
+- 干巴：参与了项目的分析工作
+  具体：测算可比公司市盈率与市销率区间，比对招股书披露口径，输出估值结论
+- 干巴：使用 Excel 完成表格制作
+  具体：用 Excel 搭建财务指标对比表，按毛利率与周转率两个维度排列同业公司
+- 干巴：提升了沟通协调能力
+  具体：对接两个部门核对数据口径，把差异项整理成清单逐条确认
+
+再次强调：上面例子里的公司、数字、口径、场景**全是编造的示例**，一个字都不许出现在输出里。你只能把**原文已有的动作、工具和范围**，用上面那种具体的方式讲出来。
 
 【本 JD 的已知信息】
 命中关键词（请自然地嵌入，不要硬塞）：${hits.join("、") || "无"}

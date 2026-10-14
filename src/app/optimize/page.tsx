@@ -7,6 +7,7 @@ import { useStore } from "@/lib/store";
 import { ExtraExperienceCard } from "@/components/optimize/ExtraExperienceCard";
 import { RewritePlanner } from "@/components/optimize/RewritePlanner";
 import { useSessionState } from "@/components/optimize/useSessionState";
+import { buildResumeDocx } from "@/lib/optimizeDocx";
 
 export default function OptimizePage() {
   const { profile, jds } = useStore();
@@ -23,6 +24,7 @@ export default function OptimizePage() {
 
   const [notice, setNotice] = useState("");
   const [showPlanner, setShowPlanner] = useState(false);
+  const [exporting, setExporting] = useState(false);
   const draft = edited ?? profile.rawResume;
 
   const jd = jds.find((item) => item.id === activeJD) ?? null;
@@ -42,6 +44,32 @@ export default function OptimizePage() {
     link.click();
     URL.revokeObjectURL(url);
     setNotice("已导出为 txt 文件。");
+  }
+
+  /** 导出 Word。docx 库是按需加载的，所以这里要 await。 */
+  async function downloadDocx() {
+    if (draft.trim().length === 0) {
+      setNotice("还没有可导出的内容。");
+      return;
+    }
+
+    setExporting(true);
+    setNotice("正在生成 Word 文档……");
+
+    try {
+      const blob = await buildResumeDocx(draft);
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `简历_${profile.name || "未命名"}.docx`;
+      link.click();
+      URL.revokeObjectURL(url);
+      setNotice("已导出 Word 文档。注意：最终分几页由 Word 按内容长度自己算，程序没法保证刚好一页。");
+    } catch (error) {
+      setNotice(error instanceof Error ? error.message : "导出失败。");
+    } finally {
+      setExporting(false);
+    }
   }
 
   return (
@@ -161,6 +189,9 @@ export default function OptimizePage() {
             </button>
             <button type="button" className="btn" onClick={download}>
               ⬇ 导出 txt
+            </button>
+            <button type="button" className="btn primary" onClick={downloadDocx} disabled={exporting}>
+              {exporting ? "生成中…" : "⬇ 导出 Word"}
             </button>
             <button
               type="button"

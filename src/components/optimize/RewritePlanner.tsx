@@ -12,6 +12,7 @@ import {
   looksLikeHeaderLost,
   normalizePlan,
   parseJsonBlock,
+  STYLE_GUIDES,
   type ChangeDecision,
   type ChangeItem,
   type OptimizeInput,
@@ -71,13 +72,15 @@ export function RewritePlanner({ resumeText, extraText, jdRaw, jdLabel, input, o
   const [useRewrite, setUseRewrite] = useState<Record<string, boolean>>({});
   /** 用户在【待补：…】里填的真实数字或时间。 */
   const [fillValues, setFillValues] = useState<Record<string, string>>({});
+  /** 手动指定的语言风格；留空表示让模型先从 JD 原文里读语气。 */
+  const [styleLabel, setStyleLabel] = useState("");
 
   const connected = ai.apiKey.trim().length > 0;
 
   /** 这条变更最终会写进简历的文字：决定了要显示哪些待补占位符。 */
   function activeTextOf(item: ChangeItem): string {
     if (item.kind === "remove") return "";
-    if (item.kind === "add" && !(useRewrite[item.id] ?? true)) return item.original;
+    if (item.kind === "add" && !(useRewrite[item.id] ?? false)) return item.original;
     return item.rewritten;
   }
 
@@ -89,7 +92,7 @@ export function RewritePlanner({ resumeText, extraText, jdRaw, jdLabel, input, o
     }
     return {
       item,
-      useRewrite: item.kind === "add" ? (useRewrite[item.id] ?? true) : true,
+      useRewrite: item.kind === "add" ? (useRewrite[item.id] ?? false) : true,
       fills,
     };
   }
@@ -100,7 +103,13 @@ export function RewritePlanner({ resumeText, extraText, jdRaw, jdLabel, input, o
 
   /** 直连和零 Key 用的是同一份 Prompt，避免两条路走出来的结果不一致。 */
   function buildPrompt(): string {
-    return buildOptimizePrompt({ ...input, resume: resumeText.trim(), extra: extraText.trim(), jd: jdRaw.trim() });
+    return buildOptimizePrompt({
+      ...input,
+      resume: resumeText.trim(),
+      extra: extraText.trim(),
+      jd: jdRaw.trim(),
+      styleLabel: styleLabel || undefined,
+    });
   }
 
   function acceptPlan(data: unknown) {
@@ -112,7 +121,8 @@ export function RewritePlanner({ resumeText, extraText, jdRaw, jdLabel, input, o
 
     const nextChecked = defaultChecked(next);
     const nextUseRewrite: Record<string, boolean> = {};
-    for (const item of next.changes) nextUseRewrite[item.id] = true;
+    // 默认也不用 AI 的措辞，要用得自己勾，跟主勾选框保持一致。
+    for (const item of next.changes) nextUseRewrite[item.id] = false;
 
     setPlan(next);
     setChecked(nextChecked);
@@ -172,11 +182,18 @@ export function RewritePlanner({ resumeText, extraText, jdRaw, jdLabel, input, o
     }
   }
 
+  /** 全选 / 全不选：连「使用 AI 改写后的措辞」那个子选项一起切换，保证"全选"就是真的全勾上。 */
   function toggleAll(next: boolean) {
     if (!plan) return;
-    const map: Record<string, boolean> = {};
-    for (const item of plan.changes) map[item.id] = next;
-    setChecked(map);
+
+    const nextChecked: Record<string, boolean> = {};
+    const nextUseRewrite: Record<string, boolean> = {};
+    for (const item of plan.changes) {
+      nextChecked[item.id] = next;
+      nextUseRewrite[item.id] = next;
+    }
+    setChecked(nextChecked);
+    setUseRewrite(nextUseRewrite);
   }
 
   function applySelected() {
@@ -212,6 +229,25 @@ export function RewritePlanner({ resumeText, extraText, jdRaw, jdLabel, input, o
         目标：{jdLabel || "未选择"}。AI 只提出变更建议，不会直接改你的简历；你在下面勾选同意哪几条，
         才会写进草稿。删除和新增默认不勾，需要你自己选。
       </p>
+
+      <div className="mt12" style={{ maxWidth: 320 }}>
+        <label className="fl" style={{ marginTop: 0 }}>
+          语言风格
+        </label>
+        <select className="input" value={styleLabel} onChange={(event) => setStyleLabel(event.target.value)}>
+          <option value="">自动：从这份 JD 里读语气</option>
+          {STYLE_GUIDES.map((item) => (
+            <option key={item.label} value={item.label}>
+              {item.label}
+            </option>
+          ))}
+        </select>
+        <div className="tiny mt4">
+          {styleLabel
+            ? `已手动指定，改写会按「${styleLabel}」的语气来。`
+            : "默认从这份 JD 原文里读出它的用词和语气，比套用行业模板准。"}
+        </div>
+      </div>
 
       <div className="row mt8">
         <button type="button" className="btn primary" onClick={runDirect} disabled={busy || !connected}>
@@ -294,7 +330,7 @@ export function RewritePlanner({ resumeText, extraText, jdRaw, jdLabel, input, o
                 key={item.id}
                 item={item}
                 checked={Boolean(checked[item.id])}
-                useRewrite={useRewrite[item.id] ?? true}
+                useRewrite={useRewrite[item.id] ?? false}
                 onToggleChecked={(next) => setChecked((prev) => ({ ...prev, [item.id]: next }))}
                 onToggleUseRewrite={(next) => setUseRewrite((prev) => ({ ...prev, [item.id]: next }))}
                 getFill={(label) => fillValues[fillKey(item.id, label)] ?? ""}
