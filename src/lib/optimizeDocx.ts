@@ -8,7 +8,8 @@ import { hasHints, stripHints, tokenizeHints } from "@/lib/resumeTemplate";
  * 1. 尽量压在一页。A4、页边距收紧、行距取偏紧的值。但最终分几页是 Word 自己
  *    按内容长度算的，代码无法事先知道，所以只能"尽量紧"，不能保证"刚好一页"。
  * 2. 中文字体单独设 eastAsia，否则 Word 会用西文字体渲染中文，很难看。
- * 3. 拉开层次。经历表头（以日期开头那行）把日期挪到行尾右对齐，公司职位留在左边；
+ * 3. 拉开层次。经历表头把日期挪到行尾右对齐、公司职位留在左边；
+ *    没写日期的表头（下面紧跟着带符号的要点）整行加粗。
  *    要点行默认带项目符号，如果写成「小标题：内容」，把冒号前的部分加粗。
  *    「个人优势」这类整段话的板块例外，见 PROSE_SECTIONS。
  * 4. 模板提示（写在〔〕里的字）渲染成灰色斜体，跟黑色正文分开，用户一看就知道哪里要自己改。
@@ -216,30 +217,51 @@ export async function buildResumeDocx(
       }),
     );
 
-    for (const line of block.body) {
+    for (let index = 0; index < block.body.length; index += 1) {
+      const line = block.body[index];
       /** 行首带了项目符号标记，说明这一行本来就是要点。 */
       const hasMarker = /^[-•·]\s*/.test(line);
       // 万一带上了 markdown 星号（模型有时会自作主张加），这里再剥一次，
       // 保证 Word 里不会印出 ** 这种符号。加粗交给下面按「小标题：」判断。
       const content = stripMarkdown(line.replace(/^[-•·]\s*/, ""));
 
-      // 经历表头：没有符号、而且以日期开头的那一行。日期顶到右边界，公司职位留在左边。
-      if (!hasMarker) {
-        const header = splitEntryHeader(content);
-        if (header) {
-          children.push(
-            new Paragraph({
-              spacing: { before: 130, after: 40 },
-              tabStops: [{ type: TabStopType.RIGHT, position: CONTENT_WIDTH }],
-              children: [
-                new TextRun({ text: header.rest, bold: true, size: ENTRY_SIZE, font: FONT_BOLD }),
-                new TextRun({ children: [new Tab()] }),
-                new TextRun({ text: header.date, size: BODY_SIZE, font: FONT }),
-              ],
-            }),
-          );
-          continue;
-        }
+      // 经历表头有两种情况：
+      // ① 以日期开头，例如「2025.03—2025.05　上市公司盈利能力分析」；
+      // ② 没写日期，但紧接着的下一行是带符号的要点，
+      //    例如「校内投资社团 · 模拟投资组合管理」。
+      //    少了 ② 的话，这种没日期的经历标题会被当成普通要点排下去，板块里就没了层次。
+      //    判断依据是"下面跟的是要点"，所以整段话没有要点的简历不会因此误判。
+      // 「个人优势」这类整段话的板块不参与，那里的普通行本来就要排成段落。
+      const isProseBlock = PROSE_SECTIONS.includes(cleanTitle(block.title));
+      const header = hasMarker || isProseBlock ? null : splitEntryHeader(content);
+      const datelessHeader =
+        !hasMarker && !isProseBlock && !header && /^[-•·]\s*/.test(block.body[index + 1] ?? "");
+
+      if (header) {
+        // 有日期：日期顶到右边界，公司职位留在左边。
+        children.push(
+          new Paragraph({
+            spacing: { before: 130, after: 40 },
+            tabStops: [{ type: TabStopType.RIGHT, position: CONTENT_WIDTH }],
+            children: [
+              new TextRun({ text: header.rest, bold: true, size: ENTRY_SIZE, font: FONT_BOLD }),
+              new TextRun({ children: [new Tab()] }),
+              new TextRun({ text: header.date, size: BODY_SIZE, font: FONT }),
+            ],
+          }),
+        );
+        continue;
+      }
+
+      if (datelessHeader) {
+        // 没日期：整行加粗顶格。不加右对齐制表位——那样会在行尾凭空撑出一段空白。
+        children.push(
+          new Paragraph({
+            spacing: { before: 130, after: 40 },
+            children: [new TextRun({ text: content, bold: true, size: ENTRY_SIZE, font: FONT_BOLD })],
+          }),
+        );
+        continue;
       }
 
       // 要点行：写成「小标题：内容」时，冒号前加粗。
