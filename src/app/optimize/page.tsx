@@ -6,8 +6,16 @@ import { analyzeJD } from "@/lib/jd";
 import { useStore } from "@/lib/store";
 import { ExtraExperienceCard } from "@/components/optimize/ExtraExperienceCard";
 import { RewritePlanner } from "@/components/optimize/RewritePlanner";
+import { StyleControls } from "@/components/optimize/StyleControls";
 import { useSessionState } from "@/components/optimize/useSessionState";
 import { buildResumeDocx } from "@/lib/optimizeDocx";
+import { buildResumeTemplate, stripHints } from "@/lib/resumeTemplate";
+import {
+  DEFAULT_STYLE_SETTINGS,
+  resolveStyle,
+  settingsToResolveInput,
+  type StyleSettings,
+} from "@/lib/languageStyles";
 
 export default function OptimizePage() {
   const { profile, jds } = useStore();
@@ -21,14 +29,49 @@ export default function OptimizePage() {
   const [edited, setEdited] = useSessionState<string | null>("jobagent.optimize.draft", null);
   /** 简历里没写、但用户想补进来的其他经历，改写时和简历一起作为材料。 */
   const [extra, setExtra] = useSessionState("jobagent.optimize.extra", "");
+  /** 语言风格设置：主风格、辅风格、力度、长度、优先量化。 */
+  const [styleSettings, setStyleSettings] = useSessionState<StyleSettings>(
+    "jobagent.optimize.style",
+    DEFAULT_STYLE_SETTINGS,
+  );
 
   const [notice, setNotice] = useState("");
-  const [showPlanner, setShowPlanner] = useState(false);
   const [exporting, setExporting] = useState(false);
+  /** 导出时要不要把灰色提示清掉。默认保留——模板本来就是拿去改的。 */
+  const [cleanExport, setCleanExport] = useState(false);
   const draft = edited ?? profile.rawResume;
 
   const jd = jds.find((item) => item.id === activeJD) ?? null;
   const analysis = jd ? analyzeJD(jd.raw, profile.skills, profile.rawResume) : null;
+
+  // 主风格没选时不给合并结果，改写按钮会保持禁用。
+  const styleInput = settingsToResolveInput(styleSettings);
+  const mergedStyle = styleInput ? resolveStyle(styleInput) : undefined;
+
+  /**
+   * 把草稿套进 A4 模板骨架。
+   *
+   * 只在导出时做，不改动你在上方编辑的草稿：
+   * 已有的板块原样搬过去、按规格顺序重排，缺的板块在 Word 上补灰色提示。
+   * 不认识的板块（个人优势、获奖情况……）一个都不丢，原序放到最后。
+   */
+  function toTemplateText(): string {
+    return buildResumeTemplate({
+      profile: {
+        name: profile.name,
+        phone: profile.phone,
+        email: profile.email,
+        location: profile.location,
+        target: profile.target,
+        school: profile.school,
+        major: profile.major,
+        degree: profile.degree,
+        gradYear: profile.gradYear,
+        skills: profile.skills,
+      },
+      draft,
+    });
+  }
 
   function download() {
     if (draft.trim().length === 0) {
@@ -36,7 +79,9 @@ export default function OptimizePage() {
       return;
     }
 
-    const blob = new Blob([draft], { type: "text/plain;charset=utf-8" });
+    const blob = new Blob([cleanExport ? stripHints(draft) : draft], {
+      type: "text/plain;charset=utf-8",
+    });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
@@ -46,25 +91,30 @@ export default function OptimizePage() {
     setNotice("已导出为 txt 文件。");
   }
 
-  /** 导出 Word。docx 库是按需加载的，所以这里要 await。 */
+  /**
+   * 导出 Word。docx 库是按需加载的，所以这里要 await。
+   *
+   * 导出的是「草稿套进模板骨架」之后的内容，缺的板块直接在文档里留灰色提示。
+   * 上面的草稿一个字都不动，导完回去看还是你原来写的东西。
+   * 草稿空着也能导——那样出来就是一份带提示的空白模板，对着填。
+   */
   async function downloadDocx() {
-    if (draft.trim().length === 0) {
-      setNotice("还没有可导出的内容。");
-      return;
-    }
-
     setExporting(true);
     setNotice("正在生成 Word 文档……");
 
     try {
-      const blob = await buildResumeDocx(draft);
+      const blob = await buildResumeDocx(toTemplateText(), { stripHints: cleanExport });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
       link.download = `简历_${profile.name || "未命名"}.docx`;
       link.click();
       URL.revokeObjectURL(url);
-      setNotice("已导出 Word 文档。注意：最终分几页由 Word 按内容长度自己算，程序没法保证刚好一页。");
+      setNotice(
+        cleanExport
+          ? "已导出 Word。提示已清掉。注意：最终分几页由 Word 按内容长度自己算，程序没法保证刚好一页。"
+          : "已导出 Word，缺的地方在文档里是灰色斜体提示。填完回来勾上「去掉灰色提示」再导一次就是干净版。",
+      );
     } catch (error) {
       setNotice(error instanceof Error ? error.message : "导出失败。");
     } finally {
@@ -187,29 +237,10 @@ export default function OptimizePage() {
             >
               载入简历原文
             </button>
-            <button type="button" className="btn" onClick={download}>
-              ⬇ 导出 txt
-            </button>
-            <button type="button" className="btn primary" onClick={downloadDocx} disabled={exporting}>
-              {exporting ? "生成中…" : "⬇ 导出 Word"}
-            </button>
-            <button
-              type="button"
-              className="btn primary"
-              onClick={() => {
-                if (!jd) {
-                  setNotice("先在上面选一份 JD，再生成变更清单。");
-                  return;
-                }
-                setShowPlanner(true);
-              }}
-            >
-              ✨ AI 逐段改写
-            </button>
           </div>
 
           <div className="tiny mt8">
-            AI 只提出变更建议，你在下面的清单里勾选同意哪几条，才会写进草稿。
+            改写在下面的「✨ AI 逐段改写」里做，导出在最底部。两处都会用这个框里的内容。
           </div>
           {notice ? <div className="tiny mt8 warn-text">{notice}</div> : null}
         </div>
@@ -217,25 +248,63 @@ export default function OptimizePage() {
 
       <ExtraExperienceCard value={extra} onChange={setExtra} />
 
-      {showPlanner && jd ? (
-        <RewritePlanner
-          resumeText={draft}
-          extraText={extra}
-          jdRaw={jd.raw}
-          jdLabel={`${jd.company || "未知公司"} · ${jd.title || "未命名岗位"}`}
-          input={{
-            company: jd.company,
-            title: jd.title,
-            target: profile.target,
-            jobType: profile.jobType,
-            analysis,
-          }}
-          onApply={(text) => {
-            setEdited(text);
-            setNotice("已把勾选的变更写进简历草稿，可在上方继续手动润色。");
-          }}
-        />
-      ) : null}
+      <StyleControls jdText={jd?.raw ?? ""} value={styleSettings} onChange={setStyleSettings} />
+
+      <RewritePlanner
+        resumeText={draft}
+        extraText={extra}
+        jdRaw={jd?.raw ?? ""}
+        jdLabel={jd ? `${jd.company || "未知公司"} · ${jd.title || "未命名岗位"}` : ""}
+        style={mergedStyle}
+        jdKeywords={analysis?.keywords ?? []}
+        input={{
+          company: jd?.company,
+          title: jd?.title,
+          target: profile.target,
+          jobType: profile.jobType,
+          analysis,
+        }}
+        onApply={(text) => {
+          setEdited(text);
+          setNotice("已把勾选的变更写进简历草稿，可在上方继续手动润色。");
+        }}
+      />
+
+      <div className="card mt12">
+        <div className="spread">
+          <h3>⬇ 导出</h3>
+          <span className="tiny">{draft.trim().length} 字</span>
+        </div>
+        <p className="tiny">
+          <b>导出 Word</b> 会把草稿套进 A4 模板骨架：板块按 个人信息 → 教育背景 → 实习经历 → 项目经历 →
+          校园经历 → 专业技能 的顺序排，<b>你还没写的部分，直接在文档里用灰色斜体标出来</b>告诉你该写什么。
+          草稿本身不会被改动。
+        </p>
+        <p className="tiny">
+          <b>导出 txt</b> 导的是「简历草稿」框里的原样内容，不套模板。
+        </p>
+
+        <label className="mt8" style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer" }}>
+          <input
+            type="checkbox"
+            checked={cleanExport}
+            onChange={(event) => setCleanExport(event.target.checked)}
+          />
+          <span className="tiny">
+            <b>去掉灰色提示再导出</b>。文档里的〔…〕会全部清掉、空板块也一起去掉，得到一份可以直接投递的版本。
+            还没填完就先别勾，留着提示对着 Word 改。
+          </span>
+        </label>
+
+        <div className="row mt8">
+          <button type="button" className="btn" onClick={download}>
+            ⬇ 导出 txt
+          </button>
+          <button type="button" className="btn primary" onClick={downloadDocx} disabled={exporting}>
+            {exporting ? "生成中…" : "⬇ 导出 Word"}
+          </button>
+        </div>
+      </div>
     </>
   );
 }
