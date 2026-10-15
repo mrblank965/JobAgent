@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 const navigation = [
   { href: "/", icon: "🏠", label: "工作台" },
   { href: "/resume", icon: "🪶", label: "简历解析" },
-  { href: "/analysis", icon: "🧭", label: "岗位分析" },
+  { href: "/profile", icon: "🗂️", label: "网申资料库" },
+  { href: "/analysis", icon: "🧭", label: "方向分析" },
   { href: "/jd", icon: "🔎", label: "JD 拆解器" },
   { href: "/match", icon: "⚖️", label: "岗位匹配" },
   { href: "/optimize", icon: "📝", label: "简历定制" },
@@ -45,9 +46,9 @@ export function Sidebar() {
 
       <div className="side-foot">
         <span className="dot-live" />
-        数据仅存于本机页面内存
+        求职资料仅存于本机浏览器
         <br />
-        无后端 · 无账号 · 刷新即清空
+        无后端 · 无账号 · 可导出备份
       </div>
     </aside>
   );

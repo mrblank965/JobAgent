@@ -100,7 +100,7 @@ export function ResumeTextInput({
       <div className={hintClass}>{hint}</div>
 
       <div className="mt12 warnbox">
-        当前使用本地规则演示解析，没有调用 AI 模型。文本只保留在这个页面的内存里，不会保存到服务器或浏览器存储，刷新后会消失。
+        当前使用本地规则演示解析，没有调用 AI 模型。文本与解析进度只保存在本机浏览器，不会上传到服务器；点击“清空重来”才会删除。
       </div>
 
       <details className="mt12 rules">
