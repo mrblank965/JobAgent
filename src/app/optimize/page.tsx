@@ -7,7 +7,7 @@ import { useStore } from "@/lib/store";
 import { ExtraExperienceCard } from "@/components/optimize/ExtraExperienceCard";
 import { RewritePlanner } from "@/components/optimize/RewritePlanner";
 import { StyleControls } from "@/components/optimize/StyleControls";
-import { useSessionState } from "@/components/optimize/useSessionState";
+import { useTransientState } from "@/components/optimize/useTransientState";
 import { buildResumeDocx } from "@/lib/optimizeDocx";
 import { buildResumeTemplate, stripHints } from "@/lib/resumeTemplate";
 import {
@@ -21,16 +21,17 @@ export default function OptimizePage() {
   const { profile, jds } = useStore();
 
   /**
-   * 选中的 JD、手改过的草稿、其他经历都存进 sessionStorage。
-   * 切到别的页面再回来、或者按 F5 刷新，填过的东西都还在；关掉标签页才清除。
+   * 选中的 JD、手改过的草稿、其他经历都只存在**页面内存**里。
+   * 站内跳到别的页面再回来，填过的东西还在；但**一刷新就清空**，关掉标签页再打开也是空的。
+   * 存的是内存不是 sessionStorage——后者扛得住刷新，和这个需求正好相反。
    */
-  const [activeJD, setActiveJD] = useSessionState("jobagent.optimize.jd", "");
+  const [activeJD, setActiveJD] = useTransientState("jobagent.optimize.jd", "");
   /** 用户改过就用改过的，没改过就跟着画像里的原文走，避免用 effect 同步状态。 */
-  const [edited, setEdited] = useSessionState<string | null>("jobagent.optimize.draft", null);
+  const [edited, setEdited] = useTransientState<string | null>("jobagent.optimize.draft", null);
   /** 简历里没写、但用户想补进来的其他经历，改写时和简历一起作为材料。 */
-  const [extra, setExtra] = useSessionState("jobagent.optimize.extra", "");
+  const [extra, setExtra] = useTransientState("jobagent.optimize.extra", "");
   /** 语言风格设置：主风格、辅风格、力度、长度、优先量化。 */
-  const [styleSettings, setStyleSettings] = useSessionState<StyleSettings>(
+  const [styleSettings, setStyleSettings] = useTransientState<StyleSettings>(
     "jobagent.optimize.style",
     DEFAULT_STYLE_SETTINGS,
   );

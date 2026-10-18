@@ -1,4 +1,4 @@
-import { SECTION_TITLES, stripMarkdown } from "@/lib/optimize";
+import { cleanTitle, isSectionTitle, stripMarkdown } from "@/lib/optimize";
 import { hasHints, stripHints, tokenizeHints } from "@/lib/resumeTemplate";
 
 /**
@@ -40,15 +40,8 @@ const LINE_COLOR = "595959";
 /** 模板提示的灰色。黑白的正文里只有它是有颜色的，一眼能认出来。 */
 const HINT_COLOR = "808080";
 
-/** 去掉行首行尾的 【】 [] 和冒号，用来比对板块标题。 */
-function cleanTitle(line: string): string {
-  return line.trim().replace(/^[【\[]+/, "").replace(/[】\]]+$/, "").replace(/[:：]\s*$/, "").trim();
-}
-
-function isSectionTitle(line: string): boolean {
-  const title = cleanTitle(line);
-  return SECTION_TITLES.some((item) => title === item);
-}
+/** 可选板块的标题尾巴，例如「校园经历（可选择）」。 */
+const OPTIONAL_TITLE = /[（(]\s*可选择?\s*[）)]$/;
 
 /**
  * 这几个板块在简历里通常是一整段话，不是一条条并列的要点。
@@ -88,7 +81,13 @@ export function splitLabel(text: string): { label: string; rest: string } | null
   return { label: matched[1].trim(), rest: matched[2].trim() };
 }
 
-type ResumeBlock = { title: string; body: string[] };
+/**
+ * 一个板块。
+ *
+ * title 是**规范化之后**的标题（去掉【】和「（可选择）」），用来比对；
+ * optional 单独记一份，因为排版时要把它写回标题右边，光看 title 已经看不出来了。
+ */
+type ResumeBlock = { title: string; optional?: boolean; body: string[] };
 
 /**
  * 把纯文本简历拆成"姓名 + 联系方式 + 若干板块"。
@@ -109,7 +108,7 @@ export function parseResumeText(text: string): { name: string; contact: string; 
 
   for (const line of lines) {
     if (isSectionTitle(line)) {
-      current = { title: cleanTitle(line), body: [] };
+      current = { title: cleanTitle(line), optional: OPTIONAL_TITLE.test(line.trim()), body: [] };
       blocks.push(current);
       continue;
     }
@@ -209,11 +208,26 @@ export async function buildResumeDocx(
   }
 
   for (const block of blocks) {
+    // 可选板块（「校园经历（可选择）」）标题也排成灰的，一眼看得出整块都是提示、可以整块删掉。
+    // 「（可选择）」是从 optional 标志写回去的——title 里已经被规范化掉了。
+    const headingText = block.optional ? `${block.title}（可选择）` : block.title;
+
     children.push(
       new Paragraph({
         spacing: { before: 220, after: 90 },
         border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: LINE_COLOR } },
-        children: [new TextRun({ text: block.title, bold: true, size: HEADING_SIZE, font: FONT_BOLD })],
+        children: [
+          block.optional
+            ? new TextRun({
+                text: headingText,
+                bold: true,
+                italics: true,
+                color: HINT_COLOR,
+                size: HEADING_SIZE,
+                font: FONT_BOLD,
+              })
+            : new TextRun({ text: headingText, bold: true, size: HEADING_SIZE, font: FONT_BOLD }),
+        ],
       }),
     );
 
