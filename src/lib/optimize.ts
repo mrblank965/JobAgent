@@ -312,7 +312,17 @@ export const SECTION_TITLES = [
 
 /** 去掉行首行尾的 【】 [] 和冒号，用来比对板块标题。 */
 export function cleanTitle(line: string): string {
-  return line.trim().replace(/^[【\[]+/, "").replace(/[】\]]+$/, "").replace(/[:：]\s*$/, "").trim();
+  return (
+    line
+      .trim()
+      .replace(/^[【\[]+/, "")
+      .replace(/[】\]]+$/, "")
+      // 模板会给"有就写、没有就整块不要"的板块标上「（可选择）」。
+      // 不摘掉的话，「校园经历（可选择）」比对不出「校园经历」，整个板块会认不出来。
+      .replace(/[（(]\s*可选择?\s*[）)]$/, "")
+      .replace(/[:：]\s*$/, "")
+      .trim()
+  );
 }
 
 export function isSectionTitle(line: string): boolean {

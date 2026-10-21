@@ -233,6 +233,8 @@ const SECTION_GROUPS: {
   title: string;
   keys: string[];
   optional?: boolean;
+  /** 可选板块没有内容时，用这句话说清该往里写什么。 */
+  hint?: string;
   skeleton?: (profile: TemplateProfile) => string[];
 }[] = [
   { title: "教育背景", keys: ["教育背景", "教育经历", "学历背景"], skeleton: educationSkeleton },
@@ -242,6 +244,7 @@ const SECTION_GROUPS: {
     title: "校园经历",
     keys: ["校园经历", "社团经历", "学生工作", "实践经历"],
     optional: true,
+    hint: "校园经历、社团或学生工作",
   },
   { title: "专业技能", keys: ["专业技能", "技能特长", "技能"], skeleton: skillSkeleton },
 ];
@@ -292,8 +295,15 @@ export function buildResumeTemplate(input: TemplateInput): string {
     }
 
     if (group.optional) {
+      // 可选板块：标题照常排出来，右边标「（可选择）」；下面用灰字说清怎么写、怎么删。
+      // 标题本身也会排成灰的（见 optimizeDocx 的 OPTIONAL_TITLE），
+      // 所以勾了「去掉灰色提示」导出时，整块会一起消失。
       parts.push(
-        `${HINT}可选板块：有校园经历、社团或学生工作就写在这里；没有就整块不要写，导出时这几行会一起删掉。`,
+        [
+          `${group.title}（可选择）`,
+          `${HINT}有${group.hint ?? "相关经历"}就写在这里，一条占一行，格式和上面的经历一样。`,
+          `${HINT}没有就整块不要写，什么都别留。`,
+        ].join("\n"),
       );
       continue;
     }
