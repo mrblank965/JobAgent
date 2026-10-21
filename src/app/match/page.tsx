@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { KeywordList } from "@/components/analysis/KeywordList";
 import { MatchScore } from "@/components/analysis/MatchScore";
 import { SuggestionList } from "@/components/analysis/SuggestionList";
@@ -15,8 +15,16 @@ function toneOf(coverage: number) {
 
 export default function MatchPage() {
   const { profile, jds, apps, addApp, storageReady } = useStore();
-  const [openId, setOpenId] = useState<string | null>(null);
+  // 用 Set 支持同时展开多份 JD，跨 JD 对比缺口时不用来回点
+  const [openIds, setOpenIds] = useState<ReadonlySet<string>>(new Set());
   const [notice, setNotice] = useState("");
+
+  // 操作提示挂几秒就自己消掉，免得下一次操作前一直占着页面顶部
+  useEffect(() => {
+    if (!notice) return;
+    const timer = setTimeout(() => setNotice(""), 4000);
+    return () => clearTimeout(timer);
+  }, [notice]);
 
   /**
    * 每份 JD 都重算一次，不读 jd.keywords。
@@ -63,7 +71,9 @@ export default function MatchPage() {
       for (const word of row.analysis.match.missing) {
         const entry = tally.get(word) ?? { count: 0, companies: [] };
         entry.count += 1;
-        entry.companies.push(row.jd.company || "未知公司");
+        // 同一家公司投多份 JD 缺同一个词时只记一次，chip 的悬停提示才不会重复
+        const company = row.jd.company || "未知公司";
+        if (!entry.companies.includes(company)) entry.companies.push(company);
         tally.set(word, entry);
       }
     }
@@ -200,7 +210,11 @@ export default function MatchPage() {
             <>
               <div className="mt8">
                 {gapStats.map((item) => (
-                  <span key={item.word} className="chip miss">
+                  <span
+                    key={item.word}
+                    className="chip miss"
+                    title={`要求方：${item.companies.join("、")}`}
+                  >
                     {item.word} × {item.count}
                   </span>
                 ))}
@@ -222,7 +236,7 @@ export default function MatchPage() {
 
       <div className="cards mt8" style={{ gridTemplateColumns: "1fr" }}>
         {ranked.map((row, index) => {
-          const open = openId === row.jd.id;
+          const open = openIds.has(row.jd.id);
 
           return (
             <div className="card" key={row.jd.id}>
@@ -243,7 +257,14 @@ export default function MatchPage() {
                   <button
                     type="button"
                     className="btn sm"
-                    onClick={() => setOpenId(open ? null : row.jd.id)}
+                    onClick={() =>
+                      setOpenIds((prev) => {
+                        const next = new Set(prev);
+                        if (next.has(row.jd.id)) next.delete(row.jd.id);
+                        else next.add(row.jd.id);
+                        return next;
+                      })
+                    }
                   >
                     {open ? "收起" : "展开详情"}
                   </button>
