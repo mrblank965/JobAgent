@@ -1,0 +1,140 @@
+{
+  "positionId": "fin-ins-actuary",
+  "positionName": "保险精算师",
+  "aliases": [
+    "精算分析师",
+    "产品精算",
+    "精算岗",
+    "定价精算"
+  ],
+  "coreDuties": [
+    "保险产品定价与开发：基于死亡率、发病率、事故率、利率、费用率等数据构建精算模型，厘定保费、保额、现金价值，平衡保障、成本、利润与市场竞争力。",
+    "准备金评估与核算：按监管与会计准则计提未到期责任准备金、未决赔款准备金，确保公司具备足额赔付能力。",
+    "偿付能力管理与监管报备：落实偿二代、IFRS17等监管要求，开展压力测试、资本测算、动态偿付能力测试，编制精算报告并向监管报备。",
+    "风险建模与风控管理：量化重疾、意外、巨灾、利率波动、退保等风险，搭建风控模型，制定再保险方案，对冲极端风险。",
+    "利润测算与价值评估：开展内含价值、新业务价值、保单利润测试，为公司经营决策、产品迭代、渠道策略提供数据支撑。",
+    "资产负债匹配与投资协同：联动投资部门，匹配负债久期与资产收益，控制利差损风险，保障公司长期盈利稳定。",
+    "精算咨询与项目支持：支持并购估值、产品整改、渠道核算、养老金方案设计、健康管理数据建模等专项项目。",
+    "产险精算工作分为四个版块：精算部（包括产品定价、准备金评估和费用分析）、风险管理与经济资本管理（例如经济资本模型、偿二代、风险管理）、产品线（定价、核保、开发）以及大型保险公司的分公司；其中精算部的产品定价又细分个人业务、团体业务、再保险业务。",
+    "产品定价工作包括数据收集、数据提取、数据分析，以及定价建模、模型测试、模型输出、模型落地等。",
+    "撰写定价相关报告以及产品分析报告，并在数据和方案更新时带领团队及时更新相关内容，保证官方记录的时效性与准确性。"
+  ],
+  "workflow": [
+    "每天9点到办公室，花30分钟查阅和回复邮件；基于邮件和OA的最新讯息迅速整理思路，在10点前完成工作进度检查，安排个人当日工作，并给团队下发工作任务。",
+    "上午10点到12点集中精力处理产品定价工作，包括数据收集、数据提取、数据分析，以及定价建模、模型测试、模型输出、模型落地等。",
+    "午休后参加产品讨论会或通气会，与公司多个部门及第三方沟通协作，推进保险产品推出。",
+    "每天下午抽出两个小时撰写定价相关报告以及产品分析报告，数据和方案有更新时带领团队及时更新。",
+    "完成当日报告撰写和更新任务后，回归项目跟进环节，在下班前跟进手头项目进程，根据会议讨论进行新一轮团队任务分配，通过邮件、电话联系相关人员，确保讨论成果落实。",
+    "工作节奏呈“总分总”结构：早晨整理思路、分配任务，白天推进定价与沟通，下午撰写报告，下班前跟进项目并分配新一轮任务。"
+  ],
+  "tools": [
+    "Excel高级建模",
+    "SQL/Python/R",
+    "精算模型系统",
+    "偿付能力监管系统",
+    "数据仓库与BI工具"
+  ],
+  "typicalDay": "以一位资深产险精算师为例：每天9点到达办公室，用30分钟查阅和回复邮件，并基于邮件和OA的最新讯息迅速整理思路，在10点前完成工作进度检查、安排个人当日工作并给团队下发任务。上午10点到12点集中处理产品定价工作，涉及数据收集、数据提取、数据分析以及定价建模、模型测试、模型输出、模型落地等。午休一个半小时后，通常参加产品讨论会或通气会，与部门内外同事及第三方沟通协作。下午抽出两个小时撰写定价相关报告以及产品分析报告，数据和方案有更新时带领团队及时更新。完成报告任务后回归项目跟进环节，在下班前跟进手头项目进程，根据会议讨论进行新一轮团队任务分配，并通过邮件、电话联系相关人员确保讨论成果落实。整体工作是多线程的，既与模型、数据打交道，也需要与部门内外同事以及第三方公司沟通合作。",
+  "pitfalls": [
+    "考证周期极长：准精算加正精算通常需要5至8年，边工作边备考，时间与精力投入巨大。",
+    "专业门槛极高：数学、统计、金融、保险、编程、法律多学科融合，零基础入门难度大。",
+    "合规责任重大：精算报告具法定效力，签字担责，数据失真、模型错误将面临监管处罚与执业追责。",
+    "技术迭代迅速：AI建模、大数据定价、云平台自动化持续升级，需持续学习编程与前沿工具。",
+    "工作容错率低：数据与模型高度严谨，小数点误差可能引发巨额准备金偏差，要求极致细致。",
+    "精算师的价值不仅体现在处理数据、编程建模，更重要的是发现问题、分析问题，为雇主和客户提供建设性的建议，不能囿于眼前。",
+    "报告撰写非常考验精算师的逻辑思维和书面表达能力。",
+    "工作需有始有终，定期进行工作梳理、追踪和汇报进度，让合作方、同事、雇主心中有底。"
+  ],
+  "sources": [
+    {
+      "postId": "1676f14db087ac06",
+      "title": "产险精算师的一天",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316184&ver=7034&signature=wu4mBLH-gQ4pRySc3vMIKuN8YtA3z8KdVN-URsjhGBSyV9fKvxqv1t1bDBoR7qM*duJZZ4maWcGAJ843k-81F8S32Y50dyTMFTrqreeCTaLTnDib2ryQ4YlbIE1*qdP4&new=1"
+    },
+    {
+      "postId": "e2111e4030628337",
+      "title": "【封面】保险精算师教你如何用大数据买车（完整版）",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792316184&ver=1&signature=YyplhOOCQ9A6hqxfhp0whqGcbymHG7FPbA*SI5EmT4TxG3-lpi-48IgyQVd3c0Wnu5kylvdWiRso1BOrATMLvQ2nNBNnmZa8TuyTqwxejr91mF8SwWuZz3S5BFdIBxsczeJardlsbW42iyM9TiG0xg=="
+    },
+    {
+      "postId": "b65abe8b2822dc6a",
+      "title": "你买的那些保险，保险精算师们都不买！什么保险深得他们青睐？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316184&ver=7034&signature=msuRxr4ex88gGLeXeCtXcygQvna*TrH0N7IzPYR38sEBqtOfQUrVdwAfZZZ5PQQAn2OBPkYHcPXzNfkfQuJNO5ubzMUnKYpJHemcLMehtwKECXXr6gYLvyd5axnldVbJ&new=1"
+    },
+    {
+      "postId": "17bdf3087783559a",
+      "title": "精算师话保险：投保时如何选择保险公司？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316184&ver=7034&signature=DPehMqYPzFEPP9vHZbWEqFm4Sp6dn0GckEuUZx6oAR7MLK5qkGArfskDjxHU70AA4HB8ABfGOtIXN6-YU9pu8hJJoUL0SpBGMlV6vM6A8Ei9KU0*tf9s*ZjHWLNhniYE&new=1"
+    },
+    {
+      "postId": "7c482de1cd62b2e2",
+      "title": "一个保险精算师的独白：我们为什么要买保险？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316234&ver=7034&signature=0sYyGHuWUb7umrZI2PWEJ0c*qqdhnXzWdm*iOawmgjKgxooGDVWzbcYui1-xRIF7ET7JSoxpoR2iloKftl6HF*yd1O1Ar093K9arXMi*kCdXNur*PqUIipzIAqi-Ca61&new=1"
+    },
+    {
+      "postId": "e4d0434d456d7bb3",
+      "title": "精算师说保险：一文读懂保险公司财务会计报表",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316234&ver=7034&signature=mWa4iZ-cbO87HWhQPatVaM8IQBwhPkrDW2rtssvXQihcyUe*oLmrhrOTIP6FtYNRf7vnv-WTt1BGQmCPIq*8Oph5IGBxQXI1d1gtdki5TNceRtnXZJYDrlbyb89QPzJy&new=1"
+    },
+    {
+      "postId": "73d27d73d0a38be3",
+      "title": "精算师说保险：一文看懂保险公司信息披露报告",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316234&ver=7034&signature=mWa4iZ-cbO87HWhQPatVaM8IQBwhPkrDW2rtssvXQigxhVRi310aTuvvGzNSy*2wWNjZxLR7I4yOK4c41eHHVnA5waVXzfTvMxTnq1r0Gf*SG1cCSQ2efge*6qYHo6bY&new=1"
+    },
+    {
+      "postId": "4e1ea9b3cea231ad",
+      "title": "职业全景指南036：保险精算师——风险定价师、金融稳健守门人",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316234&ver=7034&signature=np0MJecwqwZf7njHWaYuGPOczVlBjPh1MnbCwL0ofAr7y5HcmvIW835mEUsfr-e1f*Yf8atPcmyEq*JRF2AOyJRj-rNTraql*cgbc7gbkN0CTW8l0WAqygqRCYHCTWoJ&new=1"
+    },
+    {
+      "postId": "c5efb3168e3acb43",
+      "title": "互联网保险，到底掀了谁的桌子？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316270&ver=7034&signature=QdJExgjUH1rTk15vhwuqCMYHM5ipKMuOHoz7n9Xz7zEsF-kB4Js2qaMuYR7v51H5U6KIzgn2n4-ojQ4464AMUntc-DPNMz3zVOrGBUgtP9BgeUZYunNK8iCwGMD0mw1s&new=1"
+    },
+    {
+      "postId": "bf7f8d7ef23c3a4c",
+      "title": "监管对这类保险下手了！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316270&ver=7034&signature=upN0cKQk9OsS5JcMKxW5qm7Mskr6sVF8347BAHymIQyduJAPd6xMAVTpxBzV*kjumYbZhNeP*tfdxm2WLuszJEzMmkZIC03YxYYnUrxVW9eJWjJHXr9wI0UEEasRVqks&new=1"
+    },
+    {
+      "postId": "f22f6a650c9f946d",
+      "title": "不怕买不起房，只怕生不起病：工薪家庭怎么挑保险？看这一篇就够了！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316270&ver=7034&signature=zU8H8owB8ND4GCaCwRnlE0IxbdID4WU1K7Lzye0h-6sk*P*wsoNvG9RnNttKA-CAuvPh2YfsOBoIsJQbyeTROhXjkKh06xGGsVZT8GHGCHcBn8ukD4KfnYweqwsoN1HN&new=1"
+    },
+    {
+      "postId": "effb11af6632d4b8",
+      "title": "理赔被拒？先别急着骂娘，可能是你打开方式不对。",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316320&ver=7034&signature=j1Hf5wBIdwAQvNz2hnkW6ijSka1x1C2VS*kfV*grbVV9Zq2tMEJQlYBIrXcv0vfwmyFs2VSJQNsfg3ZzS*H*g-If94yyF6p6kMUlGoDsfcblHfpd-I6rlEpKUHWfcrBC&new=1"
+    },
+    {
+      "postId": "13bc8461aea5c546",
+      "title": "对话符一帆：疫情之下，走近真实的精算师",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316356&ver=7034&signature=f9*ccTflZ*1s*3aLKJxMWXeJtHPehTi0rFM92A*bPqWLmqKLJmdw0Sy*SbHCG00kwxXRtGrxBYZ3L3H7NftR1dSWJt4daDkttXuc3Htnw0BJV8vANvhMwlM8l3KiEga*&new=1"
+    },
+    {
+      "postId": "da31638aebdd3c41",
+      "title": "六边形战士——精算师：高薪+移民一手抓",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316356&ver=7034&signature=x-6zF6nSp1EmEiq*Dy9dXgCxs6d5aaVY3Z9-25wOk4EO7Ly9r4AnEVv*JeQ1Jb9x9JLjQAy-335bVZqcVMYs7SlpH4cRBC6*dIWVcaGRp85xJsiN*2IdrQ2di2Upl6By&new=1"
+    },
+    {
+      "postId": "595488ebfb7bfc90",
+      "title": "圣路易斯精算师真人分享 | 如何找到第一份精算工作？",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792316356&ver=1&signature=rulpo5YjKRhPuT6dYz*EMgwmp15oqQAvvHiD0rfd30brzmb8-piZTnw1maFnd28zWAM1u5qD0Gad4Da7G*NRdka7oqjQz4sPtNYAgi889sj7-LgjRizAvJeioWdVnpIIAcVsKIK30djshtyTgZ3DsQEwUou8cNY7WVvpsp1c8H0="
+    },
+    {
+      "postId": "d81c3604f1a36c19",
+      "title": "你男票到底有多爱你？精算师设计“爱情公式”找女友！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316356&ver=7034&signature=kbBzb8o-xhT*PpAMZYfHBqLujigNYCyW*2HAJj1qX218-xW1Xu7xTJQduhooxspsLTnUmQ622ajCIWeQjXjT84cfk363Jjb4q*cGmL0lHlVQbrGfAxgVipG*jl06j3hF&new=1"
+    },
+    {
+      "postId": "fd524e554eb6507c",
+      "title": "突破传统 │ 三位走出意想不到的职业道路的精算师对话《The Actuary》杂志",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316406&ver=7034&signature=lULezixbvMvPnrNEtZwk8gr04C-szz3T6Q9k-yvyDpRBenkLIdG9D7j02rdSyXE-9Pr54ISxJLUv8DibGzKRN1GjKcLQLD-yzxGQU3byiC9U4jvT7FsZb2TLy6s6QM-t&new=1"
+    },
+    {
+      "postId": "7b970b111b2b6158",
+      "title": "一个留美女精算师重返职场之路",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316406&ver=7034&signature=ycm*ZIN8-cVkEN3PGprPWqJeyF7vWy3o1sq99P7wiEBdUqU6DWBQODYpsSz8UiktxNjGX*vgaXH4Oxq9jkxnfFWGqQe7qe*B90AiS8-vVYHX*3yKOaN3kuzBR4GJaO7I&new=1"
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "status": "indexed",
+  "positionId": "fin-ins-agent",
+  "positionName": "保险代理人",
+  "aliases": [
+    "保险销售",
+    "寿险顾问",
+    "保险经纪人",
+    "个险代理人"
+  ],
+  "vectorStore": "keyword-inverted",
+  "points": [
+    {
+      "category": "coreDuties",
+      "text": "客户开发：通过电话、微信与潜在客户建立联系，经营朋友圈、短视频分享保险知识与财经资讯以打造专业形象，参加社交活动与线下沙龙拓展人脉，维护老客户以获取转介绍。",
+      "kpId": "fin-ins-agent-kp-001"
+    },
+    {
+      "category": "coreDuties",
+      "text": "需求分析：了解客户的家庭结构、财务状况、健康情况与担忧，从全面风险管理角度为客户做专业分析。",
+      "kpId": "fin-ins-agent-kp-002"
+    },
+    {
+      "category": "coreDuties",
+      "text": "方案设计：根据需求分析结果从产品库中挑选产品组合，制作专属建议书，通过面对面沟通或线上会议用通俗语言讲解方案，解答疑问。",
+      "kpId": "fin-ins-agent-kp-003"
+    },
+    {
+      "category": "coreDuties",
+      "text": "售后服务：协助客户办理投保、续保手续，提醒按时缴费避免保单失效；客户出险时全程协助办理理赔，整理材料、对接保险公司；定期为客户做保单年检，检视保障是否过时或不足并及时调整；在客户生日、节日发送祝福，分享财经、健康资讯维系客户关系。",
+      "kpId": "fin-ins-agent-kp-004"
+    },
+    {
+      "category": "coreDuties",
+      "text": "专业学习：每天抽出时间学习新产品条款、熟悉《保险法》等法律法规、研究市场动态，参加公司和团队的线上线下培训，补充财经、税务、法律等知识。",
+      "kpId": "fin-ins-agent-kp-005"
+    },
+    {
+      "category": "coreDuties",
+      "text": "行政与团队管理：资深代理人或团队主管需填写工作日志、记录客户信息、提交各类报告并复盘总结；带领团队者还需负责招募新人、辅导培训团队成员、组织团队会议、激励团队业绩。",
+      "kpId": "fin-ins-agent-kp-006"
+    },
+    {
+      "category": "coreDuties",
+      "text": "孤儿单客户服务：接手原代理人已离职的保单，在无佣金的情况下为客户办理理赔、解答疑问、维护保单。",
+      "kpId": "fin-ins-agent-kp-007"
+    },
+    {
+      "category": "coreDuties",
+      "text": "协助客户办理退税：帮助客户完成个人养老金退税及商业健康险税前扣除的填报。",
+      "kpId": "fin-ins-agent-kp-008"
+    },
+    {
+      "category": "coreDuties",
+      "text": "主持与团队活动：参与公司颁奖典礼等活动的台词对稿与主持工作。",
+      "kpId": "fin-ins-agent-kp-009"
+    },
+    {
+      "category": "workflow",
+      "text": "清晨准时到公司，开启上午的学习时光，学习产品知识、更新理赔政策、打磨服务流程。",
+      "kpId": "fin-ins-agent-kp-010"
+    },
+    {
+      "category": "workflow",
+      "text": "上午处理行政事务、学习新产品、预约客户。",
+      "kpId": "fin-ins-agent-kp-011"
+    },
+    {
+      "category": "workflow",
+      "text": "下午与客户面对面沟通，进行需求分析或讲解方案。",
+      "kpId": "fin-ins-agent-kp-012"
+    },
+    {
+      "category": "workflow",
+      "text": "利用碎片化时间处理理赔：对接医院、收集资料、核对信息、跟进进度。",
+      "kpId": "fin-ins-agent-kp-013"
+    },
+    {
+      "category": "workflow",
+      "text": "晚上对接客户（很多客户下班后才有空）、经营社交媒体、参加培训，并规划第二天的工作；有时整理理赔材料、回复客户疑问。",
+      "kpId": "fin-ins-agent-kp-014"
+    },
+    {
+      "category": "workflow",
+      "text": "从获客到长期服务形成完整闭环：客户开发、需求分析、方案设计、售后服务、专业学习、行政与团队管理。",
+      "kpId": "fin-ins-agent-kp-015"
+    },
+    {
+      "category": "tools",
+      "text": "电话、微信等通讯工具用于客户联系",
+      "kpId": "fin-ins-agent-kp-016"
+    },
+    {
+      "category": "tools",
+      "text": "朋友圈、短视频等社交媒体用于打造专业形象",
+      "kpId": "fin-ins-agent-kp-017"
+    },
+    {
+      "category": "tools",
+      "text": "专属建议书用于方案讲解",
+      "kpId": "fin-ins-agent-kp-018"
+    },
+    {
+      "category": "tools",
+      "text": "线上会议工具用于方案沟通",
+      "kpId": "fin-ins-agent-kp-019"
+    },
+    {
+      "category": "tools",
+      "text": "工作日志用于记录客户信息与工作复盘",
+      "kpId": "fin-ins-agent-kp-020"
+    },
+    {
+      "category": "tools",
+      "text": "数字化工具，包括录视频、写文章",
+      "kpId": "fin-ins-agent-kp-021"
+    },
+    {
+      "category": "tools",
+      "text": "Excel用于计算储蓄型保险的年化收益与逐年收益",
+      "kpId": "fin-ins-agent-kp-022"
+    },
+    {
+      "category": "tools",
+      "text": "手机小程序用于挂号及查询疾病资料（陪诊场景）",
+      "kpId": "fin-ins-agent-kp-023"
+    },
+    {
+      "category": "typicalDay",
+      "text": "保险代理人清晨准时到公司，开启上午的学习时光，学习产品知识、更新理赔政策、打磨服务流程。上午处理行政事务、学习新产品、预约客户；下午与客户面对面沟通，做需求分析或讲解方案；白天的忙碌间隙要处理理赔，对接医院、收集资料、核对信息、跟进进度。晚上可能还要对接客户、经营社交媒体、参加培训，同时规划第二天的工作，有时在灯下整理理赔材料、回复客户疑问。一天中还会帮客户完成退税、与朋友交流医疗政策、向医学专业人士了解一线情况。本质上，现代保险代理人更像一位个人创业者，自我驱动、管理时间、打造个人品牌，每天围绕开拓客源、建立信任、专业咨询、长期服务四大支柱重复着琐碎却有意义的工作。",
+      "kpId": "fin-ins-agent-kp-024"
+    },
+    {
+      "category": "pitfalls",
+      "text": "部分客户将孤儿单的无偿服务视为理所应当，但这类服务没有佣金，并非代理人的义务。",
+      "kpId": "fin-ins-agent-kp-025"
+    },
+    {
+      "category": "pitfalls",
+      "text": "一份几百元的医疗险佣金可能不到五十元，冒雨上门服务的交通费、医药费可能远超佣金，经济上并不划算。",
+      "kpId": "fin-ins-agent-kp-026"
+    },
+    {
+      "category": "pitfalls",
+      "text": "公众常认为保险代理人挣大钱，实际上赚的是辛苦费、服务费，是用时间、精力、真心换来的微薄回报。",
+      "kpId": "fin-ins-agent-kp-027"
+    },
+    {
+      "category": "pitfalls",
+      "text": "行业人力大幅脱落，2019年高峰时期973万人，两年多时间锐减402万人，截至2022年上半年执业登记销售人员570.7万人；新员工一年留存率甚至只有10%。",
+      "kpId": "fin-ins-agent-kp-028"
+    },
+    {
+      "category": "pitfalls",
+      "text": "代理人平均月工资约3500元，仅为社会平均工资的78%，收入近两年普遍下滑二至五成，每月只有两三千元。",
+      "kpId": "fin-ins-agent-kp-029"
+    },
+    {
+      "category": "pitfalls",
+      "text": "金字塔式层级结构导致利益层层盘剥，一线代理人保费贡献与直接薪佣收入严重不匹配。",
+      "kpId": "fin-ins-agent-kp-030"
+    },
+    {
+      "category": "pitfalls",
+      "text": "首年佣金过高，重疾险首年佣金比例甚至高于首年保费，变相鼓励冲业绩的非理性投保。",
+      "kpId": "fin-ins-agent-kp-031"
+    },
+    {
+      "category": "pitfalls",
+      "text": "自保件和互保件乱象：新增代理人为达到指标在 company 默许下为自己或互相投保，个别机构销售人员购买自保件比例超过75%。",
+      "kpId": "fin-ins-agent-kp-032"
+    },
+    {
+      "category": "pitfalls",
+      "text": "主动退保可成为生意：自保件和互保件提前设计激励方案，佣金加退保返还资金超过原投保金额即可退保获利。",
+      "kpId": "fin-ins-agent-kp-033"
+    },
+    {
+      "category": "pitfalls",
+      "text": "部分保险公司培训被简化为业绩考核指标和销售话术培训，早会通过播放视频、打鸡血等方式激励，缺乏客观内容。",
+      "kpId": "fin-ins-agent-kp-034"
+    },
+    {
+      "category": "pitfalls",
+      "text": "只背话术、不懂产品的代理人在消费者保险素养提升后难以出单。",
+      "kpId": "fin-ins-agent-kp-035"
+    },
+    {
+      "category": "pitfalls",
+      "text": "组织或参与代理退保黑产属于执业失信行为，包括将客户信息提供给职业化第三方、以全额退保为幌子误导客户、教唆客户编造理由伪造证据进行恶意投诉等。",
+      "kpId": "fin-ins-agent-kp-036"
+    },
+    {
+      "category": "pitfalls",
+      "text": "提供虚假学历获得资格、不当处理客户保费、伪冒客户签名等行为会被监管处罚，包括撤销牌照、禁业等。",
+      "kpId": "fin-ins-agent-kp-037"
+    },
+    {
+      "category": "pitfalls",
+      "text": "代理人组织参与退保黑产绝不姑息，失信行为记录将报送地方保险行业协会并行业内共享，查询期限原则上不少于5年。",
+      "kpId": "fin-ins-agent-kp-038"
+    },
+    {
+      "category": "pitfalls",
+      "text": "转型做保险需注意：这行没有底薪、没有考勤、没有人派活；一年保单件数在12件以下的从业者占46.55%，月收入在6000元以下的占43.89%。",
+      "kpId": "fin-ins-agent-kp-039"
+    },
+    {
+      "category": "pitfalls",
+      "text": "把保险当成没别的选择时的选择、想赚快钱、不愿意学习的人不适合进入这个行业。",
+      "kpId": "fin-ins-agent-kp-040"
+    },
+    {
+      "category": "pitfalls",
+      "text": "保险代理人做陪诊需注意：有洁癖、晕血、脾气急、没耐心、社恐、记性差、方向感不好的人会受挫；日行两万步是常态，吃饭不规律、早起五六点出发是家常便饭；只懂理财险、对医保政策和医疗常识一窍不通则难以胜任；只想赚快钱、目的性太强会被客户看穿；从陪诊到成交往往需要半年甚至两三年的积累。",
+      "kpId": "fin-ins-agent-kp-041"
+    },
+    {
+      "category": "pitfalls",
+      "text": "客户需求端变化大，80后群体成为保险市场最大客群，保险素养较高，当购保人比代理人还懂保险时，原有套路玩不转。",
+      "kpId": "fin-ins-agent-kp-042"
+    },
+    {
+      "category": "pitfalls",
+      "text": "保险公司增员努力效果不佳，高学历毕业生与优秀代理人之间距离较远，2020年某头部寿险公司密集招募的硕博士代理人到2022年上半年几乎全体离职。",
+      "kpId": "fin-ins-agent-kp-043"
+    },
+    {
+      "category": "pitfalls",
+      "text": "保险代理人只能销售所代理的那一家保险公司的产品，不能同时推销别家保险公司的产品。",
+      "kpId": "fin-ins-agent-kp-044"
+    },
+    {
+      "category": "pitfalls",
+      "text": "代理人不得接受投保人委托代缴保险费、代领退保金；最稳妥的交费方式是通过保险公司认可的转账渠道直接付到保险公司账户。",
+      "kpId": "fin-ins-agent-kp-045"
+    },
+    {
+      "category": "pitfalls",
+      "text": "越权代理、无权代理、代理权终止后仍以代理人名义活动，未经保险公司追认的，后果由行为人自己承担。",
+      "kpId": "fin-ins-agent-kp-046"
+    },
+    {
+      "category": "pitfalls",
+      "text": "保险代理人不是保险人，保单不是代理人赔，赔不赔、赔多少最终由保险公司依法依约决定。",
+      "kpId": "fin-ins-agent-kp-047"
+    }
+  ],
+  "sources": [
+    {
+      "postId": "fd77c8e1ccb79123",
+      "title": "Day 35 一个保险代理人的普通一天",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318138&ver=7034&signature=YKfKSjRQ*JFvMYXP9BxelK*2zganef2xlP-Wnv1HJ4PrBE9qv*fn7644qFL1c-FC9dujM5ZfzvibROd7udUTXSh3*nlmnKoyWc-MthwAV*bXCKKa*wfMUtGpTUtXUyWN&new=1"
+    },
+    {
+      "postId": "292aeac7cd09be13",
+      "title": "保险代理人的真实日常：不被看见的辛苦，只盼一份理解与尊重",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318138&ver=7034&signature=f80DuXSQjQ4T81IIefeVo0WSyspGml2IK6BhYc8vsKlX6FlldXiwJzLfq9VlI4C5PWRw8AgcpT3KeECYuGYuTKOi-50gkreJo-AQy9YgH2hVdTphdHMfce9NoIUFV9ll&new=1"
+    },
+    {
+      "postId": "2ccf04be71d86513",
+      "title": "保险人的日常，远比你想的认真",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318138&ver=7034&signature=2i-N7vC5sdPuGaCg3xriSm0h5e5HC5BROgHymRvYrY-NROMn-7EtcAnTMcWG9Kk1TI0SbSZmYyHnxHbOVwzFp2AKq3tRhxWytiXyypMTF8OBCQAWeQhSFNdmzX7OJxyL&new=1"
+    },
+    {
+      "postId": "fa84ed520ffd19f2",
+      "title": "香港是怎么处罚保险代理人的？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318189&ver=7034&signature=f5RMCaVx7RIsIv1ce0BSlBFt6VR2I*5rS04fZPLDOb7SwxwaH1sVYgCL4F3Ga1rzR6Hs8Ufzy5mbrBCbhT5-T02xuoTCRwDedBbOHS3VQYYtvSVDDCLpLWQvF0Idk5JG&new=1"
+    },
+    {
+      "postId": "00776e7b02fdf40b",
+      "title": "保险代理人迎来重大利好！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318189&ver=7034&signature=*hTkEmuDm60Fga-rJtYiL0K542fzNv3JWmDGFp1JGSoIM05hID2LeE0Vm3mKVO9smMBHWI*PXo7PZhnaGRuVaUgwycuhteYZavDyHyG29muY41ysi9SsVcUuubuUjUZ0&new=1"
+    },
+    {
+      "postId": "afa83d3129cbe80c",
+      "title": "保险代理人：帮保险人卖保险的人！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318189&ver=7034&signature=YolLb2nSRwcZ0kUgYLa9YxXvoA7BuqaMdjIgGR85XOZVdvowK0c**wUe2TmsjzhQ8NfOY-jH7jkV-mtSKGaVSvVRhkdR4TUpQOdyeuWNiVL-xVkFDEGLkJroCzCvxsxi&new=1"
+    },
+    {
+      "postId": "ee104f132b1c15e0",
+      "title": "劝退！保险人做陪诊前先看这50条建议",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318224&ver=7034&signature=3JJz-quxo8JT8qrPo1pmytYa7ZMSOs3jXAHVqqVjZJL07MSysqpOvAA3hr--Wng9JjTQgkJ8dAkYZcWZQbZyqkysHhBRu40D6aVtvqEKp8bnoTT634oVHQPH9qTvGV9V&new=1"
+    },
+    {
+      "postId": "49bf6374e5daa877",
+      "title": "130万代理人，放弃了“卖保险”",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318224&ver=7034&signature=1-uqGMeOtNjQyLtk6tteHlT3avOxlXKgevHAnyQIYj9TqvwG0YeHx5m07MhuXk*Aq*ZBXcm17Dor85Sr8b-wPJSMDNOYP-S7Nk0dl9JLwqCFKUUFjh0pQRQvtr6q*1iq&new=1"
+    },
+    {
+      "postId": "c05a3e017a4fbd17",
+      "title": "独家│保险代理人失信行为认定指引要来了！组织参与“退保黑产”绝不姑息！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318224&ver=7034&signature=0CzznBEe2BxxxY6TiQZlQOQOcQRclROKgrYoGn44jiNvNmHOBt*yKh0nOz7zy-0mRC22ZZsqeFj6iVhDPeDsuPlpJOLUy5yTLrkrVgD7Y8ln-FBU7KONVhqXhAXIo*tm&new=1"
+    },
+    {
+      "postId": "23c77c7edfdada33",
+      "title": "马明哲：未来30-50年，保险代理人不会被科技互联网取代！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318224&ver=7034&signature=5r6z3Pln5bS8uEOtFZnm22jdoU0OMsbFjoTbwC8Mjd225Nv0q46ecHBDW602NGHwH7WyPyrpvuxjebcaKfcOvcU8XbnmY4KJXw6-xX1CxPGniJLyvJo4W6TRFBagYnLF&new=1"
+    },
+    {
+      "postId": "238e1a643ed61cdf",
+      "title": "两年多时间400万保险代理人离职，问题何在、路在何方？｜钛媒体焦点",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318224&ver=7034&signature=CpWf1etaozo*u8*D*Rw9ndRPOOm7FjhsGMLyemr6nRFcmyDua3ePfL6Hq1mfGMlw4PBExJn0nqMJIWCEJz-uZkNRwoWb7Hb8Q2CDZOr7uIHnug5uAunv2cU*NRJ6wu4p&new=1"
+    },
+    {
+      "postId": "9fb3d347d668edfc",
+      "title": "2026年转型做保险，先看团队，还是先看公司？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318275&ver=7034&signature=f6GkbMq*aG8TYnnHoHtcwYSo5229OSCyrMhOT5JeoFMB2S6gyEWucmolziVyd12OFJsXeZZldPgORtw7xhzpn7FvTFfmN6z*SiteI5pz18uAR2EJ53OkDk5uWBZ5ui5X&new=1"
+    },
+    {
+      "postId": "e424f54d04214354",
+      "title": "曾经的人力资源高级主管去卖保险了， 你是不是有很多问号？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318275&ver=7034&signature=eIhxvDbGTnQFXWmcUB3ZsbMBHj-2a9qWGluPoMu9igSDS-wMjPQ9rUZjKZZxVBy1E4ynqJwr3AUSaYQN8L2GX0h8eJVGUvceRgHI4JGNQL6QScEgYEtX-C*tUP8nSu9D&new=1"
+    },
+    {
+      "postId": "720a5098663777ca",
+      "title": "你吐槽的那份保险工作，不是我做的这份",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318275&ver=7034&signature=erEMgMYiFUx3Qlw296nvjGVhR9PgQ3JxduXKkHUbrJ8JB4qoJQ2soD3YgEneChwaNQ--*xUye6AjwEqihyzrZtRZtmm-HHPgPPoGeZkFi-dswoBKdYh9eOVpbtiYsZpo&new=1"
+    },
+    {
+      "postId": "0652f0f826a37052",
+      "title": "你不是不会买保险，你是没搞清楚\"谁站在你这边\"",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318275&ver=7034&signature=WZr6AFfE6pu5x8Sa-ot8rVK0ztr8X3tDoR63y1BJQE21MfBVv*oghXedu9D7TI1puf-4-jp6PbQpqg4sW7Zdz9xfMfz0sN3AkzDDcfuZ*C1*NXzjxYiv0sxsrYIyvYLp&new=1"
+    },
+    {
+      "postId": "c5206b9c1ce0e7cd",
+      "title": "32岁那年，我辞掉了年薪50万的工作去卖保险：一个最真实的职业转型故事",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318315&ver=7034&signature=6tTTWRLu-0viOSQyEqIPYRN2qmE58Oxaj-Gt8pzt3kDiIf-wv3JyIKWeYWw9nelkFWhOVuTa8YILp8jzIaJt-*RIcRHn06xl5*cb6mrDPECkXUCeBSv9h08hhFI4-yo3&new=1"
+    },
+    {
+      "postId": "4f95cd4be81bb3a4",
+      "title": "这才是保险销售真正要学习的技巧",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318315&ver=7034&signature=dSYqFNGDr5VO8S0MEmqqt-7WKHAirtJvh55eOPhIZONT3rKBmJaYr0j2kYSfkXr0o6KbJF-7kbsDiihImKxG--r**hi5ehEzCq-pMN3gsK4qnQ9ODbl5Xot-z3aCBMYg&new=1"
+    },
+    {
+      "postId": "c508b5bd56276dfb",
+      "title": "真正的保险销售从服务开始",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318315&ver=7034&signature=OwuPYLp1-EOIsEIqB1AjDdHr8WBRkJN7jlDs9p3g0MCxkk9UPpT9kO8InfyJ*XNDEvr*0jcUXRUoSf7Jkj0PgquVxGeMGwgpkSrm45ytEm81-4YuBfh3jI4zd1RwUlIY&new=1"
+    },
+    {
+      "postId": "d1f750c7bae8bc0c",
+      "title": "这才是保险销售真正要学习的7大技巧！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318315&ver=7034&signature=x9ST*HXVT-KT2P5e*1R9JDtJO32OLsKLNOpYforCiv-uQX11XNuTwSqOxiIrLRE6404OMqKlRyDeBuzzyZ8b*kv98px6w2I5UryT5soXZUQ8rzoiFpmzhGp0-weMJe2R&new=1"
+    },
+    {
+      "postId": "7ef31c3b97c45f6a",
+      "title": "保险专家谈真正的保险专业销售流程",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792318315&ver=1&signature=IFkK1lXrVMy8fExVxAPgJ20qJRXhHTC-Qv4ezk4HTVHB*DD-OMNWjjoiIRk5rehmarcqbJrPUGJVNv1TP1jKzOzIqvbyaOJYJ4ySrnmNV308zeT0uIRSPX0ueWNs5MqUirq89l9dV9VfbYmWRbwRBA=="
+    },
+    {
+      "postId": "07671b49172cc06a",
+      "title": "这才是保险销售真正要学习的技巧",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318365&ver=7034&signature=dSYqFNGDr5VO8S0MEmqqt-7WKHAirtJvh55eOPhIZONT3rKBmJaYr0j2kYSfkXr0z4QBuDIyV0YI75FJzWZAfY9oyJkC3JR4B04pfqTJiCyZeelDmZA66-xhEsL4hS*w&new=1"
+    },
+    {
+      "postId": "309a6afcee4c0a25",
+      "title": "这才是保险销售真正要学习的7大技巧！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318365&ver=7034&signature=x9ST*HXVT-KT2P5e*1R9JDtJO32OLsKLNOpYforCiv-uQX11XNuTwSqOxiIrLRE65SJ6aS1vIA-LgC6WfCfmj575fjnvj1WAZ3YXLIUAT9LfNfDSuqYIph9**MsYBS6b&new=1"
+    },
+    {
+      "postId": "b72acc7ebdbc4982",
+      "title": "保险销售真的很难？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318365&ver=7034&signature=n1HGk69agJUCU1Stj5r8kAKW1WiDiILsSyg*3p44mvroY8CeBihUFbwL7T9QkH3iu94wRlRjJ8wLvuPf*uT3XTBXZpSuU721XuZ2vfMqPfy7N5j20DfNC1CSKA6VaNKX&new=1"
+    },
+    {
+      "postId": "2aa6b30c7806d46a",
+      "title": "还原一个真实的保险代理人生存现状",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792318401&ver=1&signature=1MOVp86W*McR2mI545jAKLeoLP*NBou2SLm*gsJtMLfoLbsFb1bbmH75SJC4honAUnBnesJkX*5pUkSRX0Fc0HjirztiCz8TBIObLK*7Yb9pDoauS10ejC5H9Jzv8Rrcp7SAByvZKWt5NjrQ1Ig21*CffP6LBNNlA8cLI0TiSwI="
+    },
+    {
+      "postId": "f1f0b54b536490b3",
+      "title": "保险代理人获客从来都是难题，真正的转型不是数字化而是专业化",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318401&ver=7034&signature=4QQ6aAKIwK5anpGNaOCSo1bHBnpCiDQrSx5pxXC2vYq*TDiZcua3s2JCrSjO5s*HCc9rjDyOic8bbTSBxv8dX6-dqiBPKzB1A46BIDK7LFiufE11fmfT5292uiDUZcPW&new=1"
+    },
+    {
+      "postId": "089fc9a19e1586cf",
+      "title": "年薪百万的保险代理人，7 大收入来源拆给你看",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318401&ver=7034&signature=EWIx2ig9EEqG0CZFkMUblRFziefmmqIaxz5olr*hoKFx-AS2NSDJtUza-j8*3N0TMVa8oHW0p0cQY2MKf0tT*SL7dUG3WP3gXv*JUtgpLcIVBJBeVwCX87VPy7Av2LFn&new=1"
+    },
+    {
+      "postId": "856ebfbdd8dfbe43",
+      "title": "一个真实的保险代理人生存现状",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318401&ver=7034&signature=wEzLxgmYhwxXgAHbYF9KAxHe64BOyKUwQ89c7z9reSa*smBpB33DGedi97TsIK3JOzMjGeqXaNGzwV574Ud0fDprZTIwpRE8RpBMTgn*3Bhptl*zbKzvkny-vIHpE85G&new=1"
+    },
+    {
+      "postId": "3c58cf9d98db3966",
+      "title": "千万绩优都喊难：保险代理人的真实生存现状与危机",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318401&ver=7034&signature=i3o1CIgvVxW9bTkSMdXBSaSyF8j1xiqfddkgsMNxkqGHZ-l6Mvs5MXVE4n1XmpqyL9lKcvcoK1bvP4stjKFCmJoOfaS0yvqBl7tbQydFA17tGcyd4BtigyAPAfjNFy9V&new=1"
+    },
+    {
+      "postId": "f479229c540aa607",
+      "title": "保险会销的套路满天飞，代理人真的赚到钱了吗？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318401&ver=7034&signature=jJd9cTE-Xlk-mIzctQ*iThkZh2DRinOHAiRLI8WJRInVLeivBwIYeySrjx*B30LBn2ueXg06GucM4YZy5BY2FoaTb07rxJe7MQF8lwNDmwYn9yFc3tdidV3xtb8euBC0&new=1"
+    },
+    {
+      "postId": "bdba9dca30d14a68",
+      "title": "中国真的有971万代理人吗？丨保险笔记",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318401&ver=7034&signature=F6GwpNhaJV2zN3yW90JQ60f7uBGHNUJ7sPYXo6J3zRaGhKeVEliTuBdVm1PVo77gA0VRYiAFiPXRKkSakqtswLppY5v3IBO53wP9-5849Arsq4Xz1VS2cFxgs7DY*8-n&new=1"
+    },
+    {
+      "postId": "7cf17ee3347f588e",
+      "title": "保险代理人和经纪人，到底该找谁？两个真实理赔案例凸显差距",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318446&ver=7034&signature=0r3YIWzv1w2cVF3XiVtqSWdhNb0T18ByEhFMilr85tTV0K3WE9ENv1WVh-eLdFLc-YYUAAJts9fceLByBK16RYjWSoScaUYtVVRbEh3ypK43Xd1MmRUSsL6rTJU6H-xM&new=1"
+    },
+    {
+      "postId": "e60cbd26a94cdbc1",
+      "title": "保险代理人的江湖：千万年薪，不被认可",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318446&ver=7034&signature=4QQ6aAKIwK5anpGNaOCSo1bHBnpCiDQrSx5pxXC2vYomy-ZY*jq6528rzFpG7nWnTyF8sI14cOtK2ZeuQ*I43AzKapYSXtD3we6rKS1UXrQ1legsn5HmolW2SRTDV1v1&new=1"
+    },
+    {
+      "postId": "6d92500f88880c14",
+      "title": "《很多保险代理人，其实从未真正独立过》",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318446&ver=7034&signature=4eAHu1Jtb8*CIU6qZruWgGJyacZZRKL-t9dPrNviWQ2d90750GN2EKwWOhf2DJoRzzjByjpqLzPXHo60OIAMI52c*frzvUOsE7IM7UAvqXlTlgVlZp9sKcCQ6ddAmFvr&new=1"
+    },
+    {
+      "postId": "7f971dae0d11a5d6",
+      "title": "《保险人的未来》第二季⑭：保险代理人真正的专业能力，是讲清楚保险不能赔什么",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318446&ver=7034&signature=B9fsiQQaa3ODsKVL6yEzZ5wFTtXmuc00uOwXK23FCP1pEgCAJmkq*thPKk3j6xGJudOTdklVwlJd38IAvz7ksI*4sPHIIWVyYvNeWRjhwwk5RY-6gWLx8t8VasjY*HLN&new=1"
+    }
+  ]
+}

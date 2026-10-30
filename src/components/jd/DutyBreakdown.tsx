@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { buildJDDutiesPrompt, normalizeJDDuties, type JDDuty, type JDDutyBreakdown } from "@/lib/ai/jd";
 import { callChatJSON, parsePastedJSON } from "@/lib/ai/resume";
+import { formatWebContext } from "@/lib/web/format";
+import type { WebResult } from "@/lib/web/search";
 import { useStore } from "@/lib/store";
 import { ItemList } from "./ItemList";
 
@@ -19,6 +21,23 @@ type DutyBreakdownProps = {
    * false 时一律不调模型，哪怕首页已经填好了 Key——选了本地拆解就只走本地。
    */
   auto: boolean;
+  /**
+   * 岗位知识库匹配到的真实从业者内容，由页面从 /api/kb/match 取回。
+   * 传了就让模型优先依据知识库拆，没传就按模型自己的理解拆。
+   */
+  kbContext?: string;
+  /**
+   * 这份 JD 是否命中了一个相关岗位。
+   * 命中时优先用知识库内容拆解、不联网；未命中才联网检索公开资料 + 调大模型补。
+   */
+  kbMatched?: boolean;
+  /**
+   * 联网检索的检索词。只在知识库未命中时才会用——
+   * 命中相关岗位时知识库已经够用，不需要再去搜公开资料。
+   */
+  webQuery?: string;
+  /** 联网检索到的原始结果，交回页面展示来源，用户能自己点开核对。 */
+  onWebSources?: (results: WebResult[], provider: string) => void;
 };
 
 /** JD 原文没提、由模型按岗位常识补出来的内容，统一打这个标记。 */
@@ -34,11 +53,45 @@ function SupplementTag() {
   );
 }
 
+/** 每条职责的整体来源标签：JD 原文 / 知识库 / 大模型推断。 */
+const SOURCE_LABEL: Record<JDDuty["sourceTag"], { text: string; title: string }> = {
+  jd: { text: "JD原文", title: "这条职责的内容 JD 原文里基本都写清楚了" },
+  kb: { text: "知识库", title: "这条职责的关键做法主要来自岗位知识库的真实从业者内容" },
+  infer: { text: "推断", title: "JD 没写、知识库也没覆盖，由大模型按岗位常识推断" },
+};
+
+function SourceTag({ tag }: { tag: JDDuty["sourceTag"] }) {
+  const { text, title } = SOURCE_LABEL[tag];
+  // 知识库用红色（用户要求标红），JD 原文和推断用灰色以示区分
+  const isKb = tag === "kb";
+  return (
+    <span
+      className="tag"
+      style={{
+        marginLeft: 8,
+        fontSize: 10,
+        padding: "1px 7px",
+        verticalAlign: "middle",
+        fontWeight: 600,
+        ...(isKb
+          ? { background: "var(--miss-bg)", color: "var(--miss)", border: "1px solid #e3c9c0" }
+          : { background: "var(--surface-nested)", color: "var(--text-secondary)" }),
+      }}
+      title={title}
+    >
+      {text}
+    </span>
+  );
+}
+
 function DutyCard({ duty, index }: { duty: JDDuty; index: number }) {
   return (
     <div className="mt12" style={{ borderTop: "1px solid var(--border)", paddingTop: 12 }}>
       <div className="spread">
-        <b style={{ fontSize: 13 }}>职责 {index + 1}</b>
+        <span>
+          <b style={{ fontSize: 13 }}>职责 {index + 1}</b>
+          <SourceTag tag={duty.sourceTag} />
+        </span>
       </div>
       <div className="tiny muted">{duty.source}</div>
 
@@ -209,7 +262,17 @@ export function DutyBreakdownView({ value }: { value: JDDutyBreakdown }) {
  * Key 从首页的 AI 设置读，只放在页面内存，不写 localStorage，也不会上传到我们自己的服务器。
  * 没配 Key 或者调用失败时，退回手动模式：复制 Prompt 给任意大模型，把 JSON 粘回来。
  */
-export function DutyBreakdown({ rawText, value, onLoaded, fallback, auto }: DutyBreakdownProps) {
+export function DutyBreakdown({
+  rawText,
+  value,
+  onLoaded,
+  fallback,
+  auto,
+  kbContext,
+  kbMatched,
+  webQuery,
+  onWebSources,
+}: DutyBreakdownProps) {
   const { ai } = useStore();
 
   const [busy, setBusy] = useState(false);
@@ -231,7 +294,6 @@ export function DutyBreakdown({ rawText, value, onLoaded, fallback, auto }: Duty
     if (!connected) return;
 
     setBusy(true);
-    setStatus("正在调用模型拆解职责……");
 
     try {
       // 从网页上复制粘贴常带上首尾空格，拼进请求头就成了无效 Key，这里统一去掉
@@ -242,7 +304,39 @@ export function DutyBreakdown({ rawText, value, onLoaded, fallback, auto }: Duty
         model: ai.model.trim(),
       };
 
-      const next = normalizeJDDuties(await callChatJSON(settings, buildJDDutiesPrompt(text)));
+      // 联网检索只在知识库没命中相关岗位时触发。
+      // 命中时知识库已经是真实从业者内容，比公开资料更可靠，不必再搜。
+      // 检索失败不算错，只是少一段外部资料，照常调模型拆解。
+      let webContext = "";
+
+      if (!kbMatched && webQuery) {
+        setStatus("知识库未命中，正在联网检索岗位资料……");
+        try {
+          const response = await fetch("/api/web/search", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query: webQuery }),
+          });
+          const payload = (await response.json()) as {
+            provider?: string;
+            results?: WebResult[];
+            error?: string;
+          };
+
+          if (response.ok && Array.isArray(payload.results) && payload.results.length > 0) {
+            webContext = formatWebContext(payload.results);
+            onWebSources?.(payload.results, payload.provider ?? "bing");
+          }
+        } catch {
+          // 联网失败就跳过，不打断拆解
+        }
+      }
+
+      setStatus("正在调用模型拆解职责……");
+
+      const next = normalizeJDDuties(
+        await callChatJSON(settings, buildJDDutiesPrompt(text, kbContext, webContext)),
+      );
 
       if (!next) {
         setStatus("模型返回的内容里没有可用的职责拆解，请重试。");
@@ -259,12 +353,12 @@ export function DutyBreakdown({ rawText, value, onLoaded, fallback, auto }: Duty
         : message;
 
       setStatus(`${readable}。可以改用上面的手动模式。`);
-      setPrompt(buildJDDutiesPrompt(text));
+      setPrompt(buildJDDutiesPrompt(text, kbContext));
       setShowManual(true);
     } finally {
       setBusy(false);
     }
-  }, [ai, connected, onLoaded, rawText]);
+  }, [ai, connected, onLoaded, rawText, kbContext, kbMatched, webQuery, onWebSources]);
 
   // 点了 AI 增强拆解才自动拆一次，同一个 JD 只调一次，结果由页面缓存
   useEffect(() => {
@@ -281,7 +375,7 @@ export function DutyBreakdown({ rawText, value, onLoaded, fallback, auto }: Duty
   }
 
   function openManual() {
-    setPrompt(buildJDDutiesPrompt(rawText.trim()));
+    setPrompt(buildJDDutiesPrompt(rawText.trim(), kbContext));
     setShowManual(true);
     setStatus("");
   }

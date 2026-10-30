@@ -1,0 +1,516 @@
+{
+  "status": "indexed",
+  "positionId": "fin-fintech-data",
+  "positionName": "金融数据分析",
+  "aliases": [
+    "信贷数据分析",
+    "风控数据分析",
+    "金融数据分析师",
+    "业务数据分析"
+  ],
+  "vectorStore": "keyword-inverted",
+  "points": [
+    {
+      "category": "coreDuties",
+      "text": "基于行内信贷脱敏数据提取用户行为特征，搭建逾期预警的基础特征库，参与风控规则迭代的效果测算。",
+      "kpId": "fin-fintech-data-kp-001"
+    },
+    {
+      "category": "coreDuties",
+      "text": "按周输出用户增长、产品营收维度的经营报表，定位业务波动背后的核心原因，并向业务团队输出优化建议。",
+      "kpId": "fin-fintech-data-kp-002"
+    },
+    {
+      "category": "coreDuties",
+      "text": "围绕用户生命周期开展分层运营效果分析，提取不同渠道的转化数据，优化运营投放的ROI。",
+      "kpId": "fin-fintech-data-kp-003"
+    },
+    {
+      "category": "coreDuties",
+      "text": "整理市场交易的高频数据，协助研究员完成因子回测的基础数据校验。",
+      "kpId": "fin-fintech-data-kp-004"
+    },
+    {
+      "category": "coreDuties",
+      "text": "提取用户交易数据，分析用户开户、交易、留存的相关特征，为运营活动提供数据支撑。",
+      "kpId": "fin-fintech-data-kp-005"
+    },
+    {
+      "category": "coreDuties",
+      "text": "覆盖信用卡、个人信贷等业务线，分析用户逾期、消费行为的相关规律，辅助业务侧调整授信和营销规则。",
+      "kpId": "fin-fintech-data-kp-006"
+    },
+    {
+      "category": "coreDuties",
+      "text": "统计产品申赎、净值波动、持有人结构的相关数据，输出定期运营分析报告。",
+      "kpId": "fin-fintech-data-kp-007"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责客户运营、产品营销、渠道管理和风险管理等业务领域的策略分析，梳理业务流程和指标，结合用户画像，使用统计分析工具开展根因分析，诊断业务运营中存在的问题并制定应对策略。",
+      "kpId": "fin-fintech-data-kp-008"
+    },
+    {
+      "category": "coreDuties",
+      "text": "通过统计分析模型洞察客户需求，完善产品设计，并不断改进模型，帮助企业进行信息决策。",
+      "kpId": "fin-fintech-data-kp-009"
+    },
+    {
+      "category": "coreDuties",
+      "text": "跟踪金融数据，分析数据背后微观主体的经济行为与动机，并据此预测其下一步行动。",
+      "kpId": "fin-fintech-data-kp-010"
+    },
+    {
+      "category": "coreDuties",
+      "text": "跟踪实体部门资金的来源与去向，判断微观主体的意图和未来可能的行为。",
+      "kpId": "fin-fintech-data-kp-011"
+    },
+    {
+      "category": "workflow",
+      "text": "金融数据分析可先划分微观主体的钱“怎么来”和“怎么去”：钱的来源包括融资、从财政获取的净收入等，钱的去向包括存银行、金融投资、手持现金等。",
+      "kpId": "fin-fintech-data-kp-012"
+    },
+    {
+      "category": "workflow",
+      "text": "分析实体部门时，先将实体部门视为一个整体，忽略其内部资金运转，重点分析实体部门与外部之间的资金运转。",
+      "kpId": "fin-fintech-data-kp-013"
+    },
+    {
+      "category": "workflow",
+      "text": "资金来源方面，重点分析社融（扣除政府融资和股票部分）以及从财政获取的收入；从金融机构获取的净收入因无精准数字且金额不大，可暂忽略。",
+      "kpId": "fin-fintech-data-kp-014"
+    },
+    {
+      "category": "workflow",
+      "text": "资金去向方面，存款和现金有较详细统计数据；金融投资数据难以精确统计，可用轧差法，以所有资金来源之和减去最后留存的存款和现金，差额作为金融投资。",
+      "kpId": "fin-fintech-data-kp-015"
+    },
+    {
+      "category": "workflow",
+      "text": "分析社融时，可将其划分为中长期融资和短期融资：中长期融资反映企业资本开支需要，短期融资反映企业流动性周转需要。",
+      "kpId": "fin-fintech-data-kp-016"
+    },
+    {
+      "category": "workflow",
+      "text": "分析社融不能只看贷款或债券数字，应从企业行为出发，结合企业融资意图和融资条件进行判断；看到数字后，再通过微观调研等方式掌握更具体、真实的情况。",
+      "kpId": "fin-fintech-data-kp-017"
+    },
+    {
+      "category": "workflow",
+      "text": "货币数量与利率水平分析可遵循货币政策框架：央行确定货币总量目标，调节基础货币和货币派生来实现目标，并通过调节货币政策松紧实施宏观调控。",
+      "kpId": "fin-fintech-data-kp-018"
+    },
+    {
+      "category": "workflow",
+      "text": "观察基础货币投放可参考《货币当局资产负债表》，观察货币派生可参考《其他存款性公司资产负债表》；平时可通过追踪热钱、央行公开市场操作、再贷款、政府收税或采购等数据估算最新基础货币总量。",
+      "kpId": "fin-fintech-data-kp-019"
+    },
+    {
+      "category": "workflow",
+      "text": "金融数据在每月10—15日由央行发布；分析内容包括资产端的社会融资规模与新增人民币信贷数据，以及负债端的货币供应量（M0、M1、M2）与新增人民币存款数据。",
+      "kpId": "fin-fintech-data-kp-020"
+    },
+    {
+      "category": "workflow",
+      "text": "社融数据主要看新增值，并与上月环比、去年同期数据比较；社融存量数据主要看同比。",
+      "kpId": "fin-fintech-data-kp-021"
+    },
+    {
+      "category": "workflow",
+      "text": "分析新增社融时，先过滤季节性影响，再与市场预期值比较；实际值低于预期或高于预期，可对应下修或上修对未来经济增长的判断。",
+      "kpId": "fin-fintech-data-kp-022"
+    },
+    {
+      "category": "workflow",
+      "text": "对金融数据做分项分析，结合居民短期和中长期贷款、企业中长期贷款、企业债、政府债、非标融资、M1、M2等分项判断融资需求、地产需求、财政支持力度和债市影响。",
+      "kpId": "fin-fintech-data-kp-023"
+    },
+    {
+      "category": "tools",
+      "text": "Excel：透视表、常用统计函数、匹配函数、动态图表，能完成10万行以内业务数据的汇总和清洗，能独立输出常规业务报表。",
+      "kpId": "fin-fintech-data-kp-024"
+    },
+    {
+      "category": "tools",
+      "text": "SQL：多表关联、子查询、窗口函数、单表操作、表的纵向链接与横向链接、拆分列与堆叠列、数据清洗，能完成常规取数需求。",
+      "kpId": "fin-fintech-data-kp-025"
+    },
+    {
+      "category": "tools",
+      "text": "Python：Pandas、Matplotlib等常用库的基础操作；CDA课程另列有Python编程基础、BI等能力板块。",
+      "kpId": "fin-fintech-data-kp-026"
+    },
+    {
+      "category": "tools",
+      "text": "统计分析：描述性统计、假设检验、相关性分析、回归模型、数据降维、时序分析、主成分分析与因子分析、对应分析与多维分析、聚类算法、逻辑回归、决策树、支持向量机、神经网络、孤立森林、ARIMA、长短期记忆模型等。",
+      "kpId": "fin-fintech-data-kp-027"
+    },
+    {
+      "category": "tools",
+      "text": "业务分析：多维透视分析、指标应用与设计、用户标签设计与制作、用户画像原理、统计模型搭建、业务策略分析及优化。",
+      "kpId": "fin-fintech-data-kp-028"
+    },
+    {
+      "category": "tools",
+      "text": "商业分析：用户行为分析、商品定位策略分析、产品运营分析报告、风险管理分析报告、问题根因分析报告。",
+      "kpId": "fin-fintech-data-kp-029"
+    },
+    {
+      "category": "tools",
+      "text": "金融业务知识：对应细分金融业务逻辑，如信用卡授信产品规则、基金申赎、银行零售业务、风控建模、金融数据处理相关课程内容。",
+      "kpId": "fin-fintech-data-kp-030"
+    },
+    {
+      "category": "tools",
+      "text": "金融数据指标：社会融资规模、新增人民币信贷、M0、M1、M2、新增人民币存款、银行间市场利率（FR007、SHIBOR 3M）、贷款加权平均利率、货币乘数、基础货币、外汇占款等。",
+      "kpId": "fin-fintech-data-kp-031"
+    },
+    {
+      "category": "tools",
+      "text": "数据治理与安全相关工具或措施：数据分类分级、字段级授权、数据脱敏与替换映射、敏感数据自动发现工具、堡垒机、分析集群虚拟机、API或FTP等统一数据接入、鉴权与证书管理、日志统一监控（如Apache Oozie）、Hadoop与NoSQL相关安全加强组件（如Cloudera Sentry、DataStax Enterprise、Accumulo）。",
+      "kpId": "fin-fintech-data-kp-032"
+    },
+    {
+      "category": "pitfalls",
+      "text": "单独分析社融会有一定片面性，需结合财政收支等因素；单独分析贷款或债券数字、脱离微观主体行为，容易成为空中楼阁。",
+      "kpId": "fin-fintech-data-kp-033"
+    },
+    {
+      "category": "pitfalls",
+      "text": "中长期融资向好通常反映企业增加资本开支，但也可能是企业信心较差、融资需求弱，而中长期融资靠政府主导的基建项目支撑，不宜简单套用经验。",
+      "kpId": "fin-fintech-data-kp-034"
+    },
+    {
+      "category": "pitfalls",
+      "text": "金融投资数据难以精确统计，非银存款还有其他来源，不能简单用非银存款近似实体部门的金融投资。",
+      "kpId": "fin-fintech-data-kp-035"
+    },
+    {
+      "category": "pitfalls",
+      "text": "官方没有分人群的存款统计；现金和金融投资无法区分个人与企业持有；居民的实体投资缺乏可靠数据。",
+      "kpId": "fin-fintech-data-kp-036"
+    },
+    {
+      "category": "pitfalls",
+      "text": "新增社融具有高波动性和季节性，1月、3月、6月、9月、11月容易扩张，4月、5月、7月、10月、12月容易收缩；分析时不能把季节性波动当成趋势。",
+      "kpId": "fin-fintech-data-kp-037"
+    },
+    {
+      "category": "pitfalls",
+      "text": "新增社融是新增投放总量扣除到期后的净融资规模，会包括企业偿还的利息部分；债务累积会占用新增社融并推高社融存量。",
+      "kpId": "fin-fintech-data-kp-038"
+    },
+    {
+      "category": "pitfalls",
+      "text": "2011年以后，随着影子银行兴起，非标与债券融资对社融影响力增强，贷款与社融增速出现裂口，信贷变化的信号意义下降，判断金融数据对经济的影响不能只看贷款。",
+      "kpId": "fin-fintech-data-kp-039"
+    },
+    {
+      "category": "pitfalls",
+      "text": "M1与M2增速背离时，除传统货币学经验外，还需考虑货币基金对活期的替代效应等因素；单月M1负增长可能是春节错位、经济下行和货币基金替代等多因素叠加，不宜过度解读。",
+      "kpId": "fin-fintech-data-kp-040"
+    },
+    {
+      "category": "pitfalls",
+      "text": "证书优先级远低于实习和落地项目；CDA证书不能替代实习和项目经历，更适合零基础、跨专业、暂时没有项目经历的同学用来证明系统学过数据分析。",
+      "kpId": "fin-fintech-data-kp-041"
+    },
+    {
+      "category": "pitfalls",
+      "text": "CFA、CPA等金融类证书与数据分析方向的技能要求重叠度较低，准备数据分析类求职不必投入大量时间备考；CFA二级的备考优先级也远低于实操能力准备。",
+      "kpId": "fin-fintech-data-kp-042"
+    },
+    {
+      "category": "pitfalls",
+      "text": "完全靠数据分析证书不能拿到金融类数据分析岗的正式offer；面试中的SQL取数题、场景分析题需要相应能力支撑。",
+      "kpId": "fin-fintech-data-kp-043"
+    },
+    {
+      "category": "pitfalls",
+      "text": "公开数据集分析项目只能标注为个人练习项目，不得包装成真实企业经历用于求职。",
+      "kpId": "fin-fintech-data-kp-044"
+    },
+    {
+      "category": "pitfalls",
+      "text": "数据接入应尽早形成统一、强制的管理方式；等到业务发展起来、无数接口需要梳理时，会积重难返。",
+      "kpId": "fin-fintech-data-kp-045"
+    },
+    {
+      "category": "pitfalls",
+      "text": "大数据平台的安全管理机制并不天然成熟，例如Hadoop早期版本缺少身份认证机制、节点之间传输无法加密，升级又可能导致Hadoop不可用；NoSQL数据库可能缺乏基于角色的访问控制等功能。",
+      "kpId": "fin-fintech-data-kp-046"
+    },
+    {
+      "category": "pitfalls",
+      "text": "敏感数据需分类分级，并授权到字段级别；多个数据融合时应按最高级别进行控制。",
+      "kpId": "fin-fintech-data-kp-047"
+    },
+    {
+      "category": "pitfalls",
+      "text": "脱敏不能简单把关键信息替换为星号，否则业务分析无法进行；需要做替换和映射。",
+      "kpId": "fin-fintech-data-kp-048"
+    },
+    {
+      "category": "pitfalls",
+      "text": "需要控制敏感数据开放，例如通过分析集群虚拟机、办公网经堡垒机跳转，并保持虚拟机集群与外界隔离；分析结果对外输出需经过审批并加密。",
+      "kpId": "fin-fintech-data-kp-049"
+    },
+    {
+      "category": "pitfalls",
+      "text": "征信业务需防范下游机构刷库，可设置阈值，超出阈值自动拦截并报警；防盗卖在技术上很难防范，可通过放置特定钩子数据追踪盗卖方。",
+      "kpId": "fin-fintech-data-kp-050"
+    },
+    {
+      "category": "pitfalls",
+      "text": "金融监管普遍比较保守，对新技术应用较为谨慎；在监管汇报沟通中不宜过多渲染新型技术。",
+      "kpId": "fin-fintech-data-kp-051"
+    },
+    {
+      "category": "pitfalls",
+      "text": "国外安全体系认证在监管层面不是很认可，除非有国外机构业务或确实需要借证书完善安全管理体系，否则不必过于强调。",
+      "kpId": "fin-fintech-data-kp-052"
+    },
+    {
+      "category": "pitfalls",
+      "text": "金融业个人数据使用应关注个人数据保护合规操作指南、行业自律、隐私认证或合规供应商清单等规制要求。",
+      "kpId": "fin-fintech-data-kp-053"
+    }
+  ],
+  "sources": [
+    {
+      "postId": "70aa7dd0b697fbaa",
+      "title": "【随笔】一文读懂金融数据综合分析方法",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321737&ver=7034&signature=IIY4yRqsILhWPQQwLg8YQMQUT-NKPL3AOLOEP3xssnzrsoSS-C3lzgy1ZfEwZ5o-8bPuvKMfJ88O5ga5Vx8-ZFIvklugsuddCPrCewRY2NypipQ-s1zYO901*DcHy8NV&new=1"
+    },
+    {
+      "postId": "9cad04c9af9c3403",
+      "title": "金融科技专业大学期间，适配数据分析方向求职的证书选择与能力准备指南",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321737&ver=7034&signature=QvY*P-yLRlhm2ShylIIYnpj9YA1jNIB8WIHIjg6QGS2Xg6ughTSlzLSHPcDp3WBy0UC6pdNwRUw3A1E542N2cwOoGoVRD-GIVAIqUoMQ*is-MVVBUhi4KAGzqPJZx9--&new=1"
+    },
+    {
+      "postId": "cc32126e313f9cfc",
+      "title": "金融数学专业应届生想做金融数据分析，需要哪些技能和证书？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321737&ver=7034&signature=oA8B2ClYauYi8QIIEXTUGstV3bEySXmR6VE2Rj7AaikO-Jh4ltlPX37uKOniqODWN9zA9OSQ*Cnq6smCY4NpW237av2Gc1BCBFeYvXHdYZrHW7kzLrRSpKrRb8CJIlvW&new=1"
+    },
+    {
+      "postId": "c10d80b6cdbbc3a0",
+      "title": "九卦丨杨东：涉金融服务数据分析行业的价值与善治",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321737&ver=7034&signature=ptwh*HS3KzLbOPGkYIRBrp3mBrYtmPZvYyd6jx6L0u8INbP*buDU-OyVnWc54yAiNWfZLN7HKmlearFRrKS5QX7yz3CN9tTAZg-aKyQnnJeRAHUMjne4k1YG8qykborf&new=1"
+    },
+    {
+      "postId": "51e7381f681543c6",
+      "title": "浅析金融大数据安全",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792321737&ver=1&signature=gxsnV7hWRi7GpzbEv2BRCY6fefKle8FyWjANqGXyiv4O8h*MoyUcxP3jBGB2j9HTnVKg0Br6MQNGI1SMtXSsjB1PvJTJ*YWnPvodae6DHyHmOn8mZ9WQuMQKIhUA5WfX1Tm4u3hjKfD1W4Q2-Q2x1pE6*bQuoVxhcK9Vh3msFMo="
+    },
+    {
+      "postId": "6bb209eeaea11f6c",
+      "title": "中国货币金融数据分析入门",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792321737&ver=1&signature=aCA3HTI7z6dU2UUFzpJ8sIsh99GnUEIfuJFlbpVnNxP54VVa0WDsD3qOy-g*0z2k42lIcPZJxPUYQro53*cmmlqTLw-JZnsJ2aAuX9jOM71YmXZ*q-mGRL47g*XZTfqp-oBEuY4XXBVCAxRvq1ULWw=="
+    },
+    {
+      "postId": "3297c8571d6409b2",
+      "title": "华泰 | 解析11月金融数据【观点集锦】",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321737&ver=7034&signature=Xo8ebkxCAQQJn2rEssUVw62s4pkOn8A8l324KWgpV1t*qtkrPv21IvxcemkH268i08YFvj5XUSxGGMYuJudI8Xh0jrKuGMUkdoM3zlZSbzsY3g6P4CbUYhu*uIhs3IZ-&new=1"
+    },
+    {
+      "postId": "ea13c1071033952d",
+      "title": "CDA金融数据分析系列课程介绍",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321737&ver=7034&signature=yQg1abjjMr-Uy-UUlmvAKQDtgKiZEm*gIj0MSvjyFGDciDxXbwMW9HBeT0vJVnLDV-ZUraj39Uvj9Ygr54S9Qa*AlECvU5Gv5Bj86CXn24NJMWU56dPIe0HukacSI8uK&new=1"
+    },
+    {
+      "postId": "1998ae43edb05d86",
+      "title": "1月金融数据分析",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321737&ver=7034&signature=wEY2IYbS97Vn9jrlUf0EVEEER1brlOLl*N5KtezvRbibIJJMrV*-91CLtCTFaymn47qyq9eDZRprwuHXBlbV2g0dH8EP3UMw5weq4CvrYHQV1ak80L6jfBUz0MjsayVl&new=1"
+    },
+    {
+      "postId": "04b6efc6b9d4cd7e",
+      "title": "金融数据分析手册",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321737&ver=7034&signature=Dcip7TwzzAQMNZHHat2*Hdn9Dzx2dk1Bn3448FQT3HyW0qjWcfdUgOfQ5Ty-Hg3teLONL5cVCeVeeSi9bMTSSoOCscHdJEROtYPQ1zfRzNBsldExkDLfyVOAYW7ZAoUw&new=1"
+    },
+    {
+      "postId": "274a646815c83671",
+      "title": "手把手教你学债券 | 金融数据分析手册",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321788&ver=7034&signature=pYAUX74Z4Nqad5Fw5yxxhYBkrThiZPhO1mIYGoNlBKfyd376-V-h5w7mRuETjEh0P4hp*MeX1TDo*BCjiHQgtpvx96XRnqZEXKrMHTCZfxgvNFywig5AVBz5Vuf4CnRp&new=1"
+    },
+    {
+      "postId": "3b3656fe52a7e415",
+      "title": "【华创·每日最强音】3月金融数据点评：佛系的企业，受损的居民|宏观+传媒（20220413）",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321788&ver=7034&signature=0uS2ywfSb93Ue*esMAjvnFfC-mqqCl-b2duvQkfIzegdKkCfkQh6CEhFubPUmxzBnBkitwa*Q67gJjC3opvYaatxKTJbjzkBCHdMgx0ExtR*rGF56JiLKQg72EKR9WVU&new=1"
+    },
+    {
+      "postId": "bbf4897ba604b02d",
+      "title": "浅析金融大数据安全",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792321788&ver=1&signature=gxsnV7hWRi7GpzbEv2BRCY6fefKle8FyWjANqGXyiv4O8h*MoyUcxP3jBGB2j9HTnVKg0Br6MQNGI1SMtXSsjB1PvJTJ*YWnPvodae6DHyHmOn8mZ9WQuMQKIhUA5WfXL6drBc-HEf-bqb1BBPCfwk7N7RmrjaYu3nK0JlO3U3w="
+    },
+    {
+      "postId": "09efcaef9c10d16e",
+      "title": "「杂谈」数据分析师长久发展的行业选择，最后一个比较冷门！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321823&ver=7034&signature=sVrKGBN5MhVfTYFo4ifiWizvFGWC24YPtUqrC764uFZQ0X7wBYw0iC09dpp6umOyaEr6V*IyFaCs6cbNySxH*vzANgXj1cCcaNH48THT6ct9spPHUjQ9Rf*LwL5AhExc&new=1"
+    },
+    {
+      "postId": "ba92bb2d9b41015a",
+      "title": "放弃北大金融转投临床医！「劝退」江湖纷争又起",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321823&ver=7034&signature=hNAitCimdh1YE1UbnlMm8Wb9GfpVMpbSD5o*s4oLm3*Ks-4EQYYQcKNIKZ5VQ5Uec5oCQUiDe5uP56q9UklrcdZxcsK8Oebluz5IC-37k4m8zJ7kqq*AoHUKV00QlIgx&new=1"
+    },
+    {
+      "postId": "f941298f0d361323",
+      "title": "数 学 专 业 劝 退 指 南",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321823&ver=7034&signature=b8dzJhyJ5Jgx0jVzJs4uS6WVux828kgVbsr0JP-kIm4GaOs1KjMlYpiHxKFqlEe*f6FODwwYj9wDEzTRuMk5tGS6Vi1hB5-fGwp0LXtT5n2IPyQFVhM80P-ODmiX04aX&new=1"
+    },
+    {
+      "postId": "6384f46033f44194",
+      "title": "研究生十大劝退专业，说多了都是泪",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321823&ver=7034&signature=yQg1abjjMr-Uy-UUlmvAKQDtgKiZEm*gIj0MSvjyFGD3sLJRkSjEAHC2m3coAmQ*JZFgy2BasqQVeMONtK6qAbf1akwNM5bcpFHvVPCNBmNy2Edj32F61lS5sCQwRzNq&new=1"
+    },
+    {
+      "postId": "421bbff4c7caa9fb",
+      "title": "数 学 专 业 劝 退 指 南",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321823&ver=7034&signature=*9QEfrFZ*npBufkpMAvies4cVN61pKQmQMutzEQsWKYwGkgk-HqtVuxcA*z9P5j-AL0zEVa-uPzrwnLuH2Q3ZM1ikSyMxHBf3JEw8LriETUqaFMWFc9Yc0NVP5lXsUCw&new=1"
+    },
+    {
+      "postId": "e4a1afc434bc7fc2",
+      "title": "建议用两年平均增速分析金融数据",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321874&ver=7034&signature=DmOxaDLi1OoDFGuJJV1w3wzyY46fBWnkqlhoPRcElrTDtiXc8qE6kviA7WJ6chpz0WotiO8QK0l*Q0Nj*2YVknfgEyRxxXdqhbf-7n8E-*YEGlCcf*sZd*MqY4IQlxTy&new=1"
+    },
+    {
+      "postId": "7ade8a3f4ab76cb8",
+      "title": "【数量技术宅|金融数据分析系列分享】为什么中证500（IC）是最适合长期做多的指数",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321874&ver=7034&signature=tEnj69RWTKYyb6sgK8MF*ZtqaKtCziTle7mwarRG8KIfJNcN3h6I-TPlrPIOe8HSeklU97ViJleH*1X6E*2qXsfq60KVk6wh*K*amJIHEXDc*RwPqseviFWAlMDV5brz&new=1"
+    },
+    {
+      "postId": "00b02b7914390007",
+      "title": "手把手教你学债券 | 金融数据分析手册",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321874&ver=7034&signature=pYAUX74Z4Nqad5Fw5yxxhYBkrThiZPhO1mIYGoNlBKfyd376-V-h5w7mRuETjEh0q4OHe-6FNhlOXNG*ZylKJmYsoqUcorY4V8mH*-Lh3i31Io*M4qMINJ73lLSu1Rdq&new=1"
+    },
+    {
+      "postId": "4ff8defd51def936",
+      "title": "【工作动态】省分行召开2020年秋粮收购信贷工作 会议暨举办信贷业务智能系统培训班",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321909&ver=7034&signature=nJ6jdbKUPIimTTXatq3NB17XoVbNCQ-ktIxRzt9ZhjT87cpJLXHn-OF4QgNeimJ5pa4UWFZli*T7*XFpioMrhSZlgOeYqlUdwfX6-EnW*zQg0ES7rKjeQeW9mCgxRoql&new=1"
+    },
+    {
+      "postId": "35aab671891c6ead",
+      "title": "电力数据变信用资产！蒙电×中信银行解锁小微融资新路径",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321909&ver=7034&signature=8rBI3rptbtm0zpK-Dgn0I1n1FxcTHQ9vp4KIz0lGRURVBfPc84GNAspQd3SQhpj86CJdntyk9T7ixnT5aPtj**urbiQTFengsAQ8CRDkKY1dH8cbm8LXPIHO*M3Bf7mx&new=1"
+    },
+    {
+      "postId": "b09eaf9009ddabe2",
+      "title": "金融科技专业大学期间，适配数据分析方向求职的证书选择与能力准备指南",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321909&ver=7034&signature=QvY*P-yLRlhm2ShylIIYnpj9YA1jNIB8WIHIjg6QGS2Xg6ughTSlzLSHPcDp3WBy0wbyXgXJjoft5Nz4pFjmz8B1ETXFrpqWTB1fqX7KFUs9-IZEkrI8ZyS8wf1zWxfV&new=1"
+    },
+    {
+      "postId": "e661f7f70fd6def0",
+      "title": "科技赋能信贷典型案例报告",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321909&ver=7034&signature=FF62DTQDE1Tf63qukyoXsWMJ4NVY5GnrpXcSacKqt75jfZ33RXn4hvK6LOgYarAOOLOkYLINlkdKRw7PVxn1m33oKzh1pRSYQFkRVT3NyIsMSzvKXGaO*EEqscVK13BC&new=1"
+    },
+    {
+      "postId": "dbf21035038dd226",
+      "title": "2027 届秋招｜金融科技专业应聘信贷产品助理，简历优先突出金融知识还是数据能力",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321909&ver=7034&signature=-y8J0Q1mQ*psHmiq80ffu4ppfigoPhY56aFDOAaJX4n*ErV-D-*Fqu9nEJ17iNs5ds4nqgs9E*BS0OyQy1OzsmxkSkZjhLgqscrsX2yqcA30HxoVw1FWkSjSGsdsm7r7&new=1"
+    },
+    {
+      "postId": "6cdba9ea4ad88348",
+      "title": "2027应届生做银行信贷分析需要哪些证书？先看岗位，再安排备考",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321909&ver=7034&signature=qeKrvkdPDSve9bCJw6zRZ63dip*meC*FllzgtECe0SVAxtHeAo-VtNK0O*K*1GkJHrlCflsAtGjsizLOT0VJoX*T*j*5apFSTkp8ol5DOb4n0HZCBbvgAjMO-DAAUm9r&new=1"
+    },
+    {
+      "postId": "d466e1b8134b4845",
+      "title": "金融工程专业无券商实习可做的金融数据分析项目指南",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321955&ver=7034&signature=QvY*P-yLRlhm2ShylIIYnpj9YA1jNIB8WIHIjg6QGS14w43p179APL5p7mpkeOo1Fyl4d0tQK3nVtg0K*30shKhtlvG29OEDC6y5p1WmOv6cwl8msjQ*RMLRpW0rXaGF&new=1"
+    },
+    {
+      "postId": "8c16be9812a1ff3c",
+      "title": "信贷菜鸟浅谈对信贷工作的几点认识",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792321955&ver=1&signature=p1UoIryLgIkBK7Pnmp4LeFpct4MRmz2bEdwFtKbaJHVwVZo8kucGOUPJ4sFZ8yBsMZTmrBW8IqUXpQoTudzpZdyjgGdUbEbew1O8Mcx7YW65jSQagLOJt-IKlMGBpWAd7Yz0AN0vLfoISqxpoek8pekOHlLXjXwoI2EgosDqcvU="
+    },
+    {
+      "postId": "3a49f28a8a8b0c4c",
+      "title": "农信金融人--商业银行信贷财报分析-企业“软信息”的收集：那些报表上看不到的东西！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321955&ver=7034&signature=DrKiv1FCo7EMtcNAQgDkzyPvUs7TbdXsQgR8DCeJIwO0dx3QPBacvbP4xTzOsrrkwQvwecgDXVeFTmBusnYXtnoW3pj-jA77*0JxjlmxdWpvCEbCS6*0MAsjOmFX49Wm&new=1"
+    },
+    {
+      "postId": "efc1b658d813bdc7",
+      "title": "信贷“三道关”：贷前看透、贷中守住、贷后盯紧，这三道防线你守住了吗？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321955&ver=7034&signature=uDcFpdHXwUVPBM9rb6wCUXKuMccYj8DvZKfoSC7T-5P1ASKglxkgjo4Iy42w14kcns*0nDZQwu0x9EH7n14P1lY4TWtlRXCpWsA7rPWoLVkHiQjM1MnR1AU-mBypkwrj&new=1"
+    },
+    {
+      "postId": "c02dded51122f24f",
+      "title": "入职海外信贷30天：摸清老板的决策逻辑与真实权力结构",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321955&ver=7034&signature=Lh61wNdSr4az4wUvZ3ifWBWQwwrcqblO7GjaDDCaxlSdvCJQE0Ka9Vh4cFLnFmrJ7ObcDOAIVf9Ub2U1I4jZqjj0hqLYkuEPKd2t*aToiTxEzn*4Nm18RUNmYp59UP*m&new=1"
+    },
+    {
+      "postId": "506ecdf593b5dff0",
+      "title": "2027届大数据专业秋招：投递金融机构，核心业务短板这样补",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321955&ver=7034&signature=n*cQ9Q1dT9j752PDt-1-ObZXY-MhLAhoJq6Q9GuSJxGOpPe-KPKYr2PpEQ-C88eFyHuR7cxo*uGSVjmIXvHkpZrRmRpEgl0XSnmM8QUtZtuFLQWoqNKfIftaZJ4pKbiJ&new=1"
+    },
+    {
+      "postId": "80ba503b9e90e71c",
+      "title": "风控的数据分析，日常会做哪些分析工作？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321999&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUVWpVHjTpcdSahXEAfTjQOdBw1smbr7v1uendDi8JGjnt2VxOVSG6YvUswjbL5GC4cMGlUO95-G6RP5j2-w9iZQ&new=1"
+    },
+    {
+      "postId": "600a1300aaf82778",
+      "title": "风控人如何掌握数据分析能力？（附风控数据案例分析）",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321999&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUWCFQlgpE2fxD9peYmkINK6Rsbw36aHVd7ed9gsiZ-gB6N8W-Iok2Xr0E7A1-LOhabK8jMd14M0JR68pCh8e39s&new=1"
+    },
+    {
+      "postId": "128c721990612f7c",
+      "title": "互联网金融大数据风控的九种维度",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321999&ver=7034&signature=UhG1ZwGFkAjxHBf7mIPJu*Dv1Pgihyg2GeKkbaE5TXxDTMY9ce013BhQBmiWtktlfl4RkrUPSm*s7asjcfXyuv83WsQYx4wAjmNhW3FZmx13oZjRmzgE4rZLvl6lP-KM&new=1"
+    },
+    {
+      "postId": "ddd0b40e4a5b2462",
+      "title": "机器学习与大数据风控",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792321999&ver=1&signature=6v6Evd7R*nNjceDPECwMoo1OmDT4u2BMhtpJpmDKwFjRNh53oAg573KtPdi1wqiiXErHHENPTXROP2yQ6fXszHwpj4bw4riuDTcjGr7kKl5WY1exfKhQSMTiJ*dmcNlV*B-*o1e2W-h2kloy33Quvp6KTMntXcdjmEw21yK-e9g="
+    },
+    {
+      "postId": "91ec851367afc726",
+      "title": "干货丨互联网金融与大数据风控相结合的九大维度",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792321999&ver=1&signature=j4LhOFyM2VWOkaui0KtEXZEuLFc0pRIIcRQs-3Z55Bs-nBMgJeYPElVhKaT942IBdf7ZoKxH5bMrGovg75DbGlQLvv86KfLEtZvoD*HGO4Wq*geL7L9zbg8*DEXIgwX5T9dCThlUGmWl0j1A*vIcrn6r*3glASfeP-Ws2XUra3c="
+    },
+    {
+      "postId": "08cce540075f6a08",
+      "title": "风控中必做的数据分析",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321999&ver=7034&signature=E15Rxvl5YbKmmz1KB039obeexLg0wSQftlF968N8omsSta0AAVcRbC*lnQiWAtD7TGxiRt7avAY4vn0KD2SnpmwvpoJ-MejFeKYXIqx3W9yjKp*-zZzHgBBI9kEa9lbi&new=1"
+    },
+    {
+      "postId": "aec7cc9f0d946ef4",
+      "title": "大数据风控-外部三方数据源分析体系建设",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321999&ver=7034&signature=JE6HJzKfk0sPt73JQWnWnZ6ivnVjkm5*ZeRtF*uRpYl2Fgo7zNUtgNWbjlLPWAth7bdpmne1c2iJTgEQfK09cIIizbUGhe4vk8TWchT0e7bNlna3DHR2KBEzbuU*Vva0&new=1"
+    },
+    {
+      "postId": "27ca6e8db43eaf9f",
+      "title": "拆东墙补西墙-中国金融风控多头借贷数据分析",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321999&ver=7034&signature=lkmxkhLy9NKT0FvL0bXWUalNCM0gjqccq2Kv1bYj-M1RYVPojwW48WHpdjEQIfpnrc1myTwM6zC*NtOlXrCKi6YWEEkLJL6K6Nsejkl6dyfB7Qb-C2XKvLc-1-5v8tZW&new=1"
+    },
+    {
+      "postId": "d39d144621039a36",
+      "title": "数据分析与风控趋势",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792321999&ver=7034&signature=vCbunAQ5yMIKoR1xu*TzBMAQoFl3p*IhZvHUeU755bBz00nJNpxGk2zsdvuILzMAIaAOEFMz5ycpDRcGPZVMZW7h-lM9ESiTNiTBsBNdH4qXTzh8WiH6H*yzN7Nb1B*P&new=1"
+    },
+    {
+      "postId": "8019243f705d4631",
+      "title": "风控的数据分析都分析些什么内容？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792322049&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUU95kRmOTS9IO6ovCWTRlK4BePaBmhrXBjvFNtBlb7E0iAc3qlZyVPSUE3U4Cn4iCTRyauaj3uGsJFSXcayzsLk&new=1"
+    },
+    {
+      "postId": "a33155debc7ebd7d",
+      "title": "风控人如何掌握数据分析能力？（附风控数据案例分析）",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792322049&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUWCFQlgpE2fxD9peYmkINK64QUpgwfee-FLBe56wIISYgAp2plAPy7qQjxyz3jLDdjQfMbiAg4uSEKdffRFtZ8Y&new=1"
+    },
+    {
+      "postId": "2bf317b5eaccd87c",
+      "title": "一位金融风控数据分析师的职业规划",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792322049&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUULGnb*-lcwC2BQFsyvTMQ7ouXH1gkvkF4sZEWs1XeWk8U66rHdn6*KcS0nSP6cnvL7QN3QrxZxVNBz7rsEYhZz&new=1"
+    },
+    {
+      "postId": "f7832245bfcb2b12",
+      "title": "机器学习与大数据风控",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792322049&ver=1&signature=6v6Evd7R*nNjceDPECwMoo1OmDT4u2BMhtpJpmDKwFjRNh53oAg573KtPdi1wqiiXErHHENPTXROP2yQ6fXszHwpj4bw4riuDTcjGr7kKl5WY1exfKhQSMTiJ*dmcNlVi4k*zVjLFO-BLjNPfQ-Zxv*-37SgQRhiCDUUdMLdQu4="
+    },
+    {
+      "postId": "d79041c462cb563d",
+      "title": "风控策略人均会数据分析？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792322049&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUWbIi2AEMbBevT3UVUkwwCDwlFed*88l9olppAhrjAsPQzGnA7c2eBXuZZ6GkX0d00I8d--K*Fgcq*4FGetygB5&new=1"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "positionId": "fin-fintech-data",
+  "sampledKpIds": [
+    "fin-fintech-data-kp-043",
+    "fin-fintech-data-kp-036",
+    "fin-fintech-data-kp-048",
+    "fin-fintech-data-kp-046",
+    "fin-fintech-data-kp-013"
+  ],
+  "totalPoints": 53,
+  "faithful": true,
+  "issues": []
+}

@@ -1,0 +1,1051 @@
+{
+  "status": "indexed",
+  "positionId": "fin-fund-ops",
+  "positionName": "基金运营",
+  "aliases": [
+    "基金会计",
+    "估值核算",
+    "运营支持",
+    "基金运营岗"
+  ],
+  "vectorStore": "keyword-inverted",
+  "points": [
+    {
+      "category": "coreDuties",
+      "text": "负责基金销售数据的下发与清算，处理投资者申购赎回资金结算划付及基金交易资金结算划付，确保数据准确、金额正确、处理及时。",
+      "kpId": "fin-fund-ops-kp-001"
+    },
+    {
+      "category": "coreDuties",
+      "text": "完成估值数据读取、转换为会计凭证并生成估值表，与管理人及托管人核对数据。",
+      "kpId": "fin-fund-ops-kp-002"
+    },
+    {
+      "category": "coreDuties",
+      "text": "向基金经理提供次日可用头寸数据，并报送监管数据。",
+      "kpId": "fin-fund-ops-kp-003"
+    },
+    {
+      "category": "coreDuties",
+      "text": "接收基金销售数据，确认投资者交易，执行清算、大额控制及监管数据报送。",
+      "kpId": "fin-fund-ops-kp-004"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责基金信息披露，包括季度报告、半年度报告、年度报告及重大事项披露，确保披露信息真实、准确、完整。",
+      "kpId": "fin-fund-ops-kp-005"
+    },
+    {
+      "category": "coreDuties",
+      "text": "管理基金产品备案及AMBERS系统信息更新，包括管理人信息、年度财务报告、产品季度更新、产品清算及重大变更等。",
+      "kpId": "fin-fund-ops-kp-006"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责基金从业人员的资格管理及后续职业培训安排，确保从业人员取得基金从业资格并完成年度培训学时。",
+      "kpId": "fin-fund-ops-kp-007"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责投资者适当性管理，包括风险测评、资产证明审核、双录、冷静期回访及适当性匹配等。",
+      "kpId": "fin-fund-ops-kp-008"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责基金档案的保存与管理，确保投资决策、交易记录、投资者适当性资料、风险揭示资料等完整、连续、准确和可追溯。",
+      "kpId": "fin-fund-ops-kp-009"
+    },
+    {
+      "category": "coreDuties",
+      "text": "参与创新产品设计，制定与之匹配的清算交割、估值核算、系统测试、信息披露等业务细则。",
+      "kpId": "fin-fund-ops-kp-010"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责基金募集结算资金专用账户的管理，统一归集募集资金、分配收益、给付赎回款项及分配清算后剩余财产。",
+      "kpId": "fin-fund-ops-kp-011"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责投后管理，包括标的企业监控、风险管控、增值服务提供及投前投后机制联动调整。",
+      "kpId": "fin-fund-ops-kp-012"
+    },
+    {
+      "category": "workflow",
+      "text": "每日早上8点开始，处理基金销售数据下发清算、投资者申购赎回资金结算划付及基金交易资金结算划付。",
+      "kpId": "fin-fund-ops-kp-013"
+    },
+    {
+      "category": "workflow",
+      "text": "每日下午16点开始，进行估值数据读取、转换为会计凭证、生成估值表，与管理人及托管人电话核对数据。",
+      "kpId": "fin-fund-ops-kp-014"
+    },
+    {
+      "category": "workflow",
+      "text": "估值核对完成后，向基金经理提供次日可用头寸数据，并报送监管数据。",
+      "kpId": "fin-fund-ops-kp-015"
+    },
+    {
+      "category": "workflow",
+      "text": "每日晚上8点开始，接收基金销售数据，确认投资者交易，执行清算、大额控制及监管数据报送，通常工作至凌晨。",
+      "kpId": "fin-fund-ops-kp-016"
+    },
+    {
+      "category": "workflow",
+      "text": "基金募集流程包括特定对象确认、投资者适当性匹配、基金推介、风险揭示、合格投资者确认、基金合同签署、冷静期及回访七个阶段。",
+      "kpId": "fin-fund-ops-kp-017"
+    },
+    {
+      "category": "workflow",
+      "text": "基金产品备案需在募集完毕后20个工作日内通过AMBERS系统提交，并按要求上传相关文件。",
+      "kpId": "fin-fund-ops-kp-018"
+    },
+    {
+      "category": "workflow",
+      "text": "信息披露按季度、半年度、年度进行，季度报告在每季度结束之日起10个工作日内披露，年度报告在每年结束之日起4个月内披露。",
+      "kpId": "fin-fund-ops-kp-019"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理流程包括项目调研与立项、项目评估与决策、投资管理、投资退出四个阶段。",
+      "kpId": "fin-fund-ops-kp-020"
+    },
+    {
+      "category": "workflow",
+      "text": "职业年金基金运营流程包括个人建账、缴费归集、缴费管理、报价成交、待遇支付等环节，其中缴费管理、报价成交、待遇支付由代理人和基金管理人共同完成。",
+      "kpId": "fin-fund-ops-kp-021"
+    },
+    {
+      "category": "tools",
+      "text": "估值系统",
+      "kpId": "fin-fund-ops-kp-022"
+    },
+    {
+      "category": "tools",
+      "text": "AMBERS系统（私募基金登记备案系统）",
+      "kpId": "fin-fund-ops-kp-023"
+    },
+    {
+      "category": "tools",
+      "text": "私募基金信息披露备份系统",
+      "kpId": "fin-fund-ops-kp-024"
+    },
+    {
+      "category": "tools",
+      "text": "基金运营管理平台（FOM）",
+      "kpId": "fin-fund-ops-kp-025"
+    },
+    {
+      "category": "tools",
+      "text": "投资分析系统（IA）",
+      "kpId": "fin-fund-ops-kp-026"
+    },
+    {
+      "category": "tools",
+      "text": "基金日历（产品生命周期管理）",
+      "kpId": "fin-fund-ops-kp-027"
+    },
+    {
+      "category": "tools",
+      "text": "IROBOT机器人自动估值系统",
+      "kpId": "fin-fund-ops-kp-028"
+    },
+    {
+      "category": "tools",
+      "text": "远程培训系统",
+      "kpId": "fin-fund-ops-kp-029"
+    },
+    {
+      "category": "typicalDay",
+      "text": "基金运营人员每个工作日早上8点开始处理基金销售数据下发清算、投资者申购赎回资金结算划付及基金交易资金结算划付，确保数据准确、金额正确、处理及时。下午16点开始进行估值数据读取、转换为会计凭证并生成估值表，与管理人及托管人核对数据，随后向基金经理提供次日可用头寸数据并报送监管数据。晚上8点开始接收基金销售数据，确认投资者交易，执行清算、大额控制及监管数据报送，通常工作至凌晨。此外，运营人员还需与公司前台保持沟通，满足投资者需求，并参与创新产品设计及系统测试。",
+      "kpId": "fin-fund-ops-kp-030"
+    },
+    {
+      "category": "pitfalls",
+      "text": "档案保存不完整或期限不足：与投资决策、交易、投资者适当性管理等相关的资料需自基金清算终止之日起保存10年以上，风险揭示相关录音录像资料需保存20年以上，否则可能被采取行政监管措施或纪律处分。",
+      "kpId": "fin-fund-ops-kp-031"
+    },
+    {
+      "category": "pitfalls",
+      "text": "从业人员未取得基金从业资格或未完成年度培训：聘用无基金从业资格人员从事信息披露工作被视为内部控制缺失，从业人员每年需完成15学时培训（其中职业道德培训不少于5学时），否则可能被采取自律措施。",
+      "kpId": "fin-fund-ops-kp-032"
+    },
+    {
+      "category": "pitfalls",
+      "text": "合规风控负责人从事投资管理业务：合规风控负责人不得从事投资管理业务，否则可能被认定为虚假填报高管登记信息。",
+      "kpId": "fin-fund-ops-kp-033"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未持续满足登记备案要求：管理人登记后需持续满足人员兼职、高管配置、基金从业资格、经营场所独立性及信用情况等要求，否则可能被处分。",
+      "kpId": "fin-fund-ops-kp-034"
+    },
+    {
+      "category": "pitfalls",
+      "text": "制度不健全或未有效执行：未制定或未执行内部控制制度、合规管理制度、私募基金运作制度、应急预案制度等，可能被采取行政监管措施或纪律处分。",
+      "kpId": "fin-fund-ops-kp-035"
+    },
+    {
+      "category": "pitfalls",
+      "text": "违反专业化经营要求：管理人不得将基金财产用于借贷、明股实债等非私募基金投资活动，不得兼营多种类型私募基金管理业务或从事与私募基金管理无关业务。",
+      "kpId": "fin-fund-ops-kp-036"
+    },
+    {
+      "category": "pitfalls",
+      "text": "通道行为：管理人不得将投资管理职责委托他人行使，仅根据他人划款指令进行划款而不实际参与募集、投资、管理和退出，可能被认定为未履行勤勉尽责义务。",
+      "kpId": "fin-fund-ops-kp-037"
+    },
+    {
+      "category": "pitfalls",
+      "text": "公开宣传推介：通过微信公众号、朋友圈、未设置特定对象确定程序的网站等形式向不特定对象宣传推介私募基金产品，属于违规公开宣传。",
+      "kpId": "fin-fund-ops-kp-038"
+    },
+    {
+      "category": "pitfalls",
+      "text": "承诺保本保收益：通过口头、书面或即时通讯工具等方式直接或间接向投资者承诺保本保收益，会被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-039"
+    },
+    {
+      "category": "pitfalls",
+      "text": "片面宣传：在招募说明书中使用“为投资人带来稳定回报”等表述，可能导致投资者不能正确认识风险，属于违规。",
+      "kpId": "fin-fund-ops-kp-040"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投资者适当性管理不到位：未妥善履行风险测评、资产证明审核、双录、冷静期回访等程序，或未穿透核查最终投资者，可能被采取监管措施或纪律处分。",
+      "kpId": "fin-fund-ops-kp-041"
+    },
+    {
+      "category": "pitfalls",
+      "text": "风险测评诱导：在风险测评问卷中设置选项分值或提供评分对照表，构成对投资者风险测评的提示、诱导，属于违规。",
+      "kpId": "fin-fund-ops-kp-042"
+    },
+    {
+      "category": "pitfalls",
+      "text": "风险揭示书套用模板：未针对特殊架构（如专项基金、通过特殊目的载体投资等）详细披露风险，仅套用格式表述，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-043"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未设置或未履行投资冷静期：除当然合格投资者和专业投资机构外，未设置冷静期或未进行回访确认，可能被采取监管措施或纪律处分。",
+      "kpId": "fin-fund-ops-kp-044"
+    },
+    {
+      "category": "pitfalls",
+      "text": "文件管理不一致：募集过程中签署的文件信息与基金合同、备案信息不一致，或文件签署时间顺序不符合规则要求（如基金合同签署早于风险测评、资产证明调取晚于合同签署、回访确认与合同签署及缴款同一天等），可能被认定为违规。",
+      "kpId": "fin-fund-ops-kp-045"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按时备案：私募基金未在募集完毕后20个工作日内备案，即使后续完成备案，仍可能因违规被处分。",
+      "kpId": "fin-fund-ops-kp-046"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未妥善保存信息披露留痕资料：无法证明已妥善履行信息披露义务，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-047"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按时完成后续职业培训：从业人员未按时完成年度培训，可能被采取书面警示、强制培训等措施，连续三年未达标可能被取消基金从业资格。",
+      "kpId": "fin-fund-ops-kp-048"
+    },
+    {
+      "category": "pitfalls",
+      "text": "基金名称使用不一致：基金合同封面、冷静期确认书、回访确认书等材料使用的基金名称与备案名称不符，属于备案信息不准确。",
+      "kpId": "fin-fund-ops-kp-049"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未合理审慎审查宣传数据：用于产品宣传的数据未合理审慎审查，可能被认定为未充分履行谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-050"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未设置投资者评估数据库：未建立并及时更新投资者评估数据库，可能被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-051"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未制定适当性内部管理制度：未明确投资者分类、产品分级、适当性匹配的具体依据和方法流程，或未制定客户回访检查、评估与销售隔离等风控制度，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-052"
+    },
+    {
+      "category": "pitfalls",
+      "text": "委托无资质机构募集：委托不具有基金销售业务资格的单位或个人从事募集活动，或委托他人制作、收集投资者适当性材料，构成未勤勉尽责。",
+      "kpId": "fin-fund-ops-kp-053"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未审慎核查合格投资者证明材料：仅收集资产证明而未进行比对审阅，或未核查投资者资金来源，可能被认定为未履行谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-054"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对特殊目的载体进行风险揭示：未向投资者披露特殊目的载体相关的投资架构并揭示相关风险，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-055"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未及时更新AMBERS系统信息：管理人信息、财务报告、产品季度更新等未按时填报，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-056"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按规定进行基金清算：基金清算未及时处理，可能影响投资者利益并引发监管关注。",
+      "kpId": "fin-fund-ops-kp-057"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未妥善处理停牌股票估值：在市场异常波动导致股票停牌时，未及时评估并调整估值，可能损害投资者利益。",
+      "kpId": "fin-fund-ops-kp-058"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未与托管行充分沟通：估值调整等事项未与托管行逐一电话沟通确认，可能导致操作风险。",
+      "kpId": "fin-fund-ops-kp-059"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未及时提供头寸数据：未向基金经理提供次日可用头寸数据，可能影响投资运作。",
+      "kpId": "fin-fund-ops-kp-060"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按时报送监管数据：未按规定向监管部门报送数据，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-061"
+    },
+    {
+      "category": "pitfalls",
+      "text": "运营系统异常未及时发现：估值、注册登记、资金清算等系统异常未及时监控和处理，可能带来运营风险。",
+      "kpId": "fin-fund-ops-kp-062"
+    },
+    {
+      "category": "pitfalls",
+      "text": "人工操作依赖度过高：产品数量增长下仍依赖人工操作，导致效率低下、风险增加，需推进智能化运营。",
+      "kpId": "fin-fund-ops-kp-063"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未建立运营风险监控平台：未对运营风险进行事前提醒、事中跟踪、事后问责的全方位管理，可能无法及时定位和处理风险事项。",
+      "kpId": "fin-fund-ops-kp-064"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未使用基金日历等工具进行业务提醒：依赖人脑和便签进行业务处理提醒，可能导致业务遗漏或处理不及时。",
+      "kpId": "fin-fund-ops-kp-065"
+    },
+    {
+      "category": "pitfalls",
+      "text": "创新产品运营准备不足：新基金类型或新投资标的推出时，未提前制定清算交割、估值核算、系统测试、信息披露等业务细则，可能拖累产品创新。",
+      "kpId": "fin-fund-ops-kp-066"
+    },
+    {
+      "category": "pitfalls",
+      "text": "双GP模式下职责划分不清：在双执行事务合伙人架构中，将投资管理以外的过多职责赋予不担任管理人的执行事务合伙人，可能导致管理人无法控制风险敞口。",
+      "kpId": "fin-fund-ops-kp-067"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理不到位：未及时跟踪被投企业的财务信息和经营信息，可能导致投资风险管控滞后。",
+      "kpId": "fin-fund-ops-kp-068"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未严格执行商业计划书：未定期检查被投企业阶段目标实现情况，未及时发现问题并控制风险。",
+      "kpId": "fin-fund-ops-kp-069"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未参与董事会决策：未委派投资经理参加被投企业董事会，无法有效监控企业经营。",
+      "kpId": "fin-fund-ops-kp-070"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未合理使用可转换优先股转换价格调整机制：未根据企业经营业绩调整股份比例，可能无法有效保护投资者利益。",
+      "kpId": "fin-fund-ops-kp-071"
+    },
+    {
+      "category": "pitfalls",
+      "text": "政府回购承诺违规：要求政府或所投资企业签署回购函，违反地方政府举债融资相关规定。",
+      "kpId": "fin-fund-ops-kp-072"
+    },
+    {
+      "category": "pitfalls",
+      "text": "产业基金设立不符合条件：发起人不符合产业投资经验、财务状况等要求，或申报核准程序不合规。",
+      "kpId": "fin-fund-ops-kp-073"
+    },
+    {
+      "category": "pitfalls",
+      "text": "产业基金募集违规：投资者数目超过200人，或募集规模低于1亿元，或存续期限不符合10-15年要求。",
+      "kpId": "fin-fund-ops-kp-074"
+    },
+    {
+      "category": "pitfalls",
+      "text": "产业基金治理结构不完善：股东家数不足5个、单一股东份额超过50%、董事人数不足7人或超过15人，可能影响决策科学性。",
+      "kpId": "fin-fund-ops-kp-075"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未引入独立董事或独立董事制度不健全：独立董事人数不足1/4或1/3，或未建立合理的激励约束机制。",
+      "kpId": "fin-fund-ops-kp-076"
+    },
+    {
+      "category": "pitfalls",
+      "text": "风险控制机制不健全：未建立投资决策管理制度、内部稽核控制制度、资讯风险控制制度等，或未在项目管理阶段执行风险控制措施。",
+      "kpId": "fin-fund-ops-kp-077"
+    },
+    {
+      "category": "pitfalls",
+      "text": "职业年金运营中缴费管理不及时：受托人未在收到资金划款通知且资金到账的1个工作日内完成匹配，或托管人未在1个工作日内完成收账，可能影响运营效率。",
+      "kpId": "fin-fund-ops-kp-078"
+    },
+    {
+      "category": "pitfalls",
+      "text": "职业年金报价成交处理延迟：投资管理人未按时发送估值信息，或托管人未及时核对，可能影响定价和成交。",
+      "kpId": "fin-fund-ops-kp-079"
+    },
+    {
+      "category": "pitfalls",
+      "text": "职业年金待遇支付失败处理不当：支付失败后未及时反馈并重新支付，可能影响受益人权益。",
+      "kpId": "fin-fund-ops-kp-080"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按规定进行个人建账和缴费归集：代理人未同步完成职业年金个人账户建账或未及时归集缴费，可能影响基金运营。",
+      "kpId": "fin-fund-ops-kp-081"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按时完成基金从业资格注册：从业人员未及时注册，可能影响业务开展。",
+      "kpId": "fin-fund-ops-kp-082"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未妥善保管基金合同等文件：文件丢失或损坏，可能影响投资者权益和监管检查。",
+      "kpId": "fin-fund-ops-kp-083"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按规定进行基金份额登记：份额登记错误，可能影响投资者权益。",
+      "kpId": "fin-fund-ops-kp-084"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未及时处理大额赎回：大额赎回控制不当，可能引发流动性风险。",
+      "kpId": "fin-fund-ops-kp-085"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按规定进行关联交易管理：关联交易未说明公允性、未进行风险揭示或未取得投资者确认，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-086"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对底层资产进行穿透核查：未明确底层资产并穿透核查资金用途，可能违反监管要求。",
+      "kpId": "fin-fund-ops-kp-087"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未出具不违反4号规范的承诺函：地产基金产品未按要求出具承诺函，可能影响备案。",
+      "kpId": "fin-fund-ops-kp-088"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未提交底层交易文件：涉及单一投资标的的基金产品未提交底层交易文件供核查，可能影响备案。",
+      "kpId": "fin-fund-ops-kp-089"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未在风险揭示书中明确风险提示：涉及单一投资标的的基金产品未在风险揭示书中明确风险提示，可能被要求补充。",
+      "kpId": "fin-fund-ops-kp-090"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未妥善处理投资者投诉：未及时响应投资者诉求，可能引发声誉风险。",
+      "kpId": "fin-fund-ops-kp-091"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未定期进行自查：未按规定开展自查管理，可能无法及时发现和整改合规问题。",
+      "kpId": "fin-fund-ops-kp-092"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未及时报告重大事项：管理人发生名称、高管、控股股东、实际控制人等变更，未在10个工作日内向基金业协会报告，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-093"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按规定出具专项法律意见书：控股股东、实际控制人、法定代表人变更未出具专项法律意见书，可能影响变更登记。",
+      "kpId": "fin-fund-ops-kp-094"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未通知投资人重大事项变更：未获得投资人确认，可能违反基金合同约定。",
+      "kpId": "fin-fund-ops-kp-095"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按时制作并发送基金运行管理报告：未按基金合同约定向投资者披露季度、半年度、年度报告，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-096"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未妥善保存信息披露文件：信息披露文件保存期限少于10年，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-097"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未使用募集结算资金专用账户：未通过专用账户归集募集资金、分配收益、给付赎回款项，可能违反资金管理要求。",
+      "kpId": "fin-fund-ops-kp-098"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未监督代销机构合规募集：未对代销机构进行充分监督，可能因代销机构违规而承担连带责任。",
+      "kpId": "fin-fund-ops-kp-099"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未建立应急预案制度：未制定应急预案，可能无法有效应对运营中断等突发事件。",
+      "kpId": "fin-fund-ops-kp-100"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对运营人员进行合规培训：培训内容不规范或未注重合规性，可能被认定为未尽谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-101"
+    },
+    {
+      "category": "pitfalls",
+      "text": "员工通过自媒体发表不当言论：员工通过自媒体公众号贬低同行或向不特定对象宣传产品，管理人未有效监督，可能被认定为未履行谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-102"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未及时更新投资者评估数据库：数据库未及时更新，可能影响适当性匹配的准确性。",
+      "kpId": "fin-fund-ops-kp-103"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对投资者风险测评结果进行复核：风险测评结果不准确或未勾选风险承受能力等级，可能被处分。",
+      "kpId": "fin-fund-ops-kp-104"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未在基金合同签署前完成风险测评：基金合同签署日期早于风险测评问卷签署日期，被视为未落实适当性管理要求。",
+      "kpId": "fin-fund-ops-kp-105"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未在资产证明调取后再签署基金合同：资产证明调取时间晚于基金合同签署日期，被视为未妥善履行适当性审查义务。",
+      "kpId": "fin-fund-ops-kp-106"
+    },
+    {
+      "category": "pitfalls",
+      "text": "回访确认与合同签署及缴款同一天：未留足至少24小时冷静期，可能被认定为违规。",
+      "kpId": "fin-fund-ops-kp-107"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对特殊架构进行详细风险披露：仅套用模板，未披露特殊目的载体相关投资架构及风险，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-108"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按规定进行基金产品风险评级：风险评级不合理或不适当，可能影响适当性匹配。",
+      "kpId": "fin-fund-ops-kp-109"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对投资者进行分类分级：未按内部管理制度对投资者进行分类分级，可能违反适当性管理要求。",
+      "kpId": "fin-fund-ops-kp-110"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未制定并落实限制不匹配销售行为等风控制度：未制定客户回访检查、评估与销售隔离等制度，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-111"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未建立适当性档案管理制度：未制定适当性管理的培训考核制度、执业规范和监督问责制度，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-112"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对代销机构资质进行审查：委托不具有基金销售业务资格的机构募集，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-113"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未在委托募集协议中明确权责划分：未明确投资者适当性管理义务的责任主体，可能承担不利后果。",
+      "kpId": "fin-fund-ops-kp-114"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对代销机构进行充分监督：代销机构未合规募集，管理人可能被处罚。",
+      "kpId": "fin-fund-ops-kp-115"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按规定进行双录：未通过录音录像等方式向普通投资者揭示规定信息，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-116"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未穿透核查最终投资者：未按规定穿透核查最终投资者是否为合格投资者，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-117"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未要求投资者提供资产证明或收入证明：未要求部分投资者提供符合规定的收入或资产证明，可能被认定为未履行谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-118"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未核查投资者资金来源：未谨慎勤勉核查投资者资金来源，可能被认定为未履行诚实信用义务。",
+      "kpId": "fin-fund-ops-kp-119"
+    },
+    {
+      "category": "pitfalls",
+      "text": "风险测评问卷设置分值：问卷选项对应分值或附有评分对照表，构成对投资者风险测评的提示、诱导，可能被处分。",
+      "kpId": "fin-fund-ops-kp-120"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未设置投资冷静期：未对投资者设置冷静期并进行回访确认，可能被采取监管措施或纪律处分。",
+      "kpId": "fin-fund-ops-kp-121"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未妥善落实投资冷静期制度：未对部分投资者落实冷静期制度，可能被采取监管措施。",
+      "kpId": "fin-fund-ops-kp-122"
+    },
+    {
+      "category": "pitfalls",
+      "text": "基金名称与备案名称不符：基金合同封面、冷静期确认书、回访确认书等材料使用的基金名称与备案名称不一致，可能被认定为备案信息不准确。",
+      "kpId": "fin-fund-ops-kp-123"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未合理审慎审查产品宣传数据：未合理审慎审查用于产品宣传的数据，可能被认定为未充分履行谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-124"
+    },
+    {
+      "category": "pitfalls",
+      "text": "文件签署时间不符合规则要求：基金合同签署日期早于风险测评问卷签署日期，或资产证明调取时间晚于基金合同签署日期，可能被认定为违规。",
+      "kpId": "fin-fund-ops-kp-125"
+    },
+    {
+      "category": "pitfalls",
+      "text": "回访确认函与基金合同签署及认购款缴纳为同一天：未留足至少24小时冷静期，可能被认定为违规。",
+      "kpId": "fin-fund-ops-kp-126"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未使用私募基金募集结算资金专用账户：未通过专用账户统一归集募集结算资金、分配收益、给付赎回款项及分配清算后剩余财产，可能违反资金管理要求。",
+      "kpId": "fin-fund-ops-kp-127"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未妥善保存档案：与投资决策、交易、投资者适当性管理等相关的资料保存期限少于10年，风险揭示相关录音录像资料保存期限少于20年，可能被采取监管措施或纪律处分。",
+      "kpId": "fin-fund-ops-kp-128"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未取得基金从业资格从事信息披露工作：聘用无基金从业资格人员从事信息披露工作，被视为内部控制缺失。",
+      "kpId": "fin-fund-ops-kp-129"
+    },
+    {
+      "category": "pitfalls",
+      "text": "内部培训内容不规范：培训内容不规范，可能被认定为未尽谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-130"
+    },
+    {
+      "category": "pitfalls",
+      "text": "员工通过自媒体发表不当言论：员工通过自媒体公众号贬低行业其他机构或向不特定对象宣传产品，管理人未有效监督，可能被认定为未履行谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-131"
+    },
+    {
+      "category": "pitfalls",
+      "text": "合规风控负责人从事投资管理业务：合规风控负责人实际担任投资职务并从事投资工作，可能被认定为虚假填报高管登记信息。",
+      "kpId": "fin-fund-ops-kp-132"
+    },
+    {
+      "category": "pitfalls",
+      "text": "管理人及其法定代表人被列为失信被执行人：被视为经营管理失控的表现之一。",
+      "kpId": "fin-fund-ops-kp-133"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按照公司制度要求制作保存投资交易指令的风控审核确认单：未按照《内部交易记录制度》要求执行，可能被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-134"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按照公司制度要求进行日终报告：未按照《公平交易制度》要求执行，可能被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-135"
+    },
+    {
+      "category": "pitfalls",
+      "text": "内控制度不健全：未制定完善的内控制度，可能被实施纪律处分。",
+      "kpId": "fin-fund-ops-kp-136"
+    },
+    {
+      "category": "pitfalls",
+      "text": "将基金财产用于对外借款：借款余额明显超过基金实缴金额的20%，违反不得将私募基金财产用于借贷等非私募基金投资活动的规定。",
+      "kpId": "fin-fund-ops-kp-137"
+    },
+    {
+      "category": "pitfalls",
+      "text": "基金用于购买商业承兑汇票：被认为实际从事了商业承兑汇票等非私募股权基金管理业务。",
+      "kpId": "fin-fund-ops-kp-138"
+    },
+    {
+      "category": "pitfalls",
+      "text": "私募证券投资基金管理人投资公司股权：被认定为违反专业化经营要求。",
+      "kpId": "fin-fund-ops-kp-139"
+    },
+    {
+      "category": "pitfalls",
+      "text": "通过关联方认购产品份额最终投向指定债券：被认定为违反专业化经营要求。",
+      "kpId": "fin-fund-ops-kp-140"
+    },
+    {
+      "category": "pitfalls",
+      "text": "为其他私募基金管理人介绍客户并收取费用：综合其他违规行为被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-141"
+    },
+    {
+      "category": "pitfalls",
+      "text": "仅根据划款指令进行划款：不实际参与私募基金的募集、投资、管理和退出，被认定为未履行勤勉尽责义务。",
+      "kpId": "fin-fund-ops-kp-142"
+    },
+    {
+      "category": "pitfalls",
+      "text": "双执行事务合伙人架构下职责赋予不当：将投资管理以外的过多职责赋予不担任管理人的执行事务合伙人，可能导致管理人无法控制风险敞口。",
+      "kpId": "fin-fund-ops-kp-143"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未在募集完毕后20个工作日内备案：即使后续完成备案，仍可能因违规被处分。",
+      "kpId": "fin-fund-ops-kp-144"
+    },
+    {
+      "category": "pitfalls",
+      "text": "通过朋友圈宣传私募基金：未履行特定对象确定程序，属于公开宣传。",
+      "kpId": "fin-fund-ops-kp-145"
+    },
+    {
+      "category": "pitfalls",
+      "text": "官网基金产品页面未设置在线特定对象确定程序：公开宣传包含项目名称、投资方向和投资进展等内容的私募基金信息，属于公开宣传。",
+      "kpId": "fin-fund-ops-kp-146"
+    },
+    {
+      "category": "pitfalls",
+      "text": "通过微信公众号向不特定对象宣传推介基金：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-147"
+    },
+    {
+      "category": "pitfalls",
+      "text": "通过即时通讯工具承诺保本保收益：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-148"
+    },
+    {
+      "category": "pitfalls",
+      "text": "在招募说明书中使用“为投资人带来稳定回报”等表述：可能导致投资者不能正确认识私募基金风险，被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-149"
+    },
+    {
+      "category": "pitfalls",
+      "text": "部分投资者未提供资产证明文件：被视为未充分履行投资者适当性义务。",
+      "kpId": "fin-fund-ops-kp-150"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未通过录音录像等方式揭示规定信息：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-151"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未按规定穿透核查最终投资者是否为合格投资者：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-152"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未制定明确产品分级的具体依据、方法、流程等制度：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-153"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未制定客户回访检查、评估与销售隔离等风控制度：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-154"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未制定培训考核、执业规范、监督问责等制度机制：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-155"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未制定投资者适当性档案管理制度：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-156"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未建立投资者评估数据库并及时更新：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-157"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未在基金合同签署前审慎核查投资者的资产证明文件或收入证明：被认为未执行合格投资者确认程序。",
+      "kpId": "fin-fund-ops-kp-158"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未要求部分投资者提供符合规定的收入或资产证明：被认为未履行诚实信用、谨慎勤勉的义务。",
+      "kpId": "fin-fund-ops-kp-159"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未谨慎勤勉核查部分基金产品投资者资金来源：被认为未履行诚实信用、谨慎勤勉的义务。",
+      "kpId": "fin-fund-ops-kp-160"
+    },
+    {
+      "category": "pitfalls",
+      "text": "风险测评不准确：部分投资者风险测评结果不准确，部分投资者风险测评文件未勾选对应的风险承受能力等级，被基金业协会处分。",
+      "kpId": "fin-fund-ops-kp-161"
+    },
+    {
+      "category": "pitfalls",
+      "text": "风险测评问卷选项附带分值：构成对投资者风险测评进行提示、诱导，被基金业协会处分。",
+      "kpId": "fin-fund-ops-kp-162"
+    },
+    {
+      "category": "pitfalls",
+      "text": "基金风险测评问卷中试题选项均附带分值：且附有《风险承受能力评分表》和《自然人客户风险承受能力划分标准对照表》，构成诱导投资者进行适当性风险测评。",
+      "kpId": "fin-fund-ops-kp-163"
+    },
+    {
+      "category": "pitfalls",
+      "text": "委托不具有基金销售业务资格的单位或个人从事资金募集活动：构成在适当性管理过程中未勤勉尽责、审慎履职。",
+      "kpId": "fin-fund-ops-kp-164"
+    },
+    {
+      "category": "pitfalls",
+      "text": "委托他人制作、收集部分投资者适当性材料：构成在适当性管理过程中未勤勉尽责、审慎履职。",
+      "kpId": "fin-fund-ops-kp-165"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未向投资者披露特殊目的载体相关的投资架构并揭示相关风险：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-166"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对部分投资者妥善落实投资冷静期制度：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-167"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对投资者设置投资冷静期并进行回访确认：被采取行政监管措施。",
+      "kpId": "fin-fund-ops-kp-168"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对投资者进行冷静期回访：被基金业协会实施纪律处分。",
+      "kpId": "fin-fund-ops-kp-169"
+    },
+    {
+      "category": "pitfalls",
+      "text": "基金合同封面、冷静期确认书、回访确认书等材料使用的基金名称与备案名称不符合：被认为基金备案信息不准确。",
+      "kpId": "fin-fund-ops-kp-170"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未合理审慎地审查用于产品宣传的相关数据：被认为未充分履行谨慎勤勉义务。",
+      "kpId": "fin-fund-ops-kp-171"
+    },
+    {
+      "category": "pitfalls",
+      "text": "基金合同签署日期早于风险测评问卷签署日期：被视为未落实投资者适当性管理要求。",
+      "kpId": "fin-fund-ops-kp-172"
+    },
+    {
+      "category": "pitfalls",
+      "text": "资产证明调取时间晚于基金合同签署日期：被视为未妥善履行投资者适当性审查义务。",
+      "kpId": "fin-fund-ops-kp-173"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投资者回访确认函与基金合同签署及基金认购款缴纳为同一天：被认为存在未留足至少24小时冷静期的情形。",
+      "kpId": "fin-fund-ops-kp-174"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未使用私募基金募集结算资金专用账户统一归集资金：可能违反资金管理要求。",
+      "kpId": "fin-fund-ops-kp-175"
+    }
+  ],
+  "sources": [
+    {
+      "postId": "8092feeef2738aa7",
+      "title": "劳动托起百姓理财之梦 —— 一名基金运营人的“日常”和“非常”",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792315824&ver=1&signature=CjWCAtHqTsTOua6mTOpcEP38huOk9Hf3kmeIAGj6if3NSzGGjPSg6UGInHl7eybkWeOgpB7Mnd1yqmPdklW6DDlf6Xx1Danzvlj-1m8iIhallS8Ozy7JParOWvPHzod9J1MoFjRzPlnZHcqnDpOW1SErIT4FMGgQ0RISnyJL78Q="
+    },
+    {
+      "postId": "babf455401630f94",
+      "title": "管理篇  |  私募基金日常运营义务及投后管理",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315824&ver=7034&signature=D0wuOxF9FOXSYL2QiKb-rZe-x0zKMlkMvuXAaArZHn6cqmhYEobb8N11uXVCfaljOlSVrnezAmczaIZ3ApGw737HiDNpuLRVewzfkuQvEF0qwCIZfeLlOi6h6SNJkTP8&new=1"
+    },
+    {
+      "postId": "3beaee5d5a4412e2",
+      "title": "实务 | 私募基金管理人进行日常运营及从事私募基金管理注意事项",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315824&ver=7034&signature=urTJsbqYs8sqouYP4I28MMt3pfHgTVu3jvbQfUbUjAC2gU-69EoPKVPLsI8PGSnLU1yrO2OfHCnRJXgJ-6ydfbJxRd4gwCOa5aQcRMaN2zJW6L753*znj6lp7SuhcXC0&new=1"
+    },
+    {
+      "postId": "ed44211b778d65c1",
+      "title": "私募基金管理人日常合规运营手册",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315824&ver=7034&signature=8EQ9U5m5HBwh5FNzrigi26yWiE4EeRMhlD9BLDSrQoBXrojEqc0b5FfhtFfAJ1LM*9zz9h9brVEoGx6pbUek*6C3wBn5PovGTb8T*tcNRH50EIS4x-HRB0*xzDOKCG4v&new=1"
+    },
+    {
+      "postId": "7d312dade0c2978f",
+      "title": "私募基金管理人进行日常运营及从事私募基金管理注意事项",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315824&ver=7034&signature=EgVeiAC5sOsA7Ej-eXZF70aGcGszkIlgRJtAxLK6xBDzZFA2w-AKfHoOUovVlW7ikMmCo1HbMOVUuWgcWL1ejHmgK-yJA6CVvicZUyzFUzf4LZKQeWleVTB9hTtvobA3&new=1"
+    },
+    {
+      "postId": "e35216af2ee1e37f",
+      "title": "智能化运营——博时基金运营创新探索与实践",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792315824&ver=1&signature=VQROeRCfymrCdSrdOTB*WmREIrVGTHwk5kH5Bg7NuWDek7e2R4S0aTJIQKXKmJd3veRj*eAdhJLFlan0*iltvkumadyfwhgZQTjBe9ueWF5v*kPadmFVLU*AIrfjD0Pc-AUDhSz3EimZ1VsJPSM*AEOQ3I*aelUUTcW7s7Fg0-A="
+    },
+    {
+      "postId": "9569640f78a636f8",
+      "title": "产业投资基金运作模式",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315824&ver=7034&signature=2sbmofO5wVAnI8*ArlEZl*zDXxp32beuAm085Awjyah*r1Z4Iy02zfn8s8adiLNhLkLRzEaiumAB5TrrQB5PNVu*HsyxIFD77wCjoFY*lgUCWSb3ONv5oYyeRYLctyPK&new=1"
+    },
+    {
+      "postId": "8326513d554e317c",
+      "title": "产业基金的设计和运作模式分析",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315874&ver=7034&signature=5iExzedMlKOuvY4xyLOWTUVBLJK3XkES86T*1ihXzaRuYh0pjkbZVX0kqZ7AZkGgePIFwdEpfZbcxCsSL-RFWF7B7MF2a1g0hlgr8mqgQTzTwqoxtI70t52nXGAJi2kd&new=1"
+    },
+    {
+      "postId": "c19a203d6d47e059",
+      "title": "职业年金基金是如何运营的？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315874&ver=7034&signature=8Cf0ydbNltiLO4I5FKio8rcyzmJWtLJ4ra1dEDprr0PsZxHEJbZL6*x6ffz*seeEQv*C3aKvmzC*fgupoP2JKeNZezKGGamOfeniAaCm1EiySKj7fMHsVER-CpuBzgEy&new=1"
+    },
+    {
+      "postId": "b5ec8dc1b543a9d8",
+      "title": "私募基金的双GP(管理人)的模式、运营及风险分析",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315874&ver=7034&signature=NjWugiBo7ryA5KZMh9qliDH4Q4P2JV8UFqhjXL44sHklAFS*Qfn9-v2NTIMTN1yUE*5OpLkVRcJBVHU5PyqT*rcuSUT0leoCKFO8D2WFqc4JljMkgYDAyXSI8ul7hFt-&new=1"
+    },
+    {
+      "postId": "54b996b45557e41b",
+      "title": "实务 | 私募基金管理人进行日常运营及从事私募基金管理注意事项",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315874&ver=7034&signature=urTJsbqYs8sqouYP4I28MMt3pfHgTVu3jvbQfUbUjAC2gU-69EoPKVPLsI8PGSnLewWeh9vNqiZ-3T0HXkQVOkAdSrJshyuMoFoPfGOKThSVNQzJkQ4ocUn58wSKxcrs&new=1"
+    },
+    {
+      "postId": "170ae854ccec896a",
+      "title": "私募动态 |  基金申请备案，被中基协“劝退”的原因汇总",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315910&ver=7034&signature=oiGc85DS3F9DyqNKoV-o9YDRe4ez3-zckxaRTrg0UWu6xxMj7ZlXaBM7xxOfkhDFxgmsv9fjsq4P0u*PPupVEBn-0Z*xxJTgV2lcU8i4BDddqFVPpb6uIRiEcmq54wb4&new=1"
+    },
+    {
+      "postId": "50e913f8bbfa1753",
+      "title": "基金出圈背后的高光与隐忧",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315910&ver=7034&signature=IpAdtwEDRyf2sFmYKdiacJ4WdBmMIAbPLe0ih4aItcwJ3GkrVVHF8U9GV4fFsWLvmCcqRj7gaQUExhhVDJVwaEC*Bte8Lw2HVBuykPDZAu00BKej8LSQJuf6PJSKjGeK&new=1"
+    },
+    {
+      "postId": "605656cff580cf9e",
+      "title": "趋势：指数基金如何做大做强？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315960&ver=7034&signature=q3od*LL25Q409Ed0Ieg6QlP3JvLO0aUvLSw0ztfeejliEaNqdmVK-767VqAxXggQ*04umIk--9tcvT09gN3ouQmd17VSDIGtISRP9gRI8GgM8jF8YiFld9BeIt-VIZVw&new=1"
+    },
+    {
+      "postId": "f4e89f6e82b5b721",
+      "title": "又是东北母基金，200亿",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315960&ver=7034&signature=Gr*jYBR3yruX8ZmJ1wJm6k7U3UXuWqeI0TNY94JDPF9NeOr7mojG063lMvzppcsy11yohJ3xmR6W0zzpBZKnd3XoULaaOyEr8T4zLDN5OV30fiCZmwEJHKM4fwzBFjRr&new=1"
+    },
+    {
+      "postId": "84d7ec60451489ba",
+      "title": "我去县城募资，被劝退了",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315960&ver=7034&signature=a8qSdMogXFugAeZRTK6BNwyhad8k9bGJknEGOhpY7-uloGTcFGlV6pCQAfCogQ80SpvV-ANOog8-7mRkn-DvcJJGs26CnCATBXmXnbdXJre5vCj5jeGwbqrhwdsC*Tga&new=1"
+    },
+    {
+      "postId": "8244e00ddaf2c9b8",
+      "title": "【政府会计】社会保险基金会计核算体系优化研究| 哲研究",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315997&ver=7034&signature=UNLeTQoYBlKL7eG6ayZ6pzMzbCv24v2qzCC5--k8P-kjHyUHOQ0ny48PQHKZGCsbBAPmVLvAEr1PWYOkiqILHZW2Ja-Jpg5AuJ*I5ti*SZGuPqi*nfRfSF*w9sV9FafO&new=1"
+    },
+    {
+      "postId": "9062b0c54b452546",
+      "title": "社招｜景顺长城基金｜渠道销售岗、基金会计、资深大数据开发工程师等",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315997&ver=7034&signature=GqRQyBUO3qdz*nreRE6IU-4OlEGA4IF6IDjxbO3yO1P35HdLeO6dL72OdrchUOwa8F*iaysPbDE64WRTi8xcPVjFTYCoSzRCFLzAwvwOA7H*Z4n-aW03Gk90YBoy2VNy&new=1"
+    },
+    {
+      "postId": "4098579fff6c9619",
+      "title": "社招推送：1-3年相关经验，基金会计岗（景顺长城），深圳。",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315997&ver=7034&signature=ttkcaVqp8ucPDLERqNq7LpWhln58eLcrawAWMQDktGS1O81sSy5qi6neV0iKgszUTf9I5WA2vOSoonFfVIJtIE9g*Unue8wIqpQ5eAJ4CrK2b3-0MtTsILdyTSvewDxt&new=1"
+    },
+    {
+      "postId": "40a3c9de695b54e5",
+      "title": "机关事业单位会计必知：职业年金基金相关业务会计处理规定财政部详答",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315997&ver=7034&signature=UAP*LwxI3gMhXToYQgx*NEjQoZpyRcOvnrgC9mlBzp65-1fipI9BxQTbwMkxN7ghTG6PpVJA50DnD0iQGfw1xiYZx1Dvp1RBv*fbv9P1cPRE79OAp78ORMaO1Yw-bjGr&new=1"
+    },
+    {
+      "postId": "fd4cfb9f9e99c9f3",
+      "title": "财政部会计司有关负责人就印发《〈社会保险基金会计制度〉补充规定》答记者问",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315997&ver=7034&signature=CZufnUYxoCpU8qka-KwJJVLs14eHSLuo4CY*6zdEenGOZzQMWZMzXI4dByHxjBbIsV*NGiQGrnezfKq5mjl44XPDVxHtFiJ40XR3BsPJRr2uudhZlK0oOvgHEmsfZXtg&new=1"
+    },
+    {
+      "postId": "31311ad2b109ca3c",
+      "title": "【会计管理】2023年私募基金管理人和上市公司年度财务报告需经证券备案的事务所审计",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792315997&ver=7034&signature=h1MCXYUmo4taqfm9Jmg4hNZQYXxObR*YDN8vGV23nrEeafGca1xPOc7pKNw3zPLPgNe2lg72BaFiXCBukIqmRraPgyaZR7OZJIi2JMMEXwPAmFIR4kIrLOElSiUOpsZE&new=1"
+    },
+    {
+      "postId": "be5f77aa6ca22a00",
+      "title": "职位推送：2年以上相关经验，基金会计（估值核算方向）（民生加银基金），深圳。",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316047&ver=7034&signature=ttkcaVqp8ucPDLERqNq7LpWhln58eLcrawAWMQDktGRxPcuwwe39h6hnK7VsTRi6t7WvWkhjYeLQTf1fDPDTP4uFIB3rf1ouLVek7g1lKrWwdElVgxG-t9aOEDfV10kr&new=1"
+    },
+    {
+      "postId": "731c4788b1e834e1",
+      "title": "强化基金财务管控　保障基金稳健运行",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316047&ver=7034&signature=GgEZPxecBOzRcn61CNfzZv4b8NpgjHZS47vLbH0K03aTQqa9ArwLwgFYEnxAm*MpUBNVq53YhqhTgpVevgT7LnoYTHY8NqYZ7GRnU8q82aizcdaItZYafyU5VjQUNIU8&new=1"
+    },
+    {
+      "postId": "353e686739a19a77",
+      "title": "自杀的工银瑞信女员工是名基金会计，基金会计为何物？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316047&ver=7034&signature=YEs3NX1eLL3-MzAWapz7fM8QKj--oi-wKf6JLJPM1C7oA10FngA3YuafIjCZpBsg1UJ5UdiDw3j9xpVOnYrARZIobDQ-SFmfTd50Idihz2w3qsIelzN9F3pLYmhw6pBO&new=1"
+    },
+    {
+      "postId": "ddbbf01e77ee2a18",
+      "title": "罕见公募集体加班！基金申赎暴增，运营部连续多日加班，快进快赎，基金经理直呼管理难度加大",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316082&ver=7034&signature=QXch5BSkXUPVZYImcTUmXxu1wwTSl6KqbcsEP828yQ0P1iWhlrZWk-TaQCAf2F6bN2gwND11EvadCZj7Q8rKlIOeeKmuNirrjYoiYQMiOs0pyohyNf4NkQwSvgL738yt&new=1"
+    },
+    {
+      "postId": "eb78414ef49abec6",
+      "title": "众志成城，基金运营顶住疫情大考",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316082&ver=7034&signature=ywQFIsRlm5UMyKNNVkwFs7NmhQEZV7bMpn8beW16nuDPeOzAj4OQvl9q-ICIxJqnz4nnkgUyx9m3rweWBaVQjHeYJ8eQaCKUs3k7V6vcP0Re*HqzVdWoAWOydoDatUQZ&new=1"
+    },
+    {
+      "postId": "cbf4a0409c5207db",
+      "title": "深夜惊魂！蚂蚁财富一个“抖动”，基金公司清算部门凌晨3点下班…急涨急跌引发频繁交易？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316082&ver=7034&signature=k*EsZWcnox9Cp5qi6NW78Hb9IWu8bqF6jnnXz5eykwqdlkky12Ltl99fxo*to1rtzHfnOQon6WbM0eZky888xug3nQP1myVNl5S1yuBXtSVF*76LjRZedVOEe2uMk-l*&new=1"
+    },
+    {
+      "postId": "97faad0d1458005d",
+      "title": "实习|纽尔利资本、凯晟南山私募股权投资基金、天图投资、松杉资本等机构招聘公告",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316082&ver=7034&signature=4PekTLD6*G2K59dQz4ANTxbi*whMKMK8Z4VjVzApgktGAGmt1ymWghrOFpg544yYt5cxvI*5y6Y5du7CTg8Eaun0-szF5byqZevbWPTkWX4-tSvxjxM2NyWnrUaq0YLk&new=1"
+    },
+    {
+      "postId": "bd7479c9f772674d",
+      "title": "基金后台性价比最高的四个岗位",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316082&ver=7034&signature=CoO9jpQKj8E0bF-klQEYKGHh4rkvg1nH9QjNgqjdrdFvKIfl-y*P6wCaWarUoNbzcJgXwa2ZbH234a5vcUqNSFW1pBqj9hvSpU5jx8mzQVhpC5ubrw4Hovnww*Gl*z9B&new=1"
+    },
+    {
+      "postId": "e3c3fd8bb3193a4c",
+      "title": "10.14北上实习｜嘉实基金/百度/清华大学出版社外语分社/热雪奇迹/辉瑞/Lenovo/国投证券/怡安WNESS/小红书.......",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316133&ver=7034&signature=Cytk96tTKLe2gOIQYYfnsZQkLVkwX7xfhP*9ieuKaEfB06czBAciDTwuCZ3Urff11si3HEieuBg5ZYA5GdJQe5UYX7WKJYt-v24IndPI*We50*seh3583TT9MrK0qwsW&new=1"
+    },
+    {
+      "postId": "a3c986bfec04913f",
+      "title": "凌晨4点还在加班！独角兽基金开售:有人一口气买50万,银行基金券商周末无休",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792316133&ver=7034&signature=k*EsZWcnox9Cp5qi6NW78Hb9IWu8bqF6jnnXz5eykwq1bRw5CXehiPSoOuf6H38MwZQa0qO9HRUhhaTRkXXTxs6nNlnjMDWvG23QthOAiHrINfLLS59KbKHA0aClqQCO&new=1"
+    }
+  ]
+}

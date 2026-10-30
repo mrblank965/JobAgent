@@ -1,0 +1,181 @@
+{
+  "status": "indexed",
+  "positionId": "fin-fintech-risk",
+  "positionName": "金融风控",
+  "aliases": [
+    "风控策略",
+    "信贷风控",
+    "风险分析师",
+    "风控建模"
+  ],
+  "vectorStore": "keyword-inverted",
+  "points": [
+    {
+      "category": "coreDuties",
+      "text": "识别客户欺诈与信用风险，设计风控规则，覆盖贷前准入、授信额度、贷中交易监控、贷后风险预警全流程。",
+      "kpId": "fin-fintech-risk-kp-001"
+    },
+    {
+      "category": "coreDuties",
+      "text": "上线策略之后持续跟踪逾期、拒绝率、客群表现等核心指标，当指标出现异动时复盘策略效果并迭代优化，输出风险分析报告。",
+      "kpId": "fin-fintech-risk-kp-002"
+    },
+    {
+      "category": "coreDuties",
+      "text": "大量读取业务数据，整理风险指标，制作监控看板，和产品、业务、风控模型团队协同落地风控方案。",
+      "kpId": "fin-fintech-risk-kp-003"
+    },
+    {
+      "category": "coreDuties",
+      "text": "定义目标变量（good/bad），通过迁徙率分析确定逾期天数阈值，通过观察期分析（elbow method）确定合理的观察期。",
+      "kpId": "fin-fintech-risk-kp-004"
+    },
+    {
+      "category": "coreDuties",
+      "text": "构建和挖掘特征，包括基于RFM-V框架的特征构建、WOE变换、Vintage分析等。",
+      "kpId": "fin-fintech-risk-kp-005"
+    },
+    {
+      "category": "coreDuties",
+      "text": "开发和维护风控模型，增强模型稳健性，使用AUC、KS等指标评价模型性能。",
+      "kpId": "fin-fintech-risk-kp-006"
+    },
+    {
+      "category": "coreDuties",
+      "text": "应对冒名顶替、多头借贷、POS机套现、针对风控模型的欺诈等常见风险，采取多维度交叉验证、活体检测升级、设备指纹、行为序列分析、无监督学习等风控对抗手段。",
+      "kpId": "fin-fintech-risk-kp-007"
+    },
+    {
+      "category": "workflow",
+      "text": "定义目标变量：通过迁徙率分析确定逾期天数阈值（如逾期90天以上定义为bad），通过观察期分析（elbow method）确定合理的观察期（如6个月）。",
+      "kpId": "fin-fintech-risk-kp-008"
+    },
+    {
+      "category": "workflow",
+      "text": "特征构建：基于RFM-V框架构建特征，进行WOE变换将非线性特征转换为线性特征，使用Vintage分析辅助构建特征。",
+      "kpId": "fin-fintech-risk-kp-009"
+    },
+    {
+      "category": "workflow",
+      "text": "模型开发与稳健性增强：对泛线性模型进行分箱处理以增强稳定性，对基于树的模型使用RandomForest、XGBoost等防止过拟合，使用SMOTE方法对bad部分进行upsample，使用统计特征（如Z-Score）代表实际值。",
+      "kpId": "fin-fintech-risk-kp-010"
+    },
+    {
+      "category": "workflow",
+      "text": "模型评价：使用AUC、KS值等指标评估模型区分度。",
+      "kpId": "fin-fintech-risk-kp-011"
+    },
+    {
+      "category": "workflow",
+      "text": "策略上线与监控：上线准入规则、额度策略、贷后预警方案后，持续用数据监控坏账、通过率等指标变化，指标异动时复盘策略效果并迭代优化。",
+      "kpId": "fin-fintech-risk-kp-012"
+    },
+    {
+      "category": "workflow",
+      "text": "跨部门协同：与产品、业务、风控模型团队协同落地风控方案，同步策略调整方案和风险监测结果。",
+      "kpId": "fin-fintech-risk-kp-013"
+    },
+    {
+      "category": "tools",
+      "text": "Excel：用于指标测算、客群分层统计、策略效果复盘、周报月报输出，重点掌握数据透视表、VLOOKUP、SUMIFS等统计查找函数、动态指标看板。",
+      "kpId": "fin-fintech-risk-kp-014"
+    },
+    {
+      "category": "tools",
+      "text": "SQL：用于从业务数据库提取用户申请、还款、交易明细数据，掌握基础查询、多表关联、分组聚合。",
+      "kpId": "fin-fintech-risk-kp-015"
+    },
+    {
+      "category": "tools",
+      "text": "建模工具：逻辑回归评分卡、决策树、RandomForest、XGBoost等。",
+      "kpId": "fin-fintech-risk-kp-016"
+    },
+    {
+      "category": "tools",
+      "text": "WOE变换、Vintage分析、迁徙率分析、elbow method等分析方法。",
+      "kpId": "fin-fintech-risk-kp-017"
+    },
+    {
+      "category": "tools",
+      "text": "设备指纹、活体检测、行为序列分析、无监督学习等风控对抗技术。",
+      "kpId": "fin-fintech-risk-kp-018"
+    },
+    {
+      "category": "tools",
+      "text": "CDA数据分析师认证（作为能力补充的加分项）。",
+      "kpId": "fin-fintech-risk-kp-019"
+    },
+    {
+      "category": "typicalDay",
+      "text": "风控策略岗位日常高频产出策略报表、指标监控、客群分层测算，大量策略复盘、指标测算工作依靠Excel完成。需要用SQL从业务数据库提取客户、交易、逾期等原始业务数据，拿到数据后导出做指标分析。策略上线之后持续跟踪逾期、拒绝率、客群表现等核心指标，当指标出现异动时逐层拆解风险上涨或下降的原因，区分是渠道客群变化、策略调整还是外部市场因素带来的波动，给出对应的策略调整思路，并输出风险分析报告。同时需要跨部门同步策略调整方案、风险监测结果，与产品、业务、风控模型团队协同落地风控方案。作为风控领域的数据科学家，写机器学习代码的时间占日常工作时间不到十分之一，更多面对的是算法之外的挑战，如定义目标变量、特征构建、模型稳健性增强等。",
+      "kpId": "fin-fintech-risk-kp-020"
+    },
+    {
+      "category": "pitfalls",
+      "text": "刚入行的人容易对风控术语理解不够透彻，导致在分析报表、设计策略时踩坑。",
+      "kpId": "fin-fintech-risk-kp-021"
+    },
+    {
+      "category": "pitfalls",
+      "text": "多头借贷不一定全是欺诈，但一定是风险预警信号；对于多头但无逾期的用户，可适当降低额度或提高利率，而非一刀切拒绝。",
+      "kpId": "fin-fintech-risk-kp-022"
+    },
+    {
+      "category": "pitfalls",
+      "text": "定义目标变量时，逾期天数阈值和观察期的选择需要平衡坏账最小化与催收体验，观察期太短会漏抓客户，太长则逾期客户无人处理会持续恶化。",
+      "kpId": "fin-fintech-risk-kp-023"
+    },
+    {
+      "category": "pitfalls",
+      "text": "仅看AUC对不平衡数据且bad rate有变化的数据容易失真，需要结合KS值等其他指标参考。",
+      "kpId": "fin-fintech-risk-kp-024"
+    },
+    {
+      "category": "pitfalls",
+      "text": "数学专业应届生容易直接投入模型算法学习，忽略企业校招风控策略岗的真实工作流程；风控策略岗位不是模型算法岗，核心产出是可落地的准入规则、额度策略、贷后预警方案，工具实操能力是简历筛选和面试的基础门槛。",
+      "kpId": "fin-fintech-risk-kp-025"
+    },
+    {
+      "category": "pitfalls",
+      "text": "零基础自学SQL不需要学到写复杂窗口函数的高阶难度，掌握基础查询、多表关联、分组统计即可满足校招风控策略岗位的取数需求。",
+      "kpId": "fin-fintech-risk-kp-026"
+    },
+    {
+      "category": "pitfalls",
+      "text": "校招风控策略岗位不强制要求独立搭建评分卡模型，建模属于加分项，应优先把Excel指标复盘、SQL取数能力练扎实，不要颠倒准备顺序。",
+      "kpId": "fin-fintech-risk-kp-027"
+    },
+    {
+      "category": "pitfalls",
+      "text": "被银行风控后不要反复尝试转账、频繁刷新操作，系统会判定为高危对抗行为，直接升级风控等级；不要轻信代办解封、内部解控，所有代办解封都是诈骗。",
+      "kpId": "fin-fintech-risk-kp-028"
+    }
+  ],
+  "sources": [
+    {
+      "postId": "1caa8f6c5b9f966c",
+      "title": "金融风控常见风险：冒名顶替、多头借贷、POS机套现",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318501&ver=7034&signature=lkmxkhLy9NKT0FvL0bXWUalNCM0gjqccq2Kv1bYj-M17HYYCAy6HO*RAGRMvPFnqEsh7aS0NAtVv9uGsrC41rgljv*fRAFYBwqU5ooGcgaELhcI4j9wxSruJ*zA3REWm&new=1"
+    },
+    {
+      "postId": "6cfa9fb95ec24c13",
+      "title": "2026银行风控严查这10种日常行为",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318501&ver=7034&signature=iuyou-IZW9FIeSrM-em4aveY4h3srDGzp-SDwIfY0Ab*nT4B82qi7OLg3MhoJ3QHom0lIOWgmiKhnsd-IJYAquyVHJz00pFH8aSEBwyH-sh6kq7A5*TmEzOri95BRFKF&new=1"
+    },
+    {
+      "postId": "43f0f27a0912ed7d",
+      "title": "【对话风控官】汽车金融公司与风险管理——对话知名外资汽车金融公司风控官Monica Cai",
+      "url": "https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6ft3wfAVofsP5Peu-UiA4DHRaKaQZrbc63_jSvZvPOL2VgrFeYQugDnM7lp6TzSrcPHW-e-tvxfQESqgnb2f0uZN5FdSGWXsuT70tPmG6008pgPKH6onjumia1N8dL8rO4QM7GC1Byl6cfJRoIhGuKmF4P2ZXq0brcXwKjjfjNlW4wnT_9xMo-Z7QR1tj6RVjNhRCDThG94QRRfEzuzjPYzYVQmElPLaQM8vtEoybR6Yz2oaNh4w6OrmlGpDhynUfmcRBTGpCTAPUKNAwv3pDOAnGgte7WXxWiZqwg0yoRFw.%26type%3D2%26query%3D%E9%87%91%E8%9E%8D%E9%A3%8E%E6%8E%A7%E6%97%A5%E5%B8%B8%26token%3D3B89A712EDD0589AA0A7FEB59EFE8019A1DFA4656AD49C25"
+    },
+    {
+      "postId": "70616672338a4435",
+      "title": "实际风控工作中的五大挑战！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318626&ver=7034&signature=TVOWLjl1H38xorhSC-evj0RJsz4Cjip8Sfm7oV19vnLBmIMEA5MVjox1xp0MltcNGJhFaLc*MeZ4I9TkXpl23leRpzjezmvltKMkrPvOYkCYB46cFPDlRXRRRr8zg7um&new=1"
+    },
+    {
+      "postId": "c8c4fad4e6b7eff3",
+      "title": "2027秋招｜数学与应用数学投风控策略，SQL、Excel、建模先补哪一个",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792318626&ver=7034&signature=iaItFk2FQiV0JECzlE-zZWks-hrbVW8Yt6z1ADcSTvSLNE7wnpBozzdtVybdSbxyFrUAv-vR61lVDsDoyg8II4GX71dYp-OY5*XpEdZGmDx8jy3Efa4hCMojblPnv5uc&new=1"
+    }
+  ]
+}

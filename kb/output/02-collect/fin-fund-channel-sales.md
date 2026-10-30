@@ -1,0 +1,807 @@
+# 采集结果 · 公募基金渠道销售（fin-fund-channel-sales）
+
+> 采集 Agent · 2026-10-19 · 关键词 4 个 · 采纳 37 条 · 跳过 40 条
+
+## 关键词命中情况
+
+| 关键词 | 命中 | 采纳 | 备注 |
+| --- | --- | --- | --- |
+| 公募渠道销售日常 | 17 | 15 | — |
+| 基金渠道销售劝退 | 20 | 6 | — |
+| 渠道销售真实工作 | 20 | 11 | — |
+| 公募渠道面试 | 20 | 5 | — |
+
+## 跳过记录
+
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜解密机构与渠道:公募基金市场条线讲座｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2eQeBq7Ly5Qse2akkZVnfS1qXa8Fplpd9bSvJV2PnURVBo0kDdPrZouGtSyWJNfdOTqxdr8A8o_tgTdRfyjhLY7MueRVThIDaQcMBCBhJt41IQYTMXUTY_JWJDU0hKOidgGdqroKboer6Zl7WrsdHWrHNbOSfzcJmqTvCN-O4nAntD5Eja_Tfx_qc6JebtwuiIYEQyMFDDsCTJmCU1UgHwQ..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E6%97%A5%E5%B8%B8&token=46C0C2F8EDD0589AA0A7FEB59EFE8019A1DFA4656AD614BC
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜如何进入公募基金前台类岗位?｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2vKfu9kTA2Xke2akkZVnfS1qXa8Fplpd9bSvJV2PnURVBo0kDdPrZouGtSyWJNfdOTqxdr8A8o_tgTdRfyjhLY63rSV7vZOqsJesf1pJTRIaOd1m7s89EnkNKMjKlNgFu75SgXpI_NB39cDgSzPzzNMHDerIfQO0UZM5MWtz4PY33MuTECeeMoRzxLOPrrNeorFusb1xrIIwCn9lOoZLP2Q..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E6%97%A5%E5%B8%B8&token=46C26FD2EDD0589AA0A7FEB59EFE8019A1DFA4656AD614EF
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜基金渠道销售的困境｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2cqqRtHze-U8e2akkZVnfS1qXa8Fplpd9mz32rMtVlWmOGChBa8FadRGWGdKPJYlKtEFRCnIDfKR7Mi16yyPITxJA4vBFOayLNx7cpre3qe87uKhaFrC2AdHGyTX_2KkIjH2ubkoUGBpZzH8u2Jm1C-WmU4M12gY7TldolQmt9vnNw24Zh5-tQuxpCg0t030XTqF2sXim-wc5eBgmN3LoYQ..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C3EFDDEDD0589AA0A7FEB59EFE8019A1DFA4656AD6151D
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜社招|景顺长城基金|渠道销售岗、基金会计、资深大数据开发工程师等｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2cqqRtHze-U8e2akkZVnfS1qXa8Fplpd90LDSdEpKuYuP5vZM5ITsNAxPDW9N_KJFyS3koxBS3ODIwO7kkYXSYtGNjUpw-LrScF3_l3mZSyal86jv1FMunEQMP4miL3ipw9iEDBQbhMpgGOUMuyy44IhqlVr0bMLYLD143MftJggTmN2Knn6oU7GzKa7n3Ws44qkQH9OYDktQ_LeJW-Rhtg..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C3EFDDEDD0589AA0A7FEB59EFE8019A1DFA4656AD6151D
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜中金:美国共同基金各销售渠道保有量如何｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2cqqRtHze-U8e2akkZVnfS1qXa8Fplpd98DmWG64rGcm7MqSVAObo3IBRLVmvEp7Q3z4uM0fDreQlBrMDPFqWwBlWL1QX67hU7Mn9PyJOOosS2AhWSFKtQA2XTSFr-ozKZql53YdFEjfVDLKKoOUJmq5Gi5vUGh_seyFwn8b-NWwKkME-8As2dWKlJjJRNwOjkRYEsrXl5nwGX_iHL9MadA..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C3EFDDEDD0589AA0A7FEB59EFE8019A1DFA4656AD6151D
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜公募基金传统渠道销售之大变局｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2cqqRtHze-U8e2akkZVnfS1qXa8Fplpd9cPJJWYNb8iSOa0hT4LmvcV4YQONF67fc5L15oBaGigWvQgtElib7So12HC9shLiPtZHZKGE0FTv3PlGFhwDUyfv1LcZ4NXlSiQ7Rk5eF2O95RH3KQVfYr1YcGPA7qNvdK6ye1C8MD5HogAgFAZJCwteL3o_z471Uqb082oKsR2hflztgI7RZ1g..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C3EFDDEDD0589AA0A7FEB59EFE8019A1DFA4656AD6151D
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜基金传统渠道销售之大变局(上)｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2cqqRtHze-U8e2akkZVnfS1qXa8Fplpd9_CHMR1rZ-cHqengoyOB7a_Iyf5LpLt7CjiieeKXzFlZZKqM0a-6QrNYxGt0EFk6grL8WBWwbN5R1d6QJIkCJTtN6unpZLmdT0j8e9OuEt6pGx_Sch0CvlNCg2ldnc8JbTcSaGFZ7WOfT1Cuxq8ylFhcxzTNkAxM1yjLaJznhHFbvzHZXxeLdyg..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C3EFDDEDD0589AA0A7FEB59EFE8019A1DFA4656AD6151D
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜基金理财逐步在线化,传统渠道销售如何突围?｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2cqqRtHze-U8e2akkZVnfS1qXa8Fplpd9cPJJWYNb8iSOa0hT4LmvcV4YQONF67fc5L15oBaGigWvQgtElib7SnS-yKNwBcGb6F_8q4Q46rMNxTlDFTZtb0JZk_urB_rfbeq6O5E2MmqIVWLZIUuAZFcIjwAIZjcZF4rEsy6NpHclZimd3e-l3uAT2BEmksgcTbGrL2diyT-54z_tGSZTqA..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C3EFDDEDD0589AA0A7FEB59EFE8019A1DFA4656AD6151D
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜基金渠道销售 or 证券债承?｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss20qdPqcAUqaYe2akkZVnfS1qXa8Fplpd9-gmb2G58-hDWCLxj_70ha20cGfwHM9-2-Mw1IpDzziNl5IYvJfDruFSDYRh0FbA373RngPWFyBWQ6yNAiOKsB2mV8qF8_rMKtgb7ttF8qUp2SqkmXyErVrwIrBUdjo2qYx4eJXBSdmP7YHBy4IyOKOe7SdOjKQQq0gTNuJzbRibdrgozfSg6bw..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C58A4BEDD0589AA0A7FEB59EFE8019A1DFA4656AD61558
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜【华安金工】群雄逐鹿,公募基金销售渠道之争｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss20qdPqcAUqaYe2akkZVnfS1qXa8Fplpd9hg89gPMr5tVF6zmBIAASAY7vL9GjlTym_YY9S1fAlzkikBmor_j5yZpQe4eFhdwNw9OcnDHqksA8DZjaWrjyxij3JjDHQ3u47J35IZ-H9S6W4bSqycRB9_SfmuMTpMJg1ZJG4n2NBxnUin6yGMiyI3u__kWw6clFOborQBsTYX_FcvUoAZZH7Q..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C58A4BEDD0589AA0A7FEB59EFE8019A1DFA4656AD61558
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜指数基金销售渠道暗战:蚂蚁的流量密码与招行的存量运营｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss20qdPqcAUqaYe2akkZVnfS1qXa8Fplpd9EPP1Vmw7Iq1F_r9kWN3JF19McTQFn2wvmQOj5-1HkTOcOMEXcyb24g_rn-cSi1DuIhdHktzcXv-Vh66628LpgziMvWTho64rQX57_GK6ZJgCNsGlCkzxzwBH2MeObS1fz__S2BBERYNXPQRnhT5V5uAoDQkiI5otZ6cFJESxJ7qE8RsmObDbtQ..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C58A4BEDD0589AA0A7FEB59EFE8019A1DFA4656AD61558
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜社招|蜂巢基金|行研、渠道、机构销售等｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss20qdPqcAUqaYe2akkZVnfS1qXa8Fplpd90LDSdEpKuYuP5vZM5ITsNAxPDW9N_KJFyS3koxBS3ODIwO7kkYXSYsYmsrPO-NKrCJBeTwztSG-M8bZL5rm0kUxSyIFMjrUBXZa6Gn6EcMoGrzdnPvvY-CYWL4PGS1cVz3hWvQZ4LN866O1FS1P3ujiEZ80_0NT0irI2oft_4xNf_71bqkOtiw..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C58A4BEDD0589AA0A7FEB59EFE8019A1DFA4656AD61558
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜偏股基金销售冰点,一个渠道经理的感悟｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss20qdPqcAUqaYe2akkZVnfS1qXa8Fplpd9mz32rMtVlWmOGChBa8FadRGWGdKPJYlKtEFRCnIDfKR7Mi16yyPIT3wjIcv5N_iimqWpJID-gbgofC9ZqaCN8hEBrbeEgbyd1crc7H3KU2lcsd41IvzD6U0BDzeUAJxZ-D5y_EKOTqSHqMsiCd_3lynZW5oA0qoNWuH80IC2E3pj32-j2KiwUw..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C58A4BEDD0589AA0A7FEB59EFE8019A1DFA4656AD61558
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜熊市基金公司渠道营销的一些新变化｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss20qdPqcAUqaYe2akkZVnfS1qXa8Fplpd9mz32rMtVlWmOGChBa8FadRGWGdKPJYlKtEFRCnIDfKR7Mi16yyPIT_XScFZhuUmv7-6N4FPjFZXre4zbhCs942C-ANUFS8hqctvUjx2NkScxCeztyJz-78V0FaffnvOaoZ7IfAihQVrgPrphKiGBRL-EvXClaFOQZtAw3mBzqOVflztgI7RZ1g..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C58A4BEDD0589AA0A7FEB59EFE8019A1DFA4656AD61558
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜​社招|万家基金|渠道销售岗、证券金融销售岗、零售线上运营岗、应用开发岗、行政前台岗｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss20qdPqcAUqaYe2akkZVnfS1qXa8Fplpd90LDSdEpKuYuP5vZM5ITsNAxPDW9N_KJFyS3koxBS3ODIwO7kkYXSYqB4QDImnd3SiZcUI6WkyI5FrOCO5HszLvf_qXQhnP8D-9H6wxx3gsdJFc4tEnmzmFmV0gnA1KlxQmMNg_1CV1HllfkZEenptvJ0RWMcWYJN8wnuqtGxk3SAFV_3u-a3OQ..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C58A4BEDD0589AA0A7FEB59EFE8019A1DFA4656AD61558
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜社招|万家基金|渠道销售岗、证券金融销售岗、应用开发岗、行政前台岗｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss20qdPqcAUqaYe2akkZVnfS1qXa8Fplpd90LDSdEpKuYuP5vZM5ITsNAxPDW9N_KJFyS3koxBS3ODIwO7kkYXSYkxnYzYUMapB_smK3IZMmolbX1fYkC2S00VTFEMEdLP0FOmJuabvlPUdBMzX0MQ_3Uqxb5JWKWdWbP6lWHLDX-rlKv2GTuCYOhqlAQlIr4_dsN_YcN7UFxrYl_Q5RRZQjg..&type=2&query=%E5%9F%BA%E9%87%91%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E5%8A%9D%E9%80%80&token=46C58A4BEDD0589AA0A7FEB59EFE8019A1DFA4656AD61558
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜【思考】渠道销售、直销和BD谁更苦逼｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MzV84R-PNrAe2akkZVnfS1qXa8Fplpd9ObK-oHtD8jmZtF5bx_2jKf1NtJDC_aoIhsnvQC_s4gFGwJUfLKytMQuercOGmvKWFz-lauCAM7D0ToUbJ3sIkW8o0XX7WtIac2YcjKZR6kniNpfWvvQiHpk8p82mPX4CHx-MeRAHcGn39jjysx_QlLV9ii2SDnv4k3dr6HJ2mmV5LU3lqtPw9g..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C7D319EDD0589AA0A7FEB59EFE8019A1DFA4656AD615AC
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜辽宁女娲集团2020年上半年渠道销售工作总结暨下半年工作安排部署会议在大连成功召开｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MzV84R-PNrAe2akkZVnfS1qXa8Fplpd96XTS5SyMVkq2I2jvyNIsQ26E4yed7U3SsJXtXD__5qEdtrwt6GtZ33_LkWtU9623b9LMvl-b7vh-WiCYNYhIdD_19rMmkWjSahPDMnEZqOC-XpAhM42_ioE7aWMnYWTIhWUidUgLjETvaom7pwt47qB-rJQk7wUM1q-GGaCDGtWrCDCayYmfpA..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C7D319EDD0589AA0A7FEB59EFE8019A1DFA4656AD615AC
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜小窗口 大责任——大理销售管理部渠道责任管理工作纪实｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MzV84R-PNrAe2akkZVnfS1qXa8Fplpd9DrihzhqQ-KQR5viIaQ0DatBF5lRY5RhvU6Y3t41jghzclCsWuTB0ppBJ0PJfOIJlC3q37jkupsTPRp45BC5HTOTBZXHB9J8iPV38LaMDLXY5qfH49NuIx8wmlUb8NuQEDq8OE6_pxbj4dW5hF9ZXS4YcOoPzosmYKGkkHKROZEzf3q8uRDTfkw..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C7D319EDD0589AA0A7FEB59EFE8019A1DFA4656AD615AC
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜海丰联安镇利用网络渠道销农产品,打通销售最后一公里｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2HvD2XJm3-xke2akkZVnfS1qXa8Fplpd9hcU1C5twvxiv8FiE-Ij0c5Rc5K2HpKwfQyA7kSwkC5rN8eiTG4gnov2_-q6UgzUX0Bs4Va4I_uVXn4PRXfLqKAH9LCQYd2dUIzfONCPO4YcRlzkAUcPgPtmocTfTsI_2Ib4XciZghKoRu55TtAi-N_OVGchRm3tX77z1dYlgb9Ty08OLTBhW0A..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C948E0EDD0589AA0A7FEB59EFE8019A1DFA4656AD615E5
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜B2B,渠道怎么建?销售,职业怎么做?｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2HvD2XJm3-xke2akkZVnfS1qXa8Fplpd9yOqgjHZJq1Qma65L6J_dxV11D38WL1ZUmkDPoymAaZAcjtBTaVJEk-n8J4LH52ofUiQRX1ON8ZzRWsaXSPJZV5tW-Gv2TYf1EhVTw805lHvLNgFD5uH9KYg4VIltJHI98bZpnf9qkpygpgYqtDqZaA8c-ASy1Hn5x7hMZXbfYQfyPfCoem7FzA..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C948E0EDD0589AA0A7FEB59EFE8019A1DFA4656AD615E5
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜领教:Richard,找当地渠道@全球化销售｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2HvD2XJm3-xke2akkZVnfS1qXa8Fplpd9apugFCy_1sa4CbPJZraaeDO-5cpR6mGR9GIpWV4KjHuYDpVg2UHIlYjaQVfmNqBoBPv4sU69Mq76iad5NEx3S5FY3EjRuDiXZbweHNMjaTGPq5QrR8twa2t9iX83lAJAXe68uC3INLvSGTHZRaA6memlTh56td5yY2L-yl2Su8Wq3X8EKMKOIA..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C948E0EDD0589AA0A7FEB59EFE8019A1DFA4656AD615E5
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜VIVO手机 | 成功背后的真正原因:渠道和营销只是表象!｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2HvD2XJm3-xke2akkZVnfS1qXa8Fplpd9JqsCPDYvDR3kLry3zm43esm7OdzTiZ8BwfeQNeEUvbayUgogkCiIFehI1QsMQ9jwORIyDrvAUDTh3sYxQRIl3M0QV6zb5LNijVRGy5ATR6KHcveKgV47v9OAkfLgd0MSP-sEEXe49FO61NoNGyegThpNm2vxYjRZ4XngWiBeS4lhlgeRt7bSzA..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C948E0EDD0589AA0A7FEB59EFE8019A1DFA4656AD615E5
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜公司召开2022年1季度商务·渠道·招商销售工作会议｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2HvD2XJm3-xke2akkZVnfS1qXa8Fplpd9QxA03Kpqw8fcwqGigLpAPvl6nnHrcE5zwsW4tO9NR425-z0uTXFov0ighPMf376oDlJ2j52sMbucy8wf8OSMK2SWcQFdegA0Z0GO6l39oZhTPygEo9kri5M4pFxCb4a9dbcYMUgCrVcj7MK2oPfSmEdhKt4TwkhKggCdGtb1JnHzAjcIGepUqA..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C948E0EDD0589AA0A7FEB59EFE8019A1DFA4656AD615E5
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜还在地毯式铺量营销?用豆包工作,人群-渠道-资源,跑通高效闭环｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2HvD2XJm3-xke2akkZVnfS1qXa8Fplpd94_igx8Ljv3joxMkY9CF42z1mybNV1NxnP2rvN135l-7X91C1XAmmGtJZi-m57N9aGeNA8HpfMZguNU1IPoMaRMYj-rPZ3lzXkMbOBvUAuDvje78RIlowUXa6EuuwoPX4Z95cAQs2G4Mq80HpbSdphImm8JMURo3NXdjTZC-hnU7I3OTRHYU2og..&type=2&query=%E6%B8%A0%E9%81%93%E9%94%80%E5%94%AE%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C&token=46C948E0EDD0589AA0A7FEB59EFE8019A1DFA4656AD615E5
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜公募基金机构销售适合应届生吗?｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2R3FClCPrDAge2akkZVnfS1qXa8Fplpd9bSvJV2PnURVBo0kDdPrZouGtSyWJNfdOTqxdr8A8o_tgTdRfyjhLY0sCpmhQ0yd_5gbEQmpCnBSJe1ciHWr0twcDkNDrVmvToSAGhX9jd5shKlvYozAqbQ3K4K50D5mZqXpRYhaBgUTiTBwhoHVsK9RruuU7MIN4WlSJG_tvYto6Ebq8fk9diw..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CAED68EDD0589AA0A7FEB59EFE8019A1DFA4656AD61627
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜应届生“逐梦公募基金”:首年收入40万,只招名校生;应聘难度史上最大｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2R3FClCPrDAge2akkZVnfS1qXa8Fplpd9vOBZgSP2vFgYZDlqKTufEk7p47dzJdBU0kCeAoAGH9JBsUMCTaZzTL6yiGvQ3XtGZN9-IqNRloAAk0tmcilagqCZFamc5Eo4GbQxaFhCvsLen_A2GHQxynB5DNkjms3N8Y3UDx4_fLkHaekzsaWms6NdNHb5ETCS2czmmZk_CJbm0CtGSSkZQQ..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CAED68EDD0589AA0A7FEB59EFE8019A1DFA4656AD61627
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜银河基金2026年社会招聘重磅来袭,多岗位热招中!｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2R3FClCPrDAge2akkZVnfS1qXa8Fplpd95__lHvkI2Tnd5GpQPUm2C1rhto0wKGD2KS2H2Y7zdqnn5Cx4-v8wJz0FTotmSdF9JdRxW-Il80OpIbe9yol63ZM4egB7EtoDZAP_d33wXFJ5668RSHOrjLhJ8x1TKnNga1A-e-jc844M7RR7ehpECOr1f1aamrWiysWhc7kYnSjyPfCoem7FzA..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CAED68EDD0589AA0A7FEB59EFE8019A1DFA4656AD61627
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜10天“吸金”800亿 公募发行热潮AB面｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2R3FClCPrDAge2akkZVnfS1qXa8Fplpd9EPP1Vmw7Iq1F_r9kWN3JF1K9rdpSpd9dqHS_qSpmjMgrDNOCI5SQkujfSNZbcqw-W0ZULZtZNAYdgCmn3AOM6FLCa8oRwPX6awx5GnCmSoILtrmZXp3J0E_q01wjH393qep46TRACg9vmtr42DwDdB2PbN9r9kPWtWI4ZiDDhaL1AfaFW2DefQ..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CAED68EDD0589AA0A7FEB59EFE8019A1DFA4656AD61627
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜151类金融职位薪资情况分享链接,覆盖千余家主流金融机构【10月16日版】｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2R3FClCPrDAge2akkZVnfS1qXa8Fplpd9FrPwoXCXF-SOFe8wGtHrWaoNsBCVWckCmQvYiKzVlJrE9OBo-hNAdKR7Da8vZOjJ47tq6eAJ6NpV6NZyKGkTRu4vh92r0yYmmYPKgCJ44HjWZFY5vtjy53MG56LK9t-jqVmr5ayk6A12ccTh_GEWeWpoI1LAt9GAIimYNbHeNOd535pjGOOjYg..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CAED68EDD0589AA0A7FEB59EFE8019A1DFA4656AD61627
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜券商、公募社招-中加基金等｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2R3FClCPrDAge2akkZVnfS1qXa8Fplpd9UiQ0mibZos3lhzzkMepIbvd6IdWBk09dwU9ed-jzbWktz45rZrQMG267pkFjDqeqM6rJC4Y73zjm_y8amqNLV4SgEk-Z5t3U8MEaiD5k8kHQm9ox8MYRkzJMR9HbTEvo_vAApvds0DNFzLTC9rxtYGtSBAnfZXN6Zb16fUUgvC3vzHZXxeLdyg..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CAED68EDD0589AA0A7FEB59EFE8019A1DFA4656AD61627
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜中邮创业基金2026年春季校园聘(公募)｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd9cKjzkxm9hVG9Exx-hzgm4BZPNUyMOGZ4ibpx9bTWMqewHajgJl-7NDHtxCScvkS3TPGWtO7kDviavN4afn1eB-OInxtF8Q9j7JBavWB-gV3z0zbW9X4rDz7YTmgruFfGHaLnE2WNYJ5RuV5t6fnunXGrjv1EXJ1e6622_J0WMrhj32-j2KiwUw..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜活动推荐|2026年春季学期国际组织模拟面试工作坊安排及申请渠道｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd90RKUc6vhvhfyTmjj8RAPFaEOlbdIlKmVTjsChX9EpZ4SIjK3LpVvdEZup81-SLYI_21NPnjbI8J2UKThy8U3ZBNIBTH_xv8zzMeMIPQa5zfQNBsgAWNEOWl3aEUxvOLP9HGjytMiEFEDTjIb1XECvPB4Npu-hIA5W4bHMtfoWvyFW6cwuUnkdA..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜【公募龙头校招】鹏华基金 2026 春招 & 暑期实习｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd91nluRWi9hX12wfH1YuC1sBU33Lcv8wPOD31JT2NAPto4Yy9S_rki4w-osYDrbMXnS-XImPnRhmsqmuw73uMRENlviE2kb_u6GvZF8iK5rDT_EqwIR7xJ_XN4V3HK5K78x64v4mdoDB-EAaPeOicU4HjMDut-C9_1GGY9hRXh9yJr1dbZWbKUeQ..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜【社招|上海】上银理财有限责任公司招聘岗位-渠道销售｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd9L50IsnpmX3YEVcvfsJMS9daXUHLpuJwZYPdZCE0TO3oXdmtROMkZYtUjrzH5qqbwI7A3xz0qJAsMdWf2aEb52F0sS6lYGO_sYG4qcFav3P9SynvA_r6AZmvRPNcqM7VXx4gMJsn46yJjTDuvL1vTjh9p6vYN5L9eMraDQd4l5ctFH6In5Ei3zg..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜财经大V停更、删视频、改昵称,有人得“找个班上”｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd9-loYy9Kz_0N_j7C5oBp8GnNxrkPjwTlrGG5rUx7FgIY-bdA9llF-84VS8MEVtGFFt2wtoC0-jRNiJfCcNY32KNjgNmf-ulUff0tFuQXS4kCv0wCTPaRXd7N3Wsn0yBxOxChduNCJBx0eY7TwevgnWXsBlzZpf25mdQ4mrPyJ24zP28temKTOwg..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜黄芳--金融业务综合营销实战专家｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd97AiSeaqMdsKuRNricRl4fe8rQuTkevwEyPyjsatMkx93R7XF74rB-X07bdg4BabddbMiEXNQuiORB5_N9G0e2ms4N4ZSTWfakcFCHZaEBMBCZmaFI2Y76UM2nvs3AS8B1ikO8i4wtaYsoNU5L4SKquOV6tn7mUW353kOX7v85aF535pjGOOjYg..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜New Ivy实习内推|长江证券包食宿/德邦/一村资本/海康威视/普华思略特…全岗位带薪!｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd9X-kYgBdZXkYqoSoQc7Ym01KBgSnVQkiyGSrmCoOIIFRdF2J2rzoivRhgZ4Xvx_-QrF9AAWebd-tmwqX9vzGEBcLguWtpZRjt2FJpeF9xwg7_CrX-LZ83A3Act6qDd0bAPRrBuKFjwVBxkhQN4BFoWWQbT4bulfivNzEAP9gXuYzS-e4Yz84xMA..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜【社招】鹏扬基金+上银理财+招商银行等｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd9lek7WeQwD-uMAjaENuWjRD1C0IaXF58rf1DwHWO5QMQrqN9k7OhPP3UNr04nOu_y_hZNk82nv9Q4AfSSN-NhIzEaNaiweS2lMWTCZqTzlQCrfq4uHG2ubJWz_cCRT7iQywQKSPxPZ-Uim0C8-o-7eur8AK6uv2lH8gnmS_cX-RJj3x9Nw6p-Fg..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜【校招】中邮创业基金+华源证券+首钢集团等｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2_4JmwF9Kep8e2akkZVnfS1qXa8Fplpd9lek7WeQwD-uMAjaENuWjRD1C0IaXF58rf1DwHWO5QMQrqN9k7OhPPzRaKHu7hJYxEIwor4aGD6azcf53e-VB4oew0df3HNlg7OxywxCwyjzFu8Q41YZpSYdkAKyOpldaC7U5AxeL7FJ6H_OBoYKisgbpCHzq5bFgWMGGunOu9bzzAjcIGepUqA..&type=2&query=%E5%85%AC%E5%8B%9F%E6%B8%A0%E9%81%93%E9%9D%A2%E8%AF%95&token=46CC67BDEDD0589AA0A7FEB59EFE8019A1DFA4656AD61662
+
+## 帖子明细
+
+### 1. 公募基金渠道营销服务号的小切口与大用处
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=q6YEDb2D1yC9dstfU3sqTO4LhAEuF6qdvNP56wh7Tas6cYGwAFvf9tANBY5*lp9PCwSpqUhiSDoaXRKLHYtLu-Sc8JYlxTLyneFQRrtv0lqMP1ZC130C2KpdVpc5lqVM&new=1
+- 来源公众号：顾问云
+- 发布时间：清昊@NewBanker
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+券商等销售机构的客户经理和理财顾问,成为中国公募类资管机构渠道营销服务号的直接用户.不少基金的专业“粉丝”群体(客户经...
+```
+
+### 2. 垫资展业?公募渠道销售有点难!!!
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=IZIvAZY2ZJFlxLfUykWvJ2fPpUyqdDRCofcyemDJY*X-kFsDnyA1TSAjb62Q0DO3t85iZLLBi71yisM1EHmIUZG0DEsC-qAjnFHosvEYITQk5jtQKTQjYf6HdH7-cFWt&new=1
+- 来源公众号：2022-8-14
+- 发布时间：搬砖组织
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+得益于2019-2021年A股行情,公募渠道销售这两年口碑起来了,待遇不错,也是很多小哥小姐姐中意的岗位和方向,不过随着行情不...
+```
+
+### 3. 公募基金传统渠道销售之大变局
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=oiuApgGKGdqEFG0hhLMENo5H07HiZEcI7IUvjq4JjbGcHfwUdnW0vUAyzmI4lNUGa7r1ga5rn*hVevgv3NYubaBCgMBDHRJGzITxfJxQCpHb7ldC7hS6p7BuB*wCRMOU&new=1
+- 来源公众号：巴蜀养基场
+- 发布时间：peter wan
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+近期,我们去了几家公募基金公司为其零售条线的团队做实战培训和支持赋能,对我们这些从基金传统渠道一线走出来的人而言,我们...
+```
+
+### 4. 布哥直推 | 公募基金渠道销售+方正证券研究所金融团队实习生招募
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=pCOpBpQ0KNOBUi9al32KNYS8uAQEqUuiQNp9gy*4TGger4PZWv*VkvmbjjwN-tXGZ6CfSdbJNPXBOcHewYGth26yHbZzL**euqqdWOoN0Qn7IMz*UHm4nZQffQE1cleD&new=1
+- 来源公众号：求职工场
+- 发布时间：2022年10月21日 21:10
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+01【公募基金 渠道销售经理】工作职责: 1. 负责所辖区域代销银行渠道和券商渠道及机构客户的开拓、销售、培训及维护服务工作;...
+```
+
+### 5. 岗位说明书 | 公募基金-渠道销售
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=vYaWGC*XEsojr6iORreVn2kBPo531XPqgLIAEONYrdVi76TJjqQ4eQEvH3Jc08jKfju2b1YDO3e01myCahI4MCGYPTW88AUcnOlihvSoEp-bpIQqYS6KIwxo0go00kYC&new=1
+- 来源公众号：灏锋实习
+- 发布时间：Jadeite
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+渠道销售部公募基金的市场部通常分为机构部、渠道部和电商部.本期我们主要给大家介绍公募基金市场部的分支--渠道销售部. 渠道...
+```
+
+### 6. 公募基金渠道营销数字化工具概览之定投营销工具箱
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=q6YEDb2D1yC9dstfU3sqTO4LhAEuF6qdvNP56wh7TavNIacBnE1WY6br3GDDxQ6zCNrL4isUrcVXxtvmvrTf0EaCq3U6sRL-r8DrhDEJ2SaEqpX8BaUu2BPddKJGQdPH&new=1
+- 来源公众号：2022-6-20
+- 发布时间：顾问云
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+提高投资收益当前中国公募基金主要的销售形式仍然是以银行、券商、第三方代销为主,尤其是权益类公募基金.基于渠道营销系统构...
+```
+
+### 7. NO.科普转载丨当你想成为公募渠道销售
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=BJNoFzXFV9*uKRmNxfIRLszPh1MIoE7s5nVbmS80ngj6Is74MsxqGM0wPxs6V2JMKT3JJznpSCYwcrvzxBm*IYfncsZiNJH99aTsP9Pt323UByM0f-L8A4G1BzO-KcZA&new=1
+- 来源公众号：研开开的告示牌
+- 发布时间：2023年5月1日 09:00
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+渠道销售是其一. 对于大资管行业,无论是公募、私募,还是信托、期货、保险等,核心业务就是管理受托资产,通俗点说,就是帮别...
+```
+
+### 8. 干了17年公募渠道,我才敢说:勤奋,正在贬值
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=oiuApgGKGdqEFG0hhLMENo5H07HiZEcI7IUvjq4JjbEpxHntQXc16BwoufeKg2bUl-cvTU1-cxVLfvEpTkROUnOpM8Qjk3BW1qgPix0RxR5*s*KS-2GtX0TwAn7A5ap-&new=1
+- 来源公众号：2026-10-14
+- 发布时间：巴蜀养基场
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+题记经常有朋友向我请教公募渠道销售的成长心法.本次分享,我们邀请某基金公司华南&西南负责人俊总,带来一线实战经验.自...
+```
+
+### 9. 为什么推荐你去公募渠道岗位?
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414908&ver=7036&signature=9fRLj7O2gKvAcvfT72Oj47wgACMMk7vflOumV3gYA3M2HpCi9Q0YSl*gMT7vT9npOx2*sT5HJhKwDVnYw3*WbOXi1RPvOcnwQBggORiK6SjcpSY*Vun3JHoxz1lRjQER&new=1
+- 来源公众号：2022-6-2
+- 发布时间：金融小伙伴
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+渠道销售主要对接的是各类销售渠道,包括银行及券商,目前公募基金最大的代销渠道依然是银行,所以市场部门日常多与银行的个金...
+```
+
+### 10. 布哥直推 | 公募基金渠道销售+方正证券研究所金融团队实习生招募
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414959&ver=7036&signature=pCOpBpQ0KNOBUi9al32KNYS8uAQEqUuiQNp9gy*4TGger4PZWv*VkvmbjjwN-tXGb1KBIjL3o48j9oZaCWfF240D7rqct*XF5eQJlO95EbCvSd71PPGHzHVJOyWEHagY&new=1
+- 来源公众号：求职工场
+- 发布时间：2022年10月21日 21:10
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+01【公募基金 渠道销售经理】工作职责: 1. 负责所辖区域代销银行渠道和券商渠道及机构客户的开拓、销售、培训及维护服务工作;...
+```
+
+### 11. 【银河晨报】5.19丨公募基金销售保有规模发布,券商渠道销售家数居首
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414959&ver=7036&signature=8tHW1*FQFlttJ0CK93jM2yVVfcme7-izQAot-aHGIESn-*qZAvmZzw06xPfvDQyBThP7ikebBYMEWnqsT26FiZ1CZrxP0s0AzUsRevnvyqJwfzJprqpleyLI3fqFYkz2&new=1
+- 来源公众号：2021-5-19
+- 发布时间：中国银河证券研究
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+宏观丨社融增速下半年平稳,紧信用仍然留有余地—2021年4月金融数据点评◆ 金融丨公募基金销售保有规模发布,券商渠道销售家数...
+```
+
+### 12. 公募社招-近期销售岗位整理(机构、渠道、电商、销售中台等)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414959&ver=7036&signature=pXV8c55bpbPPjija4qwpTBctX0xgbwloPjYOkFuqZccvfsP7xEa*snA*MyDL6LEyZq5kHQCDnUGstJ0hjo8z8fRKOTm3ErjWiA0L9JI7nTjAhW5a86jujBptJfApPSYs&new=1
+- 来源公众号：2026-3-8
+- 发布时间：行研侦探
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+2、公募基金公司渠道总部一年以上工作经验.投递邮箱:zhaopin@tkfunds.cn十、泰康基金销售支持(电商)【北京】岗位职责:1、...
+```
+
+### 13. 对公募基金销售来说，微信群是渠道，不是服务
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414959&ver=7036&signature=DiIr750cPGXNckq3Nn-*IfHxeJJWl9qfaIONCtK3ovCpBXR-lqDNOXTCgE7pRBnJc4XDgmfF9RXyYekb1wx8xXu9NelrjTOARejI24IyyQ*bb3d1zlnQtISKkZoLBH4q&new=1
+- 来源公众号：韭后算账
+- 发布时间：原投飞顾
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+最近几年,把客户拉进微信群,几乎成了公募销售子公司服务的标配动作.一个客户经理可以同时照看几百上千人,一条消息同时送达...
+```
+
+### 14. 泰康资产公募1月热招岗位更新(北京/上海/深圳)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414959&ver=7036&signature=QblkfERXDcUZovWWDjHWhbOIjRcS0E07JxgWMkQ339oCofKWOIHhHu5AkgXQ9q3eIflviZEEZCTZrJ2pUNGNLNX7Lt-hrQ*g1dHbHI*MtyqAWmfnm3OA9lIvsnIeHqgM&new=1
+- 来源公众号：2022-1-24
+- 发布时间：陇金客
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+4、做好日常销售信息收集与及时反馈,了解市场及同业动态;5、协助代销渠道做好基金持有人服务.任职资格:1、金融相关专业本...
+```
+
+### 15. 如何进公募?卖方研究员和买方研究员,差别究竟在哪里?
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792414959&ver=7036&signature=9fRLj7O2gKvAcvfT72Oj47wgACMMk7vflOumV3gYA3Pyoh34e7menpXoSxH2NjFFTMNDZvTU1BHBYIczF-kT9zCPd6O4lNmbmDR489oSTXiF-L5sgpynARZ6Mqz1rwKF&new=1
+- 来源公众号：2021-5-6
+- 发布时间：金融小伙伴
+- 检索词：公募渠道销售日常
+
+正文：
+
+```text
+渠道销售主要对接的是各类销售渠道,包括银行及券商,目前公募基金最大的代销渠道依然是银行,所以市场部门日常多与银行的个金...
+```
+
+### 16. 一位前基金渠道销售的职场回忆录
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415005&ver=7036&signature=vxSOuM*wuRKZEZxk-0z2llW0ZSC8xDbp4yak528o3hrAHEcdyMpX1PEUxbErUuxeUdTAt44*2k5-J24-8BHf6lnge5x9mTMZNd8oNAi0ny6lfW7mXdgjmmhHDP0kq7fi&new=1
+- 来源公众号：2024-3-1
+- 发布时间：财经
+- 检索词：基金渠道销售劝退
+
+正文：
+
+```text
+他们是渠道销售,或者更高大上一点的称呼——渠道经理.在追求产出比的基金行业,他们是仅次于投研的核心工种.沈悦曾是其中一...
+```
+
+### 17. 公募基金渠道营销数字化工具概览之定投营销工具箱
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415005&ver=7036&signature=q6YEDb2D1yC9dstfU3sqTO4LhAEuF6qdvNP56wh7TavNIacBnE1WY6br3GDDxQ6zaR8hWGy6uVxmrX-N29oOSOZqgKyc2GjExlAt5iuxa2ouEftOPq410z2QNHZcMNqa&new=1
+- 来源公众号：2022-6-20
+- 发布时间：顾问云
+- 检索词：基金渠道销售劝退
+
+正文：
+
+```text
+渠道客户经理、基金渠道经理以及基金销售负责人可以查看、管理各种定投计划BI报表,从而可以调整后续的业务运营策略.交易式定...
+```
+
+### 18. 公募基金渠道营销服务号的小切口与大用处
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415005&ver=7036&signature=q6YEDb2D1yC9dstfU3sqTO4LhAEuF6qdvNP56wh7Tas6cYGwAFvf9tANBY5*lp9Pd5A3rEV4*LSy*Wj9BZsdBAGxl6zDHq4YeGi-8P6CA2gA3ENhB-JpFtJRGvm2yhsk&new=1
+- 来源公众号：顾问云
+- 发布时间：清昊@NewBanker
+- 检索词：基金渠道销售劝退
+
+正文：
+
+```text
+而每一个销售渠道,都有成百上千、甚至上万名客户经理或理财顾问,正与该基金公司及其产品展开合作.传统的方式,是渠道经理们...
+```
+
+### 19. 银行渠道的基金销售困境
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415005&ver=7036&signature=THctU27XT4LXQV*rvtWNZ5VFTjv8KiF2*Q3htKReO6m4yw8ACDSXN1h4S6XK8YrlmiOOYgTtaIKZ1OOnFM1QPFIJ3wf0I0Ssbdv-onr9u0aaDtH8WdqkTbS5ziKb6ptm&new=1
+- 来源公众号：2018-3-11
+- 发布时间：花花搅基
+- 检索词：基金渠道销售劝退
+
+正文：
+
+```text
+上篇谈到了基金公司的销售激励基金渠道销售的困境,建议先读完再看这一篇,下面谈一谈基金销售的最重要渠道——银行卖基金的销...
+```
+
+### 20. 做基金渠道销售是一种怎样的体验
+
+- 链接：https://mp.weixin.qq.com/s?src=3&timestamp=1792415064&ver=1&signature=tmuSA7FCgwt*SFX4iFb9pmJdvR1RP-ZTH*KLJR9kawC04y9gWYpmaPCal9RgQB8RYQBmbq22GZ4KxxZINyS3P-hPH6tICbFKDUNV-*6Cq3EsUO*8RHf7dSWt3nXWwXH7lShyTe6DVjpABsJiM1AY9S-C9NA8vzSF-6ZUXJI9g7E=
+- 来源公众号：南方IT界
+- 发布时间：陈艺
+- 检索词：基金渠道销售劝退
+
+正文：
+
+```text
+也有的彬彬有礼竭诚相待,如何说服他们全力推进你的基金销售,是渠道经理面对的最基本的问题.在我看来,丰富的专业知识、良好...
+```
+
+### 21. 公募基金传统渠道销售之大变局
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415064&ver=7036&signature=oiuApgGKGdqEFG0hhLMENo5H07HiZEcI7IUvjq4JjbGcHfwUdnW0vUAyzmI4lNUGtyHjeSbmFQU41i9w5AK8l6x*GB-RlIzCqOQh9zg2nPIjuaEEJrnPa76zkV1DeMh*&new=1
+- 来源公众号：2019-11-24
+- 发布时间：巴蜀养基场
+- 检索词：基金渠道销售劝退
+
+正文：
+
+```text
+但不是谁都能做第三方渠道服务机构类似于一家基金公司的外包渠道部,主要起到为基金公司销售及售后服务的作用,总部或总行维护...
+```
+
+### 22. 去香港工作，选对渠道很重要！我们提供真实岗位、正规签证、全程服务！多领域优质岗位招募中，积累经验，拓宽职业视野
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415148&ver=7036&signature=wVL6r6OtYrua*AeWOnrjfFzUX00H6aticyvSzwrhDXuGbgZzQLe7K7bT7*aNpVCoiOiRXdJ6O-6FcoCt8JW49R86ooI9H5Xs*lp7UYQrcPrvvV7dJ1kdrGA8oT-OJlMY&new=1
+- 来源公众号：直通四海
+- 发布时间：2026年4月1日 10:52
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+销售经理(女)【工作要求】女,28-43岁以下,粤语、简单英语,有相关销售经理,管理经验即可【工资待遇】HKD19400+季度奖+...
+```
+
+### 23. 阿克苏体彩工作科开展小微渠道合规销售专题培训简报
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415148&ver=7036&signature=fjthD62dd*UF88YREm6E56KBg8Iv0Reh0ED2vuto8oCJbVfli6Vm7pFfHke79FoDDCU8aG9TPLuFrr*Y2vzic5fSFcfYWK0axRCfF34tkd2WcuOoZ4Wskmd979*FVouB&new=1
+- 来源公众号：新疆阿克苏地区社会体育指导中心
+- 发布时间：2026年3月31日 17:26
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+后续将把所学知识运用到实际工作中,严格恪守合规要求,规范开展各项业务,切实维护消费者合法权益.此次小微渠道合规销售专题...
+```
+
+### 24. 铜学教育诚聘:渠道销售
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415148&ver=7036&signature=q7kwpA6gVij5z*yQRWxzc*0Wc0hQushYh--8Nxn9BphF3OgpmaMc3rD5UsWZ3FU5yxjbzhBg-I25Jhi7AdmQxeiR87wKnKkez4KzPgBm2yL513SZl4ANyzhWFfDMechs&new=1
+- 来源公众号：2023-2-21
+- 发布时间：乐在铜鼓
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+渠道销售工作职责1.熟悉公司研学旅行产品,负责客户洽谈对接,外出拜访客户,密切与客户的沟通,建立良好客户关系;2.负责区域...
+```
+
+### 25. 【我为群众办实事】驻村工作队拓宽销售渠道助农增收
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415148&ver=7036&signature=57*Oz47GHykg3RdPiGXCnpZDB6tCSYt92iwvRj-L*smeZEBIWAHVeywvoCgA7GekagIVCu4pLaq5Ag6i0jXcPUG3kIFBaFESVIglnyvIIsSXWDtu67EybOx6bhLCDI6E&new=1
+- 来源公众号：宽甸发布
+- 发布时间：2022年10月6日 20:27
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+眼下正是我县果实成熟上市的季节，丹东市驻步达远镇各工作队急农户所急，走进果园帮忙采摘并联系销售渠道，用实际行动助农增收。
+
+为促进农产品销售，市委党校驻步达远镇四林村工作队积极行动，通过对接单位和农户，积极销售农产品，不仅满足了城市居民的生活需求，也稳定了农民收入，切实解决了果农的后顾之忧。
+
+为确保消费帮扶工作取得成功，工作队与步达远镇四林村“两委”班子成员深入软枣猕猴桃和大榛子种植户家中，实地了解今年四林村特色农产品产量及质量，研究采购了质地优外观好的包装盒，并全程参与采摘、定称、包装、运输等各个环节，确保订单保质保量交付。
+
+在派驻单位消费帮扶采购的基础上，驻村工作队通过联系当地电商录制视频，在抖音等网络平台介绍四林村特色农产品。工作队成员还通过微信朋友圈带货，广泛宣传销售软枣猕猴桃、榛子和红提。因果品质量优良，包装样式丰富，销售价格透明，吸引来了大量顾客，乡镇领导与其他驻村工作队也积极支持、纷纷选购，并帮助转发销售。仅一周时间，驻村工作队帮助四林村销售软枣1000余斤，大榛子100余斤，增收1.6万余元。
+
+据了解，市委党校驻四林村工作队助农销售红提100箱，软枣子518箱，大榛子112箱，合计4.5054万元。
+
+记　者：冯延秀　戴岩沣
+
+编　辑：王　楠
+
+制　作：白佳雪
+
+审　核：刘大利
+
+监　制：周元宝
+```
+
+### 26. 【微相亲】积极上进,目前在麻城从事渠道销售工作的小哥哥,想找一位性格好的女朋友~
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415148&ver=7036&signature=PKZHPZR0cA1XVprIQQzttaTdy34bgjIxB7-PbhHX9uTEtwnoT4uSWftX7evH7ouVZXwNgiIJ4T3SM2Zwa1wp3Xx*O*VsWMI06Wrclkju8qqjAjg3Hbtjj0wfu*1lhGPB&new=1
+- 来源公众号：2024-2-16
+- 发布时间：麻城通
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+1997年身高:175cm基本情况:未婚,本科,现在麻城从事渠道销售工作,月收入8k+,麻城有独立私房!择偶要求:想要找一位年龄...
+```
+
+### 27. 茅台再发公告稳定市场背后:“让销售渠道真正畅通起来”
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415148&ver=7036&signature=DtIf*NAnl38w6psqKDJOAFYsmhDjzuFuU5p7bySgsyPNBiyNqd3rCD03sL3WZ37nS3s2jfmrITZ3yoMeGLSsTzO1UwKO5byKG4yd5jzMXWfcUDjc-Nnc3WaEruk*nVc-&new=1
+- 来源公众号：2019-12-5
+- 发布时间：茅台时空
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+并提前对配套物流发运、主流终端渠道供货等相关工作予以部署和安排. 2强化举措让销售渠道真正畅通起来据悉,茅台此次调价是综...
+```
+
+### 28. 公司召开2022年1季度商务·渠道·招商销售工作会议
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415148&ver=7036&signature=AiSknB6oZ31YjJqdM1*IEvUvLH7iSCI4ctJwOplfgWtaD751CSxsBKqOyE5DtfksLwKr8eftAUnFhOkJDbfbJcU6rnSHsg-SwIlWE8zWR5KKAkhSn4*HV07Zws4EuSWj&new=1
+- 来源公众号：南京正大天晴制药有限公司
+- 发布时间：总裁办
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+NJCTTQ公司召开2022年1季度商务·渠道·招商销售工作会议5月13日,2022年1季度商务•渠道•招商销售工作会议顺利召开,会议...
+```
+
+### 29. 销售渠道重构：当“店铺”变成“API”，销售在对话中完成
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415205&ver=7036&signature=*-qhrNC1IggrX6KF7LFRVw8jIVjkG8VXKbYNRuq3z8tC05fbp7DgptTmCR9YBAOv6BHTnIPV2o1dcF4Sygo0Xptw2xjCSgCoWl2rbuZWA*EBNU9AfMtfdSDekcY4xH8r&new=1
+- 来源公众号：光华博思特
+- 发布时间：光华博思特
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+“易协”的销售渠道,从几个有限的官方触点,扩展到了无数个AI对话和第三方工作流中,实现了真正的“泛在化销售”.06结语销售...
+```
+
+### 30. 去香港工作,选对渠道很重要!我们提供真实岗位、正规签证、全程服务!多领域优质岗位招募中,积累经验,拓宽职业视野
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415205&ver=7036&signature=wVL6r6OtYrua*AeWOnrjfFzUX00H6aticyvSzwrhDXsq2SH9*BY2xHtCpht29Uwe9FB5YcWRiKxBDwq0bCtZYP8p8PHIn76Tcrzp87GyspMxgtRhGfGc9cN9lqIfC9NH&new=1
+- 来源公众号：2026-3-31
+- 发布时间：直通四海
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+销售经理(女)【工作要求】女,28-43岁以下,粤语、简单英语,有相关销售经理,管理经验即可【工资待遇】HKD19400+季度奖+...
+```
+
+### 31. 【我为群众办实事】驻村工作队拓宽销售渠道助农增收
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415205&ver=7036&signature=57*Oz47GHykg3RdPiGXCnpZDB6tCSYt92iwvRj-L*smeZEBIWAHVeywvoCgA7GekSsYqEEQf7yv7WbZRKxXajwqeXgBwVK-7NZEjedHNyb9Ye0OgFFVd7Ym0EmUpA3-S&new=1
+- 来源公众号：2022-10-6
+- 发布时间：宽甸发布
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+眼下正是我县果实成熟上市的季节,丹东市驻步达远镇各工作队急农户所急,走进果园帮忙采摘并联系销售渠道,用实际行动助农增收...
+```
+
+### 32. 【全球销售渠道事业部分工会】工作生活两不误 灵活办公健康行
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415205&ver=7036&signature=rDWsoaXJCQ3O27-sfXofdHPxNnmzTl7K3u9OiZNbEUpAC89DQrrA3nIUQhlPilzof91AU-Zem5rplz372Y1p0KNIZUYBzVkh5-Fjgy4y9XVm45WyCrnvn4hy0eq7pr9E&new=1
+- 来源公众号：2020-2-23
+- 发布时间：中国航信工会
+- 检索词：渠道销售真实工作
+
+正文：
+
+```text
+让大家的工作方式和生活方式都发生了改变.渠道业务部按公司党委部署要求,采取灵活办公的方式,积极复工复产,充分利用多种通...
+```
+
+### 33. 公募基金发行火热B面：年内24只公募发行败北
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415271&ver=7036&signature=IrxDAVHaxhfKo5cnwIhbOlUdta8ARJrYXW*HlV82azySrH1ad4qrYKUVNi-f3U0SHjLeM7af-X-WRL0MkEpioGlt5VoOZreo5ZKAHbaI1FOIvjx*wp8fLhOF5mtbxUwq&new=1
+- 来源公众号：经济观察报
+- 发布时间：2020年12月24日 20:24
+- 检索词：公募渠道面试
+
+正文：
+
+```text
+一位公募行业人士指出,由于公募产品本身存在较强的同质化问题,中小公募机构不能结合自身优势实现差异化发展,势必将面临越来...
+```
+
+### 34. 外资公募基金|多岗位正式实习
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415271&ver=7036&signature=xg1WSuAT2eAltfLvK7kUcbyRn*tx8EnmsGIgIZ-dZzKkfBGeOInF7UkTpiJDRMJi1h6Xvs2y875z8cn34qWJeJY1glJbPfiH3WkoPZHAJnD-arZYKerfA64p9G4VDxe6&new=1
+- 来源公众号：2026-10-15
+- 发布时间：了不起的实习生
+- 检索词：公募渠道面试
+
+正文：
+
+```text
+跟进基金渠道宣讲与落地辅助工作,汇总业务动态○ 机构业务部:协助对接机构客户,整理公募产品资料、投资简报,梳理机构合作需...
+```
+
+### 35. 一大波公募私募招聘来袭！有公募开出90人招聘计划，更有私募年薪50万起步
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415271&ver=7036&signature=TYoqdkLRWDwkTNRtI9bS7Xlbs*WYj9i9WEt1dfy0u3gR1VSyd1SlZt6bw4JTA2OQoU4d9mEaPO*M2Oqa54i1mLEvG0Bz8BsApZwqsuG3SQZAf5O7Nwb6B112Xb0NjN6f&new=1
+- 来源公众号：中国基金报
+- 发布时间：吴君 方丽
+- 检索词：公募渠道面试
+
+正文：
+
+```text
+北京中型私募渠道人士表示,招聘需要经过几轮笔试、面试,之后还会让应聘者来实习,在考察期内,要求对某个行业进行研究,只有...
+```
+
+### 36. 【精】投行公募校招策略,共1.8万字:从券商暑期实习看定位、门槛、胜率、匹配度与规划思路(券商/公募/资管/理财子/国资PE等)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415271&ver=7036&signature=QL0yc9YqTeBdJd**C8My09aaYd6M*ryxEfez1S3DfHDfoXuDK3JJCHGRZWNH0QLtnLUNAXUMpqdeQFE2a8mLwXw-oWvhefyULRhVwBo5RNn8lotjB5veGrXgkgTtTfDx&new=1
+- 来源公众号：1天前
+- 发布时间：思炜职规
+- 检索词：公募渠道面试
+
+正文：
+
+```text
+开篇以我合伙人Pony老师的文章《券商暑期实习复盘:都说扩招,真的扩了吗?》为引子,正文中我会给一些批注,之后我写了个扩...
+```
+
+### 37. 港中深本杜克硕：三段公募基金，三中腾讯实习
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415330&ver=7036&signature=IsQr-AmUQew2oblHQrO9W3-GzwepMX3kPZNUyvHSoWwIh*8rV5z*kzdL7mxJxI-ShEuv9uqrqmDuazQDkaplHLEiB*2dwdDJX7t3zvU86UuUvHyweq2BAYTwy6qmI*V4&new=1
+- 来源公众号：lala实习日记本
+- 发布时间：lala实习日记本
+- 检索词：公募渠道面试
+
+正文：
+
+```text
+hi各位老板们好，我是在duke读硕士的J学长，热心分享
+
+
+
+
+为了找到自己想要的探索工作生活，我探索了10多家，其中三中一华3家，3段top15公募基金，腾讯，央企PE...
+
+
+
+
+想给大家分享一下自己在中金面试、PE实习心得、实习如何复盘、销售岗位说一些经验：
+
+
+
+
+01
+
+如何在实习提升自己，前中后做什么
+
+
+
+
+博主曾在国资背景500亿PE实习，deals非常亮眼，有一些表现好 表现不好的心得想分享：
+
+
+
+
+1）实习前-如何判断公司、实习质量
+
+背景规模、过往deals等；
+
+JD描述是否真的培养人：还是说能接受加班、能吃苦，用心的JD、公众号一定比那些打着能吃苦title的好太多；
+
+
+
+
+2）实习中-如何锻炼自己、主观能动性
+
+思维方式：用正式员工甚至大领导的思维去实习，不要只是实习生的去应付工作！！报纸留用甚至工作一两年的心态会学到更多；
+
+
+多想一点；
+
+收集数据，要想想能不能提出问题数据的意义；
+
+会议纪要：要思考专家发言的原因，而不是像个工具人，梳理完自己也要懂！有问题多和领导交流
+
+整体项目：close后，自己学着梳理项目模板和思考
+
+
+
+
+3）实习后
+
+人脉connection及感谢（主动与领导、老师汇报后续去向、近期实习工作情况、节日问候祝福等）；
+
+面试准备：一句话把项目说清楚、估值等关键指标要记住；行业的关键技术要记住。
+
+补充：学长之所以后悔，就是没有发挥主观能动性，当时麻木的写了太多会议纪要， 如果有机会肯定会多和领导问问
+
+
+
+
+
+
+
+02
+
+PE面试看这篇就够了：500亿PE实习面试
+
+
+
+
+
+PE 的面试和 snt , ibd 的逻辑很像：
+
+
+
+
+technical + behavior :
+
+1.tech 角度：除了最基本400问里三大报表、 ps 、 pb 等指标， dcf 和 lbo 的结构也要相当熟，过去搭过的 model 的关键指标；研究的行业和观点等。 
+
+2.behavior 角度：最好了解公司的 deal 、投资文化啥的，可能大家是从 research 、 ibd 转 pe 的，路径和职业规划要想好。
+
+
+
+
+
+
+
+下面给大家分享下之前面过的一家央企 pe 的问题（基金总规模500亿，deals 超好、硬科技新能源方向）
+
+
+
+
+1.中金的研究内容，介绍一下贝壳找房，京东物流，reits（这里的逻辑在想想）
+
+2.对中国 reits 未来的投资和风险的建议
+
+3.有没有搭建过 reits 底层的资产估值模型
+
+4.介绍一个腾讯当时做的案例，回答三顿半，问三顿半最近线下铺垫的原因是什么？
+
+5.贝壳找房的可比公司有哪些他们的 PE , PS 是多少
+
+6.对 pe 有什么了解，多接触一下所需的分析能力所写的报告底稿等；
+
+7.PE会比 IBD 更加锻炼人的思维
+
+8.投资报告、尽调报告的内容等。
+
+
+
+
+
+
+
+
+
+
+03
+
+中金4次面试经验
+
+
+
+
+
+一、rs 研究部面试
+
+一面：先是1min英文自我介绍问了 python 的数据分析能力和做过的项目，之后针对简历每个岗位问了大体做什么和一个相关问题；
+
+最后针对财务问了：①哪些财务数据是房地产的 asset 里面的内容，②利润表的结构，三大表的结构在二级市场行研面试前一定重新看看 capm 模型
+
+
+
+
+二面：研究部总部面试
+
+1，过往经历面试
+
+2，推荐股票＋逻辑
+
+3，自由现金流怎么算
+
+4，利润表从上到下（尽量全面，两次面试都会有）
+
+5, Python 会不会使用＋爬虫会不会
+
+
+
+
+二、FI - ABS
+
+1．房地产组对万科的理解，去年的财报怎么分析：回答三道红线和收纳的数据销售数据等；
+
+2．三道红线对于房地产企业的意义？回答资产结构、自身负债等。
+
+3．三道红线的计算
+
+4．你过往经历对中金研究部有哪些特殊的贡献？回答数据库和 Python 处理数据，
+
+5．你有哪些专题性的研究？回答了新加坡领展房托基金后展开加结论
+
+6．之前没做过投行，为什么要这么做，做过哪些准备？回答二级天赋差了点，学习能力和努力够， Cfa 的财报部分，了解抽凭、函证等
+
+7．每周工作几天，反问工作节奏？和正式员工一样12点左右下班
+
+
+
+
+三、信用债
+
+学校水平、家庭情况、硕士情况
+
+
+研究部工作强度，工作时间到12点
+
+对 wind 的了解，英文水平
+
+
+
+
+四、SE 战略客户组（面试比较严格）
+
+为什么二级转行一级，一级投行的优势，
+
+
+腾讯做哪一块的内容，最自豪的一个 work ，利润结构最好得出相应的结论（回头要看）
+
+房地产组的研究
+
+对于万科的债务风险角度（数据表现：跟追每年的年报）、长租公寓和物业管理容易搬回来自己的利润率。
+
+万科泊寓的数据、市场占有率
+
+
+
+
+
+
+
+04
+
+金融销售心得
+
+
+
+
+
+最近在某头部基金公司做公募渠道销售，把自己的销售故事讲给女朋友，听君一席话，胜读十年书：
+
+
+
+
+1、销售要有自己的风格，要让人留下印象；忙了一天 或者过几天会想起这个人挺（可爱、幽默、专业、社牛等特征）
+
+
+
+
+2、销售比卖产品更重要建立人与人的联系；跑客户更重要的是让他对我这个人留下印象。（不然线上营销即可）
+
+
+
+
+3、可以留下个“话头”（就是下次能接上这个聊）
+
+
+
+
+4、可以更有激情，更话唠，围绕一个点聊，或者刨根问底（不要解决问题式聊天；而是对话交流式）
+
+
+
+
+有很多想分享的内容，欢迎老板们关注私信提问~
+
+有问题，就问老板好！
+
+
+
+
+最后也很感谢+推荐“lala实习日记本”，是我大二就关注并且广泛推荐给朋友们的，尤其是一些深度采访感触很深！！
+
+
+
+
+
+
+
+【北大实习图鉴】明明可以靠脸吃饭，偏偏跟我抢饭碗【清华实习图鉴】这样有颜又有才华的男神给我来一打！【人大实习图鉴】是勤恳的搬砖工也是精致的生活家这一路，是pta也是ib banker【浙大实习图鉴】从浙里出发，走向世界
+```

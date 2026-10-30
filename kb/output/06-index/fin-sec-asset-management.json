@@ -1,0 +1,105 @@
+{
+  "status": "indexed",
+  "positionId": "fin-sec-asset-management",
+  "positionName": "券商资管",
+  "aliases": [
+    "券商资管投资经理",
+    "资管产品经理",
+    "券商资管研究员"
+  ],
+  "vectorStore": "keyword-inverted",
+  "points": [
+    {
+      "category": "coreDuties",
+      "text": "作为计划管理人，对资产支持专项计划的基础资产进行全面尽职调查",
+      "kpId": "fin-sec-asset-management-kp-001"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责资产证券化业务的内部质量控制与内控机制执行",
+      "kpId": "fin-sec-asset-management-kp-002"
+    },
+    {
+      "category": "coreDuties",
+      "text": "在专项计划发行、管理合同中就应收账款等基础资产信息作出陈述",
+      "kpId": "fin-sec-asset-management-kp-003"
+    },
+    {
+      "category": "coreDuties",
+      "text": "在《计划说明书》中披露基础资产信息",
+      "kpId": "fin-sec-asset-management-kp-004"
+    },
+    {
+      "category": "coreDuties",
+      "text": "对资产支持证券持有人承担合同约定的责任",
+      "kpId": "fin-sec-asset-management-kp-005"
+    },
+    {
+      "category": "workflow",
+      "text": "尽职调查：对专项计划基础资产执行尽职调查程序，制作访谈记录，确保底稿完整并经被访谈人签字",
+      "kpId": "fin-sec-asset-management-kp-006"
+    },
+    {
+      "category": "workflow",
+      "text": "内部质控：对资产证券化业务进行内部质量控制，执行内控机制",
+      "kpId": "fin-sec-asset-management-kp-007"
+    },
+    {
+      "category": "workflow",
+      "text": "产品发行：签署资产买卖协议，设立资产支持专项计划，发行优先级和劣后级份额",
+      "kpId": "fin-sec-asset-management-kp-008"
+    },
+    {
+      "category": "workflow",
+      "text": "存续管理：在专项计划存续期间管理基础资产，处理兑付事宜",
+      "kpId": "fin-sec-asset-management-kp-009"
+    },
+    {
+      "category": "workflow",
+      "text": "违约处置：在基础资产出现问题导致优先级本息未按时足额兑付时，提前终止专项计划并处理后续法律纠纷",
+      "kpId": "fin-sec-asset-management-kp-010"
+    },
+    {
+      "category": "pitfalls",
+      "text": "尽职调查过程未严格执行程序，部分访谈未制作访谈记录，尽职调查底稿访谈记录不完整，部分访谈仅有录音、未经被访谈人签字，可能导致监管警示函等行政监管措施",
+      "kpId": "fin-sec-asset-management-kp-011"
+    },
+    {
+      "category": "pitfalls",
+      "text": "未对专项计划基础资产进行全面尽职调查，内部质量控制不严，内控机制执行不到位，相关业务负责人可能被采取监管谈话的行政监管措施",
+      "kpId": "fin-sec-asset-management-kp-012"
+    },
+    {
+      "category": "pitfalls",
+      "text": "基础资产造假（如伪造公章、应收账款不真实）可能导致管理人向资产支持证券持有人承担违约责任，赔偿认购本金及收益损失",
+      "kpId": "fin-sec-asset-management-kp-013"
+    },
+    {
+      "category": "pitfalls",
+      "text": "交易对手可能以“通道”角色为由主张免责，但正式协议中未出现“通道”字眼，作为原始权益人的交易对手仍可能被认定需保证基础资产真实性",
+      "kpId": "fin-sec-asset-management-kp-014"
+    },
+    {
+      "category": "pitfalls",
+      "text": "在专项计划发行、管理合同成立时关于应收账款的陈述内容不真实，在《计划说明书》中披露的应收账款信息不真实，可能构成违约",
+      "kpId": "fin-sec-asset-management-kp-015"
+    }
+  ],
+  "sources": [
+    {
+      "postId": "b06325202b7535c0",
+      "title": "资管 | 从券商ABS尽调失职被罚谈：ABS尽职调查清单",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792412508&ver=7036&signature=Vz1ZUPpvS0F9XiYzeghRZJSrE-tAyHwgXYnFr4uvarvbrHK-WlxU76S-DLO-jy4G4gO*nbvQfn15DKn4TyULeGzNX7a5AazwtQGqtWb8OWJVuQVkjb9gWOiwcKVq7uP8&new=1"
+    },
+    {
+      "postId": "81f3910fca7b4fe6",
+      "title": "面试资管机构：我只和AI聊了几分钟",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792412543&ver=7036&signature=OxkoUaEKmZfpka2Y*S28oQBjPwPBJPgDDPL0DBvD0IZVknQbv1XfJ5HcXVHblmFQ*zx11n-SLqf*wnLqT8ti5f6GJOqkc*FjOyOuQbkbg-rkGJFcgevz4l1KCRgd5TjC&new=1"
+    },
+    {
+      "postId": "e63db1c61f3f3d79",
+      "title": "信达资管笔面试都考啥——AMC面试真题",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792412543&ver=7036&signature=MbfHssDZx*idmspji-A5ZtAYwx0bgGZZ7wZAJQ*FFYV6r07qouH5LwPZfR2yRXqk04A9kEMUHAuXWtttgH4fTDsjyAW538NcrHnFArVORyK0y0ySTjUYP8ekIlfR1vec&new=1"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "positionId": "fin-ins-actuary",
+  "sampledKpIds": [
+    "fin-ins-actuary-kp-002",
+    "fin-ins-actuary-kp-018",
+    "fin-ins-actuary-kp-014"
+  ],
+  "totalPoints": 30,
+  "faithful": true,
+  "issues": []
+}

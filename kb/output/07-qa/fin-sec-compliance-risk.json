@@ -1,0 +1,15 @@
+{
+  "positionId": "fin-sec-compliance-risk",
+  "sampledKpIds": [
+    "fin-sec-compliance-risk-kp-005",
+    "fin-sec-compliance-risk-kp-051",
+    "fin-sec-compliance-risk-kp-036",
+    "fin-sec-compliance-risk-kp-056",
+    "fin-sec-compliance-risk-kp-046",
+    "fin-sec-compliance-risk-kp-065",
+    "fin-sec-compliance-risk-kp-066"
+  ],
+  "totalPoints": 69,
+  "faithful": true,
+  "issues": []
+}

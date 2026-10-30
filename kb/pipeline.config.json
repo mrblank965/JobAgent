@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "updatedAt": "2026-10-15",
+  "goal": "支撑「拆解 JD」功能：判断岗位到底做什么、还原完整工作流程",
+  "principle": {
+    "primary": "优先采用知识库里的真实岗位内容作为依据",
+    "fallback": "知识库未覆盖的地方，由大模型用自身知识补充，并明确标注为「推测」"
+  },
+  "scope": {
+    "industries": ["金融", "互联网"],
+    "directions": {
+      "金融": ["银行", "证券/投行", "基金/资管", "保险", "互金/金融科技"],
+      "互联网": ["运营", "产品", "风控/反欺诈", "数据分析"]
+    }
+  },
+  "orchestration": {
+    "dispatch": "serial",
+    "maxRetriesPerStage": 2,
+    "maxQaFallbackRounds": 2,
+    "failurePolicy": "skip-and-record",
+    "pilotPositionCount": 3
+  },
+  "qaSampleRate": 0.1,
+  "clean": {
+    "minQuality": 60,
+    "minChars": 100
+  },
+  "positions": []
+}
