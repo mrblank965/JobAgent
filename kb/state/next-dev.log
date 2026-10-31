@@ -152,3 +152,55 @@
  POST /api/parse-resume 400 in 4.8s (next.js: 4.7s, application-code: 177ms)
  POST /api/web/search 200 in 624ms (next.js: 63ms, application-code: 561ms)
  POST /api/analyze-jd 404 in 140ms (next.js: 44ms, application-code: 96ms)
+⨯ ./src/lib/optimizeDocx.ts:144:103
+Error: Module not found: Can't resolve 'docx'
+  [90m142 |[0m ...
+  [90m143 |[0m ...
+[31m[1m>[0m [90m144 |[0m ...[33muleType[0m, [33mTabStopType[0m, [33mTab[0m } = [36mawait[0m [36mimport[0m([32m"docx"[0m);
+  [90m    |[0m                                        [31m[1m^^^^^^^^^^^^^^[0m
+  [90m145 |[0m ...
+  [90m146 |[0m ...
+  [90m147 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/lib/optimizeDocx.ts [Client Component Browser]
+    ./src/app/optimize/page.tsx [Client Component Browser]
+    ./src/app/optimize/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/lib/optimizeDocx.ts [Client Component SSR]
+    ./src/app/optimize/page.tsx [Client Component SSR]
+    ./src/app/optimize/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/lib/optimizeDocx.ts:144:103
+Error: Module not found: Can't resolve 'docx'
+  [90m142 |[0m ...
+  [90m143 |[0m ...
+[31m[1m>[0m [90m144 |[0m ...[33muleType[0m, [33mTabStopType[0m, [33mTab[0m } = [36mawait[0m [36mimport[0m([32m"docx"[0m);
+  [90m    |[0m                                        [31m[1m^^^^^^^^^^^^^^[0m
+  [90m145 |[0m ...
+  [90m146 |[0m ...
+  [90m147 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/lib/optimizeDocx.ts [Client Component Browser]
+    ./src/app/optimize/page.tsx [Client Component Browser]
+    ./src/app/optimize/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/lib/optimizeDocx.ts [Client Component SSR]
+    ./src/app/optimize/page.tsx [Client Component SSR]
+    ./src/app/optimize/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
