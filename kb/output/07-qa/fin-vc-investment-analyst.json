@@ -1,0 +1,12 @@
+{
+  "positionId": "fin-vc-investment-analyst",
+  "sampledKpIds": [
+    "fin-vc-investment-analyst-kp-017",
+    "fin-vc-investment-analyst-kp-033",
+    "fin-vc-investment-analyst-kp-040",
+    "fin-vc-investment-analyst-kp-004"
+  ],
+  "totalPoints": 42,
+  "faithful": true,
+  "issues": []
+}

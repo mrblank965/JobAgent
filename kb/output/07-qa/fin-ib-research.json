@@ -1,0 +1,12 @@
+{
+  "positionId": "fin-ib-research",
+  "sampledKpIds": [
+    "fin-ib-research-kp-019",
+    "fin-ib-research-kp-038",
+    "fin-ib-research-kp-006",
+    "fin-ib-research-kp-031"
+  ],
+  "totalPoints": 39,
+  "faithful": true,
+  "issues": []
+}

@@ -1,0 +1,17 @@
+{
+  "positionId": "fin-pe-investor-relations",
+  "sampledKpIds": [
+    "fin-pe-investor-relations-kp-017",
+    "fin-pe-investor-relations-kp-050",
+    "fin-pe-investor-relations-kp-047",
+    "fin-pe-investor-relations-kp-092",
+    "fin-pe-investor-relations-kp-004",
+    "fin-pe-investor-relations-kp-033",
+    "fin-pe-investor-relations-kp-007",
+    "fin-pe-investor-relations-kp-030",
+    "fin-pe-investor-relations-kp-012"
+  ],
+  "totalPoints": 94,
+  "faithful": true,
+  "issues": []
+}

@@ -1,0 +1,16 @@
+{
+  "positionId": "it-ops-user",
+  "sampledKpIds": [
+    "it-ops-user-kp-026",
+    "it-ops-user-kp-059",
+    "it-ops-user-kp-071",
+    "it-ops-user-kp-029",
+    "it-ops-user-kp-053",
+    "it-ops-user-kp-036",
+    "it-ops-user-kp-074",
+    "it-ops-user-kp-016"
+  ],
+  "totalPoints": 80,
+  "faithful": true,
+  "issues": []
+}

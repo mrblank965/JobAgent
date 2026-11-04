@@ -1,0 +1,256 @@
+{
+  "positionId": "it-da",
+  "positionName": "数据分析师",
+  "aliases": [
+    "业务数据分析",
+    "商业分析",
+    "数据运营",
+    "数据分析岗"
+  ],
+  "coreDuties": [
+    "基础的数据统计指标分析工作，即日常的报表制作与数据统计。",
+    "随着业务发展相应的分析工作，包括波动分析、作弊分析等规律性分析，AB实验分析以及各类专项分析报告。",
+    "建模工作，建立业务模型，构建指标体系。",
+    "检索和收集数据，利用数据得出对公司有意义的结论，提供决策方案。",
+    "参与从建立分析系统到基于收集数据提供见解的所有工作，并培训其他人使用数据收集系统。",
+    "利用SQL语句完成数据收集工作，部分深度分析用户行为的数据使用SQL取数时间可能占整个分析过程的50%。",
+    "提供运营策略，通过数据帮助公司做出更好的业务决策，制定合理策略协助企业解决实际问题。",
+    "提供基础报表，满足基础需求；分析业务和产品，提供业务运营和产品优化建议；提供战略分析和战略性报告；开发数据产品（主要由数据产品经理负责，分析师可能提需求）。",
+    "数据埋点的规划、确认和梳理，与产品经理配合确保核心数据指标埋点上报逻辑正确。",
+    "数据指标体系的构建，梳理不同层级的指标体系，明确计算逻辑、口径和使用场景。",
+    "业务日常分析与专题分析，包括产品功能上线收益分析、关键指标日常监控和异动分析。",
+    "数据报表的配置搭建，包括每日邮件、Tableau或其他线上报表，以及日报、周报、月报等。",
+    "定义问题，明确客户需要仪表盘、报告还是对产品做出分析并给出建议，制定行动计划。",
+    "收集数据，将来自SQL备份、文本文件或API等不同来源的数据放在一处，与程序员一起开发ETL过程。",
+    "清洗数据，进行数据规范化和标准化，以及数据验证。",
+    "生成报告和可视化，创建视图，设计报告和可视化内容。",
+    "与产品经理沟通，了解产品功能关注点，设计评估功能好坏的指标并做成报表监控走势。",
+    "找开发人员做数据上报（埋点），撰写上报文档，对齐埋点信息、位置、上报时机和参数。",
+    "主动与产品经理聊产品规划，寻找数据可以支持驱动的方向，将感性问题抽象成可量化的数据。",
+    "通过数据发现用户背后的痛点，量化痛点并给出优化迭代建议。",
+    "产品数据分析师侧重于产品埋点梳理、产品功能分析、产品核心指标分析、产品用户分析。",
+    "运营分析师的工作主要包括运营策略评估、运营活动分析、日常经营分析、商业效果分析等。",
+    "通过多种方法从数据中发现业务中存在的问题和不足，提出改进策略推进落地，并评估策略或功能上线之后的效果。",
+    "产出基本数据表格、线上数据报表、数据分析报告以及其他相关文档（如埋点文档、PPT报告等）。"
+  ],
+  "workflow": [
+    "接任务：接受上级安排的分析任务，明确任务背景和需求。",
+    "谈需求：与业务方接口人当面沟通，了解分析背景、期望目标、涉及部门、之前所做工作及效果，咨询业务知识和工作流程，索取工作文档。",
+    "拟思路：使用脑图工具梳理分析思路，对指标进行层层拆解细化，找出问题根本原因。",
+    "向领导汇报分析思路，获取反馈和注意事项。",
+    "定指标：将分析思路转化为相应的指标、汇总维度以及合适的结果形式，给出数据统计的时间范围、来源表、具体指标的计算逻辑等。",
+    "取数据：寻求数据开发工程师协助，将指标转化为SQL代码统计数据，分批次获取数据结果以便及时开始分析。",
+    "做分析：粗略检查数据结果准确性，详细查看每部分结果并思考数据结论，用图表展现出来。",
+    "写报告：按照分析思路整理PPT报告框架，丰富各部分内容，将核心分析结论放在报告最前面，每页结论写在标题中，图表从Excel拷贝并调整。",
+    "改报告：向领导汇报初稿，根据反馈细化分析，交叉维度做更深层次分析，修改报告直至获得肯定。",
+    "发邮件：以邮件形式将PPT发给业务方接口人，抄送双方领导，核心分析结论贴在邮件正文，并联系对方约定讨论时间。",
+    "专题分析一般分为三个阶段六个步骤：第一阶段问题识别与构建（识别问题、回顾之前的发现）；第二阶段定位问题并给出解决方案（建模变量选择、收集数据、分析数据）；第三阶段传达结果并推动结果落地（传达给相关方数据分析结果并采取行动）。",
+    "数据报表配置时，依赖调度任务每天自动定时产出数据表，线上报表将表数据直接或间接呈现出来。"
+  ],
+  "tools": [
+    "SQL（包括Hive SQL、MySQL、ODPS等）",
+    "Excel",
+    "PPT",
+    "Python（Numpy、Pandas、Matplotlib等基础数据包）",
+    "R",
+    "Tableau",
+    "FineBI",
+    "Power BI",
+    "SAS",
+    "SPSS",
+    "Anaconda",
+    "Linux Shell",
+    "Xmind等脑图工具",
+    "腾讯文档",
+    "爬虫工具（requests、lxml、BeautifulSoup、pyquery、pymysql、pymongo、selenium、scrapy等）",
+    "sklearn",
+    "matplotlib、seaborn、pyecharts、bokeh等可视化工具包",
+    "HDFS、Spark、数据仓库",
+    "AWS/Azure等云平台",
+    "友盟、Google Analytics、百度统计、TalkingData、GrowingIO等埋点和数据采集平台",
+    "Keynote、AI、PS"
+  ],
+  "typicalDay": "上午到公司后，先浏览互联网、科技、财经等资讯信息，了解行业最新发展趋势，并列出当天工作事项的计划清单。随后接到上级安排的紧急分析任务，立即联系业务方接口人当面沟通，了解分析背景、目标、涉及部门和已有工作，索取工作文档。回到工位后用脑图工具梳理分析思路，对指标进行层层拆解，并向领导简要汇报思路、获取反馈。接着设计分析指标，将思路转化为具体指标、维度和结果形式，明确统计时间范围、来源表和计算逻辑。随后找数据开发工程师协助写SQL取数，收到数据后先检查准确性，再详细分析结果并用Excel绘制图表。下午开始撰写PPT报告，按照分析思路搭建框架并填充内容，完成后向领导汇报初稿，根据反馈交叉维度做更深层次分析，修改报告直至获得肯定。最后以邮件形式将PPT发给业务方接口人并抄送双方领导，核心结论贴在邮件正文，联系对方约定次日讨论时间。下班后可能还需要阅读专业书籍补充业务知识。",
+  "pitfalls": [
+    "基础数据统计工作感觉没有太大价值，却遍布于日常工作中，想逃离又逃不开；大部分分析师能力止步于此，如果没有这部分工作可能面临失业问题。",
+    "不同公司分析师岗位职责并不清晰，三部分工作占比天差地别，入职时最好问清楚工作职责，否则理想和现实可能有差别。",
+    "数据分析师在工作中缺少主动权和话语权，仅仅被当做数据工具，Title是数据分析师实际上却是提数工程师。",
+    "工作缺乏ownership，分析师对什么都负责又好像什么都不负责，OKR难以清晰定义，升职时会被问创造了什么价值。",
+    "上升空间相对狭窄，技术大神直接创造价值的机会少，跟着业务飞是被动的，跟着老板飞是无奈的。",
+    "行业门槛相对偏低，大量应届生和转行者涌入，初级职位竞争激烈，公司招聘的bar被人为提高。",
+    "行业其实不需要那么多人，一个分析师可能对接两个产品经理，而一个产品经理对接约十个工程师，分析师不是刚需。",
+    "清北复交已经是常见配置，工作时间长、劳动强度大、容易背锅。",
+    "数据分析师容易陷入多线程工作，一旦多线程就容易压力大、情绪烦躁，还无法落地有成果，最后进入不好的循环。",
+    "很多数据分析师岗位存在被动的提数支持，价值有限，离高阶数据分析专家距离很远，这种距离很难用经验来弥补。",
+    "数据总是乱糟糟的，有人用三种不同的数据格式，有人名字莫名其妙大写，有人忘记添加用户ID导致系统中定位不到。",
+    "开发人员出了名的喜欢diss，平时要跟开发人员打好关系，否则沟通效率低。",
+    "业务方会疯狂催促，不对齐进度后面会被无情call。",
+    "分析结论不够深入、不够言之有物时，会被领导认为经不起PK，需要交叉维度做更深层次分析。",
+    "报告中的数据一定要准确，结论一定要经得起推敲，否则前面的付出都白费。",
+    "数据分析师需要不断学习，客户运营等业务知识欠缺时，提炼分析结论和给出业务建议会显得吃力。",
+    "数据分析师的具体工作职能，一部分会被别人分走，一部分会被机器取代，任何公司对分析师的需求不会随业务成比例增长。",
+    "中低端的数据工作会逐步被AI技术和工具迭代淘汰，最终只留下一小部分高端人才作为老板的智囊。"
+  ],
+  "sources": [
+    {
+      "postId": "efd8f74d33a3c457",
+      "title": "揭秘：高薪数据分析师日常工作有哪些！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326553&ver=7034&signature=YnGLv6puNn3fMSAVBjQbK5-3JCYkBEY0VBCRK*tJBD3Nku7dkrOJbS2f2iin1c5XjIblJRsNryc-anQBfbw7iLLM-sZ1XxMJE3AyC3jeNQb9y0Qcb2TWKGzmLuJP6pG9&new=1"
+    },
+    {
+      "postId": "c5c2cc36e1908b5e",
+      "title": "Day 6 | 关于数据分析师的最常见的几个问题和答案",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792326553&ver=1&signature=tGYbdKYPMZ7i8mOT0FghCR9Te539NzqA0n9kD-qow5GG47YXr3XBC01pxrc2hKcIS18c9UjUAXmoSl2s*OAtBSbXyIw7cSUp9RfR4SQ8T-HciXQq5LfHQ38DQC-gw0545LOVakLB*XCuX98xAgVhiYDkkKirExUUevpSFP2AxTs="
+    },
+    {
+      "postId": "04412ca3d2add602",
+      "title": "典型一天：来，看一看数据分析师的日常是怎样的",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326553&ver=7034&signature=86Y-ufLYPULYbSE5KX03RGxLtBvm3f5iL1c2hz-5Tov6vrJkM45q6SLhQ9vtZS7T4sDHiIHcRUYp40T8-ki*g1okYTWeFVTJ6-i8vwWpt3Sp0M3J64BKgIL-j27fU5rq&new=1"
+    },
+    {
+      "postId": "abed63d4e1e72ce4",
+      "title": "我在阿里做数据分析：一位阿里数据分析师的日常",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326553&ver=7034&signature=jVrrZDdrjqimb*cg7KJDasWQNkOBj6HTvGANdaI8PW8J4HcfXSioMgsJgs6p8v4V*XNBIXBlMBRD8uxI1MpPwrXc371WfaRpIvi-PF46JChwS2IX*Kf3MI-Y8shW-2*Y&new=1"
+    },
+    {
+      "postId": "7d680903306db4fb",
+      "title": "我在腾讯做数据分析：一位数据分析师的日常",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326553&ver=7034&signature=jVrrZDdrjqimb*cg7KJDasWQNkOBj6HTvGANdaI8PW*b4C-E3HHwcDMfI7iWiKMDAq3gTnZTlMkUH*uHd0hIVWqiftDh0k-PXQKj7MMLFP0SgnBgcqbUi4xhD2kxpyTq&new=1"
+    },
+    {
+      "postId": "f1c4d8e757b40ad2",
+      "title": "如何进行业务分析？（数据分析师日常工作&面试指南）",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326553&ver=7034&signature=NNvoJoJZB*nY6LDHjzs8CmDQQwy8YFVBWwjWyJW-P75*JE3aYR4G07kUl-1qnigBuNRX4KKjb3UJWcPhwTUF1zEpe5TTEyU10i*B9vnl3oNZlqcYBk7TEWD8b0w0rKEK&new=1"
+    },
+    {
+      "postId": "8922af039146e82a",
+      "title": "数据分析师常用的数据分析方法有哪些？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326553&ver=7034&signature=VXhjZyTNSXUwuoPDT2ee-mIe6ODHOhg*bWuiutCSpuOh1I0Cxvrz5Cs0*fAaVCDQjFXJ2hzqtIHTB*aJMPM6gLj-vBkEjXnjWPp3OS27E9m*f2E5l27x-CHIOWTYR-jQ&new=1"
+    },
+    {
+      "postId": "465510bfbaa7dee9",
+      "title": "解读| 拥有一份数据分析师的工作是一种怎样的体验？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326603&ver=7034&signature=yQg1abjjMr-Uy-UUlmvAKQDtgKiZEm*gIj0MSvjyFGDJGY4huEskKVzIZG7Wwc-XKBHI2uX9ic*klyq0*KwITnE6CI-WHmZD5kTeqhDGPs7dS5c95m1hkLkoWGkH9IQ5&new=1"
+    },
+    {
+      "postId": "a39d005ef673a6a7",
+      "title": "值得收藏：“互联网数据分析师”养成与晋升指南【文末送书】",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326603&ver=7034&signature=ln013oOwECY05da9ksgp5BbzJvUUzCPXLHRxzRPV48EOzdaRGajPG79Hkx29wBYKSSAi75G99Gyhbt4ZF*vKXqr-z4XUv*F99gP7LGoFGnXeXuFVEHgOKOUQKRMTO7jF&new=1"
+    },
+    {
+      "postId": "78da0a09455047c7",
+      "title": "劝退贴慎入: 数据分析师的危机感",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326639&ver=7034&signature=FIwnXGrmZkeII8MOUoB9BVmJS-juAVobjLr2iAxamsztfn*nXIZ-FvIUxUjOj9rrNkiNBhNDSSW1sysejcWkE9LKAzqdxHQCwvLJbiTJRN62Z7jKvRqvqvP6RG5j7yqc&new=1"
+    },
+    {
+      "postId": "5beb45259dfd06b9",
+      "title": "全网高喊“劝退”的理工科专业，比文科还惨？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326639&ver=7034&signature=YREzqEfMCcxiU8bwFf2aito6PvECd27hvlvbFFEb5F9B0ApwYakMRJho3VmioRogyobVLdgFwsdLbg29BA3q*FFqGMXJb0dxPddg-ul1ibgeIeUv2AvBfXKsHGKguqoE&new=1"
+    },
+    {
+      "postId": "8037af1fb95e35d2",
+      "title": "惨遭“官方劝退”的『金融工程』",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326639&ver=7034&signature=hYSN7KnZvN59IgJT0amAb3grQQjsld7dtpmthoAtH-bZrXRJwgt-fRfVcQtwqtIy8odmgLe3KSVRkggrOO3PTGvhBeXX5No*ci68RMzNhtIz4J6Wm5Ce6NBggrtSgVG*&new=1"
+    },
+    {
+      "postId": "5afa8a87bf5d7d3a",
+      "title": "数据分析师还是不是一份好工作？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326639&ver=7034&signature=qYtzoZgEYxFF-aSGm*NoEdrJ7UwsUhECFQM-FMsVHIERS-8e2y*tDPJnFVGx*O149ibZy33VVsWLd-nIRz2bNU6z2wkTEV8Ft1XofExZme*iJv7QzOlvNswRooT32DZW&new=1"
+    },
+    {
+      "postId": "ca41a05a081080b3",
+      "title": "面试数据分析师的思考",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326639&ver=7034&signature=sPoUjg-x5UN1D*xECbcH29pJitQO1k1UQYY4d2HWoA06KqMesWCuZ54o*Vvugk5YrAykhhJVUgHptRD8C4tuwePINKkp0EZAVw3xHe47jsNpde0cpXZaRUMoIhGtHhg5&new=1"
+    },
+    {
+      "postId": "21a84efba1f23087",
+      "title": "【每日一专业】数据科学与大数据技术：新专业别盲目冲，看清这几点",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326639&ver=7034&signature=A8BQot4rk8oYtGh*9fIi59wtWNe4nORmvHVwq97BAAt1Qp5awohN9lFQ-arVbhCOgHAcChpbXCt*OKtb8bJbdQK78oLDsZuEuZsDW9*TaFhNxIBGgJFsczFanf9DN*SC&new=1"
+    },
+    {
+      "postId": "9327fc8f9a99c658",
+      "title": "这些热门专业被“劝退”？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326689&ver=7034&signature=JIbAHAb-hvC1lct9Pd3MrckCdEpP5Ht2GyihaUN3Cwpsl4TIifU9i*PU5I*q-Yi5ut45Q6TVezOAQKxAytR3uOhA5jVIoZ8NTFTxF5tHP3W39hEUy5IdaI0ynjlAmdbt&new=1"
+    },
+    {
+      "postId": "75080f87b8e0ae29",
+      "title": "这些热门专业被“劝退”？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326689&ver=7034&signature=aUZkDnaWH8GMl6SLiuJeBkXdHbBuJGA6U3KliaO0HB1Z40sN30Zn2qPBUgC96ih0sDv7MsD-gIESVVSLHcV*kpb6uZhG5ToMZQiYP7mB00*zejUM58vW7YRK*mONTfMr&new=1"
+    },
+    {
+      "postId": "d3769e5d234be636",
+      "title": "这些热门专业被“劝退”？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326689&ver=7034&signature=8GaIg-2Kvc5RZH8WSjmxJG64mWeYeQaPqE5yFCyQ9K01Gi1pSuvp9J*xM5R8roeogjQJ68*guObQTDbDGjq63sB8fiEcN0fAFkSYVXbAB9C8LabtfJ9Cqdvyi2rnHxiY&new=1"
+    },
+    {
+      "postId": "221c2031cc4a4c7d",
+      "title": "数据分析师，岗位真相最全解析！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326725&ver=7034&signature=bW8y9aHAHVHYvDxy*-XH3tQhdhvBjHQxj1vFaZSVrmb6UEniP8*PTMVpbazF8XPchW*WdfWUNzq1zApqz9-TX6cmy2pCCMVVkdqDUNM54KeAlTSXU8wRIz4Dh6M5j5Ux&new=1"
+    },
+    {
+      "postId": "c7dcdb33dc602f2f",
+      "title": "去面试数据分析师岗位，做一个什么样的实际案例去比较好？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326725&ver=7034&signature=YpuTC43UVGB7AXqyNQZApuJIYjLJBzpoEQHDZULSAm8W5P1zDf*oelJWh7LWcWiQLKPidmFZlz11y8Wt0Ux2WL0GLwUMRosDhVpba7gVM0wz4gSgag0sltsPNPL87H5Z&new=1"
+    },
+    {
+      "postId": "fef12964dbe30f76",
+      "title": "【干货】数据分析师的真实写照：写给喜欢数据分析的初学者",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792326725&ver=1&signature=VYNSpw6Swdr6oRUroO4aa6IQ9eiO0DWG077yCZNBMFHT42L*TLo6M*LTZMej3oT4O1GgQcjq7WobK0Q4u0cV6WSGhQDJT*IzxC*8hmiIvCTagSIPcdWQhwNDVNtT*eWFTdeSgaVOSDZAcQZadB-VTg=="
+    },
+    {
+      "postId": "aada36238c30eaac",
+      "title": "数据分析师到底要做哪些工作？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326725&ver=7034&signature=IERtrsACnOPun49wCdIetFKY52s-UTczLReJgDPTrb5kQQqUGTQUJ59pt6SALznhNikd9D4bo-Sv5tXb*LrOGhJKRdmwfyrNRVF6bGp322W7tFoOCDxQxc6r6hSdeCTL&new=1"
+    },
+    {
+      "postId": "ff2555853225d116",
+      "title": "南大学霸、腾讯子公司数据分析师：工作半年再留学，拿下NUS、NTU多个录取！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326725&ver=7034&signature=YE4GnL58hxXVWjRbRbtuuwlPgwHWUmm4vU9upxlf8WTOJBJUZJQhGL30KsHeMTy8xJJY90cGBD*oi2LfY6Me7osDuE5zXmNX8ACZeZldCMWf8YKkzXK6BhzvkWmcBR7-&new=1"
+    },
+    {
+      "postId": "0fe1585bb4261713",
+      "title": "数据分析师真实的一天",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326776&ver=7034&signature=E65QRpI5-M8A**QUWrFPDOdmzFlVyTtE*uqw8dO0KYZZWcDz5uaRyUZTm0uUG9uUkuei6zx-IKg5d-k1DQSrU*pupB7aqJ7GsOBvsa-0hB83gQey8P3M5UG94fJoWn2b&new=1"
+    },
+    {
+      "postId": "f19e574797a8d1da",
+      "title": "数据分析师如何突破瓶颈，更好的完成本职工作？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326776&ver=7034&signature=w9xIuYX163QxptN86Cui*o4d4cpE0VvzYD6s2kWc6rTMvyRwjuL4vSclw7kssMZKhRT6wgTCTLGxKOm6a2pd2BVNE8*4m7x2ipa2QQOt8xgJQv1tQqutKeAjMnUqgwKt&new=1"
+    },
+    {
+      "postId": "cbe401db0b93f518",
+      "title": "数据分析师的职业生涯规划",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792326776&ver=1&signature=bk2VPejtyz48woDa5qtblVbZOG7-Fsd0uHdwravaIaVkFVR8hlwR0vOC5bWJCOApNBp*YB1N05WBHUMIhlNRuF0JEMOrjgvG*lJ52y0B*9ROxaYVPIto5adU-U1WTZQ2qCgaW0Vgk*HUoMOhag7EVXNIVh3DDgVVdihWdxaPN-s="
+    },
+    {
+      "postId": "5e5a6018beaae237",
+      "title": "没有工作经验，能应聘「数据分析师」吗？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326776&ver=7034&signature=3g0maDuJpKACEQvuWEexu9QGQc5Ecsx1gPOs9B*EkMlywalJlgVSjJ-4hBupfczc2bcvjRE9pjavybCL007cLh8O80uhB*yljzrU7h5EsRslFANOPwMI6u212EHXANDL&new=1"
+    },
+    {
+      "postId": "2c904a6cb94f56ab",
+      "title": "想转行数据分析，看完这篇再做决定！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326811&ver=7034&signature=jVrrZDdrjqimb*cg7KJDasWQNkOBj6HTvGANdaI8PW9UGfwKaxxwUYneeoeNYI9yIo8sidwsJHSG*b5UmBG0FjY0eANkciCw00GWHBEImTvX-4M1kHvMBHI2VZWUgB-K&new=1"
+    },
+    {
+      "postId": "99eb7ccef2b8f79a",
+      "title": "转行做数据分析，最难的不是技术",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326862&ver=7034&signature=wg1CwPxbjUokjIZYQnG8b6ssmMwWzZz5R5ciJJ*bByTuV50zcdpm13O3fGNeh7hFYvRSOCEvpgf9wmgfGjzUi7iSBmUXx**KW2MRjpiPwaPrRKDdc5-qIuAN7qz3Sy2C&new=1"
+    },
+    {
+      "postId": "2f2e0297c4b969ea",
+      "title": "分享一个数据分析转行经验",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326862&ver=7034&signature=ybl0drgvqDAM0fqUYUi--INHeL8prQuN0QggZUJCOJSFXPpH88pFncKEhwEH9DHm1*lVqH8I3Bttwf2YPJ4EtJPA4*eVyGAKZXk6PnAbtksqg-*SjHFSK1xONT1-hKwN&new=1"
+    },
+    {
+      "postId": "d514bc22a467de91",
+      "title": "我的数据分析转行之路",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326862&ver=7034&signature=jVrrZDdrjqimb*cg7KJDasWQNkOBj6HTvGANdaI8PW*X1TjwpHm3hV5AmgL7U8FOkroEd3D8IlZeDf9iYLiHAamuONngUaVqV8XuUtgcK5uw92Q1QXRzoBDyunEqdLIk&new=1"
+    },
+    {
+      "postId": "7004e92bcbfe9c10",
+      "title": "工作四年后，我选择了“裸辞”，转行数据分析…",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792326862&ver=7034&signature=yQg1abjjMr-Uy-UUlmvAKQDtgKiZEm*gIj0MSvjyFGDnKcXCYIWZ6ZP4gj5YNL-p*WdjtNwKgWnH-lqslgl35VDwXMcUtlLwYBq5o0whz8PCHyG2f97b6oZHLH84UbGF&new=1"
+    }
+  ]
+}

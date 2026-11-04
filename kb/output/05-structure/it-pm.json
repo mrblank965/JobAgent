@@ -1,0 +1,124 @@
+{
+  "positionId": "it-pm",
+  "positionName": "产品经理",
+  "aliases": [
+    "产品策划",
+    "产品专员",
+    "B端产品经理",
+    "C端产品经理"
+  ],
+  "coreDuties": [
+    "进行需求分析，通过海量数据分析和用户调研了解用户真实使用需求，例如分析弹幕规则、奖励机制等细节。",
+    "负责需求设计，输出产品方案和需求文档（PRD），将想法转化为开发可理解的原型图和详细文档。",
+    "与多个部门（技术、开发、设计等）沟通协调，推动产品方案落地，确保功能实现。",
+    "跟进产品从设计、沟通到开发的全过程，处理功能逻辑、潜在bug、用户感受等细节。",
+    "产品上线后关注数据表现和用户反馈，若产品不被用户接受或数据目标未达成，需进行复盘和迭代。",
+    "在项目推进中管理需求优先级，与业务方沟通功能背后的逻辑和预期效果。",
+    "参与项目管理，包括版本迭代、管理bug、管理需求等。",
+    "进行竞品分析、市场分析、商业模式分析（BRD）、内部外部资源分析等。",
+    "编写各类文档，如PRD、MRD、BRD、业务逻辑图、竞品分析报告、数据分析报告、工作汇报。",
+    "在AI时代，可先用AI工具构建可运行原型，再从原型代码和对话记录反推出准确PRD。",
+    "部分岗位需兼售前、实施、培训和客户支持，或负责产品全生命周期管理。"
+  ],
+  "workflow": [
+    "需求拆解：先搞清楚“为什么做”，明确需求解决的是谁的什么问题，做了能带来什么价值，把需求拆到最底层找到用户真正痛点。",
+    "方案设计：从目标倒推路径，设计产品方案并输出原型和需求文档。",
+    "推进落地：建立节奏，与设计、开发等团队成员沟通协调，推动方案实现，而不是只会催进度。",
+    "复盘迭代：把经验变成方法，对上线后的产品进行复盘和迭代。",
+    "AI时代工作流：先用Codex、Claude Code、Trae等AI工具构建可运行原型，再围绕原型评审，最后把原型沉淀成PRD。",
+    "每日制定工作计划，确定每项工作大致需要的时间、完成时间节点和紧急重要程度，按顺序执行（可参照四象限法则）。",
+    "使用番茄工作法（集中25分钟休息5分钟）或橘子集中法提高专注力和效率。",
+    "定期总结自身工作方法，将外部学到的知识通过实践转化为自己的流程。"
+  ],
+  "tools": [
+    "产品管理工具：JIRA、Asana、Trello",
+    "市场调研工具：SurveyMonkey、Google Analytics、SEMrush",
+    "原型设计工具：Sketch、Axure、Figma",
+    "用户反馈工具：UserTesting、Hotjar、UsabilityHub",
+    "AI原型工具：GemDesign（中文友好，文生界面，支持代码导出）、Uizard（移动端首选，支持手绘转数字）、Galileo AI（高保真UI生成，与Figma集成）",
+    "AI编程工具：Codex、Claude Code、Trae",
+    "AI写作工具：Claude、通义千问（用于搭建需求文档框架）",
+    "AI辅助工具：Figma + AI插件（生成可编辑线框图）、AI搜索医学文献、AI生成SQL查询语句",
+    "其他工具：ProcessOn（用于产品培训用户、归总客户问题）、稿定设计（海报设计）、小鹅通（课程发布）、知识星球（社群工具）、公众号（内容发布）"
+  ],
+  "typicalDay": "产品经理的日常工作以需求分析和沟通协调为核心。每天需要处理大量数据，从中提取有用信息并分析用户真实需求，同时与形形色色的用户打交道。在确定需求后，需设计产品方案、绘制原型图并撰写详细的需求文档，将功能背景、预期效果、逻辑细节和潜在问题都考虑清楚。随后要与设计、开发等同事反复沟通，可能因一个按钮图标或功能实现难度争论数周，最终达成一致方案。产品上线后还需关注数据表现和用户反馈，若效果不佳则需复盘迭代。此外，产品经理需参加各种会议、评审，处理琐碎事务，真正能深入写PRD、做竞品分析、数据分析的时间往往被压缩，部分工作需在加班中完成以保证质量。在硅谷，产品经理更多时间花在思考团队架构、产品策略上，并注重与团队成员口头沟通，认为这比写需求文档更高效。",
+  "pitfalls": [
+    "产品经理在90%以上的公司是基础岗位，并非管理者，不要被“经理”头衔迷惑。",
+    "产品经理不是CEO，工作内容并非像CEO一样，需脚踏实地处理大量细节和沟通协调。",
+    "需求分析不难，难的是把想法和方案与工程师落地，否则想法只是想法。",
+    "与设计、开发沟通时可能因细节争执数周，需有耐心和沟通技巧。",
+    "产品上线后可能用户不买单，数据目标未达成，需提前有心理准备并持续迭代。",
+    "加班越多不代表能力提升越快，长期高强度加班可能导致压力大、效率低、容易烦躁、提高缓慢。",
+    "产品新人容易陷入琐碎事务（问问题、沟通、写日常文档、开会），导致整块工作时间稀缺，需合理规划时间。",
+    "没有形成自己的产品思维和方法论，做再久也难以提升。",
+    "不要照搬网上方法论，需通过实践将他人经验转化为自己的方法。",
+    "业务方可能在没有产品的情况下也能开展业务，产品经理不应被动接受所有需求，可建议用现有工具整合跑通闭环。",
+    "业务需求变化快，产品设计和研发周期可能跟不上，导致产品做一半需求就变了。",
+    "产品经理需有责任心，主动了解和帮忙解决问题，否则可能遇到开发抵触，不利于产品长期发展和团队和谐。",
+    "陪伴程序员加班时，可通过买零食、解答问题、帮测试等方式增进关系，但不应只做传话筒。",
+    "面试时需能讲清楚业务逻辑、自己具体做了什么、有无独立思考、能否接住追问、遇到分歧如何处理、结果有无依据、复盘是否具体、有无持续学习动力。",
+    "简历上写“负责”“主导”“从零到一”需能具体说明责任范围，避免在面试中卡壳。",
+    "项目成果写数字需能解释来源，没有数据就说明能确认的结果，不要随手加百分比。",
+    "复盘不要只说“加强沟通”“提升用户体验”，要具体到提前找谁确认、哪项规则想简单了、哪个决定导致返工等。",
+    "AI生成的原型需产品经理调整，不能完全依赖；涉及诊断建议等专业内容必须由专家把关。",
+    "AI是解放而非替代，产品经理的核心价值是定义解决用户问题的好产品，不是画原型。",
+    "不同公司产品经理岗位实际工作差异大，面试时需问清岗位最急需解决什么、需求由谁提出、冲突由谁拍板、分工如何、驻场出差加班安排等。"
+  ],
+  "sources": [
+    {
+      "postId": "5b29ac08da65eadd",
+      "title": "5分钟带你了解，产品经理和产品运营的日常工作",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324654&ver=7034&signature=i3*FptNT2YIFqFdvYKRzJIwORw9cL3X9nAMXHTkmmaKLVyMmUNeASuNxw2G8H3wQptKZQ1NuQIK139GHke1*7HBBHDE1rKR8u46JsZKXBGDMkU74ONIsTg1V1vqHIrWb&new=1"
+    },
+    {
+      "postId": "d8de50cda54c8f94",
+      "title": "产品经理的 Claude Code 指南:完整设置教程 + 真实 PM 工作流案例",
+      "url": "https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSw0vH71jBt04t2izGMkSEbtXkG60jajsvFqXa8Fplpd9olo7DWpea0I0ZikQiI6G9QUch6goCKDX2DnejjWXF46BQLs2E4P3mnXiF4bwMjjU6-yjvTmsxdT9va7AICkMReLUsTLmzECMvDy0oRHO6qH6l0tMJCrOC6UTu4Ig5hj29nwib8UmO7iOa0ybqnhS7wjk0_wLgaQmXhLfwz2PHFvuL0unUdKkuw..%26type%3D2%26query%3D%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9C%9F%E5%AE%9E%E5%B7%A5%E4%BD%9C%26token%3D3C3DBFAAEDD0589AA0A7FEB59EFE8019A1DFA4656AD4B4AA"
+    },
+    {
+      "postId": "24089967f0252c79",
+      "title": "加班越多，产品经理的能力提升越快吗？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324841&ver=7034&signature=oPbIOrMllBiBoGjFJFiz67jjE4wldNZowTToDWi3t5MJchb3FJcg9GL6eFLIVPng6BHytAofsMMf*ADD21qowp5w2PIrSKqAZW56NpNUPaV7nBqTn1UagSNKwLCQvRF6&new=1"
+    },
+    {
+      "postId": "293d404ed8aaf37f",
+      "title": "催产品经理加班赶工的人，都值得向她学习",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324841&ver=7034&signature=TR0oPd7JABj7kAeUHblNw9w46ZOfePusDwE7ZSi0FhF0Pxzb1WXeC2r-3N2JCH6dZPpVdcIVbB7OJ0SfqwIoklo1yFp7VHct7hll4NBIRtA8FgIsZpVTGmHvbO7aZKMs&new=1"
+    },
+    {
+      "postId": "8e00a8cb463d01d8",
+      "title": "别人家的产品经理系列：硅谷也加班、工程师导向、不能只会写文档",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324841&ver=7034&signature=-5Bw0uhIdgAuQphteHki*OogWkQ-hwssnNuKSfDD996ZrOY9bRjARga-GNY2xFENFXHzeMCSuWjCLBiyxmjhW3axVSk6ZkgRSFZ3uHivK7j818znGTOrVzfPlzFrKIAW&new=1"
+    },
+    {
+      "postId": "98cb94b7f4459819",
+      "title": "产品经理狂喜，需求文档秒变原型，这 3 款 AI 告别无效加班",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324841&ver=7034&signature=EUthtUewAIZHfBnUhNwUGavGI6JpVRnI3wCLaqQ-z8y5wdAlTF0wl02kkmpHu-zhBPbAbXcYTE01Yk2lSHmR1LmbUaHj7saG1p6J*GYNSvMg*5IzAOiOcDd-ylOVkDT9&new=1"
+    },
+    {
+      "postId": "8cbbc3280e6cef78",
+      "title": "医疗产品经理的AI工具箱：这几个工具让我少加班到晚上10点",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324841&ver=7034&signature=Oq14p5-y2PI5Pw3tTW9f8Sh5*8DEZIyQElg5ZOtScrpHkwDeNB2Pa7MfybDrGRTIbvMYeU6N-xkB6UKARbgmEgQ983056ksHrokyUqcxm*54AWXIY6mYtL2DhvkuH5EU&new=1"
+    },
+    {
+      "postId": "ef9376c74f19ec0d",
+      "title": "产品经理狂喜，需求文档秒变原型，这 3 款 AI 告别无效加班",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324891&ver=7034&signature=EUthtUewAIZHfBnUhNwUGavGI6JpVRnI3wCLaqQ-z8y5wdAlTF0wl02kkmpHu-zh2fArLttkdQGwhyRwijneQq-FeQjI1mWVVtfqTlQSlxUDBUiyGhgYuItMNTDesY0o&new=1"
+    },
+    {
+      "postId": "74da985ca62290c3",
+      "title": "项目经理让我陪着技术加班",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324891&ver=7034&signature=Bzh6qulnnSmQ8t4Wg8bsbuFM6r3xAnGKjuW*n4bbq*6F3ata8axL6DlqCy2g4GlF3w*AxI8fi-VZ4WZ85begwJsymon0b4U6ECNESONChiXY4iDIQ80URQwGyzNWWgzK&new=1"
+    },
+    {
+      "postId": "9d1c13bb39fce30c",
+      "title": "面试产品经理，我会重点关注什么",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324891&ver=7034&signature=bgEqlXuw-XUHWtQlW6PYiPtILq0J8aqdrDZ-rpt9RqzuzM501HhobXadvTeGKoko0ixooc*qKsvivPJLQObqcgiOzNNCt01FSTBJlQnjCBPTaeivmb8Eig3cCH7B3*nz&new=1"
+    },
+    {
+      "postId": "ee4be27f11f36c5b",
+      "title": "不愧是大厂挖来的产品经理，这工作流太恐怖...",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792324891&ver=7034&signature=nkO5KpUVNefenk6e6zNZI8pcogKH-ocqvvZUHVTv0xe2TG*9pGO382c4Rng9gOjlwKrIOhHI5at6TEkD*dVnzk1442-YdQ5tRfJdihNlRFEbC*kh1K-VqSYLhLZD-Pyu&new=1"
+    }
+  ]
+}

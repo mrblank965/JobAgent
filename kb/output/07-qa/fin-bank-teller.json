@@ -1,0 +1,12 @@
+{
+  "positionId": "fin-bank-teller",
+  "sampledKpIds": [
+    "fin-bank-teller-kp-041",
+    "fin-bank-teller-kp-001",
+    "fin-bank-teller-kp-032",
+    "fin-bank-teller-kp-017"
+  ],
+  "totalPoints": 41,
+  "faithful": true,
+  "issues": []
+}

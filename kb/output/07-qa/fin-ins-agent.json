@@ -1,0 +1,13 @@
+{
+  "positionId": "fin-ins-agent",
+  "sampledKpIds": [
+    "fin-ins-agent-kp-017",
+    "fin-ins-agent-kp-011",
+    "fin-ins-agent-kp-002",
+    "fin-ins-agent-kp-038",
+    "fin-ins-agent-kp-009"
+  ],
+  "totalPoints": 47,
+  "faithful": true,
+  "issues": []
+}

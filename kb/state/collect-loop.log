@@ -1,0 +1,338 @@
+[loop] 16:27:43 启动，待采 6 个：fin-sec-asset-management, fin-sec-wealth-advisor, fin-sec-compliance-risk, fin-fund-channel-sales, fin-fund-product-manager, fin-fund-trader
+[loop] 16:27:43 第 1 轮开始，待采 6 个
+[collect] fin-bank-rm 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-teller 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-mgmt-trainee 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-ibd 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-ib-research 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-sales-trader 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fund-ra 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fund-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-fund-ops 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-actuary 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-ins-claims 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-agent 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-risk 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-product 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fintech-data 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-user 已有 40 条产出，跳过（--force 可重采）
+[collect] it-ops-content 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-product 已有 60 条产出，跳过（--force 可重采）
+[collect] it-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] it-da 已有 60 条产出，跳过（--force 可重采）
+[collect] it-risk 已有 55 条产出，跳过（--force 可重采）
+[collect] fin-pe-investment-manager 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-portfolio-management 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-investor-relations 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-vc-investment-analyst 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-vc-industry-research 已有 40 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-sec-asset-management（券商资管）开始
+[collect]   关键词「券商资管日常」…
+[collect]     ✓ 采纳 0 条（触发验证码）
+[collect] fin-sec-asset-management 落盘：采纳 0 条，跳过 0 条（部分采集）
+[collect] 触发搜狗验证码（限频），中止本次采集。
+[collect] 已完成岗位文件已落盘；未采集岗位：fin-sec-wealth-advisor, fin-sec-compliance-risk, fin-fund-channel-sales, fin-fund-product-manager, fin-fund-trader
+[collect] 等限频解除后重新运行同一命令即可（已完成岗位会被覆盖补全）。
+[loop] 16:27:53 本轮结束，仍待采 6 个，等 15 分钟后探测
+[loop] 16:43:09 探测放行，进入下一轮
+[loop] 16:43:09 第 2 轮开始，待采 6 个
+[collect] fin-bank-rm 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-teller 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-mgmt-trainee 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-ibd 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-ib-research 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-sales-trader 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fund-ra 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fund-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-fund-ops 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-actuary 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-ins-claims 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-agent 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-risk 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-product 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fintech-data 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-user 已有 40 条产出，跳过（--force 可重采）
+[collect] it-ops-content 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-product 已有 60 条产出，跳过（--force 可重采）
+[collect] it-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] it-da 已有 60 条产出，跳过（--force 可重采）
+[collect] it-risk 已有 55 条产出，跳过（--force 可重采）
+[collect] fin-pe-investment-manager 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-portfolio-management 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-investor-relations 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-vc-investment-analyst 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-vc-industry-research 已有 40 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-sec-asset-management（券商资管）开始
+[collect]   关键词「券商资管日常」…
+[collect]     ✓ 采纳 5 条
+[collect]   关键词「券商资管劝退」…
+[collect]     ✓ 采纳 6 条
+[collect]   关键词「券商资管真实工作」…
+[collect]     ✓ 采纳 5 条
+[collect]   关键词「券商资管面试」…
+[collect]     ✓ 采纳 4 条
+[collect] fin-sec-asset-management 落盘：采纳 20 条，跳过 60 条
+[collect] 岗位 fin-sec-wealth-advisor（券商财富管理投资顾问）开始
+[collect]   关键词「券商投顾日常」…
+[collect]     ✓ 采纳 9 条
+[collect]   关键词「券商投顾劝退」…
+[collect]     ✓ 采纳 8 条
+[collect]   关键词「财富管理顾问真实工作」…
+[collect]     ✓ 采纳 7 条
+[collect]   关键词「投顾面试」…
+[collect]     ✓ 采纳 10 条
+[collect] fin-sec-wealth-advisor 落盘：采纳 34 条，跳过 46 条
+[collect] 岗位 fin-sec-compliance-risk（金融合规风控（券商/私募））开始
+[collect]   关键词「券商合规日常」…
+[collect]     ✓ 采纳 0 条（触发验证码）
+[collect] fin-sec-compliance-risk 落盘：采纳 0 条，跳过 0 条（部分采集）
+[collect] 触发搜狗验证码（限频），中止本次采集。
+[collect] 已完成岗位文件已落盘；未采集岗位：fin-fund-channel-sales, fin-fund-product-manager, fin-fund-trader
+[collect] 等限频解除后重新运行同一命令即可（已完成岗位会被覆盖补全）。
+[loop] 17:05:06 本轮结束，仍待采 6 个，等 15 分钟后探测
+[loop] 17:24:50 探测放行，进入下一轮
+[loop] 17:24:50 第 3 轮开始，待采 6 个
+[collect] fin-bank-rm 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-teller 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-mgmt-trainee 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-ibd 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-ib-research 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-sales-trader 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fund-ra 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fund-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-fund-ops 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-actuary 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-ins-claims 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-agent 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-risk 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-product 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fintech-data 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-user 已有 40 条产出，跳过（--force 可重采）
+[collect] it-ops-content 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-product 已有 60 条产出，跳过（--force 可重采）
+[collect] it-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] it-da 已有 60 条产出，跳过（--force 可重采）
+[collect] it-risk 已有 55 条产出，跳过（--force 可重采）
+[collect] fin-pe-investment-manager 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-portfolio-management 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-investor-relations 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-vc-investment-analyst 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-vc-industry-research 已有 40 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-sec-asset-management（券商资管）开始
+[collect]   关键词「券商资管日常」…
+[collect]     ✓ 采纳 6 条
+[collect]   关键词「券商资管劝退」…
+[collect]     ✓ 采纳 0 条
+[collect]   关键词「券商资管真实工作」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「券商资管面试」…
+[loop] 18:53:18 本轮结束，仍待采 6 个，等 15 分钟后探测
+[loop] 19:41:33 探测放行，进入下一轮
+[loop] 19:41:33 第 4 轮开始，待采 6 个
+[collect] fin-bank-rm 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-teller 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-mgmt-trainee 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-ibd 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-ib-research 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-sales-trader 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fund-ra 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fund-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-fund-ops 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-actuary 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-ins-claims 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-agent 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-risk 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-product 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fintech-data 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-user 已有 40 条产出，跳过（--force 可重采）
+[collect] it-ops-content 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-product 已有 60 条产出，跳过（--force 可重采）
+[collect] it-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] it-da 已有 60 条产出，跳过（--force 可重采）
+[collect] it-risk 已有 55 条产出，跳过（--force 可重采）
+[collect] fin-pe-investment-manager 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-portfolio-management 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-investor-relations 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-vc-investment-analyst 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-vc-industry-research 已有 40 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-sec-asset-management（券商资管）开始
+[collect]   关键词「券商资管日常」…
+[collect]     ✓ 采纳 3 条
+[collect]   关键词「券商资管劝退」…
+[collect]     ✓ 采纳 11 条
+[collect]   关键词「券商资管真实工作」…
+[collect]     ✓ 采纳 8 条
+[collect]   关键词「券商资管面试」…
+[collect]     ✓ 采纳 8 条
+[collect] fin-sec-asset-management 落盘：采纳 30 条，跳过 50 条
+[collect] 岗位 fin-sec-wealth-advisor（券商财富管理投资顾问）开始
+[collect]   关键词「券商投顾日常」…
+[collect]     ✓ 采纳 11 条
+[collect]   关键词「券商投顾劝退」…
+[collect]     ✓ 采纳 12 条
+[collect]   关键词「财富管理顾问真实工作」…
+[collect]     ✓ 采纳 8 条
+[collect]   关键词「投顾面试」…
+[collect]     ✓ 采纳 15 条
+[collect] fin-sec-wealth-advisor 落盘：采纳 46 条，跳过 33 条
+[collect] 岗位 fin-sec-compliance-risk（金融合规风控（券商/私募））开始
+[collect]   关键词「券商合规日常」…
+[collect]     ✓ 采纳 0 条（触发验证码）
+[collect] fin-sec-compliance-risk 落盘：采纳 0 条，跳过 0 条（部分采集）
+[collect] 触发搜狗验证码（限频），中止本次采集。
+[collect] 已完成岗位文件已落盘；未采集岗位：fin-fund-channel-sales, fin-fund-product-manager, fin-fund-trader
+[collect] 等限频解除后重新运行同一命令即可（已完成岗位会被覆盖补全）。
+[loop] 20:02:12 本轮结束，仍待采 5 个，等 15 分钟后探测
+[loop] 20:17:27 探测放行，进入下一轮
+[loop] 20:17:28 第 5 轮开始，待采 5 个
+[collect] fin-bank-rm 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-teller 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-mgmt-trainee 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-ibd 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-ib-research 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-sales-trader 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fund-ra 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fund-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-fund-ops 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-actuary 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-ins-claims 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-agent 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-risk 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-product 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fintech-data 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-user 已有 40 条产出，跳过（--force 可重采）
+[collect] it-ops-content 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-product 已有 60 条产出，跳过（--force 可重采）
+[collect] it-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] it-da 已有 60 条产出，跳过（--force 可重采）
+[collect] it-risk 已有 55 条产出，跳过（--force 可重采）
+[collect] fin-pe-investment-manager 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-portfolio-management 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-investor-relations 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-vc-investment-analyst 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-vc-industry-research 已有 40 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-sec-asset-management（券商资管）开始
+[collect]   关键词「券商资管日常」…
+[collect]     ✓ 采纳 14 条
+[collect]   关键词「券商资管劝退」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「券商资管真实工作」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「券商资管面试」…
+[collect]     ✓ 采纳 15 条
+[collect] fin-sec-asset-management 落盘：采纳 59 条，跳过 7 条
+[collect] fin-sec-wealth-advisor 已有 46 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-sec-compliance-risk（金融合规风控（券商/私募））开始
+[collect]   关键词「券商合规日常」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「券商风控劝退」…
+[collect]     ✓ 采纳 9 条
+[collect]   关键词「合规风控岗真实体验」…
+[collect]     ✓ 采纳 14 条
+[collect]   关键词「券商合规面试」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「私募风控日常」…
+[collect]     ✓ 采纳 0 条（触发验证码）
+[collect] fin-sec-compliance-risk 落盘：采纳 53 条，跳过 17 条（部分采集）
+[collect] 触发搜狗验证码（限频），中止本次采集。
+[collect] 已完成岗位文件已落盘；未采集岗位：fin-fund-channel-sales, fin-fund-product-manager, fin-fund-trader
+[collect] 等限频解除后重新运行同一命令即可（已完成岗位会被覆盖补全）。
+[loop] 20:31:18 本轮结束，仍待采 3 个，等 15 分钟后探测
+[loop] 20:46:26 探测仍被限，再等 15 分钟
+[loop] 20:46:27 第 6 轮开始，待采 3 个
+[collect] fin-bank-rm 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-teller 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-mgmt-trainee 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-ibd 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-ib-research 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-sales-trader 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fund-ra 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fund-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-fund-ops 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-actuary 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-ins-claims 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-agent 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-risk 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-product 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fintech-data 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-user 已有 40 条产出，跳过（--force 可重采）
+[collect] it-ops-content 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-product 已有 60 条产出，跳过（--force 可重采）
+[collect] it-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] it-da 已有 60 条产出，跳过（--force 可重采）
+[collect] it-risk 已有 55 条产出，跳过（--force 可重采）
+[collect] fin-pe-investment-manager 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-portfolio-management 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-investor-relations 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-vc-investment-analyst 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-vc-industry-research 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-sec-asset-management 已有 59 条产出，跳过（--force 可重采）
+[collect] fin-sec-wealth-advisor 已有 46 条产出，跳过（--force 可重采）
+[collect] fin-sec-compliance-risk 已有 53 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-fund-channel-sales（公募基金渠道销售）开始
+[collect]   关键词「公募渠道销售日常」…
+[collect]     ✓ 采纳 0 条（触发验证码）
+[collect] fin-fund-channel-sales 落盘：采纳 0 条，跳过 0 条（部分采集）
+[collect] 触发搜狗验证码（限频），中止本次采集。
+[collect] 已完成岗位文件已落盘；未采集岗位：fin-fund-product-manager, fin-fund-trader
+[collect] 等限频解除后重新运行同一命令即可（已完成岗位会被覆盖补全）。
+[loop] 20:46:34 本轮结束，仍待采 3 个，等 15 分钟后探测
+[loop] 21:01:45 探测放行，进入下一轮
+[loop] 21:01:45 第 7 轮开始，待采 3 个
+[collect] fin-bank-rm 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-teller 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-mgmt-trainee 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-ibd 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-ib-research 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-sales-trader 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fund-ra 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fund-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-fund-ops 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-actuary 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-ins-claims 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-agent 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-risk 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-product 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fintech-data 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-user 已有 40 条产出，跳过（--force 可重采）
+[collect] it-ops-content 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-product 已有 60 条产出，跳过（--force 可重采）
+[collect] it-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] it-da 已有 60 条产出，跳过（--force 可重采）
+[collect] it-risk 已有 55 条产出，跳过（--force 可重采）
+[collect] fin-pe-investment-manager 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-portfolio-management 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-investor-relations 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-vc-investment-analyst 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-vc-industry-research 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-sec-asset-management 已有 59 条产出，跳过（--force 可重采）
+[collect] fin-sec-wealth-advisor 已有 46 条产出，跳过（--force 可重采）
+[collect] fin-sec-compliance-risk 已有 53 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-fund-channel-sales（公募基金渠道销售）开始
+[collect]   关键词「公募渠道销售日常」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「基金渠道销售劝退」…
+[collect]     ✓ 采纳 6 条
+[collect]   关键词「渠道销售真实工作」…
+[collect]     ✓ 采纳 11 条
+[collect]   关键词「公募渠道面试」…
+[collect]     ✓ 采纳 5 条
+[collect] fin-fund-channel-sales 落盘：采纳 37 条，跳过 40 条
+[collect] 岗位 fin-fund-product-manager（基金产品经理）开始
+[collect]   关键词「基金产品经理日常」…
+[collect]     ✓ 采纳 14 条
+[collect]   关键词「公募产品经理劝退」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「基金产品岗真实工作」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「基金产品经理面试」…
+[collect]     ✓ 采纳 14 条
+[collect] fin-fund-product-manager 落盘：采纳 58 条，跳过 14 条
+[collect] 岗位 fin-fund-trader（买方交易员（基金/私募/固收））开始
+[collect]   关键词「基金交易员日常」…
+[collect]     ✓ 采纳 0 条（触发验证码）
+[collect] fin-fund-trader 落盘：采纳 0 条，跳过 0 条（部分采集）
+[collect] 触发搜狗验证码（限频），中止本次采集。
+[collect] 已完成岗位文件已落盘；未采集岗位：无
+[collect] 等限频解除后重新运行同一命令即可（已完成岗位会被覆盖补全）。
+[loop] 21:17:38 本轮结束，仍待采 2 个，等 15 分钟后探测

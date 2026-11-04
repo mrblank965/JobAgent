@@ -1,0 +1,13 @@
+{
+  "positionId": "it-pm",
+  "sampledKpIds": [
+    "it-pm-kp-008",
+    "it-pm-kp-030",
+    "it-pm-kp-013",
+    "it-pm-kp-040",
+    "it-pm-kp-003"
+  ],
+  "totalPoints": 49,
+  "faithful": true,
+  "issues": []
+}

@@ -1,0 +1,259 @@
+{
+  "stage": "plan",
+  "agent": "规划 Agent",
+  "generatedAt": "2026-10-15",
+  "basis": "以「哪些岗位的 JD 最常被拿来拆解」为导向，结合公开招聘量级与求职者关注度排序",
+  "positions": [
+    {
+      "id": "fin-bank-rm",
+      "industry": "金融",
+      "direction": "银行",
+      "title": "客户经理",
+      "priority": "P0",
+      "priorityReason": "金融专业学生求职量最大、关注度最高的赛道；六大行校招规模逐年收缩（2025届7.76万→2026届6.4万），求职者急需了解真实工作强度与考核压力。",
+      "searchTerms": ["银行客户经理一天", "客户经理真实工作", "银行人劝退", "银行日常到底做什么", "银行客户经理考核"]
+    },
+    {
+      "id": "fin-bank-credit",
+      "industry": "金融",
+      "direction": "银行",
+      "title": "信贷审批",
+      "priority": "P1",
+      "priorityReason": "银行中后台核心岗，JD 常只写'审核授信材料'，求职者需还原真实审批流程与风险判断动作。",
+      "searchTerms": ["银行信贷审批真实工作", "银行后台真实工作", "银行入职劝退", "信贷审批日常"]
+    },
+    {
+      "id": "fin-bank-advisor",
+      "industry": "金融",
+      "direction": "银行",
+      "title": "理财经理",
+      "priority": "P1",
+      "priorityReason": "零售转型下的高频招聘岗，JD 对'卖什么、怎么卖、考核什么'披露不足。",
+      "searchTerms": ["银行理财经理真实工作", "理财经理一天", "银行理财经理考核", "银行网点日常"]
+    },
+    {
+      "id": "fin-bank-risk",
+      "industry": "金融",
+      "direction": "银行",
+      "title": "风控/合规",
+      "priority": "P1",
+      "priorityReason": "中台核心岗，与互金风控同源，JD 拆解需求集中在'规则制定、贷后管理、合规检查'。",
+      "searchTerms": ["银行风控真实工作", "银行合规日常", "银行风控劝退", "银行风控做什么"]
+    },
+    {
+      "id": "fin-ib-ibd",
+      "industry": "金融",
+      "direction": "证券/投行",
+      "title": "投行承做(IBD)",
+      "priority": "P0",
+      "priorityReason": "高薪光环吸引大量金融学生拆解；JD 分析需求集中在加班强度、出差频率、行业分化、晋升压力等未充分披露的细节。",
+      "searchTerms": ["投行真实工作", "投行一天", "投行劝退", "投行实习日常", "投行内幕"]
+    },
+    {
+      "id": "fin-ib-research",
+      "industry": "金融",
+      "direction": "证券/投行",
+      "title": "行业研究",
+      "priority": "P1",
+      "priorityReason": "券商研究所是金融实习基本盘，JD 对'写什么报告、怎么调研'描述笼统。",
+      "searchTerms": ["券商研究所真实工作", "行研实习日常", "券商研究所劝退", "行研一天"]
+    },
+    {
+      "id": "fin-ib-trading",
+      "industry": "金融",
+      "direction": "证券/投行",
+      "title": "交易",
+      "priority": "P2",
+      "priorityReason": "岗位量少但门槛明确，拆解需求集中在'盘中做什么、风控约束、业绩考核'。",
+      "searchTerms": ["券商交易员真实工作", "交易员一天", "交易员劝退"]
+    },
+    {
+      "id": "fin-ib-advisor",
+      "industry": "金融",
+      "direction": "证券/投行",
+      "title": "投资顾问",
+      "priority": "P2",
+      "priorityReason": "券商财富管理条线扩张，JD 与'销售'边界模糊，求职者需辨明实际职责。",
+      "searchTerms": ["券商投顾真实工作", "投资顾问一天", "券商营业部日常"]
+    },
+    {
+      "id": "fin-fund-pm",
+      "industry": "金融",
+      "direction": "基金/资管",
+      "title": "基金经理",
+      "priority": "P1",
+      "priorityReason": "高薪高门槛岗位，金融学生高度关注日常工作强度、投研内容、业绩压力。",
+      "searchTerms": ["基金经理真实工作", "基金经理一天", "基金经理劝退", "基金经理日常"]
+    },
+    {
+      "id": "fin-fund-research",
+      "industry": "金融",
+      "direction": "基金/资管",
+      "title": "研究员",
+      "priority": "P1",
+      "priorityReason": "基金投研基本盘，与行研 JD 相似但考核口径不同，需区分。",
+      "searchTerms": ["基金公司真实工作", "基金研究员日常", "公募私募区别", "买方研究员一天"]
+    },
+    {
+      "id": "fin-fund-product",
+      "industry": "金融",
+      "direction": "基金/资管",
+      "title": "产品",
+      "priority": "P2",
+      "priorityReason": "资管产品线扩张，JD 常把'产品设计'与'合规报备'混写。",
+      "searchTerms": ["基金产品经理真实工作", "基金产品设计日常", "资管产品岗"]
+    },
+    {
+      "id": "fin-fund-ops",
+      "industry": "金融",
+      "direction": "基金/资管",
+      "title": "运营",
+      "priority": "P2",
+      "priorityReason": "后台岗，JD 描述零散，需还原估值核算、申赎清算的真实流程。",
+      "searchTerms": ["基金运营真实工作", "基金后台日常", "基金估值核算"]
+    },
+    {
+      "id": "fin-fund-trading",
+      "industry": "金融",
+      "direction": "基金/资管",
+      "title": "交易",
+      "priority": "P2",
+      "priorityReason": "执行端岗位，拆解需求集中在'指令执行、交易成本控制'。",
+      "searchTerms": ["基金交易员一天", "基金交易员真实工作", "交易岗日常"]
+    },
+    {
+      "id": "fin-ins-sales",
+      "industry": "金融",
+      "direction": "保险",
+      "title": "渠道/销售",
+      "priority": "P1",
+      "priorityReason": "转行者多、收入波动大，JD 拆解需求集中在客源来源、考核压力、晋升与收入结构。",
+      "searchTerms": ["卖保险的一天", "保险代理人劝退", "保险销售真实工作", "保险渠道日常"]
+    },
+    {
+      "id": "fin-ins-actuary",
+      "industry": "金融",
+      "direction": "保险",
+      "title": "精算",
+      "priority": "P1",
+      "priorityReason": "技术型高门槛岗，金融/数理背景求职者关注，JD 对'定价、准备金、模型'描述专业但笼统。",
+      "searchTerms": ["保险精算师真实工作", "精算师日常", "精算师劝退", "精算考试"]
+    },
+    {
+      "id": "fin-ins-underwrite",
+      "industry": "金融",
+      "direction": "保险",
+      "title": "核保核赔",
+      "priority": "P2",
+      "priorityReason": "中后台岗，JD 常只写'审核保单/理赔'，需还原真实审核判断动作。",
+      "searchTerms": ["核保真实工作", "核赔日常", "保险理赔员真实工作"]
+    },
+    {
+      "id": "fin-fintech-product",
+      "industry": "金融",
+      "direction": "互金/金融科技",
+      "title": "产品",
+      "priority": "P1",
+      "priorityReason": "JD 分析需求集中在风控与产品的平衡、合规压力、业务增长压力。",
+      "searchTerms": ["互金产品真实工作", "金融科技产品经理", "互金劝退", "助贷产品日常"]
+    },
+    {
+      "id": "fin-fintech-risk",
+      "industry": "金融",
+      "direction": "互金/金融科技",
+      "title": "风控/反欺诈",
+      "priority": "P0",
+      "priorityReason": "金融+互联网交叉高频岗，JD 常见'规则制定、策略优化、模型评估、数据分析'，最适合 JD 拆解。",
+      "searchTerms": ["互金风控真实工作", "反欺诈日常", "风控策略真实工作", "风控策略劝退"]
+    },
+    {
+      "id": "fin-fintech-quant",
+      "industry": "金融",
+      "direction": "互金/金融科技",
+      "title": "量化",
+      "priority": "P1",
+      "priorityReason": "高薪技术岗，理工/金融工程背景关注，JD 对'因子、回测、策略'描述需还原真实工作流。",
+      "searchTerms": ["量化研究员真实工作", "量化一天", "量化劝退", "量化实习日常"]
+    },
+    {
+      "id": "fin-fintech-data",
+      "industry": "金融",
+      "direction": "互金/金融科技",
+      "title": "数据",
+      "priority": "P1",
+      "priorityReason": "金融数据分析与互联网数据分析同源，JD 常混写'报表、模型、业务支持'。",
+      "searchTerms": ["金融数据分析真实工作", "金融数据分析师一天", "数据岗真实工作"]
+    },
+    {
+      "id": "it-ops-user",
+      "industry": "互联网",
+      "direction": "运营",
+      "title": "用户运营",
+      "priority": "P0",
+      "priorityReason": "运营岗需求量大、流动性高，JD 关键词多（拉新、留存、社群），求职者高度依赖真实分享还原职责。",
+      "searchTerms": ["用户运营真实工作", "用户运营一天", "运营劝退", "用户运营日常"]
+    },
+    {
+      "id": "it-ops-content",
+      "industry": "互联网",
+      "direction": "运营",
+      "title": "内容运营",
+      "priority": "P1",
+      "priorityReason": "小红书/新媒体内容岗招聘量大，JD 与'自媒体'边界模糊，需辨明职责。",
+      "searchTerms": ["内容运营真实工作", "小红书运营一天", "内容运营劝退", "新媒体运营日常"]
+    },
+    {
+      "id": "it-ops-activity",
+      "industry": "互联网",
+      "direction": "运营",
+      "title": "活动运营",
+      "priority": "P1",
+      "priorityReason": "JD 常写'策划活动'，实际含大量跨部门协调与复盘，求职者需还原流程。",
+      "searchTerms": ["活动运营真实工作", "活动运营一天", "活动运营日常"]
+    },
+    {
+      "id": "it-ops-data",
+      "industry": "互联网",
+      "direction": "运营",
+      "title": "数据运营",
+      "priority": "P1",
+      "priorityReason": "运营与数据分析交叉岗，JD 对'看什么指标、怎么归因'描述笼统。",
+      "searchTerms": ["数据运营真实工作", "数据运营一天", "数据运营日常"]
+    },
+    {
+      "id": "it-pm",
+      "industry": "互联网",
+      "direction": "产品",
+      "title": "产品经理",
+      "priority": "P0",
+      "priorityReason": "非技术背景求职者常见目标岗，JD 中需求评审、跨部门沟通、加班强度等高频但模糊，拆解需求极大。",
+      "searchTerms": ["产品经理真实工作", "产品经理一天", "产品劝退", "产品经理日常"]
+    },
+    {
+      "id": "it-risk",
+      "industry": "互联网",
+      "direction": "风控/反欺诈",
+      "title": "风控策略",
+      "priority": "P1",
+      "priorityReason": "与互金风控同源，JD 常见'规则制定、策略优化、模型评估'，适合拆解。",
+      "searchTerms": ["风控真实工作", "反欺诈日常", "风控策略劝退", "风控策略一天"]
+    },
+    {
+      "id": "it-da",
+      "industry": "互联网",
+      "direction": "数据分析",
+      "title": "数据分析师",
+      "priority": "P0",
+      "priorityReason": "JD 常见'SQL、指标分析、业务支持、数据看板'，拆解可辅助判断岗位偏业务还是偏技术。",
+      "searchTerms": ["数据分析真实工作", "数据分析师一天", "数据分析劝退", "数据分析师日常"]
+    }
+  ],
+  "noisePatterns": [
+    "卖课引流：标题含'避坑指南''领取资料/加群'，实为引流卖课",
+    "机构招生：以行业培训/0基础转行为主，结尾引导报名",
+    "招聘伪装：以'真实工作分享'为标题，实为机构招生、实习内推、团队招募",
+    "标题党：夸张收益或极端劝退，如'月入3万''一天只睡2小时'，缺可验证细节",
+    "软广种草：职场经验分享里混入产品推荐/品牌投放，结尾含购买链接",
+    "引流私域：正文留微信号、群二维码、私信领取资料"
+  ]
+}

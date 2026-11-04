@@ -1,0 +1,11 @@
+{
+  "positionId": "fin-ib-sales-trader",
+  "sampledKpIds": [
+    "fin-ib-sales-trader-kp-020",
+    "fin-ib-sales-trader-kp-023",
+    "fin-ib-sales-trader-kp-024"
+  ],
+  "totalPoints": 29,
+  "faithful": true,
+  "issues": []
+}

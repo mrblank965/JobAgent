@@ -1,0 +1,16 @@
+{
+  "positionId": "fin-pe-portfolio-management",
+  "sampledKpIds": [
+    "fin-pe-portfolio-management-kp-050",
+    "fin-pe-portfolio-management-kp-052",
+    "fin-pe-portfolio-management-kp-010",
+    "fin-pe-portfolio-management-kp-053",
+    "fin-pe-portfolio-management-kp-005",
+    "fin-pe-portfolio-management-kp-011",
+    "fin-pe-portfolio-management-kp-074",
+    "fin-pe-portfolio-management-kp-029"
+  ],
+  "totalPoints": 84,
+  "faithful": true,
+  "issues": []
+}

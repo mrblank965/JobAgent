@@ -1,0 +1,16 @@
+{
+  "positionId": "it-da",
+  "sampledKpIds": [
+    "it-da-kp-003",
+    "it-da-kp-024",
+    "it-da-kp-014",
+    "it-da-kp-016",
+    "it-da-kp-032",
+    "it-da-kp-041",
+    "it-da-kp-002",
+    "it-da-kp-023"
+  ],
+  "totalPoints": 76,
+  "faithful": true,
+  "issues": []
+}

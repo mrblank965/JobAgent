@@ -1,0 +1,45 @@
+{
+  "status": "indexed",
+  "positionId": "fin-vc-industry-research",
+  "positionName": "VC行业研究",
+  "aliases": [
+    "行业研究员",
+    "投资研究分析师",
+    "VC研究员"
+  ],
+  "vectorStore": "keyword-inverted",
+  "points": [
+    {
+      "category": "coreDuties",
+      "text": "撰写早期医疗投资所需的行业研究报告",
+      "kpId": "fin-vc-industry-research-kp-001"
+    },
+    {
+      "category": "coreDuties",
+      "text": "区分早期投资的研究报告、咨询报告与券商报告的不同用途与定位",
+      "kpId": "fin-vc-industry-research-kp-002"
+    },
+    {
+      "category": "workflow",
+      "text": "按基本结构撰写医疗行业研究报告：第一章为产品/行业概述，涵盖概述、组成、发展史、分类、治疗指南、政策法规、主要壁垒等内容",
+      "kpId": "fin-vc-industry-research-kp-003"
+    },
+    {
+      "category": "workflow",
+      "text": "收集并筛选可靠的数据来源，作为报告撰写的基础",
+      "kpId": "fin-vc-industry-research-kp-004"
+    },
+    {
+      "category": "pitfalls",
+      "text": "数据来源是撰写报告时常见的第一个阻力，需重视数据来源的可靠性",
+      "kpId": "fin-vc-industry-research-kp-005"
+    }
+  ],
+  "sources": [
+    {
+      "postId": "9e3f3fd6e9a70933",
+      "title": "新手教程:医疗VC行业研究报告怎么写?",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792397549&ver=7035&signature=1OmLy30EfOX7YcsnVX6BE2739m0F7F*Au2ZydBAd3Mw9uuZ2APk7WrRUyjFPcW5DcaF3wksQ-JFOcFuRxF8*mzaE0hy1qwfQ1fAQhY54RaUY7hyPeBtwvtjE5Q38XyCb&new=1"
+    }
+  ]
+}

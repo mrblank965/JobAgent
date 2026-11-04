@@ -1,0 +1,13 @@
+{
+  "positionId": "fin-bank-rm",
+  "sampledKpIds": [
+    "fin-bank-rm-kp-051",
+    "fin-bank-rm-kp-029",
+    "fin-bank-rm-kp-017",
+    "fin-bank-rm-kp-002",
+    "fin-bank-rm-kp-049"
+  ],
+  "totalPoints": 52,
+  "faithful": true,
+  "issues": []
+}

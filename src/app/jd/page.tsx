@@ -1,15 +1,34 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState, type ClipboardEvent, type DragEvent } from "react";
+import { useEffect, useRef, useState, type ClipboardEvent, type DragEvent } from "react";
 import { DutyBreakdown } from "@/components/jd/DutyBreakdown";
 import { ItemList } from "@/components/jd/ItemList";
+import { KbMoreInfo } from "@/components/jd/KbMoreInfo";
 import type { JDDutyBreakdown } from "@/lib/ai/jd";
+import type { KbMatch } from "@/lib/kb/types";
 import { analyzeJD, extractJDInfo } from "@/lib/jd";
 import { useStore } from "@/lib/store";
 
 /** 一次最多识别这么多张截图，跟服务端的上限保持一致。 */
 const MAX_SHOTS = 10;
+
+/** 知识库没覆盖或接口失败时的占位结果。字段要齐，界面靠 matched 区分状态。 */
+const emptyKbMatch: KbMatch = {
+  matched: false,
+  positionId: "",
+  positionTitle: "",
+  matchedTerm: "",
+  confidence: 0,
+  sourceCount: 0,
+  pointCount: 0,
+  duties: { core: [], workflow: [] },
+  groups: [],
+  sources: [],
+  context: "",
+  matchedBy: "rule",
+  matchReason: "",
+};
 
 export default function JDPage() {
   const { ai, profile, jds, addJD, removeJD, updateJD, addApp } = useStore();
@@ -21,13 +40,13 @@ export default function JDPage() {
   /** 拆解结果按 JD id 缓存，切回同一份 JD 时不再重复调用模型。 */
   const [breakdowns, setBreakdowns] = useState<Record<string, JDDutyBreakdown>>({});
   const [notice, setNotice] = useState("");
-  const [url, setUrl] = useState("");
-  const [fetching, setFetching] = useState(false);
   const [ocrBusy, setOcrBusy] = useState(false);
   /** 粘贴进来的 JD 截图。按下拆解时才转文字，转完就走跟粘贴文字一样的流程。 */
   const [shots, setShots] = useState<{ file: File; preview: string }[]>([]);
   /** 每个 JD 是用哪种方式拆的。本地拆解绝不碰大模型，只有 AI 增强才调。 */
   const [aiMode, setAiMode] = useState<Record<string, boolean>>({});
+  /** 知识库匹配结果按 JD id 缓存，切回同一份 JD 时不再重复请求。 */
+  const [kbMatches, setKbMatches] = useState<Record<string, KbMatch>>({});
   /** 列表里的搜索词，按公司或岗位名过滤。 */
   const [query, setQuery] = useState("");
 
@@ -181,39 +200,6 @@ export default function JDPage() {
     }
   }
 
-  /** 读取网页正文。浏览器直接抓会被跨域拦，所以走服务端的 fetch-jd 路由。 */
-  async function handleFetch() {
-    if (url.trim().length === 0) {
-      setNotice("请先填入网址。");
-      return;
-    }
-
-    setFetching(true);
-    setNotice("");
-
-    try {
-      const response = await fetch("/api/fetch-jd", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url }),
-      });
-
-      const payload = (await response.json()) as { text?: string; error?: string; warning?: string };
-
-      if (!response.ok || typeof payload.text !== "string") {
-        setNotice(payload.error ?? "读取失败，请改用粘贴方式。");
-        return;
-      }
-
-      setRaw(payload.text);
-      setNotice(payload.warning ?? `已读入 ${payload.text.length} 个字，确认内容后再点拆解。`);
-    } catch {
-      setNotice("无法连接服务器，请确认开发服务器仍在运行。");
-    } finally {
-      setFetching(false);
-    }
-  }
-
   /** 复制到剪贴板，失败时退回手动选中。 */
   async function copy(value: string, label: string) {
     try {
@@ -280,6 +266,50 @@ export default function JDPage() {
   const openJD = jds.find((item) => item.id === openId) ?? null;
   const analysis = openJD ? analyzeJD(openJD.raw, profile.skills, "") : null;
 
+  /**
+   * 打开一份 JD 就去知识库找对应岗位。
+   *
+   * 纯词表匹配，不调模型也不花钱，所以打开就查、结果按 JD 缓存。
+   * 命中结果两处用：这里渲染「更多资讯」，同时作为上下文传给拆解，让模型先说人话再谈推断。
+   */
+  const openJdId = openJD?.id ?? "";
+  const openJdRaw = openJD?.raw ?? "";
+  const openJdTitle = openJD?.title ?? "";
+
+  useEffect(() => {
+    if (!openJdId || !openJdRaw || kbMatches[openJdId]) return;
+
+    let cancelled = false;
+
+    // 配了 Key 就交给服务端用大模型语义匹配（岗位名不同、职责同类也能命中），
+    // 没配 Key 就退回词表匹配。
+    const aiKey = ai.apiKey.trim();
+    const aiPayload = aiKey.length > 0 ? { apiBase: ai.apiBase, apiKey: aiKey, model: ai.model } : undefined;
+
+    fetch("/api/kb/match", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ jd: openJdRaw, title: openJdTitle, ai: aiPayload }),
+    })
+      .then((response) => response.json())
+      .then((payload: { match?: KbMatch }) => {
+        if (cancelled) return;
+        // 接口没给结果也落一条空匹配，界面按「未覆盖」展示，别一直转圈
+        setKbMatches((prev) => ({ ...prev, [openJdId]: payload.match ?? emptyKbMatch }));
+      })
+      .catch(() => {
+        // 知识库读不到不该挡住拆解，静默降级为「未覆盖」
+        if (!cancelled) setKbMatches((prev) => ({ ...prev, [openJdId]: emptyKbMatch }));
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [openJdId, openJdRaw, openJdTitle, kbMatches, ai]);
+
+  /** 还没拿到结果就是加载中；拿到空匹配说明知识库没覆盖，不是加载中。 */
+  const kbLoading = openJdId !== "" && !kbMatches[openJdId];
+
   // 列表按新到旧排。搜索词匹配三处：公司名、岗位名，以及下面那行小字里的关键词
   const keyword = query.trim().toLowerCase();
   const matchedJDs = jds
@@ -315,6 +345,19 @@ export default function JDPage() {
     // 三栏要么整块用 AI 的，要么整块用本地的。混着来会让同一条要求两边都出现
     const aiReqs = breakdowns[openJD.id]?.requirements;
     const reqs = aiReqs ?? analysis.reqs;
+
+    const kbMatch = kbMatches[openJD.id] ?? null;
+    const kbHasDuties = Boolean(
+      kbMatch?.matched && (kbMatch.duties.core.length > 0 || kbMatch.duties.workflow.length > 0),
+    );
+    // 联网检索词只给未命中时用：命中相关岗位就只用知识库，不去搜公开资料
+    const webQueryBase =
+      openJdTitle ||
+      (openJD.raw
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .find((line) => line.length >= 3) ?? ""
+      ).slice(0, 20);
 
     return (
       <>
@@ -500,6 +543,11 @@ export default function JDPage() {
         <div className="card mt16">
           <div className="spread">
             <h3>岗位职责</h3>
+            <span className="tiny">
+              {kbMatch?.matched
+                ? `已接入知识库：${kbMatch.positionTitle}`
+                : "知识库未覆盖，拆解全部由模型推断"}
+            </span>
           </div>
           <DutyBreakdown
             rawText={openJD.raw}
@@ -522,7 +570,55 @@ export default function JDPage() {
             }}
             fallback={analysis.duties}
             auto={aiMode[openJD.id] ?? false}
+            kbContext={kbMatch?.context}
+            kbMatched={kbMatch?.matched ?? false}
+            webQuery={webQueryBase ? `${webQueryBase} 工作内容 日常 职责` : ""}
           />
+
+          {/* 知识库里的职责与流程也归到这一块：它们讲的就是这个岗位在干什么，
+              和上面的六层拆解是同一件事的两种来源，分开放反而看不出差别 */}
+          {kbHasDuties && kbMatch ? (
+            <div className="mt16" style={{ borderTop: "1px solid var(--border)", paddingTop: 12 }}>
+              <div className="spread">
+                <b style={{ fontSize: 13 }}>知识库参考：这个岗位实际在做什么</b>
+                <span className="tiny">原文摘自 {kbMatch.sourceCount} 篇从业者分享，未经模型改写</span>
+              </div>
+
+              {kbMatch.duties.core.length > 0 ? (
+                <>
+                  <b className="tiny mt8" style={{ display: "block" }}>
+                    核心职责
+                  </b>
+                  <ul className="muted" style={{ paddingLeft: 20, fontSize: 13, marginTop: 4 }}>
+                    {kbMatch.duties.core.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
+
+              {kbMatch.duties.workflow.length > 0 ? (
+                <>
+                  <b className="tiny mt12" style={{ display: "block" }}>
+                    完整业务流程
+                  </b>
+                  <ol className="muted" style={{ paddingLeft: 20, fontSize: 13, marginTop: 4 }}>
+                    {kbMatch.duties.workflow.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ol>
+                </>
+              ) : null}
+            </div>
+          ) : null}
+        </div>
+
+        <div className="card mt16">
+          <div className="spread">
+            <h3>更多资讯</h3>
+            <span className="tiny">JD 未涉及，来自岗位知识库</span>
+          </div>
+          <KbMoreInfo match={kbMatch} loading={kbLoading} />
         </div>
 
         <div className="card mt16">
@@ -595,23 +691,6 @@ export default function JDPage() {
             onChange={(event) => setTitle(event.target.value)}
             placeholder="岗位名称（可留空，自动猜测）"
           />
-          <label className="fl">或者从网址读取</label>
-          <div className="row">
-            <input
-              className="input"
-              style={{ flex: 1, minWidth: 180 }}
-              value={url}
-              onChange={(event) => setUrl(event.target.value)}
-              placeholder="https://…"
-            />
-            <button type="button" className="btn" onClick={handleFetch} disabled={fetching || ocrBusy}>
-              {fetching ? "读取中…" : "读取链接"}
-            </button>
-          </div>
-          <div className="tiny mt8">
-            读取链接由服务端执行，只能打开公开页面；正文是图片时会自动 OCR。
-            需要登录或带验证码的站点读不到，可以截图后贴到下面那个框里。
-          </div>
 
           <label className="fl">本地上传图片</label>
           <div

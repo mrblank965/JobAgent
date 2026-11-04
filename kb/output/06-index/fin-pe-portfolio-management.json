@@ -1,0 +1,565 @@
+{
+  "status": "indexed",
+  "positionId": "fin-pe-portfolio-management",
+  "positionName": "PE投后管理",
+  "aliases": [
+    "投后管理经理",
+    "投后管理专员",
+    "投后运营"
+  ],
+  "vectorStore": "keyword-inverted",
+  "points": [
+    {
+      "category": "coreDuties",
+      "text": "组织召开项目方与投资方的投后管理对接会，明确项目方行政部门负责人（董秘）、财务部门负责人（财务总监）等人员作为日常对接人，建立日常对接长效机制。",
+      "kpId": "fin-pe-portfolio-management-kp-001"
+    },
+    {
+      "category": "coreDuties",
+      "text": "定期收集汇总项目季度财务报告和年度财务报告，季度报告应在季度结束后的15天内完成收集，年度报告应在年度结束后的30天内完成收集，报告以纸质版（需加盖公章）加电子版进行汇总。",
+      "kpId": "fin-pe-portfolio-management-kp-002"
+    },
+    {
+      "category": "coreDuties",
+      "text": "对财报进行简单分析，根据实际情况编写分析报告，提出改进建议；确认投资资金和投资收益按投资计划运转，确保资产与负债的平衡、企业现金流的平衡、投入与产出的平衡，降低债务风险。",
+      "kpId": "fin-pe-portfolio-management-kp-003"
+    },
+    {
+      "category": "coreDuties",
+      "text": "项目经理每季度走访项目一次，并向公司书面汇报项目生产经营计划执行情况以及书面形式访谈纪要；拜访项目方研发、生产、销售、财务等负责人，直接掌握获取第一手生产经营以及市场等信息；对于中早期项目应当积极参加企业的重要工作会议、产品推介或订货会等。",
+      "kpId": "fin-pe-portfolio-management-kp-004"
+    },
+    {
+      "category": "coreDuties",
+      "text": "如被投资企业生产经营发生重大突发事项或投资协议履行发生重大违约，项目经理应立即向分管合伙人报告，提出妥善处理对策，经领导审核同意后执行；针对突发事件进行个案查核全面研究，做全面分析，总结经验教训。",
+      "kpId": "fin-pe-portfolio-management-kp-005"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投后管理部每半年一次对投资项目进行国家政策变化、行业趋势变化、竞争格局变化研究，重点分析市场、技术变化和竞争对手变化对企业产生的重大影响，与分管合伙人共同探讨解决方案然后反馈给项目方。",
+      "kpId": "fin-pe-portfolio-management-kp-006"
+    },
+    {
+      "category": "coreDuties",
+      "text": "项目经理于项目投资完成后满3个月、6个月对项目进行总体运行评估，对项目运行实际结果与年度经营计划进行对比分析，找出偏离原因；此后每半年一次，出具书面的评估报告，并提出调整公司投资战略的建议方案上报分管合伙人；如出现重大变异，可即时上报公司最高层进行风险预警。",
+      "kpId": "fin-pe-portfolio-management-kp-007"
+    },
+    {
+      "category": "coreDuties",
+      "text": "公司派出董事、监事代表公司出席董事会、股东会或监事会，听取审查企业经营报告并行使权力参与企业的决策管理，具体由投后管理部负责安排，要求被投资单位提前通知会议时间地点并提交相关会议资料；相关资料由投后管理部牵头对会议资料进行讨论，所有涉及要行使表决权的议案，都要经过分管合伙人审查决定；重大事项要提交合伙人会议（项目投资决策委员会）决定，出席会议必须按照会议精神履行投票决定权。",
+      "kpId": "fin-pe-portfolio-management-kp-008"
+    },
+    {
+      "category": "coreDuties",
+      "text": "董事不方便参与，可指定项目经理列席参加，代表本公司立场表达意见提出建议并按照公司会议精神行使投票权；所有与会人员应及时将相关会议情况向分管合伙人报告，所有会议资料应留存投后管理部入库归档备查。",
+      "kpId": "fin-pe-portfolio-management-kp-009"
+    },
+    {
+      "category": "coreDuties",
+      "text": "项目经理应及时了解被投资公司对增值服务的需求，并及时提交给公司；需合伙人层面出面跟项目方高管沟通提供增值服务，项目经理应做好各种对接和准备工作。",
+      "kpId": "fin-pe-portfolio-management-kp-010"
+    },
+    {
+      "category": "coreDuties",
+      "text": "项目经理应当积极参与推动企业改制上市准备工作以及再融资工作；每年须针对已投资项目的具体情况向企业提出有针对性的书面管理建议，作为对所负责投资企业提供增值服务的重要内容。",
+      "kpId": "fin-pe-portfolio-management-kp-011"
+    },
+    {
+      "category": "coreDuties",
+      "text": "建立双方高层相互沟通的长效机制，以项目方核心高管定期来公司与合伙人会谈或不定期电话沟通等形式进行。",
+      "kpId": "fin-pe-portfolio-management-kp-012"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投后管理部对每一个项目建立独立档案并妥善保管，便于公司或部门随时查阅、跟踪管理和评估。",
+      "kpId": "fin-pe-portfolio-management-kp-013"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投后管理部每季度（年度）编制管理报告呈送合伙人会议或投资人，报告内容应包括项目投资总体情况、项目退出总体情况和管理公司情况等内容。",
+      "kpId": "fin-pe-portfolio-management-kp-014"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投后管理部每月以台账形式对项目和合伙人的定期拜访、决策性管理和增值服务进行汇总整理，作为季度和年终考核的内容。",
+      "kpId": "fin-pe-portfolio-management-kp-015"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投后管理内容包括日常管理和监督、风险监控、外派人员管理、提供增值服务四大部分；日常管理和监督包括对被投企业财务和运营数据的持续跟踪、协议的跟进、被投企业的定期评估、不定期走访、资料的收集和归档等监管工作。",
+      "kpId": "fin-pe-portfolio-management-kp-016"
+    },
+    {
+      "category": "coreDuties",
+      "text": "风险监控就是对项目建立投后管理风险评价体系，制定不同的风险等级，达到识别风险、及时预警的效果；风险评价体系一般包括外部环境的监测、被投企业战略实施情况、经营发展偏离情况、其他重大风险等。",
+      "kpId": "fin-pe-portfolio-management-kp-017"
+    },
+    {
+      "category": "coreDuties",
+      "text": "对于重大事项的管理，机构主要采取外派董事、监事、高级管理人员的方式；外派董监高是机构对于重点投资企业的常规做法，而外派最多的就是独立董事和监事。",
+      "kpId": "fin-pe-portfolio-management-kp-018"
+    },
+    {
+      "category": "coreDuties",
+      "text": "提供增值服务，从职能上看，投资机构主要为被投企业提供战略咨询、人力资源、市场营销、财务管理、管理提升、投融资建议、资本运作等增值服务。",
+      "kpId": "fin-pe-portfolio-management-kp-019"
+    },
+    {
+      "category": "coreDuties",
+      "text": "按被投企业发展阶段进行差异化管理：处于早期阶段的企业，创业团队人员结构不够完善，股权架构也尚未清晰，这时投资机构应加强对人员配置的管控，并优化股权结构；处于成长阶段的企业已经具备了基本的商业模式，在完善商业模式的基础上，企业需要提升实力达到盈利水平，实现良性增长；处于成熟阶段的企业，具备了完善的商业模式和盈利模式，这一阶段机构的投后服务主要集中在协助完善产业链和资本运作上。",
+      "kpId": "fin-pe-portfolio-management-kp-020"
+    },
+    {
+      "category": "coreDuties",
+      "text": "按被投企业成熟程度、管理完善程度进行分层管理，将企业分为五个等级，并通过每次企业回访实时更新，动态滚动调整，对于不同分层的项目，资源对接力度和关注角度实行差异化。",
+      "kpId": "fin-pe-portfolio-management-kp-021"
+    },
+    {
+      "category": "coreDuties",
+      "text": "按机构投入程度进行划分，投资规模和投资占被投企业的份额是机构常用的两大指标，投资规模反应出投资机构与被投企业的绑定程度和面临的潜在风险大小，而投资占比则反应出机构在被投企业的话语权；机构可以根据这两大指标确定资源的大致分配。",
+      "kpId": "fin-pe-portfolio-management-kp-022"
+    },
+    {
+      "category": "coreDuties",
+      "text": "A轮之前：协助企业攒团队、搭班子、合理化股权架构；协助企业梳理商业模式，减少试错成本；帮助企业梳理融资规划，协助企业确定投后估值和节奏，进行融资对接。",
+      "kpId": "fin-pe-portfolio-management-kp-023"
+    },
+    {
+      "category": "coreDuties",
+      "text": "A+轮到C轮：协助企业完善商业模式，重点梳理和开发变现渠道即盈利模式；协助企业进行战略融资，深入理解企业未来发展战略和规划，对符合企业文化属性的资方进行梳理并牵线进行资本对接，相当于专业FA的角色。",
+      "kpId": "fin-pe-portfolio-management-kp-024"
+    },
+    {
+      "category": "coreDuties",
+      "text": "D轮到Pre-IPO：协助项目方进行有效的战略布局，例如业务并购，完善产业链，为上市做准备；关注战略融资或并购，协助对接产业内或者可以形成战略补充的企业。",
+      "kpId": "fin-pe-portfolio-management-kp-025"
+    },
+    {
+      "category": "coreDuties",
+      "text": "IPO及以后：定期的财务回访，及必要事件的披露和跟进，确保企业在上市后能够有效地增长和扩张，从而确保投资机构的利益。",
+      "kpId": "fin-pe-portfolio-management-kp-026"
+    },
+    {
+      "category": "coreDuties",
+      "text": "搭建已投项目库，从基本信息（工商变更等常规资料汇总）、财务状况、业务状况、融资需求及进展、当前问题及策略等几个维度定期回访企业，一般以月或者季度为单位走访企业，汇总资料，并且上报给管理层或者投资管理部门。",
+      "kpId": "fin-pe-portfolio-management-kp-027"
+    },
+    {
+      "category": "coreDuties",
+      "text": "针对走访过程中企业提及的或者在交涉过程中发现的问题，运营人员需出具具体的诊断报告及相应解决方案，和企业负责人一同解决当前的问题或者给予所需的帮助；在定期诊断时，企业所面临的问题或者需要的帮助也分为轻重缓急，优先劣后，运营人员需酌情处理，必要时联合项目负责人一同解决。",
+      "kpId": "fin-pe-portfolio-management-kp-028"
+    },
+    {
+      "category": "coreDuties",
+      "text": "对于少数企业拿了投资款后不配合或者难配合的状况，在不影响企业正常业务的前提下，必要时需要发挥团队整体的价值，联合投前负责人一同尽力解决，为企业的保值增值努力，确保资方的投资价值。",
+      "kpId": "fin-pe-portfolio-management-kp-029"
+    },
+    {
+      "category": "coreDuties",
+      "text": "资源对接方面可以细化分为内部对接和外部对接两块；内部资源对接方面，同一领域间的互相促进和不同领域的火花碰撞都可能会给企业带来超出预期的惊喜；外部资源对接上，基于VC机构投资的主要领域不同而定制化搜罗外部资源。",
+      "kpId": "fin-pe-portfolio-management-kp-030"
+    },
+    {
+      "category": "coreDuties",
+      "text": "资本对接方面，投后人员更多地兼任起半个FA的角色；投后团队一方面需要了解项目方的商业模式、当前发展以及融资规划，另一方面需要尽可能地清晰认知投资机构的投资方向、投资逻辑和轮次以及当年的规划等。",
+      "kpId": "fin-pe-portfolio-management-kp-031"
+    },
+    {
+      "category": "coreDuties",
+      "text": "人才举荐方面，对于A轮之前团队搭配往往十分不完善、专业度上也有可能十分欠缺的情况，投后人员协助引荐优秀人员。",
+      "kpId": "fin-pe-portfolio-management-kp-032"
+    },
+    {
+      "category": "coreDuties",
+      "text": "法律、税务等方面的后勤工作，建议结合VC机构自身实力，可以选择外包和直接雇佣等方式，降低资方自身的法律风险和财务成本，同时尽可能地为早期项目提供这类帮助，减少企业不必要的税务成本和时间花费。",
+      "kpId": "fin-pe-portfolio-management-kp-033"
+    },
+    {
+      "category": "coreDuties",
+      "text": "价值输出，主要是指从商业模式以及投资逻辑两个方面对被重点投资的企业给予分析反馈，亮点精华沉淀总结，糟粕错误反馈总结，给予投资负责人一定程度的价值补给；具体形式包括结合具体投资案例针对某一领域的分析研究、失败案例的总结汇报、投资退出的建议研究等，汇总成干货报告，一方面对投资逻辑予以检验，另一方面在VC机构内部实现价值共享，反哺投前。",
+      "kpId": "fin-pe-portfolio-management-kp-034"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投后管理主要可以分为标的企业监控及增值服务提供两个方面；风险管控方面，通过投后管理制度及时把控企业的财务信息、经营信息，及时准确获取企业关键信息，以更好的做出相应的投资退出策略，管控投资风险；促进标的企业发展方面，引导企业规范发展，提供战略咨询建议，减少企业试错成本，同时整合行业、政府资源，为企业发展提供全方面支持。",
+      "kpId": "fin-pe-portfolio-management-kp-035"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投前投后机制联动调整：投后管理部门需要负担起对被投企业的长期跟踪回访，对投资部门的投资逻辑、机制进行校验；投后部门深度观察被投企业的发展状况，及时反馈投资决策，更加灵活地调整私募基金投资布局战略。",
+      "kpId": "fin-pe-portfolio-management-kp-036"
+    },
+    {
+      "category": "coreDuties",
+      "text": "对于以初创型企业为主要投资项目，投后管理可以主要关注企业运营战略的咨询，为企业提供优秀的组织管理架构范例以及提供高端人才支持，帮助企业搭建科学合理的运营框架；同时对接融资资源，为企业疏理规划融资节奏。",
+      "kpId": "fin-pe-portfolio-management-kp-037"
+    },
+    {
+      "category": "coreDuties",
+      "text": "对于以成长型企业为主要投资项目，投后管理可以主要集中在行业资源的对接，整合业内资源引导帮助被投企业在行业内形成独特优势。",
+      "kpId": "fin-pe-portfolio-management-kp-038"
+    },
+    {
+      "category": "coreDuties",
+      "text": "对于以成熟型企业为主要投资项目，投后管理的重点则以风险监督管控为主，主要目的为即时获取企业经营信息，以更好做出相应决策；同时可以帮助企业对接相应政府资源，为企业进一步发展贡献力量。",
+      "kpId": "fin-pe-portfolio-management-kp-039"
+    },
+    {
+      "category": "coreDuties",
+      "text": "私募基金日常运营管理主要围绕信息披露义务及经营管理架构设置；信息披露义务人应当在每季度结束之日起10个工作日以内向投资者披露基金净值、主要财务指标以及投资组合情况等信息；单只私募证券投资基金管理规模金额达到5000万元以上的，应当持续在每月结束后5个工作日以内向投资者披露基金净值信息；信息披露义务人应当在每年结束之日起4个月以内向投资者披露报告期末基金净值和基金份额总额、基金的财务情况、基金投资运作情况和运用杠杆情况、投资者账户信息、投资收益分配和损失承担情况、基金管理人取得的管理费和业绩报酬等信息。",
+      "kpId": "fin-pe-portfolio-management-kp-040"
+    },
+    {
+      "category": "coreDuties",
+      "text": "发生重大事项的，信息披露义务人应当按照基金合同的约定及时向投资者披露，重大事项包括基金名称、注册地址、组织形式发生变更，投资范围和投资策略发生重大变化，变更基金管理人或托管人，管理人的法定代表人、执行事务合伙人（委派代表）、实际控制人发生变更，触及基金止损线或预警线，管理费率、托管费率发生变化，基金收益分配事项发生变更，基金触发巨额赎回，基金存续期变更或展期，基金发生清盘或清算，发生重大关联交易事项，基金管理人、实际控制人、高管人员涉嫌重大违法违规行为或正在接受监管部门或自律管理部门调查，涉及私募基金管理业务、基金财产、基金托管业务的重大诉讼、仲裁，基金合同约定的影响投资者利益的其他重大事项。",
+      "kpId": "fin-pe-portfolio-management-kp-041"
+    },
+    {
+      "category": "coreDuties",
+      "text": "信息披露义务人应当建立健全信息披露管理制度，指定专人负责管理信息披露事务，并按要求在私募基金登记备案系统中上传信息披露相关制度文件；信息披露事务管理制度应当至少包括信息披露的内容、披露频度、披露方式、披露责任以及信息披露渠道等事项，信息披露相关文件、资料的档案管理，信息披露管理部门、流程、渠道、应急预案及责任，未按规定披露信息的责任追究机制及对违反规定人员的处理措施。",
+      "kpId": "fin-pe-portfolio-management-kp-042"
+    },
+    {
+      "category": "coreDuties",
+      "text": "信息披露义务人应当妥善保管私募基金信息披露的相关文件资料，保存期限自基金清算终止之日起不得少于10年。",
+      "kpId": "fin-pe-portfolio-management-kp-043"
+    },
+    {
+      "category": "workflow",
+      "text": "投资完成，项目经理负责组织召开项目方和投资方投后管理对接会，参加人员为公司的分管合伙人和对方公司的高级管理人员。",
+      "kpId": "fin-pe-portfolio-management-kp-044"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理部定期收集汇总项目季度财务报告和年度财务报告，季度报告应在季度结束后的15天内完成收集，年度报告应在年度结束后的30天内完成收集。",
+      "kpId": "fin-pe-portfolio-management-kp-045"
+    },
+    {
+      "category": "workflow",
+      "text": "项目经理每季度走访项目一次，并向公司书面汇报项目生产经营计划执行情况以及书面形式访谈纪要。",
+      "kpId": "fin-pe-portfolio-management-kp-046"
+    },
+    {
+      "category": "workflow",
+      "text": "项目经理于项目投资完成后满3个月、6个月对项目进行总体运行评估，此后每半年一次出具书面评估报告。",
+      "kpId": "fin-pe-portfolio-management-kp-047"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理部每半年一次对投资项目进行国家政策变化、行业趋势变化、竞争格局变化研究。",
+      "kpId": "fin-pe-portfolio-management-kp-048"
+    },
+    {
+      "category": "workflow",
+      "text": "公司派出董事、监事代表公司出席董事会、股东会或监事会，投后管理部负责安排并牵头对会议资料进行讨论，所有涉及要行使表决权的议案都要经过分管合伙人审查决定，重大事项要提交合伙人会议（项目投资决策委员会）决定。",
+      "kpId": "fin-pe-portfolio-management-kp-049"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理部每季度（年度）编制管理报告呈送合伙人会议或投资人。",
+      "kpId": "fin-pe-portfolio-management-kp-050"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理部每月以台账形式对项目和合伙人的定期拜访、决策性管理和增值服务进行汇总整理，作为季度和年终考核的内容。",
+      "kpId": "fin-pe-portfolio-management-kp-051"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理工作流程通常可以分为以下步骤：项目筛选、尽职调查、投资决策、投资协议签署、投后管理、退出。",
+      "kpId": "fin-pe-portfolio-management-kp-052"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理主要模式包括投资经理负责制（谁投谁负责，投前投后一体化）、专业化投后（建立专门投后部门专项运营投后跟踪及服务）、外设型投后制度（将投后管理任务转交给外部咨询公司）、投资加投后共同负责制、Capstone模式（独立于投资团队的投后管理团队，为被投企业提供全生命周期投后管理并向被投企业收费）。",
+      "kpId": "fin-pe-portfolio-management-kp-053"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理从融资轮次角度分为四个阶段：A轮之前、A+轮到C轮、D轮到Pre-IPO、IPO及以后，各阶段投后管理侧重点不同。",
+      "kpId": "fin-pe-portfolio-management-kp-054"
+    },
+    {
+      "category": "workflow",
+      "text": "在投前部门项目负责人提供投资建议书并完成相关尽职调查后，自投资协议签署完成时点起，项目归总到投后部门（可能会具体到工商变更完成的时间节点，因项目和资方规定而异）。",
+      "kpId": "fin-pe-portfolio-management-kp-055"
+    },
+    {
+      "category": "workflow",
+      "text": "投后管理主要从三大维度发力：已投项目运营、资源资本对接、法律等顾问服务。",
+      "kpId": "fin-pe-portfolio-management-kp-056"
+    },
+    {
+      "category": "workflow",
+      "text": "项目运营方面，搭建已投项目库，从基本信息、财务状况、业务状况、融资需求及进展、当前问题及策略等维度定期回访企业，一般以月或者季度为单位走访企业，汇总资料并上报给管理层或者投资管理部门；针对走访过程中发现的问题出具诊断报告及解决方案；必要时联合投前负责人一同解决企业不配合问题。",
+      "kpId": "fin-pe-portfolio-management-kp-057"
+    },
+    {
+      "category": "workflow",
+      "text": "分层管理方面，依据企业的业务运营状况、企业状况、投融资需求及进展、团队状况等维度的数据，将企业分为A+、A、B、C、D五个等级，并通过每次企业回访实时更新，动态滚动发展，对于不同分层的项目资源对接力度和关注角度实行差异化。",
+      "kpId": "fin-pe-portfolio-management-kp-058"
+    },
+    {
+      "category": "workflow",
+      "text": "资源资本对接方面，投后团队在通过基础运营进行数据抓取后，了解到项目方的需求或者痛点，依据分层管理表，结合当前所拥有的资源予以帮助；资源对接细分为内部对接和外部对接，资本对接方面投后人员兼任半个FA的角色。",
+      "kpId": "fin-pe-portfolio-management-kp-059"
+    },
+    {
+      "category": "workflow",
+      "text": "人才举荐、法律等顾问服务方面，协助企业引荐优秀人员，法律、税务等方面的后勤工作可选择外包和直接雇佣等方式。",
+      "kpId": "fin-pe-portfolio-management-kp-060"
+    },
+    {
+      "category": "workflow",
+      "text": "价值输出方面，从商业模式以及投资逻辑两个方面对被重点投资的企业给予分析反馈，汇总成干货报告，在VC机构内部实现价值共享，反哺投前。",
+      "kpId": "fin-pe-portfolio-management-kp-061"
+    },
+    {
+      "category": "tools",
+      "text": "投后管理风险评价体系，用于制定不同风险等级，达到识别风险、及时预警的效果，一般包括外部环境的监测、被投企业战略实施情况、经营发展偏离情况、其他重大风险等。",
+      "kpId": "fin-pe-portfolio-management-kp-062"
+    },
+    {
+      "category": "tools",
+      "text": "分层管理制度，将企业分为五个等级，并通过每次企业回访实时更新，动态滚动调整，对于不同分层的项目资源对接力度和关注角度实行差异化。",
+      "kpId": "fin-pe-portfolio-management-kp-063"
+    },
+    {
+      "category": "tools",
+      "text": "已投项目库，从基本信息（工商变更等常规资料汇总）、财务状况、业务状况、融资需求及进展、当前问题及策略等维度定期回访企业并汇总资料。",
+      "kpId": "fin-pe-portfolio-management-kp-064"
+    },
+    {
+      "category": "tools",
+      "text": "台账，投后管理部每月以台账形式对项目和合伙人的定期拜访、决策性管理和增值服务进行汇总整理，作为季度和年终考核的内容。",
+      "kpId": "fin-pe-portfolio-management-kp-065"
+    },
+    {
+      "category": "tools",
+      "text": "独立档案，投后管理部对每一个项目建立独立档案并妥善保管，便于随时查阅、跟踪管理和评估。",
+      "kpId": "fin-pe-portfolio-management-kp-066"
+    },
+    {
+      "category": "tools",
+      "text": "信息披露备份平台，信息披露义务人应当按照中基协的规定以及基金合同约定通过中基协指定的私募基金信息披露备份平台报送信息。",
+      "kpId": "fin-pe-portfolio-management-kp-067"
+    },
+    {
+      "category": "tools",
+      "text": "投后管理人员应具备行业分析、财务分析、战略咨询、流程优化、技术改进等专业能力；机构需要配备财务、法务、人力、公关、市场等多维度的专业人才。",
+      "kpId": "fin-pe-portfolio-management-kp-068"
+    },
+    {
+      "category": "typicalDay",
+      "text": "投后管理岗位的日常工作围绕已投项目的跟踪管理与增值服务展开。项目经理按季度走访项目一次，拜访项目方研发、生产、销售、财务等负责人，直接获取第一手生产经营以及市场信息，并形成书面汇报和访谈纪要。投后管理部定期收集汇总项目季度财务报告和年度财务报告，对财报进行简单分析并编写分析报告，确认投资资金和投资收益按投资计划运转。投后人员搭建并维护已投项目库，从基本信息、财务状况、业务状况、融资需求及进展、当前问题及策略等维度定期回访企业，一般以月或者季度为单位走访企业，汇总资料并上报给管理层或者投资管理部门；针对走访过程中发现的问题出具诊断报告及解决方案，和企业负责人一同解决。对于外派董事、监事出席的董事会、股东会或监事会，投后管理部负责安排并牵头对会议资料进行讨论，所有涉及要行使表决权的议案都要经过分管合伙人审查决定。投后管理部每月以台账形式对项目和合伙人的定期拜访、决策性管理和增值服务进行汇总整理，每季度（年度）编制管理报告呈送合伙人会议或投资人。此外，投后人员还需了解被投资公司对增值服务的需求并做好对接准备，参与推动企业改制上市准备工作以及再融资工作，每年针对已投资项目的具体情况向企业提出有针对性的书面管理建议。",
+      "kpId": "fin-pe-portfolio-management-kp-069"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理在基金管理人机构设置和功能赋权上比重过低、资源分配不足，难以有效开展工作；PE/VC管理人机构规模普遍较小，大多数机构很少在机构设置上划分出专门的投后管理部门，多是由财务、合规等人员兼顾投后管理职能，导致在该领域精力和资源投放不足；所谓的投后管理只能局限于定期向被投企业索取基础财务数据和经营报告，建立简单台账，维系着最基本的沟通。",
+      "kpId": "fin-pe-portfolio-management-kp-070"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理日常工作流程不规范，难以建立标准化管理体系；原因包括投后管理部门机构设置与人员配备不足、专职专业人员不足，管理人管辖的基金彼此间差异大，被投资项目间的差异性大，PE/VC多投资于创新创业项目导致投后管理涉及的内容较传统行业更加驳杂、涉及外部干扰因素较多；很多管理人无法将投后管理工作细化推进，多止步于基础的工作要求，难以实现对被投企业价值增值服务。",
+      "kpId": "fin-pe-portfolio-management-kp-071"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理与投资部门关系厘清困难，绩效评价体系难以建立；投后部门有时无法获得完全的资源移交和共享，特别是涉及被投企业关键人员等，制约投后管理工作的开展；投资部门很难有动力将自身掌握的被投企业的核心信息向投后部门共享；投资部门员工以固定收入加动态收入为导向的绩效分配与投后管理部门主要以固定收入为绩效分配的矛盾日益加大；投后管理员工大多还负责基金/管理人日常行政管理工作，难以加大在投后管理工作上的精力投入。",
+      "kpId": "fin-pe-portfolio-management-kp-072"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理专业技术与专业人员不足，难以开展有效、深入的增值服务；现有投后管理只能优先满足对于基金/管理的期望满足，无法全面顾及对被投企业的服务；满足基本的信息获取与资金安全管理已经让投后工作应接不暇，很少有能力去开展企业增值服务；建立在对被投资企业深度研究和介入基础上的企业治理改善、所处行业研究、外部资源整合等工作，大多超出了现有投后管理的能力范畴和人员能力。",
+      "kpId": "fin-pe-portfolio-management-kp-073"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理的第三方引入困难，外部资源有效利用渠道缺乏；投后管理阶段由于工作已经触及到被投资项目的核心信息，且更多涉及创业/创新专业领域，无论是出于保密的需要还是出于专业能力水平的考量，可引入利用的外部资源变得稀缺；将投后管理从基金/管理人企业剥离出来成立单独实体并进行协议控制是一种模式创新尝试，但成本负担与具体协议内容还有待于进一步衡量。",
+      "kpId": "fin-pe-portfolio-management-kp-074"
+    },
+    {
+      "category": "pitfalls",
+      "text": "基金与基金管理人之间的收益诉求差异可能是投后管理发展滞后的天然基因；作为基金而言核心诉求是投资人资金的保值与增值，而基金管理人的利益诉求体现为固定收益（管理费）加超额投资收益分润（Carry），当基金管理人管理基金额度达到与其运行成本均衡的规模后，管理费的固定收益已经很可观；在不考虑职业操守的前提下，基金管理人完全可以实行消极管理策略，放弃追求超额投资收益分润，进一步压缩运行成本，包括削减投后管理投入，转而只追求安全省力的管理费收入。",
+      "kpId": "fin-pe-portfolio-management-kp-075"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理机制欠缺；快速增长的在管资金规模使投资机构无法及时调整自己的投后管理模式，多数新晋明星基金都不同程度地遭遇了投后管理跟不上在管项目发展速度的窘境；机构没有合理有效的投后管理制度，投资和投后管理的职责不清晰，绩效不合理。",
+      "kpId": "fin-pe-portfolio-management-kp-076"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投资后价值发现欠缺；目前的投后管理大部分以监督和风险控制为主，而忽略了价值发现和增值服务；投后管理以被动管理为主，与企业的联系不够紧密，对企业的实际经营了解逐渐减少，没有深入帮助有潜质的企业挖掘自身潜力，实现价值增值。",
+      "kpId": "fin-pe-portfolio-management-kp-077"
+    },
+    {
+      "category": "pitfalls",
+      "text": "专业水平良莠不齐；为对接企业提供增值服务，要求从业人员不仅要具备金融学、管理学素养，还需对被投企业的技术、行业趋势等有所了解；机构还需要配备财务、法务、人力、公关、市场等多维度的专业人才，并能够利用关系网络提供外部资源；目前机构的投后管理人员无严格要求，具备上述综合能力的人员稀缺，增值服务能力受限。",
+      "kpId": "fin-pe-portfolio-management-kp-078"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理缺乏连续性；在投后管理过程中，市场环境的变化、主要项目负责人的离职和机构战略的调整是影响投资机构投后管理效果的主要因素；在高流动性的金融行业，缺乏有效合理的档案管理和信息系统，常常影响项目推进效率。",
+      "kpId": "fin-pe-portfolio-management-kp-079"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投资经理负责制模式下，投资经理既负责项目筛选、调查、投资又负责投后跟踪与服务，对投资经理的精力要求很高，使得难以专注于发掘优质项目、制定投资策略；由于投资团队精力有限，当在管项目增多时，被投企业的很多需求无法被有效覆盖和解决。",
+      "kpId": "fin-pe-portfolio-management-kp-080"
+    },
+    {
+      "category": "pitfalls",
+      "text": "专业化投后模式意味着私募基金本身需要投入更多的资金、人员，在规模较小的机构中难以开展。",
+      "kpId": "fin-pe-portfolio-management-kp-081"
+    },
+    {
+      "category": "pitfalls",
+      "text": "外设型投后制度通过将投后管理的任务转交给外部咨询公司，能够解决私募机构人员配置及资源分配的问题，但在投前投后联动中缺乏优势，难以形成联动调整机制。",
+      "kpId": "fin-pe-portfolio-management-kp-082"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投后管理以被动管理为主，与企业的联系不够紧密；投后管理大部分以监督和风险控制为主，忽略了价值发现和增值服务。",
+      "kpId": "fin-pe-portfolio-management-kp-083"
+    },
+    {
+      "category": "pitfalls",
+      "text": "IPO后部分企业盲目收购，投入巨资的并购整合并未对企业形成业务推动，反而在很大程度上消耗企业资本，制造管理内耗。",
+      "kpId": "fin-pe-portfolio-management-kp-084"
+    }
+  ],
+  "sources": [
+    {
+      "postId": "2ab9db8f928e6492",
+      "title": "【模板】PE投后管理制度",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330054&ver=7034&signature=gKsQAbI86ExeWfWZbBoVE-pkHq1U3dKMoS-GiBm2rSfkHqLlzGIkjkEgNkCURGssqb-wFLQNiRIRe9mNehpD*XQpRMcugRcAsL8xyy*asgMhXgqhGRfQRQShNGbWfHpg&new=1"
+    },
+    {
+      "postId": "06fd5ce600ba4a5f",
+      "title": "管理篇  |  私募基金日常运营义务及投后管理",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330054&ver=7034&signature=D0wuOxF9FOXSYL2QiKb-rZe-x0zKMlkMvuXAaArZHn6kXoNXUlJB8X1sGH3YPhvW6H-9P7Ke-J13KlGUWcGrQ06AzQx1IHlLwnqb44RrlDdxnL2QK85j*7ce5iPY*jh4&new=1"
+    },
+    {
+      "postId": "2f6fbf7d4b74abac",
+      "title": "PE/VC领域投后管理实践中存在的六大问题",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330054&ver=7034&signature=tpj7nhj9zwP6mNwaPK9dQnaESN8fqSGx4BrTZwEbsgA9WJNTU8s2SjcPEnaA8P0Zbfq**I9KCfKZReX4UvMUsuf5Tj2V-gUbT0AvurADM104UkhQJhbI4ROsMaMTOYSK&new=1"
+    },
+    {
+      "postId": "4b6fa15d31c45a92",
+      "title": "【全市场首份投后服务研究系列之海外篇】投后管理擦亮PE大鳄品牌",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792330054&ver=1&signature=Dyk31*tyDLU8r5TGB9kLzcvt**ETFy6kGZowl-6hrYZ0HY40zR6LYzGfFnD-e4h2TW4HI-D2agdR--ur6rsi3-lCYSb7dEbZTQ-VAzjLWgA*OuPXNiatFkhcQqPgBvBzumvGN-P6WkaVB51s2L-NycN6rdwoy6TLt8zvd11eYVk="
+    },
+    {
+      "postId": "c59ad3a9a0c58571",
+      "title": "清科报告：投后管理助你实现弯道“超车”，《2018年中国VC/PE机构投后管理调查研究报告》重磅发布",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330054&ver=7034&signature=5iExzedMlKOuvY4xyLOWTUVBLJK3XkES86T*1ihXzaQOirKitJqa0UerOjobo4-qCH2vjq*cJvb5AGTLHy0WIcLl6k4Zl7KXSvjoY*rhaWmb4O-QQk0rOGiqdypPrSZ7&new=1"
+    },
+    {
+      "postId": "74f5fea0e9c5bdd1",
+      "title": "PE的投后管理都做些什么？",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792330054&ver=1&signature=nJ8s1CD0n0kGoZHOrsNiVFnaQYPcuNsr3QWQlCn433PFw2-AawmX1VAaIXtfdUDxhY6jy6QHeQsymoPIC2ieOsbP0UTknh3KkR-6voupvnebXZKNvJErNDdbz8zirB0l*mYtwtPqnxXfvB4WQVQvaoMdZ*O0uRKydInHpuX71Ds="
+    },
+    {
+      "postId": "63512365f331f536",
+      "title": "清科观察：募资难？项目贵？投后管理助你实现弯道超越 ——你不得不看的《2018年中国VC/PE机构投后管理调查研究报告》",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330054&ver=7034&signature=5iExzedMlKOuvY4xyLOWTUVBLJK3XkES86T*1ihXzaT3CqHvdLWdoQGIHoAPUrpp7EdoO1TzIuFSg3ngsRpezH3BHiXSiBEQ6GxtqHEkW444ajbF7zadhiFDIY6Bz*3t&new=1"
+    },
+    {
+      "postId": "6fedf8b1fa9a548b",
+      "title": "干货丨一文读懂VC、PE投后管理：留住人，守住财",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792330054&ver=1&signature=b2lW*F-Em*MX8RI79Lce0m1B5ElQ7d3WNzEIbYnXGfp2sjdKTqbEZ-XRAiXz0OnZd2ZgMn43x00xP4yiJ3xekky3QPuoMqyAAOjBvfvDoS5--UZxQyUz5karx4KkoUDTN3ry5xev6KAmHzNo*hrd-moKAj-POCNGxtGyo0s4bTE="
+    },
+    {
+      "postId": "25bb139e6b543999",
+      "title": "VC/PE增值关键：投后管理应该怎么做？",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792330104&ver=1&signature=npGZof*8UEYWajuOYkumhzLb*mKYZ2VAsVaDoIPbX4Qx9JFgV2aKcjgcQWkCQjMMRrZRZzPOV22dzn4nBv6O5mQrZD0OEgl0YP1J2fRNlmHG6*TwMFkEAWViaENq8S5aWLQDOf9y0G61rQ0XF3kpuissqd*EC8up2tZ2X8iznEs="
+    },
+    {
+      "postId": "54f295478903b15e",
+      "title": "私募股权基金投后管理全攻略",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330104&ver=7034&signature=Z1D1OJood2hLX2eEnnIdlfDAdYimNaoHDE5bVpPWv1hjCsb9vEG5WWtqj185Zlv5va9zwxcpBHw1yMqr2Xqn4nv5NeJvu2L20ytr7fU6fTqA9k1M9Vg2jkdoRxBSJd-M&new=1"
+    },
+    {
+      "postId": "8e68aa1d1ad86b6c",
+      "title": "PE投后管理-实现企业价值创造的过程|红蓝圈出品",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330104&ver=7034&signature=UVJX1kFdQ-9z6dBb3OEpcXXYa1FLSWJvye3nqGrJVAM2JOuDHz18Phe0kADcBbra1PEh2wUDem5U6uhCWTHC831kd1Jz-sSBOM84curbji38bOSq1GWDSaGn8dDC2yE9&new=1"
+    },
+    {
+      "postId": "de532692cd4931c5",
+      "title": "PE 投后管理实务｜私募股权投资基金投后管理全解析",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330104&ver=7034&signature=A9eVr0968ZWSC3S-zJXCFG0ZvW6ufKhVRVgqhrdfr95BQHMq91OZMVRiyJZIE85rv0KKrURvwdX-ykiQpoBV7oDGx3IYDU391gHucCSgP8qpVJ8EMz8AS4kz5okKHsjh&new=1"
+    },
+    {
+      "postId": "91a036e5c9cde68b",
+      "title": "【PE/VC】投后管理的模式和发展逻辑",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792330104&ver=1&signature=ASrYgGoZSZEv8cQ8JXoH4MSrwLy8TnMnqeCySHRnJQNWeouN0h7hO1GqROqYODvVbeGzOPF0cwQiYLogMWcNOWp5nR9ahBTjArkU0RuUyfCSpIF0IR7uqFbbv74qlEV8Os4RT9oKZvJv3CiD-KQDUYEytjsrDQpxMCCzworkKmI="
+    },
+    {
+      "postId": "faa6208c4c1a644d",
+      "title": "风光投前享，黑锅投后背",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330140&ver=7034&signature=8FQ*d0lM0K526NtKqhnXiBBShOsk36plxPvNCSQIVEP0nvF*bQQyngxaEjuHoM9I1sdB5TpB1wsOCQz1QF2Q7B-7OQoSufZ*xBS9KT0tviAj-yubYe9Jw758Y22lYzG*&new=1"
+    },
+    {
+      "postId": "0da072c62a2b544c",
+      "title": "社招推送：招商证券/招商局招聘投后管理岗/外包估值岗/风控合规部负责人/不良资产业务岗，上海/北京/深圳/广州/香港。",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330140&ver=7034&signature=ttkcaVqp8ucPDLERqNq7LpWhln58eLcrawAWMQDktGSfxcI5pElGk4Q03D3ZGAiSMSv-OwuCPurs0btj1VaZRx6sOkoEcyMYu4o6qn5Wpq-WpsXUSsF-CE8UKAm1zBeI&new=1"
+    },
+    {
+      "postId": "8497e51c6cbdf212",
+      "title": "如果你想投AI产品岗，如何把招聘要求拆解成准备清单？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330225&ver=7034&signature=su5w7PChUo1jdlrRWCFWXd1rp3*2CD7Ei0neJEeOGayVQee2xjwHOskSOMqcfPwNoeFiCRGGTxX6*PXQU60-CXscmXr2INbQZGsqXgtmlDLa-EBSFEKyVW0BmRM*37pg&new=1"
+    },
+    {
+      "postId": "6fb9ed4ae934517b",
+      "title": "如果你想投AI产品岗，如何把招聘要求拆解成准备清单？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330275&ver=7034&signature=su5w7PChUo1jdlrRWCFWXd1rp3*2CD7Ei0neJEeOGayVQee2xjwHOskSOMqcfPwNMztXVwUtkrDb9HVQiufdn7MzmCUbUzp-lLgZCOFe0dO14Y8TFG2zzcM0FlhNF94g&new=1"
+    },
+    {
+      "postId": "17053514d39008f4",
+      "title": "封城后，武汉酒店人的真实记录：因为有你们，武汉一定赢！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330275&ver=7034&signature=YleSUfi7owxJNBRyaOs96k-*umyZwZ77HQwF7uwXdAjSQWFTWmqf8Nc9oH62l1M13PZJlOjOeHExwt9QHcv9zcGU9Gue0jeXVrshosqzXPiN0T*dYmECHi2zth7OCrZD&new=1"
+    },
+    {
+      "postId": "fd49548fa9575c5b",
+      "title": "英国校招，一家公司到底能投几个岗位？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330275&ver=7034&signature=XZF5Hyre0gTuwl6yA2-iLsgNO70q8lDBi4TqdOtb6-ZjfiSvVCzMz*GPanCj9k38Eg*V1SakHLFkWfGzr7HytlY3MJf6LpI4XAj*oncFP7bQRwMLdZq1u8qgBq5ZeBfv&new=1"
+    },
+    {
+      "postId": "d23af113a3e02634",
+      "title": "2027秋招｜金融科技专业投银行运营管理岗，面试如何体现科技和数据背景？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330314&ver=7034&signature=aQyUC3Ptlqe9xFhlZUbwcFxEmVIob9nxNVllfHrQx6iZ1lG5JUIEjJHVLKXCfqwBfn73e*gA0DcWJhET7YviKY2msOR4ol3Wdgez0nDDynckwoJfCO0kBUogootJeUz5&new=1"
+    },
+    {
+      "postId": "2a7b6a8d34f51a72",
+      "title": "所以，投后管理要怎么做？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330314&ver=7034&signature=R19xcTm1ubuwGWj*VSTnbhLvnor-FBwTr4Mr7nwdhM3jgEYdrU6c9ldhZ3yNPelspBNarjg2yllx6c0nrFGQo*e2kqjK4S-sOG-KfipQcsxNEINmQYBV9oeKOk6MaYQo&new=1"
+    },
+    {
+      "postId": "b822403d6c6be8bb",
+      "title": "创投类股权投资公司风控经理岗面试准备清单",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330314&ver=7034&signature=c3vx4bGjIgb3tANSmYJ04kFpcb*OpeP61MSpqMQ78XOSSgceiP5bUsa*mug7Wh*MWp7qiMupiu2NQbie1HgBglcCxHv8IdMbVwPUKrdXB7GnjLUpuNadiM*gWZ46*p7r&new=1"
+    },
+    {
+      "postId": "587ab829b7386e26",
+      "title": "国有企业｜杭州之江湾股权投资基金管理有限公司招聘公告",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330365&ver=7034&signature=AWPv4NUbiIwuuTDGpalGBXD3K4q*f6letKjDqsGg6h6Ph3b33IJ9xw*Poy7ayVK43AKebY1teQcCDr7UM0d*OFIBPk8xu6XLlyZQePATI18P-IiynETdcXwgmK1ElEnh&new=1"
+    },
+    {
+      "postId": "2fc8d0e087e4b38f",
+      "title": "留学回来别只投银行券商，这4家央企金融公司年薪25万起",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330365&ver=7034&signature=nSaqu7v-0IVzxca4wvN0F*W-F-*Q4O4kiFPuisafB4IEgcXaP0uZ15I8*DvMbleOHmPcfBjZ7*kUzJxy*5tHVjg7eg1CPG0t8sMsGXPjGEEbapYH71EYLOu3IKGRmwkw&new=1"
+    },
+    {
+      "postId": "d8b304719acfe2e7",
+      "title": "2027秋招｜金融科技专业投银行运营管理岗，面试怎样讲清科技和数据优势？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330365&ver=7034&signature=UqdgiebkI1asTQbH1f24jBlgVDUgVgrhutRE7BkJ7Obkz2f7YqouP*4c-PrLdRjfLgjgA5-fVV5JbIGBP9yWySfQVOmbzGQsxgUiCxMF5OzhWQTvFrsI5ZzXQw2O6SXC&new=1"
+    },
+    {
+      "postId": "15066a37dd661092",
+      "title": "投了很多岗位却没有面试，问题究竟出在哪里？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792330365&ver=7034&signature=udx049ORxEkW6o19XVB1cyVEC04eb59FpE2kzLlscsT6sytGJenP0U5EnhPSDzlltbTejRk*iScF6kbgUDX0lVYlGwbXRPe1ePMuBsDQoH*NTvjbZcEsi*BDI9AMdo0W&new=1"
+    }
+  ]
+}

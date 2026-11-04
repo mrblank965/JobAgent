@@ -1,0 +1,11 @@
+{
+  "positionId": "fin-fintech-risk",
+  "sampledKpIds": [
+    "fin-fintech-risk-kp-017",
+    "fin-fintech-risk-kp-007",
+    "fin-fintech-risk-kp-021"
+  ],
+  "totalPoints": 28,
+  "faithful": true,
+  "issues": []
+}

@@ -1,0 +1,306 @@
+{
+  "status": "indexed",
+  "positionId": "fin-ib-ibd",
+  "positionName": "投行承做",
+  "aliases": [
+    "投资银行部承做",
+    "IBD分析师",
+    "投行项目执行",
+    "投行承做岗"
+  ],
+  "vectorStore": "keyword-inverted",
+  "points": [
+    {
+      "category": "coreDuties",
+      "text": "协助项目人员开展IPO、上市公司再融资等投资银行类业务的承做",
+      "kpId": "fin-ib-ibd-kp-001"
+    },
+    {
+      "category": "coreDuties",
+      "text": "完成所分配的项目任务，进行相应法律、财务核查，并完成资料搜集、整理并归档工作",
+      "kpId": "fin-ib-ibd-kp-002"
+    },
+    {
+      "category": "coreDuties",
+      "text": "承揽材料制作，即Pitch Book（PPT制作），是IBD业务最前期承揽项目所需要的材料",
+      "kpId": "fin-ib-ibd-kp-003"
+    },
+    {
+      "category": "coreDuties",
+      "text": "具体负责投行项目承做相关工作，包括项目尽职调查，对项目质量进行判断；协助开展企业和相关中介机构的联系、沟通和协调；撰写与项目相关的报送审批文件，按规定完成公司内部审核流程，并负责申请文件的报送及后续的反馈和补充；根据公司相关尽职调查要求，收集整理工作底稿，审核工作底稿的完备性并提交存档等相关工作",
+      "kpId": "fin-ib-ibd-kp-004"
+    },
+    {
+      "category": "coreDuties",
+      "text": "跟踪法律法规、行业、资本市场以及业务领域新问题、新产品、新趋势等",
+      "kpId": "fin-ib-ibd-kp-005"
+    },
+    {
+      "category": "coreDuties",
+      "text": "能够辅助完成公司和部门分配的项目任务指标和收入指标",
+      "kpId": "fin-ib-ibd-kp-006"
+    },
+    {
+      "category": "coreDuties",
+      "text": "负责债券融资项目的承做工作，包括但不限于公司债、企业债、ABS以及银行间产品底稿制作、项目申报材料撰写、公司融资方案设计等",
+      "kpId": "fin-ib-ibd-kp-007"
+    },
+    {
+      "category": "coreDuties",
+      "text": "根据项目负责人、主办人的安排，与项目组其他成员协调配合，完成项目具体工作",
+      "kpId": "fin-ib-ibd-kp-008"
+    },
+    {
+      "category": "coreDuties",
+      "text": "承做是判断企业怎样才能符合监管要求，从审批通过到发行债券这整个环节",
+      "kpId": "fin-ib-ibd-kp-009"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投行承做一个IPO项目，一般项目组3–5个人，业、财、法分工明确：有人负责业务，有人负责财务，有人负责法律，最后在项目负责人或保代这里归口",
+      "kpId": "fin-ib-ibd-kp-010"
+    },
+    {
+      "category": "coreDuties",
+      "text": "投行承做讲究事无巨细、全面核查，信息必须保证真实、准确、完整",
+      "kpId": "fin-ib-ibd-kp-011"
+    },
+    {
+      "category": "workflow",
+      "text": "无论是新三板还是IPO等项目的开展，均需要进行全面的尽职调查，从而达到了解企业基本情况、全面掌握主要问题的目的",
+      "kpId": "fin-ib-ibd-kp-012"
+    },
+    {
+      "category": "workflow",
+      "text": "在立项之前基本上会安排项目团队开展前期的尽职调查；在开展尽调之前，可以了解被调查企业所处行业、上下游的基本情况，以及对标企业的基本情况、财务状况",
+      "kpId": "fin-ib-ibd-kp-013"
+    },
+    {
+      "category": "workflow",
+      "text": "在现场尽职调查的开展过程中，围绕企业的历史沿革、生产经营、财务核算、合法合规性等方面，做好全面、深度、细致的调查，与企业的生产、销售、财务、管理等岗位人员进行充分的沟通，了解企业基本生产经营的状况，及时发现和把握项目存在的主要问题，并形成一份尽职调查报告",
+      "kpId": "fin-ib-ibd-kp-014"
+    },
+    {
+      "category": "workflow",
+      "text": "尽调报告基本上要包括公司的主营业务、财务状况等能够反映企业基本情况的要素，最重要的是要详细记录前期尽调过程中发现的问题、初步的解决方案",
+      "kpId": "fin-ib-ibd-kp-015"
+    },
+    {
+      "category": "workflow",
+      "text": "随着项目的逐步推进，将会展开阶段性的尽调工作，每一个过程的尽调均需要留痕，并将相关底稿进行收集与梳理；项目组人员需要对阶段性的尽职调查工作成果进行总结与整理，对随时发现的问题做以备忘和记录",
+      "kpId": "fin-ib-ibd-kp-016"
+    },
+    {
+      "category": "workflow",
+      "text": "在项目的开展前，需要对项目的进展制定一个合理有效的项目计划，在计划中列明每一个时间节点，需要完成的任务，并落实到具体负责机构或人员",
+      "kpId": "fin-ib-ibd-kp-017"
+    },
+    {
+      "category": "workflow",
+      "text": "项目过程中会出现各种的问题，或者需要为企业出具全面的财务梳理解决方案，在制定方案时需要全面了解企业的基本情况，并需要与企业相关人员做好充分的沟通，确保制定的相关解决方案切实可行、落实到位；并应由项目组专门的人员负责跟踪解决方案的执行情况，并根据实际情况适当进行恰当的调整",
+      "kpId": "fin-ib-ibd-kp-018"
+    },
+    {
+      "category": "workflow",
+      "text": "对于投行类项目，一般至少需要证券公司、会计师事务所、律师等中介机构，不同机构与人员做好分工、协调、随时沟通，券商进行统筹的安排与合理的分工，并实现资源与相关资料的共享",
+      "kpId": "fin-ib-ibd-kp-019"
+    },
+    {
+      "category": "workflow",
+      "text": "债承基本就是三个环节：承揽、承做和承销；承揽就是拿项目，通过招投标、或者前期做服务的方式等等争抢项目；承做就是判断企业怎样才能符合监管要求，从审批通过到发行债券这整个环节；承销指的就是销售和发行",
+      "kpId": "fin-ib-ibd-kp-020"
+    },
+    {
+      "category": "workflow",
+      "text": "比如A公司取得了上交所同意发行公司债10亿元的批文，接下来就要拿着这个批文去找市场上的投资者，比如银行保险基金和一些零散的资金方认购债券，把这10个亿解决掉",
+      "kpId": "fin-ib-ibd-kp-021"
+    },
+    {
+      "category": "tools",
+      "text": "Pitch Book（PPT制作）",
+      "kpId": "fin-ib-ibd-kp-022"
+    },
+    {
+      "category": "tools",
+      "text": "业务建议书模板",
+      "kpId": "fin-ib-ibd-kp-023"
+    },
+    {
+      "category": "tools",
+      "text": "尽职调查报告模板",
+      "kpId": "fin-ib-ibd-kp-024"
+    },
+    {
+      "category": "tools",
+      "text": "CPA",
+      "kpId": "fin-ib-ibd-kp-025"
+    },
+    {
+      "category": "tools",
+      "text": "法律职业资格（通过司法考试）",
+      "kpId": "fin-ib-ibd-kp-026"
+    },
+    {
+      "category": "tools",
+      "text": "证券从业资格",
+      "kpId": "fin-ib-ibd-kp-027"
+    },
+    {
+      "category": "tools",
+      "text": "保荐代表人资格",
+      "kpId": "fin-ib-ibd-kp-028"
+    },
+    {
+      "category": "typicalDay",
+      "text": "工作节奏基本就是在出差，大部分工作都不是在办公室完成的。非大锅饭投行团队中，承做人员没日没夜趴在偏远工业区企业的小会议室里写材料加班加点，早出晚归，毫无个人生活可言。投行闲的时候特别闲，忙的时候项目又都挤到了一起，现实中投行人很可能同时要处理撰写项目建议书、尽调底稿梳理、申报材料撰写、第二天拜访客户前的材料准备等多项工作，需要在短时间内处理每一件事，推动每一个项目向前走。",
+      "kpId": "fin-ib-ibd-kp-029"
+    },
+    {
+      "category": "pitfalls",
+      "text": "很多人不十分重视前期的尽调工作，而仅仅是为了应付立项的基本要求，将一些模板抛给被尽调的企业，填写好后再进行简单的了解，这样就算是完成了尽职调查，这种做法是完全错误的",
+      "kpId": "fin-ib-ibd-kp-030"
+    },
+    {
+      "category": "pitfalls",
+      "text": "如果有些问题在后期才发现，或者材料申报后被监管机构发现或重点关注，将会影响整个项目的节奏，以至于某个问题直接影响到项目整体的逻辑思路，影响到项目的进度",
+      "kpId": "fin-ib-ibd-kp-031"
+    },
+    {
+      "category": "pitfalls",
+      "text": "对于项目中发现的问题不能单单考虑问题的一个点，而是从点出发，考虑整个面或者需要充分意识到对项目其他方面的影响，需要具备大局观的思维",
+      "kpId": "fin-ib-ibd-kp-032"
+    },
+    {
+      "category": "pitfalls",
+      "text": "在项目的推进中，项目团队或者说是券商一定要具有主导地位，对相关问题的解决必须严格把控，不能诺诺而退；如果一切由着企业来，会造成大病没有小病一大堆，带病上会最终被否的悲惨局面",
+      "kpId": "fin-ib-ibd-kp-033"
+    },
+    {
+      "category": "pitfalls",
+      "text": "对于非大锅饭投行而言，团队长与投行承做民工的关系就好比搞装修的包工头与水电工、刷漆工等小工的关系，小工没有自由，项目成功了还要看团队长的良心分配奖金，通常非领导亲信只能喝点汤，如果团队长人品太差，项目成功了也只能分得几万块奖金甚至直接没有",
+      "kpId": "fin-ib-ibd-kp-034"
+    },
+    {
+      "category": "pitfalls",
+      "text": "对于大部分无法成功转承揽或中后台的投行人而言，是无法真正融入公司的，承做民工只是为公司、团队长和保代作嫁衣裳的牛马工具人、使唤几年的耗材",
+      "kpId": "fin-ib-ibd-kp-035"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投行承做这份工作需要牺牲个人生活、牺牲对家人的陪伴，是无法干到65岁作为终身职业的，本质如同临时工",
+      "kpId": "fin-ib-ibd-kp-036"
+    },
+    {
+      "category": "pitfalls",
+      "text": "真实的股权投资市场情况是投资社招更喜欢本身就是投资的人，更喜欢四大的，更喜欢有产业背景或者学术背景（工科博士）的候选人，对投行的需求也仅限于头部券商复合学历背景的学历好（本硕双top985）的年轻人",
+      "kpId": "fin-ib-ibd-kp-037"
+    },
+    {
+      "category": "pitfalls",
+      "text": "刚做投行一两年的人转行投资，反而适应得比较快；但在投行承做很多年、长期做细节、没怎么做过承揽的保代，转投资反而容易遇到瓶颈，问题就出在太习惯抠细节、标准太高",
+      "kpId": "fin-ib-ibd-kp-038"
+    },
+    {
+      "category": "pitfalls",
+      "text": "跟承揽和承销相比，承做在整个业务链条中价值没那么大，可能会产生心理落差",
+      "kpId": "fin-ib-ibd-kp-039"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投行新人在刚入行时无法将知识和实务结合起来，在很大程度上就是因为其在短期内无法熟练掌握知识和实务结合的第二个步骤——解决问题",
+      "kpId": "fin-ib-ibd-kp-040"
+    },
+    {
+      "category": "pitfalls",
+      "text": "投行面试的时候，如果足够幸运对方还会面试女生，几乎是必不可少的一个问题“女生干我们这行业会比较辛苦哦”",
+      "kpId": "fin-ib-ibd-kp-041"
+    },
+    {
+      "category": "pitfalls",
+      "text": "在投行承做很多年、长期做细节、没怎么做过承揽的保代，转投资反而容易遇到瓶颈",
+      "kpId": "fin-ib-ibd-kp-042"
+    }
+  ],
+  "sources": [
+    {
+      "postId": "b06c4d8add7de60f",
+      "title": "[广州][实习]银河证券-投资银行部-股权承做日常实习生",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305199&ver=7033&signature=GAATEUplLjg3IGCO10bDLPpkehj7V-am5SmFU6WY*ZRRX5a6hd-EuTGJln-Bm985UlIIu11kWrrO7R5sQ*7JpfgwXjWsqmFoHm95muCwzIZqxo9mhKBITz4uHupOvCLZ&new=1"
+    },
+    {
+      "postId": "1ff3ef45f5d16823",
+      "title": "top50美硕毕业,入职沪头部券商投行承做岗丨鲤鱼分享",
+      "url": "https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSw0vH71jBt04m5fN-v-Hl6e588qRbWIfelqXa8Fplpd9OXT8PcwGfmTi-GZQt8qbL9AC8iKCLTTJfrcUDQ2p011yhryeH0pEfJCMgszOeFhANEd_nazwLgJGIeq0xlOD3vPBc5WKc6zsx88YRME6lU_bAcUeUHqfnrtDJWWhjr-wRjiKiJIWNrV1gMJawYsvb7MGDOBHuI-_okbikFSzL7GrCDCayYmfpA..%26type%3D2%26query%3D%E6%8A%95%E8%A1%8C%E6%89%BF%E5%81%9A%E6%97%A5%E5%B8%B8%26token%3D3A106E8AEDD0589AA0A7FEB59EFE8019A1DFA4656AD4682F"
+    },
+    {
+      "postId": "0a372228b4f07e48",
+      "title": "谈一谈投行项目承做的心得体会",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305249&ver=7033&signature=1*xmVCpFkc4TIdqDpxP6kYyy8yLSR1QqSU4yAxRdDaQdj-Y*O6WLDPZerRdah*ABfONtymmTSnTrwP0K7VXv01lpSwcpKvSE3M5djlqQKg7FOiulz-c4pbIuunj-Fl8S&new=1"
+    },
+    {
+      "postId": "13299cd31c80f57f",
+      "title": "从投行承做项目角度分析科创板的主要变化",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305249&ver=7033&signature=oJWd0stQrHgS4WPX6*hJ0n24WmsJXdVLPq5iD*RX6WDk95tuhXkYK8I6LgfYFJnj7x1*Bxl*VldrN2vNrGOXZTfjkYHwjISTA0b4H9u5xdWSoaimk82f7GXdGVEJhCHX&new=1"
+    },
+    {
+      "postId": "85710145d7e347d9",
+      "title": "top50美硕毕业,入职沪头部券商投行承做岗丨鲤鱼分享",
+      "url": "https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSw0vH71jBt04A0neKeg_ndS588qRbWIfelqXa8Fplpd9OXT8PcwGfmTi-GZQt8qbL9AC8iKCLTTJfrcUDQ2p011yhryeH0pEfJCMgszOeFhANEd_nazwLgJGIeq0xlOD3jGb1LNOUlV4Qt7JPg5k_4qP7Fbc4gyWbcA0fX1ddrFwX0FQcdhJCyXM0_LTiIt7DuIGGAW7B2WwHFWOkStyAXotPujwwRB2Pw..%26type%3D2%26query%3D%E6%8A%95%E8%A1%8C%E6%89%BF%E5%81%9A%E5%8A%9D%E9%80%80%26token%3D3A11A9DBEDD0589AA0A7FEB59EFE8019A1DFA4656AD46861"
+    },
+    {
+      "postId": "1209325951dd4b40",
+      "title": "投行债承具体做哪些工作？强度如何？ | 行业科普",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305298&ver=7033&signature=8yaj2lMw7hlTU3hoeFZ34JxgiTcXGgdfxH4x-hDPMsddXY1RgOw3hf-ku-zajH4TKrztezASitmrQbKuD9QEgRvtfygRayTIf7bm9EDE5tGZj-MfMYCdNDFb58Cr8FvU&new=1"
+    },
+    {
+      "postId": "064dadd541af9c54",
+      "title": "藤校毕业差点失业：从PE&FA到投行承做",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305298&ver=7033&signature=j7X-q8EA0JgFm6gHUl8UBI5*I0bEpYbbeMEUHbN8fP4Ow1mdCAe5xAAp-Bn2IP7KElX5Q8-lkEGvcOore7LqnRL7tQnQuoz-lvlkrbF*4WWfMrCAgphmvS7YLuaWPR4a&new=1"
+    },
+    {
+      "postId": "eda9d95f3361ecce",
+      "title": "四大人转型投行必看的薪酬情况和职业建议",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305298&ver=7033&signature=Pkh*WuiwkleQcfpHRT2nu2QDUVioB5ycDs-mkIVq0*gOSggbW0WUXr1hssl-6v8zbx13uMEyY-C2g2Q36diYYpHGk8ZOcXSrZ4-hQTVvagsdG72EZLDhOow4nNcNjErd&new=1"
+    },
+    {
+      "postId": "252a724714da19f3",
+      "title": "社招推送：3年以上相关经验，投行承做/IT审计/内核管理岗（英大证券），深圳。",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305298&ver=7033&signature=Q3AtsNvITwF9zPEvUMZkEMuhGoIa7EEY5b1uCIHBxvzeY8VB*MoCsOlqSBVLCW9Vc8Moms9UgLSfOLCzQvKPQAUxIG5wrXfmlL6rF7yDxG8JM5Rg1vekpz*uBmFgo*kK&new=1"
+    },
+    {
+      "postId": "ce4c92f0f51dc847",
+      "title": "投行工作的本质",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305298&ver=7033&signature=NhOQzw8gF30*SLElt9Zgrvo3kecBWAlK1Obp71BjsmnKU3j7LQ0lpw79cFOIBYGAvJGYzaW5vSdW5yHvNwGOzKFw1zHjS-mo3oMY*o0rQAYVQ6eemaTLNvUfxNKXI60g&new=1"
+    },
+    {
+      "postId": "c6df350be8c7599a",
+      "title": "非头部券商投行承做的本质是：临时工！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305298&ver=7033&signature=GbV5niaq2ne6AH48LUNgb55Q4iAR-eO0stsCJg7ixNWMWrhlLQ3spoQ4b8EscHWwe6kyVdyTE-lPWVxkbCCNlthq-2GFFGSfBh4iyv6HsasKuvpl6sejj4SRpRTEfUcJ&new=1"
+    },
+    {
+      "postId": "691d3861cc219b05",
+      "title": "投资实务（4）：投行与投资，工作思维的区别",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305298&ver=7033&signature=FPq780rYmPSDTD7bCXfX4Y0mr*BBMydVnxQxMBjAHQZTS7neDIz0crcX0*SNuHHDWT0XmTzA7UfSl9SFRGSgP*a6dCaLgcVJHOKImhktczPtDcLL211qim7-P94jVEmV&new=1"
+    },
+    {
+      "postId": "96516d7ee13be29b",
+      "title": "投资实务（4）：投行与投资，工作思维的区别",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305341&ver=7033&signature=FPq780rYmPSDTD7bCXfX4Y0mr*BBMydVnxQxMBjAHQZTS7neDIz0crcX0*SNuHHDUcNmykAom0gRodq9R9M2mrUGZ-Y0rh9CpMF5P7xgfUBwAAFXRbv0oxFKsT2J9gmC&new=1"
+    },
+    {
+      "postId": "e9e69fde595f9711",
+      "title": "非头部券商投行承做的本质是：临时工！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305367&ver=7033&signature=GbV5niaq2ne6AH48LUNgb55Q4iAR-eO0stsCJg7ixNWMWrhlLQ3spoQ4b8EscHWwKF*40wg*WIM8*vsrLeDyQ4qpvIEEOtra879mvt3ttNngbE1ItRV*80psdDkcO50n&new=1"
+    },
+    {
+      "postId": "7ed18ed08c430e57",
+      "title": "谈一谈投行项目承做的心得体会",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305367&ver=7033&signature=1*xmVCpFkc4TIdqDpxP6kYyy8yLSR1QqSU4yAxRdDaQdj-Y*O6WLDPZerRdah*ABFI8axz2KIaertOXk1ex*FjhM8jRthDTWRv5hwjppFVCySZ4uiWzuUhIiWpOWrxqg&new=1"
+    },
+    {
+      "postId": "818420f19a1dc4a0",
+      "title": "上海实习 | 浙商证券 债券投行部承做实习生",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792305409&ver=7033&signature=1Um1pm1vo2BW2Lu4ka8ub2gdfXrCD3X8pa2DpLawRTnxb-uKYY9oO43Yw7fLxRfjVe4bbAlNHbYHPc0z6yBYowDLTRaxiyU3-TWr*0Th5SVItLbV0QdaKvlXdOwfy9w1&new=1"
+    }
+  ]
+}

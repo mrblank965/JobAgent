@@ -1,0 +1,206 @@
+▲ Next.js 16.3.8 (Turbopack)
+- Local:         http://localhost:3111
+- Network:       http://172.28.62.151:3111
+- Environments: .env.local
+✓ Ready in 14.9s
+✓ Running next.config.ts took 1966ms
+
+○ Compiling /jd ...
+ GET /jd 200 in 3.7s (next.js: 2.6s, application-code: 1113ms)
+ GET /jd 200 in 9.5s (next.js: 8.5s, application-code: 1044ms)
+ GET /jd 200 in 149ms (next.js: 28ms, application-code: 120ms)
+ GET /jd**%EF%BC%8C%E4%BD%A0%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%93%E5%BC%80%E8%BF%99%E4%B8%AA%E9%93%BE%E6%8E%A5%E5%8D%B3%E5%8F%AF%E3%80%82%E4%B9%8B%E5%89%8D%E9%82%A3%E4%B8%AA%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B%E6%98%AF%E4%B8%8A%E4%B8%80%E8%BD%AE%E7%BB%93%E6%9D%9F%E6%97%B6%E8%87%AA%E5%8A%A8%E9%80%80%E5%87%BA%E7%9A%84%EF%BC%8C%E7%8E%B0%E5%9C%A8%E5%B7%B2%E7%BB%8F%E9%87%8D%E6%96%B0%E6%8B%89%E8%B5%B7%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8 404 in 1820ms (next.js: 1675ms, application-code: 145ms)
+ GET /analysis 200 in 161ms (next.js: 98ms, application-code: 63ms)
+ GET /jd 200 in 77ms (next.js: 21ms, application-code: 56ms)
+ POST /api/kb/match 200 in 547ms (next.js: 467ms, application-code: 80ms)
+ POST /api/kb/match 200 in 33ms (next.js: 9ms, application-code: 24ms)
+ GET / 200 in 171ms (next.js: 101ms, application-code: 70ms)
+ GET /resume 200 in 160ms (next.js: 90ms, application-code: 70ms)
+ GET /jd 200 in 68ms (next.js: 11ms, application-code: 57ms)
+ GET /jd 200 in 62ms (next.js: 12ms, application-code: 50ms)
+ GET /jd 200 in 71ms (next.js: 10ms, application-code: 60ms)
+ GET /optimize 200 in 163ms (next.js: 96ms, application-code: 66ms)
+ GET /jd 200 in 52ms (next.js: 8ms, application-code: 44ms)
+ POST /api/kb/match 200 in 26ms (next.js: 5ms, application-code: 21ms)
+ POST /api/web/search 200 in 2.1s (next.js: 84ms, application-code: 2.0s)
+ GET /jd 200 in 103ms (next.js: 26ms, application-code: 77ms)
+ GET /jd 200 in 76ms (next.js: 9ms, application-code: 67ms)
+ GET /jd 200 in 67ms (next.js: 10ms, application-code: 56ms)
+ GET /jd 200 in 75ms (next.js: 12ms, application-code: 62ms)
+ GET /jd 200 in 70ms (next.js: 11ms, application-code: 60ms)
+ GET /jd 200 in 87ms (next.js: 24ms, application-code: 64ms)
+ GET /jd 200 in 106ms (next.js: 25ms, application-code: 81ms)
+ GET /jd 200 in 87ms (next.js: 24ms, application-code: 63ms)
+ GET /jd 200 in 162ms (next.js: 12ms, application-code: 150ms)
+ POST /api/kb/match 200 in 2.8s (next.js: 23ms, application-code: 2.8s)
+ POST /api/kb/match 200 in 2.1s (next.js: 5ms, application-code: 2.1s)
+ POST /api/kb/match 200 in 1741ms (next.js: 5ms, application-code: 1736ms)
+ POST /api/kb/match 200 in 1156ms (next.js: 6ms, application-code: 1151ms)
+ GET /jd 200 in 118ms (next.js: 19ms, application-code: 100ms)
+ GET / 200 in 55ms (next.js: 11ms, application-code: 44ms)
+ GET /jd 200 in 52ms (next.js: 10ms, application-code: 42ms)
+ POST /api/kb/match 200 in 993ms (next.js: 8ms, application-code: 985ms)
+✓ Compiled in 1678ms
+ GET /jd 200 in 85ms (next.js: 25ms, application-code: 61ms)
+✓ Compiled in 1776ms
+ GET /jd 200 in 87ms (next.js: 22ms, application-code: 65ms)
+ GET /jd 200 in 137ms (next.js: 24ms, application-code: 113ms)
+ GET /jd 200 in 146ms (next.js: 32ms, application-code: 114ms)
+ GET / 200 in 55ms (next.js: 12ms, application-code: 43ms)
+ GET /jd 200 in 53ms (next.js: 7ms, application-code: 46ms)
+ POST /api/kb/match 200 in 1225ms (next.js: 22ms, application-code: 1203ms)
+✓ Compiled in 1689ms
+ GET /jd 200 in 89ms (next.js: 25ms, application-code: 64ms)
+✓ Compiled in 1643ms
+ GET /jd 200 in 87ms (next.js: 19ms, application-code: 68ms)
+✓ Compiled in 1644ms
+ GET /jd 200 in 90ms (next.js: 22ms, application-code: 68ms)
+✓ Compiled in 1636ms
+ GET /jd 200 in 108ms (next.js: 21ms, application-code: 87ms)
+✓ Compiled in 1723ms
+ GET /jd 200 in 90ms (next.js: 22ms, application-code: 69ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 1682ms
+ GET /jd 200 in 161ms (next.js: 23ms, application-code: 138ms)
+✓ Compiled in 1605ms
+ GET /jd 200 in 88ms (next.js: 22ms, application-code: 66ms)
+ GET /jd 200 in 125ms (next.js: 26ms, application-code: 99ms)
+ POST /api/kb/match 200 in 1266ms (next.js: 15ms, application-code: 1251ms)
+ POST /api/kb/match 200 in 1633ms (next.js: 12ms, application-code: 1621ms)
+ GET /jd 200 in 144ms (next.js: 33ms, application-code: 111ms)
+ GET /jd 200 in 145ms (next.js: 34ms, application-code: 111ms)
+ POST /api/kb/match 200 in 32ms (next.js: 8ms, application-code: 23ms)
+ GET / 200 in 54ms (next.js: 11ms, application-code: 43ms)
+ GET /jd 200 in 51ms (next.js: 8ms, application-code: 43ms)
+ POST /api/kb/match 200 in 1582ms (next.js: 7ms, application-code: 1575ms)
+ GET / 200 in 47ms (next.js: 11ms, application-code: 36ms)
+ GET /resume 200 in 76ms (next.js: 18ms, application-code: 59ms)
+ GET /jd 200 in 58ms (next.js: 9ms, application-code: 49ms)
+ GET /match 200 in 197ms (next.js: 119ms, application-code: 78ms)
+ GET /jd 200 in 63ms (next.js: 12ms, application-code: 52ms)
+✓ Compiled in 1502ms
+ GET /jd 200 in 114ms (next.js: 23ms, application-code: 91ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 1465ms
+⨯ ReferenceError: url is not defined
+    at JDPage (src\app\jd\page.tsx:699:22)
+  697 |               className="input"
+  698 |               style={{ flex: 1, minWidth: 180 }}
+> 699 |               value={url}
+      |                      ^
+  700 |               onChange={(event) => setUrl(event.target.value)}
+  701 |               placeholder="https://…"
+  702 |             /> {
+  digest: '609494168'
+}
+ GET /jd 500 in 324ms (next.js: 23ms, application-code: 302ms)
+ GET /jd 200 in 125ms (next.js: 22ms, application-code: 103ms)
+ GET /jd 200 in 1543ms (next.js: 1359ms, application-code: 184ms)
+ GET /jd 200 in 131ms (next.js: 10ms, application-code: 121ms)
+ GET /jd 200 in 151ms (next.js: 13ms, application-code: 138ms)
+ GET /jd 200 in 144ms (next.js: 14ms, application-code: 131ms)
+ GET /jd 200 in 131ms (next.js: 10ms, application-code: 121ms)
+ GET /jd 200 in 173ms (next.js: 8ms, application-code: 165ms)
+ GET /jd 200 in 123ms (next.js: 9ms, application-code: 114ms)
+ GET /jd 200 in 139ms (next.js: 7ms, application-code: 132ms)
+ GET /jd 200 in 144ms (next.js: 9ms, application-code: 135ms)
+ GET /jd 200 in 120ms (next.js: 10ms, application-code: 110ms)
+ GET /jd 200 in 132ms (next.js: 9ms, application-code: 123ms)
+ GET /jd 200 in 140ms (next.js: 10ms, application-code: 130ms)
+ GET /jd 200 in 134ms (next.js: 11ms, application-code: 123ms)
+ GET /jd 200 in 126ms (next.js: 11ms, application-code: 115ms)
+ GET /jd 200 in 175ms (next.js: 9ms, application-code: 165ms)
+ GET /jd 200 in 133ms (next.js: 8ms, application-code: 125ms)
+ GET /jd 200 in 131ms (next.js: 10ms, application-code: 121ms)
+ GET /jd 200 in 133ms (next.js: 13ms, application-code: 119ms)
+ GET /jd 200 in 138ms (next.js: 10ms, application-code: 128ms)
+ GET /jd 200 in 145ms (next.js: 11ms, application-code: 134ms)
+ GET /jd 200 in 123ms (next.js: 17ms, application-code: 107ms)
+ GET /jd 200 in 100ms (next.js: 8ms, application-code: 92ms)
+ GET /jd 200 in 103ms (next.js: 8ms, application-code: 95ms)
+ GET /jd 200 in 120ms (next.js: 7ms, application-code: 114ms)
+ GET /jd 200 in 123ms (next.js: 9ms, application-code: 114ms)
+ GET /jd 200 in 115ms (next.js: 9ms, application-code: 105ms)
+ GET /jd 200 in 114ms (next.js: 9ms, application-code: 105ms)
+ GET /jd 200 in 118ms (next.js: 9ms, application-code: 109ms)
+ GET /jd 200 in 115ms (next.js: 10ms, application-code: 105ms)
+ GET /jd 200 in 120ms (next.js: 10ms, application-code: 110ms)
+ GET /jd 200 in 111ms (next.js: 7ms, application-code: 104ms)
+ GET /jd 200 in 121ms (next.js: 9ms, application-code: 111ms)
+ GET /jd 200 in 128ms (next.js: 11ms, application-code: 117ms)
+ GET /jd 200 in 138ms (next.js: 10ms, application-code: 128ms)
+ GET /jd 200 in 166ms (next.js: 8ms, application-code: 158ms)
+ GET /jd 200 in 105ms (next.js: 11ms, application-code: 94ms)
+ GET /jd 200 in 422ms (next.js: 24ms, application-code: 399ms)
+ GET / 200 in 95ms (next.js: 53ms, application-code: 43ms)
+ GET /jd 200 in 54ms (next.js: 8ms, application-code: 46ms)
+ POST /api/web/search 200 in 802ms (next.js: 123ms, application-code: 678ms)
+ POST /api/kb/match 200 in 1653ms (next.js: 260ms, application-code: 1393ms)
+ POST /api/web/search 200 in 563ms (next.js: 12ms, application-code: 552ms)
+ POST /api/kb/match 200 in 1350ms (next.js: 7ms, application-code: 1343ms)
+ GET / 200 in 778ms (next.js: 310ms, application-code: 469ms)
+ GET /jd 200 in 162ms (next.js: 48ms, application-code: 114ms)
+ GET /resume 200 in 238ms (next.js: 77ms, application-code: 161ms)
+ GET /profile 200 in 2.1s (next.js: 1884ms, application-code: 192ms)
+ GET /optimize 200 in 156ms (next.js: 32ms, application-code: 125ms)
+ GET /match 200 in 207ms (next.js: 35ms, application-code: 172ms)
+ GET /interview 200 in 238ms (next.js: 90ms, application-code: 149ms)
+ GET /board 200 in 220ms (next.js: 89ms, application-code: 132ms)
+ GET /analysis 200 in 179ms (next.js: 32ms, application-code: 147ms)
+ POST /api/kb/match 200 in 169ms (next.js: 120ms, application-code: 48ms)
+○ Compiling /api/parse-resume ...
+ POST /api/parse-resume 400 in 4.8s (next.js: 4.7s, application-code: 177ms)
+ POST /api/web/search 200 in 624ms (next.js: 63ms, application-code: 561ms)
+ POST /api/analyze-jd 404 in 140ms (next.js: 44ms, application-code: 96ms)
+⨯ ./src/lib/optimizeDocx.ts:144:103
+Error: Module not found: Can't resolve 'docx'
+  [90m142 |[0m ...
+  [90m143 |[0m ...
+[31m[1m>[0m [90m144 |[0m ...[33muleType[0m, [33mTabStopType[0m, [33mTab[0m } = [36mawait[0m [36mimport[0m([32m"docx"[0m);
+  [90m    |[0m                                        [31m[1m^^^^^^^^^^^^^^[0m
+  [90m145 |[0m ...
+  [90m146 |[0m ...
+  [90m147 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/lib/optimizeDocx.ts [Client Component Browser]
+    ./src/app/optimize/page.tsx [Client Component Browser]
+    ./src/app/optimize/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/lib/optimizeDocx.ts [Client Component SSR]
+    ./src/app/optimize/page.tsx [Client Component SSR]
+    ./src/app/optimize/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/lib/optimizeDocx.ts:144:103
+Error: Module not found: Can't resolve 'docx'
+  [90m142 |[0m ...
+  [90m143 |[0m ...
+[31m[1m>[0m [90m144 |[0m ...[33muleType[0m, [33mTabStopType[0m, [33mTab[0m } = [36mawait[0m [36mimport[0m([32m"docx"[0m);
+  [90m    |[0m                                        [31m[1m^^^^^^^^^^^^^^[0m
+  [90m145 |[0m ...
+  [90m146 |[0m ...
+  [90m147 |[0m ...
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/lib/optimizeDocx.ts [Client Component Browser]
+    ./src/app/optimize/page.tsx [Client Component Browser]
+    ./src/app/optimize/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/lib/optimizeDocx.ts [Client Component SSR]
+    ./src/app/optimize/page.tsx [Client Component SSR]
+    ./src/app/optimize/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+

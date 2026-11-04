@@ -1,0 +1,26 @@
+{
+  "runId": "kb-20261015-01",
+  "startedAt": "2026-10-15",
+  "orchestrator": "总控 Agent",
+  "stages": {
+    "plan": { "status": "done", "attempts": 1, "artifact": "artifacts/stage1_plan/plan.json", "positionCount": 28 },
+    "collect": { "status": "running", "attempts": 0 },
+    "parse": { "status": "pending", "attempts": 0 },
+    "clean": { "status": "pending", "attempts": 0 },
+    "structure": { "status": "pending", "attempts": 0 },
+    "index": { "status": "pending", "attempts": 0 },
+    "qa": { "status": "pending", "attempts": 0 }
+  },
+  "pilotPositions": ["fin-bank-rm", "fin-ib-ibd", "it-pm"],
+  "batches": [],
+  "counters": {
+    "rawPosts": 0,
+    "parsed": 0,
+    "kept": 0,
+    "structured": 0,
+    "indexed": 0,
+    "qaChecked": 0,
+    "qaFailed": 0,
+    "skipped": 0
+  }
+}

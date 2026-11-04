@@ -1,0 +1,12 @@
+{
+  "positionId": "fin-ib-ibd",
+  "sampledKpIds": [
+    "fin-ib-ibd-kp-040",
+    "fin-ib-ibd-kp-007",
+    "fin-ib-ibd-kp-022",
+    "fin-ib-ibd-kp-027"
+  ],
+  "totalPoints": 42,
+  "faithful": true,
+  "issues": []
+}

@@ -1,0 +1,745 @@
+{
+  "generatedAt": "2026-10-29T17:18:28.898Z",
+  "retrieval": "keyword-inverted",
+  "positions": [
+    {
+      "positionId": "fin-bank-mgmt-trainee",
+      "title": "银行管培生",
+      "aliases": [
+        "管理培训生",
+        "总行管培生",
+        "分行管培生",
+        "储备干部"
+      ],
+      "keywords": [
+        "银行管培生日常",
+        "银行管培生劝退",
+        "银行管培生轮岗",
+        "银行管培生真实感受"
+      ]
+    },
+    {
+      "positionId": "fin-bank-rm",
+      "title": "银行客户经理",
+      "aliases": [
+        "理财经理",
+        "个贷客户经理",
+        "对私客户经理",
+        "零售客户经理"
+      ],
+      "keywords": [
+        "银行客户经理日常",
+        "银行客户经理劝退",
+        "银行客户经理真实工作",
+        "银行客户经理业绩压力"
+      ]
+    },
+    {
+      "positionId": "fin-bank-teller",
+      "title": "银行柜员",
+      "aliases": [
+        "综合柜员",
+        "储蓄柜员",
+        "对公柜员",
+        "现金柜员"
+      ],
+      "keywords": [
+        "银行柜员日常",
+        "银行柜员劝退",
+        "银行柜员转岗",
+        "银行柜员真实体验"
+      ]
+    },
+    {
+      "positionId": "fin-fintech-data",
+      "title": "金融数据分析",
+      "aliases": [
+        "信贷数据分析",
+        "风控数据分析",
+        "金融数据分析师",
+        "业务数据分析"
+      ],
+      "keywords": [
+        "金融数据分析日常",
+        "金融数据分析劝退",
+        "信贷数据分析真实工作",
+        "风控数据分析日常"
+      ]
+    },
+    {
+      "positionId": "fin-fintech-product",
+      "title": "金融产品经理",
+      "aliases": [
+        "信贷产品经理",
+        "支付产品经理",
+        "理财产品经理",
+        "金融产品岗"
+      ],
+      "keywords": [
+        "金融产品经理日常",
+        "金融产品经理劝退",
+        "金融产品经理真实工作",
+        "信贷产品经理日常"
+      ]
+    },
+    {
+      "positionId": "fin-fintech-risk",
+      "title": "金融风控",
+      "aliases": [
+        "风控策略",
+        "信贷风控",
+        "风险分析师",
+        "风控建模"
+      ],
+      "keywords": [
+        "金融风控日常",
+        "金融风控劝退",
+        "风控策略真实工作",
+        "信贷风控日常"
+      ]
+    },
+    {
+      "positionId": "fin-fund-ops",
+      "title": "基金运营",
+      "aliases": [
+        "基金会计",
+        "估值核算",
+        "运营支持",
+        "基金运营岗"
+      ],
+      "keywords": [
+        "基金运营日常",
+        "基金运营劝退",
+        "基金会计真实工作",
+        "基金运营加班"
+      ]
+    },
+    {
+      "positionId": "fin-fund-pm",
+      "title": "基金经理",
+      "aliases": [
+        "组合经理",
+        "投资经理",
+        "公募基金经理",
+        "专户投资经理",
+        "私募基金经理"
+      ],
+      "keywords": [
+        "基金经理日常",
+        "基金经理劝退",
+        "基金经理真实工作",
+        "基金经理压力",
+        "私募基金经理劝退"
+      ]
+    },
+    {
+      "positionId": "fin-fund-product-manager",
+      "title": "基金产品经理",
+      "aliases": [
+        "公募产品经理",
+        "基金产品设计",
+        "产品经理"
+      ],
+      "keywords": [
+        "基金产品经理日常",
+        "公募产品经理劝退",
+        "基金产品岗真实工作",
+        "基金产品经理面试"
+      ]
+    },
+    {
+      "positionId": "fin-fund-ra",
+      "title": "基金研究员",
+      "aliases": [
+        "行业研究员",
+        "权益研究员",
+        "固收研究员",
+        "基金研究岗"
+      ],
+      "keywords": [
+        "基金研究员日常",
+        "基金研究员劝退",
+        "基金研究员真实工作",
+        "公募研究员日常"
+      ]
+    },
+    {
+      "positionId": "fin-ib-ibd",
+      "title": "投行承做",
+      "aliases": [
+        "投资银行部承做",
+        "IBD分析师",
+        "投行项目执行",
+        "投行承做岗"
+      ],
+      "keywords": [
+        "投行承做日常",
+        "投行承做劝退",
+        "投行承做真实工作",
+        "投行承做加班"
+      ]
+    },
+    {
+      "positionId": "fin-ib-research",
+      "title": "券商研究员",
+      "aliases": [
+        "行业研究员",
+        "卖方分析师",
+        "研究所分析师",
+        "证券分析师"
+      ],
+      "keywords": [
+        "券商研究员日常",
+        "券商研究员劝退",
+        "券商研究员真实工作",
+        "卖方研究员日常"
+      ]
+    },
+    {
+      "positionId": "fin-ib-sales-trader",
+      "title": "券商机构销售",
+      "aliases": [
+        "机构销售",
+        "研究所销售",
+        "券商销售交易",
+        "机构业务销售"
+      ],
+      "keywords": [
+        "券商机构销售日常",
+        "券商机构销售劝退",
+        "机构销售真实工作",
+        "券商销售交易日常"
+      ]
+    },
+    {
+      "positionId": "fin-ins-actuary",
+      "title": "保险精算师",
+      "aliases": [
+        "精算分析师",
+        "产品精算",
+        "精算岗",
+        "定价精算"
+      ],
+      "keywords": [
+        "保险精算师日常",
+        "保险精算师劝退",
+        "精算师真实工作",
+        "精算考试日常"
+      ]
+    },
+    {
+      "positionId": "fin-ins-agent",
+      "title": "保险代理人",
+      "aliases": [
+        "保险销售",
+        "寿险顾问",
+        "保险经纪人",
+        "个险代理人"
+      ],
+      "keywords": [
+        "保险代理人日常",
+        "保险代理人劝退",
+        "保险销售真实工作",
+        "保险代理人真实收入"
+      ]
+    },
+    {
+      "positionId": "fin-ins-claims",
+      "title": "保险理赔",
+      "aliases": [
+        "理赔专员",
+        "理赔查勘",
+        "核赔岗",
+        "理赔审核"
+      ],
+      "keywords": [
+        "保险理赔日常",
+        "保险理赔劝退",
+        "理赔专员真实工作",
+        "保险理赔加班"
+      ]
+    },
+    {
+      "positionId": "fin-pe-investment-manager",
+      "title": "PE投资经理",
+      "aliases": [
+        "投资经理",
+        "PE投资分析师",
+        "私募股权投资经理"
+      ],
+      "keywords": [
+        "PE投资经理日常",
+        "PE投资经理劝退",
+        "私募股权投资岗真实工作",
+        "PE投资经理面试"
+      ]
+    },
+    {
+      "positionId": "fin-pe-investor-relations",
+      "title": "PE基金募集/投资者关系（IR）",
+      "aliases": [
+        "投资者关系经理",
+        "IR经理",
+        "基金募集经理",
+        "募资经理"
+      ],
+      "keywords": [
+        "PE IR日常",
+        "基金募集岗劝退",
+        "投资者关系工作内容",
+        "IR面试"
+      ]
+    },
+    {
+      "positionId": "fin-pe-portfolio-management",
+      "title": "PE投后管理",
+      "aliases": [
+        "投后管理经理",
+        "投后管理专员",
+        "投后运营"
+      ],
+      "keywords": [
+        "PE投后管理日常",
+        "投后管理劝退",
+        "投后管理岗真实体验",
+        "投后管理面试"
+      ]
+    },
+    {
+      "positionId": "fin-sec-asset-management",
+      "title": "券商资管",
+      "aliases": [
+        "券商资管投资经理",
+        "资管产品经理",
+        "券商资管研究员"
+      ],
+      "keywords": [
+        "券商资管日常",
+        "券商资管劝退",
+        "券商资管真实工作",
+        "券商资管面试"
+      ]
+    },
+    {
+      "positionId": "fin-sec-compliance-risk",
+      "title": "金融合规风控（券商/私募）",
+      "aliases": [
+        "合规经理",
+        "风控经理",
+        "合规风控专员",
+        "私募风控",
+        "合规专员"
+      ],
+      "keywords": [
+        "券商合规日常",
+        "券商风控劝退",
+        "合规风控岗真实体验",
+        "券商合规面试",
+        "私募风控日常"
+      ]
+    },
+    {
+      "positionId": "fin-sec-wealth-advisor",
+      "title": "券商财富管理投资顾问",
+      "aliases": [
+        "投资顾问",
+        "财富管理顾问",
+        "理财经理"
+      ],
+      "keywords": [
+        "券商投顾日常",
+        "券商投顾劝退",
+        "财富管理顾问真实工作",
+        "投顾面试"
+      ]
+    },
+    {
+      "positionId": "fin-vc-industry-research",
+      "title": "VC行业研究",
+      "aliases": [
+        "行业研究员",
+        "投资研究分析师",
+        "VC研究员"
+      ],
+      "keywords": [
+        "VC行业研究日常",
+        "VC研究员劝退",
+        "行业研究岗真实体验",
+        "VC研究面试"
+      ]
+    },
+    {
+      "positionId": "fin-vc-investment-analyst",
+      "title": "VC投资分析师/投资经理",
+      "aliases": [
+        "投资分析师",
+        "VC投资经理",
+        "风险投资分析师"
+      ],
+      "keywords": [
+        "VC投资经理日常",
+        "VC投资经理劝退",
+        "VC分析师真实工作",
+        "VC投资经理面试"
+      ]
+    },
+    {
+      "positionId": "it-da",
+      "title": "数据分析师",
+      "aliases": [
+        "业务数据分析",
+        "商业分析",
+        "数据运营",
+        "数据分析岗"
+      ],
+      "keywords": [
+        "数据分析师日常",
+        "数据分析师劝退",
+        "数据分析师真实工作",
+        "数据分析转行"
+      ]
+    },
+    {
+      "positionId": "it-ops-content",
+      "title": "内容运营",
+      "aliases": [
+        "新媒体运营",
+        "内容策划",
+        "社区运营",
+        "内容运营岗"
+      ],
+      "keywords": [
+        "内容运营日常",
+        "内容运营劝退",
+        "新媒体运营真实工作",
+        "内容运营加班"
+      ]
+    },
+    {
+      "positionId": "it-ops-product",
+      "title": "产品运营",
+      "aliases": [
+        "产品运营岗",
+        "业务运营",
+        "平台运营",
+        "产品运营专员"
+      ],
+      "keywords": [
+        "产品运营日常",
+        "产品运营劝退",
+        "产品运营真实工作",
+        "产品运营转产品经理"
+      ]
+    },
+    {
+      "positionId": "it-ops-user",
+      "title": "用户运营",
+      "aliases": [
+        "用户增长运营",
+        "社群运营",
+        "会员运营",
+        "用户运营岗"
+      ],
+      "keywords": [
+        "用户运营日常",
+        "用户运营劝退",
+        "用户运营真实工作",
+        "社群运营日常"
+      ]
+    },
+    {
+      "positionId": "it-pm",
+      "title": "产品经理",
+      "aliases": [
+        "产品策划",
+        "产品专员",
+        "B端产品经理",
+        "C端产品经理"
+      ],
+      "keywords": [
+        "产品经理日常",
+        "产品经理劝退",
+        "产品经理真实工作",
+        "产品经理加班"
+      ]
+    },
+    {
+      "positionId": "it-risk",
+      "title": "风控策略（it-risk）",
+      "aliases": [
+        "风控策略分析师",
+        "反欺诈策略",
+        "风控运营",
+        "风控岗"
+      ],
+      "keywords": [
+        "风控策略日常",
+        "风控策略劝退",
+        "风控策略真实工作",
+        "反欺诈策略日常"
+      ]
+    }
+  ],
+  "terms": {
+    "银行管培生": "fin-bank-mgmt-trainee",
+    "管理培训生": "fin-bank-mgmt-trainee",
+    "总行管培生": "fin-bank-mgmt-trainee",
+    "分行管培生": "fin-bank-mgmt-trainee",
+    "储备干部": "fin-bank-mgmt-trainee",
+    "银行管培生日常": "fin-bank-mgmt-trainee",
+    "银行管培生劝退": "fin-bank-mgmt-trainee",
+    "银行管培生轮岗": "fin-bank-mgmt-trainee",
+    "银行管培生真实感受": "fin-bank-mgmt-trainee",
+    "银行客户经理": "fin-bank-rm",
+    "理财经理": "fin-sec-wealth-advisor",
+    "个贷客户经理": "fin-bank-rm",
+    "对私客户经理": "fin-bank-rm",
+    "零售客户经理": "fin-bank-rm",
+    "银行客户经理日常": "fin-bank-rm",
+    "银行客户经理劝退": "fin-bank-rm",
+    "银行客户经理真实工作": "fin-bank-rm",
+    "银行客户经理业绩压力": "fin-bank-rm",
+    "银行柜员": "fin-bank-teller",
+    "综合柜员": "fin-bank-teller",
+    "储蓄柜员": "fin-bank-teller",
+    "对公柜员": "fin-bank-teller",
+    "现金柜员": "fin-bank-teller",
+    "银行柜员日常": "fin-bank-teller",
+    "银行柜员劝退": "fin-bank-teller",
+    "银行柜员转岗": "fin-bank-teller",
+    "银行柜员真实体验": "fin-bank-teller",
+    "金融数据分析": "fin-fintech-data",
+    "信贷数据分析": "fin-fintech-data",
+    "风控数据分析": "fin-fintech-data",
+    "金融数据分析师": "fin-fintech-data",
+    "业务数据分析": "it-da",
+    "金融数据分析日常": "fin-fintech-data",
+    "金融数据分析劝退": "fin-fintech-data",
+    "信贷数据分析真实工作": "fin-fintech-data",
+    "风控数据分析日常": "fin-fintech-data",
+    "金融产品经理": "fin-fintech-product",
+    "信贷产品经理": "fin-fintech-product",
+    "支付产品经理": "fin-fintech-product",
+    "理财产品经理": "fin-fintech-product",
+    "金融产品岗": "fin-fintech-product",
+    "金融产品经理日常": "fin-fintech-product",
+    "金融产品经理劝退": "fin-fintech-product",
+    "金融产品经理真实工作": "fin-fintech-product",
+    "信贷产品经理日常": "fin-fintech-product",
+    "金融风控": "fin-fintech-risk",
+    "风控策略": "fin-fintech-risk",
+    "信贷风控": "fin-fintech-risk",
+    "风险分析师": "fin-fintech-risk",
+    "风控建模": "fin-fintech-risk",
+    "金融风控日常": "fin-fintech-risk",
+    "金融风控劝退": "fin-fintech-risk",
+    "风控策略真实工作": "it-risk",
+    "信贷风控日常": "fin-fintech-risk",
+    "基金运营": "fin-fund-ops",
+    "基金会计": "fin-fund-ops",
+    "估值核算": "fin-fund-ops",
+    "运营支持": "fin-fund-ops",
+    "基金运营岗": "fin-fund-ops",
+    "基金运营日常": "fin-fund-ops",
+    "基金运营劝退": "fin-fund-ops",
+    "基金会计真实工作": "fin-fund-ops",
+    "基金运营加班": "fin-fund-ops",
+    "基金经理": "fin-fund-pm",
+    "组合经理": "fin-fund-pm",
+    "投资经理": "fin-pe-investment-manager",
+    "公募基金经理": "fin-fund-pm",
+    "专户投资经理": "fin-fund-pm",
+    "私募基金经理": "fin-fund-pm",
+    "基金经理日常": "fin-fund-pm",
+    "基金经理劝退": "fin-fund-pm",
+    "基金经理真实工作": "fin-fund-pm",
+    "基金经理压力": "fin-fund-pm",
+    "私募基金经理劝退": "fin-fund-pm",
+    "基金产品经理": "fin-fund-product-manager",
+    "公募产品经理": "fin-fund-product-manager",
+    "基金产品设计": "fin-fund-product-manager",
+    "产品经理": "it-pm",
+    "基金产品经理日常": "fin-fund-product-manager",
+    "公募产品经理劝退": "fin-fund-product-manager",
+    "基金产品岗真实工作": "fin-fund-product-manager",
+    "基金产品经理面试": "fin-fund-product-manager",
+    "基金研究员": "fin-fund-ra",
+    "行业研究员": "fin-vc-industry-research",
+    "权益研究员": "fin-fund-ra",
+    "固收研究员": "fin-fund-ra",
+    "基金研究岗": "fin-fund-ra",
+    "基金研究员日常": "fin-fund-ra",
+    "基金研究员劝退": "fin-fund-ra",
+    "基金研究员真实工作": "fin-fund-ra",
+    "公募研究员日常": "fin-fund-ra",
+    "投行承做": "fin-ib-ibd",
+    "投资银行部承做": "fin-ib-ibd",
+    "IBD分析师": "fin-ib-ibd",
+    "投行项目执行": "fin-ib-ibd",
+    "投行承做岗": "fin-ib-ibd",
+    "投行承做日常": "fin-ib-ibd",
+    "投行承做劝退": "fin-ib-ibd",
+    "投行承做真实工作": "fin-ib-ibd",
+    "投行承做加班": "fin-ib-ibd",
+    "券商研究员": "fin-ib-research",
+    "卖方分析师": "fin-ib-research",
+    "研究所分析师": "fin-ib-research",
+    "证券分析师": "fin-ib-research",
+    "券商研究员日常": "fin-ib-research",
+    "券商研究员劝退": "fin-ib-research",
+    "券商研究员真实工作": "fin-ib-research",
+    "卖方研究员日常": "fin-ib-research",
+    "券商机构销售": "fin-ib-sales-trader",
+    "机构销售": "fin-ib-sales-trader",
+    "研究所销售": "fin-ib-sales-trader",
+    "券商销售交易": "fin-ib-sales-trader",
+    "机构业务销售": "fin-ib-sales-trader",
+    "券商机构销售日常": "fin-ib-sales-trader",
+    "券商机构销售劝退": "fin-ib-sales-trader",
+    "机构销售真实工作": "fin-ib-sales-trader",
+    "券商销售交易日常": "fin-ib-sales-trader",
+    "保险精算师": "fin-ins-actuary",
+    "精算分析师": "fin-ins-actuary",
+    "产品精算": "fin-ins-actuary",
+    "精算岗": "fin-ins-actuary",
+    "定价精算": "fin-ins-actuary",
+    "保险精算师日常": "fin-ins-actuary",
+    "保险精算师劝退": "fin-ins-actuary",
+    "精算师真实工作": "fin-ins-actuary",
+    "精算考试日常": "fin-ins-actuary",
+    "保险代理人": "fin-ins-agent",
+    "保险销售": "fin-ins-agent",
+    "寿险顾问": "fin-ins-agent",
+    "保险经纪人": "fin-ins-agent",
+    "个险代理人": "fin-ins-agent",
+    "保险代理人日常": "fin-ins-agent",
+    "保险代理人劝退": "fin-ins-agent",
+    "保险销售真实工作": "fin-ins-agent",
+    "保险代理人真实收入": "fin-ins-agent",
+    "保险理赔": "fin-ins-claims",
+    "理赔专员": "fin-ins-claims",
+    "理赔查勘": "fin-ins-claims",
+    "核赔岗": "fin-ins-claims",
+    "理赔审核": "fin-ins-claims",
+    "保险理赔日常": "fin-ins-claims",
+    "保险理赔劝退": "fin-ins-claims",
+    "理赔专员真实工作": "fin-ins-claims",
+    "保险理赔加班": "fin-ins-claims",
+    "PE投资经理": "fin-pe-investment-manager",
+    "PE投资分析师": "fin-pe-investment-manager",
+    "私募股权投资经理": "fin-pe-investment-manager",
+    "PE投资经理日常": "fin-pe-investment-manager",
+    "PE投资经理劝退": "fin-pe-investment-manager",
+    "私募股权投资岗真实工作": "fin-pe-investment-manager",
+    "PE投资经理面试": "fin-pe-investment-manager",
+    "PE基金募集/投资者关系（IR）": "fin-pe-investor-relations",
+    "投资者关系经理": "fin-pe-investor-relations",
+    "IR经理": "fin-pe-investor-relations",
+    "基金募集经理": "fin-pe-investor-relations",
+    "募资经理": "fin-pe-investor-relations",
+    "PE IR日常": "fin-pe-investor-relations",
+    "基金募集岗劝退": "fin-pe-investor-relations",
+    "投资者关系工作内容": "fin-pe-investor-relations",
+    "IR面试": "fin-pe-investor-relations",
+    "PE投后管理": "fin-pe-portfolio-management",
+    "投后管理经理": "fin-pe-portfolio-management",
+    "投后管理专员": "fin-pe-portfolio-management",
+    "投后运营": "fin-pe-portfolio-management",
+    "PE投后管理日常": "fin-pe-portfolio-management",
+    "投后管理劝退": "fin-pe-portfolio-management",
+    "投后管理岗真实体验": "fin-pe-portfolio-management",
+    "投后管理面试": "fin-pe-portfolio-management",
+    "券商资管": "fin-sec-asset-management",
+    "券商资管投资经理": "fin-sec-asset-management",
+    "资管产品经理": "fin-sec-asset-management",
+    "券商资管研究员": "fin-sec-asset-management",
+    "券商资管日常": "fin-sec-asset-management",
+    "券商资管劝退": "fin-sec-asset-management",
+    "券商资管真实工作": "fin-sec-asset-management",
+    "券商资管面试": "fin-sec-asset-management",
+    "金融合规风控（券商/私募）": "fin-sec-compliance-risk",
+    "合规经理": "fin-sec-compliance-risk",
+    "风控经理": "fin-sec-compliance-risk",
+    "合规风控专员": "fin-sec-compliance-risk",
+    "私募风控": "fin-sec-compliance-risk",
+    "合规专员": "fin-sec-compliance-risk",
+    "券商合规日常": "fin-sec-compliance-risk",
+    "券商风控劝退": "fin-sec-compliance-risk",
+    "合规风控岗真实体验": "fin-sec-compliance-risk",
+    "券商合规面试": "fin-sec-compliance-risk",
+    "私募风控日常": "fin-sec-compliance-risk",
+    "券商财富管理投资顾问": "fin-sec-wealth-advisor",
+    "投资顾问": "fin-sec-wealth-advisor",
+    "财富管理顾问": "fin-sec-wealth-advisor",
+    "券商投顾日常": "fin-sec-wealth-advisor",
+    "券商投顾劝退": "fin-sec-wealth-advisor",
+    "财富管理顾问真实工作": "fin-sec-wealth-advisor",
+    "投顾面试": "fin-sec-wealth-advisor",
+    "VC行业研究": "fin-vc-industry-research",
+    "投资研究分析师": "fin-vc-industry-research",
+    "VC研究员": "fin-vc-industry-research",
+    "VC行业研究日常": "fin-vc-industry-research",
+    "VC研究员劝退": "fin-vc-industry-research",
+    "行业研究岗真实体验": "fin-vc-industry-research",
+    "VC研究面试": "fin-vc-industry-research",
+    "VC投资分析师/投资经理": "fin-vc-investment-analyst",
+    "投资分析师": "fin-vc-investment-analyst",
+    "VC投资经理": "fin-vc-investment-analyst",
+    "风险投资分析师": "fin-vc-investment-analyst",
+    "VC投资经理日常": "fin-vc-investment-analyst",
+    "VC投资经理劝退": "fin-vc-investment-analyst",
+    "VC分析师真实工作": "fin-vc-investment-analyst",
+    "VC投资经理面试": "fin-vc-investment-analyst",
+    "数据分析师": "it-da",
+    "商业分析": "it-da",
+    "数据运营": "it-da",
+    "数据分析岗": "it-da",
+    "数据分析师日常": "it-da",
+    "数据分析师劝退": "it-da",
+    "数据分析师真实工作": "it-da",
+    "数据分析转行": "it-da",
+    "内容运营": "it-ops-content",
+    "新媒体运营": "it-ops-content",
+    "内容策划": "it-ops-content",
+    "社区运营": "it-ops-content",
+    "内容运营岗": "it-ops-content",
+    "内容运营日常": "it-ops-content",
+    "内容运营劝退": "it-ops-content",
+    "新媒体运营真实工作": "it-ops-content",
+    "内容运营加班": "it-ops-content",
+    "产品运营": "it-ops-product",
+    "产品运营岗": "it-ops-product",
+    "业务运营": "it-ops-product",
+    "平台运营": "it-ops-product",
+    "产品运营专员": "it-ops-product",
+    "产品运营日常": "it-ops-product",
+    "产品运营劝退": "it-ops-product",
+    "产品运营真实工作": "it-ops-product",
+    "产品运营转产品经理": "it-ops-product",
+    "用户运营": "it-ops-user",
+    "用户增长运营": "it-ops-user",
+    "社群运营": "it-ops-user",
+    "会员运营": "it-ops-user",
+    "用户运营岗": "it-ops-user",
+    "用户运营日常": "it-ops-user",
+    "用户运营劝退": "it-ops-user",
+    "用户运营真实工作": "it-ops-user",
+    "社群运营日常": "it-ops-user",
+    "产品策划": "it-pm",
+    "产品专员": "it-pm",
+    "B端产品经理": "it-pm",
+    "C端产品经理": "it-pm",
+    "产品经理日常": "it-pm",
+    "产品经理劝退": "it-pm",
+    "产品经理真实工作": "it-pm",
+    "产品经理加班": "it-pm",
+    "风控策略（it-risk）": "it-risk",
+    "风控策略分析师": "it-risk",
+    "反欺诈策略": "it-risk",
+    "风控运营": "it-risk",
+    "风控岗": "it-risk",
+    "风控策略日常": "it-risk",
+    "风控策略劝退": "it-risk",
+    "反欺诈策略日常": "it-risk"
+  }
+}

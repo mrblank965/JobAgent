@@ -1,0 +1,117 @@
+/**
+ * 自驱总控（Autopilot）：一条命令跑到 27/27 全部完成，无人值守。
+ *
+ * 运行：
+ *   node kb/scripts/autopilot.cjs
+ *
+ * 每轮循环：
+ *   1. 下游补跑：已采够但还没质检报告的岗位 → run.cjs parse..qa（跳过 25 分钟内进行中的）
+ *   2. 采集缺口：collect all（断点续采，撞验证码自动中止）
+ *   3. 仍有缺口 → 冷却 20 分钟进下一轮；全部完成 → 刷新看板退出
+ *
+ * 判定标准：02-collect posts >= 40 为已采够；07-qa json 存在为已完成。
+ * 上限 80 轮，随时 Ctrl+C 可停，重跑自动续。
+ */
+
+const { spawnSync } = require("node:child_process");
+const fs = require("node:fs");
+const path = require("node:path");
+
+const KB = path.resolve(__dirname, "..");
+const OUT = path.join(KB, "output");
+const NODE_PATH =
+  process.env.NODE_PATH ||
+  "C:\\Users\\Harrin\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\vm\\tools\\node\\node_modules\\@playwright\\mcp\\node_modules";
+const COOLDOWN_MS = 20 * 60 * 1000;
+const FRESH_MS = 25 * 60 * 1000;
+const MAX_CYCLES = 80;
+const COLLECT_OK = 40;
+
+const plan = JSON.parse(fs.readFileSync(path.join(OUT, "01-plan", "plan.json"), "utf8"));
+const positions = plan.positions || [];
+
+const collectJson = (id) => path.join(OUT, "02-collect", `${id}.json`);
+const qaJson = (id) => path.join(OUT, "07-qa", `${id}.json`);
+
+function postsOf(id) {
+  try {
+    return (JSON.parse(fs.readFileSync(collectJson(id), "utf8")).posts || []).length;
+  } catch {
+    return 0;
+  }
+}
+
+function needCollect(id) {
+  return postsOf(id) < COLLECT_OK;
+}
+
+function inFlight(id) {
+  for (const dir of ["03-parse", "04-clean"]) {
+    const p = path.join(OUT, dir, `${id}.json`);
+    if (fs.existsSync(p) && Date.now() - fs.statSync(p).mtimeMs < FRESH_MS) return true;
+  }
+  return false;
+}
+
+function needDownstream(id) {
+  return fs.existsSync(collectJson(id)) && postsOf(id) > 0 && !fs.existsSync(qaJson(id)) && !inFlight(id);
+}
+
+function runNode(script, args) {
+  return spawnSync(process.execPath, [script, ...args], {
+    stdio: "inherit",
+    cwd: path.resolve(KB, ".."),
+    env: { ...process.env, NODE_PATH },
+  });
+}
+
+function sleepMs(ms) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
+}
+
+function summary() {
+  const doneQa = positions.filter((p) => fs.existsSync(qaJson(p.id))).length;
+  const okCollect = positions.filter((p) => !needCollect(p.id)).length;
+  const partial = positions.filter((p) => postsOf(p.id) > 0 && postsOf(p.id) < COLLECT_OK).map((p) => `${p.id}(${postsOf(p.id)}条)`);
+  console.log(`[auto] 进度：采集 ${okCollect}/${positions.length}，完成全链路 ${doneQa}/${positions.length}${partial.length ? `，缺口部分采集：${partial.join(", ")}` : ""}`);
+  return { doneQa, okCollect, partial };
+}
+
+for (let cycle = 1; cycle <= MAX_CYCLES; cycle += 1) {
+  console.log(`\n[auto] ===== 第 ${cycle}/${MAX_CYCLES} 轮 ${new Date().toLocaleTimeString("zh-CN")} =====`);
+  const s = summary();
+  if (s.doneQa === positions.length) {
+    console.log("[auto] 全部岗位完成全链路，刷新看板后退出");
+    runNode(path.join(__dirname, "status.cjs"), []);
+    process.exit(0);
+  }
+
+  const downIds = positions.filter((p) => needDownstream(p.id)).map((p) => p.id);
+  if (downIds.length) {
+    console.log(`[auto] 下游补跑：${downIds.join(", ")}`);
+    for (const id of downIds) {
+      console.log(`[auto] >>> 下游 ${id}`);
+      runNode(path.join(__dirname, "run.cjs"), ["parse,clean,structure,index,qa", id]);
+    }
+  }
+
+  const rest = positions.filter((p) => needCollect(p.id)).map((p) => p.id);
+  if (rest.length) {
+    console.log(`[auto] 采集缺口 ${rest.length} 个：${rest.slice(0, 6).join(", ")}${rest.length > 6 ? " …" : ""}`);
+    runNode(path.join(__dirname, "collect.cjs"), ["collect", "all"]);
+  }
+
+  const after = summary();
+  if (after.doneQa === positions.length) {
+    console.log("[auto] 全部岗位完成全链路，刷新看板后退出");
+    runNode(path.join(__dirname, "status.cjs"), []);
+    process.exit(0);
+  }
+  if (after.okCollect + 0 < positions.length || rest.length) {
+    console.log("[auto] 尚有缺口，冷却 20 分钟后进入下一轮");
+    sleepMs(COOLDOWN_MS);
+  }
+}
+
+console.log(`\n[auto] 达到 ${MAX_CYCLES} 轮上限退出。当前状态：`);
+summary();

@@ -1,0 +1,15 @@
+{
+  "positionId": "it-ops-content",
+  "sampledKpIds": [
+    "it-ops-content-kp-025",
+    "it-ops-content-kp-067",
+    "it-ops-content-kp-026",
+    "it-ops-content-kp-031",
+    "it-ops-content-kp-006",
+    "it-ops-content-kp-022",
+    "it-ops-content-kp-041"
+  ],
+  "totalPoints": 69,
+  "faithful": true,
+  "issues": []
+}

@@ -1,0 +1,51 @@
+[collect] fin-bank-rm 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-teller 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-bank-mgmt-trainee 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-ibd 已有 50 条产出，跳过（--force 可重采）
+[collect] fin-ib-research 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ib-sales-trader 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fund-ra 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fund-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-fund-ops 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-actuary 已有 45 条产出，跳过（--force 可重采）
+[collect] fin-ins-claims 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-ins-agent 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-risk 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-fintech-product 已有 40 条产出，跳过（--force 可重采）
+[collect] fin-fintech-data 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-user 已有 40 条产出，跳过（--force 可重采）
+[collect] it-ops-content 已有 60 条产出，跳过（--force 可重采）
+[collect] it-ops-product 已有 60 条产出，跳过（--force 可重采）
+[collect] it-pm 已有 45 条产出，跳过（--force 可重采）
+[collect] it-da 已有 60 条产出，跳过（--force 可重采）
+[collect] it-risk 已有 55 条产出，跳过（--force 可重采）
+[collect] fin-pe-investment-manager 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-portfolio-management 已有 60 条产出，跳过（--force 可重采）
+[collect] fin-pe-investor-relations 已有 50 条产出，跳过（--force 可重采）
+[collect] 岗位 fin-vc-investment-analyst（VC投资分析师/投资经理）开始
+[collect]   关键词「VC投资经理日常」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「VC投资经理劝退」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「VC分析师真实工作」…
+[collect]     ✓ 采纳 15 条
+[collect]   关键词「VC投资经理面试」…
+[collect]     ✓ 采纳 15 条
+[collect] fin-vc-investment-analyst 落盘：采纳 60 条，跳过 7 条
+[collect] 岗位 fin-vc-industry-research（VC行业研究）开始
+[collect]   关键词「VC行业研究日常」…
+[collect]     ✓ 采纳 9 条
+[collect]   关键词「VC研究员劝退」…
+[collect]     ✓ 采纳 12 条
+[collect]   关键词「行业研究岗真实体验」…
+[collect]     ✓ 采纳 10 条
+[collect]   关键词「VC研究面试」…
+[collect]     ✓ 采纳 9 条
+[collect] fin-vc-industry-research 落盘：采纳 40 条，跳过 40 条
+[collect] 岗位 fin-sec-asset-management（券商资管）开始
+[collect]   关键词「券商资管日常」…
+[collect]     ✓ 采纳 0 条（触发验证码）
+[collect] fin-sec-asset-management 落盘：采纳 0 条，跳过 0 条（部分采集）
+[collect] 触发搜狗验证码（限频），中止本次采集。
+[collect] 已完成岗位文件已落盘；未采集岗位：fin-sec-wealth-advisor, fin-sec-compliance-risk, fin-fund-channel-sales, fin-fund-product-manager, fin-fund-trader
+[collect] 等限频解除后重新运行同一命令即可（已完成岗位会被覆盖补全）。
