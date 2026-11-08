@@ -7,6 +7,7 @@ import { ItemList } from "@/components/jd/ItemList";
 import { KbMoreInfo } from "@/components/jd/KbMoreInfo";
 import type { JDDutyBreakdown } from "@/lib/ai/jd";
 import type { KbMatch } from "@/lib/kb/types";
+import { DIRECTIONS, buildResumeCandidate, guessDirectionFromJD } from "@/lib/career";
 import { analyzeJD, extractJDInfo } from "@/lib/jd";
 import { useStore } from "@/lib/store";
 
@@ -31,7 +32,7 @@ const emptyKbMatch: KbMatch = {
 };
 
 export default function JDPage() {
-  const { ai, profile, jds, addJD, removeJD, updateJD, addApp } = useStore();
+  const { ai, profile, jds, apps, addJD, removeJD, updateJD, addApp, resumeVariants, resumeDraft, importQuestions } = useStore();
 
   const [company, setCompany] = useState("");
   const [title, setTitle] = useState("");
@@ -240,11 +241,14 @@ export default function JDPage() {
     }
 
     const info = extractJDInfo(text);
+    // 先按 JD 原文猜一次方向，用户可以在详情里改。
+    const guessedDirection = guessDirectionFromJD(text);
     const id = addJD({
       company: company.trim() || info.company,
       title: title.trim() || info.title,
       raw: text,
-      keywords: analyzeJD(text, profile.skills, "").keywords,
+      keywords: analyzeJD(text, profile.skills, profile.rawResume).keywords,
+      directionId: guessedDirection?.id ?? "",
     });
 
     setAiMode((prev) => ({ ...prev, [id]: mode === "ai" }));
@@ -264,7 +268,18 @@ export default function JDPage() {
   }
 
   const openJD = jds.find((item) => item.id === openId) ?? null;
-  const analysis = openJD ? analyzeJD(openJD.raw, profile.skills, "") : null;
+  // 和岗位匹配页用同一份口径：按这份 JD 的方向取简历版本。
+  const scopedCandidate = openJD
+    ? buildResumeCandidate({
+        profile,
+        resumeVariants,
+        resumeDraft,
+        directionId: openJD.directionId || undefined,
+      })
+    : null;
+  const analysis = openJD && scopedCandidate
+    ? analyzeJD(openJD.raw, scopedCandidate.skills, scopedCandidate.rawResume)
+    : null;
 
   /**
    * 打开一份 JD 就去知识库找对应岗位。
@@ -374,19 +389,51 @@ export default function JDPage() {
                 type="button"
                 className="btn clay"
                 onClick={() => {
+                  if (apps.some((item) => item.jdId === openJD.id)) {
+                    setNotice("这份 JD 已经在投递看板里了，没有重复添加。");
+                    return;
+                  }
+                  // 这个方向已经有简历版本就一并挂上，省得用户再去定制页补一次。
+                  const boundVariant = openJD.directionId
+                    ? resumeVariants.find((item) => item.directionId === openJD.directionId)
+                    : undefined;
                   addApp({
                     company: openJD.company,
                     title: openJD.title,
                     status: "待投递",
                     note: "",
                     jdId: openJD.id,
+                    resumeVariantId: boundVariant?.id ?? "",
                   });
-                  setNotice("已加入投递看板");
+                  setNotice(
+                    boundVariant
+                      ? `已加入投递看板，简历版本用的是「${boundVariant.name}」`
+                      : "已加入投递看板。这个方向还没有简历版本，可以在详情里补选。",
+                  );
                 }}
               >
                 📮 加入投递
               </button>
-              <Link className="btn primary" href="/optimize">
+              <button
+                type="button"
+                className="btn"
+                onClick={() => {
+                  // 把 JD 拆出来的技能词和职责转成练习题，写进全局题库。
+                  const questions = [
+                    ...analysis.keywords.slice(0, 6).map((word) => `请举例说明你在「${word}」方面的经历。`),
+                    ...analysis.duties.slice(0, 3).map((duty) => `如果让你负责「${duty.slice(0, 30)}」，你会怎么推进？`),
+                  ];
+                  const added = importQuestions(questions.join(String.fromCharCode(10)));
+                  setNotice(
+                    added > 0
+                      ? `已生成 ${added} 道面试题，去「面试陪练 → 我的题库」里练。`
+                      : "这个岗位相关的题目已经在题库里了。",
+                  );
+                }}
+              >
+                🎤 生成面试题
+              </button>
+              <Link className="btn primary" href={`/optimize?jd=${encodeURIComponent(openJD.id)}`}>
                 📝 去定制简历
               </Link>
             </div>
@@ -410,6 +457,15 @@ export default function JDPage() {
             <div className="mt12">
               <span className={`tag ${tone}`}>{verdict}</span>
             </div>
+            {scopedCandidate ? (
+              <div className="tiny mt8">
+                {scopedCandidate.source === "direction"
+                  ? "按该方向对应的简历版本算分"
+                  : scopedCandidate.source === "default"
+                    ? `该方向还没有简历，先用默认版本「${scopedCandidate.sourceName || "未命名"}」算分`
+                    : "按全部简历合并算分"}
+              </div>
+            ) : null}
           </div>
 
           <div className="card">
@@ -471,6 +527,24 @@ export default function JDPage() {
         <div className="card mt16">
           <div className="spread">
             <h3>投递信息</h3>
+          </div>
+
+          <div className="row mt8">
+            <span className="tiny">所属方向</span>
+            <select
+              className="input"
+              style={{ maxWidth: 260 }}
+              value={openJD.directionId ?? ""}
+              onChange={(event) => updateJD(openJD.id, { directionId: event.target.value })}
+            >
+              <option value="">— 未指定 —</option>
+              {DIRECTIONS.map((direction) => (
+                <option key={direction.id} value={direction.id}>
+                  {direction.name}
+                </option>
+              ))}
+            </select>
+            <span className="tiny">决定岗位匹配和简历定制用哪个方向的简历版本，拆解时已自动推断，可手动改。</span>
           </div>
 
           <div className="split mt8">

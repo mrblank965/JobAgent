@@ -10,7 +10,8 @@ import { useStore } from "@/lib/store";
  * 填了 Key 就开启一键直连，接口兼容 OpenAI 的 chat/completions，
  * 所以 OpenAI、DeepSeek、本地代理都能用。
  *
- * Key 只放在页面内存里，不写 localStorage，刷新即清空，也不会发到我们自己的服务器。
+ * Key 和学习数据一起存在本机浏览器的 IndexedDB 里，刷新、重开都还在，
+ * 不会发到我们自己的服务器；换电脑或清空浏览器数据后需要重填。
  */
 export function AISettingsCard() {
   const { ai, setAI } = useStore();
@@ -53,7 +54,7 @@ export function AISettingsCard() {
         </div>
       </div>
 
-      <label className="fl">API Key（只存在当前页面内存里，刷新即清空）</label>
+      <label className="fl">API Key（保存在本机浏览器，刷新后仍在，不会上传）</label>
       <input
         className="input"
         type="password"

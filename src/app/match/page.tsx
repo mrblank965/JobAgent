@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { KeywordList } from "@/components/analysis/KeywordList";
 import { MatchScore } from "@/components/analysis/MatchScore";
 import { SuggestionList } from "@/components/analysis/SuggestionList";
+import { DIRECTIONS, buildResumeCandidate } from "@/lib/career";
 import { analyzeJD } from "@/lib/jd";
 import { useStore, type JDEntry } from "@/lib/store";
 
@@ -14,7 +15,13 @@ function toneOf(coverage: number) {
 }
 
 export default function MatchPage() {
-  const { profile, jds, apps, addApp, storageReady } = useStore();
+  const { profile, jds, apps, addApp, resumeVariants, resumeDraft, storageReady } = useStore();
+  /** 和方向分析用同一份候选：已保存版本 + 当前草稿。 */
+  const { skills, rawResume, hasUnsavedDraft, isEmpty } = buildResumeCandidate({
+    profile,
+    resumeVariants,
+    resumeDraft,
+  });
   // 用 Set 支持同时展开多份 JD，跨 JD 对比缺口时不用来回点
   const [openIds, setOpenIds] = useState<ReadonlySet<string>>(new Set());
   const [notice, setNotice] = useState("");
@@ -34,9 +41,44 @@ export default function MatchPage() {
    * 有个 6 的硬下限，关键词少的 JD 会被压住。实测一份关键词全中的短 JD 得 83 分，
    * 一份只中了一半的长 JD 得 100 分。覆盖率没有这个问题，恒在 0 到 1 之间。
    */
+  /** 标了方向、但该方向还没有简历版本的 JD，按方向汇总。 */
+  const missingDirections = useMemo(() => {
+    const counter = new Map<string, { name: string; count: number }>();
+    for (const jd of jds) {
+      const id = jd.directionId ?? "";
+      if (!id) continue;
+      if (resumeVariants.some((item) => item.directionId === id)) continue;
+      const name = DIRECTIONS.find((item) => item.id === id)?.name ?? id;
+      const current = counter.get(id) ?? { name, count: 0 };
+      counter.set(id, { name, count: current.count + 1 });
+    }
+    return [...counter.values()];
+  }, [jds, resumeVariants]);
+
+  /**
+   * 每份 JD 用它自己方向对应的简历版本来算分。
+   * 没标方向、或该方向还没有简历版本时，退回全局候选（所有版本 + 草稿）。
+   */
+  const candidateByDirection = useMemo(() => {
+    const cache = new Map<string, { skills: string[]; rawResume: string }>();
+    for (const jd of jds) {
+      const key = jd.directionId ?? "";
+      if (cache.has(key)) continue;
+      const scoped = buildResumeCandidate({
+        profile,
+        resumeVariants,
+        resumeDraft,
+        directionId: key || undefined,
+      });
+      cache.set(key, { skills: scoped.skills, rawResume: scoped.rawResume });
+    }
+    return cache;
+  }, [jds, profile, resumeVariants, resumeDraft]);
+
   const ranked = useMemo(() => {
     const rows = jds.map((jd) => {
-      const analysis = analyzeJD(jd.raw, profile.skills, profile.rawResume);
+      const scoped = candidateByDirection.get(jd.directionId ?? "") ?? { skills, rawResume };
+      const analysis = analyzeJD(jd.raw, scoped.skills, scoped.rawResume);
       const { hits, partial, missing, score } = analysis.match;
       const keywordCount = analysis.keywords.length;
 
@@ -61,7 +103,7 @@ export default function MatchPage() {
     );
 
     return rows;
-  }, [jds, profile.skills, profile.rawResume]);
+  }, [jds, skills, rawResume, candidateByDirection]);
 
   /** 跨 JD 高频缺口。单看一份 JD 得不出这个结论，只有放在一起数才知道先补哪个。 */
   const gapStats = useMemo(() => {
@@ -117,7 +159,7 @@ export default function MatchPage() {
     );
   }
 
-  if (profile.skills.length === 0) {
+  if (isEmpty) {
     return (
       <>
         <div className="view-head">
@@ -125,7 +167,7 @@ export default function MatchPage() {
         </div>
         <div className="empty">
           <span className="big">🪶</span>
-          还没有技能画像，算不出覆盖率。先到「简历解析」上传或粘贴简历。
+          还没有可用的简历信息，算不出覆盖率。先到「简历解析」上传或粘贴简历。
           <div className="mt12">
             <Link className="btn primary" href="/resume">
               去简历解析
@@ -157,7 +199,7 @@ export default function MatchPage() {
   }
 
   const top = ranked[0];
-  const hasResumeText = profile.rawResume.trim().length > 0;
+  const hasResumeText = rawResume.trim().length > 0;
 
   return (
     <>
@@ -167,6 +209,10 @@ export default function MatchPage() {
       </div>
 
       {notice ? <div className="warnbox mb12">{notice}</div> : null}
+
+      {hasUnsavedDraft ? (
+        <div className="warnbox mb12">当前使用的是未保存的解析结果，保存到资料库后才会写进简历版本。</div>
+      ) : null}
 
       <MatchScore
         score={Math.round(top.coverage * 100)}
@@ -186,12 +232,21 @@ export default function MatchPage() {
 
           <div className="copyrow">
             <span className="k">技能标签</span>
-            <span className="v">{profile.skills.length} 项</span>
+            <span className="v">{skills.length} 项</span>
           </div>
           <div className="copyrow">
             <span className="k">简历原文</span>
-            <span className="v">{profile.rawResume.trim().length} 字</span>
+            <span className="v">{rawResume.trim().length} 字</span>
           </div>
+          <div className="tiny mt8">
+            每份 JD 用它<b>所属方向</b>的简历版本算分；JD 没标方向时用上面这份合并画像。
+          </div>
+          {missingDirections.length > 0 ? (
+            <div className="tiny mt8 warn-text">
+              这些方向还没有简历版本，相关 JD 已按默认版本算分：
+              {missingDirections.map((item) => `${item.name}（${item.count} 份）`).join("、")}
+            </div>
+          ) : null}
 
           {hasResumeText ? null : (
             <div className="tiny mt8 warn-text">
@@ -271,7 +326,7 @@ export default function MatchPage() {
                   <button type="button" className="btn clay sm" onClick={() => addToBoard(row.jd)}>
                     📮 加入投递
                   </button>
-                  <Link className="btn primary sm" href="/optimize">
+                  <Link className="btn primary sm" href={`/optimize?jd=${encodeURIComponent(row.jd.id)}`}>
                     📝 去定制简历
                   </Link>
                 </div>

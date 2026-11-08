@@ -1,7 +1,8 @@
 "use client";
 
 import { DIRECTIONS } from "@/lib/career";
-import { ANIMAL_OPTIONS, CITY_OPTIONS, DEGREE_OPTIONS, JOB_TYPES, useStore } from "@/lib/store";
+import { DEGREE_LABELS } from "@/lib/parsers/resumeText";
+import { ANIMAL_OPTIONS, CITY_OPTIONS, JOB_TYPES, useStore } from "@/lib/store";
 import type { ResumeData } from "@/types/analysis";
 import { EducationEditor } from "./EducationEditor";
 
@@ -19,6 +20,16 @@ type ResumeProfileProps = {
 export function ResumeProfile({ value, onChange }: ResumeProfileProps) {
   const { profile, setProfile } = useStore();
   const name = value.name ?? "";
+
+  /**
+   * 明细里的四项只反映**这一次解析**的第一条教育经历，
+   * 不从全局画像兜底，免得旧资料的新值混在一起看不出哪个是真的。
+   */
+  const firstEducation = value.education[0] ?? null;
+  const parsedGradYear = firstEducation?.periodEnd ? firstEducation.periodEnd.slice(0, 4) : "";
+  const parsedSchool = firstEducation?.school ?? "";
+  const parsedMajor = firstEducation?.major ?? "";
+  const parsedDegree = firstEducation ? DEGREE_LABELS[firstEducation.degree] : "";
 
   return (
     <div className="card">
@@ -81,44 +92,19 @@ export function ResumeProfile({ value, onChange }: ResumeProfileProps) {
         </div>
         <div>
           <label className="fl">毕业年份</label>
-          <input
-            className="input"
-            value={profile.gradYear}
-            onChange={(event) => setProfile((current) => ({ ...current, gradYear: event.target.value }))}
-            placeholder="例如 2026"
-          />
+          <input className="input" readOnly value={parsedGradYear} placeholder="—" />
         </div>
         <div>
           <label className="fl">学校</label>
-          <input
-            className="input"
-            value={profile.school}
-            onChange={(event) => setProfile((current) => ({ ...current, school: event.target.value }))}
-            placeholder="例如 中山大学"
-          />
+          <input className="input" readOnly value={parsedSchool} placeholder="—" />
         </div>
         <div>
           <label className="fl">专业</label>
-          <input
-            className="input"
-            value={profile.major}
-            onChange={(event) => setProfile((current) => ({ ...current, major: event.target.value }))}
-            placeholder="例如 金融专硕"
-          />
+          <input className="input" readOnly value={parsedMajor} placeholder="—" />
         </div>
         <div>
           <label className="fl">学历</label>
-          <select
-            className="input"
-            value={profile.degree}
-            onChange={(event) => setProfile((current) => ({ ...current, degree: event.target.value }))}
-          >
-            {DEGREE_OPTIONS.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+          <input className="input" readOnly value={parsedDegree} placeholder="—" />
         </div>
         <div>
           <label className="fl">求职类型</label>
@@ -134,6 +120,12 @@ export function ResumeProfile({ value, onChange }: ResumeProfileProps) {
             ))}
           </select>
         </div>
+      </div>
+
+      <div className="tiny mt8">
+        {firstEducation
+          ? "毕业年份、学校、专业、学历这四项来自本次解析，点「保存到资料库」后同步到资料库；要修改请直接改下面的教育明细。"
+          : "本次未解析到教育经历。上面的毕业年份、学校、专业、学历留空，可以直接在下面的教育明细里补充。"}
       </div>
 
       <label className="fl">目标方向</label>

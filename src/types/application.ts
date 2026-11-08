@@ -1,19 +1,21 @@
 import type { ResumeData } from "@/types/analysis";
 
+/**
+ * 看板列就是招聘阶段，按投递推进的顺序排列。
+ *
+ * 早期版本把「投递状态」和「招聘阶段」拆成两个字段，
+ * 旧数据在加载时由 store 里的 normalizeApplication 迁到这里，不再保留第二个字段。
+ */
 export const APPLICATION_STATUSES = [
   "待投递",
-  "填写中",
-  "待用户处理",
-  "待提交确认",
   "已投递",
+  "笔试",
+  "面试",
+  "Offer",
   "已结束",
 ] as const;
 
 export type ApplicationStatus = (typeof APPLICATION_STATUSES)[number];
-
-export const RECRUITMENT_STAGES = ["暂无", "笔试", "面试", "Offer"] as const;
-
-export type RecruitmentStage = (typeof RECRUITMENT_STAGES)[number];
 
 export type ApplicationEvent = {
   id: string;
@@ -27,7 +29,6 @@ export type Application = {
   company: string;
   title: string;
   status: ApplicationStatus;
-  stage: RecruitmentStage;
   note: string;
   jobUrl: string;
   jdId: string;

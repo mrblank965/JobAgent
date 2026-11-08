@@ -2,9 +2,9 @@
 
 import { useState, type ChangeEvent } from "react";
 import { DIRECTIONS } from "@/lib/career";
-import { buildAutofillPackage } from "@/lib/autofill/package";
+import { buildAutofillPackage, isAutofillPackageV1 } from "@/lib/autofill/package";
 import { DEGREE_LABELS } from "@/lib/parsers/resumeText";
-import { CITY_OPTIONS, JOB_TYPES, useStore, type Profile, type ResumeVariant } from "@/lib/store";
+import { CITY_OPTIONS, GENDER_OPTIONS, JOB_TYPES, POLITICAL_OPTIONS, useStore, type Profile, type ResumeVariant } from "@/lib/store";
 import type { ExperienceEntry, ResumeData } from "@/types/analysis";
 
 const PROJECT_CATEGORY_LABELS = {
@@ -201,6 +201,15 @@ export default function ProfilePage() {
       return;
     }
 
+    // 简历助手导入前会按同一套协议校验，格式不达标的文件导出去也只会被拒。
+    // 与其让用户拿着一个导不进去的文件来回试，不如在导出这一步就说清楚。
+    if (!isAutofillPackageV1(next)) {
+      setNotice(
+        "这份简历的数据不完整（教育、经历或技能格式不符合交换协议），导出的文件会被简历助手拒绝。请回到「简历解析」重新保存一次这个版本再导出。",
+      );
+      return;
+    }
+
     const blob = new Blob([JSON.stringify(next, null, 2)], { type: "application/json" });
     const link = document.createElement("a");
     const safeName = next.resumeVariant.name.replace(/[^\p{L}\p{N}_-]+/gu, "-").replace(/^-|-$/g, "") || "resume";
@@ -280,6 +289,24 @@ export default function ProfilePage() {
             <div>
               <label className="fl">手机号</label>
               <input className="input" value={profile.phone} onChange={(event) => setProfile((current) => ({ ...current, phone: event.target.value }))} />
+            </div>
+            <div>
+              <label className="fl">性别</label>
+              <select className="input" value={profile.gender} onChange={(event) => setProfile((current) => ({ ...current, gender: event.target.value }))}>
+                <option value="">未填写</option>
+                {GENDER_OPTIONS.map((option) => <option key={option}>{option}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="fl">出生日期</label>
+              <input className="input" type="date" value={profile.birth} onChange={(event) => setProfile((current) => ({ ...current, birth: event.target.value }))} />
+            </div>
+            <div>
+              <label className="fl">政治面貌</label>
+              <select className="input" value={profile.political} onChange={(event) => setProfile((current) => ({ ...current, political: event.target.value }))}>
+                <option value="">未填写</option>
+                {POLITICAL_OPTIONS.map((option) => <option key={option}>{option}</option>)}
+              </select>
             </div>
             <div>
               <label className="fl">求职类型</label>
@@ -460,18 +487,18 @@ export default function ProfilePage() {
         </details>
 
         <details className="nextstep mt12" id="resume-assistant-install">
-          <summary style={{ cursor: "pointer", fontWeight: 700 }}>安装或更新简历助手 · v2.5.0</summary>
+          <summary style={{ cursor: "pointer", fontWeight: 700 }}>安装或更新简历助手 · v2.5.1</summary>
           <div className="tiny mt8">扩展负责把所选简历版本填写到招聘网站，不会自动点击最终提交。</div>
           <div className="row mt12">
-            <a className="btn primary" href="/downloads/jobagent-resume-assistant-v2.5.0.zip" download>下载 Chrome / Edge 安装包</a>
+            <a className="btn primary" href="/downloads/jobagent-resume-assistant-v2.5.1.zip" download>下载 Chrome / Edge 安装包</a>
           </div>
           <ol className="tiny mt12" style={{ paddingLeft: 20, lineHeight: 1.8 }}>
             <li>下载 ZIP 并解压。</li>
             <li>打开 chrome://extensions 或 edge://extensions。</li>
             <li>开启开发者模式，选择“加载已解压的扩展程序”。</li>
-            <li>选择包含 manifest.json 的文件夹，确认版本为 2.5.0。</li>
+            <li>选择包含 manifest.json 的文件夹，确认版本为 2.5.1。</li>
           </ol>
-          <div className="tiny mt8">如果仍显示 2.4.1 或 Service Worker 无效，请先移除旧版本。不要直接双击 popup.html。</div>
+          <div className="tiny mt8">如果仍显示 2.5.0 / 2.4.1 或 Service Worker 无效，请先移除旧版本再重新加载。不要直接双击 popup.html。</div>
         </details>
 
         <details className="nextstep mt12">

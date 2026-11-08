@@ -23,10 +23,10 @@ import {
   type Application,
   type ApplicationDraft,
   type ApplicationStatus,
-  type RecruitmentStage,
   type ResumeVariant,
 } from "@/types/application";
 import { DIRECTIONS } from "@/lib/career";
+import { splitQuestions } from "@/lib/interviewBank";
 import type { RecognizedHeading } from "@/lib/parsers/resumeText";
 import type { ResumeData } from "@/types/analysis";
 
@@ -40,6 +40,12 @@ export type Profile = {
   name: string;
   email: string;
   phone: string;
+  /** 性别：男 / 女 / 空。国内网申基本必填，插件的资料包会带上。 */
+  gender: string;
+  /** 出生日期，YYYY-MM-DD，可留空。 */
+  birth: string;
+  /** 政治面貌，取值见 POLITICAL_OPTIONS。 */
+  political: string;
   location: string;
   workAuthorization: string;
   workAuthorizationConfirmed: boolean;
@@ -67,6 +73,10 @@ export type Profile = {
 
 /** 学历下拉选项。 */
 export const DEGREE_OPTIONS = ["本科", "硕士", "博士", "MBA", "专科", "其他"];
+
+/** 性别与政治面貌的可选值，与简历助手插件的下拉项保持一致。 */
+export const GENDER_OPTIONS = ["男", "女"];
+export const POLITICAL_OPTIONS = ["群众", "共青团员", "中共预备党员", "中共党员", "民主党派", "无党派人士"];
 
 /** 求职类型选项。 */
 export const JOB_TYPES = ["校招", "实习", "社招"];
@@ -112,6 +122,8 @@ export const ANIMAL_OPTIONS = [
 ];
 
 /** AI 接入配置。只在页面内存里，不写 localStorage。 */
+export type QuestionLevel = "new" | "practicing" | "mastered";
+
 export type AISettings = {
   apiBase: string;
   apiKey: string;
@@ -124,6 +136,8 @@ export type JDEntry = {
   title: string;
   raw: string;
   keywords: string[];
+  /** 这份 JD 属于哪个求职方向（对应 career.ts 的 DIRECTIONS.id）。空串表示未指定。 */
+  directionId?: string;
 };
 
 export type InterviewRecord = {
@@ -160,7 +174,7 @@ type StoreValue = {
   resumeVariants: ResumeVariant[];
   addResumeVariant: (
     entry: Pick<ResumeVariant, "name" | "directionId" | "sourceText"> & Pick<Partial<ResumeVariant>, "structuredData">,
-  ) => void;
+  ) => string;
   updateResumeVariant: (
     id: string,
     patch: Partial<Pick<ResumeVariant, "name" | "directionId" | "sourceText" | "structuredData" | "isDefault">>,
@@ -180,6 +194,12 @@ type StoreValue = {
   interviews: InterviewRecord[];
   ensureInterview: (app: Application) => void;
   setInterviewAnswer: (id: string, group: string, index: number, answer: string) => void;
+  /** 全局题库：导入一次，所有面试记录共用。 */
+  customQuestions: { q: string; a: string; level?: QuestionLevel }[];
+  importQuestions: (text: string) => number;
+  setQuestionLevel: (index: number, level: QuestionLevel) => void;
+  setCustomAnswer: (index: number, answer: string) => void;
+  removeCustomQuestion: (index: number) => void;
   ai: AISettings;
   setAI: (next: AISettings) => void;
 };
@@ -188,6 +208,9 @@ const emptyProfile: Profile = {
   name: "",
   email: "",
   phone: "",
+  gender: "",
+  birth: "",
+  political: "",
   location: "",
   workAuthorization: "",
   workAuthorizationConfirmed: false,
@@ -226,6 +249,10 @@ type WorkspaceSnapshot = {
   resumeVariants: ResumeVariant[];
   answerBank: AnswerBankEntry[];
   resumeDraft?: ResumeDraft;
+  /** AI 接入配置。旧快照里没有这个字段，读到时保持默认值。 */
+  ai?: AISettings;
+  /** 全局面试题库，旧快照里没有这个字段，读到时按空数组处理。 */
+  customQuestions?: { q: string; a: string; level?: QuestionLevel }[];
 };
 
 const StoreContext = createContext<StoreValue | null>(null);
@@ -243,7 +270,6 @@ function createApplication(entry: ApplicationDraft): Application {
     company: entry.company,
     title: entry.title,
     status: entry.status ?? "待投递",
-    stage: entry.stage ?? "暂无",
     note: entry.note ?? "",
     jobUrl: entry.jobUrl ?? "",
     jdId: entry.jdId ?? "",
@@ -281,6 +307,31 @@ function normalizeResumeVariant(item: ResumeVariant): ResumeVariant {
   };
 }
 
+/**
+ * 旧记录同时有 status（投递状态）和 stage（招聘阶段）两个字段，
+ * 现在合并成一个 status。迁移时按推进程度取更靠后的那个阶段。
+ */
+function normalizeApplication(item: Application): Application {
+  const legacy = item as Application & { stage?: string };
+  // 旧记录一定带 stage 字段；新记录没有。不能只看 status，
+  // 因为「待投递」「已投递」这两个值新旧两套都有。
+  const hasLegacyStage = Object.prototype.hasOwnProperty.call(legacy, "stage");
+  const knownStatus = (APPLICATION_STATUSES as readonly string[]).includes(item.status);
+
+  if (!hasLegacyStage && knownStatus) return item;
+
+  let status: ApplicationStatus = "待投递";
+  if (legacy.status === "已结束") status = "已结束";
+  else if (legacy.stage === "Offer") status = "Offer";
+  else if (legacy.stage === "面试") status = "面试";
+  else if (legacy.stage === "笔试") status = "笔试";
+  else if (knownStatus) status = item.status;
+
+  const next = { ...legacy, status };
+  delete next.stage;
+  return next;
+}
+
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [profile, setProfile] = useState<Profile>(emptyProfile);
   const [jds, setJds] = useState<JDEntry[]>([]);
@@ -294,6 +345,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     resumeDraftEditedBeforeLoad.current = true;
     setResumeDraftState(next);
   }, []);
+  const [customQuestions, setCustomQuestions] = useState<{ q: string; a: string; level?: QuestionLevel }[]>([]);
   const [ai, setAI] = useState<AISettings>(emptyAI);
   const [storageReady, setStorageReady] = useState(false);
   const [storageError, setStorageError] = useState("");
@@ -306,10 +358,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         if (cancelled || !isWorkspaceSnapshot(stored)) return;
         setProfile({ ...emptyProfile, ...stored.profile });
         setJds(stored.jds);
-        setApps(stored.apps);
+        setApps(stored.apps.map(normalizeApplication));
         setInterviews(stored.interviews);
         setResumeVariants(stored.resumeVariants.map(normalizeResumeVariant));
         setAnswerBank(stored.answerBank);
+        setCustomQuestions(stored.customQuestions ?? []);
+        if (stored.ai) setAI({ ...emptyAI, ...stored.ai });
         if (!resumeDraftEditedBeforeLoad.current) {
           setResumeDraftState(stored.resumeDraft ?? emptyResumeDraft);
         }
@@ -336,8 +390,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       resumeVariants,
       answerBank,
       resumeDraft,
+      customQuestions,
+      ai,
     }),
-    [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft],
+    [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft, customQuestions, ai],
   );
 
   useEffect(() => {
@@ -373,16 +429,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
       apps,
       addApp(entry) {
-        setApps((current) => [
-          ...current,
-          createApplication({
-            ...entry,
-            resumeVariantId:
-              entry.resumeVariantId ?? resumeVariants.find((item) => item.isDefault)?.id ?? "",
-          }),
-        ]);
+        // 简历版本只认调用方显式传入的那一份，不猜、不兜底成默认版本。
+        setApps((current) => [...current, createApplication(entry)]);
       },
       moveApp(id, status) {
+        const target = apps.find((item) => item.id === id);
         setApps((current) =>
           current.map((item) => {
             if (item.id !== id || item.status === status) return item;
@@ -393,35 +444,34 @@ export function StoreProvider({ children }: { children: ReactNode }) {
               updatedAt,
               timeline: [
                 ...item.timeline,
-                { id: uid("event"), at: updatedAt, type: "status", description: `状态更新为「${status}」` },
+                { id: uid("event"), at: updatedAt, type: "status", description: `阶段更新为「${status}」` },
               ],
             };
           }),
         );
+
+        // 进入面试阶段就准备练习题，和以前在详情里改招聘阶段是同一个效果。
+        if (status === "面试" && target) {
+          setInterviews((current) =>
+            current.some((item) => item.id === target.id)
+              ? current
+              : [
+                  ...current,
+                  {
+                    id: target.id,
+                    company: target.company,
+                    title: target.title,
+                    groups: buildInterviewGroups(target.company, target.title),
+                  },
+                ],
+          );
+        }
       },
       updateApp(id, patch) {
         setApps((current) =>
-          current.map((item) => {
-            if (item.id !== id) return item;
-            const updatedAt = now();
-            const stageChanged = patch.stage && patch.stage !== item.stage;
-            return {
-              ...item,
-              ...patch,
-              updatedAt,
-              timeline: stageChanged
-                ? [
-                    ...item.timeline,
-                    {
-                      id: uid("event"),
-                      at: updatedAt,
-                      type: "stage",
-                      description: `招聘阶段更新为「${patch.stage as RecruitmentStage}」`,
-                    },
-                  ]
-                : item.timeline,
-            };
-          }),
+          current.map((item) =>
+            item.id === id ? { ...item, ...patch, updatedAt: now() } : item,
+          ),
         );
       },
       updateAppNote(id, note) {
@@ -429,21 +479,26 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       },
       removeApp(id) {
         setApps((current) => current.filter((item) => item.id !== id));
+        // 面试记录的 id 跟投递记录一一对应，投递删了，对应的练习题也一起删。
+        setInterviews((current) => current.filter((item) => item.id !== id));
       },
 
       resumeVariants,
       addResumeVariant(entry) {
         const timestamp = now();
+        // 先算出 id 再写状态，这样调用方能拿到新版本的 id 去做后续动作（比如加入投递）。
+        const id = uid("resume");
         setResumeVariants((current) => [
           ...current,
           {
             ...entry,
-            id: uid("resume"),
+            id,
             isDefault: current.length === 0,
             createdAt: timestamp,
             updatedAt: timestamp,
           },
         ]);
+        return id;
       },
       updateResumeVariant(id, patch) {
         setResumeVariants((current) =>
@@ -488,10 +543,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           if (!isWorkspaceSnapshot(imported)) return { ok: false, error: "文件格式或版本不受支持。" };
           setProfile({ ...emptyProfile, ...imported.profile });
           setJds(imported.jds);
-          setApps(imported.apps);
+          setApps(imported.apps.map(normalizeApplication));
           setInterviews(imported.interviews);
           setResumeVariants(imported.resumeVariants.map(normalizeResumeVariant));
           setAnswerBank(imported.answerBank);
+          setCustomQuestions(imported.customQuestions ?? []);
+          if (imported.ai) setAI({ ...emptyAI, ...imported.ai });
           setResumeDraftState(imported.resumeDraft ?? emptyResumeDraft);
           return { ok: true };
         } catch {
@@ -505,6 +562,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         setInterviews([]);
         setResumeVariants([]);
         setAnswerBank([]);
+        setCustomQuestions([]);
+        setAI(emptyAI);
         setResumeDraftState(emptyResumeDraft);
         await clearWorkspaceSnapshot();
       },
@@ -539,10 +598,43 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           }),
         );
       },
+      customQuestions,
+      importQuestions(text) {
+        const parsed = splitQuestions(text)
+          .map((q) => q.trim())
+          .filter(Boolean);
+
+        // 先在函数体里算好再写状态，返回值才和实际新增数量一致。
+        const known = new Set(customQuestions.map((item) => item.q));
+        const added: { q: string; a: string }[] = [];
+        for (const q of parsed) {
+          if (known.has(q)) continue;
+          known.add(q);
+          added.push({ q, a: "" });
+        }
+        if (added.length > 0) {
+          setCustomQuestions((current) => [...current, ...added]);
+        }
+        return added.length;
+      },
+      setCustomAnswer(index, answer) {
+        setCustomQuestions((current) =>
+          current.map((item, itemIndex) => (itemIndex === index ? { ...item, a: answer } : item)),
+        );
+      },
+      removeCustomQuestion(index) {
+        setCustomQuestions((current) => current.filter((_, itemIndex) => itemIndex !== index));
+      },
+      setQuestionLevel(index, level) {
+        setCustomQuestions((current) =>
+          current.map((item, itemIndex) => (itemIndex === index ? { ...item, level } : item)),
+        );
+      },
+
       ai,
       setAI,
     };
-  }, [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft, setResumeDraft, storageReady, storageError, snapshot, ai]);
+  }, [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft, customQuestions, setResumeDraft, storageReady, storageError, snapshot, ai]);
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }

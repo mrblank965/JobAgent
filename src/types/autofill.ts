@@ -4,6 +4,10 @@ export type AutofillPackageProfile = {
   name: string;
   email: string;
   phone: string;
+  /** 下面三项国内网申常填，资料库没填就是空串。 */
+  gender: string;
+  birth: string;
+  political: string;
   location: string;
   school: string;
   major: string;

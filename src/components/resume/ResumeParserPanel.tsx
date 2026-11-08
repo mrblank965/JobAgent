@@ -226,7 +226,18 @@ export function ResumeParserPanel() {
               </div>
               <div style={{ minWidth: 260 }}>
                 <label className="fl" htmlFor="resume-direction">适用方向</label>
-                <select id="resume-direction" className="input" value={directionId} onChange={(event) => setDirectionId(event.target.value)}>
+                <select
+                  id="resume-direction"
+                  className="input"
+                  value={directionId}
+                  onChange={(event) => {
+                    const nextId = event.target.value;
+                    setDirectionId(nextId);
+                    // 选完适用方向就把全局「目标方向」一并同步，省得用户在上面的画像里再选一次。
+                    const direction = DIRECTIONS.find((item) => item.id === nextId);
+                    if (direction) setProfile((current) => ({ ...current, target: direction.name }));
+                  }}
+                >
                   <option value="">— 请选择方向 —</option>
                   {DIRECTIONS.map((direction) => <option key={direction.id} value={direction.id}>{direction.name}</option>)}
                 </select>
