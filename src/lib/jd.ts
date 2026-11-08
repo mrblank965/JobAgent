@@ -19,6 +19,9 @@ export const SKILL_DICT = [
 /** 从"熟悉/掌握 + 词"里补充抽取的关键词。 */
 const SKILL_VERB_PATTERN = /(?:熟悉|掌握|精通|了解|具备|擅长)\s*([A-Za-z0-9#+一-龥、/，]{2,30})/g;
 
+/** 含这些词的片段多半是整句描述，不是技能名。 */
+const VAGUE_KEYWORD = /较|很|非常|十分|能够|可以|接受|具备|良好|一定/;
+
 /**
  * 职责行的开头动词。只在没写分区标题、只能逐行猜的时候用。
  * 不带"分析""研究""设计"这类两头都能用的词：它们也常出现在要求行开头（"分析能力强"）。
@@ -120,9 +123,11 @@ const ABILITY_HINT =
  * JD 里的分区标题。招聘贴通常用【职位描述】和【职位要求】把内容分成两段，
  * 按这个切比逐行猜准得多。
  */
-const JD_SECTION_MARKERS: { pattern: RegExp; kind: "duty" | "req" }[] = [
+const JD_SECTION_MARKERS: { pattern: RegExp; kind: "duty" | "req" | "none" }[] = [
   { pattern: /职位描述|岗位描述|工作内容|岗位职责|工作职责|职责描述|你将做什么/, kind: "duty" },
   { pattern: /职位要求|任职要求|岗位要求|任职资格|招聘要求|申请要求|资格条件|我们希望你/, kind: "req" },
+  // 投递方式、联系方式不是任职要求，遇到就把当前分区关掉，别让后面的内容混进来
+  { pattern: /申请方式|投递方式|应聘方式|投递方法|简历投递|联系方式/, kind: "none" },
 ];
 
 /**
@@ -202,7 +207,7 @@ const NAMING_HINT = /姓名|学校|毕业|到岗|时长|岗位|专业/;
 
 /** 正文里带标签的命名格式，例如"简历命名格式：姓名-学校-专业"。 */
 const NAMING_LABELED =
-  /(?:简历命名格式|简历命名要求|命名格式|邮件命名|邮件主题|邮件标题|简历名称|简历格式)\s*[:：]\s*([^\n。；;]{4,60})/;
+  /(?:简历命名格式|简历命名要求|简历命名形式|邮件标题命名形式|邮件标题命名格式|邮件命名格式|邮件命名|邮件主题|命名格式|命名形式|简历名称|简历格式)\s*[:：]\s*([^\n。；;]{4,80})/;
 
 /** 硬性条件，单独挑出来提醒。 */
 const HARD_HINT = /(CPA|CFA|FRM|Python|SQL|Java|C\+\+|Excel|PPT|VBA|Wind|Choice|Bloomberg|彭博|四级|六级|雅思|托福|GRE|GMAT|本科|硕士|博士|经验|证书)/;
@@ -243,13 +248,18 @@ function unique(items: string[]): string[] {
  * 直接比字符串会留下两条，所以比之前先把结尾标点抹掉。
  */
 function uniqueReqs(lines: string[]): string[] {
-  const seen = new Set<string>();
+  const trim = (value: string) => value.replace(/[。．.；;，,、\s]+$/, "");
   const result: string[] = [];
 
   for (const line of lines) {
-    const key = line.replace(/[。．.；;，,、\s]+$/, "");
-    if (key.length === 0 || seen.has(key)) continue;
-    seen.add(key);
+    const key = trim(line);
+    if (key.length === 0) continue;
+    // 原文里同一句写了两遍、或一条完整包含另一条时，只留先出现的
+    const duplicated = result.some((existing) => {
+      const existingKey = trim(existing);
+      return existingKey === key || existingKey.includes(key) || key.includes(existingKey);
+    });
+    if (duplicated) continue;
     result.push(line);
   }
 
@@ -303,7 +313,9 @@ export function analyzeJD(raw: string, skills: string[], resumeText: string): JD
   for (const matched of text.matchAll(SKILL_VERB_PATTERN)) {
     const parts = matched[1].split(/[、/，,]/).map((part) => part.trim());
     for (const part of parts) {
-      if (part.length < 2 || part.length > 10) continue;
+      // 超过 6 个字的多半是整句，不是技能词；带程度副词的也不是。
+      if (part.length < 2 || part.length > 6) continue;
+      if (VAGUE_KEYWORD.test(part)) continue;
       if (!counted.some((item) => item.k === part)) counted.push({ k: part, n: 1 });
     }
   }
@@ -440,7 +452,7 @@ const WORKPLACE_DETAIL = /(路|街|道|巷|号|园|区|大厦|广场|中心|楼|
 
 /** 带标签的工作时间。 */
 const WORK_TIME_LABELED =
-  /(?:工作时间|上班时间|作息时间|实习时间|开始时间)\s*[:：]\s*([^\n。；;】]{2,40})/;
+  /(?:工作时间|上班时间|作息时间|实习时间|开始时间|到岗时间|入职时间)\s*[:：]\s*([^\n。；;】]{2,40})/;
 
 /** 方括号里的时间，例如【时间：10月起】。 */
 const WORK_TIME_BRACKET = /【\s*(?:时间|工作时间|实习时间)\s*[:：]\s*([^】]{2,40})】/;
@@ -453,7 +465,7 @@ const WORK_TIME_CONTEXT = /(上班|下班|作息|工作时间|办公时间|坐�
 
 /** 实习多久，例如"连续实习3个月以上"；也认整段的起止年月。 */
 const WORK_TIME_DURATION =
-  /(?:连续|可)?实习(?:期|时间|时长|期限)?\s*(?:为|是)?\s*\d+\s*(?:个)?月(?:以上|以内|左右|起)?|\d{4}\s*年\s*\d{1,2}\s*月\s*[-—~～至到]\s*\d{4}\s*年\s*\d{1,2}\s*月/;
+  /(?:连续|可)?实习(?:期|时间|时长|期限)?\s*(?:为|是)?\s*(?:至少|不少于|不低于)?\s*\d+\s*(?:个)?月(?:以上|以内|左右|起)?|\d{4}\s*年\s*\d{1,2}\s*月\s*[-—~～至到]\s*\d{4}\s*年\s*\d{1,2}\s*月/;
 
 /** 一周来几天，例如"每周到岗4天""一周3天"，"4天以上"里的"以上"也要带上。 */
 const WORK_TIME_ATTENDANCE = /(?:每周|每星期|一周)[^，。；\n]{0,8}?\d+\s*天(?:以上|以内|左右)?/;
@@ -507,7 +519,8 @@ export function splitJDSections(raw: string): { duties: string[]; reqs: string[]
     const marker = JD_SECTION_MARKERS.find((item) => item.pattern.test(stripped));
 
     if (marker) {
-      current = marker.kind;
+      current = marker.kind === "none" ? null : marker.kind;
+      if (!current) continue;
       // 标题和第一条挤在一行时，把后面的内容也收进来
       const rest = stripped.replace(marker.pattern, "").replace(/^[】\]\s:：]+/, "").trim();
       if (rest.length >= 4) pushItems(current === "duty" ? duties : reqs, rest);
@@ -608,7 +621,22 @@ const TITLE_HEAD = /^(?:急招|急聘|诚聘|高薪聘请)+/;
 
 /** 方括号里可能装的是【地点：深圳】这类字段，不是标题行，挑标题时要跳过。 */
 const BRACKET_FIELD =
-  /^(?:地点|城市|工作地点|办公地点|base|时间|工作时间|薪资|待遇|邮箱|投递|联系方式|公司|招聘人数|截止日期)\s*[:：]/i;
+  /^(?:地点|城市|工作地点|办公地点|base|时间|工作时间|薪资|待遇|邮箱|投递|联系方式|公司名称|公司名|公司|招聘人数|截止日期|招聘岗位|岗位名称|职位名称|岗位|职位)\s*(?:[:：]|$)/i;
+
+/** 公司名和岗位名的字段标签，长的写在前面，避免"公司"抢先匹配"公司名称"。 */
+const COMPANY_LABELS = "公司名称|公司名|公司";
+const TITLE_LABELS = "招聘岗位|岗位名称|职位名称|岗位|职位";
+
+/**
+ * 读带字段标签的值，支持两种写法：
+ * 【公司名称】华泰证券 —— 值在括号后面
+ * 【公司：华泰证券】 —— 值在括号里面
+ */
+function readLabeledField(raw: string, labels: string): string {
+  const inside = new RegExp(`【\\s*(?:${labels})\\s*[:：]\\s*([^【】\\n]+?)\\s*】`).exec(raw)?.[1];
+  const after = new RegExp(`【\\s*(?:${labels})\\s*】\\s*[:：]?\\s*([^\\n【】]+)`).exec(raw)?.[1];
+  return (inside ?? after ?? "").trim();
+}
 
 /**
  * 转发、扩散这类字眼。
@@ -681,18 +709,20 @@ export function extractJDInfo(raw: string): JDInfo {
     .map((part) => stripForward(part))
     .filter(Boolean);
 
-  let company = "";
-  let title = "";
+  // 先看带字段标签的写法：【公司名称】华泰证券 / 【岗位：行业研究员】
+  let company = readLabeledField(raw, COMPANY_LABELS);
+  let title = readLabeledField(raw, TITLE_LABELS);
 
   if (headerParts.length >= 2) {
     // 公司不一定是排在最前面的那段，认带公司后缀的那段；一段都不像就留给正文兜底
-    company = headerParts.find(looksLikeCompany) ?? "";
-    title = headerParts.find((part) => part !== company && looksLikeTitle(part)) ?? "";
+    company ||= headerParts.find(looksLikeCompany) ?? "";
+    title ||= headerParts.find((part) => part !== company && looksLikeTitle(part)) ?? "";
   } else if (headerParts.length === 1) {
     // 方括号里只有一整串、没有分隔符，公司和岗位拆不开。
     // 以前两边都取这一串，标题就成了"某某公司 · 某某公司"，所以只按内容认一边，另一边留给下面的兜底。
-    if (looksLikeTitle(headerParts[0])) title = headerParts[0];
-    else company = headerParts[0];
+    // 标签已经给出一边时，这一串只用来补另一边。
+    if (!title && looksLikeTitle(headerParts[0])) title = headerParts[0];
+    else if (!company && !looksLikeTitle(headerParts[0])) company = headerParts[0];
   }
 
   let city = "";
@@ -704,9 +734,11 @@ export function extractJDInfo(raw: string): JDInfo {
 
   // 命名格式：先看方括号块里含"姓名""学校"这类词的那一个，再看正文里带标签的写法
   const namingFormat =
-    blocks.find((block) => NAMING_HINT.test(block) && /[_｜|/·]/.test(block)) ??
-    NAMING_LABELED.exec(raw)?.[1]?.trim() ??
-    "";
+    cleanNaming(
+      blocks.find((block) => NAMING_HINT.test(block) && /[_｜|/·\-—－]/.test(block)) ??
+        NAMING_LABELED.exec(raw)?.[1] ??
+        "",
+    );
 
   // 兜底：从正文里找公司名和岗位名
   if (!company) company = fallbackCompany(raw);
@@ -720,6 +752,9 @@ export function extractJDInfo(raw: string): JDInfo {
   if (company && title.startsWith(company) && title.length > company.length) {
     title = title.slice(company.length).trim();
   }
+
+  // 岗位名末尾的括号备注（"行业研究员（新能源）"）不是岗位名本身，去掉
+  title = title.replace(/[（(][^（）()]{1,20}[）)]\s*$/, "").trim() || title;
 
   // 再去掉头尾的"急招""招聘"这类版式词。整串都是版式词就去没了，那就留着原样
   const trimmedTitle = title.replace(TITLE_HEAD, "").replace(TITLE_TAIL, "").trim();
@@ -741,7 +776,26 @@ export function extractJDInfo(raw: string): JDInfo {
 
   const email = EMAIL_PATTERN.exec(raw)?.[0] ?? "";
 
-  return { company, title, city, workplace, workTime: extractWorkTime(raw), email, namingFormat };
+  return {
+    company,
+    title,
+    city: normalizeCity(city),
+    workplace,
+    workTime: extractWorkTime(raw),
+    email,
+    namingFormat,
+  };
+}
+
+/** 命名格式里常带方括号，取括号里的内容。 */
+function cleanNaming(value: string): string {
+  const inner = /【([^】]+)】/.exec(value)?.[1] ?? value;
+  return inner.replace(/^[【\[]|[】\]]$/g, "").trim();
+}
+
+/** 「深圳市南山区」这类写法只保留城市本身。 */
+function normalizeCity(value: string): string {
+  return value.replace(/[市省].*$/, "").trim();
 }
 
 /** 兼容旧调用：只取公司名和岗位名。 */

@@ -62,6 +62,24 @@
   cursor: grab;
   box-shadow: var(--shadow-card);
 }
+.kcard-variant {
+  margin-top: 4px;
+  color: var(--text-secondary);
+}
+/* 快捷操作平时藏起来，鼠标移到卡片上才出现，避免卡片太挤 */
+.kcard-quick {
+  display: none;
+  gap: 6px;
+  margin-top: 6px;
+}
+.kcard:hover .kcard-quick,
+.kcard:focus-within .kcard-quick {
+  display: flex;
+}
+.kcard.overdue {
+  border-color: var(--miss);
+  box-shadow: 0 0 0 1px var(--miss-bg), var(--shadow-card);
+}
 .kcard:active {
   cursor: grabbing;
 }

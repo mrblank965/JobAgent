@@ -18,7 +18,7 @@ npm run build -- --webpack
 
 ## 当前功能
 
-- PDF、DOCX、纯文本和图片 OCR 简历解析
+- PDF、DOCX 和纯文本简历解析
 - 简历教育、经历、项目、技能和优势的结构化编辑
 - JD 粘贴、公开网页读取、截图 OCR 和本地规则拆解
 - 岗位方向适配、关键词命中与能力缺口分析
@@ -26,14 +26,16 @@ npm run build -- --webpack
 - 投递看板与面试练习
 - 无 Key 的 Prompt 复制模式，以及只保存在页面内存中的 API 直连配置
 
-当前数据保存在浏览器页面内存中，刷新后清空；项目不包含账号和数据库。
+简历草稿、资料库、JD、投递记录和面试练习答案保存在本机浏览器的 IndexedDB 中，刷新或重新打开仍然保留，可在「网申资料库 → 数据备份、恢复与隐私」导出备份。
+
+只有两类数据留在页面内存、刷新即清空：首页 AI 设置里的 API Key，以及简历定制页的草稿和其他经历。项目不包含账号和数据库。
 
 ## 分支流程
 
 | 分支 | 负责内容 |
 | --- | --- |
 | `feature/integration` | 公共底座、完整联调和最终验收 |
-| `feature/resume-parser` | 简历上传、OCR、解析与编辑 |
+| `feature/resume-parser` | 简历上传、解析与编辑 |
 | `feature/jd-parser` | JD 获取、拆解与岗位信息分析 |
 | `feature/match-analysis` | 方向匹配与简历定制逻辑 |
 | `feature/result-page` | 结果展示、投递看板和面试页面 |
