@@ -102,21 +102,19 @@ export function RewritePlanner({
   /**
    * 这条还能不能勾。
    *
-   * 被校验拒掉的 rewrite 是死路：它要拿 AI 那版文字去替换简历里的原文，不能用。
-   * 但被拒掉的 add 不能一起锁死——add 类型本来就支持「不采用 AI 的措辞，只用用户自己填的原话」，
-   * 那段原话是用户自己写的，不涉及编造。锁掉它等于"AI 改不好就不让你写这段经历"，说不过去。
+   * 只有"已经应用过"的才锁——避免重复插入。
+   * 校验发现的疑点**不锁条目**：能不能用由用户自己判断，觉得行就勾，觉得不行自然不勾。
    */
   function isLocked(item: ChangeItem): boolean {
-    if (appliedIds.includes(item.id)) return true;
-    return item.rejected && item.kind !== "add";
+    return appliedIds.includes(item.id);
   }
 
-  /** 这条还能不能选「使用 AI 改写后的措辞」。被拒的、已应用的都不行。 */
+  /** 这条还能不能选「使用 AI 改写后的措辞」。只有已应用的不能改。 */
   function canUseAiWording(item: ChangeItem): boolean {
-    return item.kind === "add" && !item.rejected && !appliedIds.includes(item.id);
+    return item.kind === "add" && !appliedIds.includes(item.id);
   }
 
-  /** 这条最终到底会不会用 AI 的措辞。被拒的一律走用户自己的原话。 */
+  /** 这条最终到底会不会用 AI 的措辞。 */
   function usesAiWording(item: ChangeItem): boolean {
     return canUseAiWording(item) && (useRewrite[item.id] ?? false);
   }
@@ -138,7 +136,7 @@ export function RewritePlanner({
     return { item, useRewrite: usesAiWording(item), fills };
   }
 
-  /** 已应用过的、以及被拒掉的改写，都不再参与应用。 */
+  /** 已应用过的条目不再参与应用。校验提醒不拦人，用户勾了就能用。 */
   const selected = plan
     ? plan.changes.filter((item) => checked[item.id] && !isLocked(item))
     : [];
@@ -240,10 +238,10 @@ export function RewritePlanner({
     const nextChecked: Record<string, boolean> = {};
     const nextUseRewrite: Record<string, boolean> = {};
     for (const item of plan.changes) {
-      // 被锁的（已应用、或被拒的改写）跳过，别再勾上——勾了也进不了 selected，只会让用户困惑。
+      // 已应用的跳过，别再勾上——勾了也进不了 selected，只会让用户困惑。
       const locked = isLocked(item);
       nextChecked[item.id] = locked ? false : next;
-      // 被拒的 add 可以勾上采纳，但绝不能顺带把 AI 那版措辞也勾上。
+      // 只有 add 类型有「用 AI 的措辞」这个子选项。
       nextUseRewrite[item.id] = canUseAiWording(item) ? next : false;
     }
     setChecked(nextChecked);
@@ -432,9 +430,9 @@ type ChangeRowProps = {
   checked: boolean;
   /** 这条已经写进草稿了。 */
   applied: boolean;
-  /** 整条锁死，不能再勾：已应用，或者是被拒掉的改写。 */
+  /** 整条锁死，不能再勾：只有已应用这一种情况。 */
   locked: boolean;
-  /** 还能不能选「使用 AI 改写后的措辞」。被拒的 add 不能，但可以只用用户的原话。 */
+  /** 还能不能选「使用 AI 改写后的措辞」。只有 add 类型有这个选项。 */
   canUseAiWording: boolean;
   useRewrite: boolean;
   onToggleChecked: (next: boolean) => void;
@@ -491,22 +489,21 @@ function ChangeRow({
         <span className="entry-num">{KIND_LABEL[item.kind]}</span>
         <span className={isRemove ? "tag miss" : "tag partial"}>{SOURCE_LABEL[item.source]}</span>
         <span className="tiny">{isAdd ? "采用这条经历" : "应用这条变更"}</span>
-        {item.rejected ? <span className="tag miss">已拒绝</span> : null}
+        {item.flagged ? <span className="tag partial">待你确认</span> : null}
         {applied ? <span className="tag hit">已应用</span> : null}
       </label>
 
-      {item.rejected ? (
-        <div className="errbox mt8">
-          <b>{isAdd ? "AI 改写的那一版没有通过事实校验，不能用。" : "这条没有通过事实校验，不能用。"}</b>
+      {item.flagged ? (
+        <div className="warnbox mt8">
+          <b>校验发现几处可能超出你简历事实的地方，请你确认：</b>
           <ul style={{ paddingLeft: 18, margin: "6px 0 0" }}>
-            {item.rejectReasons.map((reason) => (
+            {item.flagReasons.map((reason) => (
               <li key={reason}>{reason}</li>
             ))}
           </ul>
           <div className="tiny mt4">
-            {isAdd
-              ? "但这条经历本身还是能写进简历的：直接勾上上面的选框，会用你自己填的原话加进去，AI 那版措辞已经锁掉了。"
-              : "模型在这次改写里超出了你的简历事实。可以回上面重新生成一次；这条改动的原文会保持不动。"}
+            这些只是提醒，<b>不拦着你用</b>：确认属实就勾上，拿不准就别勾。
+            {isAdd ? " 如果只是想去掉 AI 的说法，下面可以改用你自己填的原话。" : ""}
           </div>
         </div>
       ) : null}

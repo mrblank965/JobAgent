@@ -56,14 +56,20 @@ export type ChangeItem = {
   usedFactIds: string[];
   /** 这条改写用了哪些 JD 关键词。 */
   usedKeywords: string[];
-  /** 模型自己申报的、事实清单之外的补充。非空即整条拒绝。 */
+  /** 模型自己申报的、事实清单之外的补充。 */
   addedClaims: string[];
   /** 校验给出的提醒（不阻断的那类）。 */
   warnings: string[];
-  /** 校验没过关的条目不能应用，界面上要标出来并说明原因。 */
-  rejected: boolean;
-  /** 被拒的原因，一条一句。 */
-  rejectReasons: string[];
+  /**
+   * 校验发现了问题，**但只提醒，不拦截**。
+   *
+   * 这一条改过：以前校验不过关就把条目锁死，用户连勾都勾不上。
+   * 现在一律让用户自己判断——他觉得能用就用，觉得不行自然不勾。
+   * 校验的职责是"把人可能没注意到的风险摆出来"，不是"替人做决定"。
+   */
+  flagged: boolean;
+  /** 校验发现的问题，一条一句，摆在条目下面让人自己看。 */
+  flagReasons: string[];
 };
 
 export type OptimizePlan = {
@@ -157,8 +163,8 @@ function normalizeChange(value: unknown, index: number): ChangeItem | null {
     addedClaims: cleanStringArray(raw.addedClaims),
     warnings: cleanStringArray(raw.warnings),
     // 校验在 normalizePlan 里统一做，这里先给默认值。
-    rejected: false,
-    rejectReasons: [],
+    flagged: false,
+    flagReasons: [],
   };
 
   // rewrite/add 没有改写后的文字就没法应用；remove 只需要原文。
@@ -245,8 +251,9 @@ export function normalizePlan(data: unknown, options: NormalizePlanOptions = {})
         { allowExpansion: item.kind === "add" },
       );
 
-      item.rejected = !verdict.accepted;
-      item.rejectReasons = verdict.blocking.map((issue) => describeIssue(issue.message, issue.detail));
+      // 校验结果只当提醒，不再拦截：能不能用由用户自己判断。
+      item.flagged = verdict.blocking.length > 0;
+      item.flagReasons = verdict.blocking.map((issue) => describeIssue(issue.message, issue.detail));
 
       // 新增经历降级下来的那些"补充内容"，并进「AI 自己补的」清单展示，让用户逐条确认属实。
       // 只并这一份，界面上就只出一个黄框，不会跟 warnings 重复一遍。
