@@ -193,8 +193,16 @@ export function buildDirectionCandidate(input: {
   };
   resumes: ResumeData[];
 }): DirectionCandidate {
+  // 画像里已经有学历摘要时就用它，别再拼一遍学历/学校/专业，
+  // 否则同一段教育会在证据里出现两遍（"硕士 海川大学 金融学 硕士 海川大学 金融学"）。
+  const educationSummary = clean(
+    input.profile.education?.trim()
+      ? input.profile.education
+      : [input.profile.degree, input.profile.school, input.profile.major].filter(Boolean).join(" "),
+  );
+
   const candidate: DirectionCandidate = {
-    education: [clean([input.profile.degree, input.profile.school, input.profile.major, input.profile.education].filter(Boolean).join(" "))],
+    education: [educationSummary],
     experiences: [],
     projects: [],
     skills: (input.profile.skills ?? []).map(clean),
@@ -213,6 +221,154 @@ export function buildDirectionCandidate(input: {
     candidate[source] = [...new Set(candidate[source].filter(Boolean))];
   });
   return candidate;
+}
+
+/**
+ * 从 JD 原文猜它属于哪个求职方向。
+ *
+ * 拿八个方向各自规则里的关键词去数命中次数，按权重加权；分不够高就返回 null，
+ * 交给用户自己选——宁可留空，也不要猜错方向把简历配错。
+ */
+export function guessDirectionFromJD(text: string): { id: string; name: string } | null {
+  const lower = text.toLowerCase();
+  let best: { id: string; name: string; score: number } | null = null;
+
+  for (const direction of DIRECTIONS) {
+    let score = 0;
+    for (const rule of direction.rules) {
+      for (const keyword of rule.keywords) {
+        const key = keyword.toLowerCase();
+        if (!key) continue;
+        const hits = lower.split(key).length - 1;
+        if (hits > 0) score += hits * rule.weight;
+      }
+    }
+    if (!best || score > best.score) best = { id: direction.id, name: direction.name, score };
+  }
+
+  // 分数太低说明这份 JD 和八个方向都不像，别硬猜。
+  return best && best.score >= 20 ? { id: best.id, name: best.name } : null;
+}
+
+/** 页面共用的简历候选：已保存版本 + 当前草稿，合并去重后的一份数据。 */
+export type CandidateSource = "direction" | "default" | "latest" | "merged" | "profile";
+
+export type ResumeCandidate = {
+  candidate: DirectionCandidate;
+  skills: string[];
+  rawResume: string;
+  /** 草稿里的内容还没有对应的已保存版本时为 true。 */
+  hasUnsavedDraft: boolean;
+  isEmpty: boolean;
+  /** 这份候选是按什么规则挑出来的，界面据此说明分数口径。 */
+  source: CandidateSource;
+  /** 实际参与算分的简历版本名，用于界面上写清「用的是哪一份」。 */
+  sourceName: string;
+};
+
+/**
+ * 把已保存的简历版本和当前解析草稿合成同一份候选。
+ *
+ * 同一份简历既存过版本、又还留在草稿里时按内容去重，避免同一段证据被算两遍，
+ * 让方向分析和岗位匹配看到的是同一份数据。
+ */
+export function buildResumeCandidate(input: {
+  profile: {
+    school?: string;
+    major?: string;
+    degree?: string;
+    education?: string;
+    skills?: string[];
+    strengths?: string[];
+    rawResume?: string;
+  };
+  resumeVariants: {
+    name?: string;
+    sourceText?: string;
+    directionId?: string;
+    isDefault?: boolean;
+    updatedAt?: string;
+    structuredData?: ResumeData;
+  }[];
+  resumeDraft: { resume?: ResumeData | null; text?: string };
+  /** 指定方向时只统计该方向的版本；草稿没有方向，这时不参与。 */
+  directionId?: string;
+}): ResumeCandidate {
+  const variants = input.resumeVariants;
+  let pool = variants;
+  let source: CandidateSource = "merged";
+
+  if (input.directionId) {
+    const byDirection = variants.filter((item) => item.directionId === input.directionId);
+    if (byDirection.length > 0) {
+      pool = byDirection;
+      source = "direction";
+    } else {
+      // 该方向还没建简历时的兜底顺序：默认版本 → 最近更新的那份 → 全部合并。
+      // 不去随机挑，挑出来的分数学员解释不了。
+      const usable = variants
+        .filter((item) => item.structuredData)
+        .sort((left, right) => (right.updatedAt ?? "").localeCompare(left.updatedAt ?? ""));
+      const fallback = usable.find((item) => item.isDefault) ?? usable[0];
+      if (fallback) {
+        pool = [fallback];
+        source = "default";
+      }
+    }
+  }
+
+  const useDraft = source === "merged";
+  const seen = new Set<string>();
+  const resumes: ResumeData[] = [];
+
+  for (const item of pool) {
+    if (!item.structuredData) continue;
+    const signature = JSON.stringify(item.structuredData);
+    if (seen.has(signature)) continue;
+    seen.add(signature);
+    resumes.push(item.structuredData);
+  }
+
+  const draftResume = useDraft ? (input.resumeDraft.resume ?? null) : null;
+  if (draftResume) {
+    const signature = JSON.stringify(draftResume);
+    if (!seen.has(signature)) {
+      seen.add(signature);
+      resumes.push(draftResume);
+    }
+  }
+
+  const candidate = buildDirectionCandidate({ profile: input.profile, resumes });
+
+  const draftText = useDraft ? (input.resumeDraft.text ?? "").trim() : "";
+  const savedTexts = new Set(
+    pool.map((item) => (item.sourceText ?? "").trim()).filter(Boolean),
+  );
+  const hasUnsavedDraft = draftText.length > 0 && !savedTexts.has(draftText);
+
+  // 原文以草稿为准，草稿为空时才退回画像里保存过的那份。
+  const rawResume = draftText || (input.profile.rawResume ?? "").trim();
+
+  // 画像里的学历字段有默认值（本科），单独一条学历说明不了任何问题，
+  // 不能因为它就把空工作区当成"有简历"。
+  const educationOnlyDegree =
+    candidate.education.length === 1 && candidate.education[0] === clean(input.profile.degree ?? "");
+
+  const isEmpty = (Object.keys(candidate) as EvidenceSource[]).every((source) =>
+    source === "education"
+      ? candidate[source].length === 0 || educationOnlyDegree
+      : candidate[source].length === 0,
+  );
+
+  return {
+    candidate,
+    skills: candidate.skills,
+    rawResume,
+    hasUnsavedDraft,
+    isEmpty,
+    source,
+    sourceName: pool.length === 1 ? (pool[0].name ?? "") : "",
+  };
 }
 
 function evidenceExcerpt(text: string, keyword: string) {

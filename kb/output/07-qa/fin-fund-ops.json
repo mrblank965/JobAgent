@@ -1,0 +1,26 @@
+{
+  "positionId": "fin-fund-ops",
+  "sampledKpIds": [
+    "fin-fund-ops-kp-136",
+    "fin-fund-ops-kp-019",
+    "fin-fund-ops-kp-013",
+    "fin-fund-ops-kp-042",
+    "fin-fund-ops-kp-033",
+    "fin-fund-ops-kp-007",
+    "fin-fund-ops-kp-044",
+    "fin-fund-ops-kp-011",
+    "fin-fund-ops-kp-005",
+    "fin-fund-ops-kp-030",
+    "fin-fund-ops-kp-027",
+    "fin-fund-ops-kp-045",
+    "fin-fund-ops-kp-041",
+    "fin-fund-ops-kp-048",
+    "fin-fund-ops-kp-085",
+    "fin-fund-ops-kp-132",
+    "fin-fund-ops-kp-049",
+    "fin-fund-ops-kp-051"
+  ],
+  "totalPoints": 175,
+  "faithful": true,
+  "issues": []
+}

@@ -1,14 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useEffect, useRef, useState } from "react";
+import { DIRECTIONS } from "@/lib/career";
 import { analyzeJD } from "@/lib/jd";
 import { useStore } from "@/lib/store";
 import { ExtraExperienceCard } from "@/components/optimize/ExtraExperienceCard";
 import { RewritePlanner } from "@/components/optimize/RewritePlanner";
 import { StyleControls } from "@/components/optimize/StyleControls";
-import { useSessionState } from "@/components/optimize/useSessionState";
-import { buildResumeDocx } from "@/lib/optimizeDocx";
+import { useTransientState } from "@/components/optimize/useTransientState";
+import { buildResumeDocx, estimateDocxLines, pickDocxDensity } from "@/lib/optimizeDocx";
 import { buildResumeTemplate, stripHints } from "@/lib/resumeTemplate";
 import {
   DEFAULT_STYLE_SETTINGS,
@@ -17,20 +19,26 @@ import {
   type StyleSettings,
 } from "@/lib/languageStyles";
 
-export default function OptimizePage() {
-  const { profile, jds } = useStore();
+function OptimizePageContent() {
+  const { profile, jds, apps, addApp, updateApp, addResumeVariant, storageReady } = useStore();
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  /** 链接带过来的 jd 参数只在首次进入时生效，之后以用户自己的选择为准。 */
+  const paramApplied = useRef(false);
 
   /**
-   * 选中的 JD、手改过的草稿、其他经历都存进 sessionStorage。
-   * 切到别的页面再回来、或者按 F5 刷新，填过的东西都还在；关掉标签页才清除。
+   * 选中的 JD、手改过的草稿、其他经历都只存在**页面内存**里。
+   * 站内跳到别的页面再回来，填过的东西还在；但**一刷新就清空**，关掉标签页再打开也是空的。
+   * 存的是内存不是 sessionStorage——后者扛得住刷新，和这个需求正好相反。
    */
-  const [activeJD, setActiveJD] = useSessionState("jobagent.optimize.jd", "");
+  const [activeJD, setActiveJD] = useTransientState("jobagent.optimize.jd", "");
   /** 用户改过就用改过的，没改过就跟着画像里的原文走，避免用 effect 同步状态。 */
-  const [edited, setEdited] = useSessionState<string | null>("jobagent.optimize.draft", null);
+  const [edited, setEdited] = useTransientState<string | null>("jobagent.optimize.draft", null);
   /** 简历里没写、但用户想补进来的其他经历，改写时和简历一起作为材料。 */
-  const [extra, setExtra] = useSessionState("jobagent.optimize.extra", "");
+  const [extra, setExtra] = useTransientState("jobagent.optimize.extra", "");
   /** 语言风格设置：主风格、辅风格、力度、长度、优先量化。 */
-  const [styleSettings, setStyleSettings] = useSessionState<StyleSettings>(
+  const [styleSettings, setStyleSettings] = useTransientState<StyleSettings>(
     "jobagent.optimize.style",
     DEFAULT_STYLE_SETTINGS,
   );
@@ -39,10 +47,88 @@ export default function OptimizePage() {
   const [exporting, setExporting] = useState(false);
   /** 导出时要不要把灰色提示清掉。默认保留——模板本来就是拿去改的。 */
   const [cleanExport, setCleanExport] = useState(false);
+  /** 超出 Letter 一页时自动收紧行距和字号。默认开，避免导出两三页。 */
+  const [autoFit, setAutoFit] = useState(true);
+  /**
+   * 刚保存出来的简历版本，记下它属于哪份 JD。
+   * 换一份 JD 后这里自动失效，不需要用 effect 去清空状态。
+   */
+  const [savedVariant, setSavedVariant] = useState<{ jdId: string; variantId: string } | null>(null);
+  const savedVariantId = savedVariant && savedVariant.jdId === activeJD ? savedVariant.variantId : null;
   const draft = edited ?? profile.rawResume;
 
   const jd = jds.find((item) => item.id === activeJD) ?? null;
   const analysis = jd ? analyzeJD(jd.raw, profile.skills, profile.rawResume) : null;
+
+  /** 看板里这条 JD 的记录，以及它是否已经用了刚保存的版本。 */
+  const boardApp = jd ? apps.find((item) => item.jdId === jd.id) : undefined;
+  const boardSynced = Boolean(boardApp && savedVariantId && boardApp.resumeVariantId === savedVariantId);
+
+  /**
+   * 从「JD 拆解器」或「岗位匹配」点进来时，地址上带着 ?jd=<id>。
+   * 等本地资料读完之后再套用一次：命中就把这份 JD 设为当前目标，找不到就保持未选择。
+   */
+  useEffect(() => {
+    if (paramApplied.current || !storageReady) return;
+    paramApplied.current = true;
+    const target = searchParams.get("jd");
+    if (target && jds.some((item) => item.id === target)) {
+      setActiveJD(target);
+    }
+  }, [storageReady, jds, searchParams, setActiveJD]);
+
+  /** 版本名用「公司·岗位定制版」，两者都缺时退回日期。 */
+  function buildVariantName(): string {
+    const parts = [jd?.company, jd?.title].map((part) => part?.trim() ?? "").filter(Boolean);
+    if (parts.length > 0) return `${parts.join("·")}定制版`;
+    return `${new Date().toLocaleDateString("zh-CN")} 定制版`;
+  }
+
+  function saveAsVariant() {
+    if (!jd || savedVariantId) return;
+    // 优先跟随当前 JD 的方向；JD 没标方向时才退回全局目标方向。
+    const directionId =
+      jd?.directionId || DIRECTIONS.find((item) => item.name === profile.target)?.id || "";
+    const name = buildVariantName();
+    const variantId = addResumeVariant({ name, directionId, sourceText: draft });
+    setSavedVariant({ jdId: jd.id, variantId });
+    setNotice(`已保存简历版本「${name}」。`);
+  }
+
+  function addCurrentJDToBoard() {
+    if (!jd || !savedVariantId) return;
+
+    // 从 JD 详情先加过投递的记录，简历版本是空的；这里正好把刚保存的版本补上去，
+    // 不再重复建一条。
+    const existing = apps.find((item) => item.jdId === jd.id);
+    if (existing) {
+      if (!existing.resumeVariantId) {
+        updateApp(existing.id, { resumeVariantId: savedVariantId });
+        setNotice("这条 JD 已经在看板里，已把刚保存的简历版本关联过去。");
+      } else {
+        setNotice("这条 JD 已经在投递看板里了，没有重复添加。");
+      }
+      return;
+    }
+
+    addApp({
+      company: jd.company,
+      title: jd.title,
+      jdId: jd.id,
+      resumeVariantId: savedVariantId,
+    });
+    setNotice("已加入投递看板，使用的是刚保存的简历版本。");
+  }
+
+  /** 手动切换时把选择写回地址，刷新后还能回到同一份 JD。 */
+  function selectJD(nextId: string) {
+    setActiveJD(nextId);
+    const next = new URLSearchParams(searchParams.toString());
+    if (nextId) next.set("jd", nextId);
+    else next.delete("jd");
+    const query = next.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+  }
 
   // 主风格没选时不给合并结果，改写按钮会保持禁用。
   const styleInput = settingsToResolveInput(styleSettings);
@@ -103,17 +189,25 @@ export default function OptimizePage() {
     setNotice("正在生成 Word 文档……");
 
     try {
-      const blob = await buildResumeDocx(toTemplateText(), { stripHints: cleanExport });
+      const template = toTemplateText();
+      const density = autoFit ? pickDocxDensity(template) : "strict";
+      const blob = await buildResumeDocx(template, { stripHints: cleanExport, density });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
       link.download = `简历_${profile.name || "未命名"}.docx`;
       link.click();
       URL.revokeObjectURL(url);
+      const densityText =
+        density === "strict"
+          ? ""
+          : density === "compact"
+            ? "内容超出一页，已自动改用紧凑排版（字号 10 磅 / 行距 14.5 磅）。"
+            : "内容超出一页，已自动改用最紧排版（字号 9.5 磅 / 行距 13 磅）。";
       setNotice(
         cleanExport
-          ? "已导出 Word。提示已清掉。注意：最终分几页由 Word 按内容长度自己算，程序没法保证刚好一页。"
-          : "已导出 Word，缺的地方在文档里是灰色斜体提示。填完回来勾上「去掉灰色提示」再导一次就是干净版。",
+          ? `已导出 Word，提示已清掉。${densityText}`
+          : `已导出 Word，缺的地方在文档里用黑色斜体标着。${densityText}`,
       );
     } catch (error) {
       setNotice(error instanceof Error ? error.message : "导出失败。");
@@ -121,6 +215,9 @@ export default function OptimizePage() {
       setExporting(false);
     }
   }
+
+  // 每次渲染顺手估一次页数，用来在导出区提示「还要删几行」。
+  const pageEstimate = estimateDocxLines(toTemplateText(), "strict");
 
   return (
     <>
@@ -157,7 +254,7 @@ export default function OptimizePage() {
               <select
                 className="input"
                 value={activeJD}
-                onChange={(event) => setActiveJD(event.target.value)}
+                onChange={(event) => selectJD(event.target.value)}
               >
                 <option value="">— 请选择 —</option>
                 {jds.map((item) => (
@@ -246,6 +343,36 @@ export default function OptimizePage() {
         </div>
       </div>
 
+      <div className="card mt16">
+        <div className="spread">
+          <h3>保存与投递</h3>
+          <span className="tiny">{savedVariantId ? "简历版本已保存" : "先保存版本，再加入投递"}</span>
+        </div>
+        <p className="tiny mt8">
+          保存会把这个方向下的这份草稿存进「网申资料库」；加入投递时，看板里的这条记录会指向刚保存的版本。
+        </p>
+        <div className="row mt12">
+          <button type="button" className="btn primary" onClick={saveAsVariant} disabled={!jd || Boolean(savedVariantId)}>
+            {savedVariantId ? "已保存" : "保存为简历版本"}
+          </button>
+          <button
+            type="button"
+            className="btn clay"
+            onClick={addCurrentJDToBoard}
+            disabled={!jd || !savedVariantId || boardSynced}
+          >
+            {boardSynced
+              ? "✅ 看板已用这份版本"
+              : boardApp
+                ? "📮 更新看板里的版本"
+                : "📮 加入投递看板"}
+          </button>
+          <Link className="btn ghost" href="/board">
+            去看板
+          </Link>
+        </div>
+      </div>
+
       <ExtraExperienceCard value={extra} onChange={setExtra} />
 
       <StyleControls jdText={jd?.raw ?? ""} value={styleSettings} onChange={setStyleSettings} />
@@ -276,13 +403,33 @@ export default function OptimizePage() {
           <span className="tiny">{draft.trim().length} 字</span>
         </div>
         <p className="tiny">
-          <b>导出 Word</b> 会把草稿套进 A4 模板骨架：板块按 个人信息 → 教育背景 → 实习经历 → 项目经历 →
-          校园经历 → 专业技能 的顺序排，<b>你还没写的部分，直接在文档里用灰色斜体标出来</b>告诉你该写什么。
-          草稿本身不会被改动。
+          <b>导出 Word</b> 按固定版式排：Letter 纸、西文 Times New Roman / 中文楷体、固定行距 16 磅，
+          一级标题带下框线、经历行用制表位对齐。只排你草稿里写过的板块，不会凭空补段落，草稿本身不会被改动。
         </p>
         <p className="tiny">
-          <b>导出 txt</b> 导的是「简历草稿」框里的原样内容，不套模板。
+          <b>导出 txt</b> 导的是「简历草稿」框里的原样内容，不套版式。
         </p>
+
+        <div className="tiny mt8">
+          标准版式下：预计 <b>{pageEstimate.lines}</b> 行，一页上限 <b>{pageEstimate.capacity}</b> 行
+          {pageEstimate.fits ? (
+            "，放得下。"
+          ) : (
+            <span className="warn-text">，超出 {pageEstimate.lines - pageEstimate.capacity} 行。</span>
+          )}
+        </div>
+
+        <label className="mt8" style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer" }}>
+          <input
+            type="checkbox"
+            checked={autoFit}
+            onChange={(event) => setAutoFit(event.target.checked)}
+          />
+          <span className="tiny">
+            <b>超出时自动压缩到一页</b>。先按标准版式排；放不下再依次收紧到 10 磅 / 14.5 磅，再不行 9.5 磅 / 13 磅。
+            <b>内容一个字都不删。</b>
+          </span>
+        </label>
 
         <label className="mt8" style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer" }}>
           <input
@@ -291,7 +438,7 @@ export default function OptimizePage() {
             onChange={(event) => setCleanExport(event.target.checked)}
           />
           <span className="tiny">
-            <b>去掉灰色提示再导出</b>。文档里的〔…〕会全部清掉、空板块也一起去掉，得到一份可以直接投递的版本。
+            <b>去掉模板提示再导出</b>。文档里的〔…〕会全部清掉，得到一份可以直接投递的版本。
             还没填完就先别勾，留着提示对着 Word 改。
           </span>
         </label>
@@ -306,5 +453,17 @@ export default function OptimizePage() {
         </div>
       </div>
     </>
+  );
+}
+
+/**
+ * 读取 ?jd= 用的是 useSearchParams，按 Next 16 的要求必须处在 Suspense 边界内，
+ * 否则这条预渲染路由会被构建工具判为阻塞预渲染。
+ */
+export default function OptimizePage() {
+  return (
+    <Suspense fallback={<div className="warnbox">正在读取目标岗位…</div>}>
+      <OptimizePageContent />
+    </Suspense>
   );
 }

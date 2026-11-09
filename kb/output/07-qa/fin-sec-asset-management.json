@@ -1,0 +1,10 @@
+{
+  "positionId": "fin-sec-asset-management",
+  "sampledKpIds": [
+    "fin-sec-asset-management-kp-001",
+    "fin-sec-asset-management-kp-002"
+  ],
+  "totalPoints": 15,
+  "faithful": true,
+  "issues": []
+}

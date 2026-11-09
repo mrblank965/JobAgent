@@ -1,0 +1,125 @@
+# 风控策略（it-risk）（it-risk）
+
+> 结构化 Agent · 2026-10-29 · 基于 31 篇帖子整合 · 已改写为书面语
+
+**岗位别名**：风控策略分析师、反欺诈策略、风控运营、风控岗
+
+## 核心职责
+
+- 贷前风控围绕信息核验、欺诈识别、授信决策三个模块展开，信息核验包括身份核验、人脸识别、位置诊断、核身鉴权等准入规则，欺诈识别包括名单过滤、欺诈检测、多头识别、交叉验证，授信决策通过标签规则、信用评分、模型评级、决策矩阵等形式对申请用户信用风险进行评估并决策审批通过或拒绝。
+- 贷前策略模块包括基础信息验证策略、风控准入策略、贷前反欺诈策略、黑名单策略、白名单策略、信用判断策略；准入规则基于监管和金融机构产品政策性导向设定，全部为强拒绝规则。
+- 设计风控规则并上线策略，持续跟踪逾期、拒绝率、客群表现等核心指标，指标异动时复盘策略效果并迭代优化，输出风险分析报告。
+- 读取业务数据，整理风险指标，制作监控看板，与产品、业务、风控模型团队协同落地风控方案，岗位重心偏向业务策略落地而非复杂模型开发。
+- 风控策略从假设、实施、优化三个阶段循环推进：假设阶段做业务指标预测、收益测算并拟制策略；实施后监测指标、核算收益；基于实际结果做指标分析与回溯评估，发现问题后优化指标并形成新假设。
+- 具体策略流程包括客户分群、客群分析、损益测算、权益调整、客群排除、换入换出（权益迁移）、实验测试等环节。
+- 日常监控数据分析包括月报、日报及推广活动期间的渠道监控报表；月报监控已冻结/黑名单用户是否仍在正常下单、舆情监控、用户画像结构变化（按产品维度、基本数据、行为数据、外部数据分箱分析）；日报加入本月1号至观察日的累计数据。
+- 基于业务的数据分析需理解客户信息表、客户合同表、还款计划表的框架结构与字段含义，通过底层核心表开发数据中间表并计算逾期率、首逾、FSTQPD、Vintage等核心指标；贷中监控做资产分析和滚动率分析，必要时用lagging DPD追溯风险产生时刻的状况；贷后报表针对催收部门梳理人力效能模块（KPI）与回款指标模块（预测分析模块）。
+- 海外风控需应对突发性工作：某国逾期率突然上升时拆解客群、渠道和放款批次；获客渠道欺诈集中爆发时紧急调整准入策略；通过率下降、放款规模不达预期时重新评估策略阈值和客群准入条件。
+- 向投委会汇报风险变化背后的原因及其对业务收益、资本占用和风险预算的影响，判断风险是否超出可承受范围、风险与收益是否匹配，并将风险分析转化为资本配置建议，给出不同决策情景的量化比较。
+- 从业务链路出发定位风险来源（获客渠道、用户身份、设备环境、申请行为、信用状况、额度定价、贷后还款与催收），与项目操盘者共同明确目标规模、风险预算、渠道准入标准、额度策略、风险预警阈值和策略调整条件。
+- 风控负责人需管理三个层面：风险事件管理（快速确认指标变化、影响范围、风险规模与原因，判断是否限制风险敞口，临时策略调整须有执行人、影响范围、观察指标和回滚条件）；风险机制建设（自动化监控、数据质量治理、策略版本管理、异常预警、标准化复盘）；长期能力建设（客群分层、渠道管理、反欺诈、风险定价、贷后反馈、策略回测和实验验证）。
+- 风控产品经理负责保障业务安全，包括内容安全、账号安全和交易安全；商业化风控产品经理负责竞价广告和企业号业务，设计审核机制以平衡审核人力成本与收益，制作实时监控或实时预警策略，业务出现安全问题时迅速解决，避免事件发酵到政府监管层面。
+- 策略规则从开发角度按特征类型划分为连续多区间、二分类和多分类；按数据维度划分为标签规则和组合规则；按风险等级划分为刚性、高柔和低柔，命中刚性规则直接拒绝，命中高柔和低柔打标签进入下一环节，单条规则不做决策、所有规则综合决策（如命中刚性规则数量>0拒绝，命中高柔规则数量>5拒绝，命中低柔规则数量>10拒绝）。
+- 风控策略常见模式包括黑名单、策略组合、特征加权等；可用逻辑回归挖掘每个变量的权重参数，将权重和截距写入系统直接预测，文本型变量可对文本计数乘以权重得到策略。
+- 押品管理是商业银行信贷管理的重要内容，需严格评估报告审核，防范押品价值虚高，运用押品内部评估及外评报告审核手段，还原押品真实价值；押品管理人员需具备评估专业知识并掌握相关授信及法律知识，把控押品公允价值及变现能力。
+- 风控策略算法工程师方向采用特征工程、多模型融合、规则兜底的策略，前期以逻辑回归和树模型为主，后期引入图结构建模用户关系；迭代方向包括特征丰富度提升、图规模扩展、实时性优化、对抗策略更新；异常判定采用多层级决策体系（模型层设定动态阈值、规则层业务规则兜底、人工层高风险case进入人工审核队列），并根据业务阶段动态调整（大促期间放宽阈值优先保障用户体验，日常运营收紧阈值优先控制风险损失），在误杀成本与漏杀损失之间通过AB测试持续优化阈值。
+- 针对平台补贴发放中的薅羊毛用户，从行为维度（领取频率、使用路径、时间集中度）、关系维度（设备/IP/地址关联、社交图谱异常）、统计维度（人均补贴占比、转化率异常）、模型策略（异常评分模型结合规则引擎实时拦截）构建识别体系。
+- 异常交易整体采用监测-识别-拦截-反馈闭环机制，识别层面多模型融合，处置上分级响应（警告、限制、封禁），并建立反馈机制持续优化。
+
+## 工作流程
+
+- 贷前风控流程：用户申请进件后先做信息核验（身份核验、人脸识别、位置诊断、核身鉴权等准入规则，数据多通过调用外部接口实现，如身份二要素核验、手机号三要素核验），再进行欺诈识别（名单过滤、欺诈检测、多头识别、交叉验证），最后进行授信决策（标签规则、信用评分、模型评级、决策矩阵）。
+- 贷前风控策略模块的构成：申请用户发起进件，业务方通过用户填写的申请信息及外部调用的授权信息获取多维数据，加工出策略与模型的相关特征指标，按策略规则原理逻辑形成贷前风控策略，根据策略或模型的决策逻辑对用户进行量化分析与风险评估，并以风控决策引擎配置好的决策规则对申请用户进行订单审批与额度授信。
+- 策略分析、拟制、优化迭代的具体流程：客户分群、客群分析、损益测算、权益调整、客群排除、换入换出（权益迁移）、实验测试。
+- 策略调优流程：先确认是A类调优还是D类调优（D类降逾期指标，在通过客群中找差客户拒绝；A类提通过率回捞，在拒绝客群中找好客户通过）；再量化分析调优阈值，D类调优离线完成分析，根据逾期指标选定Y（FPD1/FSTPD1/M4+等），比较逾期指标上升前后的客群差异找到逾期率变化原因，寻找单变量或组合变量分析并识别逾期率较高的客户进行拒绝，A类调优需决策引擎标记豁免样本，比较通过率下降前后的客群差异（新老客户/新老资产/渠道变化等），寻找拒绝率较高可放松的拒绝规则并放松阈值进行AB测试；然后根据历史数据回溯每月数据预测策略调整对通过率、逾期率的变化；调整后观察和验证结果是否与预期一致，对上线与不上策略的样本进行vintage分析，观察策略上线是否对逾期指标有影响以及影响是否与预测一致。
+- 随机实验流程：测试开始时需考虑随机化单元、目标群体、样本量、测试运行时间、测试成本；测试分准入测试和权益测试两类，分别解决客群是否可以优化（随机放入拒绝客群）和客群与权益（产品）是否匹配（针对通过客群随机匹配权益）两个问题，通过随机实验收集数据、确立因果来优化客群和产品（权益）。
+- 救火闭环流程：第一步根据真实数据确认风险集中在哪些渠道、客群、设备、身份关联或进件时段，判断潜在风险敞口是否需要立即限制；第二步根据证据采取针对性临时措施，避免局部问题扩大为全量客群收紧，同时记录策略调整前的基准指标和预期目标；第三步观察调整后的实际数据，验证风险是否改善以及通过率、放款量和业务收益受到什么影响；第四步分析现有监控为何没有更早发现问题，是否缺少渠道质量指标、异常阈值、设备关联监控或数据质量检查；第五步将分析结果沉淀为可复用的监控规则、策略流程、分析工具和责任机制；最后验证改进是否有效（下次相似异常能否更早发现、排查时间是否缩短、同类事件是否减少、人工处理成本是否降低）。
+- 风控工作节奏建立四个层次管理机制：每日关注风险指标和异常事件；每周复盘重要风险事件和策略变更；每月评估策略边际贡献、渠道风险、风险收益和资源使用效率，决定下一轮优化优先级；每季度审视风险体系短板，明确未来需要建设的能力、项目负责人、交付时间和验收标准，四个层次形成闭环。
+- 海外风控团队正常经营阶段工作资源规划：日常风险监控与突发事件处理约占30%，策略优化与效果验证约占30%，长期能力与体系建设约占25%，业务规划与跨团队协同约占15%；重大风险事件发生时可临时增加救火资源，事件结束后明确恢复长期工作的时间安排并复盘资源消耗。
+- 海外业务长期规划分三个层次：全球统一的风险治理标准（指标口径、策略审批、版本管理、数据审计、风险事件升级、回测规范和实验流程）；国家本地化的策略体系（渠道准入、身份核验、反欺诈、额度政策、定价、还款方式和贷后策略，具体规则根据当地数据和实际业务表现验证）；可复用的风险分析方法（渠道归因、策略边际贡献分析、下线影响评估、风险收益分析和灰度实验，结果和阈值须经本地验证）。
+- 风控产品经理工作流程：通过测试账号从用户视角体验业务全流程，借鉴其他成熟业务的风控体系与策略设计并根据负责业务改造适配，与有经验的负责人交流获取更高维度视角。
+- 押品评估审核流程：审核评估报告，发现土地使用权类型与实际缴费情况不符时深入了解剖析，取得相关证据及正式书面材料后确认评估价值；对优先受偿权进行重新计算和核准，取得土地资源管理局等权威部门书面证明，出具包含风险提示的审核意见单并提示尽职调查部门；对存在抵押前租赁的押品，提前要求提供租赁合同，制定以收益法为主的评估方案，现场勘查并走访周边商户了解市场租赁情况，租约内采用实际租金、租约外采用市场租金，并以市场法验证；对存在交易限制的押品，向当地国土资源部门咨询，依据谨慎性和替代原则以限制条件下产权取得价格作为市场法评估单价，并据此调减授信额度。
+- 风控策略算法工程师项目方案：采用特征工程、多模型融合、规则兜底的策略，前期以LR和树模型为主，后期引入图结构建模用户关系；图算法中节点为用户、设备、订单等实体，边基于共现、交易、登录、地址等关系构建，设计时考虑业务可解释性与计算可行性，避免过度连接导致噪声放大；节点数可达百万级、边数千万级，采用采样或分层策略降低复杂度（如GraphSAGE的归纳式学习）。
+
+## 技能工具
+
+- Excel：岗位最高频工具，用于指标测算、客群分层统计、策略效果复盘、周报月报输出，重点掌握数据透视表、VLOOKUP、SUMIFS等统计查找函数、动态指标看板。
+- SQL：用于从业务数据库提取用户申请、还款、交易明细数据，校招要求基础查询、多表关联、分组聚合，不需要高阶优化和复杂窗口函数；用于把多个表实现表链接与嵌套表查询、实现数据备份。
+- 建模能力：风控策略岗位建模更多是逻辑回归评分卡这类统计模型，属于进阶加分项；需熟悉特征筛选、分箱、模型验证、KS指标等风控常用评估指标。
+- 逻辑回归：用于挖掘每个变量的权重参数，将权重和截距写入系统直接预测；文本型变量可对文本计数乘以权重得到策略。
+- 决策树模型：根据多个数据源不断交叉得到多维度组合规则。
+- 图神经网络（GNN）、GraphSAGE、GCN、GAT、PinSage：用于图结构建模用户关系，GraphSAGE通过邻居采样聚合支持大图训练。
+- 集成树模型（XGBoost/LightGBM）。
+- 风控决策引擎：配置决策规则，对申请用户进行订单审批与额度授信；A类调优需决策引擎标记豁免样本。
+- 生存分析：KM方法预估不同客群在各还款期的生存概率，COX比例风险模型预测不同客群在不同时间上的风险并分析时变变量对风险的影响。
+- 换入换出分析（Swap In & Swap Out）：新策略替换旧策略或新模型替换旧模型时评估客群置换，B客群为all in客群，D客群为all out客群，A客群为swap out客群，C客群为swap in客群；B和A客群可用历史数据较准确评估风险损益，C客群可能无历史数据只能粗略估计损益。
+- 随机实验：分准入测试和权益测试，考虑随机化单元、目标群体、样本量、测试运行时间、测试成本。
+- Vintage分析、滚动率分析、lagging DPD。
+- CDA数据分析师认证：考试内容覆盖SQL、Excel、统计学和数据可视化，可作为能力补充的加分项，但不能替代实习和项目经历。
+- 实时风险监控数据屏、人脸识别门禁系统（蚂蚁金服CTU）。
+- 自动化监控、策略版本管理、数据质量治理、异常预警工具。
+
+## 典型的一天
+
+风控策略岗位的日常工作以数据监控与策略分析为主线。每日需关注风险指标和异常事件，查看日报指标（含本月1号至观察日的累计数据），确保问题能够及时发现；月报需监控已冻结/黑名单用户是否仍在正常下单、舆情情况以及用户画像结构变化，按产品维度、基本数据、行为数据、外部数据分箱分析。日常大量策略复盘、指标测算工作依靠Excel完成，通过SQL从业务数据库提取用户申请、还款、交易明细等原始数据，再导出做指标分析。当指标出现异动时，需逐层拆解风险上涨或下降的原因，区分是渠道客群变化、策略调整还是外部市场因素带来的波动，并给出对应的策略调整思路。海外风控的日常则常被突发性工作占据：某国逾期率突然上升需立即拆解客群、渠道和放款批次，某获客渠道欺诈集中爆发需紧急调整准入策略，通过率下降、放款规模不达预期时又需重新评估策略阈值和客群准入条件。风控负责人还需在风险事件管理、风险机制建设和长期能力建设三个层面分配精力，正常经营阶段约30%时间用于日常风险监控与突发事件处理，30%用于策略优化与效果验证，25%用于长期能力与体系建设，15%用于业务规划与跨团队协同。风控产品经理则需设计审核机制以平衡审核人力成本与收益，制作实时监控或实时预警策略，业务出现安全问题时迅速解决。
+
+## 坑与经验
+
+- 风控团队长期陷入日常救火节奏，每天都在处理风险却没有足够时间建设能够持续降低风险的体系，策略不断调整、报表不断更新、问题反复出现，团队看似忙碌但整体风险管理能力未必提升。
+- 如果团队每天都依赖少数资深人员手工盯数、排查异常、临时改规则，即使短期风险没有恶化，整个体系仍存在较高运营风险；一旦业务规模扩大、市场数量增加，现有团队可能无法及时处理所有异常。
+- 如果团队连续数周甚至数月绝大部分时间用于处理临时问题，应视为管理层面的预警信号，需判断是业务风险持续超出体系承载能力，还是数据、流程、工具和组织分工存在系统性缺陷；解决方案不应只是要求团队加班。
+- 风控只关注拒绝风险却不了解业务收入来源和增长方式，容易与业务团队陷入反复拉扯：业务增长时要求放宽策略，风险上升时又要求迅速收紧。
+- 风控只在审批末端不断增加拒绝规则，可能牺牲通过率却没有解决风险源头；某渠道逾期率上升不一定意味着信用评分模型失效，也可能是渠道激励方式变化导致流量质量下降、代理商引入更多非目标用户、欺诈团伙集中进入或产品额度调整后审批用户结构变化。
+- 只考核逾期率容易导致策略过度收紧、误拒扩大或业务增长受到不合理限制；策略命中量增加并不必然意味着风险控制能力提升，模拟拦截量增加也不代表真实逾期损失已经下降。
+- 单独比较两个市场的逾期率往往不足以决定资源投向，即使某市场逾期率更高，只要收入、回收表现和资金效率足以覆盖风险成本，也未必没有投资价值；真正需要分析的是风险调整后的经营回报。
+- 不能用同一套风险阈值机械判断所有海外市场，不同国家征信覆盖率、用户还款习惯、支付环境、欺诈产业链、监管要求和催收效率都可能不同；同一条设备规则在一个市场可能主要识别欺诈团伙，在另一个市场却可能误伤正常用户。
+- 使用较短期的标签（如利润、DPD30+@MOB3）分析多头客群，会得出(-Inf, 5]和(5,10]在风险上没有显著差异的错误结论，而生存分析显示两者长期风险差异越来越大。
+- 生存分析中事件窗口期给得太短会导致更长时间上的预测和分析失效、对业务或客群产生错误认知，给得太长则很难获取足够数量的样本。
+- 黑名单有入库操作，也要有加黑时间以及出库操作，并不是所有黑名单都一成不变。
+- 白名单客户可走差异化审批（如绿色通道），部分不需要再查外部数据源从而降低数据成本，但筛选需通过联合建模、内部数据探索、引入外部数据匹配等策略进行。
+- 押品评估中不能简单直接采用评估结果，而应认真审核评估报告、深刻理解评估假设条件的意义、把握押品真实变现能力；土地储备授信项目中押品价值虚高问题屡屡出现。
+- 押品存在抵押前租赁且租约较长时，租约内租金标准可能远低于市场正常水平，对实际变现能力造成影响，需在租约内采用实际租金、租约外采用市场租金并扣除价值贬损。
+- 押品权证可能记载五年内不得转让、转让须补交地价差等交易限制，购买对象可能仅限于高新技术企业且注册地必须在高新区，购买单价与同类房产市场交易价格差距较大时可能隐含产权瑕疵，影响银行抵押权有效实现。
+- 策略调整时临时措施应避免将局部问题扩大为全量客群收紧，并需记录策略调整前的基准指标和预期目标，否则无法验证措施效果。
+- 面试中阐述项目不清楚目的也不清楚数据、无法结构化表达叙述混乱、问什么答什么不懂得进一步互动、注重应答速度而舍弃思考深度，均为雷区。
+- 数学专业应届生容易直接投入模型算法学习，忽略企业校招风控策略岗的真实工作流程；风控策略岗位不是模型算法岗，核心产出是可落地的准入规则、额度策略、贷后预警方案。
+- 校招风控策略岗位不强制要求独立搭建评分卡模型，建模属于加分项，应优先把Excel指标复盘、SQL取数能力练扎实，不要颠倒准备顺序；SQL不需要学到写复杂窗口函数的高阶难度。
+- 套利策略风控中需注意：币种累积亏损超过阈值应自动ban掉该币；资金费率异常会导致亏损需自动减仓；账户亏损1%应全部平仓停止；连续滑点应自动暂停策略；本机计算当天利润亏损到阈值应自动停机1小时；价差突破阈值（如SELL 99、BUY 100）应强制减仓并拉黑该币种，价差不正常通常因币名相同实际不是同一个币（如NERIO）或野鸡交易所的单机币；跨所对冲两边交易所一直不平衡需提前减仓并监控仓位不平衡；需监控爆仓价格并提前在爆仓价格前挂减仓订单，避免被交易所清算导致巨额滑点亏损；监控链上数据发现大规模挤兑事件提前跑路；提币到账时间异常或链维护后自动选择下一个链；币种下架后注意提前平仓，有的交易所会出现仓位还在但api不能交易；手续费VIP突然下降需马上发现，否则跑几天都亏给交易所；风控大多建立在交易所可正常通讯的前提，无法正常通讯时需建立静态风控体系。
+- 海外风控中，新增获客渠道时不能只看短期申请量和通过率，还应明确该渠道的风险观察周期、可接受的风险范围、灰度放量条件以及触发暂停的标准。
+- 风控不能仅向投委会汇报逾期率上升多少或规则拦截多少用户，更重要的是解释风险变化背后的原因及其对业务收益、资本占用和风险预算意味着什么。
+- 企业高管用工风控中，高管身份认定与职责不清可能被认定为事实劳动关系，承担未签劳动合同的二倍工资、违法解除赔偿等；高管失职导致公司损失可能无法有效追责；绩效目标不明确、考核流程不透明可能被认定为克扣或无故拖欠工资；解除劳动关系程序不当可能被认定为违法解除需支付2N赔偿金；专项培训后员工提前离职可能无法追回培训费用；破产程序中高管超出职工平均工资的薪酬部分不被认可、转为普通债权清偿率极低。
+- 辞退员工是劳动争议高发区，离职时期是所有矛盾的爆发点，处理妥当则风险归零，稍有不妥则面临败诉；需注意辞退原因判断、成本核算、障碍排除、方式选择、沟通技巧、情绪疏导、文本制作、时间掌控、手续办理和善后事宜。
+
+## 来源帖子
+
+1. 贷前风控流程与常见策略规则类型｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUUPtHbDgDcRHc7nHuxS*b9VmycZV7S6QH6ctnswG*u*nZvNEvln9LKO87GmYUpwoIgsLvma5QwGLA7IsnrYGx-2&new=1
+2. 信贷风控策略的常见分析方法和实施手段｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=yk07oEDvUJevWe6svGKDQufzBT6aejmC7qPqTAF55vHTknK3W3*su-gIG3RBRgVA6LEmpgrG6Yh8hGcRXLSETdsSz7ALoQs*qwauyrogmNB0iUzqCpBz*8-kzkUUDY7*&new=1
+3. 常见的6个风控贷前策略｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUVr5*M*Ic4CuVxLAKFJ9Ej1-VUfWaywmiZmDmzaFm8xDT68KhoXhuiWp*aPFosPGc0Jhq1FMD8duREuTYJA3Eoc&new=1
+4. 套利策略常见风控措施｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=iD*LQDW4unsL-8tUpcu0CXNBiNUOWOC-oLZuXHTfpYw-Pgp2P*tLOjxmrNo8VNSiDTAIS5v*OvRK7GblhqNSJLbUiXXaNrXM6a9lLOuTaWjvHe681uASczWzgpPfLrIY&new=1
+5. 海外风控策略：如何平衡日常救火与长期规划｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=Lh61wNdSr4az4wUvZ3ifWBWQwwrcqblO7GjaDDCaxlQ-MY9StlkgmwYV8ojYNf-dAqJ8hvL--Cmiy66NQILXo-THw7siVws65RguJ7e6bT4w35RwID3JA-7g40xbHrGZ&new=1
+6. 2027秋招｜数学与应用数学投风控策略，SQL、Excel、建模先补哪一个｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=iaItFk2FQiV0JECzlE-zZWks-hrbVW8Yt6z1ADcSTvTQ7RVP0pRjDxX-hdlk9AuEgne0rzRTcd4SyK*w0ac*93I7QYyRN3796m*CeFiTlOftqdRDdQ7NohYFDQbyKuEC&new=1
+7. 追光 | Michael：详解字节风控策略PM岗斩获秘诀｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=-XmwjF0SX5nmDCXVaXCv7dgpHtA2oWLmb23zYLh0QvVt6evWP-aQunIkmQuhsitEVY0KouD3P8VpfQviO0Gk-UGZripkeRDxZ2*gMDdW4u8RDCPg0zSBBBJTEYGh*ITo&new=1
+8. 用逻辑回归进行风控策略的自动化挖掘｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=zBIeNtIyqzlRrYvVpXWIY3pvuJ*YMa*JRz8enqu4r-aRuFc5JdNrFrf6hvXg7SMXvaTL0HMg1dFQ3Dyox*BOFC22IodHnEmtDHRtrvmIFuSK1RuHX4QeuwFgH*GzszEr&new=1
+9. 风控策略与案例精讲：押品估值管理必读｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326913&ver=7034&signature=mPoE4Y5PqQMdmoX6FogO1OV8kXdUdO4rzuBc2F0kM7RaCqNiI4VINISkqR3N2nzIcmsz-lWCnxkKarrJXZiyeyp8vRa9oKhDnxJ-tq7JIqkBo1Z4QJCnKbyHV5XUZpr-&new=1
+10. 风控策略算法工程师面试经验分享（一）｜附高频考题与场景题解析｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326963&ver=7034&signature=iKi1v3GQQJyHQvGSAl53BY0HK985JaaOHsu6Wme0-zQHuTZ*BCJ6Snv1k2lh5Ch3Xxi0OaaZWv*SAEkBNeFzTAD929qtzRddAtKaAsjwvfeZiyEX9up06B-yQt145xJu&new=1
+11. 传统审批员转岗风控策略岗，常见的4类面试问题！｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326963&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUW8CYFCY0Rn29s7JYWpFrg0pcc8V5WK71C4gTnpt7zoMeKuRiqJVEtY3rYjAuz8jPEUAte-JflfQEwXiFh6GUqD&new=1
+12. 海外风控策略：如何平衡日常救火与长期规划｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326963&ver=7034&signature=Lh61wNdSr4az4wUvZ3ifWBWQwwrcqblO7GjaDDCaxlR*KD6s4omzAwywh9koO*2OUWXHzJUTFp2oJVmZLPsWgW4R5B6R2Wi0CtXmxKMXVj*PvW3e3Zjus9gz2zY0ySml&new=1
+13. 贷前风控流程与常见策略规则类型｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326963&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUUPtHbDgDcRHc7nHuxS*b9V0dwVyp7J5DyrkLEfWAo7IeYT*coPjyyrxJpQPxi9xgy2BVetQKFNgrlgbteWctCO&new=1
+14. 风控的数据分析，日常会做哪些分析工作？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326999&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUVWpVHjTpcdSahXEAfTjQOd4bwUsK-IY3f4ePw5NXiKN8JPh8VeGHmlSHHZzBA7x*rls*qPjao6j2VnUIhmcyiQ&new=1
+15. 企业高管类人才用工风控方案｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326999&ver=7034&signature=KzJ4ayWI9t9QLRopYW7FLr0ygq6DH0jHuP81V3gG1stMtVXFb9G9HW9zK--yzE84WkHak6tc0VVyAHvrqkewlXmX9aQcE2jdLdWiJYRmSAbYYzE9g8aJ*RZRKRLs0XJX&new=1
+16. 12.22举办：“辞退员工风险控制十步法”高级研讨班的通知｜https://mp.weixin.qq.com/s?src=3&timestamp=1792326999&ver=1&signature=fnBSZqUlM6Z0FVqBZwG13oWz1lZBpHM3BKYlmvmdMXFzxjlh1KEYLAu6AKMw42mjb4Rc*pwT1wGwDx30*quqfkcZqHSeLN7EW*yYVSs1gVkWJwL2yf4anbqr5muOYHw55*Hd35w2tz*8ddMKpGunI4LixPr2Rd-b0rwgnPlMEYs=
+17. 估值600亿美元蚂蚁金服的风控秘密｜https://mp.weixin.qq.com/s?src=3&timestamp=1792326999&ver=1&signature=IAxH2qkx6D7mQiVMZvzSZ5dzD24bB2KzoSSRBe4m8VWOdxe9*K1jN*GFIqGgQKU-ZtXgEp7Vfh2d-u-W4wGAnmS8eom9CFgVAmmF85y9xn6-fQr0uj7Hm0QQNEYuxbelh0e6OEcYQoQMtFFYnuHOPA==
+18. 风控文件｜财会[2008]7号五部委《企业内部控制基本规范》｜https://mp.weixin.qq.com/s?src=11&timestamp=1792326999&ver=7034&signature=tAC07NUZptE1X31Npw5DBGu4WNy-8NSpttAS0EhhPaM9ajl7weeF3NceVOh8zwsx413hnjeZcqDQNw42io1RMcip6c5VkUPuBBHfeeTMfr00tFpGuFPkLs5-zlbWn-ZO&new=1
+19. 【每日一专业】数据科学与大数据技术：新专业别盲目冲，看清这几点｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327049&ver=7034&signature=A8BQot4rk8oYtGh*9fIi59wtWNe4nORmvHVwq97BAAt1Qp5awohN9lFQ-arVbhCOx*nxjZSQ9s*tjPDOpx50qkPZPIkyCG4ll-EYJSceDXZF6adb9G9Jc4EPilXe4ZGr&new=1
+20. 实际风控工作中的五大挑战！｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327084&ver=7034&signature=TVOWLjl1H38xorhSC-evj0RJsz4Cjip8Sfm7oV19vnKvIbkDFq03Gr1EpnQrbOI2HbAxYASZn*YaW1EFLpihJNUuYqR0y3lxZewKWA4JIdwTOIIPERplPWIPC4dKin9l&new=1
+21. 2027秋招｜数学与应用数学投风控策略，SQL、Excel、建模先补哪一个｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327084&ver=7034&signature=iaItFk2FQiV0JECzlE-zZWks-hrbVW8Yt6z1ADcSTvTQ7RVP0pRjDxX-hdlk9AuElObGooLt0i5GGI2Czeh5yTkwceOJndNlKaLxCjx5LD2m-lBk3ZDgxIWbebR1lWpo&new=1
+22. 美团点评业务风控系统构建之道｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327084&ver=7034&signature=znLOYC5iaoVL*Nqm5Ag10j4W0Ez-6cp4xDeP0gixHka8xACqzZxsV71XKmHLq60wTUr9PNPTdvVegucnDJwDXLegcFEvLJjwJ-bHNIZ32DD3r6uF7epeo5G*Q1CuUG3*&new=1
+23. 讲真，风控策略的入职门槛越来越高了……｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327084&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUUzADqOpdy*2cKfD7ODUD2yaE2e48cUzhw6sJOTiqQej2mabUV-E0Omd8d3IGLH7t77ukM4ZLTSYJW0mCVs27*j&new=1
+24. 海外风控策略：如何平衡日常救火与长期规划｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327084&ver=7034&signature=Lh61wNdSr4az4wUvZ3ifWBWQwwrcqblO7GjaDDCaxlQ-MY9StlkgmwYV8ojYNf-dZOe491FE-B*vxZtE6AW9PauX8ewKcESJtIGBRbxcUL5LMQKf7M3rOvw5vIoEQNCt&new=1
+25. 信贷业务风控策略简介｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327084&ver=7034&signature=F3R-lOIqYz16fsvTpg6o22sQAEv9sF01IN1TeYSCKHz*yaqaxdDyuNPepBeiPPULYd74xQrm0UnisMfctYpg4aeN3f1sVW39u5hFB4OVzQ0Cnmx7ojupzVOXVwed3FdN&new=1
+26. 揭秘风控策略的cutoff平衡术｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327084&ver=7034&signature=ddO*cStBK2Lwjvzy9ABUH-XnuamESXWzArQv1Crqz*LbLZHwvaiM2CtDu9TVFie6ckDeOJyohw6a*6BynPn8bT0YjILm1fE8wqFf6inDV0jTqmhEo3lXyREWaLccl2x2&new=1
+27. 揭秘风控策略的cutoff平衡术｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327134&ver=7034&signature=ddO*cStBK2Lwjvzy9ABUH-XnuamESXWzArQv1Crqz*LbLZHwvaiM2CtDu9TVFie6FMs0o-kQAtnZ0bViaWBnQ5v0v0og2D1eDP0y4xYG*AP6TNq-eKVqL*5Gqod90XJB&new=1
+28. 这 10 个金融 Skill，才是真正进业务流的AI｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327134&ver=7034&signature=QCALSuRkjb7o5mDMEp17**3QHVE-nevb8L1hrUUXnBzouo0QT0FRr5RV0m7KrIofck2BFJPsMv6OjH6jvCEejJ8XTOAkQ*iPY-VbJZroEmdquVuj**Z1ReMTlqZ9aL1f&new=1
+29. VC风控——用AI制定风险投资基金风控策略｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327134&ver=7034&signature=CzvjYcbLFQKbEvKtDpJvkYzLHsnRMds4h7c5Ktnxb5RhKHqCyHHRfIWhkPZhQvaipWGeCmzbFnMAIoXGWPF9B1OiPJ6uJJFeI14Y9yazMXFHqk3t10KwVO69xL42Rh0b&new=1
+30. 信贷业务风控策略简介｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327134&ver=7034&signature=F3R-lOIqYz16fsvTpg6o22sQAEv9sF01IN1TeYSCKHz*yaqaxdDyuNPepBeiPPULYmqZVO2JJv0Py034caIkYU6INg6VG-g4GFFTikChlgd5T-7OcN-BwhogyNGy-eJv&new=1
+31. 银行中常见的6种反欺诈技术手段解析｜https://mp.weixin.qq.com/s?src=11&timestamp=1792327174&ver=7034&signature=zQLHartHog-K55A0US5uV8Mq4mfNaLWv*Xkb*E*vcUX0HwdSjKxathlpVM9uJ3PE6HknYnrccbDzoq-x7WXzfggstoWV2W2LhZfYP266oo2CQarXQqXuugauK7DrVmZb&new=1

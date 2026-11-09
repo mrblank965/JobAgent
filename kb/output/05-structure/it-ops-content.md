@@ -1,0 +1,119 @@
+# 内容运营（it-ops-content）
+
+> 结构化 Agent · 2026-10-29 · 基于 27 篇帖子整合 · 已改写为书面语
+
+**岗位别名**：新媒体运营、内容策划、社区运营、内容运营岗
+
+## 核心职责
+
+- 信息积累：通过新闻类应用、行业资讯等渠道获取投融资消息、热点事件与热门话题，建立信息印象并从中产生选题想法。
+- 目标梳理：统计各项数据并整理目标，进行适度分析；内容运营关注UV、PV或网页价值，即上线内容对注册、下单、PV超过10等最终目标的贡献价值。
+- 晨会同步：参加晨会，同步产品进度、运营数据表现与接下来的工作安排，并利用晨会沟通自己的想法。
+- 内容生产：策划内容主题，拉人生产课程，与潜在内容生产者沟通交流，自己生产内容，进行内容修改、包装与推广。
+- 内容机制建设：测试内容生产激励体系，构建产品机制或激励体系鼓励用户自主生产内容，开展内容合作。
+- 内容审核与推荐：进行推荐及审核或人工编辑，撰写软文实现盈利，挖掘优质内容。
+- 内容运营核心要素管理：关注内容的生成机制、消费场景、展现形式与传播方式。
+- 理解产品与用户：了解产品过去的试错及数据、未来的发展方向，从零开始体验用户消费内容的场景，使用自己的产品并向他人推荐；分析用户各项数据，进入用户相关的群、看贴，了解用户诉求。
+- 新媒体内容运营：覆盖公众号、小红书、抖音、视频号、微博、知乎等全平台，负责文案撰写、图文排版、短视频脚本创作与内容选题策划。
+- 用户运营：做好粉丝互动、社群维护、用户分层与私域沉淀，建立用户信任。
+- 活动与投放运营：策划直播、抽奖、种草、裂变等线上活动，负责平台投流、KOL合作与流量数据分析。
+- 数据复盘：每日监控阅读、点赞、转化、涨粉、成交数据，通过数据复盘调整内容与运营策略。
+- 策划选题：无论图文、视频还是音频内容，策划选题都是最先开始的操作步骤，需结合社会热点、提炼深刻观点、结合人文需求，团队共同探讨以找到正确方向。
+- 内容创作：确保内容故事的完整性、逻辑性、真实性和价值性，文案层面精细打磨；图文方面进行图片与排版设计，视频方面搜集有趣贴合的图片、视频、表情包、配音和背景音乐，提高完播率。
+- 推广引流：设置CTA引导流量到目标网页，CTA需匹配目标用户，并可用图片强化、通过引流海报吸引注意。
+- 渠道运营：制定运营策略，维护公司新媒体渠道的正常运营，涵盖平台概述、运营策略、数据监测等方面。
+- 数据监测：对内容与渠道数据进行监测与分析。
+- 社群运营：进行社群维护与用户互动。
+- 活动策划：策划并执行线上活动。
+- 内容矩阵运营：建立主题池，将选题拆解为多个维度并对应文案模板，把内容打碎成可组装的零件以实现规模化产出；把控内容风控，将发布交给自动发布指令处理；执行风险隔离，做到一内容一账号，确保账号间内容在视觉与底层代码层面具备独立性。
+- 短视频账号运营：梳理账号定位，使内容围绕核心产品展开，内容方向包括产品展示、工厂真实场景、设备和工具、产品应用场景及适量的真人表达；将单条内容集中在一个信息点上，先让人看明白，再逐步建立对产品和企业的认识；保持稳定更新节奏，月度约20条，并持续测试调整内容类型。
+
+## 工作流程
+
+- 信息积累：下载新闻类APP供上班阅读，以速读或标题阅读建立印象，将需深度阅读的内容一键保存到稍后阅读工具，避免打乱阅读与工作节奏。
+- 目标梳理与数据分析：统计各项数据，比对与已有目标及计划的差距，做新的调整并整理新思路；用思维导图整理想法、做发散性思考；按重要/不重要与紧急/不紧急区分优先级并记录。
+- 数据异常归因：一切从源头分析，如内容运营中UV不变或提高但PV降低时，查看主要页面的退出率及跳出率以确认内容质量是否有问题，查看推荐内容的点击分布以判断推荐机制是否需要改善；UV降低而PV增加，可能是内容吸引力增加但内容面对的用户群变窄。数据无论变好变坏，只要在意料之外就要找准原因。
+- 解决方案制定：针对聚焦的问题罗列潜在问题、提出解决方案，问题不清楚的进行数据埋点再回收数据；大部分时候只针对最近特殊的动作进行跟踪分析，而非每天重复分析；经常与领导沟通或向他人求教。
+- 目标分解与计划调整：将整月目标分解到每天的具体事情，制定并不断调整新计划；已有指标持续提高时，提出新的数据指标对自己提出更高要求。
+- 晨会：同步产品进度、运营数据表现与接下来的工作安排。
+- 具体工作依计划而定，内容运营在不同产品阶段工作不同：产品早期策划内容主题、拉人生产课程、与潜在内容生产者沟通、自己生产内容、内容修改、内容包装与推广；产品中期测试各种内容生产激励体系、构建机制或激励体系鼓励用户自主生产内容、开展内容合作；中后期进行推荐及审核或人工编辑、软文撰写盈利、优质内容挖掘。
+- 初级运营执行：内容素材积累、内容生产时的产品建议汇总、封面等物料设计（有专门平面设计师则不用）、数据汇总、选题及专题制定、内容相关活动制定、竞品内容汇总、内容推广资源排期、根据数据改善执行细节。
+- 中高级运营执行：制作内容推荐标准、规划审核流程、依据公司要求制定内容相关目标并分解（包括人员分析）、制定早期内容生产机制、构建产品机制或激励体系鼓励用户自主生产内容、探索内容盈利机制、进行内容趋势分析。
+- 内容矩阵日常机制：早晨10点更新主题池，11点开展自动化审核，12点在多个平台轮流分发；运营人员只需把控内容风控，其余交给自动发布指令处理。
+- 短视频项目流程：先梳理账号最基本的问题，明确别人刷到账号是否知道企业是做什么的；前期调整重点使内容围绕核心产品展开；单条内容集中在一个信息点上；保持月度约20条的稳定更新节奏，前期不断测试什么类型的产品内容用户愿意停留、工厂场景怎么拍更有信息量、真人表达与产品内容如何搭配、哪些内容适合做成系列；复盘时不把播放高直接等同于获客成功，更关注后续咨询、主动了解产品、继续沟通与到厂了解等动作。
+
+## 技能工具
+
+- 新闻类APP（如虎嗅、36Kr、知乎日报、今日头条、朋友圈等客户端）
+- Pocket：稍后阅读工具，可一键保存有价值内容，在不同设备上保存或阅读，对时间管理有帮助。
+- Excel：依据数据比对与已有目标及计划的差距，并做新的调整。
+- 思维导图（MindMaple）：整理思路、做发散性思考。
+- Omnifocus：将项目与人联系起来，进行工作预测、制定时间点、标明优先级、明确项目负责人及完成时间点，适用于团队管理或工作协调。
+- 印象笔记（Evernote）：记录优先级排序；按标签记录、按大类划分体验产品；文档协作，避免word写到一半电脑死机。
+- GA、百度统计、CNZZ：查看数据。
+- Mac air：运营用机，避免因电脑卡顿浪费时间。
+- Photoshop：必备软件，求人不如求己。
+- 收藏夹：收集从设计到运营到产品到创意到营销到素材的各类网站。
+- OmniOutliner：推荐给微信运营同事，用于理清原创文章思路、慢慢填空。
+- OmniPlan：管理各运营项目的排期。
+- 谷歌搜索：网站搜索、标题搜索、文档搜索、关键词搜索、相关网站搜索。
+- 网盘
+- AI工具：94%的新媒体从业者借助AI提升工作效率，AI已覆盖文案、剪辑、排版、数据分析等基础工作。
+
+## 典型的一天
+
+内容运营的一天通常从信息积累开始，上班期间通过新闻类应用速读行业资讯，将需要深度阅读的内容保存到稍后阅读工具。随后进行目标梳理，统计各项数据并与已有目标及计划比对，用思维导图整理新想法，按重要与紧急程度区分优先级。晨会上同步产品进度、运营数据表现与接下来的工作安排。具体工作依计划而定：产品早期可能策划内容主题、与潜在内容生产者沟通、自己生产内容并进行修改、包装与推广；产品中期测试内容生产激励体系、构建机制鼓励用户自主生产内容、开展内容合作；中后期进行推荐及审核、人工编辑、软文撰写与优质内容挖掘。初级运营还会做内容素材积累、封面等物料设计、数据汇总、选题及专题制定、内容相关活动制定、竞品内容汇总、内容推广资源排期，并根据数据改善执行细节；中高级运营则制作内容推荐标准、规划审核流程、制定并分解内容目标、制定早期内容生产机制、探索内容盈利机制与进行内容趋势分析。数据分析中若发现异常，需从源头归因，如查看页面退出率与跳出率、推荐内容点击分布等，针对聚焦的问题提出解决方案，问题不清楚时进行数据埋点再回收数据。此外还需不断分解目标、制定新计划，并持续理解产品与用户，体验自己的产品、分析用户数据、进入用户群了解诉求。
+
+## 坑与经验
+
+- 运营工作讲究“一切看数据，没有数据看逻辑，没有逻辑看经验”，数据异常时需找准原因，不能只看表面。
+- 数据在变化时需要聚焦到某个具体数值的变化，而非泛泛观察。
+- 大部分时候只需针对最近特殊的动作进行跟踪分析，而不是每天都来一次，以提高效率。
+- 学习运营需要结合场景，不能只知道流量、转化率、标题写法，而要不断与自己的状态做结合；懂与一知半解不同，需要细细研究。
+- 执行是一日复一日的，需要持续实践与总结；运营的不确定性源于了解不够深刻，背后都有一定的逻辑与数据。
+- 内容矩阵若把工作当成碰运气而非工业化生产流程，往往在三个月内因账号枯竭而失败。
+- 内容矩阵不能依赖运营人员手动点击发布按钮，人会疲惫、遗忘、情绪波动，应实现自动化调度。
+- 矩阵账号大量倒下常因账号之间产生关联，如IP关联、内容高度重复、发布频率高度一致，这些行为都在挑战平台审核算法。
+- 做矩阵不能试图走捷径，以为买几个号、随便抄几段话就能引流，实际上需要通过极高频率的触达在用户脑中建立印象。
+- 短视频运营中，工厂账号容易出现今天拍产品、明天拍车间、后天拍日常的情况，单条视频看起来没问题，但连续看下来用户记不住企业是做什么的。
+- 专业产品短视频若在几十秒内塞满型号、参数和技术词，反而容易把人劝退；应把一条内容尽量集中在一个信息点上。
+- 短视频播放高不等于获客成功，对制造企业更值得关注的是有没有人进一步咨询、主动了解产品、愿意继续沟通、到厂了解。
+- 新媒体运营入门易、精通难，很多人停留在发内容、剪视频的执行层面，长期没有成长，最终陷入薪资瓶颈。
+- 新媒体运营加班常态化，热点、节日、活动不等人，突发选题、临时改稿、深夜直播复盘是常态。
+- 新手容易陷入无效忙碌，只关注发文数量、粉丝数量，忽略转化、变现、品牌增长等核心指标，长期没有核心竞争力，极易被AI替代基础工作。
+- 新媒体运营岗位门槛越来越高，需要心态年轻、时刻保持学习状态、会写字、会P图、懂用户交互、懂传播、懂营销、能熬夜、会翻墙、会统筹，且常要求一年以上运营经验。
+- 一个公众号做得好不好，决定因素往往不是运营者本身，而是公司的品牌势能、产品质量与领导决策；新媒体多数时候扮演锦上添花的角色，而非雪中送炭。
+- 把新媒体当目的的公司往往重视内容而没有完善的商业模式，能否存活、能存活多久都是问题；有完整商业模式的公司又容易把新媒体做成企业内刊，运营者找不到存在感。
+- 所有呈现出来的有趣，背后都需要强大的积累和心力支撑；有趣的文章如果没有内里的深度，很容易流于表面，且自认为有趣的内容可能因领导一句话而无法推出。
+- 新媒体并不比别的岗位挣钱快，很多微信大号还在靠广告支撑，广告不是能持续产生盈利的行业，吃得了这顿不一定有下顿。
+- 中小型企业和个人账号的运营更多停留在内容打造阶段，只有形成或准备形成新媒体矩阵时才会用到真正的运营操作；很多人工作几年根本没有机会进入真正的运营阶段。
+
+## 来源帖子
+
+1. 互联网产品运营人员的日常工作内容是什么？｜https://mp.weixin.qq.com/s?src=3&timestamp=1792323913&ver=1&signature=USBiesb6hSckcnaw6sLjn2mjYb7A1GFeucM707In826hbyoSd74UP*53VMoSv1o-mIVp20HTQY4bGfL6juF*GwENOf-FGP9y-qJV-qtXev9qs98OxTY4JZ2rhrS2LBc6TRp95of9mHAtmI1DmW9g2A==
+2. 购物中心日常运营管理有哪些工作内容？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792323913&ver=7034&signature=n90MD*yo1qlfQn4TBRzIhmzaQV9jzH1A7dJHbq9WQK*TeWShvlIfFMfv7E7P*uTQwGB-qReH6vrnh0jmG5xMrUS-GKoVNusSGI8n5KoHp8X*lZZ8yFcRX7ft7KXIKHrm&new=1
+3. 阿里国际站运营每天做什么之工作日常内容｜https://mp.weixin.qq.com/s?src=11&timestamp=1792323913&ver=7034&signature=-DbefL12osaYxoKffPIW7uaXZi7wWV9ZZ91D6OloMZjeVcOwZ8oiqSmHL*CPSKqKaR-JUs3wVvD9LHDKefdQ6IZcwJ2amjPzOoIzvQuL4rXcQCCL6rMzcODolAyLS61y&new=1
+4. 淘宝运营每日工作内容汇报｜https://mp.weixin.qq.com/s?src=11&timestamp=1792323913&ver=7034&signature=S7qzEzy7RW8aWcqJNvlM1BhL98v3TKzSupmCqOtyBNKJ*xO7A6sFMLmVkwE0BhJsY8o-8eG9Z-R2EJ4j4nPvfcTxMMPW4Yb8guJleK7KuoD6mR3e8a3iIIUqKRCrh5zm&new=1
+5. 速卖通运营的日常工作内容是什么？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792323913&ver=7034&signature=u4VxxDlxCFiq6r53cR15y*Ro4M6jGyxKLuQHj3yHCX0MFjfuYAgqsWp0WzbbdhXO8s0DWOs3PaMx2GSGMoGIn2aCeoDetqE7zhBVp0Wv1*P8h0aPwEU1hXnD79v2r7Pt&new=1
+6. 国际站运营日常工作内容｜https://mp.weixin.qq.com/s?src=11&timestamp=1792323966&ver=7034&signature=ZSfo*NFBCwoDtrwAv6pupmhLGssNozaWioGQVAyjquNIXeLdIkcnRBOYBKdTe9JT7*XhvS2A23k6HkCbKkdNr9kZiWHtDTF5*OHXmmn4ZdTbzftDiUNJN7evY3KAGNMu&new=1
+7. 内容矩阵如何长期运行：一套可复制的日常机制｜https://mp.weixin.qq.com/s?src=11&timestamp=1792323966&ver=7034&signature=bt33QsWX2ptbbAxBQHNaVkoMA*EpLi81pepc7uKnhEQgeQAGbrKiPyX-Ug09N9Y2YujQcwqMy8uEMVgt2kqv3p3wi66zaasIeWagXxSZuCUjajBN83gPMTFmzWyhSVPC&new=1
+8. 员工个人债务影响单位经营，公司能否辞退？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324052&ver=7034&signature=jUJ4hpHzKgklh04acM6QUtP5LHCVXImWaY91tDPmcePcLISUev29yRNFy4FOOujnL9S1EKSAV2*GIwByEADfcNd0FPVSdYKIWyBloL2AEwWBV1qbOgPEW--EuDwQRqFY&new=1
+9. 这家公司靠劝退小三上新三板，收入过千万，土豪客户服务费超百万！｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324052&ver=7034&signature=I70VyEBUcbdLVDXo3OnctFIEk0HjFv0iM8httf9wuCaWliWiTZju1JiSyjO4Lw3Qk-Y6cVFYpBR7NGWDLcUZa4K5Ha4C4olN*pC13tmQNCXl*ryMroK73QuNU9e33aBy&new=1
+10. 做小红书代运营，我劝退了3个捧着钱的老板——原因就一个｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324052&ver=7034&signature=nBgTrgb2ABYfYcVUXFhFjlMUKWIEke7RCzWv5C-G9pWlWS-30K9MpKj-PIUAQ0JrK8qO48ZMLCKrl-biROZFYQJdG7lp9cpkn70kU2vbLMS9CvfAeKYC*khcGHvKZtyX&new=1
+11. 广东犀朗光电短视频运营案例：合客传媒如何做COB光源内容｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324052&ver=7034&signature=H9nH8eFW3Xhopw9A9viYTn-FAh0q9atgc49UQi14gQM4iTUInb3EfQRrhD6WPW8PzBd1joCGdAxULM9bR2oM4TT-p0h2cBLD1kcNXnznE9-pjK1wSTebjaOF1ytwFZkR&new=1
+12. 2026做新媒体运营还有前途吗？真实工作现状+前景深度拆解｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324087&ver=7034&signature=MOtTSdfW8uMRZo6dvRbNQt5Al-qlh9s8oKoloBOoLFRkL74iksVvLQQV1ymNMLc5IX*LiGM8mw32qqa9j*xJYHHd3VT5S6IO1ERMzxEB9hRgRSDhcoLP2i62RjuiQDVK&new=1
+13. 谁说「新媒体运营」是一份好工作？｜https://mp.weixin.qq.com/s?src=3&timestamp=1792324087&ver=1&signature=suq2mz55Uqt34Oh*GWtS3mlXESbuTRvHFqLxyzTqOIxL2h6n4uMzI8bXx5Hr3aKPUCZ21F6kIAbGQiQpxR0xeOZhIfDCfl*R*PpbxCsX2JYScbtgaNxpz66umeea8V9EL1xCUOjmlGxlB7ay3RnKDA==
+14. 新媒体运营工作主要做些什么？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324087&ver=7034&signature=iOGHKX*NnT--YnVMtPMV7QnTvJWmwv3T6FroH-EAn*FlMuxrHBpU8t91S7JPgcIIZXhSjehgp6cC0hK0y*cp4ankJaN8NDIFaJs-YqYSm2w7uezBLPcGzRU44wov6JsB&new=1
+15. 新媒体运营的主要工作内容有哪些？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324087&ver=7034&signature=iOGHKX*NnT--YnVMtPMV7QnTvJWmwv3T6FroH-EAn*FODXx9tA2BxvJZDEVnszQycYsoW2w0F4Sk9hysjG25d3NH4hgQZJcQxZz2BuubVPm9NYhQoYPVgX6p0JjYzf3x&new=1
+16. 新媒体运营在做什么：六大新媒体运营工作内容全解析｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324087&ver=7034&signature=vEj3KMHwU2W5OopXcYaxZPca1Xo8IPoQT1szux2TUiWFIB2lqbaWHS4jtBDoD86zgAcGyIsSKVOYnc3jk4S6ZMibRKNV63PShRzzl7u36C-aHmjWXrycuW1sIQI8VsTm&new=1
+17. 职规赛汉语言文学专业想做新媒体运营，职业目标怎么论证？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324138&ver=7034&signature=Gf2Qwpas008AMRespvXhYLiJauHO6kWApTsmZXPTk5bWKRTh9ZDCEFbuoVacYz2JvlxSq*0d*R3cmfRmfTR7MLoS-hwj58aWCBUM5p9*JIK21E4J4-corDH-mNlag*mm&new=1
+18. 日照招聘 | 日照电商公司招聘新媒体运营！｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324138&ver=7034&signature=9lX1OtMFqa9JVlgHOQB549X4bOL9cALBF1ZA4z6jSswwM3nkv7s65RoMvOUoBi1JfxhV4j3Yrkk5hN92xfg9TfhN0OG4HfGDwD7de44WVVK5WMaqxH22y5Vnl5-f-O4q&new=1
+19. 新媒体运营用智能体一天发30条内容，不加班：我的3条内容流水线全公开｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324182&ver=7034&signature=BbCJ-CSbkXt*P0QnEYAAPaLv1KB4ImdcgD4v3GvoSxaDauJJ9Bj34vNd46rfLVQZgu*nB3zC0vFu2D3rmTtI3dB1PqhOt7Tph0H2I7HIEZe4sP61J6n83ADSDnCKDhpS&new=1
+20. 告别无效加班：如何用 Agent 重构内容运营工作流？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324182&ver=7034&signature=g15yE9leHkNr8eUpIVX5KW6uhtC1ZsR5gRcT-DvyJFA2BvHCHrMHzEUwZTuEkoFVydkQoPYEy706vKQv7ZuJIOBpR73s6BQTtUugsxL5eoqQQ415vr4hpudAmfJ0sIJp&new=1
+21. 我，转行运营后每天加班到最晚，薪资却比同事低2K｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324182&ver=7034&signature=oPbIOrMllBiBoGjFJFiz67jjE4wldNZowTToDWi3t5OlDs28TLFdq5tyB*E88iVmbru5oSnyOj8BWJm*nqrjINnM0qfQthH-kqFeasbYnoEk54n28pfI9Yu*OBLT1dC7&new=1
+22. 说说运营加班，加得是什么？｜https://mp.weixin.qq.com/s?src=3&timestamp=1792324182&ver=1&signature=g8Ha8C14JF9b68B6ZD975hcGYs6l1ENpNxMImpwKjVhAX-PqNfAFqEf14NjbFoq*u8s*-h9F7kZ1g2JA1uyFUvRlyDaRCKBjCwj0W8kEwoXLh*64F7zgvX7*BugM-W-WzOysvM3f5sowtx-pezTpgyT1m4cBnzqtUlgVv3SWvZs=
+23. 2015运营狗生存报告：8成以上的运营加班成常态｜https://mp.weixin.qq.com/s?src=3&timestamp=1792324182&ver=1&signature=lXhfCjXSoPYcL2RIfUOwPXEi65Ed4u144GY3u*hM7-Gq4btZ7Ecf92ZuXuRRSZr6rZn0Gp*IDgfWJjW7DX9eeD1YKeFHZNX1gRdNIKZf1joTKv*prcN9z3H6fRhqo3HUTsRckt5qxv3pLqjlSnHikQ==
+24. 为何年轻人都想进大厂做运营？门槛低、月薪高还不加班的工作谁不想要！｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324182&ver=7034&signature=yoFlR9MhPOnYUCc3tDpU6ppYwRZg4SjRPsrb2reQHySw2YD2v*E5hLKb5EpiXl8GizhG-Jobg8hkYS8Bj1eX3VI3PSctg1Z*krBdoy-B*qF-q1siWBirGTrSyH6d2SGi&new=1
+25. 来凤找工作注意：招视频运营文案拍摄设计 5 人，一堆福利要当心｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324233&ver=7034&signature=jjPk3YiysD8GY0hZOrj6Xtm**ESJvIt7iJMiGg1JJVZjlrMfssFpS9uLwYn2xpB0xf-SGsRU17XXbiJEbFLgTIKyCM1qADufwCVuanRUQqx0ZTtuOH-ENmZ*axBEikaT&new=1
+26. 告别重复加班！市场运营部「Open Claw」自动化方案正式立项，效率直接起飞｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324233&ver=7034&signature=FtTDrATeD7yGywe6JEdgWXXy--MJa0*7T*0NZaW*CiP1Xpl33SeMpy14qwzl84odLFFHoIQpWei52XLJ-xm-SkvtFfqGee34uwx*JReC4WR5l*YerA1sudE-Jfu7JZ-a&new=1
+27. 【誉林家政】有加班补助！招聘同城运营负责人、会计、家政派单老师、全域运营业务经理、企业保洁等｜https://mp.weixin.qq.com/s?src=11&timestamp=1792324233&ver=7034&signature=AARvttdta4*qNVARTlg0tjO0tQJbJ79-LroIOtVbg3zBy39Nx3pP4A8go6RRXXdAeU23rx1J757ZUyQj7VHBxApO3PKnSbQ08unh6lPrXv-ovTfc2LgoC0-R81Jo7xfY&new=1

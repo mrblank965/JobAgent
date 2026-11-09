@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
    * 排除之后它才能找到自己的 worker 脚本。
    */
   serverExternalPackages: ["tesseract.js"],
+
+  /**
+   * 知识库打包文件走 fs 读，Next 的依赖追踪看不到这条读取，
+   * 打 standalone / 部署时会漏掉它，导致线上检索永远「未覆盖」。
+   * 这里显式声明，按路由 glob 带上。
+   */
+  outputFileTracingIncludes: {
+    "/api/kb/*": ["./kb/store/kb-bundle.json"],
+  },
 };
 
 export default nextConfig;

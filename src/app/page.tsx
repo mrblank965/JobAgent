@@ -1,20 +1,30 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import Link from "next/link";
 import { AISettingsCard } from "@/components/home/AISettingsCard";
+import { useStore } from "@/lib/store";
 
 const steps = [
-  { n: "01", label: "上传简历" },
-  { n: "02", label: "粘贴 JD" },
-  { n: "03", label: "AI 分析" },
-  { n: "04", label: "生成建议" },
+  { n: "01", label: "解析简历" },
+  { n: "02", label: "拆解 JD" },
+  { n: "03", label: "岗位匹配" },
+  { n: "04", label: "简历定制" },
 ];
 
 export default function Home() {
-  const [resumeName, setResumeName] = useState("");
-  const [jd, setJd] = useState("");
-  const ready = Boolean(resumeName && jd.trim().length >= 20);
-  const jdLength = useMemo(() => jd.trim().length, [jd]);
+  const { jds, resumeDraft, resumeVariants } = useStore();
+
+  const resumeReady = resumeDraft.text.trim().length >= 30 || resumeVariants.length > 0;
+  const jdReady = jds.length > 0;
+  const ready = resumeReady && jdReady;
+
+  const nextStepText = ready
+    ? "简历与 JD 都已就绪，可以进入「岗位匹配」查看覆盖率与缺口。"
+    : resumeReady && !jdReady
+      ? "简历已就绪，还需要拆解一份 JD。"
+      : jdReady && !resumeReady
+        ? "JD 已就绪，还需要解析一份简历。"
+        : "先在「简历解析」准备一份简历，再到「JD 拆解器」粘贴岗位原文。";
 
   return (
     <>
@@ -40,61 +50,47 @@ export default function Home() {
           </div>
         ))}
         <div className="stat">
-          <div className="n">{resumeName ? "✓" : "—"}</div>
+          <div className="n">{resumeReady ? "✓" : "—"}</div>
           <div className="l">简历已就绪</div>
         </div>
         <div className="stat">
-          <div className="n">{jdLength >= 20 ? "✓" : "—"}</div>
+          <div className="n">{jdReady ? "✓" : "—"}</div>
           <div className="l">JD 已就绪</div>
         </div>
       </div>
 
       <div className="nextstep">
         <b>{ready ? "材料已准备完成" : "准备开始分析"}</b>
-        <div className="muted mt8">
-          {ready ? "可以进入下一阶段。" : "请上传简历，并输入至少 20 个字的岗位描述。"}
-        </div>
+        <div className="muted mt8">{nextStepText}</div>
       </div>
 
       <div className="split">
         <div className="card">
           <div className="spread">
-            <h3>上传你的简历</h3>
-            <span className="tag partial">PDF / DOCX</span>
+            <h3>简历解析</h3>
+            <span className={`tag ${resumeReady ? "hit" : "partial"}`}>{resumeReady ? "已完成" : "待开始"}</span>
           </div>
-          <label className="dropzone">
-            <span className="big">↑</span>
-            <b>{resumeName || "点击选择简历文件"}</b>
-            <span className="tiny mt8">中期版本暂不支持扫描图片 OCR</span>
-            <input
-              type="file"
-              accept=".pdf,.docx"
-              className="sr-only"
-              onChange={(event) => setResumeName(event.target.files?.[0]?.name ?? "")}
-            />
-          </label>
+          <p className="tiny mt8">上传 PDF、DOCX，或直接粘贴简历全文，解析出教育、实习、项目、技能与个人优势。</p>
+          <div className="row mt16">
+            <Link className="btn primary" href="/resume">
+              {resumeReady ? "继续编辑简历" : "去解析简历"}
+            </Link>
+            {resumeVariants.length > 0 ? <span className="tiny">已保存 {resumeVariants.length} 个简历版本</span> : null}
+          </div>
         </div>
 
         <div className="card">
           <div className="spread">
-            <h3>粘贴目标岗位 JD</h3>
-            <span className="tiny">已输入 {jdLength} 字</span>
+            <h3>JD 拆解</h3>
+            <span className={`tag ${jdReady ? "hit" : "partial"}`}>{jdReady ? `已存 ${jds.length} 份` : "待开始"}</span>
           </div>
-          <textarea
-            className="input"
-            style={{ height: 200 }}
-            placeholder="请粘贴完整的职位描述，包括岗位职责、任职要求、技能要求等……"
-            value={jd}
-            onChange={(event) => setJd(event.target.value)}
-          />
+          <p className="tiny mt8">粘贴岗位原文，提取关键词与职责要求，逐条比对技能，并整理投递信息。</p>
+          <div className="row mt16">
+            <Link className="btn primary" href="/jd">
+              {jdReady ? "查看已存 JD" : "去拆解 JD"}
+            </Link>
+          </div>
         </div>
-      </div>
-
-      <div className="row mt16">
-        <button type="button" className="btn primary" disabled={!ready}>
-          开始智能分析
-        </button>
-        <span className="tiny">当前为项目协作底座；简历解析、DeepSeek 分析和匹配报告将由各功能分支接入。</span>
       </div>
 
       <AISettingsCard />

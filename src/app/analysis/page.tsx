@@ -1,20 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { buildDirectionCandidate, matchDirections } from "@/lib/career";
+import { buildResumeCandidate, matchDirections } from "@/lib/career";
 import { useStore } from "@/lib/store";
 
 export default function AnalysisPage() {
   const { profile, resumeVariants, resumeDraft } = useStore();
-  const resumes = [
-    ...resumeVariants.flatMap((item) => item.structuredData ? [item.structuredData] : []),
-    ...(resumeDraft.resume ? [resumeDraft.resume] : []),
-  ];
-  const candidate = buildDirectionCandidate({ profile, resumes });
+  const { candidate, hasUnsavedDraft, isEmpty } = buildResumeCandidate({
+    profile,
+    resumeVariants,
+    resumeDraft,
+  });
   const matches = matchDirections(candidate);
-  const hasEvidence = Object.values(candidate).some((items) => items.length > 0);
 
-  if (!hasEvidence) {
+  if (isEmpty) {
     return (
       <>
         <div className="view-head">
@@ -38,7 +37,12 @@ export default function AnalysisPage() {
       <div className="view-head">
         <h1>🧭 方向分析</h1>
         <p>综合教育背景、实习工作、项目论文、技能和个人优势，识别你可以重点尝试的金融求职方向。</p>
+        <p className="tiny">分数基于你保存过的<b>全部简历版本</b>合并计算，反映的是手上所有材料的整体底色，不是某一份简历。</p>
       </div>
+
+      {hasUnsavedDraft ? (
+        <div className="warnbox mb12">当前使用的是未保存的解析结果，保存到资料库后才会写进简历版本。</div>
+      ) : null}
 
       <div className="cards">
         {matches.map((item) => {

@@ -1,0 +1,1330 @@
+# 解析结果 · 基金产品经理（fin-fund-product-manager）
+
+> 解析 Agent · 2026-10-29 · 共 58 篇 · 其中 0 篇用到 OCR
+
+## 1. 私募基金产品经理 必备技能
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415418&ver=7036&signature=YOdxSZGJ34*QrfaKVmAi3CLG*KlgFDoO3YCs91p6xpWJ-B-HjpcQ*7hv9CsW4KshviHfLxab4BCxtwl2FOXB*QU6oWfzZyTEt8w8biPeQ1g1jG5e1xOsHbxKEaQtt3QD&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+私募基金产品经理 必备技能
+产品交易结构的设计 师弟师妹们刚开始接触,估计有点陌生,但是,如果好好学习了金融学里面的知识,还是会知道一些的...找托管机构 刚才提到的,不同类型的基金产品,托管跟监管是不同的,契约必须是托管,因为是在托管机构直接开户的,如果没有托管银行机构...合同的制定 对于契约型基金,在找到托管机构之后,就需要修改托管机构给的合同模板了,因为银行或者券商,都有固定的合同模板...
+```
+
+## 2. 基金经理的工作日常
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415418&ver=7036&signature=maUUJmyi51jjuk7uV38Rmc1h7GpYwnUSFFrGTh8W2AALS4gcLNRo4zuXA7KmIGPu4sv*yRSi8RREeRza6Ng8jyJUkZjeTafibYNNXFmIDVcY4N6RBb0s9Pll6jS3uZ2N&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+基金经理的工作日常
+基金经理的工作日常,没有那么多的轰轰烈烈,大多数时候就是日拱一卒,缓慢而平淡.但因为知道在做正确的事,有了信念与方向,...
+```
+
+## 3. 兴全合宜发行倒计时!基金经理出镜发红包~
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415418&ver=7036&signature=-7ttbxx4Ramz7TMw9qJTUeU34oU8cpw54c-Osx*w82uzvR2z-vUh*E9F0mKexWEX9xRaoQnke1mOYBj6NZwWOMGvE2mMmol-8BL-AGJu2ieQgAqnhRNxt71rDRpklw5z&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+兴全合宜发行倒计时!基金经理出镜发红包~
+中长期业绩表现好的产品要求基金经理基本上每一年都是有超额收益的,还需要一个比较稳定的同类排名.但是在股票市场每一年都能...
+```
+
+## 4. 市场热捧的明星基金经理产品,竟然开始折价卖!
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415418&ver=7036&signature=hk8EN8Vj1Yd9fT5HyvJO8jycr4lw96ogzSz7irOOrSHIVXVBlX*Ri4-3TVRAzFCwhqieU1QKPjNCIgZhb0Bsb6FMVHi6XkG-*nPumUfzhfLPlaavbiNkMN**7MbfzgUA&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+市场热捧的明星基金经理产品,竟然开始折价卖!
+权威、深度、实用的财经资讯都在这里10月来市场持续震荡,不少明星基金经理管理的上市交易产品随之出现了“折价”,最高折价率...
+```
+
+## 5. 热情高涨！25只新基金扎堆发行，明星基金经理产品又有爆款？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415418&ver=7036&signature=TYoqdkLRWDwkTNRtI9bS7Xlbs*WYj9i9WEt1dfy0u3gE-mK53chuXSxkwr*UBSH20stSM9QIh7b0ITdGKaKZmXbFjZ7i5rSlQCR-9PIyEB4nbUw04GehFRSy--hfqrmZ&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+热情高涨！25只新基金扎堆发行，明星基金经理产品又有爆款？
+投资者布局新基金,要注意关注产品信息、发行信息、基金经理人选、业绩基准等细节.再次提醒投资者,不要盲目入市,尤其不要把...
+```
+
+## 6. 社招 | 思晔投资招募基金产品经理(上海)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415418&ver=7036&signature=TQM1p1gTDADm4Q20JG20l1WzCIA3QcDwqDtr3qAf57O*Gnrm8OLQSuLaW9ixvd4xcxJqHpe*EgR73JCMXpbYuRqlgWvBObvz45tfC4T-J*RURdppluJCtRkRvkLzIWb1&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 思晔投资招募基金产品经理(上海)
+信息来自委托发布基金产品经理工作职责:1、 研究海内外经济层面,宏观、策略、市场策略、公司热点等方面信息,包含但不仅限于...
+```
+
+## 7. 社招 | 浦银安盛基金招募产品经理、机构销售(上海/北京)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415418&ver=7036&signature=TQM1p1gTDADm4Q20JG20l1WzCIA3QcDwqDtr3qAf57OgFh4PxeNjAG4kERKOwTpgEG9uywiMWcT*d15UEWbMyVqkYb*P0xwbuQBKV8fxQRefOS1QSgCNfIjMouLYoX17&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 浦银安盛基金招募产品经理、机构销售(上海/北京)
+信息来自官网,请以阅读原文为准产品开发经理发布日期 2020-01-08结束日期 2020-03-31职位名称 产品开发经理所属部门 产品开发...
+```
+
+## 8. 好多基金开始增聘基金经理了
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415418&ver=7036&signature=m6p580Mm4SiRci7VW0-Z9mm-kUh1aLQDNFd1KLavY4WLjBPS2J1-IglACxy4PF6OmH6XsYQkF9WAmCBaR7dg-3KQUIW*tT05MINTj-0Z81k2gBP*X6Xpaq4OfVHe5phJ&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+好多基金开始增聘基金经理了
+所以在日常管理过程中会遇到什么问题,在设计产品阶段是没有办法穷尽的,只能具体问题具体分析.远去的个人英雄主义多基金经理...
+```
+
+## 9. 社招 | 海富通基金招募高级产品经理、基金会计、高级HRM(上海)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415470&ver=7036&signature=TQM1p1gTDADm4Q20JG20l1WzCIA3QcDwqDtr3qAf57Pr3jbR2VrkKfOU-VOtAzjKcqdEGelXRXL6k7K5Q2jAf0MJVHsxgdUvzCClaZEGWq9d-O4oX*v*zo5RqotyUgM8&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 海富通基金招募高级产品经理、基金会计、高级HRM(上海)
+信息来自海富通基金官网,内容请以原网站为准高级产品经理岗位主要职责:1.研究、开发符合市场情况和投资者需求的产品,提出产...
+```
+
+## 10. 社招｜中信建投基金｜产品经理岗、股票研究员岗、法律合规岗、债券交易员岗、基金会计岗​
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415470&ver=7036&signature=aI4J1tFwYPLTIvJA7johuuh3xh0ymKZWc6N3OCIeW0vOdVSxjR5Vsz7pDiawA6orQYt2-mG5Im1BFpa2fJmIaELBVj0bomgromUB05138cqajfkEjdFr6cZn7DAZAGLI&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招｜中信建投基金｜产品经理岗、股票研究员岗、法律合规岗、债券交易员岗、基金会计岗​
+信息概览招聘单位:中信建投基金管理有限公司招聘职位:产品经理岗、股票研究员岗、法律合规岗、债券交易员岗、基金会计岗工作...
+```
+
+## 11. 社招|川谷金融|机构业务经理/总监、产品经理、高级金融算法工程师、基金产品运营经理、私募FOF基金经理
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss24vG3N7dCofMe2akkZVnfS1qXa8Fplpd90LDSdEpKuYuP5vZM5ITsNAxPDW9N_KJFyS3koxBS3ODIwO7kkYXSYrzCeUmnxd2_nFniaKVpmJ5E9oTwx1HovDIDe-q6Ro0cNIi0VkrujemEeyyK9zRHhHM-XVX78ijWN0i65DRXBqnOq6mHlhdaX46WHNq_1rZ_rHr9TefKSzB6VKrzu_4XKA..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%97%A5%E5%B8%B8%26token%3D46CFCF6FEDD0589AA0A7FEB59EFE8019A1DFA4656AD616EE
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招|川谷金融|机构业务经理/总监、产品经理、高级金融算法工程师、基金产品运营经理、私募FOF基金经理
+信息概览单位:川谷金融科技职位:机构业务经理/总监、产品经理、高级金融算法工程师、基金产品运营经理、私募FOF基金经理地...
+```
+
+## 12. 社招 | 思晔投资招募基金产品经理(上海)
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss24vG3N7dCofMe2akkZVnfS1qXa8Fplpd9AxsSYx7K8G1Jk5oE975WWkxpSGjEhwoKjeDTq0cbHCXgifeI6QQNw2qXEaarImWv1cMqvbpLx9wlz_Q7F3VjHZx2fX-b2I50cc_phE6A_WZjCQWhaoPSys-Dj4q2svoo2KDCVOZ0yKOqr0ZeNcHT-yAcOa1jMoHtwfAmvau-Nhdj32-j2KiwUw..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%97%A5%E5%B8%B8%26token%3D46CFCF6FEDD0589AA0A7FEB59EFE8019A1DFA4656AD616EE
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 思晔投资招募基金产品经理(上海)
+信息来自委托发布基金产品经理工作职责:1、 研究海内外经济层面,宏观、策略、市场策略、公司热点等方面信息,包含但不仅限于...
+```
+
+## 13. 社招|天弘基金|行业研究员、公募产品经理、机构销售、渠道销售、金工岗、固收投研研发等
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss24vG3N7dCofMe2akkZVnfS1qXa8Fplpd90LDSdEpKuYuP5vZM5ITsNAxPDW9N_KJFyS3koxBS3ODIwO7kkYXSYnpETbyUFFS2wR1VQwi20UVs5-4l44124lh139irYIsCgOViiJyxsCo6y1ybuPdB5_QO1uq39eYET1p2zvShv8_4l77ztIM3edLM91rtKMWnqdPsLe87Q2zvzHZXxeLdyg..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%97%A5%E5%B8%B8%26token%3D46CFCF6FEDD0589AA0A7FEB59EFE8019A1DFA4656AD616EE
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招|天弘基金|行业研究员、公募产品经理、机构销售、渠道销售、金工岗、固收投研研发等
+信息概览单位:天弘基金职位:行业研究(通信/机械/医药)、公募产品经理、机构销售、渠道销售、金工岗、固收投研研发/AI基本面...
+```
+
+## 14. 一个基金经理如何挖掘出5年10倍的牛股?
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss24vG3N7dCofMe2akkZVnfS1qXa8Fplpd9LCZdYeaHbSBBNMkhZSKu6c84cepURezQijq8NsFk-GEu-CWUOvpLfLOl4gBHox67j2g72YmIYAK8f6RAWVnARypemBl65uSSvdnNIbWL645eTml3LokXyYq2CF0KJxLVU56SF0a2_xSiUYwVnE1SnbhHC1poJC2vxwxnj8t6xL200NVofL2iDw..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%97%A5%E5%B8%B8%26token%3D46CFCF6FEDD0589AA0A7FEB59EFE8019A1DFA4656AD616EE
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+一个基金经理如何挖掘出5年10倍的牛股?
+一个基金经理的“自我修养”Q:基金经理的日常生活跟别人有什么不同?陈平:基金经理也都是普通人.可能跟大家不一样的地方在...
+```
+
+## 15. 公募基金的产品经理是做什么的?
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=9fRLj7O2gKvAcvfT72Oj47wgACMMk7vflOumV3gYA3OFZ0Bn9g08FRPE8g*fb7ToxOROGkBDLiKp2cm6YuDpyRZFBrH-WNGTzDTt65m93pqGY7gzLjjeGmHk*BAC9usB&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+公募基金的产品经理是做什么的?
+那么,公募基金产品经理到偏研究还是偏市场?主要是负责什么?和基金经理工作界限又是什么?01产品经理的起源产品经理这个概念...
+```
+
+## 16. 还在封闭期，又有基金经理离任！
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=TYoqdkLRWDwkTNRtI9bS7Xlbs*WYj9i9WEt1dfy0u3iTAKsP8zcyHSpB6kq0C*En19FdW7fIyNJO7mMOzlbT9QBaFUkxRJTnM4eCRcubgzgL3s3xs7bXmrOk6DqbKiBD&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+还在封闭期，又有基金经理离任！
+中国基金报记者  张燕北
+         
+
+基金还在封闭期，基金经理却离任了……这种情况再次上演。
+         
+
+据公司最新公告，朱雀基金旗下基金经理李洋卸任在管的两只基金，其中一只还是去年9月份才成立的三年持有期基金，且成立以来业绩告负。
+         
+
+而自下半年以来市场持续震荡，基金公司人事变动也很频繁。不到一个月时间已有32位基金经理离任，出现离任小高潮。
+         
+
+又有基金经理在产品封闭期离任
+         
+
+日前，朱雀基金发布基金经理变更公告，李洋因个人原因卸任在管的两只基金，且已按规定在基金业协会办理变更和注销手续。
+         
+
+李洋2019年1月加入朱雀基金，在离任前担任朱雀匠心一年持有和朱雀碳中和三年持有两只持有期基金的基金经理。朱雀匠心一年持有此前系李洋与梁跃军、张璇共同管理，朱雀碳中和三年持有则由李洋和梁跃军共同管理。
+         
+
+公开资料显示，梁跃军从事证券行业超20年，先后在招商银行北京分行、西南证券、西部证券等公司任职，之后加入朱雀投资，2019年担任朱雀基金总经理职务。
+         
+
+值得一提的是，朱雀碳中和三年持有成立于2022年9月7日，目前仍处于锁定期，投资者不可卖出。截至2023年7月21日，其今年来收益率为-2.30%，成立来收益率为-7.95%。
+         
+
+即使该三年持有期基金采用双基金经理制，基金经理之一中途离任也引发一定关注。对于部分持有期或定开产品的基金经理在所管基金封闭期即离职的现象，受访人士普遍认为，其会对基金产品本身运行和基金管理人口碑造成负面影响。事实上，朱雀基金投资团队变动比较频繁。
+         
+
+据了解，朱雀基金是2016年以来6家获批“私转公”机构中的一员，其公募的成立日期为2018年10月25日。Wind数据显示，朱雀基金目前有6位基金经理。自2020年6月份至今，张延鹏、翟羽佳、何之渊、柳雯青、李洋等5位基金经理先后离职。其中，翟羽佳跳槽至淳厚基金担任基金经理。
+         
+
+截至二季度末，朱雀基金共有9只公募产品，合计管理规模为168.78亿元。其中，仅梁跃军就管理了8只，在管规模达158.52亿元。
+         
+
+下半年32位基金经理离职
+         
+
+下半年以来市场持续震荡，基金经理离任也出现小高峰。
+         
+
+Wind数据显示，截至7月24日，本月以来已有32位基金经理离职，涉及29家基金管理人。估算下来，平均每天至少离职1人，其中东吴基金有两位基金经理离职。统计显示，今年上半年共有147位基金经理离职，在基金经理变更频繁的4月份有37人离任。按照目前的趋势，本月离任基金经理数有望超过4月份。
+         
+
+最近离职的基金经理中，不少还是颇具知名度的基金经理。7月24日，兴证全球基金发布旗下产品基金经理变更公告称，因个人原因，自7月24日起，陈红不再担任兴全汇虹一年持有混合、兴全汇吉一年持有混合、兴证全球兴裕混合的基金经理，三只基金分别由基金经理朱喆丰、刘琦、翟秀华接管。此次卸任后，陈红目前暂无在管产品。
+
+
+根据资料，陈红，历任金元比联基金管理公司产品研究岗，平安资产管理有限责任公司投资管理部、固定收益部投资经理；加入兴证全球基金后，先后担任专户投资部总监助理、固定收益部副总监等职务。
+
+
+7月1日，易方达战略新兴产业股票、易方达创新成长混合、易方达新兴成长灵活配置同时发布公告显示，基金经理刘武因个人原因卸任在管基金。
+
+截至今年一季度末，刘武管理规模超过120亿元，任职期最佳回报近177%。据记者了解，刘武下一站或将奔私。
+
+
+不到一周后，另一家公募大厂旗下一位知名QDII基金经理离职。他从2016年11月开始就管理基金产品，前后一共管理过五只产品，所覆盖的类型包括了QDII、指数基金、股票型基金和混合型基金。
+
+
+基金经理离职的同时，基金公司也在加速补血。据Wind统计，7月以来共21家基金公司增聘基金经理44位。不难看出，公募人事变动频率呈现持续走高态势。
+
+
+震荡市下基金经理压力大
+
+
+从批露的基金经理离任原因来看，以“个人原因”及“个人发展原因”居多。华南一位公募人士表示，“个人原因”通常包括“公奔公”、“公奔私”、“业绩不佳未通过考核”，以及公司治理问题。
+
+
+
+他表示，2023年公募半程排名赛告一段落，上半年的成绩会影响到基金经理接下来的去留。“一方面，业绩较好的基金经理可能会趁着‘高光时刻’跳槽，前往自己更心仪的平台。不难发现，最近离职的基金经理大多来自中小型基金公司，一些业绩确实不错的，可能主动去或被挖去更大的公司。”
+
+“另一方面，业绩不好的基金经理可能会在考核压力下离开。尽管公募倡导长期投资，半年度的排名也很关键，一些业绩长期没有起色、上半年业绩也不佳的基金经理，可能会被‘下课’。”上述公募人士表示，今年上半年的结构性行情对基金经理形成考验，下半年持续波动的市场更是拉大主动权益基金的业绩差距，不少基金收益很难看。
+
+据Wind数据显示，今年年初以来已有179位基金经理离职，涉及上百家基金公司。据了解，结构性行情中基金业绩大面积分化，短期业绩不佳的基金经理考核压力加大。而连续两年业绩排名靠后的基金经理，基金公司可能直接劝退。
+
+沪上一位基金经理表示，有些基金经理离职是为“奔私”。近两年来市场环境向好，公募基金高管和基金经理“奔私潮”再起。中国证券投资基金业协会信息显示，不少高管和基金经理离职创业，成立私募基金。“当然，不排除有些公司是5、6月份发年终奖。领完年终奖后，有跳槽意向的基金经理就会离职。”他补充道。
+         
+
+另一方面，券商资管也从公募基金挖角。在其外部引入的基金经理中，由公募基金的成熟投研老将“转会”而来的数量较多，比如东方红资产管理今年以来陆续引入来自摩根基金、中信保诚基金的数位知名基金经理。
+
+
+一位大型券商基金评价中心主任表示，基金公司开始注重内部人才的培养，公募通过事业部、股权激励等手段已留住一部分核心人才，部分人才甚至从私募流向公募。但是，多数公司基金经理培养机制仍有待完善。
+         
+
+编辑：乔伊
+审核：木鱼
+
+
+
+
+
+
+
+
+
+
+
+版权声明
+
+《中国基金报》对本平台所刊载的原创内容享有著作权，未经授权禁止转载，否则将追究法律责任。
+
+
+
+
+授权转载合作联系人：于先生（电话：0755-82468670）
+```
+
+## 17. 两年赚了150%+!那些同时管公募、“私募”的明星基金经理
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=F6QgqUTs0oFLgWbEUdgNSZlYsCQ36UQ3bqi3sQg5aGfgICYjFLkrtpBT27z84zd61N17GXIHO8BAnl-au4EbVxBywBdu444afTDeFmwgHGgy1F3S91xEMJNzZumqAgzd&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+两年赚了150%+!那些同时管公募、“私募”的明星基金经理
+那么,公募的基金经理能做好私募吗?厂长今天也带大家来看看现在的情况.为什么要基金经理兼任私募? 关于基金经理兼任私募,...
+```
+
+## 18. 600亿顶流!厂长今年最期待的奔私基金经理要行动了!
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=F6QgqUTs0oFLgWbEUdgNSZlYsCQ36UQ3bqi3sQg5aGdCHnHDilZavS7a77uMECsPRwM--n6Ki-Xa2GyZmt*9*X1KiEapClyXQDS4Etx*CpyKwIISjcYBYwsGht2aiNVE&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+600亿顶流!厂长今年最期待的奔私基金经理要行动了!
+不构成投资建议哦~厂长的话周末又有瓜,传某公募基金经理因为PC被抓被迫离职,新发的基金也只能“提前结束募集”.有意思的是...
+```
+
+## 19. 业绩倒数第一，基金经理公告离任！公募考核制度上演"优胜劣汰"
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=xnxUQJNiFkZ0hYCyOyP5jwxdANOVRH8WD-EY3BCeD4RjMML3RI5wWExZq1xc-rshMsRA9qUfyhCDkgGjGEpGS6cKdCb4u-bP1hMyTKKYpnPXIzme9iv2ZeLdyfOEojyA&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+业绩倒数第一，基金经理公告离任！公募考核制度上演"优胜劣汰"
+责编：杨喻程
+
+校对：廖胜超
+
+
+
+百万用户都在看
+
+深夜，美股突然跳水！美财政部最新宣布，影响多大？
+
+
+新年利好！元旦假期影响一周市场的十大消息
+
+恒大汽车深夜公告！英美准备联手发动空袭！红海危机升级，影响多大？
+
+
+突发！乌克兰遭袭，超100人伤亡！俄大量轰炸机升空，普京发声！王健林再传大消息
+
+违法和不良信息举报电话：0755-83514034
+
+邮箱：bwb@stcn.com
+```
+
+## 20. 公募基金业的“内卷”
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=y*D6i4*qFBjrZKeQRFE84yZ*sVzPMKnDUwZocgFgQD0In0-r0aWfzvsxcBxhEdM8NmHtpGK3UtX2vu3m70E5RyUiEcUiSKg-tQP8BBSx6r5zLqC7JYJxjVS9UwHZDdth&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+公募基金业的“内卷”
+公募行业或仍将是他的下一个落脚点. 74只基金,18个基金经理,人均“一拖四”,基金业绩则在规模优势与抱团节奏下不温不火—...
+```
+
+## 21. 基金经理离职一般都会去哪儿?
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=ZHG4awlpEjyqqu49Y90jK0AiyRYodYL9kdTlurBMzX0N4bNEiD*dZA-QPWlO0pu-ssHjbUkbV0tZgG7Q-zfJWl2fu-lPnZTSQwwF3OVyLUQsuvbgFy817KbgDLq5Zf8L&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+基金经理离职一般都会去哪儿?
+是包括公募基金在内的多有行业的正常现象.2、基金经理业绩竞争激烈,压力大2021年市场风格来回切换,板块轮动加剧,基金经理...
+```
+
+## 22. 用益-信托经理参考：公募REITs真的来了，信托如何分杯羹？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=zCDw1F8LQowDc8ECDYw5rejZvds1o5eXEeNmXffU3OEKxLvwf5aCUxw0IR*g8ZTwLs0g-k8WxbZPiPDJf*Wfu43jylxLiB2ILSvGyRmZSm2gLnFEQ9CmYzyF8Bm-ymvM&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+用益-信托经理参考：公募REITs真的来了，信托如何分杯羹？
+招募说明书、托管协议和产品资料摘要等.询价公告显示,5只公募REITs将于5月19日-21日进行路演,5月24日正式询价,5月31日为...
+```
+
+## 23. 社招｜天弘基金｜行业研究员、公募产品经理、机构销售、渠道销售、金工岗、固收投研研发等
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=aI4J1tFwYPLTIvJA7johuuh3xh0ymKZWc6N3OCIeW0vuc-mJfgjxWY6kZET5EKufKquT-S5QWKBuhDNg16GqxOSlf3m0uuk*RO2sR6CwonS0M*vps4sPaS34Bu5afpP4&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招｜天弘基金｜行业研究员、公募产品经理、机构销售、渠道销售、金工岗、固收投研研发等
+信息概览
+
+单位：天弘基金
+
+职位：行业研究（通信/机械/医药）、公募产品经理、机构销售、渠道销售、金工岗、固收投研研发/AI基本面量化/金融算法工程师、风控/投研数据专家、金融科技PMO专家、产品经理（基金产品管理方向）
+
+地点：北京/上海/广州/深圳
+
+
+
+
+公司简介
+
+  天弘基金成立于2004年，注册资本5.143亿元。2013年，天弘基金与支付宝合作推出余额宝，是天弘余额宝货币市场基金管理人。天弘基金秉承“稳健理财，值得信赖”经营理念，成立21年来，锐意进取、不断创新，受到了市场的广泛认可。
+
+  近年来天弘基金资产管理规模快速增长，名次持续攀升。2015年底，天弘基金成为中国基金业史上首个资产管理规模破万亿的基金管理公司。截至2025年12月31日，天弘基金资产管理总规模12,759.41亿元，其中公募基金管理规模12,542.23亿元，位于行业前列；非货币公募总规模4,265.26亿元，排名行业第18，成立以来累计为超过7.5亿公募用户创造收益3,668.43亿元。
+
+ 
+
+职位介绍
+
+职位1
+
+行业研究员（通信/机械/医药）（北京/上海）
+
+职责
+
+1、跟踪全球宏观经济、产业政策及市场动态，建立并维护行业数据库，深入理解行业周期与成长逻辑；
+
+2、开展上市公司及非上市公司深度调研，获取前瞻性信息，完成财务建模、盈利预测、估值分析及投资价值判断；
+3、独立撰写深度研究报告、跟踪及点评报告，输出逻辑严谨的投资观点，提供明确、及时的投资建议。
+
+要求
+
+1、硕士及以上学历，复合背景（如理工科+金融）更佳；
+
+2、具备3年以上相关行业研究经验，具备相关产业链工作经验优先；
+
+3、精通财务建模（DCF/DDM等），具备敏锐的洞察力，出色的报告撰写和表达能力，逻辑清晰；
+
+4、热爱研究，自驱力强，责任心强，抗压能力强，结果导向。
+
+
+
+
+职位2
+
+公募产品经理岗（北京）
+
+职责
+
+1、根据公募市场趋势、投资者需求及公司业务禀赋，进行公募产品的研究论证与开发工作；
+
+2、完成基金申报材料的撰写、申报、审批及产品成立后的全生命周期管理及维护工作；
+
+3、跟踪国内外资产管理行业发展情况、最新监管政策及同业产品竞争趋势，撰写研究报告，为公司产品布局提供支持并创造价值；
+
+4、参与公司公募产品战略规划，为公司业务发展提供方向和建议等。
+要求
+1、硕士及以上学历，金融、经济、法律等相关专业，具有2年以上公募基金产品设计开发经验（具备ETF产品开发经验优先）；2、熟悉公募基金相关法律法规，能够独立完成各类型公募产品法律文件的撰写和上报；3、具有优秀的逻辑思维能力、数据处理能力和分析能力，具有优秀的信息收集、归纳和协作能力；4、具有较强的自驱力、学习能力、沟通能力及团队合作意识，能够积极应对工作中的压力与挑战。
+
+
+
+职位3
+
+机构销售经理（北京/广州/深圳）
+
+职责
+
+1、开拓并深度维护银行自营、理财子等核心机构客户关系，系统推进长期合作；
+2、精准洞察客户需求，提供高度专业化、定制化的综合服务与解决方案，建立多层次可持续的合作体系；
+3、承接并分解公司业务战略，有效推动基金产品销售落地，持续提升市场份额与品牌影响力，确保业绩目标达成。
+要求
+1、硕士学历，经济、金融等相关专业优先，2年以上机构销售或同类岗位经验者优先；
+2、具备扎实的金融业务知识与市场洞察力，卓越的客户经营与解决方案能力，结果驱动；
+3、出色的跨部门协作、商务沟通与抗压能力，积极主动、思维开放，具备高度责任感和团队合作精神。
+
+
+
+职位4
+
+渠道销售经理（北京）
+
+职责
+
+1、负责辖区内银行渠道代销业务的开拓，做好公司投资理念在渠道上的品牌和产品宣传工作，深度耕耘所覆盖区域及渠道；
+
+2、根据团队销售目标和区域客户情况，制定有针对性的销售方案，达成销售任务；
+3、基于对公司产品及服务能力的深入了解，结合客户需求，提供差异化综合性资管服务方案，并推动业务转化落地；
+4、与客户建立长期良性合作关系，在区域内促成战略型合作客户的开发与维护。
+
+要求
+
+1、硕士学历，1年以上金融同业（银行、证券、基金）销售岗经验，具有良好的业绩产出；
+2、具有良好的沟通表达能力和学习能力，抗压能力强，执行力强；
+3、勤奋上进、专业敬业，具有较强的团队协作精神。
+
+职位5
+
+金融工程岗（北京）
+
+职责
+
+1、负责进行绩效、基金经理画像、归因模型建设、风险相关数据处理、系统监测、指标计算、报告生成等工作。
+
+2、参与不同风险类型的账户（权益、固定收益、货币、FOF、QDII等）风险评估、分析工作，涉及市场风险、流动性风险、信用风险，就发现的风险，跨团队进行沟通。
+
+3、深度参与风险管理系统建设与规范流程建立工作。
+
+4、完成部门交办的其他监管报送、汇报材料整理等工作。
+
+要求
+
+1、硕士及以上学历，金融、统计、数学、物理、计算机等相关专业优先，2-5年左右相关经验，特别优秀的应届毕业生（含海外毕业）也可；
+
+2、具备较强的数据处理和编程能力（核心要求），具备一定数理、计量知识，熟悉Python等编程语言优先；
+
+3、具有优秀的分析问题、解决的问题能力，思路清晰、抗压能力强、沟通能力强，有较强的工作责任心和团队合作精神。
+
+
+
+
+职位6
+
+固收投研研发工程师（北京）
+
+职责
+
+1、重点负责公司固收投研一体化平台相关系统的设计与开发，通过良好的设计、高质量的代码，完成软件开发任务；
+
+2、能够深入理解固收投资业务和技术上下游链路，确保系统设计与业务逻辑深度契合，并能够有效的解决业务痛点问题；
+
+3、具备企业级架构设计与领域建模能力，保障系统在高并发与业务快速迭代下的扩展性与灵活性，并能主导性能优化与技术难点攻关，提升系统稳定性与可维护性。
+
+要求
+
+1、本科及以上学历，3年以上金融行业相关岗位工作经验，具备基金行业从业背景优先；
+
+2、扎实的java编程基础，深入理解Java、EE、微服务、消息中间件等相关技术；并对各种开源框架如Spring、消息中间件等有上手实操经验；
+
+3、具备高并发访问的Web应用系统设计和开发经验，丰富的线上运维经验；
+
+4、具备良好的识别和设计通用框架及模块的能力良好的沟通协作能力以及owner意识。
+
+
+
+
+职位7
+
+风控数据研发专家（北京）
+
+职责
+
+1、业务融合与方案设计：深入理解风险绩效、投资合规等风控核心业务，将业务规则与监管要求精准转化为数据模型、指标体系与技术解决方案；
+2、平台建设与数据建模：主导或核心参与风控数据湖/仓建设，负责覆盖市场、信用、流动性等风险域的数据模型设计、高性能ETL开发与数据资产沉淀，确保风控数据的准确性、一致性与高时效；
+3、风险数据产品交付：构建并持续优化风险数据集市，为关键风控应用（如风险计量引擎、长周期业绩排名和绩效归因等）提供统一、可复用的核心风险数据；
+4、数据治理与标准制定：制定并落地风控领域的数据标准、质量规则与治理流程，推动风险主数据管理，建立数据血缘，实现对风险数据资产的全生命周期管控；
+5、前沿探索与赋能：探索大数据、AI等技术在智能风控（如舆情风险预警、交易行为分析等）中的应用，以创新数据解决方案驱动风险管理模式的升级。
+
+要求
+
+1、本科及以上学历，计算机、软件工程、数学、统计或金融工程等相关专业；
+2、5年及以上数据平台或数据仓库开发经验，其中至少3年专注在证券、基金、资管等金融领域的风险管理系统；具备从0到1参与或主导建设风险数据集市、风控数据平台的成功经验，深刻理解风控业务数据流与核心痛点；
+3、熟悉ODPS/Hive/Spark/Flink等大数据技术栈，具备海量金融数据（如持仓、交易、行情等）处理与性能优化实战经验；熟练掌握维度建模、数据方法论，能独立完成复杂业务领域的数据模型设计；熟悉Java/Python中至少一门语言，具备高质量ETL/OLAP开发能力。
+
+
+
+
+职位8
+
+投研数据专家（北京）
+
+职责
+
+1、深耕投研业务全流程，将投研业务需求转化为可落地的数据解决方案；
+
+2、构建投研数据中台/湖仓，负责数据模型设计、ETL开发、数据集成与加工，保障数据精准与时效；
+
+3、构建投研核心指标与分析模型，支撑投研决策、风控合规及产品设计，提供高质量数据支撑；
+
+4、参与数据治理，推动数据标准制定与数据资产沉淀，通过数据洞察驱动投研决策；
+
+5、探索AI在投研数据领域的应用，赋能投研效率提升。
+
+要求
+
+1、本科及以上学历，计算机、数学、金融工程等相关专业，6年以上数据开发经验，具备金融行业投研数据开发经验，熟悉投研风控体系与核心数据源；
+
+2、熟悉ODPS/Hive/Spark SQL，能独立完成高质量ETL开发；
+
+3、掌握OLAP建模方法，能独立完成投研数据模型设计，具备投研数据治理实战经验。
+
+职位9
+
+AI基本面量化工程师（北京）
+
+职责
+
+1、系统化融合深度基本面逻辑与前沿量化技术，主导因子的研发、验证与实盘落地全过程：
+
+2、基本面因子研发：深度挖掘财务数据（利润表/资产负债表/现金流量表）、行业景气度、供应链关系、ESG、舆情等多维度数据；
+
+3、搭建因子逻辑体系：结合宏观周期、产业政策与公司基本面变化，建立跨行业、跨市场的因子逻辑框架；提升策略在不同市场周期（牛/熊/震荡）中的适应性与稳健性；
+
+4、推动因子实战落地，与数据和开发工程团队紧密协同，负责因子全流程验证与优化；
+
+要求
+
+1、硕士及以上学历，金融工程、经济学、统计学、计算机等相关专业，2年以上基本面分析/量化研究实战经验，具备头部量化私募/公募基金/国际对冲基金相关经验者优先；
+
+2、精通财务报表分析与公司估值，能独立搭建三张报表预测模型及DCF模型，对财务舞弊识别、ROE质量拆解、行业供需模型等有深刻理解；
+
+3、具备扎实的行业研究框架，对至少一个行业有深入理解。
+
+
+
+
+职位10
+
+金融算法工程师（北京）
+
+职责
+
+1、研发、优化并落地基于机器学习、深度学习及强化学习的量化策略，全程参与从数据处理到策略研发的完整投资链路；
+
+2、数据挖掘与处理：处理海量、多模态的金融数据，包括基本面数据、高频数据、另类数据、新闻文本等。构建高效、可靠的数据预处理和特征工程管道，为模型提供高质量的输入；
+
+3、模型&策略研究与开发：负责模型的训练、验证、回测和持续优化，确保模型在样本外数据的稳健性；
+
+4、独立研究并开发基于深度学习的量化因子，如图神经网络、Transformer等模型在价量、基本面、另类数据上的应用；
+
+5、设计并实现基于强化学习的交易策略模型，解决组合优化、订单执行、市场动态博弈等问题；
+
+6、探索和落地前沿的机器学习算法（如集成学习、无监督学习等），用于模式识别、市场状态划分和风险预测；
+
+7、紧密跟踪策略表现，分析策略归因，并针对市场变化进行快速迭代和调整；
+
+8、协作与创新：与数据工程师、软件开发团队紧密合作，推动策略的高效实现与系统集成。跟踪学术界与工业界的最新进展，探索将最新技术应用于投资实践的。
+
+要求
+
+1、硕士及以上学历，计算机科学、统计学、数学、物理、金融工程等相关专业，2年以上相关工作经验；
+2、扎实的机器学习基础，熟悉常见的监督/无监督学习算法，并能在量化研究中灵活运用；
+3、精通CNN、RNN/LSTM、Transformer、GNN等主流深度学习模型，并至少有一种在金融数据（如股票、期货）上成功落地的项目经验；
+4、对强化学习（如DQN, PPO, SAC等）有深入理解，有将其应用于交易、组合管理或订单执行的实际经验者优先；
+5、精通Python，熟练掌握PyTorch、TensorFlow、Keras等至少一种主流深度学习框架。熟悉SQL及常用的数据科学库；
+6、在Kaggle、天池等数据科学竞赛中取得优异成绩，或有高质量相关领域论文发表。具备处理海量数据（TB/PB级别）和高性能计算的经验。
+
+
+
+职位11
+
+金融科技 PMO 专家（技术项目管理方向）
+
+职责
+
+1、科技项目大盘治理：负责科技项目的全生命周期管理，构建实施全面项目管理体系。深入理解技术研发流程，可协同架构办公室对项目生命周期进行必要的技术管理，例如：架构评审、关键技术路线评估、风险识别及验收管理； 综合提升相关方满意度；
+
+2、科技成本及价值管理：负责统筹科技项目预算、采购、外包、项目价值等管理主题。结合业务技术架构特点，优化资源配置，实现科技成本与产出价值的高质效管理； 完善相关管理制度与评价体系。
+
+3、效能管理与工程卓越： 负责项目效能可视化及分析。深度参与交付流水线设计与研发工具链优化，通过引入敏捷/精益等实践解决研发过程中的常见瓶颈； 持续提升团队交付质量与效率。
+
+4、能力建设与技术沉淀： 在管理维度与技术维度，沉淀科技项目管理的方法论。如沉淀技术债务治理、稳定性治理、高可用架构升级等专项的管理经验； 组织重点项目复盘，提升组织整体的“技术+管理”双重能力。完成上级交办的其他工作。
+
+要求
+
+1、本科及以上学历，计算机相关专业，具备5年以上金融科技重大项目管理经验，有开发或架构经验者优先，同时具备互联网技术项目经验者优先；
+
+2、具备优秀业务敏锐度与技术理解力，能够与架构师、开发者深度对话，准确识别技术依赖、性能隐患及系统稳定性隐患；
+
+3、需具备多年技术预算、采购及外包人力管理经验，能够将上述领域在项目层面进行高效整合与体系化运作；
+
+4、深度理解 DevOps、敏捷开发（Scrum/Kanban）等理念，能够利用管理系统或工程平台搭建研发效能度量体系（例如：Jira、GitLab、SonarQube等同类工具）。
+
+职位12
+
+产品经理-基金产品管理方向（北京）
+
+职责
+
+1、负责资管基金产品管理领域数字化建设的产品规划、业务分析、功能设计，包括产品生命周期流程管理、产品主数据管理、产品创新分析等业务方向；
+
+2、跟踪金融科技发展趋势，结合公司战略形成并推动本领域业务规划及产品需求的研发落地；
+
+3、负责将业务需求转化为可执行产品方案，绘制产品原型图、产品流程和交互设计、编写相关需求说明书；
+
+4、沟通协调技术研发团队，做好日常项目进度跟进，确保产品功能特性和交付符合要求，推进产品目标的达成；
+
+5、负责与业务管理部门的持续紧密沟通，开展跨部门需求调研与梳理，有效促进业技融合工作并持续提升产品管理核心业务智能化水平。
+
+要求
+
+1、本科及以上学历，计算机、金融、数学相关专业；
+
+2、3年以上金融行业产品管理领域数字化产品设计经验，熟悉相关资管产
+```
+
+## 24. 爆款基金不断，公募基金经理变身男主播，私募基金经理却“头大”了……
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415533&ver=7036&signature=9YCLzph49fNetB0yAcO1zRMKbMMyM1XIEiRRTIgT-fYI-TpBpNhy7PcZF3YDjwSaVBHI4wbPxYIo5Gajva13*GaMNfH0ZIo2XYY4WtkuZsiZPJeumx6uzT8DNrzaAI2O&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+爆款基金不断，公募基金经理变身男主播，私募基金经理却“头大”了……
+甚至在购买产品之前也有不少人投资人会提出来公司拜访,但在如今特殊时期也“劝退”了不少意向投资人.此外,相比熊孩子,网速...
+```
+
+## 25. 产品经理（公募基金）
+
+- 链接：https://mp.weixin.qq.com/s?src=3&timestamp=1792415584&ver=1&signature=sWvsurRelhvWFHOjGU5hDuAjGlrvfcKfwvZhkX3I1wzyNClowX3mPzo0FedQBQbA4nx-1wfXTJwP1PLcu7iaIqqquCfb082QNi608hN08xRESD9XHu0yuVsf-ZVhGmUOg6Mi19EOeK8J2Q1P*75h-9Y7VRJnqBgRXPDrqXaUNDQ=
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+产品经理（公募基金）
+职位名称:产品经理(公募基金)工作地点:北京薪酬待遇:具有市场竞争优势的薪资水平和结构公司简介:国内基金管理公司的TOP...
+```
+
+## 26. 券商流动性管理 or 公募产品经理？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415584&ver=7036&signature=IZIvAZY2ZJFlxLfUykWvJ2fPpUyqdDRCofcyemDJY*UnQO1ADyvcCNnSjt51VZgCr6CdVLlyfEtqOu7GCT2OBoa3Nb1dfC2YweClG4x549MmQFk1shCU01QiL6TKmpA-&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+券商流动性管理 or 公募产品经理？
+公募的产品经理不是很好嘛,很适合间歇性仰卧起坐的人,不一定要做投资,需要长时间的站立,你也不定能够适应.答
+```
+
+## 27. 非标消亡,中性“劝退”,要个10%的收益这么难?
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415584&ver=7036&signature=F6QgqUTs0oFLgWbEUdgNSZlYsCQ36UQ3bqi3sQg5aGcvqi2OrYWvzBxigV8vkzYiUtTuvf2tSk2-qkqwmfx0Q0ccpxNN6lP2sH8lbMGOhCTGnd78kAnYOf9LeS0bdnLN&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+非标消亡,中性“劝退”,要个10%的收益这么难?
+中性“劝退” 非标的休止符在2018年落下,买个固收产品,轻松赚到10个点收益的时代,成了过去式.当时厂长研究了市场上的产品...
+```
+
+## 28. 别想一夜暴富!蚂蚁战配基金有风险,支付宝劝退超34万人
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2E0vHwHtg3iEe2akkZVnfS1qXa8Fplpd91xqbZuWxNxMz_SuImb_PTUFmrTe0ccN0xLfFf3XhHiMoQQu3_mNR8JZp6gBif_3q5MMu9B3WHVJ8B4EhuzB99NsvHSIMy46jUhCpthmYVIyY-yST56Jnj1UTyIGk51Dk7Bwg7RXtTFQh0RLCOcnHL7dyibkeaV0od-b6XYJ_O9xf_71bqkOtiw..%26type%3D2%26query%3D%E5%85%AC%E5%8B%9F%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%8A%9D%E9%80%80%26token%3D46D2DDEAEDD0589AA0A7FEB59EFE8019A1DFA4656AD61760
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+别想一夜暴富!蚂蚁战配基金有风险,支付宝劝退超34万人
+一家公募基金的渠道经理对21世纪经济报道记者表示.为了能够一战成名,战略配售基金也是做足了宣传,户外的公交站台、公交车身...
+```
+
+## 29. 有酒店涨10倍,民宿毁约自称倒闭,淄博“劝退”游客;顾雏军索赔,最高法作出决定;曹德旺炮轰特斯拉?葛兰买1.7亿豪宅?||大件事
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2E0vHwHtg3iEe2akkZVnfS1qXa8Fplpd9hp5LOVl3coVCOIcCL7YVTZ7twM25tHP_BnU7nf6ljsSYm3QLadvl2bLdxaL1xeVmEFcyaHM6Bh3u0hwj5H_SyeFiSXAOSGsqIPND9Go7a7JoWUzVnsqcHDJ2M2L1OPOrWTT1pkevXRynqbspo-BfCdrPh27JifvtpTa95YLg1VVCy6umSSPEsg..%26type%3D2%26query%3D%E5%85%AC%E5%8B%9F%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%8A%9D%E9%80%80%26token%3D46D2DDEAEDD0589AA0A7FEB59EFE8019A1DFA4656AD61760
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+有酒店涨10倍,民宿毁约自称倒闭,淄博“劝退”游客;顾雏军索赔,最高法作出决定;曹德旺炮轰特斯拉?葛兰买1.7亿豪宅?||大件事
+有关沪上某女性基金经理购买豪宅的消息引发热议.4月24日,中... 核心产品价格全线下调15%至50%,存储产品最高降幅达50%....
+```
+
+## 30. 社招｜景顺长城基金｜固收研究员、投顾产品经理岗、债券交易岗、基金会计等岗位
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=aI4J1tFwYPLTIvJA7johuuh3xh0ymKZWc6N3OCIeW0tnyZazmF*f0HdRNp*JPGZM1HeBMBNeYq1blkFM7N6o6QvGALD-ZrXZgWPXqeQ3Nnc3ivioExrzq2cC6srfvi33&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招｜景顺长城基金｜固收研究员、投顾产品经理岗、债券交易岗、基金会计等岗位
+工作地点:深圳岗位职责: 1、负责基金直销APP产品后端的架构设计、性能优化、技术演进;2、负责复杂业务模块的方案设计以及...
+```
+
+## 31. 就业分享｜Top公募基金产品岗+理财子固收投研等offer-中九本+人大硕，纯金融商科，男，26届
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=aJGgVErK3OgO9bpPA5hPq**42e*tNc6Aw6P1kzsEzX8mTPUkXnVI5i5zAqy2TkJSdsXyqstAdw4cSixqtXDDjUJx8fYBM3BcjPaeHHp9ggz*1Hjwvr7*sB1lhVWd0SMm&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+就业分享｜Top公募基金产品岗+理财子固收投研等offer-中九本+人大硕，纯金融商科，男，26届
+优化暑期、秋招投递策略3)岗位介绍与未来发展:介绍公募产品岗、固收投研的工作内容与发展前景
+```
+
+## 32. 朝思募想 | 大波新鲜岗位!招基金经理、销售经理、风控绩效、行业研究员......
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=x8THvzOQRJusIaasxyzy5ZlZSpLlulOpUw3W8jkOxiPttfO9k5KC4MjSQnlExM7YkEZzdW43Iazq9iUkKTB95hzs1evEmnDcuX-RsVP5DxP*nIgEFu1aZDhdKw9-xENC&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+朝思募想 | 大波新鲜岗位!招基金经理、销售经理、风控绩效、行业研究员......
+4、协助市场部门做好对外的基金产品路演、市场开发及客户服务工作.岗位要求:1、国内外一流院校理工类硕士及以上学历,复合专...
+```
+
+## 33. 社招 |中信建投基金管理有限公司运营管理基金经理岗、公募REITs财务负责人
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=U--Isz4XHjcoh*MFYZbfpzrJTx6q2G6Xlj1bs7xzLzMewmcwJXGDJQsFk*aDv8mohufAWDpiUgaKyqZwHJ5vzaOXt3Lk4odgmgYrl1wjuuvmnml9GynWa9vleteArYPI&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 |中信建投基金管理有限公司运营管理基金经理岗、公募REITs财务负责人
+6、协助开展基金产品推介、路演沟通及发行成立工作.要求1、国内外知名院校毕业,硕士及以上学历,基础设施、金融、财务、法律...
+```
+
+## 34. 私募证券基金管理人核心岗位职责全汇总
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=2Rrv-RzQeBX9mX*FObx0hPPS7c4i5o1yHSu9NW6lbhGiElk9afovd4KKPtxJaxkbfpwzG6*d-30ExpQDS0jJjtfEIWNEFYwfhvgnXfA*eBepltUN5McUv0D9LlwloetO&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+私募证券基金管理人核心岗位职责全汇总
+私慕好帮手
+
+
+
+
+私募证券基金管理人的岗位分工与职责会依据规模、策略复杂度、发展阶段等因素有所调整，但核心岗位的职责框架相对固定，以下是各核心岗位的详细岗位职责汇总，涵盖决策、管理、投研、风控、运营、销售、财务、人力等全流程岗位。
+
+
+
+
+私募公司注册、上海迁入、私募管理人登记、私募实控人/控股股东变更/法定代表人变更，私募产品备案、私募审计、中基协4个平台日常维护与更新，欢迎咨询私慕好帮手：18116410895、13681905229
+
+
+
+
+3个工作日
+```
+
+## 35. 营业部因无证人员、非营销岗人员销售基金被监管处罚，私募基金销售的几点提醒 | 案例第133期
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=Ourv-khnELNJzgJP9l1wk-Atkb2h39*NEXub8ogXmIJ478oHfRtF6qwmrys77x7InVIk91ejGFjrz60gQpbEz1B9dT42CyUTDFhSg-9CMYArO0U53SeSDXppngidnBNi&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+营业部因无证人员、非营销岗人员销售基金被监管处罚，私募基金销售的几点提醒 | 案例第133期
+免责声明：本文系转载，如有出入，请咨询专业机构并查询相关法律法规及监管部门意见，本人不承担任何责任。更多处罚案例、违法违规分析、规则解读，可扫描下方二维码关注公众号“壹口合规”，获取“2020-2023年证券公司及从业人员罚单汇总材料”，商务合作、信息共享、投稿、转载等可扫码添加作者！
+知识星球《壹口合规》已正式开通，加入后可获取海量资料：
+```
+
+## 36. 社招|风控法务合规岗（映仁基金、中信私募、加华资本、深创投等机构）
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=VSqS8ILy1Qh*ZMr*sDwhOj3ZtiHPPDVWOhIRXOboiZh*qrAvMHEJwKO3CNZ0JUdcYJSVodApE5wwGYwW1b1SlegNWrvJ97qVMOjuRAKFCqUSyBuhSL3a5s7vs4WKWc-X&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招|风控法务合规岗（映仁基金、中信私募、加华资本、深创投等机构）
+招聘单位：映仁基金
+招聘职位：风控经理（法务方向）
+薪酬参考：（参考薪酬8K-12K/月*13月）
+
+工作职责： 
+
+1.对拟投资项目进行法律尽职调查，撰写拟投资项目法津尽调报告，起草相关法律文件；
+
+2.设计并购交易架构及方案，以及起草相关文件；
+
+3.负责公司相关法务工作，按公司实际业务情况制定风险管理制度、流程及实施细则，对私募相关业务进行风险把控、相关协议审核工作；
+
+4.跟踪金融监管与私募基金相关的法律政策动态，并据此就基金投资设计、流程、投前及投后管理、退出提出风险；
+
+5.负责公司其它部门的日常法律咨询服务、协议审核，并开展对公司相关法律法规方面的培训。
+
+任职要求：
+
+1.本科及以上学历，法律相关专业，具有基金从业资格证，通过国家司法考试优先；
+
+2.一年以上律师事务所专职律师或股权投资行业法律经验，能够熟练应对私募股权投基金相关法律问题；
+
+3.具有良好的法律谈判技巧，较强的逻辑思维能力、分析能力、应变能力、沟通能力；
+
+4.具有较强的文字综合分析能力、口头表述能力和文本报告撰写能力；
+
+5.具有职业敏感性，沟通协调能力强，具备团队合作精神。
+
+投递须知：
+
+投递邮箱：hr@yrfunds.cn
+邮件主题及履历命名：应聘“职位”+姓名+猎君公众号
+
+
+招聘单位：中信私募基金
+中信私募基金管理有限公司（简称“中信私募”）是中信集团战略投资平台—中信投资控股有限公司下属从事私募股权投资基金管理的全资子公司。中信私募以“服务国家战略新兴产业、助力中信集团高质量发展”为使命，发挥中信集团金融与实业并举的协同优势，围绕综合金融、先进智造、先进材料、新消费、新型城镇化五大板块，重点就高端装备与智能制造、新材料、新一代信息技术、新能源、节能环保、生物技术等战略性新兴产业领域开展投资，助力国家关键核心技术突破，打造具有行业竞争力与中信特色的专业私募股权投资机构。
+招聘职位：合规风控总监
+
+截止时间：2022年12月31日
+工作职责：
+
+1.负责落实监管机构、集团和公司的有关规定，履 行风险管理与法律合规管理职责，防范和化解风险，促进公司业务高质量发展； 
+2.根据公司发展战略和业务发展需要，负责推动和完善公司风险管理体系建设，制订和完善公司的风险控制和法律合规制度、流程、规范，并组织实施；
+3.负责推动和完善公司内部控制体系建设，维护、完善及组织实施内部控制规范，负责跟踪和督导内控缺陷的整改落实情况； 
+4.通过风险监督与控制，及时发现、预防各种风险点，保障公司的稳健营运与发展； 
+5.负责推动和组织公司法治建设、日常合规管理等工作；
+6.监督与控制基金募、投、管、退各阶段的风险并保证合规性，并对项目风险意见的落实和执行情况进行监督； 
+7.组织领导投后管理工作。
+任职资格：
+1.50岁以下，具有10年以上基金、证券或其他金融机构相关工作经验； 
+2.中共党员优先；思想政治素质好，政治立场坚定，作风优良、品行端正、诚信廉洁、坚持原则；
+3.具有履行岗位职责所必需的专业知识和技能，熟悉国家及相关行业法律法规、政策及制度管理要求，具备对投资项目的综合分析能力和风险识别掌控能力、有较强的风险识别预判能力； 
+4.具有良好的履职记录，工作业绩突出，专业素质过硬，洞察力敏锐，坚持底线思维； 
+5.具备良好的团队管理能力，事业心和责任感强，善于沟通协调； 
+6.具备良好的心理素质，以及与工作要求相适应的身体条件，能够承受较大工作压力； 
+7.硕士研究生及以上，具备基金从业资格，有合规风控负责人工作经历者优先； 
+8.条件特别优秀者相关要求可适当放宽。
+投递须知：
+
+投递邮箱：hr_ih@citic.com
+邮件主题及履历命名：应聘“职位”+姓名+猎君公众号
+
+
+招聘职位：风险控制岗
+截止时间：2022年12月31日
+工作职责：
+
+1.负责风险管理部制度建设，制订和完善公司的风险控制制度，建立健全内部控制体系；
+2.负责组织开展项目风险评估，审核项目流程必要文件，分析、把控项目流程中的风险点，对被投企业的行业发展、企业管理等资料进行调查分析，拟定风控意见；
+3.负责组织投后管理工作，开展对已实施的投资项目进行监控、分析、评估、管理，负责提交投后管理报告；
+4.负责出具定期风险管理报告，并根据股东的要求出具相关定期、不定期的风险排查报告等。
+任职资格：
+1.45岁以下，具有基金、证券或其他金融机构相关工作经验；有审计、风控合规管理等工作经验者优先； 
+2.思想政治素质过硬，品行端正、勤勉敬业、遵纪守法、诚信廉洁； 
+3.具有履行岗位职责所必需的专业知识和技能，熟悉国家及相关行业法律、法规、政策及制度管理要求，具备对投资项目的综合分析能力和风险识别掌控能力；
+4.具有良好的履职记录，工作业绩突出，专业素质过硬，有正确业绩观和较强风险意识；
+5.具备良好的心理素质，以及与工作要求相适应的身体条件，能够承受较大工作压力；
+6.具有较强的语言表达、文字写作和快速学习能力，有良好的团队合作精神，熟练使用各类办公软件；
+7.硕士研究生及以上，5年以上工作经验，具备基金从业资格，有CPA、CFA等相关专业资格者优先； 
+8.条件特别优秀者相关要求可适当放宽。
+投递须知：
+
+投递邮箱：hr_ih@citic.com
+邮件主题及履历命名：应聘“职位”+姓名+猎君公众号
+
+
+招聘职位：法律合规岗
+截止时间：2022年12月31日
+工作职责：
+1.负责法律合规部制度建设，建立健全合规体系，制订和完善公司的法律合规制度；
+2.负责收集、整理、研究公司业务相关的政策法规，保障公司合法合规运营；
+3.负责组织根据业务需求起草相关法律文本，负责对外签订各类合同的法律审核，将文本或审查意见按时效反馈输出；
+4.负责组织开展项目法律合规审核，对被投企业的历史沿革、企业管理等资料进行调查分析，拟定合规意见；
+5.负责公司各类涉诉法律纠纷的法律支持及配合工作；
+6.负责对接股东法律部门及外部法律中介，上报公司合规管理报告等。
+任职资格
+1.45岁以下，具备法律合规相关工作经验；
+2.思想政治素质过硬，品行端正、勤勉敬业、遵纪守法、诚信廉洁；
+3.具有履行岗位职责所必需的专业知识和技能，熟悉公司法、合同法、合伙企业法等相关法律法规，具备股权并购、资产重组等法律实务经验；
+4.具有良好的履职记录，工作业绩突出，事业心和责任感强，具备优秀的分析、解决问题能力，思路清晰、工作严谨；
+5.具备良好的心理素质，以及与工作要求相适应的身体条件，能够承受较大工作压力；
+6.具有较强的语言表达、文字写作和快速学习能力，有良好的团队合作精神，熟练使用各类办公软件；
+7.硕士研究生及以上，3年以上工作经验，具备律师执业资格，有知名律师事务所从事投资业务相关法律工作经历者优先；
+8.条件特别优秀者相关要求可适当放宽。
+投递须知：
+
+投递邮箱：hr_ih@citic.com
+邮件主题及履历命名：应聘“职位”+姓名+猎君公众号
+
+
+招聘单位：加华资本
+招聘职位：投资VP/SVP-法务
+工作地点：上海
+工作职责：
+1. 公司经营及投资过程涉及的各种合同、法律文件的草拟、修改和合法合规审查。
+2. 参与公司投资项目的法务尽职调查以及投资银行项目的相关法务工作。
+3. 指导公司的法务实践，起草、修改重要的商务文件。
+4. 代表公司解决相应的法律纠纷，处理有关仲裁、诉讼。
+5. 搭建投资法律框架结构及交易工具选择法律文本的起草。
+任职要求：
+1. 重点院校本科及以上学历，法学相关专业，精通公司法、证券法、合同法、国内上市规则等相关法律法规，起草或修改过大型法律文书。
+2. 5年以上投资相关工作经验，在律所有3年以上投资相关法务工作经验优先。
+3. 熟悉私募股权投资基金设立、管理等法务事务，熟悉IPO合规性审查相关要求，有丰富的改制上市、并购重组工作经验。
+4. 具有很强的分析处理、应变及独立解决法律问题的能力。
+5. 良好的沟通协调能力、表达能力、法律逻辑思维能力，工作严谨、认真负责。
+投递须知：
+
+投递邮箱：zhaopin@scharvestcap.com
+邮件主题及履历命名：应聘“职位”+姓名+猎君公众号
+
+
+招聘单位：深创投不动产基金
+深创投不动产基金为深圳市创新投资集团“多元化、专业化、国际化”发展战略下重点布局的战略板块，专注于打造服务实体经济的优质不动产投资基金。公司核心团队在不动产投资领域深耕多年，且在交易所REITs基金领域拥有领先的行业经验，曾主导发行中国资本市场上最早三单交易所REITs产品。当前，公司已形成覆盖不动产投资、资产管理、REITs及证券化在内的全流程业务布局，在管基金投向覆盖商业、租赁住房、物流、产业园区、数据中心等。截至2021年6月底，深创投不动产基金管理实缴基金规模约300亿元，储备基金规模约800亿元，已退出项目年化IRR约25%，已投资不动产总面积约300万平米。深创投不动产基金获评融资中国“最具成长性房地产基金管理机构”“中国最佳房地产基金管理机构TOP10”、房地产金融论坛“最佳类REITs产品机构”、国际金融地产联盟“不动产投融资创新大奖—金奖”，并获得了包括介甫奖“优秀房地产股权投资基金”、“优秀物流地产投资基金产品奖”，前沿奖“年度最佳REITs”，深交所颁发的“优秀固定收益业务创新机构”，深圳市政府颁发的“深圳市金融创新奖”等荣誉。
+招聘职位：风控法务部高级经理
+
+工作职责：
+
+1、参与项目投融资工作的尽调并协助出具尽调报告；
+2、参与项目投融资架构设计、谈判，提出法律合规意见及相关文件的起草、审核与修改；
+3、负责项目募投管退的法律合规审核，并提供法律分析意见及风险管控措施；:
+4、协助完成公司私募基金管理人及私募基金产品的登记、备案以及信息更新工作。
+投递须知：
+
+投递邮箱：rqxing@szvc.com.cn
+邮件主题及履历命名：应聘“职位”+姓名+猎君公众号
+
+
+温馨提示：
+以上信息由君猎团队收集整理发布，真实有效，如需求职、招人或者代发招聘信息，欢迎联系（微信：18124685293；邮箱：JDCV@junhunter.com）。
+```
+
+## 37. 社招｜大成基金｜股票研究员、机构销售经理、券商渠道岗、品牌宣传岗、基金会计岗
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=aI4J1tFwYPLTIvJA7johuuh3xh0ymKZWc6N3OCIeW0uVg0s3dU1iaXVHMVsqBOOmK-Qpz9GB*djO1qHkkDJe2pNiKt2CWtD3e*tLCp8MQz0b5qmODKXkiKR6I8akzFTd&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招｜大成基金｜股票研究员、机构销售经理、券商渠道岗、品牌宣传岗、基金会计岗
+2、负责代销券商渠道基金首发、持续营销、产品合作等业务沟通拓展工作;3、对渠道进行产品知识、市场分析、投资策略、营销技巧...
+```
+
+## 38. 社招 | 易方达、景顺长城、中欧基金热招岗位更新(北/上/广/深)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=PR39UlCAPEGP5njiE59F7sriFVUxMRYWRXOXcK8PwA4jvMUN7ywMiD6LmTAqmNS*GnpUIosR1rkmCnsFnK4wU5IeNjUfTZC2I8M4RxU2VDJblBut*2lIZ5CvwNTQVHcW&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 易方达、景顺长城、中欧基金热招岗位更新(北/上/广/深)
+围绕公司整体业务规划,积极推动基金产品销售,达成业务目标.任职要求:1.硕士及以上教育背景,1-5年金融机构销售工作经验;...
+```
+
+## 39. 创金合信基金3月热招岗位
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415633&ver=7036&signature=Qe0Bk0L0HvyottPqUT-0acjdvrMDC*9eIXxjTP0Eyfq7JZwFIJus8uiS815Ns3D4KgJBYwzwxa-qKC*nR*vHzhPW2-Gxq3vdmgiXAeaRLdhOtmwyKbnnPYocm7j2P5vS&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+创金合信基金3月热招岗位
+如证券基金、互联网平台中理财业务等运营类01估值核算岗(运营服务部)工作地:深圳【工作职责】1、负责各类运营服务产品日常...
+```
+
+## 40. 诺安基金社招岗位
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415683&ver=7036&signature=6fpPblhHpPMehPXaEHEs92U4Vpg3SnljVBT3b6AEaNvvv2tOuMYn1i4ylZ61ST-SeSBxlypUUXnTFa5mKy0hNTYNZGQFbSGElrEyGJgL-uud7dD-fDN07neXuLEf08Km&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+诺安基金社招岗位
+以下信息来自官网，复制下面链接或者文章底部“阅读原文”可查看更多社招信息
+
+https://app.mokahr.com/social-recruitment/lionfund/42543#/
+
+投递简历时麻烦标注信息来源于“来帮你做hr”公众号，谢谢
+
+
+
+
+一、固收+基金经理营销条线反洗钱专岗
+
+工作地点：上海市
+
+职位描述
+
+1、负责反洗钱系统中客户洗钱风险等级评定、可疑交易审查、名单模糊匹配触发事项的审核工作；
+
+2、牵头协调各代销机构完成反洗钱补充协议的签署、更新及日常对接；
+
+3、组织并落实高风险客户、查冻扣客户及可疑行为客户的持续尽调与强化尽调，确保措施在系统中闭环落地；
+
+4、开展客户风险画像工作，通过收集和分析客户交易行为、资金流向等多维度信息，构建精准的客户风险评估模型，以支持更有效的风险监控和管理决策；
+
+5、承担受益所有人信息的系统上传、校验及差异报告的处理工作；
+
+6、负责反洗钱数据治理客户信息自检平台的规则维护，开展异常客户信息的识别、核实与初步处置；
+
+7、配合数据中心与反洗钱系统的测试、优化与业务逻辑配置，推动前端数据质量与系统效能提升。
+```
+
+## 41. 券商/基金：在北京的机会矩阵
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415683&ver=7036&signature=mdOxU6p3PZqsiHL2ksXJxG-Qy07xZ3BZojlMhoPWV4JPkejOmNxe*U9OMfmOxV1tdP60NSZGYjCv1NaqarB34e-kVVoVy90pNVRpaLfykMb6DCVMkbQ42WzkLmbbllMo&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+券商/基金：在北京的机会矩阵
+基金运营、风控、合规、产品等中后台岗位,起薪不如投研,但胜在稳定、有户口机会(部分机构)、且越老越值钱.一个在公募基金...
+```
+
+## 42. 【蓉城国企社招】 招商银行总行-托管项目岗-基金会计岗等
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415683&ver=7036&signature=8G92rRqPtCGPa9KsxY5FUQ-yazYC-5qh2gpcA24dYLNfOFP2Eo7ZMiiV712y6RrkWJJ2DCOg0QLVpJhvAuAWJezlkF73ac3r4r6MSyVe89yGA*o*d-DYD35pOdohAhO7&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+【蓉城国企社招】 招商银行总行-托管项目岗-基金会计岗等
+工作地点: 成都市 截止日期: 2023-01-24项目管理岗(托管方向基金会计) 岗位职责: 1、负责托管项目业务运作,包括核算、估...
+```
+
+## 43. 创金合信基金3月热招岗位
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415683&ver=7036&signature=Qe0Bk0L0HvyottPqUT-0acjdvrMDC*9eIXxjTP0Eyfq7JZwFIJus8uiS815Ns3D4*w4wNgRCG78J-UuRw16RhNa1EwKHsEnwZdADiGtuRau69UDOnBqGLQeUS-lvDQkI&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+创金合信基金3月热招岗位
+如证券基金、互联网平台中理财业务等运营类01估值核算岗(运营服务部)工作地:深圳【工作职责】1、负责各类运营服务产品日常...
+```
+
+## 44. 招聘信息 | 私募股权基金投资经理、法务经理、投资管理岗(资产管理/金融股权投资)、基金运营等
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415683&ver=7036&signature=JMDOHV1elRi6*a0r-6KmccToiW3XOjf9WbgepZiv-5BvPWKOwOPhfYHN-B1I5mIUvfl4Vk5c043d4O6gOC0w49u26SDPdAQJN5sHOwtU0*-yudcGdjAkWgfbxBdkJy4y&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+招聘信息 | 私募股权基金投资经理、法务经理、投资管理岗(资产管理/金融股权投资)、基金运营等
+熟悉中基协备案系统,能独立完成基金产品全流程运营管理工作;熟悉《公司法》、《合伙企业法》等法律、行政法规、证监会部门规...
+```
+
+## 45. "面试"300名基金经理后，美女首席分析师给你的基金"把把脉"
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415719&ver=7036&signature=TYoqdkLRWDwkTNRtI9bS7Xlbs*WYj9i9WEt1dfy0u3hY6ayRWg8hRo1SoMsHLyIMzA2AutCniH5SeQKiaXSIq5N9hB77eJkOA69WUVyirx-g47hVCrHtQ*O2ySG1cGx3&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+"面试"300名基金经理后，美女首席分析师给你的基金"把把脉"
+曾在海通证券金融产品研究中心从事基金研究工作,尤其擅长对基金经理定性与定量相结合的分析,累计调研访谈基金经理超过300人...
+```
+
+## 46. 基金 | 天弘基金招募资深产品经理(北京)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415719&ver=7036&signature=TQM1p1gTDADm4Q20JG20l1WzCIA3QcDwqDtr3qAf57N8uVkZBfZP3QtzVIPQqBQryrsY8lYSQe6oWVi81WG3HFxLkKzmXBO6WAzmNSWrvOs1NrYS4D0OanKnDXN0m6hR&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+基金 | 天弘基金招募资深产品经理(北京)
+本信息来自天弘基金官网,详见阅读原文资深产品经理(养老金业务)招聘人数: 1发布时间: 2018-10-21 工作地点: 北京市工作职...
+```
+
+## 47. 公募基金的产品经理是做什么的?
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415719&ver=7036&signature=9fRLj7O2gKvAcvfT72Oj47wgACMMk7vflOumV3gYA3OFZ0Bn9g08FRPE8g*fb7ToL0LgstbuWXh7xhsLVfEchj0D8oBBQI6t8PFUqFubQCAt05qO*XhqV1FekEwFOLXG&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+公募基金的产品经理是做什么的?
+作者:金融小百科本文已获授权,转载请联系原作者最近,有同学提了一个很好的问题:“募基金招聘产品经理,有些招聘信息看重数...
+```
+
+## 48. 什么样的基金经理最适合管理三年期产品？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415719&ver=7036&signature=B*wD*umot28NgN2v-fljZj-RaXLexO2ZnXhUlnDjgN6Npefc-gbwIpiEl6GUeyyW3AzFv2aCOXxdCMjIaapxqtOx32y*JPrI7*r71mtxFIgQlgGPt-op15cWgvVdiavL&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+什么样的基金经理最适合管理三年期产品？
+还有一些基金经理,正是因为看到了三年期产品可以锁定三年的优势,所以在买入的时候相对比较激进,对于买入价格的安全边际没有...
+```
+
+## 49. 当基金产品越难越难卖，理财经理如何突围？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415719&ver=7036&signature=oiuApgGKGdqEFG0hhLMENo5H07HiZEcI7IUvjq4JjbG-Yv9hiuN3mh9QQoqdYnsZV*hOrwgS7AM-dpcAQXH6q72Wr0kqFZAKfm3UnSes1GLCVUe4DBO4CO-IYhDkph1w&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+当基金产品越难越难卖，理财经理如何突围？
+也让理财经理困惑:当基金越来越难卖,到底还有什么突围的办法呢?从“运动战”到“见缝插针”在以前,不少渠道都喜欢集中力量...
+```
+
+## 50. 知乎策略产品经理offer｜秋招业务2轮，超多策略开放题，往年32W+！
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415778&ver=7036&signature=jfHYgcJqZ2ZioiXlH42yKv8vv4al2-SOTQKSJWg6DgKW1nzjXhhrBPTmjRujwofNzoOUZOBvu2mEYSQ6JBxapbyOLS7UNPwiEhnDPjDk3lzV*W5DDsCF2jH0UohoZE*0&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+知乎策略产品经理offer｜秋招业务2轮，超多策略开放题，往年32W+！
+在过去的5年里
+
+陆续帮助1000+同学拿到
+
+ 互联网大厂/国企/银行/快消等 offer🎉
+
+包含顶级管培生/产品经理/运营/市场等岗位🔥
+
+点击查看👈
+
+
+
+
+这是第945篇offer
+
+
+
+
+
+
+1、同学在2026年8月加入辅导
+
+2、拿到知乎策略产品经理offer✅
+```
+
+## 51. 社招 | 浦银安盛基金招募产品经理、机构销售(上海/北京)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415778&ver=7036&signature=TQM1p1gTDADm4Q20JG20l1WzCIA3QcDwqDtr3qAf57OgFh4PxeNjAG4kERKOwTpgIEmjfSVHQyHwFGMEF72G9m*VEHsYYw*KbWjogELXf8q*5u-9bWRzG0yFPLUxtwud&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 浦银安盛基金招募产品经理、机构销售(上海/北京)
+信息来自官网,请以阅读原文为准产品开发经理发布日期 2020-01-08结束日期 2020-03-31职位名称 产品开发经理所属部门 产品开发...
+```
+
+## 52. 社招 | 嘉实基金招募股权方向高级产品经理(北京)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415778&ver=7036&signature=TQM1p1gTDADm4Q20JG20l1WzCIA3QcDwqDtr3qAf57MLFdx9RarHeHpNtnM4toAzUok2770ZHGhh9*5vCRfF1wSMw1ow6HWjbvKfrJPkNvUb5fBLjQNJX4aPVKMEM5hS&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 嘉实基金招募股权方向高级产品经理(北京)
+信息来自官网,请以阅读原文为准高级产品经理(股权方向)-北京-00945公司/部门:嘉实基金 - 创新业务部工作地点:北京岗位职责...
+```
+
+## 53. 基金 | 某公募基金招募高级产品经理(上海)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792415778&ver=7036&signature=TQM1p1gTDADm4Q20JG20l1WzCIA3QcDwqDtr3qAf57N3IXdaZI2JClL34b6EBG1nS7eVflPAPb83zsvRXqdxh*R2m57D4masxDj0BVVLGh102JCyyNVNCE1FK1mR7P9H&new=1
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+基金 | 某公募基金招募高级产品经理(上海)
+高级产品经理1人 上海岗位职责:会同相关部门与基金公司开展产品销售商务谈判,提出销售建议;负责安排产品上线销售时间,组织...
+```
+
+## 54. 社招 | 华润元大基金招募产品经理(深圳)
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2GDknlc-0RtMe2akkZVnfS1qXa8Fplpd9AxsSYx7K8G1Jk5oE975WWkxpSGjEhwoKjeDTq0cbHCXgifeI6QQNwzPDbnQAZGNTa8TTEshsgl8blbWvUqSyaJesOO3OFE1jUoDK5nFLoky6nyvOtwsVbeUsM4uwu7EnxMHiOans6I3PzW9s6S4uGeKnH-hT5F86JEXq2J0Ck_0O8fIRwtipOg..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%26token%3D46D81986EDD0589AA0A7FEB59EFE8019A1DFA4656AD61822
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 华润元大基金招募产品经理(深圳)
+信息来自官网,请以阅读原文为准产品经理发布日期:2020-1-21所属部门: 华润元大基金工作地点:福田区招聘人数:若干岗位职责...
+```
+
+## 55. 社招 | 思晔投资招募基金产品经理(上海)
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2GDknlc-0RtMe2akkZVnfS1qXa8Fplpd9AxsSYx7K8G1Jk5oE975WWkxpSGjEhwoKjeDTq0cbHCXgifeI6QQNw2qXEaarImWv1cMqvbpLx9wlz_Q7F3VjHbmQm7zqpTrOLRO787zuRm8VQeudmrRLFRARX_FBUeoc5eUGbtKvoIA6wRQYqP7YD3Dopkfa0AEAkAxJdACwE5-00NVofL2iDw..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%26token%3D46D81986EDD0589AA0A7FEB59EFE8019A1DFA4656AD61822
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+社招 | 思晔投资招募基金产品经理(上海)
+信息来自委托发布基金产品经理工作职责:1、 研究海内外经济层面,宏观、策略、市场策略、公司热点等方面信息,包含但不仅限于...
+```
+
+## 56. 南方基金2027届投研类招聘公告
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2GDknlc-0RtMe2akkZVnfS1qXa8Fplpd9_wzYMHGudEITKVkSym2n_YkrVSQjSbWctTgzLNNGjS-j004OFGqPNZ7ZIrVvgaogau7M6Rk_WQdQMekmBc316r74XZ41v-GU3kH1RqfnJZY_5VeJr3sEOLI5vfI6g8qhKpaddIdPA9t1CXvtUOz4BK6t6NfBXEFNOwcTooV3u2VQL0Hr9Gyd3Q..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%26token%3D46D81986EDD0589AA0A7FEB59EFE8019A1DFA4656AD61822
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+南方基金2027届投研类招聘公告
+南方基金资产管理规模、旗下公募基金产品累计盈利和分红均位居行业前列,已成为产品种类丰富、业务领域全面、经营业绩优秀的基...
+```
+
+## 57. 私募 | 广发证券私募基金子公司基金策略部招募基金产品经理、市场拓展经理(广州)
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2GDknlc-0RtMe2akkZVnfS1qXa8Fplpd9AxsSYx7K8G1Jk5oE975WWkxpSGjEhwoKjeDTq0cbHCXgifeI6QQNwxKc3aWEVxKyhj8-PKUKzM8zfquJIqA3YGg-uJBeup07w4YzzZPEXoSDkBzsuvylTwZFCQ7oInOD0uqkhRybZb-SdaaiQMi45XZN0P6gbloy7Lmlv8BUr4vS-e4Yz84xMA..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%26token%3D46D81986EDD0589AA0A7FEB59EFE8019A1DFA4656AD61822
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+私募 | 广发证券私募基金子公司基金策略部招募基金产品经理、市场拓展经理(广州)
+基金产品经理岗工作地点:广州职位月薪:-招聘人数:1职位归属:基金策略部发布日期:2018-07-06截止日期:2018-07-27岗位职责...
+```
+
+## 58. 南方基金2027届投研类招聘公告
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2GDknlc-0RtMe2akkZVnfS1qXa8Fplpd9U-yPgblLnlcw264EHzmrixT10AfiQ9bvIxggD8cJBrMJP90lRUn0sfAPo1TB5oarVrffxhMfHCPRU12KhPdr0jpqil_Qq2NRDYQ2u7NoBeLBeinhDvFGKpcMo3zD3t_YnAtcp7tejaPxzaAVKHWJkBn_C6Ts4vvEnzIZ2LXCmG9FkDr8IT4KYw..%26type%3D2%26query%3D%E5%9F%BA%E9%87%91%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%26token%3D46D81986EDD0589AA0A7FEB59EFE8019A1DFA4656AD61822
+- 解析通道：text
+- 图片 0 张
+
+
+```text
+南方基金2027届投研类招聘公告
+南方基金资产管理规模、旗下公募基金产品累计盈利和分红均位居行业前列,已成为产品种类丰富、业务领域全面、经营业绩优秀的基...
+```

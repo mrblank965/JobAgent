@@ -1,0 +1,78 @@
+# 券商机构销售（fin-ib-sales-trader）
+
+> 结构化 Agent · 2026-10-18 · 基于 26 篇帖子整合 · 已改写为书面语
+
+**岗位别名**：机构销售、研究所销售、券商销售交易、机构业务销售
+
+## 核心职责
+
+- 将研究所的研究成果推送给公募基金、保险资管、私募等机构客户，帮助客户选股，从而获得机构客户的佣金。
+- 组织电话会议、陪同研究员路演、策划大型策略会等，本质是研究服务的销售与客户关系维护。
+- 帮助卖方研究员挖掘买方研究员的需求，即了解买方最近在研究什么公司、需要什么数据和想去什么公司调研，把需求告诉卖方研究员，以最快速度响应买方需求。
+- 在向客户推荐之前，帮客户筛选研究员及其研究成果，前提是对客户和自家研究有足够了解，慢慢树立口碑。
+- 日常也会为客户推一些股票。
+- 了解公募基金的持仓，以了解其投资偏好，对应偏好推送相应的卖方研究。
+- 尽可能多地认识公募基金后台和交易部门人员，以及时掌握人员变动情况，并方便日后查询对应的交易量，确保服务能转化为有效收入。
+- 非公募机构销售主要服务于私募、上市公司、同业金融等企业，业务内容包括融资、资产配置、金融投资、企业规划等。
+- 股销部通过销售研究报告，吸引机构客户在自家营业部交易，赚取佣金，可理解为高端经纪业务；同时向综合服务转型，拓展大宗交易、减持服务、QFII等业务，并与其他牌照部门协同分润。
+
+## 工作流程
+
+- 早上8点半参加晨会，听研究员讲最新的观点和市场判断，记下重点，明确当天要拜访的客户关心什么、需要准备什么材料。
+- 上午9点到下午5点，穿梭于各基金、保险的会议室，帮客户约研究员路演、传递最新的调研信息，甚至帮基金经理解决订机票酒店等琐事。
+- 晚上6点后，与基金经理吃饭喝酒，在饭桌上聊出真实需求，了解客户最近看中哪个板块、对哪类报告感兴趣。
+- 客户询价后，销售需要协调研究员响应；在研究所内部，研究员生产研报后交由质控审核、合规把关，销售再推给基金经理完成变现。
+- 实习期间日常为复印、打印、协助查资料；可参加公司晨会并做好晨会记录，平时有较多机会与自家分析师接触交流。
+
+## 技能工具
+
+- 从业资格相关证书，应尽早考取。
+- 万得、同花顺、东方财富等网站，用于查找行业研报、查看上市公司报告。
+- 《巴菲特致股东的信》等书籍，用于培养对经济市场的感觉。
+- 需要读得懂研究报告，并能把复杂服务讲清楚。
+
+## 典型的一天
+
+机构销售的典型一天从早上8点半的晨会开始，听研究员讲最新的观点和市场判断并记下重点，明确当天要拜访的客户关心什么、需要准备什么材料。上午9点到下午5点，穿梭于各基金、保险的会议室，不是推销，而是服务：帮客户约研究员路演、传递最新的调研信息，甚至帮基金经理解决订机票酒店、接送娃这类琐事。晚上6点后饭局开始，和基金经理吃饭喝酒是常态，不是为了喝而喝，而是在饭桌上聊出真实需求，比如最近看中哪个板块、对哪类报告感兴趣。此外，销售需要24小时待命，客户随时可能找上门，逢年过节维护关系是基本功。
+
+## 坑与经验
+
+- KPI压力大，佣金收入直接跟业绩挂钩，行情不好的时候特别难受。
+- 需要积累，前两三年基本在建立人脉，真正赚钱是两三年以后。
+- 24小时待命，客户随时找你，逢年过节维护关系是基本功。
+- 职业天花板明显，销售做到头就是销售总监，很难再往上升。
+- 机构销售能做得比较出色才有转岗机会，转岗的前提是从业期间业绩出众。
+- 三中一华等头部券商竞争激烈，内部转岗难度很大。
+- 股销部面临研究所价值弱化、研究同质化的困境，单纯卖研报的商业模式增长受限。
+- 这是一个资源加服务型岗位，需承受业绩压力，并认清传统商业模式面临的挑战及向综合服务转型的行业趋势。
+- 行业饱和度和竞争会更激烈，从业者素质持续快速升级，低学历、差背景的机构销售在面对高学历、优秀背景的买方时更难获得信任。
+- 机构销售不是终点，不可能一辈子做销售，需要提前规划后路，持续积累学识和视野。
+
+## 来源帖子
+
+1. 华创证券研究所机构销售实习经历--梦开始的地方｜https://mp.weixin.qq.com/s?src=3&timestamp=1792307006&ver=1&signature=8kH-uSga6XJ6*JNa5Nl0CKYx*c7f3R8cUltHsXl5OYLBEgb96Jn1Xuiz2XnflI2NZ1wGhF6x3S-Tz9GaH*WInISTYZfKbIruSiShPjEyow3lYv8ag7Rez9abHwLz9LBcddLdAH5uyaZ2u9X2ZBr*wAUmgHuD*M2Odj*ixPbbkjQ=
+2. 券商机构销售半年，职业发展该怎么走？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307006&ver=7033&signature=gymp6k-ZHST0hXZN7D8SY*y30-mtcmD7gebonIx9c8-0KiQIpB8m9P2rXsTd4kzkGvPOO1gZNHPNo5Fjhmam6vYrUnlQQ4TlmT76dunHnG04jdQcS65CKASccybSJS8L&new=1
+3. 券商机构销售最全面经｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307049&ver=7033&signature=UkDNkWbvUesoXv2e4IqitOMDN9rhVXlprdB*e6liQJEEyRahzmdzjNx1zxwpgVX*CrGGHbJf5v3nx1Ty149fyQArY7PIFsJesISjDL54xBL8*d6qy5UvFM5yhKICxTDP&new=1
+4. 披荆斩棘的券商资产管理部和股票销售交易部｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307049&ver=7033&signature=C3GpT49BDvM92G7G63ob8RHSaUyWBjKJB7bmq3SyDWFrzWAJ2TDFthD-AaLDyik5K41AWEOQ4D8fYz0Nid9PXjPkoH9u*OCGB9qPczrU0mFKI5hWUx6KyHmVxYs0TLlS&new=1
+5. 行业认知养成丨大学生想进券商，什么部门适合你？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307049&ver=7033&signature=U3EWXkWSTpWzVw6dXesundAu5SPJ1bGgcPaG9lkquP2TAAyzHqVTOWK9cno3ZRWAR9GsOAewLJL6tDEI0orEkragWFmwdCs04o0yHRfqRneuVeDBmUEiIVdcQ-ccaE43&new=1
+6. 券商性价比高的部门盲盒开启—场外衍生品部｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307049&ver=7033&signature=C3GpT49BDvM92G7G63ob8RHSaUyWBjKJB7bmq3SyDWFeGdc*yJtBB7wUAKNI4-qAzg4Mq3tTomf58fl41IDLA1M5*0fv*wucXB21vNIXF5k87qHYDxkBtUBKU2t1xTnT&new=1
+7. 哪家券商最会服务机构？自机构业务走向“大销售”，大机构业务进程如何？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307075&ver=7033&signature=97q4t22IMnYdLAUM31N03mqbi5Ia*EqD7frB4coa8X1XCOoe1ADI6-Ym0Dx6PVp*MBaSvgz5ShU8eYIqVjxT0KlaORSqRQguA8nK*oBhuO0-6AZdPaBQuUPQhLcTU98y&new=1
+8. 券商机构销售半年，职业发展该怎么走？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307075&ver=7033&signature=gymp6k-ZHST0hXZN7D8SY*y30-mtcmD7gebonIx9c8-0KiQIpB8m9P2rXsTd4kzkl9-k-6TZp6jEZtJzTMOk*akWWlLx1yUZqTdOp*jvo5xprjtcErAc0vqGp4N*cN7U&new=1
+9. 券商行业首席考核不达标就换人！加强内部评价，券商研究所腰杆硬了｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307075&ver=7033&signature=qIK*q4FBYkh0ISuHswBFTVaJP4BJp9qat50*QX6LaFCAMV70rMQwk3iIJun*B7hUmF7AwCCBwB5OGNCmLQHNMGjqC3DUPYiHwNGgF-sCL8meec3XVz*AZ8KXeD9yfquX&new=1
+10. 机构销售的求职与成长之路——3月18日百行百味讲座回顾｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307075&ver=7033&signature=lff9M3TfSL2cmRYYjQ8cKNRLTXAndJxkrAS24NgSMQXx3lRNZJrF8Emb0-mm-EkyE16c-3kzEhi0K*QD4QZqF932lRW-TZW-5REfJUzKDYk1rindttAivBdgYpgAF-cW&new=1
+11. 有头部券商确定执行末位淘汰？真相如何？已有券商按"三个月无新增客户，自动离职"处理｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307075&ver=7033&signature=kRifewbNHz3aOOnybTa-*yzuALTZa9OqGTTJCNupz1SFMkLZ7IIYNKpr2hirsC2EypIBlHaSgxOiy44fsqSnushkGaZ-PC4fv2nXBEfOntFVfuGQ9*Mp6g5Vo5mMoi3W&new=1
+12. 券商一线客户经理，等待被牛市拯救｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307075&ver=7033&signature=g*cz7VFx7EmvW6Z4LAENUb8NjFyMPRHltjuoWuREYB-Rm*bfkHqDT2N5W6E8-2-XpDMICtZltwGlvus14CBgO6dXEsMQrPMCqozDNqotrIKj0-vBNEE*SKhuOUIBAHMm&new=1
+13. 最高法金融案例20: 通道型券商资管底层爆雷，券商只做指令执行就无需担责吗？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307075&ver=7033&signature=LVe16GFUsHXq3uGkTJNhALEiLzKlolfEruSAhkQzp19TqI4n9LtTMo2saLopfXPajPBCv5Eai6A-03BYCDEf5j1Ec8riV6feUMNyaa*sa-z4mAm0BZe-YP6nxilW3VbB&new=1
+14. 想进券商研究所，先看你是哪种人｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307117&ver=7033&signature=TPP4aiuzOwMKUKJaUY*Zk8CvTKSdKzdZ7qsUXbSWWpVqQD*GI4c81AlzSogZVFjOB0wrRf-FVABxeCWynNtqQdofF7dBX65PB6Zak0lktM97NCuGKxvkJOB5ZRUQ4g1P&new=1
+15. 机构销售17：如何为求职券商研究所行业研究员做准备？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307117&ver=7033&signature=tS-y1bUNdFICj6PoqC9*Fith5zH3skACGziLQ2uvm6wPwJmLfZALPbyI*67l9DOr4KVOasQRxEGRWHq9EjcprXW28gv6utm-lEz8AjiLX3*PbUVMY4uru7EtAApGydru&new=1
+16. 券商机构销售那些事儿｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307117&ver=7033&signature=8wRmrmt-NxxoBQhoPG3EaPrJJQiDH4s4FniYbYqAe012ykEnrghnVpGkXXXBHyIjV9SbFfzMu7TR4wxSimDpWxJIPO1v5tZiLqJRVHvtumGkbuMK6WGzOrVE9xt8rorC&new=1
+17. 专科毕业6年｜第三份工作：我在心理机构，读懂了真正的系统化销售｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307144&ver=7033&signature=J5RU7Pscn8YuhhhJ4ieq6L3uVr-mVOs5xL-mBpV1MINseZY3v-umNl5X*VntRB7PAN8d1oo0KrcB1t5ajG3KnyO072c7-JDxxSStPEeTVWUWK4w-ha-Xqcc7t19tWObA&new=1
+18. 教培机构销售工作全攻略：让客户追着你走｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307144&ver=7033&signature=Un4mnPzrVny2tsqhLYGAyxGpkNhsEPYepLEsSwWCbYesyga0vC4gXKbyAQ-m3TcWQcwzNQEDWCklm8No3jHRpEIAiB3hrUb5TRTgJCbSBs05sGk85UYWSRekhelUEKC6&new=1
+19. 机构销售4：如何精进自己的工作方法？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307144&ver=7033&signature=tS-y1bUNdFICj6PoqC9*Fith5zH3skACGziLQ2uvm6z*gDm30mHJAGeTFwjiOWJ9UAjC9tv57FyvNPIwkGbn34Spk37-jbSqPKtkzBXx7hbF3Yd6IN5Gaq7fm4h7bmz3&new=1
+20. 机构销售14：你可能不知道真正的“沟通力”是什么｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307144&ver=7033&signature=tS-y1bUNdFICj6PoqC9*Fith5zH3skACGziLQ2uvm6wjs590MMydNorgGelZdzee9ueub-g2NlzKHv7xHELcum97k9uMqegjlJukyC5pS20AxjVWDRgE9ek28P9lwTY5&new=1
+21. 房地产项目营销拓客工作实际应用方法｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307190&ver=7033&signature=5domFb0ZM3zMAKbUnfP8tnp50nKITT4ajNyD6T7w2AftEbgzHueZ9JfzhUJKuXyjYpLLkQjReGikpin1qQ5QtQat4VKjryQ-0xGgNOGFCMbg86N1jxFnq5umt7llQN41&new=1
+22. 公募基金券商交易模式崭露头角  银河证券率先探讨证基合作新格局｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307216&ver=7033&signature=PRhD*bawtKRoYHH29K7U-M5pnoPxWtBJmIQT4xZOMP2Ttjl0-arw7RmyOfOGJC4OSBoiRxcpPgFNsC0iFAq49ROZPPCHbBgRBwX8OPlM7It221SkTzNcDvtUHzWcABsU&new=1
+23. ETF销售"潜规则"显现？这样操作成常态，中小公司吐槽："贵族游戏"｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307216&ver=7033&signature=kRifewbNHz3aOOnybTa-*yzuALTZa9OqGTTJCNupz1TIFM5KnRnLbUDLvC6gImtKfVD0jfGsRBHR7-4g64VwSX2UqW622NCauk8XRb5waj1Vfgsnh0wGCMyX06WFtPOH&new=1
+24. 某证券公司总部社招ABS、债券销售，项目承揽和存续期管理人员（北京/上海/深圳）｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307216&ver=7033&signature=IgBB*vLBo-57rf*SR5TZIeiuHx3LzUn44iTl5JVdm4ZcSG9NEne5lVcEgVLDlrvTcdzEIK47aGnFx1AgEl5DbkvbAmxK*dZ7yRpHDvbonueAo3WBvYmAYZ3iHqaHyy5N&new=1
+25. 披荆斩棘的券商资产管理部和股票销售交易部｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307260&ver=7033&signature=C3GpT49BDvM92G7G63ob8RHSaUyWBjKJB7bmq3SyDWFrzWAJ2TDFthD-AaLDyik53du0RX7i2s1gHlGBLg0yzKQuYuOfBVaGITYI736bLDDIPHTmfQA4hxWlzKCJJvHo&new=1
+26. 机构销售、销售交易、交易员，金融前台这三个岗位到底有什么区别？｜https://mp.weixin.qq.com/s?src=11&timestamp=1792307260&ver=7033&signature=xbaKWqTXypEAgWYnbAWSFdmWuMAuufsgrTQBW8vC4od6RKHDHZRCv7crFwoQRJXEJhUyxC*kVCe8ElAdXf4EDOmV6K1zxvcV0R7mVIBLyp2nE35y8GCnlJFtwAfC9mQT&new=1

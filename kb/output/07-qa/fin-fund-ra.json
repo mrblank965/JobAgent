@@ -1,0 +1,18 @@
+{
+  "positionId": "fin-fund-ra",
+  "sampledKpIds": [
+    "fin-fund-ra-kp-098",
+    "fin-fund-ra-kp-007",
+    "fin-fund-ra-kp-001",
+    "fin-fund-ra-kp-023",
+    "fin-fund-ra-kp-003",
+    "fin-fund-ra-kp-040",
+    "fin-fund-ra-kp-046",
+    "fin-fund-ra-kp-074",
+    "fin-fund-ra-kp-066",
+    "fin-fund-ra-kp-088"
+  ],
+  "totalPoints": 99,
+  "faithful": true,
+  "issues": []
+}

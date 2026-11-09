@@ -1,0 +1,12 @@
+{
+  "positionId": "fin-bank-mgmt-trainee",
+  "sampledKpIds": [
+    "fin-bank-mgmt-trainee-kp-028",
+    "fin-bank-mgmt-trainee-kp-018",
+    "fin-bank-mgmt-trainee-kp-012",
+    "fin-bank-mgmt-trainee-kp-032"
+  ],
+  "totalPoints": 36,
+  "faithful": true,
+  "issues": []
+}

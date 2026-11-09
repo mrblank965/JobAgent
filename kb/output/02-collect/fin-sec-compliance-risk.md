@@ -1,0 +1,1806 @@
+# 采集结果 · 金融合规风控（券商/私募）（fin-sec-compliance-risk）
+
+> 采集 Agent · 2026-10-19 · 关键词 5 个 · 采纳 53 条 · 跳过 17 条
+
+## 关键词命中情况
+
+| 关键词 | 命中 | 采纳 | 备注 |
+| --- | --- | --- | --- |
+| 券商合规日常 | 15 | 15 | — |
+| 券商风控劝退 | 20 | 9 | — |
+| 合规风控岗真实体验 | 20 | 14 | — |
+| 券商合规面试 | 15 | 15 | — |
+| 私募风控日常 | 0 | 0 | 触发验证码，已跳过 |
+
+## 跳过记录
+
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜时代天使小甲组劝退,乙头打和点65%,还是指望撞车的科济药业和优然牧业有惊喜吧!｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MgyiCAv67ege2akkZVnfS1qXa8Fplpd9iQozQEMQT5wViwr6a-WZpaFni4LGkgnWeBvqGtsSNURcehWueEDnVbJAbAmMw7h92drOcWkigU7XrvQHuHHNR_ELQZJ2wDnHjZFWPoQ0TRq2AVOuARdPiMP-nxJEl_T21nkOhQksG_2AgcDbSvTgc3sgBWl0tLtIIXD6DZvJowLyPfCoem7FzA..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=468642E1EDD0589AA0A7FEB59EFE8019A1DFA4656AD60C41
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜一天连开7张罚单!证监会重拳出击,5家券商被罚+3人被约谈,均与这一业务有关｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MgyiCAv67ege2akkZVnfS1qXa8Fplpd99n7hZTRi0-2si7X_P0X1Cbbrsskc7qBiAtuPYR1fQ3ZGdCWep3CelT4XRRmpO9rF3HvKxLHm_g4CGDN30-SFCx1rBOskXurXQc-4UCqF-588ZNG-sYSg4yUbQnlDfOm1qmU84bVP5oGTWIHtvQlrH3arhA3GcxlOx56zyk8iJ8o89kyxDwoXvg..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=468642E1EDD0589AA0A7FEB59EFE8019A1DFA4656AD60C41
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜最新!券业版个人征信系统上线!正负面信息均被记录!查询记录保存10年!｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MgyiCAv67ege2akkZVnfS1qXa8Fplpd9Rv8MQrtyzrS2Layh2g873oOfQz9tGTiaTAiUcZUYccHLg75h4p50U0FlBJNMN6YMVj47BaZbkzRRhdbgCp0mMvRwEFeJH0W2wZOzLfwUyUa2krKyXXXDBS8bqvK6OQEwYIlleVkquJLXZMGhRIk4QHytY1SUtDWXlPHmKh3epxJOJBjQH7pCxQ..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=468642E1EDD0589AA0A7FEB59EFE8019A1DFA4656AD60C41
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜俄乌战争的思考,俄罗斯用惨痛代价,狠狠给中国上了一课!｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MgyiCAv67ege2akkZVnfS1qXa8Fplpd9Rv8MQrtyzrS2Layh2g873oOfQz9tGTiaTAiUcZUYccHLg75h4p50U-ouoQ39tp1hqDUpkz4CLyqXTcwo_P56bt8-y6RE3Ik2t_riiqUZjNEvi6l7AhCyQducmhQUXHts_gXs-ZrGYAjy9CGGwDFpa9i9izHWMggt_MtDvMGKx_rP28temKTOwg..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=468642E1EDD0589AA0A7FEB59EFE8019A1DFA4656AD60C41
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜上海实习 | TOP名企实习汇总｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MgyiCAv67ege2akkZVnfS1qXa8Fplpd9jXT6ZkkBRMuhUB4GjxxmswIAW4KOUNt5BEPPZrpu0P0h04mOaS84jq5aGJybuBQGwOf4FNvfPdjC9lsYX9-QiGCFE0yAebhMr8Ha0LMWJFP5ud6of4awiR-Yfrz_qba41XH7Tcx699rpFthBw0X9g47nBjog-E7EDnAx7B51I5tj32-j2KiwUw..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=468642E1EDD0589AA0A7FEB59EFE8019A1DFA4656AD60C41
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜证监会第二弹!A股四年前大牛市“启动器”回来了,市场热议＂配资卷土重来说＂靠谱吗?｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2MgyiCAv67ege2akkZVnfS1qXa8Fplpd913RqKgvYrzrId0HlGRg8WindlKONoWHy2xThuijCpGxXqRBkm8qLv8uen9GqTJs3JNnG6TY6O8RxHp5hgDWjYtn5ALbEBHhbfZp57zYaADhVcdWOAG2Kf0Q-Cx6JQWajyNHTwtDeTUIqgrCtZeTuX4C22UFIYtq6Fp9eGMTndaDdrgozfSg6bw..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=468642E1EDD0589AA0A7FEB59EFE8019A1DFA4656AD60C41
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜券商行业首席考核不达标就换人!加强内部评价,券商研究所腰杆硬了｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2Xhw34qhvtjwe2akkZVnfS1qXa8Fplpd9Ilspv7dQyJ_1q0FJiR9Cwb2RQrM4TGpwabmTdKf4hqQbeGGgTNLrYzS2kb1I5W3g5XNr2nSYJuoPeeGGjcHnAji6FmmUKElINEb7KrGhIw0tzFX9YhirFX7yqS7D0A-OC8BkL1Zi9BXCq0uTr0zRWqSyAyT7ot57BY2wZ4ix2rHYl_Q5RRZQjg..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=4687FB0DEDD0589AA0A7FEB59EFE8019A1DFA4656AD60C7C
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜最高法金融案例20: 通道型券商资管底层爆雷,券商只做指令执行就无需担责吗?｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2Xhw34qhvtjwe2akkZVnfS1qXa8Fplpd9Md4RfSbmhXBFZ7k4Gj9reCmywguC6lImi0lit4-V1mpnrgsNFtAiVADTLbn-ZKhnnt-334F4PCPrItiqaFKrhK5Ao3XfXKV_O4vDxQhHv1UqbhtNNPqc-RQIiuNowVEbiT5A1uns590rQ9IVGONlm7c6faE3K9WDB1rE0C6OfLQ89kyxDwoXvg..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=4687FB0DEDD0589AA0A7FEB59EFE8019A1DFA4656AD60C7C
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜资金安全第一!2026国内十大正规配资平台实力排行与选型法则｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2Xhw34qhvtjwe2akkZVnfS1qXa8Fplpd9k4XYsaUGzKMk6HJtZ9D8XO-MM672nBGfU4xksSWiQFAx23aNqTzkXsAQ14bKMFhODPibKgChVLFxhRG8wOOyGqhHg7j6dbcmKypL1rRUtRHV1JnFCNZ0Qu6HyY1z-KkpoLkuV68v3RLrjlSKoTGQX6dnw7y0VwfP5rp95nDfLbxe0WC6Sbi7DA..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=4687FB0DEDD0589AA0A7FEB59EFE8019A1DFA4656AD60C7C
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜从数学家赚大钱到普通人用AI:AI交易神话、监管红线与量化路径的取舍｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2Xhw34qhvtjwe2akkZVnfS1qXa8Fplpd9ebHxobQJ5PE-5S33lGH4JbtzWIBEko0rpkMFAx1vVvN4KbDqNbOgYxswm1K70tp5ME0_jRB4rUuFzG00j6cJEXB8NFx5KvkB-pGJE5FyPxy3w7zy3bup2b-cO2UNfdqDDDq-SfJti4lts5lj3JXJCLuDSGAW2_0ldyVuNlCzGOxFkDr8IT4KYw..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=4687FB0DEDD0589AA0A7FEB59EFE8019A1DFA4656AD60C7C
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜社招推送:招商证券/招商局招聘投后管理岗/外包估值岗/风控合规部负责人/不良资产业务岗,上海/北京/深圳/广州/香港.｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2Xhw34qhvtjwe2akkZVnfS1qXa8Fplpd98utEQdFipjFtuXkCR1qYAvnrUAVHkf91vDXtjP-fPrCgKBbR53nfQZg-L5Y8o77i6Xls2dcbhqOeMWYmVfcu-efY8lutKVHhch6c0j9qDwuFSVL-D3Auvm4JuipPr1Uh6iV-KZ3tMbkrjF9oZ4LrbB2gZGW7so7P8_FGvw9t-lR5LU3lqtPw9g..&type=2&query=%E5%88%B8%E5%95%86%E9%A3%8E%E6%8E%A7%E5%8A%9D%E9%80%80&token=4687FB0DEDD0589AA0A7FEB59EFE8019A1DFA4656AD60C7C
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜风控岗如何查看和鉴别个人征信报告?｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6ft3wfAVofsP5Peu-UiA4DJz7A7Trw0WzKHG0MbYkhGyVgrFeYQugDlaSBOFkev2dONBw-1nFTCCCClRC8cycyZDVo1Uau2aPXqYWS-XTsTYgBnEPwvJ6hWUMFCBP_kp1TB1RfhwS-A_vu9eBmvnrkvYNCznxL6ch3Ri8LqqGVmiRrq1h3xM8TbpHaWBXWupes2_vqY2bme3phXwLDKhXV9_pTHz7EwA_TG31XnP4r8AstowbJJUqNs_t2aOWPwUOLtVx3d4nSWrN3sqYhcfzNuIZ4tLIf5uZiZqwg0yoRFw.&type=2&query=%E5%90%88%E8%A7%84%E9%A3%8E%E6%8E%A7%E5%B2%97%E7%9C%9F%E5%AE%9E%E4%BD%93%E9%AA%8C&token=4689E6EAEDD0589AA0A7FEB59EFE8019A1DFA4656AD60CC7
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜取代律师岗?!中国又一法律行业新兴高薪岗位在崛起!这可能是法律从业者未来5年最好的就业方向!｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2o1KJB8MI8_8e2akkZVnfS1qXa8Fplpd9I82dzrXAOJuu1eRW3hlwNE3rTbZBXK2VWyl4jx13-cgb5rl9LqKMFHN5RmGHr8RbP7-63SIjAWx_HEuNWwLobPDqYSgULEelVuFkdR-ohiGjsoj_q0h1kFSJYW9wKrQZD8LevsEaWL8ZeMSpDXLKUfi45CYdZdi4XI4j5MyDu2ctPujwwRB2Pw..&type=2&query=%E5%90%88%E8%A7%84%E9%A3%8E%E6%8E%A7%E5%B2%97%E7%9C%9F%E5%AE%9E%E4%BD%93%E9%AA%8C&token=4689E6EAEDD0589AA0A7FEB59EFE8019A1DFA4656AD60CC7
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜聊聊银行风控:在银行从事风险管理工作是什么样的体验(一)｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2o1KJB8MI8_8e2akkZVnfS1qXa8Fplpd9HK7zyi64SuO7bd5Fh3eWkKR2sbbQ0BEeRdzifnoeqGmRqs8eRVML72eUzy_Mv1vmfdQpJLrDAKI1bRVTz7ZsU_98t0hEpzqnuj8xjKO87uh1bVw3KKptwhai4BBG60FQcSlL8X7FVyif-tasvazbJbObCTOayyrJsT_6H3wItUotPujwwRB2Pw..&type=2&query=%E5%90%88%E8%A7%84%E9%A3%8E%E6%8E%A7%E5%B2%97%E7%9C%9F%E5%AE%9E%E4%BD%93%E9%AA%8C&token=4689E6EAEDD0589AA0A7FEB59EFE8019A1DFA4656AD60CC7
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜AIGC爆发下,劳动舆情与人才风控管理的N种玩法｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2o1KJB8MI8_8e2akkZVnfS1qXa8Fplpd97WQBZF24jR74EELYiGU9lSClhht_yLr6U-v_Y-ikZ-yEhVpzlpotspsj1LsA2bF5AySkk9Cg5P78P4hIf2wdFHPGCMYUJ4mk-3BcSBdHd7u7Nqz2OOSqq6aA_urJvPc5gmT467IQx3urBgw8Cr0lX0ZF3gYRefJ4E-fzOBGZJT16VKrzu_4XKA..&type=2&query=%E5%90%88%E8%A7%84%E9%A3%8E%E6%8E%A7%E5%B2%97%E7%9C%9F%E5%AE%9E%E4%BD%93%E9%AA%8C&token=4689E6EAEDD0589AA0A7FEB59EFE8019A1DFA4656AD60CC7
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜多平台合规风控｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2o1KJB8MI8_8e2akkZVnfS1qXa8Fplpd9rWIdqvsdLDrG_7s0vaCkH-e-h2a0Bdu0QgTn-0AcmguoXejlh317vZoGI9FY-JbaDPxYhSGFge91aHGb2QeLrfG4qADGsSVimZ2MGbxFG_3weKwkKaeph-I38tIWrdhI37nZmpNYlLjm6qdUb7wTsbBuq5DRTEupXOzwHpuxRswYJSSFPgfogQ..&type=2&query=%E5%90%88%E8%A7%84%E9%A3%8E%E6%8E%A7%E5%B2%97%E7%9C%9F%E5%AE%9E%E4%BD%93%E9%AA%8C&token=4689E6EAEDD0589AA0A7FEB59EFE8019A1DFA4656AD60CC7
+- 抓取失败：Error: page.evaluate: Execution context was destroyed, most likely because of a navigation｜中圆量化的底气,来自一群真实的人｜/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2o1KJB8MI8_8e2akkZVnfS1qXa8Fplpd94V9TSEWMaryr3oLD9xuzcVjemXK5SdBdMBZEkgM-kvtEkATmvOD9H8lkBmdbpR4mU3uVn1Aywe7P_BduqFtyrOQIgD2rWvON9T2jLOzq1Tls2ePWzF7g7vqVTLs7B4Sjtlcps2qgYh8Jr3fI0UT4m_mZhv8gKXevAqN2GEf85SzI3OTRHYU2og..&type=2&query=%E5%90%88%E8%A7%84%E9%A3%8E%E6%8E%A7%E5%B2%97%E7%9C%9F%E5%AE%9E%E4%BD%93%E9%AA%8C&token=4689E6EAEDD0589AA0A7FEB59EFE8019A1DFA4656AD60CC7
+
+## 帖子明细
+
+### 1. 私募基金管理人（非证券类）日常合规运营
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=mvHwAHsQoAqPBBOaA2vJRgJdNIiT*JfN3qRtuZ7BJQUbySwv2z7a5Hf9lRLYEHTSf8BKQ0YgH2Jy9LlTgH6d0KwsXyzTbjO6xWu-pEPcSAEeN-*HbhuCn0oKaV0CKpO5&new=1
+- 来源公众号：公司与证券法点评
+- 发布时间：王晓岑
+- 检索词：券商合规日常
+
+正文：
+
+```text
+二、私募基金管理人的日常运营管理 三、私募基金设立 四、私募基金备案 五、私募基金募集 六、有关《关于加强私募投资基金监管的...
+```
+
+### 2. 半个月7家券商因合规问题被罚！“合规人员薪酬偏低”到底有多低？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=KqxXCEDMiCOGZeL8p3SnmU5LAsCR49mOkaR5fmyhsEMfs4TtUa8T9cdqnH-9PiW7N8B1Jy85NhnGb-NZhQsKHvNQSzLM*K2FtFGkNrKeHkNM59VDyENGEEVb0FSrpRcu&new=1
+- 来源公众号：中国证券报
+- 发布时间：张利静
+- 检索词：券商合规日常
+
+正文：
+
+```text
+天天财经独家,速关注又有两家券商因合规问题被罚.近期,监管部门针对证券公司合规问题频频发出处罚决定.过去半个月,已有7...
+```
+
+### 3. 上海证监局召开辖区证券公司合规总监座谈会
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=D2K8uSzLxG1fZApCW9s-DstYJJmtjpkFrgpXZ5Xb3U5brfp-dCjda4z1X3rv-x6NJJ9IqW4qi4cdiU94fUAvcxBiUlOxpZR7KDwb53F1*yk=&new=1
+- 来源公众号：第一财经资讯
+- 发布时间：2021年3月9日 20:11
+- 检索词：券商合规日常
+
+正文：
+
+```text
+为深入贯彻证监会系统工作会议精神,持续推动辖区证券公司提升合规风控水平,以适应资本市场全面深化改革对证券公司市场中介把...
+```
+
+### 4. 券商到底还缺多少合规人员？离职监管人士成香饽饽，券商舍得开出百万年薪，资管合规更紧俏
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=xnxUQJNiFkZ0hYCyOyP5jwxdANOVRH8WD-EY3BCeD4T7kHqjYKE0g0lkB-UPMTGAL5aCo5eYV4XErT72jp57LarbrmE5f0KGYhBEQQ6XMnkUO5TIlZewberQcP4DYtQ*&new=1
+- 来源公众号：券商中国
+- 发布时间：禹伊 云中芷
+- 检索词：券商合规日常
+
+正文：
+
+```text
+去年十月正式实施的证券公司合规管理办法掀起了一波合规招聘潮,直至去年底,大部分的券商通过外部招聘、内部调岗的方式已经配...
+```
+
+### 5. 证券公司合规文化建设的现实逻辑
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=yHhH6VfGTBU5XsZZLhZ-iJljPyWIbFvVf5LjwNNS-mM6e4ol3VMZhMcNbtsxOpztpdOYzy3OW6ebbZi-4CYZglHI4yAwkOpgaMlCVQ-cXcQ-7TGkH4Yt1K8tqYb6HjPZ&new=1
+- 来源公众号：i国元证券
+- 发布时间：2023年12月8日 16:00
+- 检索词：券商合规日常
+
+正文：
+
+```text
+合规,是证券行业发展必须遵守的底线和不可逾越的红线,也是行业永葆青春的生命线ⁱ.2019年11月证券基金行业召开文化建设动...
+```
+
+### 6. 数度接罚单，券商遭遇经纪人合规管理难题，营业部的这些合规风险点，你根本想不到
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=xnxUQJNiFkZ0hYCyOyP5jwxdANOVRH8WD-EY3BCeD4RJhPcMSl1bHh81nMVdrRCmzThczZi6fp7Px308e3cXx04xP42m44z9i3Bdg8WwfRBN34HnWdQRPH5rItUMwFrf&new=1
+- 来源公众号：券商中国
+- 发布时间：禹伊
+- 检索词：券商合规日常
+
+正文：
+
+```text
+事实上,首次提出经纪人为营业部工作人员,要求营业部配备合规人员,是在去年颁布的券商合规细则中明确要求.华北地区一家中等...
+```
+
+### 7. 太大胆！用办公电话下单炒股，这家券商前合规老总被罚！从业人员炒股屡禁不止，股票交易是否应该放开？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=AW6WJXUdldqCJGnoYWA9xGST8qV0BH3nmU8obUHQxgvWKmdGewDrVw9jUGv-hCn5fkoIY2jIVVlsPw69Vo7Xu7t7TbvVQc9e7f55FrkEngkpTlaEOM2g4Elqmg1jW65t&new=1
+- 来源公众号：私慕好帮手
+- 发布时间：2020年1月13日 23:47
+- 检索词：券商合规日常
+
+正文：
+
+```text
+合规总经理炒股4年被罚日前,证监会官网一次性挂出多份行政处... 以及日常证券行业活动的业务需求,当其参与证券买卖活动时,...
+```
+
+### 8. 券商组织架构生变:合规风控力量崛起 新三板业务削弱
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=bWcrtTNCGeZNAphM2wswcrXVc-AtBY7KJiiMkwXXwVhK2Cjpzg7d4rG7QiRqJUo7mSGGUVuBHx*Nd9rUoIBD40DETmmX-5Xky3JPkj5wQ9Kl*4M-a5Cou9HCOl4K1PyL&new=1
+- 来源公众号：新三板
+- 发布时间：2017年10月30日 07:29
+- 检索词：券商合规日常
+
+正文：
+
+```text
+来源:第一财经日报券商组织架构在悄然发生变化,前后台业务出现调整,合规风控力量崛起.又逢秋季证券公司招兵买马时,与往年...
+```
+
+### 9. 证券合规:金饭碗还是铁枷锁?揭秘券商＂嫡系禁地＂的生存法则
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=WuKqTHf1QlK0b8Z9PklqlCsgzKBiyqEtVa1Jy-kBARozCzZauFgksg1JAmoJFsmsnPiMTlV7RdmABaG1joTIITxQQ77uVYc5kqYSPF-M-bZlVNSZ9VYKuKxUeqgYevCu&new=1
+- 来源公众号：2026-2-26
+- 发布时间：麦子店知事
+- 检索词：券商合规日常
+
+正文：
+
+```text
+将公众号设为“星标”第一时间收获最新推送证券合规:金饭碗还是铁枷锁?揭秘券商＂嫡系禁地＂的生存法则十个想转岗的券商人,...
+```
+
+### 10. 头部券商法律合规职位（北京）
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412652&ver=7036&signature=GdbJZkyraYcpyNviqnZ*Fc7lsqObkSt8qkybLC59cDon0tB1F661qpU5S1gZSKZOBuhe512BgejrC5gNoQaUyTWWcTd-gKfsqsUQnlihLAcAhWT6y0a-VEbJfpVzsgFU&new=1
+- 来源公众号：法律圈招聘
+- 发布时间：2022年11月11日 11:27
+- 检索词：券商合规日常
+
+正文：
+
+```text
+欢迎自荐或者他荐啦Email: crystal_xie@talgen.cnWeChat: crystal_9031.(中控室)隔离墙合规-券商-北京工作职责:根据业务开展情况...
+```
+
+### 11. 券商组织架构生变:合规风控力量崛起 新三板业务削弱
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412702&ver=7036&signature=bWcrtTNCGeZNAphM2wswcrXVc-AtBY7KJiiMkwXXwVhK2Cjpzg7d4rG7QiRqJUo73Lt0qjsmsVSta6*Qi2GIskbpg3JtDeBWJGL8HFuMUiCN*OBbjrGt0Pnd-6*JrTYP&new=1
+- 来源公众号：新三板
+- 发布时间：2017年10月30日 07:29
+- 检索词：券商合规日常
+
+正文：
+
+```text
+来源:第一财经日报券商组织架构在悄然发生变化,前后台业务出现调整,合规风控力量崛起.又逢秋季证券公司招兵买马时,与往年...
+```
+
+### 12. 合规指引丨证券公司合规管理实施指引
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412702&ver=7036&signature=jX1mk42rG9Cws3ynE*hXnBq4xluL4iBeOgqPRCnwu3K-58ozAGGNX7F4xaYjdZ1SKv5cbSWcG7r4czC3JcQ1YCZuU0HMAUiaPIyfRr7gNmfMMjfEFSpxLB6LnTZjsjjU&new=1
+- 来源公众号：CCO服务平台
+- 发布时间：2026年3月4日 08:00
+- 检索词：券商合规日常
+
+正文：
+
+```text
+(二)主动在日常经营过程中倡导合规经营理念,积极培育公司合规文化,认真履行合规管理职责,主动落实合规管理要求;(三)充...
+```
+
+### 13. 证券公司股权投资业务合规指引(3)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412702&ver=7036&signature=5zsS4yBasCpXVH*kVLwTdIH2WuX7QCIOF3K-nQaoHhct7v2hLsV04zGXD2aliXYasEY5s7TzsrUWZEDud0aKqgYZe3rOMF27gE8P7IlZvmpLLy38fbIY3cpINVoFOFgP&new=1
+- 来源公众号：2026-2-10
+- 发布时间：PE与TMT法律桥
+- 检索词：券商合规日常
+
+正文：
+
+```text
+合法合规:设立需符合法律法规和中国证监会的相关规定.(2) ... 主承销商或担任拟挂牌企业股票挂牌并公开转让的主办券商后(以...
+```
+
+### 14. 完美的章程 · 券商合规晨报|2026.10.09 第040期
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2ZUTptI5-PPYe2akkZVnfS1qXa8Fplpd98P-Slfft_Y_tVLgGR0i2n-4f7HR8uwlhbZcww-YgM-fS6Ny2dfXzwa16MSo5P3ScJNYeJc0RjhLFryE3djn8_0gcreSknaWFZR3T9vJeKj2o05UJc0oHlKQkFvdinUE2wfmZcjy8M38VjOeAyuVlZlmtIWYeeS1dnE62FeLm3PtQL0Hr9Gyd3Q..%26type%3D2%26query%3D%E5%88%B8%E5%95%86%E5%90%88%E8%A7%84%E6%97%A5%E5%B8%B8%26token%3D46854191EDD0589AA0A7FEB59EFE8019A1DFA4656AD60C1E
+- 来源公众号：2026-10-9
+- 发布时间：完美的章程
+- 检索词：券商合规日常
+
+正文：
+
+```text
+其二,某券商江苏分公司被责令改正,事由为在日常管理过程中存在企业微信管理不到位、合规培训相关要求落实不到位、未及时报告...
+```
+
+### 15. 上海|头部券商|合规风控
+
+- 链接：https://weixin.sogou.com/antispider/?from=%2Flink%3Furl%3Ddn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgS27yBh3vuss2ZUTptI5-PPYe2akkZVnfS1qXa8Fplpd9HgMhIz0aUYOdPviKWMv5g_YRHcNDg6h5yHwTKyMMTEhkM9R8ornP3wFBiRe7Mf_wY_bhZSXzY17lSaqjOmYfmATo4QKjnnOFggFaAEAoABzeEF7inOJie1XOOQUPf4L9-c3jvFVN-7bWIc5pcgsRMGXmjVqg5TDJJZKod9bHwGOAFV_3u-a3OQ..%26type%3D2%26query%3D%E5%88%B8%E5%95%86%E5%90%88%E8%A7%84%E6%97%A5%E5%B8%B8%26token%3D46854191EDD0589AA0A7FEB59EFE8019A1DFA4656AD60C1E
+- 来源公众号：2022-11-17
+- 发布时间：Financial Services Career
+- 检索词：券商合规日常
+
+正文：
+
+```text
+处理部门内日常合规咨询,给予及时的合规意见,学习、研究业内新政策、新制度,组织对内部制度的修订和完善;制定、收集部门合...
+```
+
+### 16. 网易员工绝症被劝退同时,券商员工被东家索赔3个亿......
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412738&ver=7036&signature=U3M9jnNxE1I90CLgd86Kd*wtp548DBrzr6NlzbsOzNcROUSZrj7M9l-7gRpnlR*pevkt2luqeeW2wnhL6Ay3V*R1*izPdX0Ho-eupBP-2mR-0dRu5-HhjgjR5S38ti7d&new=1
+- 来源公众号：2019-11-28
+- 发布时间：咖啡研报社
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+4.风控措施的履约担保不到位.三、信息披露不及时.四、处置信访、投诉不得当. 青岛证监局认为,上述行为违反了相关规定,因此...
+```
+
+### 17. 大幅降薪！有券商高管3年降了90%！
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412738&ver=7036&signature=PnRmlYUUQmlTeYUadGrQTCv5XYkLWwhkgXo8AzX*tAlRZYVJiNGtxzmCDxmLOPax8FYl1dxUz30nCiay0oNu**H7oR0ci68DupQ3g53vvN8zhW7rqVTXoRyJgXVhwDiu&new=1
+- 来源公众号：深圳商报
+- 发布时间：2024年4月5日 09:23
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+02有券商后台普遍降薪30%前台“不达标的只能劝退”据报道,多位券商人士认为,“降薪令”的影响还将加剧,2024年薪酬体现大...
+```
+
+### 18. 应用统计硕士(MAS)考研全方位分析
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412738&ver=7036&signature=VhIJmWzTQYetzPmHnpNloDwS4NUlXY2PPiM*EpYK1bdkqyeEegrG8Lb2LEs7O-EZhY1*w4qMEO0S1kT90f7zRHfxLyDaVUcTAD-rEfsAFFfcw7IVZLsEK2ptT7RUjFzs&new=1
+- 来源公众号：清北博雅考研
+- 发布时间：清北博雅
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+金融量化/风控:券商、基金、量化私募、银行风控部,需要量化研究员、风险分析师.起薪30-50万,头部量化私募百万以上.技能要...
+```
+
+### 19. Wind风控日报 | 小米汽车泄密“破案”，三人被辞退
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412738&ver=7036&signature=Wua-vzBXYS0hYYPfddrzLbQvUEZP-oFxc8d34DqjqzZ*iZBQmakJ80UXhUXqC*RKrFofGE0kHsaqDIrTMmliyANUdDD9y-Ehsb3RvdgnWnmudbNqh-v2KWCpnpYnDjtZ&new=1
+- 来源公众号：Wind万得
+- 发布时间：Wind万得
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+//  今日关注  //
+
+// 宏观政策 //
+
+// 中国债券预警 //
+
+// 中国股票预警 //
+
+// 海外预警 //
+
+// 金融同业预警 //
+
+// 行业预警 //
+```
+
+### 20. 悲惨！有中植系财富公司履历的员工被某头部券商全面辞退
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412796&ver=7036&signature=5UFySBFhvN7ufPT463uAKztC2qmiwaW2Zfb4Box2WIJJOkwZZcdxpZzpLP96palF-Y5Qp-Ui2r*ILYgyWdXKZOy0xjW-LTik4qvyHsyvzY7-sA1Zv-vSOaQKl66ZC9zl&new=1
+- 来源公众号：上海陆家嘴并购联盟
+- 发布时间：上海陆家嘴并购联盟
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+3月22日坊间消息，中植系大案发生后，某头部知名财富机构，中X财富将全面辞退有中植系财富公司从业经历的理财经理！
+
+3月18日财新报道：中植集团总裁颜茂昆被带走。
+
+2023年11月25日前后，中植集团及中植财富共计50多人被采取刑事强制措施。2024年3月16日，平安北京朝阳公众号发布消息称：目前已对公司高管等主要涉案犯罪嫌疑人依法采取刑事强制措施。
+```
+
+### 21. 被吹爆的CPA证书,到底是什么?一篇讲透所有真相
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412796&ver=7036&signature=VqTpxFylF3zCJtdpZK5CrIvy6tjm6nAS3eYMrAbXd6H*oNBtme2bEHA8oK89K9TPB81goGWHYC7gQZfMXbrHjHNk*azD9XCxCBs4WxoiM5ie2zcscdCHF4JTwDQ26LpJ&new=1
+- 来源公众号：2026-10-9
+- 发布时间：奕科财经
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+赛道二:金融高端领域券商投行、资管、基金、银行风控、投融资岗位.金融行业非常看重财务功底,CPA是简历核心加分项,是进入...
+```
+
+### 22. 秋招别只盯西装革履那一边，有人正悄悄把钱赚麻了
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412796&ver=7036&signature=EdlfdjCD9TXXpu-rFbgNwZl4ioyt6trIAsxHyNeU-LK8OFqgNLeoQjIeSLaVWwTgt6HPd*IqM8aldDc7dm2DzTkM3ykDsarSIVSCjqSGQMex*fm7UYECzqxAMhhVR0e7&new=1
+- 来源公众号：明日金英
+- 发布时间：明日金英
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+👇👇👇👇👇👇👇👇
+扫码添加金融求职交流群
+```
+
+### 23. 悲惨！有中植系财富公司履历的员工被某头部券商全面辞退
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412796&ver=7036&signature=g8Zk3L2vOzPhXsPFuhyZTJJGxelotHYJk5FH6*IlYoK37JjKjmkSIoF*lisiuNsM-EGMHgV4iB8BsMOhiYD0tjJ7W2V1qXVAOEwbBdCjATZ-RQU8aPtmr2zCOdkmL*Ew&new=1
+- 来源公众号：寰际
+- 发布时间：链接全球投资人
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+首席风控官颜茂昆、首席财富管理官武建华、首席资源官罗音宇、首席人力官王钰、首席财务官马红英和首席合规官刘辅华.上述八人...
+```
+
+### 24. 辞退,永不录用!＂薇娅们背后的男人＂栽了?安排女友高薪入职,传淘宝直播幕后推手被开除
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412796&ver=7036&signature=xnxUQJNiFkZ0hYCyOyP5jwxdANOVRH8WD-EY3BCeD4SmjsrmhnjzfmQvcT*7xyBfZYz9dOZMXQYxAUHq1YiCioG*we-CxaKkzdPpuAMc1WLIem43fUXaw6g9Y8Qr4dYP&new=1
+- 来源公众号：2020-6-30
+- 发布时间：券商中国
+- 检索词：券商风控劝退
+
+正文：
+
+```text
+滴滴介绍,2020年至今,滴滴风控合规部与多部门协同配合,共查处舞弊违规案件17起,涉及违规人员30人,其中20人因严重违规被...
+```
+
+### 25. 国央企真香岗丨“风控合规”谁能投？做什么？前景如何？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412872&ver=7036&signature=LOV0TCq7hxZuaMMSdaYcza5cqygn74yOR8fcSiZ07vy6MqaO9rZXhxNaEyV7ZtWsEYVI0xKq7pz0ABjyJqyGU-Q4OkzpsDUsuJAN8x234bugHZD3IHuemIzRZY721*dc&new=1
+- 来源公众号：FRM金融风险管理师
+- 发布时间：关注👉
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+轻松备考FRM
+
+中文改革+26考纲解读
+
+直播时间：3月18日-19日 19:30
+
+
+
+
+直播讲师：龚圆圆
+```
+
+### 26. 互联网创新业务的发展疑惑与合规边界探讨
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412872&ver=7036&signature=aA6x3YhygkbsUS0*AdXz419fXRWcsQrAWQfuAnI*rr*Q51r3VJ3PBdAq1tbpPFcpTpD46doRvekOcGGCpinkeoYHRN*w6-gFkE6rAjp0eK61VE58a98LRpuFdrxHcnuh&new=1
+- 来源公众号：合规小兵
+- 发布时间：​合规小兵
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+四、大数据风控、大数据合规对数据的分析目的是带来有价值的真实性,但对于合规和风控工作而言,大数据的作用仅为其形,叠加AI...
+```
+
+### 27. 告别枯燥合规课！邮政人必玩的《邮理邮据》剧本杀版权课，来了！
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412872&ver=7036&signature=21UZyxu3fbv1NbAcNMtLAjo98-cnauqLj725ZZ8*lfrkDuAzDRGAgL8ot0TQNJcp2YwN2*MOYx6U0*viabKHJUZ3HA5DuYgFnaiVdPZC1KhYX0DM5FBxerWujgrti0ir&new=1
+- 来源公众号：浅然企培
+- 发布时间：企培剧本杀吴老师
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+全员合规文化建设、风控能力提升- 邮政金融网点:柜员、经理、理财经理合规底线强化- 寄递事业部/揽投部:收寄、分拣、投递、安...
+```
+
+### 28. 【数字金融】AI智能体如何重塑信贷风控？从规则引擎到动态决策的实战解析
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412872&ver=7036&signature=khymWoRaGH3S2wj7HdX5wqxi1J-hj7GewgPPFwwepn1SjaUvfdjiV-laGJ5bH6OANHwY6r5xqOwBIgsOnx-neymB5IF7feHzMngnrdT5XBL1T2N*vjwyQluA5EGcLImg&new=1
+- 来源公众号：乌圆AI
+- 发布时间：乌圆AI
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+准确性和用户体验的提升风控效率的显著提升智能体技术在信贷风控领域的应用,显著提升了全流程自动化率与处理效率.蚂蚁消金的...
+```
+
+### 29. AIGC爆发下,劳动舆情与人才风控管理的N种玩法
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=yIYzcK2-vVEl58GoO5BRHi1bvDdth2c1ErgCau5QeZT2yDBAXnbV69Od6vfLaP28T8*VJEqIUfXxtZh9AXXxuusDMGJ3AN5Qof30PHVdnOBHDVhrzLGFlVh94IuEbJIS&new=1
+- 来源公众号：2023-7-14
+- 发布时间：全景求是FACT
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+因此,HR面临的难题除了需要更加精准的吸引高质人才外,如何把控劳动舆情带来的人才风控危机,从而合法合规降本增效实现人力...
+```
+
+### 30. 多平台合规风控
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=G5wNGD07t-8*sAnFqjUs1IAZ25GmFTx4Tyg*Smo8lLyKko3GYcyapUr0jf2x3O8ErCfkATBHw9DPN8ATBB-5VwooOVfxy3nL3DUfD5dM9nyn9ZKrl2YB16d*1amkvDFu&new=1
+- 来源公众号：管理大本营
+- 发布时间：2026年10月10日 10:30
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+长期主义:把风控写进日常1)每周15分钟账号状态巡检:处罚通知、违规记录、信用分;2)把合规纳入团队考核:内容质量与风险控...
+```
+
+### 31. 中圆量化的底气，来自一群真实的人
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=eY-JdONTb5zWuARFCxXABvr2xkySYDFEfi0JAToCeoMTvq424Jw4Av17X5IeTb7Yb4CUy0w155ludTyh31ptHwZFBQ5EsjoecwN3d31*CKvCeHXQYwfxN9uZtL77j-hK&new=1
+- 来源公众号：经纬新讯
+- 发布时间：2026年10月19日 10:59
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+日常工作还包括对产品说明、宣传材料与客户协议的合规审查,确保对外口径与实际规则一致.独立,是风控能够真正行使否决权的前...
+```
+
+### 32. 合同合规审查到底审什么、谁来审、审到什么程度?
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=R*4kflmPxfU9*QlmjMd2uOdOvmW4A2Jia9kHFTpSpajmU8kZglCFq5juizRbn4yZpjgRXUMvnXQumkzKABU7-4*nsJ600cURw*hMCbFsUflCM*gFnbLpU8keQFmqy7Yx&new=1
+- 来源公众号：象熠Compliance Club
+- 发布时间：Compliance Club
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+一个真实感十足的合同纠纷现场复盘——同一份合同在＂给法务看看＂＂合规审一下＂＂风控把关＂之间被踢皮球的典型混乱.课程目...
+```
+
+### 33. 取代律师岗,中国又一法律行业新兴高薪岗位在崛起!这才是法律从业者未来5年最好的就业方向!
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=8xyfFqJuyORx7a6Q4AEYyCR36YNn2nf9VbWw7An-jekLxWIcEYSLy9TeapnklMR5zmZSM1APtSK3D4PeG7BIz*tYS0yfcPRkaQ5BnvM5iyoTqkheOD3PBvHTycIVJRL5&new=1
+- 来源公众号：2026-3-19
+- 发布时间：律法读报
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+将学会构建可持续供应链体系与ESG合规风控清单,覆盖从欧盟CSRD到供应链尽职调查的全流程最终,你将懂碳核算、精通AI提效、...
+```
+
+### 34. 取代律师岗,中国又一法律行业垂直新兴高薪岗位在崛起!这将是法律人未来5年最好的就业方向!
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=*MR-*DaJRwT2Mg5XYSxNgkCl-goD4G*1BDcyp*wAlnqtDU8i9SPdBzpumHe7EODKQklkUbS35NhreO6waaVJqw*2Q2CX*VcwyGJCAoeZmu2Pf6S3dYWe4VTZ-DdJP3UM&new=1
+- 来源公众号：2026-3-22
+- 发布时间：民法典权威解读
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+将学会构建可持续供应链体系与ESG合规风控清单,覆盖从欧盟CSRD到供应链尽职调查的全流程最终,你将懂碳核算、精通AI提效、...
+```
+
+### 35. 取代法务岗，中国又一法律行业新兴岗位在崛起！这才是法务人未来5年最好的就业方向！
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=8ifj2lqtSlseRzbqiLc6IhyW*y3rwvyIWJophbWL5NjwPRFhoCWI6OQ4ju2W-X1EJC1zkgGLdOOQTUzwTQymLi8tEstZ4wlviY*BeBQLcSsPmG3lyDetqp5Vg83v2-qe&new=1
+- 来源公众号：法务经理人
+- 发布时间：2026年2月25日 09:00
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+今天想跟各位在律所、在企业合规一线的“法律人”说几句心里话。真心希望各位法务人能认真看完并重视起来。
+
+
+
+
+先说个现实感受：最近一年，后台收到最多的私信就是：“感觉法律行业越来越难做了。”很多人也都有类似的感受：
+
+
+
+
+基础业务红海化：传统的民商事诉讼、常规合规业务陷入价格战，法律咨询业务更是大批缩水。
+
+
+生存压力沉重：房贷、孩子、父母……每一份都是真实的压力，加班加点却换不来相应的收入增长。职业上升通道也正在收紧。
+
+
+AI替代的真实危机：基础的合同审查、法律检索，现在AI一条指令就能做得比一般律师更快、更准，还要担心职位被优化。
+
+
+
+
+现如今的大环境，“法律人只有搭配其他才是未来出路，单出永远是死局”！昨天和一个国企法务总监聊天，他也如是说。
+
+如何破局呢？
+
+
+
+01 ESG成为律师行业蓝领业务
+
+
+
+
+02 法律人学ESG有什么好处
+
+图：ESG已成法务人求职晋升必备的高薪技能之一
+
+
+
+
+03 成为企业抢手的AI+ESG实战型人才
+
+道理都懂了，但具体该怎么学？
+
+
+
+
+如果只会些零散概念，面试时被问到“怎么从零搭建碳核算体系？”或者“如何用AI提升ESG效率？”很可能就直接卡壳。
+
+
+
+
+当前，国务院《“人工智能+”行动意见》明确要求推动AI与各行业深度融合。在ESG领域，数智技术已成为实现高效、精准、国际化披露的关键动力。
+
+
+
+
+为响应国家导向、规范人才培养，工业和信息化部人才交流中心牵头构建了《人工智能ESG分析师》岗位能力评价标准，并推出了对应的岗位能力评价证书。
+
+
+
+
+
+
+
+不懂就问，这个证书值得考吗？答案是肯定的！
+
+
+
+
+
+第一， 官方背书，含金量直接拉满
+
+
+
+
+
+发证机构—工信部人才交流中心，这意味着证书代表的是国家对你在“AI+ESG”领域专业能力的官方认可。
+
+
+
+
+第二，聚焦 AI+ESG 实战，企业认可度高
+
+
+
+
+
+
+证书信息直接在工信部人才交流中心官网可查，终身有效。且旨在证明持证人具备“AI+ESG”的落地能力，在求职时，是对实战能力最硬核、最直接的证明。
+```
+
+### 36. 要取代评估师岗,中国又一行业垂直相关高薪岗位在崛起!这才是评估师未来5年最好的就业方向
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=sF419LIzGpOxYl3pY0tQ6Vz0AsoFpzIjbJyMUCHDF1feEuJYdXSS7bscASmFF*Q*6rFEqK59RhQ8W4*xhxQy*kWloeCHpAYJHei4L0ZsTVg6utEO3WX4r2*wSSNq4lqp&new=1
+- 来源公众号：2026-4-1
+- 发布时间：评估师
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+将学会构建可持续供应链体系与ESG合规风控清单,覆盖从欧盟CSRD到供应链尽职调查的全流程最终,你将懂碳核算、精通AI提效、...
+```
+
+### 37. 风控岗如何查看和鉴别个人征信报告?
+
+- 链接：https://mp.weixin.qq.com/s?src=3&timestamp=1792412929&ver=1&signature=ro9umTO6PgNLnXTQNVaqJzlT4LcQe6Wh9IxY8vhli-GiHjXiXDWlt-Ni-k637mX2JgkhUmGtHCIXsbOIny9bpdIrmSwTvqvYmtIZUi9AJDOZtFzc5oE18wdgKLG5eCpEZk21mumYWmJusaz1yA9Q-ey7dKfieSdOuqBzH6jItQk=
+- 来源公众号：大数据风控联盟
+- 发布时间：2017年1月13日 10:47
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+第一部分:如何查看个人征信报告 征信报告包括个人信息的八项内容: (1)个人基本信息, (2)配偶信息, (3)居住信息...第二部分:如何鉴别个人征信报告 这一项是对个人征信报告真伪识别的重要环节,现在对于个人征信报告越来越重视,但是有些人的征信逾期很严重...
+```
+
+### 38. 封号！薅羊毛与陪聊机器人｜1v1陪聊社交风控篇
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412929&ver=7036&signature=44CLbMiu6-lXR9PSr-*td0kKsyZc2dI9i2NjvUsr3e0LhNoiDXuf6KWqZc2-KTM0df8luBTamknOiU*r5quhwRou4ed7CNJT8Pj05I81lYUEcNo3eiWdHWu6inO8BO2S&new=1
+- 来源公众号：社交产品经理
+- 发布时间：初九
+- 检索词：合规风控岗真实体验
+
+正文：
+
+```text
+在1v1陪聊产品里,风控真正面对的是两类问题:第一类:内容风险(合规问题)色情 / 暴恐 / 违禁广告 / 引流 / 辱骂涉政 / 价值观风险 ...
+```
+
+### 39. 活动预告 | 证券法律合规职业分享
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=qRwN5iDfplMPAhZDi0mIqmOnf7vfRfHxF7caDh1jFAiZpFZcyRBL3NTZXo*PFan2bUE77Hn54jGBvVwLQTppGX92ZLLhQ0-RhBPkgi96QCMmKQdSAFs9XybAYTRgMY3W&new=1
+- 来源公众号：isufe法律之友
+- 发布时间：2026年10月16日 22:00
+- 检索词：券商合规面试
+
+正文：
+
+```text
+某头部券商法律合规部实战经历:研三全力备战秋招,累计参与各行各业企业面试60余家,沉淀了金融、法律行业面试求职心得,在秋...
+```
+
+### 40. 财通证券合规人员能力提升做法
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=oOcZ6AN2KEmzyMs9FNuciexzfoGDN8EAIB6cbMGayOGVf9e03fHFUY9BForyoxGX4Mlqm9ht8u8ejAUZYANU*sKlhNowXq9cz*eo2xyWB0OZhnUfQ36dxbFlzTae8FcV&new=1
+- 来源公众号：财通合规之窗
+- 发布时间：练内功的
+- 检索词：券商合规面试
+
+正文：
+
+```text
+为助力公司成为省内最强,全国一流券商,也为公司“十四五”规划的开局打下坚实的基础,合规部积极响应公司“能力提升三年行动...
+```
+
+### 41. 证券公司合规风控制度失效案例：天风证券，八面漏风，四处受罚，认错认罚！
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=SwfUUiWCPhSl8lNV8d8UC2fEw6efTq9bGxMlsS1ke*8FlXilYssGTKGixKkbsZdApAwe6evTvGpgO4xKEXAgDfXGSQavG2IytWLYfXrYZpBhjlC1ss09mc55Hhb8vkIn&new=1
+- 来源公众号：资本市场的规则
+- 发布时间：2026年3月16日 10:20
+- 检索词：券商合规面试
+
+正文：
+
+```text
+从天风证券违法违规案例看,一方面大股东滥用股东权利、违法利用证券公司融资、侵蚀证券公司利益,另一方面证券公司突破合规底...
+```
+
+### 42. 兴·研究｜证券公司合规管理体系建设研究
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=Kzip4WJCAmobBPstqy5TvRALejDS75TbBFAzd0HlJgxhPbxe9QSMNZI9LrzqvJMrzBeSbhy9daUJDRoDp-apoi8ykfbqiRXr45BS6QA89LUbpPy26vP7Z5Hgnsy9*FO7&new=1
+- 来源公众号：兴业证券发布
+- 发布时间：2022年7月17日 08:00
+- 检索词：券商合规面试
+
+正文：
+
+```text
+林　兴　颜建锭　杨　飏　王　俊　刘　欢
+
+1
+
+◆ ◆ ◆
+
+研究目的与意义
+
+当前，新冠肺炎疫情加剧了全球经济金融不稳定，国家加快构建以国内大循环为主体、国内国际双循环相互促进的新发展格局，金融供给侧结构性改革不断深入;以注册制为代表的资本市场改革向纵深发展，双向开放的广度深度日益提升;监管深化简政放权，强化监管执法，新《证券法》《刑法修正案(十一)》等基础制度修订出台，资本市场发展的法治根基不断夯实，正在形成“行政处罚+民事赔偿+刑事惩戒”的法治供给闭环，证券违法违规成本显著提升。证券公司作为重要的金融中介机构，面临的市场形势、监管环境、业务模式、风险属性日益复杂。
+
+经济、市场与监管的变革，既蕴藏着新的发展机遇，又潜藏着新的困难挑战。一方面，为证券公司集团化、国际化经营及创新发展提供了新的空间;另一方面，集团化经营带来业务复杂度高、多头监管、关联交易、风险传导等问题;国际化经营面临全球金融监管环境、复杂国际商事规则的极大挑战;发展更多依靠创新、创造、创意的大趋势对合规风控能力提出了更高要求。
+
+在此背景下，合规经营作为证券公司稳健发展的奠基石，分析合规管理体系建设现状，厘清面临挑战，梳理过往经验，提出未来发展建议，对证券公司在新时代下加强自我规范，严守合规底线，护航公司实现高质量发展具有重要的现实意义和长远价值。
+
+本文将围绕三个方面展开分析:一是从证券行业的角度，总结分析目前证券公司合规管理体系的整体建设情况，并结合当前形势，提出普遍面临的挑战;二是以兴业证券股份有限公司(以下简称兴业证券)合规管理体系建设实践为例，分析其合规管理体制机制、垂直穿透合规一体化管理、合规管理协同工作机制、重点领域合规管理的做法;三是提出进一步健全兴业证券合规管理体系的思路与建议，为证券行业的合规管理体系建设提供参考。
+
+
+
+
+2
+
+◆ ◆ ◆
+
+证券公司合规管理体系建设现状
+
+及面临的创新环境与挑战
+
+
+(一)证券公司合规管理体系建设现状
+
+
+自2017年《证券公司和证券投资基金管理公司合规管理办法》《证券公司合规管理实施指引》发布以来，证券公司积极落实监管制度，进一步健全合规管理体系，普遍较好地履行了合规咨询、合规审查、合规监测、合规检查、信息隔离、反洗钱、合规文化建设、合规考核与问责等多项合规管理职能，并加强了对子公司合规一体化管理。
+
+(二)证券公司合规管理面临的创新环境与挑战
+
+1.监管改革，合规管理的重点与方式需要转变。近年来，监管持续推进以“放管服”为核心的改革，一是减少事前审批，证券公司自身需要投入更多资源对拟开展业务的合规性进行评价与把关;二是加大各类“口袋政策”和隐性门槛清理力度，合规性问题的判断难度提高，合规管理人员需要具备更高的专业素养，依据法理和监管规则背后的精神和原则进行合规分析;三是加强事中事后监管，证券公司需要加强业务过程中的持续合规管理，“过程合规”的重要性日益突出;四是监管处罚力度加大，实施一案双查、资金罚和资格罚并重，违法违规责任后果显著增加，证券公司需要切实建立起自我约束和自查自纠机制;五是推动关键监管制度创新，新规解读与外规内化的要求日益增强。合规管理面临如何转变管控重点与方式，服务公司真正具备与监管改革相匹配的理念、组织与能力的一系列挑战。
+
+2.集团化经营，合规管理的覆盖面与穿透力度需要加大。证券公司集团化经营，需要将子公司纳入统一管理，对产品、业务、渠道、服务体系等进行全面系统的整合，对各项业务的价值链进行重新设计与改造，对各业务单元在集团发展的定位进行重新界定。面对不同业务领域子公司的监管要求、集团一体化综合金融服务的业务协同要求，合规管理面临如何优化管控模式，切实落实全覆盖、深穿透的要求，融入公司战略并支持业务发展，前瞻性、有效且高效地实施合规风险监测和管理，为公司战略和运营决策持续创造价值的挑战。
+
+3.国际化经营，合规管理的专业能力需要提升。资本市场在加速向制度型、系统性开放转变，支持“引进来+走出去”的发展战略，证券公司积极通过境外设立机构、增资境外子公司、收购境外公司股权、开展跨境业务等方式布局海外市场。实施国际化战略，必须面对国际市场复杂的法律和规则，跨境合规风险也应运而生。合规管理面临熟悉境外法律法规的跨境人才短缺、跨境管理子公司手段不足且低效、跨境合规风险事件处置经验缺乏等挑战。
+
+4.数字化转型，合规管理的技术需要革新。新一轮科技革命与产业变革快速发展，以大数据、区块链、云计算、人工智能等为代表的数字技术在证券行业的应用场景不断拓展，在投顾、投研、客服等方面催生了一系列新型智能服务或产品。全面数字化转型是证券公司拓宽获客渠道、提升客户体验、提高决策效率、降低运营成本的重要前提，也是打造核心竞争力的重要战略。但数字化转型在重塑服务流程、创新服务模式的同时，也在一定程度上模糊了业务边界，衍生了新的风险特征。合规管理面临如何厘清科技创新合规边界，并利用机器学习等科技手段实现合规数字化转型的挑战。
+
+5.竞争加剧，合规文化建设需要持续推进。证券公司虽然已经普遍建立起较为完善的制度体系，但“制度归制度，执行归执行”的情况时有发生，合规管理的内生机制需要进一步健全。随着业务竞争压力的加大，创新业务的加快发展，“合规让步于业务发展”“别人也是这样做”等思想需要警惕，合规理念的树立、合规意识的培养、合规氛围的营造需要持续发力。合规管理面临如何看长远、真投入，久久为功推进合规文化建设这项基础性、持续性、系统性工作的挑战。
+
+
+
+
+3
+
+◆ ◆ ◆
+
+兴业证券合规管理体系建设实践
+
+(一)合规管理体制机制建设
+
+1.合规管理组织架构科学化。合规管理组织架构是证券公司实施合规管理的载体。兴业证券建立科学的公司治理架构，明确各方定位与合规职责，确保董事会有效行使重大决策和监督功能、监事会有效行使监督职能。公司董事会、监事会、高级管理人员高度重视公司经营的合规性，承担有效管理公司合规风险的责任，积极践行并推广合规文化，促进公司合规经营。各总部部门、各分支机构和各层级子公司负责人负责落实本单位的合规管理目标，对本单位合规运营承担责任。全体工作人员遵守与其执业行为有关的法律、法规和准则，主动识别、控制其执业行为的合规风险(合规管理组织架构及各方职责见图1)。
+
+图1　兴业证券合规管理组织架构及各方职责定位
+
+2.合规队伍建设专业化。兴业证券高度重视合规队伍建设，制定《合规管理人员管理细则》，明确各单位合规管理人员配备要求、岗位要求与任职条件、岗位职责、行为规范、监督管理与考核问责等。建立了“合规总监—合规管理部及其管理人员—下属单位合规管理人员”三层级合规管理队伍体系，为合规管理部门和各业务单位配备了符合要求的专兼职合规管理人员(合规管理人员配备要求见图2)。
+
+图2　兴业证券合规管理人员配备要求
+
+同时，兴业证券多措并举，建立合规管理人员准入退出、培训教育、年度述职、互动交流、监督考核等管理机制，对合规管理人员聘任前、中、后台各环节进行全过程管理，形成“面试+笔试+述职”综合考核机制。
+
+3.合规文化建设体系化。自成立以来，兴业证券始终坚持合规稳健经营的原则，内外并举持续强化合规文化建设，厚植“合规、诚信、专业、稳健”的行业文化理念。一是建立健全合规管理制度体系，为合规文化建设提供制度保障。通过把抽象的文化理念转变成具体的制度，将合规文化固化于制度，使制度体现文化要求，彰显合规价值主张。二是构建完善的合规培训机制，确保合规文化建设入脑入心。定期编撰《合规周报》《合规月报》《反洗钱工作简报》《证券行业监管案例汇编》;通过公司E-learning系统、现场培训交流会议等“线上+线下”模式，组织员工合规培训与考试，促使员工增进对文化理念的认知、认同，将合规要求铭记于心、付诸于行。三是加强合规检查监督力度，将合规文化建设落到实处。建立“检查—整改—考核”三位一体的工作机制，对违规行为严肃问责，全面营造“不敢违、不能违、不想违”的遵纪守法、合规经营的文化氛围。
+
+4.合规有效性评估常态化。根据《证券法》《证券公司合规管理有效性评估指引》《证券公司和证券投资基金管理公司合规管理办法》等法律、法规和准则的要求，兴业证券制定《合规管理有效性评估办法》，由董事会授权经营管理层成立跨部门合规管理有效性评估小组，每年开展不少于一次合规管理有效性评估，每三年至少委托具有专业资质的外部专业机构开展一次合规管理有效性评估。兴业证券开展合规管理有效性评估以合规风险为导向，重点关注可能存在合规管理缺失、遗漏或薄弱的环节，全面、客观反映合规管理存在的问题，充分揭示合规风险，并将另类投资、私募基金管理等子公司的合规管理统一纳入公司合规管理有效性评估。对评估发现的问题，加强问题的整改落实与跟踪问效，并将整改情况纳入合规考核与问责范围。
+
+(二)垂直穿透合规一体化管理
+
+兴业证券积极加强子公司、分公司合规垂直穿透管理，并指导子公司、分公司将合规垂直穿透管理延伸至下辖各单位，打通垂直穿透管理“最后一公里”，实现集团合规“一盘棋”。
+
+1.深化子公司合规垂直穿透管理。兴业证券将合规管理组织体系有机嵌入子公司的公司治理机制，制定《子公司合规管理实施细则》，从人员管理、审查、检查、报告、培训宣导、考核问责等方面，明确对子公司的垂直穿透管理要求。一是子公司合规负责人由公司合规总监提名，公司推荐或选派，再由子公司根据子公司章程进行聘任。二是持续开展合规培训宣导，每季度召开子公司合规与反洗钱沟通交流会。三是组织或联合开展子公司专项检查，及时发现并跟进子公司化解风险隐患。四是督促子公司做好合规报告，及时掌握合规管理及风险情况。五是公司合规总监组织对子公司开展合规专项考核，考核权重不低于15%;发生重大合规风险的，实行一票否决制。六是加大境外子公司合规风险管控。选派合规骨干人员到境外子公司担任合规管理关键岗位;加强对境外法律法规及监管政策的深入学习，提高对境外子公司日常业务运作的掌握程度，提升对境外子公司业务合规风险的分析与管控水平。
+
+2.加强分公司合规精细化管理。兴业证券积极开展分公司经营体制改革，一是按照省级分公司及直辖市分公司、地市级分公司、营业部设置三个层级的分支机构，并根据各分支机构的市场体量、业务规模、管理难度对各层级分支机构实施分级分类管理。合规管理在此基础上，进一步通过分类合规考核的方式对分支机构进行有效管理。二是在一类一级分公司设立合规负责人，负责牵头建立健全分公司及下辖分支机构的合规管理体系，对合规管理工作进行细化分解、统筹安排、协调管理。同时，明确分公司负责人为本单位合规管理第一责任人，负责落实本单位的合规管理目标，对本单位合规运营承担责任。三是按照前、中、后台进行专业化分工和部门设置，在一级分公司设置独立的合规风控部，具体负责分公司本部及下辖营业部的合规风控工作;下辖营业部的合规监察员接受分公司合规风控部的垂直管理，确保合规监察员履职的独立性。
+
+同时，兴业证券持续加强分公司管理，由合规管理部牵头各主要业务和管理部门出台《加强分公司精细化管理　提升依法合规经营能力方案》，从基础管理、内控管理和业务管理三大方面，明确分公司精细化管理要求与具体措施，并由合规总监组织相关单位进行宣贯与部署。一是要求分公司健全合规风控管理机制体制，切实加强合规人员履职“全生命周期”管理，客户交易行为“事前充分了解—事中监控识别—事后核查报告”管理，以及防范配资管理、反洗钱管理、隔离墙管理、投诉纠纷处理等。二是要求合规管理人员“依规履职”“大胆履职”，做好本单位合规管理工作的同时，指导下辖分支机构开展好合规管理工作，将精细化管理提升到新台阶，助力分公司长远发展。
+
+3.探索建立集团合规管理信息系统。兴业证券把科技赋能合规管理提高到战略高度，通过整合现有合规管理系统，打通不同系统之间的壁垒，搭建集团统一的合规管理信息系统，推动各子公司、分支机构在系统中进行日常合规信息的处理、数据录入、留档;对从业人员执业行为、业务反洗钱等进行监测预警，指导督促分支机构开展风险排查处置;对子公司、分支机构合规履职情况开展日常监测;收集汇总各类合规数据信息等，实现合规管理全流程监控，提升合规管理的智能化水平。
+
+(三)合规管理协同工作机制
+
+1.实行工作方式前置化转变。为更加前瞻性地防范合规风险，兴业证券积极转变合规管理思路，变“事后救火”为“事前防范”。一是主动参与业务研究讨论，进行合规分析论证，提供合规咨询建议。在产品及项目引入环节、产品设计环节及客户引入环节，对标监管规则预先评估产品、项目潜在的合规风险，指导督促相关单位切实做好客户身份识别、风险揭示、合格投资者评估、适当性匹配等工作，在业务开展的初始阶段把好第一道关，有效防范各类合规风险。二是对一线业务岗位人员的引入实行合规管理前置。要求合规管理人员提前介入本单位一线业务岗位人员(投资顾问、理财顾问、经纪人、业务团队负责人等)的招聘工作，重点协助做好拟录用人员是否存在犯罪、违法违规等事项的背景调查，审慎聘用工作经历存疑或高风险行业的人员，通过签署承诺函、合规谈话、集中合规培训考试等方式，对本单位所有新入职人员开展合规执业教育及警示工作，打好“预防针”，提升“免疫力”。
+
+2.紧密协同新业务新产品开发。在创新业务的研究中，兴业证券高度重视合规风险的防范。一是按照所涉的业务条线组织对口合规管理人员组成专项小组，全程同步，紧密配合相关单位推进新业务研发，对业务开展的合规性反复研究论证。二是针对不同产品的复杂结构，业务模式非标准化等，在合规管理部内部建立研究小组，组织员工深入学习讨论，熟悉产品结构，掌握业务各环节的合规风险点。三是在获取全息信息、充分沟通的基础上，对业务具体实施方案的合法合规性进行分析和审核，配合推进业务规范开展;对业务涉及的相关制度、流程进行合规审核，识别潜在的合规风险并及时与相关单位进行探讨，督促指导相关单位完善防范措施，严格落实各项合规管理和反洗钱工作要求，规范业务开展;将各单位的业务开展合规性情况纳入合规考核。四是根据实际情况，增设相关业务合规管理岗位，全市场筛选引进成熟人才，加强新业务、新产品合规风险管控。
+
+3.打造合规管理部门内外协同工作模式。兴业证券合规管理部门紧随业务发展新格局，分析研究业务协同中潜在的合规风险及管控盲区，对内创新工作机制，打破条线分割，建立矩阵式管理模式，针对重点、难点合规问题，灵活组建研究小组，实现信息共享，分工协作，共同把关业务协同全流程合规风险，打造全链条合规审查闭环，不留合规真空地带;对外加强与审计、风控等内控部门
+```
+
+### 43. 国浩上海丨证券合规与争议解决团队招聘实习生（留用）
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=AUfx0eTr4OeputQLKNRH0skXgX7h5ltr7TOTZhVGFciQ33T9PxG34RA3pQrDWfpIzq2T-ZVHIMXw3WcCQx7nD1WTWPjCcgH7A9OsgGKnpZrZsikIwQcbCBKOjVfrKTAu&new=1
+- 来源公众号：职得Legal
+- 发布时间：2026年1月28日 21:01
+- 检索词：券商合规面试
+
+正文：
+
+```text
+[招聘单位]
+
+国浩律师事务所
+
+
+
+
+
+
+
+[投递要求]
+
+
+
+
+[投递邮箱]
+
+[邮件&简历标题]
+
+姓名-学校-年级-可实习时长-可到岗日期-职得
+
+[其他要求]
+
+1、请以附件形式发送PDF版中英文电子简历；
+
+2、我们会尽快安排面试。
+
+
+
+
+
+
+
+职得Tips  
+
+全国TOP30法学院专属实习群开放，欢迎同学们加入！
+职得各地实习群/校招群/社招群/案源协作群均已超过200人，
+
+
+如需加入，可私信“得得（Sweet版）”邀请你入群。
+记得备注“学校/单位 - 姓名”哦~
+
+
+
+
+
+[招聘信息]
+
+
+
+
+[招聘职位]
+
+[任职要求]
+
+[实习津贴]
+
+[办公地址]
+
+
+
+
+[律所介绍] 
+[职得业务]  
+发职位、扩信息、招牛人，联系职得
+找工作、找实习、加社群，联系得得
+[相关文章]
+关于简历投递，资深HR这么说
+```
+
+### 44. 新一轮“监管风暴”席卷证券业，招商证券合规管理面临严峻考验
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=-Vyk0Dj0R9Vu4gwmpf2a9kjNPacnj1psejW0crOT*H5kEAXSoleBxMjyHsbH82pe-ABje4cr1YOhKqRaxeVfECnUtC9Kkkt0qDMWKJCuzp9yENdhFdnHBVbuVoDNu3Qv&new=1
+- 来源公众号：多面财金
+- 发布时间：多面金融工作组
+- 检索词：券商合规面试
+
+正文：
+
+```text
+春节前夕，证监会“官宣”换帅。新任证监会主席吴清正式亮相，并在上任之后迅速点燃了几把“火”。
+
+
+
+
+
+
+
+公开资料显示，吴清在金融系统从业多年，早年在证监会任职期间，就给市场留下了深刻的印象。吴清还曾成功处置了2008年的券商风险，包括推动26家公司进入司法破产程序。
+
+
+
+被冠以“券商屠夫”之称的吴清，一向十分重视金融监管的合规性和审慎性。他认为，金融机构的自我监管和监管意愿往往是靠不住的，因此金融监管不能留有缝隙。
+
+
+
+吴清就任后两日，证监会就展开了“雷霆行动”，对券商及相关从业人员集中发出了一波罚单，主要瞄准“证券从业人员违规炒股”红线，还涉及私募资管业务及投行业务。其中，招商证券因多名从业人员买卖股票等违法违规行为成为“典型”代表。
+
+
+
+
+据不完全统计，2024开年以来已有十多家券商被罚，且多为头部券商及从业人员，表现出了“严监管”“强抓手”的金融监管态势。
+
+
+
+01
+
+
+
+
+63人被罚、罚没8173万元
+
+招商证券领罚最多成为“典型”
+
+
+
+
+除夕当日，证监会、深圳证监会瞄准“证券从业人员违规炒股”红线，一天内集中发布了14张罚单，其中招商证券领罚最多成为开年“典型”。
+
+
+
+
+据“证监会发布”信息，招商证券多名从业人员买卖股票等违法违规行为，共对63人作出行政处罚，合计罚没高达8173万元。
+
+
+
+
+
+
+
+其中，招商证券时任执行董事兼总裁熊剑涛被采取终身证券市场禁入措施。熊剑涛于1995年6月入职招商证券，担任过招商证券首席信息官、首席运营官、副总裁、总裁和招商资管董事长等职位，已于2021年10月辞职。
+
+
+
+
+从1995年开始，熊剑涛就通过“熊剑涛”“任某礼”“崔某利”证券账户违规交易股票。监管根据前述熊建涛对各账户交易决策的比例划分,认定其交易股票总成交金额5.19亿元，盈利3357万元。
+
+
+
+
+吴光焰于2008年至2016年历任招商证券运行管理部副总经理、私人客户部总经理、资产管理部总经理、招商证券资产管理有限公司总经理等职务，在此期间使用过“余某梅”证券账户交易股票。深圳证监局认定吴光焰为不适当人选，自监管措施决定作出之日起3年内不得担任证券公司董事、监事、高级管理人员和分支机构负责人职务或实际履行上述职务。
+
+
+
+
+此外，证监会还对负有从业人员管理责任的招商证券，采取责令增加合规检查次数的行政监管措施，对公司董事长采取出具警示函、2名时任合规总监采取监管谈话的行政监管措施，并督促招商证券启动内部问责，约谈相关违规人员，落实问责全覆盖。
+
+
+
+
+图片来源：国际投行研究报告
+
+对此，招商证券回应称，涉事员工的违法违规行为集中在2021年以前，且采取化名持有的方式，反映出公司过往在日常教育上“仍不到位”，管理制度“尚有缺失”，监察问责“不够有力”。
+
+
+
+
+除了招商证券，证监会还“点名”了长城证券。证监会披露的行政处罚决定书显示，长城证券原副总裁韩飞因违规使用化名、借他人名义持有并买卖股票，被采取10年证券市场禁入措施，罚没累计达1.17亿元。
+
+
+
+
+02
+
+
+
+
+屡次被罚、保荐业务频“踩雷”
+
+招商证券合规管理面临严峻考验
+
+
+
+
+公开资料显示，招商证券是中国最早的一批证券公司之一，也是中国证券市场的重要参与者和建设者，主要业务涉及证券经纪、投资银行、资产管理、自营业务以及研究和顾问服务等。
+
+
+
+
+然而，2024年开年以来招商证券密集被罚，除了从业人员违规炒股，还涉及保荐代表人失职等多重问题，保荐业务频频“踩雷”，内控合规管理再次面临严峻考验。
+
+
+
+
+2024年1月3日，深交所对招商证券2名保荐代表人出具了监管函。据悉，招商证券推荐的广州芯德通信科技股份有限公司首次公开发行股票并在创业板上市的申请，经查明其在执业过程中存在对发行人境外销售业务核查程序执行不到位、对发行人股东持股比例的确定依据核查不充分、对发行人股东出资情况执行的核查程序不到位三大违规行为，深交所决定对其采取书面警示的自律监管措施。
+
+
+
+
+2月2日，安徽证监局发布公告称，招商证券“15城六局”债券的受托管理方面存在未督导发行人做好募集资金管理、未持续跟踪和监督发行人履行有关信披临时报告义务等情形。根据相关规定，安徽证监局决定对招商证券采取出具警示函的行政监管措施，并记入证券期货市场诚信档案。
+
+
+
+
+对此有业内人士评价称，招商证券近年来面临着严峻的合规考验，在今年金融监管趋严、新任证监会主席“监管不留缝隙”的治理风格之下，提升合规管理水平应当成为招商证券的重要工作。
+
+
+
+
+据公开信息不完全统计，2023年6月，招商证券曾因证券研究报告业务违规遭深圳监管局出具警示函，同年9月招商证券还因未对发行人收入相关情况及收入确认依据进行充分核查而遭受书面警示。
+
+
+
+
+时间线拉至2022年，招商证券的合规压力也比较大，一年遭到监管六次点名，并被罚没6300万余元，不仅在中安科重大资产重组的履职过程中未勤勉尽责，导致出具的《独立财务顾问报告》存在误导性陈述，且后续在并购重组当事人发生较大变化对本次重组构成较大影响的情况时未能予以高度关注，未按照规定及时向中国证监会报告。
+
+
+
+
+而在这之前，招商证券还曾因两次网络安全事故被监管层责令整改、出具警示函，8月其因投行业务问题也收到两张罚单。
+
+
+
+
+此外值得注意的是，2023年招商证券保荐的五家公司上市——世纪恒通、朗坤环境、埃科光电、德冠新材和康希通信，在前三季度除了世纪恒通实现正增长，其余均下滑。
+
+
+
+
+另据公开报道，招商证券近几年被抽中现场检查的保荐项目基本上全部撤回。例如，2021年-2022年，招商证券保荐的恒伦医疗科技、山东泰鹏环保、上海卡恩文化传播、四川英创力电子、大成精密先后被监管部门抽中现场检查，而这5家公司最终都撤回了上市申请。
+
+
+
+
+而事实上，熊剑涛等人违法炒股的现象也不是个例，此前招商证券不少高管在拿着公司高薪的同时，还通过“老鼠仓”牟利。2020年底，广东省高院二审判决显示，原招商证券投资经理杜长江因利用未公开信息交易罪，被判处有期徒刑一年六个月。
+
+
+
+
+03
+
+
+
+
+新一轮“监管风暴”席卷证券业
+
+
+
+
+近年来，证券从业人员因违规炒股受到监管处罚或承担赔偿责任的案例并不少见，2024年开年监管更是展现出了“雷霆态度”。
+
+
+
+
+在法律人士看来，这与证券从业人员自身法律意识淡薄、面对利益诱惑存在侥幸心理不无关系。同时，也在一定程度上暴露出证券公司的内部管理和外部约束机制亟待进一步健全。
+
+
+
+
+据金融时报报道，监管部门在着力构筑“不敢、不能、不想”违规炒股的长效机制方面持续发力，2019年至2023年，证监会共查办67起从业人员违法炒股案件，对139人作出行政处罚。
+
+
+
+
+2024年以来，证监系统及三大交易所已向多家券商开具罚单，多属于头部券商及从业人员，其中多数涉及投行保荐业务未勤勉尽责问题。
+
+
+
+
+2月5日，深交所连发3张警示函，涉及华安证券、华龙证券和联储证券3家券商。华安证券因对研究报告质量审核把关不严被罚，而华龙证券、联储证券则在现场检查过程中，被发现在客户交易行为管理、适当性管理、融资融券业务管理和投资者教育相关工作等方面有不合规行为。
+
+
+
+
+2月8日下午，中国证监会网站公布了两份针对证券公司债权融资业务的罚单，申万宏源证券存在承销尽调不规范和受托管理履职尽责不到位两项违规行为。平安证券则被证监会指出，其在债券发行定价过程中，存在违反公平竞争的行为。申万宏源证券被采取责令改正措施，平安证券则被出具了警示函。
+
+
+
+
+今年1月份，证监系统及三大交易所合计对券商机构及其从业人员开出26张罚单，涉及券商的投行、资管、经纪和研究等几大业务板块，投行业务尤其是重灾区。
+
+
+
+
+1月的券商罚单中，中信证券、中德证券、万和证券、银河证券、中金公司、国泰君安、方正证券、华林证券、海通证券、东兴证券、中信建投等11家券商被采取出具警示函、责令改正及监管谈话等措施。其中海通证券、国泰君安和中金公司等三家券商更是在短短一个月内，两度收到来自监管的罚单。
+
+
+
+
+有业内人士认为，所有证券从业者要对法律存有敬畏之心，违规炒股多发反映出应进一步加强对证券从业人员的精细化管理这一现实诉求。从证监会最新表态来看，持续强化机构监管、行为监管、功能监管、穿透式监管、持续监管等将成为下一步发力方向。
+
+
+
+
+·END·
+
+
+
+
+
+多面财金新媒体矩阵
+```
+
+### 45. 兴业证券：召募法律等合规管理人才
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=in3KFfznB3Yy2btNOa3Wn25rV1-wUUtM47KHqQVL-ZcoAQzxvkq8Ou4rowmjtJaWK0NQ9nxAYZFeIY3Jcxdm0C30bYDVG91QUl5b72dJmsEoh1mH0RbZjpmTZv0s0S6C&new=1
+- 来源公众号：厦大福州校友会法律分会
+- 发布时间：2020年9月9日 21:49
+- 检索词：券商合规面试
+
+正文：
+
+```text
+合规管理部-大经纪业务合规管理岗1.组织建立健全公司合规管理和反洗钱各项制度,监督合规管理和反洗钱内部控制制度的执行情况,...
+```
+
+### 46. 利润暴涨42%，罚单连吃三张：华安证券的“双面2026”
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=MF4nnQvsAqK8x7-2eGSfbpnpWfbwsZLPxG2Rkpv*rZIJyonXyY72HKCr7znYXxGbB-T4CBLAIi5qalPTEDF9UDtoDcyVm4aWvbQwK5rjw7UyUmDe5OOSOGFXSGkg5mmO&new=1
+- 来源公众号：券研社
+- 发布时间：券研社
+- 检索词：券商合规面试
+
+正文：
+
+```text
+业绩创纪录,合规在失血.这不是周期波动的问题,这是内控体系系统性承压的信号.三张罚单,三个方向,同一个病灶梳理华安证券...
+```
+
+### 47. top券商 | 中国银河证券 2026 社招开启！头部国有全牌照券商，境内 7 城 + 新加坡多岗，量化 / 投行 / 合规全覆盖
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=q88I7jKtQ-vUKZSgTP4aGHcwwX9PqYoI2EQcxtELI0v9kSzQNvX75Z-v0dNqCzb3Zm3mT2bmc18iyt9vO8XIv0eMSrQPs*fE-PA2Jwwm9uuJEv4YUR1g4lNl9OnpGLAC&new=1
+- 来源公众号：嘉懿名企Offer
+- 发布时间：嘉懿名企offer
+- 检索词：券商合规面试
+
+正文：
+
+```text
+1
+
+关于银河证券
+
+
+
+
+中国银河证券 2007 年正式成立，总部位于北京，由中国银河金融控股发起设立，实际控制人为中央汇金投资有限责任公司，是国内头部国有全牌照券商，A+H 股双上市（601881.SH/06881.HK），注册资本 109.34 亿元。
+
+公司业务覆盖财富管理、投资银行、机构业务、国际业务、投资交易等全金融领域，境内在 31 个省市布局超 500 家分支机构，境外业务遍及新加坡、马来西亚等 10 余个国家 / 地区，资本规模、盈利水平、风险管理能力稳居行业前列，是东南亚布局领先的中资券商，致力于打造受人尊敬的现代投资银行。
+
+2
+
+招聘岗位
+
+
+
+
+👉 合规风控类
+
+地区合规专员（湖南 / 湖北）(J11090)
+
+地区合规专员（江西地区）(J11089)
+
+地区合规专员（广东地区）(J11088)
+
+地区合规专员（山西 / 陕西 / 甘肃地区）(J11087)
+
+👉 交易投资类
+
+多资产量化策略岗 (J11052)
+
+量化交易岗 (J11051)
+
+投资助理 / 交易员岗（跨境业务方向）(J10858)
+
+利率及衍生品交易岗 (J11032)
+
+👉 投资银行类
+
+股权发行上市岗 (J11043)
+
+承揽业务岗（大湾区部）(J10447)
+
+承揽业务岗（电子科技组）(J10448)
+
+承揽业务岗（医药健康组）(J10456)
+
+👉 运营管理类
+
+资金管理岗 (J11091)
+
+经纪业务权限参数管理岗 (J10868)
+
+场外业务结算岗 (J11055)
+
+采购管理岗 (J11054)
+
+👉 专业技术 & 职能类
+
+股权销售岗 (J11001)
+
+分析师 (J10486)
+
+金融科技岗 (J11033)
+
+诉讼仲裁岗 (J11045)
+
+3
+
+招聘要求
+
+
+
+
+全日制本科及以上学历，金融、经济、会计、法律、计算机、数学、统计等相关专业优先，核心岗硕士及以上学历优先；
+
+具备对应岗位从业经验，熟悉证券行业相关法律法规、业务流程及实操技巧，核心交易 / 投行岗需 3 年及以上相关工作经验；
+
+持有证券从业资格证，合规 / 投行 / 交易等岗需具备对应专业资质（如 CPA、CFA、律师执业证、期货从业资格等）优先；
+
+具备良好的数据分析、逻辑思维、沟通协调能力，抗压能力强，能适应金融行业快节奏工作，跨境 / 海外岗需具备流利的英语听说读写能力。
+
+具体岗位jd请扫码添加微信查看
+
+4
+
+招聘流程
+
+
+
+
+网上报名→简历筛选→综合能力测试→面试→考察 / 背景调查→体检→录用
+
+5
+
+报名方式
+
+
+
+
+添加小编微信（备注：银河证券）
+
+👇👇👇
+
+拉你进专属求职群
+
+领取最新岗位表 + 直推攻略
+
+解锁更多名企秋招机会
+
+（扫码添加，备注 “银河证券” 优先通过哦～）
+
+同学们！！
+
+已经开始进入春招阶段了
+
+如果你还没有挑选到心仪的企业
+
+不知道都有哪些企业开放春招，
+
+来年也没时间去网上找春招信息，
+
+如果你想把更多的时间精力留给笔试面试，
+
+省时省力网申，小编强烈推荐你领取：
+
+「2026届春招信息PRO表」
+
+
+
+此表格包含了当前的秋招+秋招补录+来年的春招信息
+工作日更新！
+包括国央企、事业单位、私企、外企、合资企业，全行业类型！
+涵盖互联网/金融/科技/制造业/咨询/快消/医药/地产/教育/文娱等行业
+建议同学们提前做好准备，以免错失良机。
+
+关注公众号，回复关键词领取福利
+
+回复【表格】0元领取2026秋招岗位汇总表
+
+回复【简历】0元领取300+中英文简历模板
+
+回复【笔/面试】0元领取2025各大名企笔试/面经
+
+回复【求职规划】0元领取价值299元1V1职业规30min
+
+添加方式
+
+2025/2026求职季正在进行中
+
+在求职方面需要帮助的同学
+
+私信【求职】，提供1V1求职方案哦！
+
+Jy Career•嘉懿名企求职
+
+专注提供一站式求职服务平台！
+
+提供求职规划 | 简历精修 | 笔面试辅导 | 求职辅导
+
+          目前已帮助，数万名学子斩获顶尖名企Offer！
+```
+
+### 48. 世纪证券有限责任公司法务合规岗
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792412986&ver=7036&signature=MmN5hkdRwM7ERxIFLDQxmK1dVNrHTP-52HWEczlESQGtb-R7SxelS9O2V-9ix0ImQbjmPXw5Rv03RWTxlvjKATjg4TbNC0dvYiG2-GX99OFOq9fRbqp1BW-9zRzx3mA5&new=1
+- 来源公众号：Legal职聘
+- 发布时间：2021年3月25日 18:53
+- 检索词：券商合规面试
+
+正文：
+
+```text
+—— Legal职聘为您保驾护航 ——
+扫码添加个人微信，获得更多职位信息
+
+反洗钱岗
+
+
+岗位职责：
+（1）负责公司各部门及分支机构反洗钱材料的审核、可疑交易数据报送；
+（2）负责内部反洗钱宣传、培训，指导营业部开展对客户的反洗钱教育，及反洗钱相关的国家新政策、新法律法规的跟踪研究；
+（3）负责编制、报送反洗钱相关监管报表及其他信息；
+（4）其他合规管理事项；负责领导交办的各项任务。
+
+任职要求：
+（1）硕士及以上学历，金融、法律、证券等相关专业优先，人才优秀可放宽到本科学历；
+（2）具有良好的沟通协调能力、人际交往能力；
+（3）具有责任意识、保密意识、全局观念、解决问题的能力；
+（4）通过证券从业资格考试者优先。
+请投递简历至hgglbwjzg2@csco.com.cn，邮件名称和简历名称请以“姓名—院校—意向岗位-公众号Legal职聘”方式命名，我们将根据公司安排陆续安排面试，简历投递截止日期2021年5月30日。
+
+
+
+
+合规管理岗
+
+ 岗位职责：
+（1）负责收集并整理相关法律法规以及规则制度；
+（2）根据监管规定，拟定合规管理制度，推动合规管理体系建设；
+（3）负责为业务部门提供合规审核、检查、监测，咨询，出具专业意见；
+（4）解读监管政策，进行合规培训；
+（5）提高业务合规的全面性和有效性，根据监管部门新出台的政策和要求，及时处置业务系统监控中发现各类业务问题；
+（6）协助跟踪、监督前期内外部合规检查发现的问题整改情况。
+
+任职要求：
+（1）全日制法学硕士及以上学历，具有良好的金融、法律基础知识，优秀者可放宽至本科学历；
+（2）熟悉国家金融法律法规及其他相关法律政策；
+（3）具有较强的学习能力、风险识别和判断能力、逻辑分析、沟通能力；工作细致、责任心强，有团队合作精神；
+（4）通过全国司法考试；
+（5）熟悉券商、信托、资管等证券业务，有合规或律师事务所相关实习工作经验者优先；
+（6）通过证券从业资格考试。
+
+请投递简历至hgglbwjzg2@csco.com.cn，邮件名称和简历名称请以“姓名—院校—意向岗位-公众号Legal职聘”方式命名，我们将根据公司安排陆续安排面试，简历投递截止日期2021年5月30日。
+
+
+
+
+法律审核岗
+
+岗位职责：
+（1）负责对公司经纪、信用、投行、互联网金融、资管、自营等业务条线以及其他综合类合同、协议进行法律审核；
+（2）向公司相关部门或下属分支机构提供法律咨询和建议；
+（3）参与公司重大商业谈判，协助处理公司纠纷、仲裁案件或重大纠纷事件，处理公司涉及的司法协助工作；
+（4）参与公司招投标相关工作，完成上级交待的其他事宜。
+
+任职要求：
+（1）全日制法学硕士及以上学历，具有良好的金融、法律基础知识，优秀者可放宽至本科学历；
+（2）熟悉国家金融法律法规及其他相关法律政策；
+（3）具有较强的学习能力、风险识别和判断能力、逻辑分析、沟通能力；工作细致、责任心强，有团队合作精神；
+（4）通过全国司法考试；
+（5）熟悉券商、信托、资管等证券业务，有合规或律师事务所相关实习工作经验者优先；
+（6）通过证券从业资格考试。
+
+请投递简历至hgglbwjzg2@csco.com.cn，邮件名称和简历名称请以“姓名—院校—意向岗位-公众号Legal职聘”方式命名，我们将根据公司安排陆续安排面试，简历投递截止日期2021年5月30日。
+```
+
+### 49. 利润暴涨42%，罚单连吃三张：华安证券的“双面2026”
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792413037&ver=7036&signature=MF4nnQvsAqK8x7-2eGSfbpnpWfbwsZLPxG2Rkpv*rZIJyonXyY72HKCr7znYXxGbu782IB2j2v6a9xiC8PbVtcjqoWIwbLe4kpB8hg722GpHzgVILGDyLSsLeSvjXdN*&new=1
+- 来源公众号：券研社
+- 发布时间：券研社
+- 检索词：券商合规面试
+
+正文：
+
+```text
+2025年年报刚交出一份“历史最佳”成绩单，2026年的罚单就接踵而至。
+
+华安证券，这家安徽省属券商龙头，正陷入一种令人不安的撕裂：一边是归母净利润同比增长41.92%、营收突破50亿的亮眼数字，另一边是央行、江苏证监局、安徽证监局在七个月内接连出手，罚单覆盖反洗钱、分支机构管理、内控机制三大核心领域。
+
+业绩创纪录，合规在失血。这不是周期波动的问题，这是内控体系系统性承压的信号。
+
+三张罚单，三个方向，同一个病灶
+
+梳理华安证券2026年的受罚轨迹，有一条清晰的脉络。
+
+4月7日，央行出手。中国人民银行安徽省分行认定华安证券存在两项违法行为：未按规定开展客户尽职调查，未按规定报告可疑交易。警告，罚款44.1万元。
+
+这两项指向的是反洗钱体系的两个核心环节。客户尽职调查是金融机构防范洗钱风险的第一道防线，可疑交易报告是阻断洗钱链条的关键机制。两道防线同时失守，意味着华安证券在反洗钱合规上存在系统性疏漏，而非偶发失误。
+
+8月28日，江苏证监局出手。华安证券江苏分公司被责令改正，原因是“企业微信管理不到位、合规培训相关要求落实不到位、未及时报告重大事项”。同时，经纪人毛勇因利用企业微信违规开展业务被责令改正。
+
+企业微信管理、合规培训落实、重大事项报告——这三项全是基础管理动作。一个分公司在这些最基础的环节上出问题，折射的是日常合规执行的松弛。
+
+9月底，安徽证监局出手。警示函直指两大问题：内控机制不完善，员工行为监督管理不到位。处罚决定中明确援引《证券公司内部控制指引》第七条第一项，并记入证券期货市场诚信档案。
+
+三张罚单，时间跨度不到六个月，覆盖总部、分公司、经纪人三个层级。如果说单张罚单可以归咎于个案，三张罚单指向同一类问题——内控机制运转失灵——那就不是运气问题了。
+
+业绩“创纪录”的另一面
+
+罚单密集落地的时间窗口，恰好与华安证券业绩爆发期重合。
+
+2025年年报显示，华安证券实现营业收入50.68亿元，同比增长31.11%；归母净利润21.08亿元，同比增长41.92%。利润总额达到26.50亿元，同比增长50.99%。公司自称“经营业绩刷新历史新高”。
+
+增长引擎来自自营业务。2024年自营收入同比激增130.73%，以11.43亿元贡献总营收25.15%。2025年这一趋势延续，投资收益继续推动利润高速增长。
+
+但问题恰恰藏在这里。
+
+自营业务是券商最“重”的业务之一——重资本、重风险、重内控。自营规模快速膨胀，意味着风险敞口同步放大，对合规体系的要求不是线性上升，而是指数级上升。如果内控机制没有同步迭代，规模扩张就是在沙地上建高楼。
+
+更值得警惕的是季度数据的剧烈波动。2025年第四季度，华安证券营业收入仅6.45亿元，同比骤降52.8%；归母净利润2.25亿元，同比下降34.2%。全年高增长与四季度大幅下滑并存，说明业绩的“创纪录”高度依赖前三季度的市场行情，而非稳定的经营能力。
+
+而2026年一季度，营收9.72亿元，同比下滑21.61%；归母净利润4.33亿元，同比下滑17.40%。增长的持续性，正在经受考验。
+
+合规成本的“隐形账单”
+
+券商罚单的显性金额通常不大。44.1万元的罚款，对一家年利润超过20亿的券商来说，几乎可以忽略不计。
+
+但合规失守的真实成本，从来不在罚款金额里。
+
+第一层成本：分类评级与业务资格。证券公司分类评价中，合规管理是核心扣分项。罚单累积将直接影响评级，而评级下调会波及新业务牌照申请、投资者保护基金缴纳比例、甚至部分业务的展业门槛。这是一张“隐性罚单”，金额可能远超罚款本身。
+
+第二层成本：机构信任与展业摩擦。江苏分公司被责令改正，经纪人被处罚，安徽证监局将处罚记入诚信档案。对于一家以经纪业务为基本盘的券商来说，分支机构合规记录恶化会直接影响与银行、企业客户的合作信任度。反洗钱处罚尤其敏感——银行在通道类合作中，对交易对手的合规记录有严格审查。
+
+第三层成本：品牌与人才。华安证券2024年年报数据显示，高管薪酬同比下降42.47%，同时管理层加速流失，副总经理周庆华在年报发布同日辞职。合规风险上升叠加上下行压力，对核心人才的留存不是好消息。
+
+一个需要回答的问题
+
+2026年7月，华安证券发布半年度业绩预告，预计归母净利润20.7亿至22.77亿元，同比增长100%至120%，理由是“紧抓市场机遇”“经营业绩创历史同期新高”。
+
+业绩还在冲高。但一个无法回避的问题是：当一家券商在内控机制不完善、反洗钱防线失守、分支机构管理松弛的情况下高速扩张，它到底在积累利润，还是在积累风险？
+
+券商的合规体系不是成本项，是生存项。市场行情好的时候，内控问题被业绩掩盖；行情转向的时候，被掩盖的问题会以更剧烈的方式暴露。
+
+三张罚单是监管的警告，也是自查的窗口。如果华安证券把罚单当作“交钱了事”的运营成本，而不是内控体系需要动手术的信号，那么下一次处罚大概率不会是警示函。
+
+业绩创纪录值得肯定，但一家券商的真正底色，不在牛市的利润表里，在熊市的风控表里。华安证券的内控整改，时间窗口正在收窄。
+```
+
+### 50. IPO独立性遭监管3次追问！券商投行女员工辞职，"让道"家族企业上市！券商"带资源"员工怎么看？
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792413037&ver=7036&signature=xnxUQJNiFkZ0hYCyOyP5jwxdANOVRH8WD-EY3BCeD4Q0mEZb9M7YH4U5NK6qDILNy9viOLdcUR3UHoQ-xo4kvM*rskfYjQ5YqemkoNk82pA1kKZezcbbGcVDZ0Rt3SPr&new=1
+- 来源公众号：券商中国
+- 发布时间：谭楚丹
+- 检索词：券商合规面试
+
+正文：
+
+```text
+近期一个IPO案例受到市场关注。
+
+
+
+
+
+
+
+
+
+
+
+在该项目中，实际控制人的女儿在保荐机构工作，尽管不是项目组成员，也并非在投行担当要职，但其就职是否会影响保荐机构的独立专业判断，已成为交易所关注重点。
+
+
+
+
+交易所第二、第三、第四轮问询中连续追问该事项是否影响保荐人独立性。最终，该名员工在12月从保荐机构辞职。
+
+
+
+
+据了解，证券公司确有不少能“带资源”的员工。而监管重点关注保荐机构与客户是否存在利害关系，开展业务是否会触及独立性底线……该案例对各家券商投行或具有一定参考价值。
+
+
+
+
+IPO企业实控人之女儿就职保荐机构
+
+
+
+
+12月7日，创业板IPO企业达嘉维康披露第4轮问询回复，其中关于“实际控制人认定及保荐机构独立性”的问题，已经被交易所连续追问三轮了。
+
+
+
+
+公开资料显示，达嘉维康是一家由新三板赛道转道A股上市的企业。公司在2014年完成股改，彼时王毅清持股40%，其女王越持股10%，其妻明晖持股4%。三人合计持股54%，为实际控制人。
+
+
+
+
+2019年7月，女儿（王越）将所有持股转让给妈妈（明晖），转让完成后，发行人的实际控制人只剩下夫妻二人。
+
+
+
+
+问询回复材料显示，王越说明，因其在北京工作定居，较少回长沙，不参与公司的经营管理，且远程参会表决、签字比较麻烦，因此家庭内部做了持股调整，王越将其所持发行人的股份转让给母亲。
+
+
+
+
+据了解，王越在2011-2015年本科就读于北京航空航天大学，2015-2017年在北京大学读研究生。2017-2019年就职于民族证券（现名为：方正证券承销保荐有限责任公司），2019年1月跳槽至国金证券上海证券承销保荐分公司工作。入职国金证券后，其于2020年11月注册为保荐代表人。
+
+
+
+
+而国金证券正是达嘉维康的长期合作伙伴。国金证券曾是达嘉维康在新三板的主办券商；现在是IPO的保荐机构。
+
+
+
+
+王越与国金证券的关系，由此引来监管层的问询。深交所在第2轮、第3轮、第4轮开始连续对王越与保荐机构之间的关系进行提问。最终，王越已于2020年12月从国金证券辞职。
+
+
+
+
+关注点一：实控人变化与入职国金证券的关系
+
+
+
+
+深交所在二轮问询中，要求披露发行人与保荐人签订保荐协议的时间，王越2019年将发行人股份全部转让的原因及合理性，是否与入职国金证券有关。
+
+
+
+
+在第三轮问询中，再次要求结合实际控制人变更、原实际控制人之一王越入职国金证券、发行人与国金证券签订保荐协议三个事件发生的时点、顺序，说明上述事项的因果关系及合理性。
+
+
+
+
+根据发行人在回复中梳理的时间线来看，国金证券与发行人签署辅导协议是在王越入职国金证券之前。
+
+
+
+
+
+
+1. 【2015年成为新三板主办券商】国金证券是发行人2015年申请新三板挂牌的主办券商，并在发行人新三板挂牌期间持续为发行人提供服务，如做市报价服务、独立财务顾问服务等。
+
+
+2【2018年开始上市辅导】发行人自新三板摘牌后，2018年10月24日国金证券与发行人签署了上市辅导协议，担任发行人IPO的辅导机构，并于2018年10月25日向湖南证监局报送了辅导备案登记材料，开始进入监管辅导期。
+
+
+3.【2019年王越入职国金证券】2019年1月王越通过社会招聘方式入职国金证券上海证券承销保荐分公司。
+
+
+4.【2019年王越转让股持股】同年7月，王越将其当时持有发行人的股份全部转让给其母亲明晖，不再持有发行人任何股份。
+
+
+5.【2020年成为IPO保荐机构】2020年7月13日国金证券与发行人签署首次公开发行股票并在创业板上市的保荐协议。
+
+
+
+
+发行人与项目组在回复中表示，王越与其母亲之间的股权转让系王毅清家族内部的股权结构调整，并未导致实际控制人的变更，而王越入职国金证券系国金证券基于其教育背景、项目经验以及面试的优异表现做出的合理选择。此外，发行人与国金证券签订保荐协议系基于双方多年合作及国金证券过去所提供的优质服务，三者之间并不存在直接因果关系，具有合理性。
+
+
+
+
+关注点二：保荐机构独立性是否受到干扰
+
+
+
+
+深交所在多轮问询中提问，结合王越在国金证券的任职期间及所任职务，说明是否对保荐人独立性是否影响。
+
+
+
+
+根据发行人与保荐机构的回复，王越在国金证券是普通员工，不属于保荐机构的保荐业务负责人、内核负责人、保荐业务部门负责人，亦不属于保荐机构的关联方。
+
+
+
+
+根据《国金证券股份有限公司关于湖南达嘉维康医药产业股份有限公司首次公开发行股票并在创业板上市之发行保荐工作报告》，保荐机构项目执行成员为保荐代表人柳泰川、朱国民，项目协办人刘晴青，项目组其他成员为魏娜、宗莉、周炜。根据国金证券向湖南省证监局提交的历次辅导工作报告，辅导期间，曾参与该项目的项目组成员还包括薛莹、郑宇。
+
+
+
+
+由此可看出，王越自始至终均未作为保荐机构达嘉维康IPO项目组的成员，未参与保荐机构达嘉维康IPO项目的工作。
+
+
+
+
+对此，有资深投行人士称，“如果该名员工既不属于项目组，也不是投行业务部门的负责人，实际上对保荐机构独立性不会有影响。”
+
+
+
+
+其次，深交所还关注，达嘉维康项目组的全体成员是否曾与王越存在工作交集情形或其他利害关系，包括但不限于上下级关系、项目合作关系等？
+
+
+
+
+从回复文件可看出，王越与项目组的两名签字保代在其他项目共事过。具体为，贝尔生物IPO项目中，保代柳泰川做尽职调查工作，王越为签字协办人；万泰生物IPO项目中，朱国民为签字保代，柳泰川为成员，王越也有参与。
+
+
+
+
+
+
+
+除上述说明外，前述其他人员均与王越不存在项目合作关系；达嘉维康IPO项目组全体成员与王越不存在上下级的隶属关系。
+
+
+
+
+第三，深交所在第4轮问询中，要求保荐机构结合内核、质控部门对保证相关项目独立性所采取的措施，论述国金证券为发行人提供保荐服务是否符合《证券发行上市保荐业务管理办 法(2020 修订)》第六条相关规定。
+
+
+
+
+根据保荐机构回复，国金证券根据《证券公司投资银行类业务内部控制指引》，搭建“三道防线”内部控制架构，审慎履行核查职责。达嘉维康IPO项目系根据国金证券各项内部控制制度，在通过项目立项审批、项目管理部门质量控制、内核会议审议等全部内部核查程序后方可向深交所报送申请文件及问询函回复等文件，而王越自始至终均未参与达嘉维康IPO项目前述流程中任何环节的相关工作。
+
+
+
+
+此外，王越是国金证券的上海证券承销保荐分公司的普通员工，与前述各个审核流程中涉及的质控部、内核部等部门的员工及相关负责人均不存在任何关联关系，亦不存在能够左右或影响前述相关人员对于达嘉维康IPO项目的审核结果及对项目的独立专业判断。
+
+
+
+
+国金证券达嘉维康IPO项目的保荐代表人、保荐业务负责人、内核负责人、 保荐业务部门负责人及其他保荐业务人员与发行人及其关联方不存在利害关系， 不存在妨碍其进行独立专业判断的情形。
+
+
+
+
+值得注意的是，在第4轮问询回复中，保荐机构披露了相似案例，但在该案例中，家属在项目上市前从券商离职。
+
+
+
+
+根据回复材料，湘油泵于2016年11月上交所主板挂牌。根据招股说明书，控股股东、实际控制人许仲秋的女儿许文慧持有湘油泵10.48%的股份，保荐机构员工保荐代表人李鸿与许文慧为配偶关系，双方系于2011年下半年结婚。
+
+
+
+
+保代李鸿2010年1月至2015年6月期间，分别负责了丰东股份IPO项目、鸿博股份定向增发项目、闽福发A定向增发项目、蓝黛传动IPO项目等。李鸿已于2015年6月正式离职。
+
+
+
+
+基于前述相似案例，王越已于2020年12月从国金证券辞职。
+
+
+
+
+关注点三：在券商就职期间持股的合规性
+
+
+
+
+深交所在第4轮问询中，要求补充披露原实际控制人王越2017-2019年就职民族证券期间持有发行人股份的合法合规性。
+
+
+
+
+对此，发行人回复称，王越持股当时适用的《证券法(2014年修订)》第四十三条规定:“证券交易所、证券公司和证券登记结算机构的从业人员、证券监督管理机构的工作人员以及法律、行政法规禁止参与股票交易的其他人员，在任期或者法定限期内，不得直接或者以化名、借他人名义持有、买卖股票，也不得收受他人赠送的股票。”
+
+
+
+
+发行人认为，该条规定禁止证券从业人员持有、买卖股票，但王越持有的发行人的股份，系于发行人在新三板挂牌之前取得，且2014年取得发行人前身同健有限的股权当时，王越尚未参加工作，不属于“证券交易所、证券公司和证券登记结算机构的从业人员、证券监督管理机构的工作人员”。
+
+
+
+
+发行人挂牌期间，王越未进行过任何股票交易行为。2017年7月，王越入职中国民族证券有限责任公司，试用期为3个月，发行人当时已决定自新三板摘牌，并于2017年11月发布《关于公司股票在全国中小企业股份转让系统终止挂牌的提示性公告》。发行人于新三板挂牌期间，王越未通过新三板系统进行过任何交易活动。
+
+
+
+
+自发行人于2018年1月自新三板摘牌至王越于2019年7月转让发行人股份期间，发行人的股份并未流通，王越持有发行人股份不违反《证券法》的规定。
+
+
+
+
+百万用户都在看
+冠军的诱惑！基金年度总决赛来了，农银汇理"贴身肉搏"广发基金！两大股票走势成关键，吃瓜群众跟不跟？
+
+重磅信号！钻空子、热衷投机、不够规矩…监管层狠批这个行业！要树立赚"辛苦钱"理念，否则金融牌照危险了
+成交价0.16元/股！停业16年，这家老牌险企股权突然被拍卖！曾陷德隆系爆雷遭勒令停业，神秘买家又是谁？
+经过三轮股灾，9成仓位最大回撤仅5%！兴全基金创业元老杜昌勇：低点时敢重仓，左侧布局中能克服恐惧
+震惊！11份罚单牵出内幕交易窝案！2人泄密9人交易，从发小、姐妹到主治医生，通通被罚…来看众生相
+刚刚！中央再次定调楼市，时刻绷紧调控这根弦，释放什么信号？不断完善政策工具箱，这一表态有何深意？
+
+券商中国是证券市场权威媒体《证券时报》旗下新媒体，券商中国对该平台所刊载的原创内容享有著作权，未经授权禁止转载，否则将追究相应法律责任。
+
+ID：quanshangcn
+Tips：在券商中国微信号页面输入证券代码、简称即可查看个股行情及最新公告；输入基金代码、简称即可查看基金净值。
+```
+
+### 51. 毛宗平出任申万宏源证券合规总监;易方达明星基金经理林森离职,传将“奔私”.本周最全券商高管人事动态(2022年5月第1周)
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792413037&ver=7036&signature=-5BtPPvmtjxAP7x5Jb8aOhkLo7sJgiKrJOIA8zI6EYU1JvTRELA1Az5g9J6IO-dEXDS6JdeWfCYTycvKdKZCRHZuzswoKhuoT1qrDJ1TH6cDb-uxlaN8TegqXhtYIR*w&new=1
+- 来源公众号：2022-5-8
+- 发布时间：券业行家
+- 检索词：券商合规面试
+
+正文：
+
+```text
+券商高管人事动态(2022.04.30-2022.05.08)本文是券业行家『... 合规与风险管理中心总经理、联席主任、主任兼合规与风险管理中...
+```
+
+### 52. 中国银河证券股份有限公司法律合规总部副总经理选拔公告
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792413037&ver=7036&signature=k0bnyexYSbqZmt-TTiNGN1YkYkT28uhb-eDeN574yTe4-YBWcYqXVDA9rgh8b71FSSTnd2ZOWoEgw*Unl9e3FuqC4UiZFuHftMWsKiAVbNRTHNqT0tv32uLVwmzvtnUZ&new=1
+- 来源公众号：央企国企招聘信息
+- 发布时间：2026年3月14日 15:21
+- 检索词：券商合规面试
+
+正文：
+
+```text
+同时具有法律合规管理工作经验或律师事务所等法律职业工作经验.(四)具有较强的团队管理能力、统筹规划和组织协调能力,较好...
+```
+
+### 53. 投了十多家券商没回音？这3家央企金融平台，年薪不输总行
+
+- 链接：https://mp.weixin.qq.com/s?src=11&timestamp=1792413037&ver=7036&signature=D309lFu3VuRKbSWcJV5oMjlPb5efpowiobTcpR01VV9OJM*yMVuUqd98Pvwndwo1tVKezEVitNYTEzamtWKviCk0Kc8-ndGwKD8AV0VNIYdMjYwW0H2LET8VqAEaZoYA&new=1
+- 来源公众号：麦叔留学规划
+- 发布时间：麦叔
+- 检索词：券商合规面试
+
+正文：
+
+```text
+点击上方
+蓝字
+关注我们～
+
+上周一位留英金融硕士的家长来找我，说孩子投了十多家券商，没有一家回音。家长问是不是简历写坏了，我说不是。金融硕士的简历翻开，内容基本一个样：学校不错、成绩不差、券商实习有两段。扔进校招池里，看不出谁是你要找的人。问题不是他不够好，是赛道挤得太满。
+
+后来我给了他一个方向：实业央企旗下的金融平台。这个方向知道的人少，比券商总行好进，薪资不输总行，年薪能到30万，而且背靠实业，稳定性强。这一轮秋招里，有三家值得盯住。
+
+01
+
+SECTION
+
+五矿资本：把留学生单独划出来，研究岗正缺人
+
+中国五矿是建国初期的老牌央企，主业做金属矿产，2025年底总资产接近1.5万亿，2026年世界500强排第99位。它的金融上市平台是五矿资本，旗下握着五矿证券、五矿信托这些全套牌子。这次校招放的岗位以五矿证券为主，涵盖债券承做、行业研究、法务合规，地点在北京、深圳、成都。
+
+这轮2027届校招已经启动，网申、笔试、面试、发offer一条线，统一在五矿招聘官网投。跟很多央企不同，五矿把近两年毕业回国的留学生单独划了一类招聘对象。这是直接的好处：留学生不会被塞进社会招聘里跟所有人抢，政策上这条路是通的。
+
+投五矿要留意一个细节：这是19家单位联合校招，五矿资本是其中一家，五矿证券又是五矿资本的子公司，不同岗位对应的录用主体不同。看到“五矿”两个字先别急着投，先看清楚岗位后面写的是哪家单位。五矿证券还设有法务合规助理岗，研究方向上也有金属矿业研究和战新产业研究这类岗位。懂实业的人进这里，比挤纯券商的研究所要容易得多。
+
+— 中国五矿—五矿资本—五矿证券/五矿信托的层级归属关系
+
+
+
+
+02
+
+SECTION
+
+中化资本：6个平行志愿别只押一家
+
+中国中化2021年重组成立，国资委直管，业务覆盖全球150多个国家，旗下有14家境内外上市公司，核心主业是化工与农业。中化资本是它下面的子公司，管着金融基金、产业服务和产业投资，管理资产规模90多亿。
+
+这次是中国中化集团20多家单位联合校招，中化资本只是其中一家。每人最多能投6个岗位，平行志愿，不分先后。我一直提醒投中化的学生：这6个志愿别全押在中化资本一家。中化资本旗下的中化外贸信托，有固定收益、股权投资、家族财富方向，工作地点在北京；同时设有数据分析和金融科技岗。
+
+中化资本的网申截止到今年12月31日，毕业时间窗口划定在26年9月至27年8月。时间不算短，但越早投越好，平行志愿的规则对认真做功课的人更有利。中化集团校招还涵盖能源、化工、地产板块，想进央企又不一定死磕金融的人，这个志愿栏能分散不少风险。
+
+
+
+
+03
+
+SECTION
+
+华润银行：粤港澳的留学生，学历认证就能报
+
+华润银行是华润集团金融板块的主力，总行在珠海，分行覆盖广东全省，业务就是公司金融、零售银行、跨境金融这几块，扎根粤港澳大湾区。校招岗位都在广东，走官方通道投。
+
+对留学生最实在的一点是：华润银行明确27届留学生凭教育部学历认证就能报名，流程上没有额外关卡。岗位包括系统研发、智能科学研发、云原生运维三类金融科技岗，还有数智金融、风险数据分析这些总行岗位。金融科技岗的竞争历来比投研岗小，上岸概率更高。
+
+已经在大湾区或者准备去粤港澳发展的人，直接盯华润银行。如果意向是北京，重心应该放在五矿资本和中化资本的总部岗；意向粤港澳，就直接选华润银行。
+
+有些留学生可能会想：我本科学的是理工科，硕士才读金融，去纯金融机构是不是天然吃亏？这条赛道的逻辑正好反过来。产业系金融做的业务，比纯金融的模型更复杂，涉及产业投资、跨境贸易这些真实场景：你既要懂产业链的运行规则和大宗商品的行业逻辑，又要懂金融模型；海外业务还要语言过关、有国际视野。这里缺的正是“懂产业+懂金融+能对接国际”的人。本科理工、硕士金融的海归，在纯金融赛道看不出优势，在这条赛道里是稀缺的。
+
+简历上，要突出产业相关的实习经历，面试时要讲得出你对行业的理解，而不是只谈金融模型。投五矿，先分清录用主体；投中化，6个志愿分散开；投华润，学历认证一过就趁早递。
+
+这三家平台的规模比不上头部券商和大行总行，但适合那些想进金融、想要稳定、又能接受产业金融方向的人。路径本身不挤，机会就藏在别人没细看的地方。
+
+
+
+END
+
+
+
+留学就业
+
+2026留学生秋招企业信息大全
+
+一份连接"留学规划"和"国内就业"的实用资料（付费！非免费资料）：
+
+✓550 家企业 / 上千个岗位，覆盖十大行业
+
+✓15 册 PDF 分类资料 + 1 份可筛选 Excel 表
+
+✓339 个岗位明确提及留学生或境外学历
+
+✓无论孩子在读、即将毕业、还是正在规划留学方向，都能用它反推选择
+
+市场不会等孩子准备好才变化。早一年看清全貌，就多一年调整方向的时间。＋麦叔🛰️：maigao1573
+
+点我领取留学生秋招企业资料包
+```

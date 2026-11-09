@@ -1,0 +1,953 @@
+[batch] 待推进 15 个：fin-fintech-data, it-ops-content, it-ops-product, it-pm, it-da, it-risk, fin-pe-investment-manager, fin-pe-portfolio-management, fin-pe-investor-relations, fin-vc-investment-analyst, fin-vc-industry-research, fin-sec-asset-management, fin-sec-wealth-advisor, fin-sec-compliance-risk, fin-fund-product-manager
+[batch] >>> fin-fintech-data 开始 11:06:27
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] fin-fintech-data 第 1 次尝试 ===
+[parse] 70aa7dd0b697fbaa → 4977 字，通道=text
+[parse] 9cad04c9af9c3403 → 2524 字，通道=text
+[parse] cc32126e313f9cfc → 2641 字，通道=text
+[parse] c10d80b6cdbbc3a0 → 3449 字，通道=text
+[parse] 51e7381f681543c6 → 4228 字，通道=text
+[parse] 6bb209eeaea11f6c → 6013 字，通道=text
+[parse] 3297c8571d6409b2 → 6021 字，通道=text
+[parse] ea13c1071033952d → 4260 字，通道=text
+[parse] 1998ae43edb05d86 → 3474 字，通道=text
+[parse] 04b6efc6b9d4cd7e → 6009 字，通道=text
+[parse] d529639e000590a1 → 4260 字，通道=text
+[parse] 274a646815c83671 → 6020 字，通道=text
+[parse] 86e611903031b516 → 87 字，通道=text
+[parse] 3b3656fe52a7e415 → 4406 字，通道=text
+[parse] bbf4897ba604b02d → 4228 字，通道=text
+[parse] 6ba51e308c405561 → 1842 字，通道=text
+[parse] 09efcaef9c10d16e → 2694 字，通道=text
+[parse] ba92bb2d9b41015a → 6023 字，通道=text
+[parse] f941298f0d361323 → 5028 字，通道=text
+[parse] 6384f46033f44194 → 5454 字，通道=text
+[parse] 2c917cf64b1c7267 → 3081 字，通道=text
+[parse] 0c7e88dcd5bd9039 → 2753 字，通道=text
+[parse] dddbdbfa640e93fb → 4008 字，通道=text
+[parse] 00955530b19508a6 → 81 字，通道=text
+[parse] 421bbff4c7caa9fb → 4936 字，通道=text
+[parse] b7a6870ddbf1260d → 3449 字，通道=text
+[parse] 263b910fa80bcfff → 3587 字，通道=text
+[parse] e4a1afc434bc7fc2 → 3036 字，通道=text
+[parse] 7ade8a3f4ab76cb8 → 4278 字，通道=text
+[parse] 00b02b7914390007 → 6020 字，通道=text
+[parse] 8261a90ae760c3c9 → 92 字，通道=text
+[parse] 4ff8defd51def936 → 1405 字，通道=text
+[parse] 35aab671891c6ead → 885 字，通道=text
+[parse] b09eaf9009ddabe2 → 2524 字，通道=text
+[parse] f535e02467839476 → 2599 字，通道=text
+[parse] e661f7f70fd6def0 → 6013 字，通道=text
+[parse] dbf21035038dd226 → 2687 字，通道=text
+[parse] 6cdba9ea4ad88348 → 2620 字，通道=text
+[parse] d466e1b8134b4845 → 2776 字，通道=text
+[parse] 8c16be9812a1ff3c → 3152 字，通道=text
+[parse] 3a49f28a8a8b0c4c → 3501 字，通道=text
+[parse] efc1b658d813bdc7 → 5105 字，通道=text
+[parse] c02dded51122f24f → 6026 字，通道=text
+[parse] 17c7cbcb7a226fd6 → 71 字，通道=text
+[parse] 506ecdf593b5dff0 → 2593 字，通道=text
+[parse] 80ba503b9e90e71c → 2290 字，通道=text
+[parse] 600a1300aaf82778 → 3601 字，通道=text
+[parse] 128c721990612f7c → 164 字，通道=text
+[parse] eef1f0debf4f32b8 → 3097 字，通道=text
+[parse] ddd0b40e4a5b2462 → 6011 字，通道=text
+[parse] 91ec851367afc726 → 4944 字，通道=text
+[parse] 08cce540075f6a08 → 4978 字，通道=text
+[parse] aec7cc9f0d946ef4 → 3181 字，通道=text
+[parse] 27ca6e8db43eaf9f → 2969 字，通道=text
+[parse] d39d144621039a36 → 6010 字，通道=text
+[parse] 8019243f705d4631 → 2267 字，通道=text
+[parse] a33155debc7ebd7d → 3601 字，通道=text
+[parse] 2bf317b5eaccd87c → 1958 字，通道=text
+[parse] f7832245bfcb2b12 → 6011 字，通道=text
+[parse] d79041c462cb563d → 1938 字，通道=text
+[parse] fin-fintech-data 完成，共 60 篇
+[validate] parse：检查 1 个岗位
+PASS: 全部符合契约
+[parse] fin-fintech-data 通过契约校验
+
+>>> [parse] 完成：通过 1，跳过 0
+
+=== [clean] fin-fintech-data 第 1 次尝试 ===
+[clean] 70aa7dd0b697fbaa → 保留（65）
+[clean] 9cad04c9af9c3403 → 保留（82）
+[clean] cc32126e313f9cfc → 保留（90）
+[clean] c10d80b6cdbbc3a0 → 保留（65）
+[clean] 51e7381f681543c6 → 保留（90）
+[clean] 6bb209eeaea11f6c → 保留（65）
+[clean] 3297c8571d6409b2 → 保留（65）
+[clean] ea13c1071033952d → 保留（65）
+[clean] 1998ae43edb05d86 → 保留（85）
+[clean] 04b6efc6b9d4cd7e → 保留（95）
+[clean] d529639e000590a1 → 丢弃（15）
+[clean] 274a646815c83671 → 保留（65）
+[clean] 86e611903031b516 → 丢弃（0）
+[clean] 3b3656fe52a7e415 → 保留（65）
+[clean] bbf4897ba604b02d → 保留（65）
+[clean] 6ba51e308c405561 → 丢弃（18）
+[clean] 09efcaef9c10d16e → 保留（70）
+[clean] ba92bb2d9b41015a → 保留（65）
+[clean] f941298f0d361323 → 保留（65）
+[clean] 6384f46033f44194 → 保留（65）
+[clean] 2c917cf64b1c7267 → 丢弃（20）
+[clean] 0c7e88dcd5bd9039 → 丢弃（20）
+[clean] dddbdbfa640e93fb → 丢弃（30）
+[clean] 00955530b19508a6 → 丢弃（5）
+[clean] 421bbff4c7caa9fb → 保留（65）
+[clean] b7a6870ddbf1260d → 丢弃（10）
+[clean] 263b910fa80bcfff → 丢弃（15）
+[clean] e4a1afc434bc7fc2 → 保留（65）
+[clean] 7ade8a3f4ab76cb8 → 保留（82）
+[clean] 00b02b7914390007 → 保留（65）
+[clean] 8261a90ae760c3c9 → 丢弃（15）
+[clean] 4ff8defd51def936 → 保留（65）
+[clean] 35aab671891c6ead → 保留（62）
+[clean] b09eaf9009ddabe2 → 保留（78）
+[clean] f535e02467839476 → 丢弃（12）
+[clean] e661f7f70fd6def0 → 保留（65）
+[clean] dbf21035038dd226 → 保留（88）
+[clean] 6cdba9ea4ad88348 → 保留（82）
+[clean] d466e1b8134b4845 → 保留（82）
+[clean] 8c16be9812a1ff3c → 保留（92）
+[clean] 3a49f28a8a8b0c4c → 保留（65）
+[clean] efc1b658d813bdc7 → 保留（92）
+[clean] c02dded51122f24f → 保留（90）
+[clean] 17c7cbcb7a226fd6 → 丢弃（15）
+[clean] 506ecdf593b5dff0 → 保留（72）
+[clean] 80ba503b9e90e71c → 保留（72）
+[clean] 600a1300aaf82778 → 保留（65）
+[clean] 128c721990612f7c → 保留（75）
+[clean] eef1f0debf4f32b8 → 丢弃（18）
+[clean] ddd0b40e4a5b2462 → 保留（65）
+[clean] 91ec851367afc726 → 保留（65）
+[clean] 08cce540075f6a08 → 保留（65）
+[clean] aec7cc9f0d946ef4 → 保留（90）
+[clean] 27ca6e8db43eaf9f → 保留（78）
+[clean] d39d144621039a36 → 保留（65）
+[clean] 8019243f705d4631 → 保留（74）
+[clean] a33155debc7ebd7d → 保留（65）
+[clean] 2bf317b5eaccd87c → 保留（75）
+[clean] f7832245bfcb2b12 → 保留（65）
+[clean] d79041c462cb563d → 保留（70）
+[clean] fin-fintech-data 完成：保留 47 / 60
+[validate] clean：检查 1 个岗位
+PASS: 全部符合契约
+[clean] fin-fintech-data 通过契约校验
+
+>>> [clean] 完成：通过 1，跳过 0
+
+=== [structure] fin-fintech-data 第 1 次尝试 ===
+[structure] fin-fintech-data 整合 47 篇帖子…
+[structure] fin-fintech-data 完成：5 类中已填充 4 类
+[validate] structure：检查 1 个岗位
+PASS: 全部符合契约
+[structure] fin-fintech-data 通过契约校验
+
+>>> [structure] 完成：通过 1，跳过 0
+
+=== [index] fin-fintech-data 第 1 次尝试 ===
+[index] 完成 1 个岗位，检索词 9 个
+[index]   fin-fintech-data: 53 条知识点
+[validate] index：检查 1 个岗位
+PASS: 全部符合契约
+[index] fin-fintech-data 通过契约校验
+
+>>> [index] 完成：通过 1，跳过 0
+
+=== [qa] fin-fintech-data 第 1 次尝试 ===
+[qa] fin-fintech-data 抽检 5/53 条…
+[qa] fin-fintech-data 结论：忠实
+[validate] qa：检查 1 个岗位
+PASS: 全部符合契约
+[qa] fin-fintech-data 通过契约校验
+
+>>> [qa] 完成：通过 1，跳过 0
+
+>>> 总控完成。各阶段交付物见 kb/output/
+[batch] fin-fintech-data 完成 ✓
+[batch] >>> it-ops-content 开始 11:28:32
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] it-ops-content 第 1 次尝试 ===
+[parse] dd9cdf25a429e4bb → 5166 字，通道=text
+[parse] 931d9d3f6fe5448d → 170 字，通道=text
+[parse] 4ad9990ce09b8713 → 329 字，通道=text
+[parse] ef5c4bcc43eef897 → 4521 字，通道=text
+[parse] 188700122766fd32 → 85 字，通道=text
+[parse] 71e475ef8ba25ef5 → 840 字，通道=text
+[parse] 6dfbdd3bb005bb3b → 651 字，通道=text
+[parse] 8ef5cd4ecdfb51a7 → 4511 字，通道=text
+[parse] 4ac612f4568892a5 → 388 字，通道=text
+[parse] 3b6ab902aefc1c3a → 1366 字，通道=text
+[parse] f7f31f549a73dbd8 → 81 字，通道=text
+[parse] 80c8d6359acdf528 → 397 字，通道=text
+[parse] 18b8916b3f582ec9 → 1556 字，通道=text
+[parse] 45c1ad90c37ba796 → 1493 字，通道=text
+[parse] 93ec5e620328619a → 172 字，通道=text
+[parse] 6902ba62cbfb0a70 → 1580 字，通道=text
+[parse] 469c0d2f19550fa0 → 2349 字，通道=text
+[parse] ca40dd5108a8b22c → 654 字，通道=text
+[parse] 8bcb72802e5e8005 → 93 字，通道=text
+[parse] 7891f44828925e4a → 633 字，通道=text
+[parse] e29e2af3ee5d2a66 → 1408 字，通道=text
+[parse] 4e60b5b7c34cbdd5 → 2888 字，通道=text
+[parse] a158035e7a604fdd → 944 字，通道=text
+[parse] 6ebb4a8286691330 → 1063 字，通道=text
+[parse] 931d5286eae057c6 → 5977 字，通道=text
+[parse] 33aace3e599621c2 → 2888 字，通道=text
+[parse] 1b8fa0a8cfbf48c9 → 6021 字，通道=text
+[parse] 83730f6cae6a2e10 → 5977 字，通道=text
+[parse] f05869a54d680c78 → 1234 字，通道=text
+[parse] 56064d26e6e4a131 → 1391 字，通道=text
+[parse] 203f573b3bf3fae8 → 3321 字，通道=text
+[parse] 6acfda7799a67119 → 2641 字，通道=text
+[parse] a3d52d25c4084ae0 → 83 字，通道=text
+[parse] 3ddd0f81f879b1f5 → 1656 字，通道=text
+[parse] 6e72a8acf5105e76 → 1480 字，通道=text
+[parse] 5c4778a1b0d3360c → 91 字，通道=text
+[parse] e2e5bcd4b14d9047 → 3072 字，通道=text
+[parse] 9be651198face79e → 3785 字，通道=text
+[parse] 7af275de71cb4563 → 4819 字，通道=text
+[parse] a7bafb78aba9237f → 98 字，通道=text
+[parse] b45e0caf5674f988 → 2142 字，通道=text
+[parse] 557fc901a03620c3 → 1463 字，通道=text
+[parse] 994c4881a985dddd → 540 字，通道=text
+[parse] e2fc34cd82a65901 → 321 字，通道=text
+[parse] 388021970bb613dc → 1216 字，通道=text
+[parse] aecf37ab26b5eb19 → 3463 字，通道=text
+[parse] 30c81b3c8bbe5d8f → 93 字，通道=text
+[parse] ad4cc6a6c61fe147 → 475 字，通道=text
+[parse] 504bd7510ef41bc5 → 2421 字，通道=text
+[parse] e4292d0e1e9e2399 → 2559 字，通道=text
+[parse] ef6d969dac8c367a → 5490 字，通道=text
+[parse] fc2cb44483d9e2ef → 1478 字，通道=text
+[parse] 0bfd8554ad003c61 → 2470 字，通道=text
+[parse] b5dec35f3c63ea6e → 3460 字，通道=text
+[parse] 5b7eb7e79c9039be → 4066 字，通道=text
+[parse] d7be0c15d4102068 → 2135 字，通道=text
+[parse] 4723398c08e9f40c → 640 字，通道=text
+[parse] ff143d96b821c8b8 → 91 字，通道=text
+[parse] ee95597552c85692 → 1443 字，通道=text
+[parse] 2850389b0872f9b2 → 4594 字，通道=text
+[parse] it-ops-content 完成，共 60 篇
+[validate] parse：检查 1 个岗位
+PASS: 全部符合契约
+[parse] it-ops-content 通过契约校验
+
+>>> [parse] 完成：通过 1，跳过 0
+
+=== [clean] it-ops-content 第 1 次尝试 ===
+[clean] dd9cdf25a429e4bb → 保留（85）
+[clean] 931d9d3f6fe5448d → 丢弃（0）
+[clean] 4ad9990ce09b8713 → 丢弃（12）
+[clean] ef5c4bcc43eef897 → 保留（88）
+[clean] 188700122766fd32 → 丢弃（0）
+[clean] 71e475ef8ba25ef5 → 保留（88）
+[clean] 6dfbdd3bb005bb3b → 丢弃（18）
+[clean] 8ef5cd4ecdfb51a7 → 保留（65）
+[clean] 4ac612f4568892a5 → 丢弃（15）
+[clean] 3b6ab902aefc1c3a → 保留（65）
+[clean] f7f31f549a73dbd8 → 丢弃（12）
+[clean] 80c8d6359acdf528 → 丢弃（0）
+[clean] 18b8916b3f582ec9 → 保留（92）
+[clean] 45c1ad90c37ba796 → 保留（65）
+[clean] 93ec5e620328619a → 丢弃（5）
+[clean] 6902ba62cbfb0a70 → 丢弃（8）
+[clean] 469c0d2f19550fa0 → 丢弃（8）
+[clean] ca40dd5108a8b22c → 丢弃（55）
+[clean] 8bcb72802e5e8005 → 丢弃（5）
+[clean] 7891f44828925e4a → 丢弃（18）
+[clean] e29e2af3ee5d2a66 → 丢弃（10）
+[clean] 4e60b5b7c34cbdd5 → 丢弃（0）
+[clean] a158035e7a604fdd → 丢弃（10）
+[clean] 6ebb4a8286691330 → 丢弃（8）
+[clean] 931d5286eae057c6 → 丢弃（5）
+[clean] 33aace3e599621c2 → 丢弃（3）
+[clean] 1b8fa0a8cfbf48c9 → 保留（65）
+[clean] 83730f6cae6a2e10 → 保留（65）
+[clean] f05869a54d680c78 → 保留（68）
+[clean] 56064d26e6e4a131 → 保留（72）
+[clean] 203f573b3bf3fae8 → 保留（85）
+[clean] 6acfda7799a67119 → 保留（65）
+[clean] a3d52d25c4084ae0 → 丢弃（15）
+[clean] 3ddd0f81f879b1f5 → 保留（68）
+[clean] 6e72a8acf5105e76 → 保留（60）
+[clean] 5c4778a1b0d3360c → 丢弃（5）
+[clean] e2e5bcd4b14d9047 → 丢弃（18）
+[clean] 9be651198face79e → 保留（65）
+[clean] 7af275de71cb4563 → 保留（65）
+[clean] a7bafb78aba9237f → 丢弃（5）
+[clean] b45e0caf5674f988 → 丢弃（8）
+[clean] 557fc901a03620c3 → 丢弃（20）
+[clean] 994c4881a985dddd → 保留（72）
+[clean] e2fc34cd82a65901 → 丢弃（5）
+[clean] 388021970bb613dc → 丢弃（15）
+[clean] aecf37ab26b5eb19 → 保留（65）
+[clean] 30c81b3c8bbe5d8f → 丢弃（8）
+[clean] ad4cc6a6c61fe147 → 丢弃（50）
+[clean] 504bd7510ef41bc5 → 保留（62）
+[clean] e4292d0e1e9e2399 → 丢弃（38）
+[clean] ef6d969dac8c367a → 保留（65）
+[clean] fc2cb44483d9e2ef → 保留（72）
+[clean] 0bfd8554ad003c61 → 保留（82）
+[clean] b5dec35f3c63ea6e → 保留（65）
+[clean] 5b7eb7e79c9039be → 丢弃（30）
+[clean] d7be0c15d4102068 → 保留（65）
+[clean] 4723398c08e9f40c → 丢弃（20）
+[clean] ff143d96b821c8b8 → 丢弃（5）
+[clean] ee95597552c85692 → 保留（82）
+[clean] 2850389b0872f9b2 → 保留（65）
+[clean] it-ops-content 完成：保留 27 / 60
+[validate] clean：检查 1 个岗位
+PASS: 全部符合契约
+[clean] it-ops-content 通过契约校验
+
+>>> [clean] 完成：通过 1，跳过 0
+
+=== [structure] it-ops-content 第 1 次尝试 ===
+[structure] it-ops-content 整合 27 篇帖子…
+FAILED: 模型返回的不是合法 JSON：{"positionName":"内容运营","aliases":["新媒体运营","内容策划","社区运营","内容运营岗"],"coreDuties":["内容运营的日常工作会因产品不同、产品阶段不同、运营团队配置不同而存在差异。","内容运营需要关注内容的生成机制、消费场景、展现形式与传播方式。","内容运营需统计各项数据并整理目标，进行适度分析；内容运营通常关注UV、PV或网页价值，即昨日
+[structure] it-ops-content 产出脚本失败
+
+=== [structure] it-ops-content 第 2 次尝试 ===
+[structure] it-ops-content 整合 27 篇帖子…
+FAILED: 模型返回的不是合法 JSON：{
+  "positionName": "内容运营",
+  "aliases": ["新媒体运营", "内容策划", "社区运营", "内容运营岗"],
+  "coreDuties": [
+    "产品不同、产品阶段不同、运营团队配置不同，内容运营的日常工作会存在差异；具体工作依计划而定。",
+    "通过各类新媒体平台，借助内容、活动与用户运营，为品牌或个人获取流量、沉淀用户并实现变现转化。
+[structure] it-ops-content 产出脚本失败
+
+=== [structure] it-ops-content 第 3 次尝试 ===
+[structure] it-ops-content 整合 27 篇帖子…
+FAILED: 模型返回的不是合法 JSON：{
+  "positionName": "内容运营（it-ops-content）",
+  "aliases": ["新媒体运营", "内容策划", "社区运营", "内容运营岗"],
+  "coreDuties": [
+    "借助新媒体平台，通过内容、活动、用户运营，为品牌或个人获取流量、沉淀用户并实现变现转化。",
+    "负责公众号、小红书、抖音、视频号、微博、知乎等平台的内容运营，包
+[structure] it-ops-content 产出脚本失败
+[structure] it-ops-content 跳过并记录到 kb/state/errors.jsonl
+
+>>> [structure] 完成：通过 0，跳过 1
+
+=== [index] it-ops-content 第 1 次尝试 ===
+FAILED: 找不到结构化结果：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\it-ops-content.json
+[index] it-ops-content 产出脚本失败
+
+=== [index] it-ops-content 第 2 次尝试 ===
+FAILED: 找不到结构化结果：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\it-ops-content.json
+[index] it-ops-content 产出脚本失败
+
+=== [index] it-ops-content 第 3 次尝试 ===
+FAILED: 找不到结构化结果：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\it-ops-content.json
+[index] it-ops-content 产出脚本失败
+[index] it-ops-content 跳过并记录到 kb/state/errors.jsonl
+
+>>> [index] 完成：通过 0，跳过 1
+
+=== [qa] it-ops-content 第 1 次尝试 ===
+FAILED: 缺少质检输入：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\04-clean\it-ops-content.json 或 C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\it-ops-content.json
+[qa] it-ops-content 产出脚本失败
+
+=== [qa] it-ops-content 第 2 次尝试 ===
+FAILED: 缺少质检输入：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\04-clean\it-ops-content.json 或 C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\it-ops-content.json
+[qa] it-ops-content 产出脚本失败
+
+=== [qa] it-ops-content 第 3 次尝试 ===
+FAILED: 缺少质检输入：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\04-clean\it-ops-content.json 或 C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\it-ops-content.json
+[qa] it-ops-content 产出脚本失败
+[qa] it-ops-content 跳过并记录到 kb/state/errors.jsonl
+
+>>> [qa] 完成：通过 0，跳过 1
+
+>>> 总控完成。各阶段交付物见 kb/output/
+[batch] it-ops-content 失败 ✗
+[batch] >>> it-ops-product 开始 11:46:54
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] it-ops-product 第 1 次尝试 ===
+[parse] 0b4025e51e16015c → 1129 字，通道=text
+[parse] aa74e10bbaf2148c → 4848 字，通道=text
+[parse] cfbe6a04498ebb30 → 439 字，通道=text
+[parse] 1e7e72591c371c33 → 73 字，通道=text
+[parse] 10cedd4ef509e9b3 → 2410 字，通道=text
+[parse] d76b3282a4a8c934 → 87 字，通道=text
+[parse] c8cc20d2b7712851 → 1797 字，通道=text
+[parse] c66f40dfb05a1e55 → 3290 字，通道=text
+[parse] a1cafc181cd31ebe → 454 字，通道=text
+[parse] d026c9984d072ba0 → 2381 字，通道=text
+[parse] 2985bf77da670914 → 1736 字，通道=text
+[parse] 51d4ec3982ac6d32 → 1412 字，通道=text
+[parse] 04a784c5e4345cec → 79 字，通道=text
+[parse] 2323dff0a4860b8e → 1181 字，通道=text
+[parse] acc00de467273c94 → 4845 字，通道=text
+[parse] 320afe20a15746fc → 71 字，通道=text
+[parse] 2bfd1c1e98c51bc1 → 6023 字，通道=text
+[parse] 70e2259c906f71c0 → 1767 字，通道=text
+[parse] 037ba7aed563966f → 1829 字，通道=text
+[parse] cdb1dcc1c8b84bed → 5430 字，通道=text
+[parse] aeb8a8703eea5d75 → 134 字，通道=text
+[parse] 9f0b4f300a163b22 → 94 字，通道=text
+[parse] 5b266ce22ed547a6 → 96 字，通道=text
+[parse] 3a65ae86eb3bb335 → 4295 字，通道=text
+[parse] 970ae2a7865191f5 → 3499 字，通道=text
+[parse] ab41b17b435f014d → 3093 字，通道=text
+[parse] d7f121b328aed328 → 1742 字，通道=text
+[parse] 1d19d80d6b92ac9e → 2624 字，通道=text
+[parse] e749a984e854612c → 3781 字，通道=text
+[parse] b7f07d296d5ed4e0 → 3757 字，通道=text
+[parse] 72e1a4e5951c4fe4 → 3133 字，通道=text
+[parse] 8f19df51cbd66cf6 → 3059 字，通道=text
+[parse] 2eff5431fc8d5f35 → 106 字，通道=text
+[parse] 803572f96942a7ef → 5590 字，通道=text
+[parse] 9ca6027315e370c5 → 2178 字，通道=text
+[parse] 5a10123a0e7ed884 → 3992 字，通道=text
+[parse] 9050d8403aa3570c → 2608 字，通道=text
+[parse] 98d88070b779197d → 4848 字，通道=text
+[parse] cc8548256f024bae → 206 字，通道=text
+[parse] 3c2a67e229a41a36 → 6017 字，通道=text
+[parse] 23c7e31561e30f5a → 2178 字，通道=text
+[parse] 0892df412888df5b → 1761 字，通道=text
+[parse] b58379448dceca65 → 2876 字，通道=text
+[parse] ec572ab9c1d65543 → 1688 字，通道=text
+[parse] 36566df77485c3a2 → 3701 字，通道=text
+[parse] 4425cd4b2c1acf52 → 5776 字，通道=text
+[parse] a75e8310839abdd1 → 2283 字，通道=text
+[parse] 9205036352518fec → 2597 字，通道=text
+[parse] da6a5dbb74ddb028 → 4517 字，通道=text
+[parse] a717696cdcae097e → 5158 字，通道=text
+[parse] 11194c14a95b11cd → 2300 字，通道=text
+[parse] 6bcb1288ed613486 → 1761 字，通道=text
+[parse] cc108d5216e1b30a → 1735 字，通道=text
+[parse] bf743066c72bc1ff → 82 字，通道=text
+[parse] 4cca293bb3c7bf4c → 4327 字，通道=text
+[parse] 08c179d640ff09ba → 3404 字，通道=text
+[parse] 9a087736011a5d77 → 2944 字，通道=text
+[parse] 11850f05738e96d9 → 5792 字，通道=text
+[parse] 56ea3df25218d513 → 4365 字，通道=text
+[parse] c4e27d1ee40147ca → 88 字，通道=text
+[parse] it-ops-product 完成，共 60 篇
+[validate] parse：检查 1 个岗位
+PASS: 全部符合契约
+[parse] it-ops-product 通过契约校验
+
+>>> [parse] 完成：通过 1，跳过 0
+
+=== [clean] it-ops-product 第 1 次尝试 ===
+[clean] 0b4025e51e16015c → 丢弃（0）
+[clean] aa74e10bbaf2148c → 保留（82）
+[clean] cfbe6a04498ebb30 → 丢弃（30）
+[clean] 1e7e72591c371c33 → 丢弃（3）
+[clean] 10cedd4ef509e9b3 → 保留（65）
+[clean] d76b3282a4a8c934 → 丢弃（15）
+[clean] c8cc20d2b7712851 → 保留（65）
+[clean] c66f40dfb05a1e55 → 保留（78）
+[clean] a1cafc181cd31ebe → 丢弃（55）
+[clean] d026c9984d072ba0 → 保留（65）
+[clean] 2985bf77da670914 → 丢弃（12）
+[clean] 51d4ec3982ac6d32 → 保留（65）
+[clean] 04a784c5e4345cec → 丢弃（20）
+[batch] it-ops-product 失败 ✗
+[batch] >>> it-pm 开始 12:27:38
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] it-pm 第 1 次尝试 ===
+[parse] 5b29ac08da65eadd → 2410 字，通道=text
+[parse] 1a39e4cafb07f8d0 → 80 字，通道=text
+[parse] a2692ef78cb9c9bd → 74 字，通道=text
+[parse] bdad57335521176a → 74 字，通道=text
+[parse] 8e8bb74c0f8cfa86 → 82 字，通道=text
+[parse] 43d137962dd0e5d8 → 77 字，通道=text
+[parse] 9641d401357c73b6 → 81 字，通道=text
+[parse] d684d0252446752c → 97 字，通道=text
+[parse] 9498c4434ca4bdee → 79 字，通道=text
+[parse] f8d0328e2d5e9d0b → 82 字，通道=text
+[parse] 76decef8904e17ab → 1807 字，通道=text
+[parse] 87b13ba0b14b09b9 → 76 字，通道=text
+[parse] 8ed5a9ef8bdfd1c2 → 3728 字，通道=text
+[parse] 22acb55a462d3c4b → 53 字，通道=text
+[parse] 69e4c5b8eb7a98d4 → 77 字，通道=text
+[parse] 6ef4e9578cc2d4c7 → 86 字，通道=text
+[parse] 7924e1f2a55e1f64 → 75 字，通道=text
+[parse] 6e63cc410f755b75 → 85 字，通道=text
+[parse] 06debed25ba846c7 → 90 字，通道=text
+[parse] 2aa50f934e8cb087 → 83 字，通道=text
+[parse] 736d2e0ce64e551c → 4466 字，通道=text
+[parse] bd4e9842bc84085f → 94 字，通道=text
+[parse] e83d7a26dc35d04b → 89 字，通道=text
+[parse] ad74de796f7637a9 → 95 字，通道=text
+[parse] d8de50cda54c8f94 → 114 字，通道=text
+[parse] 8ae818a846b9a17f → 90 字，通道=text
+[parse] 82ec818137f15ba3 → 91 字，通道=text
+[parse] 5e3bde0b1842e3a8 → 82 字，通道=text
+[parse] dbd2f6a6a150a254 → 94 字，通道=text
+[parse] e491c58b75422750 → 101 字，通道=text
+[parse] e832f2d7bf1c7225 → 75 字，通道=text
+[parse] d6f336e3925af89a → 1642 字，通道=text
+[parse] 24089967f0252c79 → 4544 字，通道=text
+[parse] 293d404ed8aaf37f → 2779 字，通道=text
+[parse] 8e00a8cb463d01d8 → 1980 字，通道=text
+[parse] 41fbef54756389ff → 3633 字，通道=text
+[parse] 4b7eef81a14bc718 → 4519 字，通道=text
+[parse] 98cb94b7f4459819 → 1910 字，通道=text
+[parse] 8cbbc3280e6cef78 → 1139 字，通道=text
+[parse] ef9376c74f19ec0d → 1910 字，通道=text
+[parse] ac38e30b2aeeb199 → 90 字，通道=text
+[parse] 8cc4ca36a2171c16 → 1823 字，通道=text
+[parse] 74da985ca62290c3 → 1262 字，通道=text
+[parse] 9d1c13bb39fce30c → 5081 字，通道=text
+[parse] ee4be27f11f36c5b → 2117 字，通道=text
+[parse] it-pm 完成，共 45 篇
+[validate] parse：检查 1 个岗位
+PASS: 全部符合契约
+[parse] it-pm 通过契约校验
+
+>>> [parse] 完成：通过 1，跳过 0
+
+=== [clean] it-pm 第 1 次尝试 ===
+[clean] 5b29ac08da65eadd → 保留（65）
+[clean] 1a39e4cafb07f8d0 → 丢弃（20）
+[clean] a2692ef78cb9c9bd → 丢弃（20）
+[clean] bdad57335521176a → 丢弃（20）
+[clean] 8e8bb74c0f8cfa86 → 丢弃（20）
+[clean] 43d137962dd0e5d8 → 丢弃（5）
+[clean] 9641d401357c73b6 → 丢弃（8）
+[clean] d684d0252446752c → 丢弃（8）
+[clean] 9498c4434ca4bdee → 丢弃（5）
+[clean] f8d0328e2d5e9d0b → 丢弃（5）
+[clean] 76decef8904e17ab → 保留（60）
+[clean] 87b13ba0b14b09b9 → 丢弃（5）
+[batch] it-pm 失败 ✗
+[batch] >>> it-da 开始 15:51:52
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] it-da 第 1 次尝试 ===
+[batch] it-da 失败 ✗
+[batch] >>> it-risk 开始 21:13:59
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] it-risk 第 1 次尝试 ===
+[parse] b4a46f37f8f227cc → 2738 字，通道=text
+[parse] e6ba7dd504c72f32 → 2083 字，通道=text
+[parse] 7251431c297a3588 → 2353 字，通道=text
+[parse] 1d072a49f805b7d2 → 1161 字，通道=text
+[parse] 50d4f9632a9ea7a2 → 718 字，通道=text
+[parse] 453b8c7f1ba846f3 → 6021 字，通道=text
+[parse] 056c4068b35329a8 → 2855 字，通道=text
+[parse] 0bab4db4e652c372 → 3328 字，通道=text
+[parse] 67df2aeabb6cd8a9 → 3773 字，通道=text
+[parse] ab17bd08121b8ac9 → 3670 字，通道=text
+[parse] 60c0eeab03c8e4e6 → 2422 字，通道=text
+[parse] 97c17e3139bd3c99 → 3109 字，通道=text
+[parse] a51621b584f693d9 → 423 字，通道=text
+[parse] e1518b54ebd2dd4b → 2906 字，通道=text
+[parse] 322e51a104f719a9 → 2738 字，通道=text
+[parse] bf92661731ee4f2f → 86 字，通道=text
+[parse] e72ef802ab1184d5 → 918 字，通道=text
+[parse] 091c7587702cbfad → 2290 字，通道=text
+[parse] 84fc0d6ec743aa39 → 1044 字，通道=text
+[parse] e0b33ebf26116a8d → 2816 字，通道=text
+[parse] 622498745078de9f → 2535 字，通道=text
+[parse] 5d2543daa1023983 → 2597 字，通道=text
+[parse] 7307f4b1231345ca → 86 字，通道=text
+[parse] c6c5e588bb38a354 → 4153 字，通道=text
+[parse] 347b07cab4acf2ff → 6031 字，通道=text
+[parse] f6fa4181b0580fee → 2937 字，通道=text
+[parse] 6c090fcf4a6bd528 → 89 字，通道=text
+[parse] e3b10852f59c5336 → 2418 字，通道=text
+[parse] 99c8e4a89ebc42d1 → 6013 字，通道=text
+[parse] 7b8bcd864d60fb9a → 95 字，通道=text
+[parse] 847a659523012cd8 → 730 字，通道=text
+[parse] 25ac78c149a34425 → 6014 字，通道=text
+[parse] 4e1ab36729e1b18f → 2523 字，通道=text
+[parse] ddeda22705e4c24a → 2855 字，通道=text
+[parse] 2c7ffadf9211e372 → 6015 字，通道=text
+[parse] 14472b5b8ea9f94c → 3020 字，通道=text
+[parse] 0fefa23e7f2d02c6 → 6021 字，通道=text
+[parse] 846453cbd8059f6b → 3626 字，通道=text
+[parse] 7beab7f53e21edd9 → 4789 字，通道=text
+[parse] 4f4820693b4e9c04 → 4789 字，通道=text
+[parse] 4cacd93ee535fd55 → 3299 字，通道=text
+[parse] 5ebda9d15141e182 → 5185 字，通道=text
+[parse] f5c5febdd05a32aa → 3626 字，通道=text
+[parse] 747be750aa5c48a3 → 1285 字，通道=text
+[parse] b08daa0c9cf6e4e5 → 2523 字，通道=text
+[parse] c66b0597f53e6aa7 → 452 字，通道=text
+[parse] a850eb4e940a7ec1 → 3343 字，通道=text
+[parse] d2fdf3f6aa7c4daa → 84 字，通道=text
+[parse] 1ed857b00b23222f → 87 字，通道=text
+[parse] f2e6b7356addcb44 → 82 字，通道=text
+[parse] a62582ae38a9bb29 → 99 字，通道=text
+[parse] 7c8c48ff92de5e30 → 77 字，通道=text
+[parse] 239e2719fbfeace6 → 84 字，通道=text
+[parse] 6f7542bd9a63a134 → 98 字，通道=text
+[parse] 11c92e88914dbf66 → 77 字，通道=text
+[parse] it-risk 完成，共 55 篇
+[validate] parse：检查 1 个岗位
+PASS: 全部符合契约
+[parse] it-risk 通过契约校验
+
+>>> [parse] 完成：通过 1，跳过 0
+
+=== [clean] it-risk 第 1 次尝试 ===
+[batch] it-risk 失败 ✗
+[batch] >>> fin-pe-investment-manager 开始 23:11:28
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] fin-pe-investment-manager 第 1 次尝试 ===
+[parse] db5f74d7904f037d → 1525 字，通道=text
+[parse] dc17f45503d7258d → 5731 字，通道=text
+[parse] 97c21dc04e6e6acd → 5680 字，通道=text
+[parse] 26468fbe4511b08d → 4351 字，通道=text
+[parse] 61bd531f07b198cf → 95 字，通道=text
+[parse] ea37acebd336f00f → 5409 字，通道=text
+[parse] a68a85896aee90f8 → 662 字，通道=text
+[parse] bf20ec3f28ba6f1f → 83 字，通道=text
+[parse] 298de5ae5dd8c21f → 99 字，通道=text
+[parse] b9f55419ec8a40aa → 982 字，通道=text
+[parse] ee00ade9298a7639 → 4830 字，通道=text
+[parse] cc99c7b7cd61d76e → 1592 字，通道=text
+[parse] d16229d4441395c1 → 2914 字，通道=text
+[parse] 0af19800e62efa8b → 5847 字，通道=text
+[parse] 6f38b83eb15ab7bc → 2325 字，通道=text
+[parse] 8fe0dcca910a03b4 → 1525 字，通道=text
+[parse] 1272f0fe250666c0 → 6021 字，通道=text
+[parse] 7ddd24fa8941f48f → 4414 字，通道=text
+[parse] c38aa836422843a2 → 4878 字，通道=text
+[parse] 0be738afb2b8d3e8 → 102 字，通道=text
+[parse] 676039c12ec8f081 → 3284 字，通道=text
+[parse] 2d97c3c4ae1059a3 → 5409 字，通道=text
+[parse] 5ef5bc4f1ccf2e09 → 5731 字，通道=text
+[parse] c7b8927ad5167fa6 → 2600 字，通道=text
+[parse] cda6378e3b69ae2e → 88 字，通道=text
+[parse] 3edbe652614fec5a → 4414 字，通道=text
+[parse] 5373721e2c5ecca1 → 3338 字，通道=text
+[parse] d280ec1881e320a2 → 303 字，通道=text
+[parse] b4a3b4429fcb6914 → 82 字，通道=text
+[parse] 46ebda1bad7d7fdf → 662 字，通道=text
+[parse] 2891bc857c54717b → 3249 字，通道=text
+[parse] ace1748e3711f15e → 4500 字，通道=text
+[parse] ecf8e2a622bd9808 → 6048 字，通道=text
+[parse] efa43e7dcc60c1bc → 3687 字，通道=text
+[parse] 6f4673b7f0c1ea22 → 5782 字，通道=text
+[parse] 9683aaae76e62191 → 2849 字，通道=text
+[parse] 2bb86d726a275017 → 84 字，通道=text
+[parse] 82e1cb2e4a877351 → 83 字，通道=text
+[parse] df2c68103f9cae61 → 1707 字，通道=text
+[parse] cbb1424c4326dc1d → 2790 字，通道=text
+[parse] 1d37384af482ad21 → 3249 字，通道=text
+[parse] 9344814bd36e04c6 → 5007 字，通道=text
+[parse] 420001fd4a9e6ca7 → 6043 字，通道=text
+[parse] 90c3748deeae8047 → 5408 字，通道=text
+[parse] 668aa87c391889c9 → 1529 字，通道=text
+[parse] e94d20a6bf60934c → 88 字，通道=text
+[parse] ec4ea1fe56ca4fab → 99 字，通道=text
+[parse] 0f5a718edf771cbb → 4019 字，通道=text
+[parse] 3784be4783ecf06c → 1838 字，通道=text
+[parse] 6efc00fa31e03bca → 4351 字，通道=text
+[parse] c300734673d8eff8 → 2740 字，通道=text
+[parse] b4e373b027a2145f → 4415 字，通道=text
+[parse] 1f768366f36a08bd → 3002 字，通道=text
+[parse] 112ee93cca974681 → 99 字，通道=text
+[parse] e296fbec5e39b1c8 → 91 字，通道=text
+[parse] 41b1039f34153793 → 1838 字，通道=text
+[parse] 7aafa6347760b00f → 3002 字，通道=text
+[parse] 603a83e97d5e865b → 91 字，通道=text
+[parse] 1ca78cd6eea88ea2 → 3454 字，通道=text
+[parse] 6e2e1ed621eee317 → 2784 字，通道=text
+[parse] fin-pe-investment-manager 完成，共 60 篇
+[validate] parse：检查 1 个岗位
+PASS: 全部符合契约
+[parse] fin-pe-investment-manager 通过契约校验
+
+>>> [parse] 完成：通过 1，跳过 0
+
+=== [clean] fin-pe-investment-manager 第 1 次尝试 ===
+[batch] fin-pe-investment-manager 失败 ✗
+[batch] >>> fin-pe-portfolio-management 开始 23:54:55
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] fin-pe-portfolio-management 第 1 次尝试 ===
+[parse] 2ab9db8f928e6492 → 2879 字，通道=text
+[parse] 06fd5ce600ba4a5f → 6024 字，通道=text
+[parse] e984f9802a0d3aa9 → 913 字，通道=text
+[parse] 2f6fbf7d4b74abac → 2628 字，通道=text
+[parse] 4b6fa15d31c45a92 → 6032 字，通道=text
+[parse] c59ad3a9a0c58571 → 4243 字，通道=text
+[parse] 74f5fea0e9c5bdd1 → 3636 字，通道=text
+[parse] 63512365f331f536 → 5951 字，通道=text
+[parse] 6fedf8b1fa9a548b → 6025 字，通道=text
+[parse] 224a8611ee814f28 → 2251 字，通道=text
+[parse] 25bb139e6b543999 → 6021 字，通道=text
+[parse] 54f295478903b15e → 6014 字，通道=text
+[parse] 8e68aa1d1ad86b6c → 2796 字，通道=text
+[parse] de532692cd4931c5 → 5329 字，通道=text
+[parse] 91a036e5c9cde68b → 5670 字，通道=text
+[parse] 2611df5f8981738c → 1253 字，通道=text
+[parse] cc579c14437ce05a → 652 字，通道=text
+[parse] a8f226cef95d81d9 → 2843 字，通道=text
+[parse] 8be1182c3cd60542 → 6023 字，通道=text
+[parse] fdeda2b919148616 → 6034 字，通道=text
+[parse] faa6208c4c1a644d → 3066 字，通道=text
+[parse] 1005f7fc81a14718 → 1862 字，通道=text
+[parse] 30552361972cdfb0 → 5298 字，通道=text
+[parse] 0da072c62a2b544c → 3889 字，通道=text
+[parse] 939fb42e69769e5c → 2640 字，通道=text
+[parse] aa866efcd93803a2 → 2640 字，通道=text
+[parse] 3129f70653d1181d → 97 字，通道=text
+[parse] 73005bad490f74d2 → 3657 字，通道=text
+[parse] 19e5d408748f4288 → 88 字，通道=text
+[parse] 77e31dde7d524623 → 1598 字，通道=text
+[parse] f2957791f32483f5 → 2468 字，通道=text
+[parse] 0bb337e6874b1a4a → 6028 字，通道=text
+[parse] e6b90d8f16aff2c9 → 2038 字，通道=text
+[parse] 95be31780eeb562f → 3868 字，通道=text
+[parse] 96e2585799a187ea → 82 字，通道=text
+[parse] c95d03c013370f4b → 5689 字，通道=text
+[parse] e02c4480122a5b09 → 2649 字，通道=text
+[parse] 51527964bd05f4cc → 3528 字，通道=text
+[parse] 8497e51c6cbdf212 → 2355 字，通道=text
+[parse] 478908cc01f33c24 → 5312 字，通道=text
+[parse] b4a43cf9c824d644 → 98 字，通道=text
+[parse] 6fb9ed4ae934517b → 2355 字，通道=text
+[parse] d54fda78c42358ea → 2654 字，通道=text
+[parse] 17053514d39008f4 → 4803 字，通道=text
+[parse] fd49548fa9575c5b → 4164 字，通道=text
+[parse] 04d858ee9898d10b → 375 字，通道=text
+[parse] 1f9bcf3c729ae215 → 1626 字，通道=text
+[parse] 1cafa11861fe3035 → 2460 字，通道=text
+[parse] 9c8407b44d58ff76 → 1896 字，通道=text
+[parse] f4e45631e430f84f → 2406 字，通道=text
+[parse] d23af113a3e02634 → 2767 字，通道=text
+[parse] ccda6d556e4b9805 → 171 字，通道=text
+[parse] 2a7b6a8d34f51a72 → 3692 字，通道=text
+[parse] bc389b152d844f06 → 2034 字，通道=text
+[parse] b822403d6c6be8bb → 2784 字，通道=text
+[parse] 587ab829b7386e26 → 2455 字，通道=text
+[parse] 2fc8d0e087e4b38f → 2415 字，通道=text
+[parse] d8b304719acfe2e7 → 2880 字，通道=text
+[parse] 965bf682b5cdf7a7 → 1434 字，通道=text
+[parse] 15066a37dd661092 → 4073 字，通道=text
+[parse] fin-pe-portfolio-management 完成，共 60 篇
+[validate] parse：检查 1 个岗位
+PASS: 全部符合契约
+[parse] fin-pe-portfolio-management 通过契约校验
+
+>>> [parse] 完成：通过 1，跳过 0
+
+=== [clean] fin-pe-portfolio-management 第 1 次尝试 ===
+[clean] 2ab9db8f928e6492 → 保留（85）
+[clean] 06fd5ce600ba4a5f → 保留（65）
+[clean] e984f9802a0d3aa9 → 丢弃（45）
+[clean] 2f6fbf7d4b74abac → 保留（85）
+[clean] 4b6fa15d31c45a92 → 保留（88）
+[clean] c59ad3a9a0c58571 → 保留（72）
+[clean] 74f5fea0e9c5bdd1 → 保留（88）
+[clean] 63512365f331f536 → 保留（65）
+[clean] 6fedf8b1fa9a548b → 保留（65）
+[clean] 224a8611ee814f28 → 丢弃（5）
+[clean] 25bb139e6b543999 → 保留（65）
+[clean] 54f295478903b15e → 保留（65）
+[clean] 8e68aa1d1ad86b6c → 保留（65）
+[clean] de532692cd4931c5 → 保留（86）
+[clean] 91a036e5c9cde68b → 保留（65）
+[clean] 2611df5f8981738c → 丢弃（5）
+[clean] cc579c14437ce05a → 丢弃（3）
+[clean] a8f226cef95d81d9 → 丢弃（38）
+[clean] 8be1182c3cd60542 → 保留（65）
+[clean] fdeda2b919148616 → 保留（65）
+[clean] faa6208c4c1a644d → 保留（65）
+[clean] 1005f7fc81a14718 → 丢弃（5）
+[clean] 30552361972cdfb0 → 保留（65）
+[clean] 0da072c62a2b544c → 保留（82）
+[clean] 939fb42e69769e5c → 丢弃（5）
+[clean] aa866efcd93803a2 → 丢弃（5）
+[clean] 3129f70653d1181d → 丢弃（5）
+[clean] 73005bad490f74d2 → 丢弃（20）
+[clean] 19e5d408748f4288 → 丢弃（5）
+[clean] 77e31dde7d524623 → 丢弃（5）
+[clean] f2957791f32483f5 → 丢弃（15）
+[clean] 0bb337e6874b1a4a → 保留（65）
+[clean] e6b90d8f16aff2c9 → 丢弃（18）
+[clean] 95be31780eeb562f → 保留（65）
+[clean] 96e2585799a187ea → 丢弃（15）
+[clean] c95d03c013370f4b → 保留（65）
+[clean] e02c4480122a5b09 → 丢弃（5）
+[clean] 51527964bd05f4cc → 丢弃（8）
+[clean] 8497e51c6cbdf212 → 保留（86）
+[clean] 478908cc01f33c24 → 保留（65）
+[clean] b4a43cf9c824d644 → 丢弃（10）
+[clean] 6fb9ed4ae934517b → 保留（82）
+[clean] d54fda78c42358ea → 保留（78）
+[clean] 17053514d39008f4 → 保留（65）
+[clean] fd49548fa9575c5b → 丢弃（20）
+[clean] 04d858ee9898d10b → 丢弃（0）
+[clean] 1f9bcf3c729ae215 → 丢弃（5）
+[clean] 1cafa11861fe3035 → 丢弃（58）
+[clean] 9c8407b44d58ff76 → 丢弃（8）
+[clean] f4e45631e430f84f → 丢弃（35）
+[clean] d23af113a3e02634 → 保留（65）
+[clean] ccda6d556e4b9805 → 丢弃（5）
+[clean] 2a7b6a8d34f51a72 → 保留（65）
+[clean] bc389b152d844f06 → 丢弃（8）
+[clean] b822403d6c6be8bb → 保留（85）
+[clean] 587ab829b7386e26 → 保留（62）
+[clean] 2fc8d0e087e4b38f → 保留（88）
+[clean] d8b304719acfe2e7 → 保留（65）
+[clean] 965bf682b5cdf7a7 → 丢弃（6）
+[clean] 15066a37dd661092 → 丢弃（12）
+[clean] fin-pe-portfolio-management 完成：保留 32 / 60
+[validate] clean：检查 1 个岗位
+PASS: 全部符合契约
+[clean] fin-pe-portfolio-management 通过契约校验
+
+>>> [clean] 完成：通过 1，跳过 0
+
+=== [structure] fin-pe-portfolio-management 第 1 次尝试 ===
+[structure] fin-pe-portfolio-management 整合 32 篇帖子…
+FAILED: 模型返回空内容
+[structure] fin-pe-portfolio-management 产出脚本失败
+
+=== [structure] fin-pe-portfolio-management 第 2 次尝试 ===
+[structure] fin-pe-portfolio-management 整合 32 篇帖子…
+FAILED: 模型返回的不是合法 JSON：{
+  "positionName": "PE投后管理",
+  "aliases": ["投后管理经理", "投后管理专员", "投后运营"],
+  "coreDuties": [
+    "投后管理主要围绕被投企业监控与增值服务提供两个方面展开，核心是管理投资协议签署后国家政策、市场环境、技术变革以及企业自身与创始人状态变化所带来的潜在风险。",
+    "收集、汇总并分析被投企业季度财务报告和
+[structure] fin-pe-portfolio-management 产出脚本失败
+
+=== [structure] fin-pe-portfolio-management 第 3 次尝试 ===
+[structure] fin-pe-portfolio-management 整合 32 篇帖子…
+FAILED: 模型返回的不是合法 JSON：{
+  "positionName": "PE投后管理",
+  "aliases": ["投后管理经理", "投后管理专员", "投后运营"],
+  "coreDuties": [
+    "对签订正式投资协议并完成划款、进入投后管理期的项目开展投后管理，工作内容主要包括标的企业监控与增值服务提供。",
+    "财务信息收集与分析：定期收集汇总项目季度财务报告和年度财务报告，季度报告在季度结束后
+[structure] fin-pe-portfolio-management 产出脚本失败
+[structure] fin-pe-portfolio-management 跳过并记录到 kb/state/errors.jsonl
+
+>>> [structure] 完成：通过 0，跳过 1
+
+=== [index] fin-pe-portfolio-management 第 1 次尝试 ===
+FAILED: 找不到结构化结果：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\fin-pe-portfolio-management.json
+[index] fin-pe-portfolio-management 产出脚本失败
+
+=== [index] fin-pe-portfolio-management 第 2 次尝试 ===
+FAILED: 找不到结构化结果：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\fin-pe-portfolio-management.json
+[index] fin-pe-portfolio-management 产出脚本失败
+
+=== [index] fin-pe-portfolio-management 第 3 次尝试 ===
+FAILED: 找不到结构化结果：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\fin-pe-portfolio-management.json
+[index] fin-pe-portfolio-management 产出脚本失败
+[index] fin-pe-portfolio-management 跳过并记录到 kb/state/errors.jsonl
+
+>>> [index] 完成：通过 0，跳过 1
+
+=== [qa] fin-pe-portfolio-management 第 1 次尝试 ===
+FAILED: 缺少质检输入：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\04-clean\fin-pe-portfolio-management.json 或 C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\fin-pe-portfolio-management.json
+[qa] fin-pe-portfolio-management 产出脚本失败
+
+=== [qa] fin-pe-portfolio-management 第 2 次尝试 ===
+FAILED: 缺少质检输入：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\04-clean\fin-pe-portfolio-management.json 或 C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\fin-pe-portfolio-management.json
+[qa] fin-pe-portfolio-management 产出脚本失败
+
+=== [qa] fin-pe-portfolio-management 第 3 次尝试 ===
+FAILED: 缺少质检输入：C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\04-clean\fin-pe-portfolio-management.json 或 C:\Users\Harrin\Desktop\AI智能体的设计与应用\Job Agent\JobAgent\kb\output\05-structure\fin-pe-portfolio-management.json
+[qa] fin-pe-portfolio-management 产出脚本失败
+[qa] fin-pe-portfolio-management 跳过并记录到 kb/state/errors.jsonl
+
+>>> [qa] 完成：通过 0，跳过 1
+
+>>> 总控完成。各阶段交付物见 kb/output/
+[batch] fin-pe-portfolio-management 失败 ✗
+[batch] >>> fin-pe-investor-relations 开始 00:15:29
+>>> 总控启动：阶段 parse → clean → structure → index → qa
+>>> 岗位清单：30 个（fin-bank-rm, fin-bank-teller, fin-bank-mgmt-trainee, fin-ib-ibd, fin-ib-research …）
+
+=== [parse] fin-pe-investor-relations 第 1 次尝试 ===
+[parse] 62b44fe835b234fa → 3389 字，通道=text
+[parse] 1d50722752ba27e2 → 4801 字，通道=text
+[parse] 0aa6c4dbc07de611 → 375 字，通道=text
+[parse] d22405db99bbe1eb → 6018 字，通道=text
+[parse] ad2316d549858d35 → 3043 字，通道=text
+[parse] 237e84471cd881e9 → 3270 字，通道=text
+[parse] 86d65dd59f643e51 → 4704 字，通道=text
+[parse] f53fa98afda36f49 → 5994 字，通道=text
+[parse] ea2c46c3b0cedc5e → 3949 字，通道=text
+[parse] a0fc1365a09b99ca → 3021 字，通道=text
+[parse] e85ba3a5b500bf40 → 2357 字，通道=text
+[parse] 290f9151b0c349b9 → 2839 字，通道=text
+[parse] 42a5b38b89f0309b → 3389 字，通道=text
+[parse] b8d4a84a29825d85 → 3187 字，通道=text
+[parse] 11bca9aab8df1c97 → 2959 字，通道=text
+[parse] 3c23170070448606 → 669 字，通道=text
+[parse] 65640c48140e5195 → 1798 字，通道=text
+[parse] 2d65fa365025b2dc → 95 字，通道=text
+[parse] 7cecb9d4f36c6351 → 88 字，通道=text
+[parse] 9ad743456136e9da → 78 字，通道=text
+[parse] e1d829f9f34806d0 → 94 字，通道=text
+[parse] c80006755b12e0e2 → 100 字，通道=text
+[parse] 824fc5e37f7b4de4 → 75 字，通道=text
+[parse] a40affb5998cd5eb → 104 字，通道=text
+[parse] b7af225870be2cbd → 91 字，通道=text
+[parse] dbf9afe4e78bff4d → 2588 字，通道=text
+[parse] 5a5cba546fb4b181 → 96 字，通道=text
+[parse] 1d3d516423a689a9 → 5432 字，通道=text
+[parse] 5c9106403cda9436 → 264 字，通道=text
+[parse] 58a4d769ad23daa6 → 3243 字，通道=text
+[parse] d2f0c6aa3359b397 → 162 字，通道=text
+[parse] 1f6a828d94d39984 → 2799 字，通道=text
+[parse] d90238ceb1e459b4 → 5854 字，通道=text
+[parse] 0670a3b3aebc58a2 → 83 字，通道=text
+[parse] 1f08ec4ee3db75bc → 4030 字，通道=text
+[parse] bdc1a3389d6642ba → 5854 字，通道=text
+[parse] 3401731b1331abb9 → 101 字，通道=text
+[parse] 41996ee810b135f2 → 2414 字，通道=text
+[parse] ff8fcdd2f9e31c0c → 4447 字，通道=text
+[parse] b5f4df5146e2d740 → 4688 字，通道=text
+[parse] a2f097f83f9540a9 → 2860 字，通道=text
+[parse] 6b5abd4b55a0b2fd → 2672 字，通道=text
+[parse] 31c245a8e1d9bb77 → 2487 字，通道=text
+[parse] 91d9f28c825afd55 → 84 字，通道=text
+[parse] e3ec6591344e27a9 → 93 字，通道=text
+[parse] 4d575135f104d3b9 → 86 字，通道=text
+[parse] 67f84bbcdb795b56 → 104 字，通道=text
+[parse] cf3fa92f59b0670b → 110 字，通道=text
+[parse] ad3841bb8a0e5dc1 → 129 字，通道=text
+[parse] 2cc239863dad9ccf → 72 字，通道=text
+[parse] fin-pe-investor-relations 完成，共 50 篇
+[validate] parse：检查 1 个岗位
+PASS: 全部符合契约
+[parse] fin-pe-investor-relations 通过契约校验
+
+>>> [parse] 完成：通过 1，跳过 0
+
+=== [clean] fin-pe-investor-relations 第 1 次尝试 ===
+[clean] 62b44fe835b234fa → 保留（85）
+[clean] 1d50722752ba27e2 → 保留（65）
+[clean] 0aa6c4dbc07de611 → 丢弃（55）
+[clean] d22405db99bbe1eb → 保留（65）
+[clean] ad2316d549858d35 → 保留（76）
+[clean] 237e84471cd881e9 → 保留（76）
+[clean] 86d65dd59f643e51 → 保留（65）
+[clean] f53fa98afda36f49 → 保留（65）
+[clean] ea2c46c3b0cedc5e → 保留（65）
+[clean] a0fc1365a09b99ca → 保留（88）
+[clean] e85ba3a5b500bf40 → 保留（65）
+[clean] 290f9151b0c349b9 → 保留（75）
+[clean] 42a5b38b89f0309b → 保留（65）

@@ -1,0 +1,221 @@
+{
+  "positionId": "fin-bank-teller",
+  "positionName": "银行柜员",
+  "aliases": [
+    "综合柜员",
+    "储蓄柜员",
+    "对公柜员",
+    "现金柜员"
+  ],
+  "coreDuties": [
+    "在现金柜台或非现金柜台对外办理业务，现金柜台主要处理存取款、转账汇款等现金业务，非现金柜台办理对公账户、支票结算、国际业务等。",
+    "反复与客户确认转账的原因、金额及转账对象，以防范电信诈骗，避免客户损失。",
+    "接待客户并解答咨询，在客户填写单据时给予介绍和指导。",
+    "对公柜员需同时面对多家公司的业务，一心多用，争取在最短时间内多办几家。",
+    "验证票据真伪，用机器仔细查看票据细微之处，一张单据可能涉及几百万元资金。",
+    "承担营销任务，包括存款、理财、贵金属、信用卡、保险、基金、金条金币、代发等指标。",
+    "负责管理后台保险柜和款箱钥匙的柜员，需每日清点款箱和重要物品。"
+  ],
+  "workflow": [
+    "早晨到网点接运钞车送来的钱箱，核对钱款数额与前一天系统一致，并清点重要空白凭证，即碰库，之后才能正常对外办理业务。",
+    "营业前进行着装、仪容的自检和互检，参加晨会，晨会内容包括抽查业务知识、总结昨日工作、学习总行和财务下发的新制度。",
+    "营业期间在现金区内坚守柜台，除中午就餐和休息外不得离开，保证客户能及时办理业务。",
+    "离开柜台时须退出系统、盘点现金和凭证并锁箱，至少花费十分钟。",
+    "一天工作结束后核对钱款，确认无误后将钱款锁进钱箱，交由运钞人员运走。",
+    "结账，盘点票据和重要凭证，勾兑流水，核对今日收入、付出、转账的笔数和金额，确认现金库应有金额。",
+    "核对凭证，轧账，将凭证拍成影像存档保存。",
+    "接送库车，忙完这些基本离下班已过去一个半小时。"
+  ],
+  "tools": [
+    "点钞机、验钞机",
+    "计算机终端与业务系统",
+    "打印机（如老式富士行打打印机）",
+    "回单柜（如三泰回单柜，人工将回单放入一格一格的小抽屉）",
+    "算盘（早期手工记账时使用）",
+    "智能柜员机（可办理开户、个人贷款、电子银行、转账汇款、挂失、换卡、激活新卡、修改密码等19大类100余项个人非现金业务）"
+  ],
+  "typicalDay": "柜员的一天从早晨开始，需在运钞车到来之前到岗，接款车送来的钱箱，核对钱款数额与系统一致，清点重要空白凭证，并参加晨会进行着装仪容自检互检、业务知识抽查和制度学习。营业开始后，柜员在玻璃柜台内对外办理业务，反复与客户确认转账信息，指导客户填写单据，验证票据真伪，同时应对多家公司业务和来电咨询。中午只有约十五分钟到一小时的吃饭时间，且需轮流就餐，为了少离柜、少让客户等待，许多柜员尽量少喝水、少上厕所。下午客户走后，柜员还要结账、盘点票据和重要凭证、勾兑流水、接送库车，熟练情况下仍需一个多小时，忙完离下班已过去约一个半小时。柜员排班多为上两天休一天或上三天休一天，不享受周末双休和法定节假日，休息时间也常被培训、技能练习和加班占用。",
+  "pitfalls": [
+    "柜员岗位是一个萝卜一个坑，一旦有人临时请假或倒班，其他柜员就要连上很多天，工作强度骤增。",
+    "负责管理后台保险柜和款箱钥匙的柜员责任重大，即使突发生病也必须到岗，钥匙不能交给别人代替保管，除非提前走特殊交接报备流程。",
+    "柜员最难的是在坚守银行制度的同时让客户满意、不被投诉，业务做得多没人夸，但一千笔里哪怕只有一笔出风险，银行不保护柜员。",
+    "没有没短过钱的柜员，长款交公、短款自赔，多打一个0、少打一个0、多数一张、少数一张都是严重错误。",
+    "柜员头顶有监控，上级行会专人定期抽查监控视频，检查动作、手势、微笑和服务用语是否到位，不到位就扣分扣钱；有柜员因服务聋哑人未说服务用语被扣钱，且无处申诉。",
+    "网点保险指标完不成，柜员要自己掏钱买；客户投诉、任务完不成、业务出错不合规、服务用语不到位都会扣钱。",
+    "柜员收入在银行系统处于底层，岗位内容本身不创造利润，工资不高。",
+    "柜员职业通道窄，往上走是营业主管，但营业主管再往上几乎没有空间，很少见到柜台主管直接升网点负责人，都需要先转岗。",
+    "柜员的能力考核是打字速度、打传票速度、点钞速度以及内部业务流程代码记忆，这些能力离开柜台没有竞争力，难以横向迁移。",
+    "柜员换工作相对难，基本只有从零开始找工作、考编制或去其他银行做柜员三条路。",
+    "随着人工智能和智能柜员机的发展，柜员人数逐步被缩减，现金柜台被裁撤，部分网点关停。",
+    "柜员需要统筹资金、压低库存，一旦有人大额取现，后续客户可能连三两千也取不出来，容易引发客户不满。",
+    "客户类型多样，有讲理的也有不讲理的，被人堵着窗口骂上半个小时是常有的事，需要很强的察言观色和人际应变能力，保持冷静、不激化矛盾。",
+    "柜员休息时间与外界差异大，上两天休一天，没有节假日概念，休息时朋友大多在上班，社交生活受限。",
+    "长时间久坐，最长需在工位上坐九个小时，容易导致肩周炎、颈椎病、腰椎劳损、胃病等身体问题。",
+    "柜员请假相对复杂，工作日急事请假也需要先结账，周末休假需领导同意且有同事愿意顶班，网点柜员数量压缩后常常无人顶班。",
+    "银行柜员是注意力需高度集中的工作，每天上百笔业务，一个柜台一个人、一台终端机，没有复核员，出错风险比过去手工账时代大很多。",
+    "柜员岗位去能力化，做的时间长了大学专业荒废，掌握不了核心硬技能，跳槽缺乏竞争力。",
+    "银行给柜员的转岗一般不是部室或管理岗位，而是转成营销岗即客户经理，收入直接与业绩挂钩，压力大。"
+  ],
+  "sources": [
+    {
+      "postId": "b83692fb38674818",
+      "title": "90后美女柜员揭秘银行职员的真实生活",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792304644&ver=1&signature=ZwzOKU0Tj6u8YGLyzsKcmYCPchRu7-Z2aAuTxhtlftd2mYtf9iNq5h6451kVT-ebTQKyybGlzgyX33vP4NPSPTxFFMEEW6ywMpx9PRQIkb5bmyxFpYviJPzPOxKp6P9gnvsVMMepbC2W4ZnbsKhBSC910gPoWC3k2lpZj3skN*0="
+    },
+    {
+      "postId": "b6dcdf40a4449ecd",
+      "title": "90后美女柜员揭秘银行职员的真实生活！",
+      "url": "https://mp.weixin.qq.com/s?src=3&timestamp=1792304644&ver=1&signature=e-85BUJBQpcLIs2ftztSyxAz887e4A-*8CJwaqlUAeL*6gVwxH2o2wt9ZP2nv0gY0b2G3AIyMuAl5SLqLSzgpKnBhzAXmfo-HBtPi3X88kEPVHHz16LBX7kqm-JSOBAj1yeQ7H3n8VNGJsD9KHKEIxYOzqg4hWp*jfpN75lzBSA="
+    },
+    {
+      "postId": "cf92fd8e3ce06fa6",
+      "title": "一个银行柜员的日常。",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304644&ver=7033&signature=3y2KPF6MkwRpxKVicgCnFd*Is1BYaj*VeuCLHQxxr2yyEmgfe5uv0P02myXM*4IdfJZ4qXJ3ePSfuh-tO5wu5Boodu-IqJEMPMOTneJEwmn*tq0*KU7H1wpTnpOWYjo4&new=1"
+    },
+    {
+      "postId": "8d464ca7f58338c0",
+      "title": "银行柜员日常：生活原来这么有挑战性",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304644&ver=7033&signature=2x4iLQ34wLXDp0BLVbJ5nXcK4reS1TGG37gwEVbmEPmfZhnXfdTkro09lI1O26OK0mgyh6AiXsHhjD*ktA0PWP6iv8vW1gB--7Kn9ybMjO4rBTTZis0OTYbSMbu0BZFn&new=1"
+    },
+    {
+      "postId": "281dd86e041275ba",
+      "title": "大图揭秘神木90后美女银行柜员的一天,结账,盘点票据,勾兑流水…",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304687&ver=7033&signature=HjRGNAoaMb2boCsxJNJ7Go9w78FmCibFQEfBDsTn8kABOKfBLXeyL3ECbv8Gu*aEBNLGICB3jmKCzrRsqYnzUpIDr8pd5wTI7mAQiCoR6QWpnrjaVecBiBCeeBrWZxZi&new=1"
+    },
+    {
+      "postId": "812bb7f1c5f19595",
+      "title": "年底为什么会有许多银行柜员都想辞职？｜热议",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304687&ver=7033&signature=kqrsNrvb6-K9AgcU42p1sWpoYIH0YQTf4H6Qipz0ntOIPIM90*fPeWj*sjCB21J9O-BalLL5c7BKXt5QIprCtV9S7vXUBj2KLWaH-RsCVl935ntwBgejSQd30-AIJ24q&new=1"
+    },
+    {
+      "postId": "5e9f76a60c94780b",
+      "title": "永远消失的银行柜员！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304687&ver=7033&signature=DF*1vQt4gyOEvO0HFy4m9sySPp8SOXw8DFhGaqu6RP1UwkFFkvI-K4RWycBbwqtVea5QxdS8YAHJ2M6OU1fEn6oUgULlR9hOFedroZmd0BJBCvEFp2iKQObaX8toG*QX&new=1"
+    },
+    {
+      "postId": "8624e3d08eba151c",
+      "title": "今年以来近900家银行网点关停背后：时代抛弃柜员时，真的不说再见？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304713&ver=7033&signature=gyT0*Tols3cC1JstHwsT4Rqj9*nFOL*zjmA3V8D8WUUH5L6*oHLCCaHmpy7ZWPP1RVYnp4onLWzC-BqmTl7d3pX2QUU44vsg4mmPPPJ4Mhb0FtO0lnXCt9bROZ1koUWH&new=1"
+    },
+    {
+      "postId": "c762f0a104195ccf",
+      "title": "减少网点，基层裁员……银行柜员应该何去何从？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304713&ver=7033&signature=q1hLSvZHLuLvNIPWbIGQoZbDHr2ibstPYDEM5gKnMRLe2MCAm-*1g2JwUDdyX85tfrr1MFjMMG5O-T-pDDvpkBKt3uslNAf13xA4rG*VwcekmWGfP9xisTBx02ycfr0P&new=1"
+    },
+    {
+      "postId": "fffd9a8a4b2d2e92",
+      "title": "银行真的那么“劝退”吗？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304713&ver=7033&signature=Y5ehJ7zdgvslSSw-KE7wTOVkgrvmGh2FAqfXSrFrPDYUxg1g*QK0QnGUnC63nsmCwK4kDpWimgCnjTl51TCIF4smFRZtGviahxgxhgnLqza8Wucfr3pn5LhGWaX0IjcA&new=1"
+    },
+    {
+      "postId": "008f8c33a969cde3",
+      "title": "校招去银行当柜员，你熬得起吗？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304713&ver=7033&signature=SomIlhZcBczg3VAFdOzAzFTTF8HGU98uwrDzvgOsWlDDqVXUCu5D9pz*d6oAyvFsKAvX5iHqvPm5IWKKmVp4h5TXMgZdmKH1JDs5oZ7T3ZXTUTGnATXIVcQZVSZbeQoZ&new=1"
+    },
+    {
+      "postId": "7df030e5db16f885",
+      "title": "穷人家的孩子怎么在银行发展？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304713&ver=7033&signature=RDNIFqvfxzNG0LdtoGdmosVEIV057exFGfLKgGkdSXPLtSacxHhrAHP**qCwWxS5DriXYL-kfHZpGcKfHA3kSJuOBkhNj4to1SEQOycO0zzs1*8uM*DcZ-C4S1dafP4l&new=1"
+    },
+    {
+      "postId": "b7d0db4f3817f575",
+      "title": "银行人的真实收入，被平均数骗了多少？20家银行薪资与企业底色大拆解",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304756&ver=7033&signature=TXz76twQZzLDoLsL69SwDnq6hXLQNEILVTHydq*fOh0i7fupYKunew*Lwk02ocegf*8zze3hBfxwGWSf6j6JVNZXsseiCsh3-vrfSKIQzmqJb4mvKUNFa10bDfA6fyI*&new=1"
+    },
+    {
+      "postId": "c0790d0b8685439f",
+      "title": "为什么说银行柜员一定要尽量转岗?",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304787&ver=7033&signature=EWKrMgmR2N1L0NSVmZEbsu1tfb8o5RKNl4zLmNoizbVuwJmas-bdxZ97aJxRyH3tqnXrS3LxkYMiV74z73hyFDJHuIum427pxIPkzny72HG3EThOhULJoH7fltuGfmP4&new=1"
+    },
+    {
+      "postId": "f26c459ac7258e51",
+      "title": "从银行柜员转岗乡镇公务员，这一年的心里话",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304787&ver=7033&signature=ZeRixwELNV6oX7QDenC2PP8GbKxnfl4f-MTVNt7JxVTmAiLGPtv5xv5gA4Jz-oz2zkNx5adxurC0PDmNF1m5TrsYcHRJzJ-a-qxL2UNBpcWBUiHzZXKDKVylik-vz3Gl&new=1"
+    },
+    {
+      "postId": "e699edb284a3e497",
+      "title": "农商行：当了柜员怎么转岗？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304787&ver=7033&signature=3GO3QwzZBWTX90IJ7uZncCnUJNBB2SCmc0R6J8f58lP2yrA8RWlSpj4X2Z*MTPc55z5GhQFl7jcmtw2lWeWmv7Sv6X7ozs9gbjmnti9O5l9jYzfY0wgAqtRm6fmpcwR3&new=1"
+    },
+    {
+      "postId": "cf929208eeceaa6f",
+      "title": "银行柜员晋升的路径图！柜员转岗千万要注意！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304787&ver=7033&signature=ita5nIpMqAxr*joZacTI*leMn1Og-3ZnE7DJNUEyriFIWjiNnuUaigFSh-DPBIuNrxM7CO61K76skYiIMCsXU4qr0*K3na55Hbfe0WPkp1pP*-lNskiNDcLJmzwolcOb&new=1"
+    },
+    {
+      "postId": "3e63cb71f9755bfb",
+      "title": "逾800家银行网点关停背后，柜员生存图鉴：时代抛弃你时，真的不说再见？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304787&ver=7033&signature=U4PNsoyIj2UoJ7WaX6q8TSL8P8VfOnblRdF1JiPzo5npjJzsmCzMLHMvEJBvb3SixspPOSOaST9TV0hPOg*tHHbYj-RakwmsO7RVN0PAMUPwSs9JQuHcxWqsl6E922Wo&new=1"
+    },
+    {
+      "postId": "35d46e850b09b749",
+      "title": "银行柜员｜金融证书成长规划（通 用落地版）",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304825&ver=7033&signature=1HSfEG*2zpspl7Eww9pObFhZdgQbYAgL8qdfPGYoNibbp8QPG9Gwv8MKdLR7Jn*xoE1vwCUcTGvoCxm2FTbTGdWHipjBw7Zf*Eq2giPqg77*7-F-C4jRg9uDqx-pHYev&new=1"
+    },
+    {
+      "postId": "3266dd1d376e2a34",
+      "title": "银行柜员是不是会成为下一个被淘汰的职业？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304825&ver=7033&signature=uJC4Rh3wRfjeM45kIKTUFOVcsICJpdIh3S9vKUOfgHVr3eN2bxIVyI40xZpsWCJ5C1nDdCQso283hWNOB1H2fAmNTF-jMkf8yJdLvvQyH6ZJ-pu0nEK8tvwdTa*oaqWO&new=1"
+    },
+    {
+      "postId": "53084ccabde7610a",
+      "title": "为什么说银行柜员一定要尽量转岗?",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304825&ver=7033&signature=4ELEREAXSa1uWj0HPKarRWXkHJcVNqNLNp1NmwxIs33Vl-dk369LvhxN3TCaIngmuD-WkF1VqnZX2jAK4wv-JbrGurtp24DD7OzZFDYVgPR-3s6oj5G7e8t766rIwIIZ&new=1"
+    },
+    {
+      "postId": "80185399321ec147",
+      "title": "为什么说银行柜员一定要尽量转岗?",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304825&ver=7033&signature=W4hBCWc9KEvgTFiUhTCVfv4xf8HNcwMkc9d5Zr0IFYEhiEYzN*2s1B3ScWWX0FvoPLxfuEbZGfjq6Eg8xwHz00sCd-wlrKqTkeTnZQpP3nAzwvZ6H7hwylJTDvVYmDPl&new=1"
+    },
+    {
+      "postId": "eaeebc5f57a22702",
+      "title": "在河南的银行上班当柜员，真实工作经历如何？为什么会有员工辞职？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304855&ver=7033&signature=ntMbUmTdzprA7vh4eLxEI7w2Yw0N6htooi6xlx*uN4OvLy4AiuJgqJoABAKHn3N6qmq1nNIGHCBqti-U0dxkKzQMISVHSN1v1*rBSFo7kMH8TtRd4u*JdVU3qO4KaZcQ&new=1"
+    },
+    {
+      "postId": "0bb2354858a565d2",
+      "title": "北京农商行柜员真实体验",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304855&ver=7033&signature=whrKNkIRurc-PqRXHLo0FWDGQ8YlMxfJWGLKHdnr0Xs7hLaZ6fo8RvKNQMls4Go2LPv*qyUC-TMe9MWEgcz8eh7McCKkmPJMXZn7TwT0uTmPRg4R7ihn9ILj7l6YR1ua&new=1"
+    },
+    {
+      "postId": "1884d52ef8f8a453",
+      "title": "成都银行员工收入曝光+真实工作体验，网友：区域龙头，二流工资？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304855&ver=7033&signature=5yO9B1yxDbHubbXMw359BlGWQfqZ3np9fyvX1LNVQTDXNugoUR0vkobzpSIqQKhymY3brC9M3gRYSfJoPVVaZYBIudNQ6NllIWWAok46-nayHJGcUY7tdUA44D9Yw89C&new=1"
+    },
+    {
+      "postId": "81657b64b67608b4",
+      "title": "“好气哦，但还是要保持微笑”，银行柜员真实的一天",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304855&ver=7033&signature=3paJ4ml-2sfet31qymLhSuRoYKSLo42ufAXCjDZqVAh4X9N2Q6V5H1OBuLsNhFDLAqrQkKGoww0xyRy8QWTE55JAhHXLsRvxWeyljHMj2uMy9JoKTfc4lZqgm1OsRYz7&new=1"
+    },
+    {
+      "postId": "aa4849876e44beed",
+      "title": "银行柜员冲出柜台殴打客户的背后",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304855&ver=7033&signature=EWKrMgmR2N1L0NSVmZEbsu1tfb8o5RKNl4zLmNoizbW-BBWc*IxMf-xICsPa54tbBr2rjfDGvFmDfhl3RExmTeZHoRYhgNVdD0q3juylYJwSgMDt31-SCCNpQFKTU9F2&new=1"
+    },
+    {
+      "postId": "eef94301f0d5d491",
+      "title": "银行柜员哭诉：客户排队时间长，真的不怪我，这个锅我不背！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304855&ver=7033&signature=4ELEREAXSa1uWj0HPKarRWXkHJcVNqNLNp1NmwxIs30B4s2NfqxfY7MaBQb9BTWSFMgeXGNNmi7N8zS-s5r92NjHKnfh26K1JULmol8wyCipQ3ZsISZXqpUEGdL5XGIK&new=1"
+    },
+    {
+      "postId": "116866e5c18b5e5f",
+      "title": "自从我做了银行柜员，才知道了这5个真相！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304855&ver=7033&signature=Y5ehJ7zdgvslSSw-KE7wTOVkgrvmGh2FAqfXSrFrPDYNfCcWiaD4XZkoLETqCKS2LHGumtlXkM8nJmCrhTIk1FJhtWI-mEFLxkALsRrmmESJhDT8m*1U*WBY8cwsGaB5&new=1"
+    },
+    {
+      "postId": "83601bfbce19810f",
+      "title": "为什么有人说银行是份好工作？柜员的世外桃源真的存在",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304898&ver=7033&signature=83xbZ1anEMNLuYuwqqDu8G2RfdR3P-G3mnPVt04WlpOF1XUX2D6ady1VUJdqIGB3EmwUH2CDiB8Ewv6SRtM1JdygddrDao77MnZKLfS1pLppiqKWHb9TSdTgGy9sD8iV&new=1"
+    },
+    {
+      "postId": "48559b49237de6d9",
+      "title": "自从我做了银行柜员，才知道了这5个真相！",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304898&ver=7033&signature=Y5ehJ7zdgvslSSw-KE7wTOVkgrvmGh2FAqfXSrFrPDYNfCcWiaD4XZkoLETqCKS27N3355WKjmC*ZeLV*xV-frGvGi6ky9agvN9zlLof7gWqBen9H2azuyFPpU46wZ-o&new=1"
+    },
+    {
+      "postId": "d4751d569723fabc",
+      "title": "你真的了解银行柜员吗？",
+      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1792304898&ver=7033&signature=HX5yUQ*UQxzHnC4J54ND7-VnqMx*zx0x49Zb-Q4jxRwNB9u5YRwEZA*0wGFbwBLqBirpmtrKSwDRAsw4j1*3NG1tvzdrQBhaE9ckufyTogfYZDs89DIOw-h0ysVWfqAF&new=1"
+    }
+  ]
+}

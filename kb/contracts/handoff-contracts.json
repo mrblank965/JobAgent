@@ -1,0 +1,199 @@
+{
+  "$comment": "7 个 Agent 的交接契约。总控在每步之间用 validate.cjs 严格校验，格式不符退回重做，最多重试 2 次（orchestration.maxRetriesPerStage）。字段名与类型必须与各 Agent 脚本实际产出严格一致。除 plan 外，每个岗位的交付物都是 { <positionId>.md, <positionId>.json }，json 顶层含 posts / points 等聚合字段。",
+  "plan": {
+    "agent": "规划 Agent",
+    "input": "用户背景与覆盖范围",
+    "output": {
+      "type": "object",
+      "required": ["positions"],
+      "properties": {
+        "positions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "industry", "direction", "aliases", "keywords"],
+            "properties": {
+              "id": { "type": "string", "description": "岗位唯一标识，如 fin-bank-rm" },
+              "title": { "type": "string", "description": "岗位名" },
+              "industry": { "type": "string", "description": "行业：金融 / 互联网" },
+              "direction": { "type": "string", "description": "方向，如 银行 / 产品" },
+              "aliases": { "type": "array", "items": { "type": "string" }, "description": "JD 上该岗位的常见不同叫法" },
+              "keywords": { "type": "array", "items": { "type": "string" }, "minItems": 3, "description": "在小红书搜该岗位的常用关键词" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "collect": {
+    "agent": "采集 Agent",
+    "input": "检索词",
+    "output": {
+      "type": "object",
+      "required": ["positionId", "posts"],
+      "properties": {
+        "positionId": { "type": "string" },
+        "title": { "type": "string" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "termStats": { "type": "array" },
+        "posts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["postId", "positionId", "searchTerm", "url", "title", "text", "images", "author", "postedAt", "collectedAt"],
+            "properties": {
+              "postId": { "type": "string" },
+              "positionId": { "type": "string" },
+              "searchTerm": { "type": "string" },
+              "url": { "type": "string" },
+              "title": { "type": "string" },
+              "text": { "type": "string", "description": "帖子正文文字，可为空（纯图帖）" },
+              "images": { "type": "array", "items": { "type": "string" }, "description": "图片本地路径或 URL" },
+              "author": { "type": "string" },
+              "postedAt": { "type": "string" },
+              "collectedAt": { "type": "string" }
+            }
+          }
+        },
+        "skipped": { "type": "array", "description": "被跳过的记录（视频帖 / 抓取失败）" }
+      }
+    }
+  },
+  "parse": {
+    "agent": "解析 Agent",
+    "input": "原始帖子",
+    "output": {
+      "type": "object",
+      "required": ["positionId", "posts"],
+      "properties": {
+        "positionId": { "type": "string" },
+        "title": { "type": "string" },
+        "posts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["postId", "text", "channels"],
+            "properties": {
+              "postId": { "type": "string" },
+              "positionId": { "type": "string" },
+              "searchTerm": { "type": "string" },
+              "url": { "type": "string" },
+              "title": { "type": "string" },
+              "author": { "type": "string" },
+              "postedAt": { "type": "string" },
+              "imageCount": { "type": "number" },
+              "text": { "type": "string", "description": "合并后的纯文本" },
+              "channels": { "type": "array", "items": { "type": "string" }, "description": "实际用到的解析通道（text / ocr）" },
+              "ocrPages": { "type": "array" },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "clean": {
+    "agent": "清洗 Agent",
+    "input": "纯文本",
+    "output": {
+      "type": "object",
+      "required": ["positionId", "posts"],
+      "properties": {
+        "positionId": { "type": "string" },
+        "title": { "type": "string" },
+        "posts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["postId", "keep", "quality", "reason", "cleanText"],
+            "properties": {
+              "postId": { "type": "string" },
+              "keep": { "type": "boolean" },
+              "quality": { "type": "number", "minimum": 0, "maximum": 100 },
+              "reason": { "type": "string" },
+              "cleanText": { "type": "string" },
+              "flags": { "type": "array", "items": { "type": "string" } },
+              "url": { "type": "string" },
+              "title": { "type": "string" },
+              "positionId": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "structure": {
+    "agent": "结构化 Agent",
+    "input": "清洗后文本",
+    "output": {
+      "type": "object",
+      "required": ["positionId", "positionName", "coreDuties", "workflow", "tools", "typicalDay", "pitfalls", "sources"],
+      "properties": {
+        "positionId": { "type": "string" },
+        "positionName": { "type": "string" },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "coreDuties": { "type": "array", "items": { "type": "string" } },
+        "workflow": { "type": "array", "items": { "type": "string" } },
+        "tools": { "type": "array", "items": { "type": "string" } },
+        "typicalDay": { "type": "string" },
+        "pitfalls": { "type": "array", "items": { "type": "string" } },
+        "sources": { "type": "array", "items": { "type": "object" }, "description": "来源帖子列表，供质检与溯源" }
+      }
+    }
+  },
+  "index": {
+    "agent": "入库 Agent",
+    "input": "结构化知识点",
+    "output": {
+      "type": "object",
+      "required": ["status", "positionId", "positionName", "points", "sources"],
+      "properties": {
+        "status": { "type": "string", "enum": ["indexed", "skipped", "failed"] },
+        "positionId": { "type": "string" },
+        "positionName": { "type": "string" },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "vectorStore": { "type": "string", "description": "当前为 keyword-inverted" },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["kpId", "category", "text"],
+            "properties": {
+              "kpId": { "type": "string" },
+              "category": { "type": "string" },
+              "text": { "type": "string" }
+            }
+          }
+        },
+        "sources": { "type": "array", "items": { "type": "object" } }
+      }
+    }
+  },
+  "qa": {
+    "agent": "质检 Agent",
+    "input": "{原文, 结构化结果}",
+    "output": {
+      "type": "object",
+      "required": ["positionId", "faithful", "issues"],
+      "properties": {
+        "positionId": { "type": "string" },
+        "sampledKpIds": { "type": "array", "items": { "type": "string" } },
+        "totalPoints": { "type": "number" },
+        "faithful": { "type": "boolean" },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["kpId", "problem"],
+            "properties": {
+              "kpId": { "type": "string" },
+              "category": { "type": "string" },
+              "problem": { "type": "string" },
+              "severity": { "type": "string", "enum": ["严重", "中等", "轻微"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

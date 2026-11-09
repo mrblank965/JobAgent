@@ -441,7 +441,7 @@ const TITLE_DATE_PREFIX = /^(?:19|20)[0-9]{2}\s*[.\-年/／]/;
  * 正文事项里出现完整日期区间的概率很低，所以用这个规则误判很少。
  */
 const DATE_RANGE =
-  /(?:19|20)[0-9]{2}\s*[.\-/年]?\s*(?:[0-9]{1,2}\s*月?)?\s*[—–~～\-至到]\s*(?:19|20)[0-9]{2}/;
+  /(?:19|20)[0-9]{2}\s*[.\-/年]?\s*(?:[0-9]{1,2}\s*月?)?\s*[—–~～\-至到]\s*(?:19|20)[0-9]{2}\s*(?:[.\-/年]\s*[0-9]{1,2}\s*月?)?/;
 
 /**
  * 行尾日期，例如 "… 2024.05"、"… 2026.03-2026.07"。
@@ -494,8 +494,13 @@ const MAX_ENTRY_TITLE_LENGTH = 40;
 /** 解析过程中的中间形态。标题还没拆成名称、岗位和时间。 */
 type RawEntry = { title: string; bullets: string[] };
 
-/** 从一段文字里逐个找出年月，用于把时间区间拆成起止月份。 */
-const PERIOD_TOKEN = /(?:19|20)[0-9]{2}(?:\s*[.\-/年]\s*([0-9]{1,2}))?/g;
+/**
+ * 从一段文字里逐个找出年月，用于把时间区间拆成起止月份。
+ *
+ * 末尾的负向断言防止把区间写法吃错：`2024-2025` 里的 20 不是月份，
+ * 只有连字符后面不再是数字时才算月份。
+ */
+const PERIOD_TOKEN = /(?:19|20)[0-9]{2}(?:\s*[.\-/年]\s*([0-9]{1,2})(?![0-9]))?/g;
 
 /**
  * 归一化文字。
@@ -575,7 +580,7 @@ export function parseResumeText(rawText: string): ResumeData {
     ),
     experiences: parseEntries(buckets.experiences, false),
     projects: parseEntries(buckets.projects, true),
-    skills: collectSkills(buckets.skills, rawText),
+    skills: collectSkills(buckets.skills, buckets.experiences, rawText),
     strengths: unique(buckets.strengths.map(stripPrefix).filter((entry) => entry.length > 0)),
   };
 }
@@ -868,7 +873,8 @@ function buildEducationEntry(lines: string[]): EducationEntry {
     rest = `${title.slice(0, matched.index)} ${title.slice(matched.index + period.length)}`;
   }
 
-  const cleaned = rest.replace(/\s+/g, " ").trim();
+  // GPA、排名这类学业表现要先摘掉，否则"GPA 3.8"里的 3.8 会被当成专业。
+  const cleaned = stripPerformance(rest).replace(/\s+/g, " ").trim();
   const { degree, rest: withoutDegree } = extractDegree(cleaned);
   const { school, college, major } = splitEducation(withoutDegree);
   const { start, end } = parsePeriod(period);
@@ -1008,6 +1014,14 @@ function stripHonorLabel(text: string): string {
   const isSectionName = SECTION_KEYWORDS.honors.some((word) => word.toLowerCase() === label);
 
   return isSectionName ? text.slice(matched[0].length).trim() : text;
+}
+
+/**
+ * 把学业表现从教育标题里摘掉，只留学校、学院、专业、学历。
+ * 判断依据和 extractPerformance 一致，抽出来的内容仍然由 extractPerformance 写进 performance 字段。
+ */
+function stripPerformance(text: string): string {
+  return text.replace(PERFORMANCE_PATTERN, " ");
 }
 
 /** 从教育段落的文字里抽 GPA、排名这类学业表现。 */
@@ -1230,15 +1244,31 @@ function isPlausibleName(value: string): boolean {
  *
  * 第三步会跳过已经被前两步覆盖的词，所以有了"熟练使用 Wind 数据库"就不会再单独加一个"Wind"。
  */
-function collectSkills(skillLines: string[], rawText: string): string[] {
+function collectSkills(skillLines: string[], experienceLines: string[], rawText: string): string[] {
   const merged = [...parseSkills(skillLines), ...collectSkillPhrases(rawText)];
 
-  const bareTerms = collectDictionaryHits(rawText).filter(
+  const sectionText = parseSkills(skillLines).join("\n");
+  const experienceText = experienceLines.map(stripPrefix).join("\n");
+
+  // 技能段落里的词全部算；经历里只补工具和方法类，
+  // 「尽职调查」「底稿」这种是做了什么，不是会什么。
+  const fromSection = collectDictionaryHits(sectionText);
+  const fromExperience = collectDictionaryHits(experienceText).filter(
+    (term) => !PRACTICE_NOUNS.has(term) && !fromSection.includes(term),
+  );
+
+  const bareTerms = [...fromSection, ...fromExperience].filter(
     (term) => !merged.some((item) => item.toLowerCase().includes(term.toLowerCase())),
   );
 
   return unique([...merged, ...bareTerms]);
 }
+
+/**
+ * 这些词出现在经历里时描述的是「做了什么」，不是「会什么」。
+ * 只有写在技能段落里才算技能。
+ */
+const PRACTICE_NOUNS = new Set(["尽职调查", "财务尽调", "招股书", "底稿", "行业研究", "公司研究"]);
 
 /** 从全文里抽"熟练使用 Wind 数据库"这类完整表述，只保留确实含词典词的句子。 */
 function collectSkillPhrases(rawText: string): string[] {

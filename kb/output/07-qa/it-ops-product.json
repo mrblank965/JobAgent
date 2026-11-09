@@ -1,0 +1,14 @@
+{
+  "positionId": "it-ops-product",
+  "sampledKpIds": [
+    "it-ops-product-kp-005",
+    "it-ops-product-kp-056",
+    "it-ops-product-kp-026",
+    "it-ops-product-kp-047",
+    "it-ops-product-kp-001",
+    "it-ops-product-kp-054"
+  ],
+  "totalPoints": 59,
+  "faithful": true,
+  "issues": []
+}

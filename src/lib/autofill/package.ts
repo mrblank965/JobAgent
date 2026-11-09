@@ -43,6 +43,9 @@ export function buildAutofillPackage({
       name: profile.name,
       email: profile.email,
       phone: profile.phone,
+      gender: profile.gender,
+      birth: profile.birth,
+      political: profile.political,
       location: profile.location,
       school: profile.school,
       major: profile.major,
@@ -94,6 +97,9 @@ export function isAutofillPackageV1(value: unknown): value is AutofillPackageV1 
     isString(item.profile.name) &&
     isString(item.profile.email) &&
     isString(item.profile.phone) &&
+    (item.profile.gender === undefined || isString(item.profile.gender)) &&
+    (item.profile.birth === undefined || isString(item.profile.birth)) &&
+    (item.profile.political === undefined || isString(item.profile.political)) &&
     isString(item.profile.location) &&
     isString(item.profile.school) &&
     isString(item.profile.major) &&

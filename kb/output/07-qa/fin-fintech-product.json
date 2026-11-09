@@ -1,0 +1,14 @@
+{
+  "positionId": "fin-fintech-product",
+  "sampledKpIds": [
+    "fin-fintech-product-kp-049",
+    "fin-fintech-product-kp-001",
+    "fin-fintech-product-kp-006",
+    "fin-fintech-product-kp-043",
+    "fin-fintech-product-kp-036",
+    "fin-fintech-product-kp-021"
+  ],
+  "totalPoints": 55,
+  "faithful": true,
+  "issues": []
+}

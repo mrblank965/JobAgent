@@ -1,0 +1,17 @@
+{
+  "positionId": "fin-pe-investment-manager",
+  "sampledKpIds": [
+    "fin-pe-investment-manager-kp-042",
+    "fin-pe-investment-manager-kp-005",
+    "fin-pe-investment-manager-kp-010",
+    "fin-pe-investment-manager-kp-072",
+    "fin-pe-investment-manager-kp-070",
+    "fin-pe-investment-manager-kp-034",
+    "fin-pe-investment-manager-kp-023",
+    "fin-pe-investment-manager-kp-041",
+    "fin-pe-investment-manager-kp-084"
+  ],
+  "totalPoints": 87,
+  "faithful": true,
+  "issues": []
+}

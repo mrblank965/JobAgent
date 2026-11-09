@@ -1,0 +1,15 @@
+{
+  "positionId": "it-risk",
+  "sampledKpIds": [
+    "it-risk-kp-040",
+    "it-risk-kp-011",
+    "it-risk-kp-036",
+    "it-risk-kp-014",
+    "it-risk-kp-001",
+    "it-risk-kp-002",
+    "it-risk-kp-032"
+  ],
+  "totalPoints": 71,
+  "faithful": true,
+  "issues": []
+}

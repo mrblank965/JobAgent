@@ -70,6 +70,7 @@
   --mono: "SF Mono", Menlo, "JetBrains Mono", Consolas, monospace;
 }
 
+
 @theme inline {
   --color-page: var(--page-bg);
   --color-surface: var(--surface-card);
