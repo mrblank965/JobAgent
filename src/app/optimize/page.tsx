@@ -10,7 +10,7 @@ import { ExtraExperienceCard } from "@/components/optimize/ExtraExperienceCard";
 import { RewritePlanner } from "@/components/optimize/RewritePlanner";
 import { StyleControls } from "@/components/optimize/StyleControls";
 import { useTransientState } from "@/components/optimize/useTransientState";
-import { buildResumeDocx, estimateDocxLines, pickDocxDensity } from "@/lib/optimizeDocx";
+import { buildResumeDocx, estimateDocxLines } from "@/lib/optimizeDocx";
 import { buildResumeTemplate, stripHints } from "@/lib/resumeTemplate";
 import {
   DEFAULT_STYLE_SETTINGS,
@@ -47,8 +47,6 @@ function OptimizePageContent() {
   const [exporting, setExporting] = useState(false);
   /** 导出时要不要把灰色提示清掉。默认保留——模板本来就是拿去改的。 */
   const [cleanExport, setCleanExport] = useState(false);
-  /** 超出 A4 一页时自动收紧行距和字号。默认开，避免导出两三页。 */
-  const [autoFit, setAutoFit] = useState(true);
   /**
    * 刚保存出来的简历版本，记下它属于哪份 JD。
    * 换一份 JD 后这里自动失效，不需要用 effect 去清空状态。
@@ -135,7 +133,7 @@ function OptimizePageContent() {
   const mergedStyle = styleInput ? resolveStyle(styleInput) : undefined;
 
   /**
-   * 把草稿套进 A4 模板骨架。
+   * 把草稿套进简历模板骨架。
    *
    * 只在导出时做，不改动你在上方编辑的草稿：
    * 已有的板块原样搬过去、按规格顺序重排，缺的板块在 Word 上补灰色提示。
@@ -190,24 +188,17 @@ function OptimizePageContent() {
 
     try {
       const template = toTemplateText();
-      const density = autoFit ? pickDocxDensity(template) : "strict";
-      const blob = await buildResumeDocx(template, { stripHints: cleanExport, density });
+      const blob = await buildResumeDocx(template, { stripHints: cleanExport });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
       link.download = `简历_${profile.name || "未命名"}.docx`;
       link.click();
       URL.revokeObjectURL(url);
-      const densityText =
-        density === "strict"
-          ? ""
-          : density === "compact"
-            ? "内容超出一页，已自动改用紧凑排版（字号 10 磅 / 行距 13 磅）。"
-            : "内容超出一页，已自动改用最紧排版（字号 9.5 磅 / 行距 12 磅）。";
       setNotice(
         cleanExport
-          ? `已导出 Word，提示已清掉。${densityText}`
-          : `已导出 Word，缺的地方在文档里用黑色斜体标着。${densityText}`,
+          ? "已导出 Word，提示已清掉。"
+          : "已导出 Word，缺的地方在文档里用黑色斜体标着。",
       );
     } catch (error) {
       setNotice(error instanceof Error ? error.message : "导出失败。");
@@ -403,33 +394,23 @@ function OptimizePageContent() {
           <span className="tiny">{draft.trim().length} 字</span>
         </div>
         <p className="tiny">
-          <b>导出 Word</b> 按固定版式排：A4 纸、西文 Times New Roman / 中文宋体、固定行距 14 磅，
-          四边边距 1.76 cm，一级标题带下框线、经历行用制表位对齐。只排你草稿里写过的板块，不会凭空补段落，草稿本身不会被改动。
+          <b>导出 Word</b> 按需求单的固定版式排：Letter 纸（8.5 × 11 英寸），上 0.5 cm、下 0.4 cm、左右 1.27 cm，
+          西文 Times New Roman / 中文楷体，正文固定行距 16 磅，一级标题带 0.5 磅下框线，经历行用 11.3 cm 和 18.4 cm 制表位对齐。
+          版式不随内容缩放。只排你草稿里写过的板块，不会凭空补段落，草稿本身不会被改动。
         </p>
         <p className="tiny">
           <b>导出 txt</b> 导的是「简历草稿」框里的原样内容，不套版式。
         </p>
 
         <div className="tiny mt8">
-          标准版式下：预计 <b>{pageEstimate.lines}</b> 行，一页上限 <b>{pageEstimate.capacity}</b> 行
-          {pageEstimate.fits ? (
-            "，放得下。"
-          ) : (
-            <span className="warn-text">，超出 {pageEstimate.lines - pageEstimate.capacity} 行。</span>
-          )}
+          按版式估算正文 <b>{pageEstimate.lines}</b> 行，一页按 <b>{pageEstimate.capacity}</b> 行留余量。
+          估算对中文折行偏保守，一页以内以导出后的 Word 页数为准。
         </div>
 
-        <label className="mt8" style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer" }}>
-          <input
-            type="checkbox"
-            checked={autoFit}
-            onChange={(event) => setAutoFit(event.target.checked)}
-          />
-          <span className="tiny">
-            <b>超出时自动压缩到一页</b>。先按标准版式排；放不下再依次收紧到 10 磅 / 13 磅，再不行 9.5 磅 / 12 磅。
-            <b>内容一个字都不删。</b>
-          </span>
-        </label>
+        <div className="tiny mt8">
+          版式是需求单定死的，不会为了凑一页改字号或行距。超出上限就删内容：
+          每条经历留 1–3 个要点，先删重复和没数字的句子。
+        </div>
 
         <label className="mt8" style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer" }}>
           <input

@@ -4,47 +4,46 @@ import { hasHints, stripHints, tokenizeHints } from "@/lib/resumeTemplate";
 /**
  * 把简历正文排成一份 Word 文档。
  *
- * 版式：
- * - A4 纸（11906 × 16838 twip），四边边距 1000 twip ≈ 1.76 cm
- * - 西文与数字 Times New Roman，中文宋体，全文黑色
- * - 固定行距、段前段后 0（姓名行、联系方式行例外）
- * - 姓名加粗居中；联系方式居中；一级标题加粗 + 下框线 0.5 磅 #666666
- * - 条目标题行用制表位做「左 / 中 / 右」三段对齐，不用空格凑
- * - 要点行以「• 」开头，悬挂缩进，小标题加粗
+ * 版式按课程需求单逐条执行，不自行加码。换算关系：1 磅 = 20 twip，1 cm ≈ 567 twip。
+ * - Letter 纸（12240 × 15840 twip），上 0.5 cm、下 0.4 cm、左右 1.27 cm
+ * - 西文与数字 Times New Roman，中文楷体，全文黑色
+ * - 正文固定行距 16 磅，段前段后 0（姓名行、联系方式行按需求单另设）
+ * - 姓名 16 磅加粗居中，行距 20 磅、段前后 9 磅
+ * - 联系方式 11 磅居中，行距 16 磅、段前后 9 磅
+ * - 一级标题 12 磅加粗左对齐，下框线 0.5 磅 #666666、距文字 1 磅
+ * - 条目行 10.5 磅整行加粗，制表位 11.3 cm 居中、18.4 cm 右对齐
+ * - 教育条目多一列学历，用到 11.3 cm 居中、15.2 cm 居中、18.4 cm 右端三个位置
+ * - 要点行 10.5 磅，左缩进和悬挂缩进都是 0.38 cm，两端对齐
  *
- * 一页装不下时有三档密度（见 LAYOUTS）：
- * strict 是需求单上的原始参数，compact / tight 只收紧字号和行距，
- * 不删任何内容。选哪一档由页面上的「自动压缩到一页」决定。
+ * 需求单写明「所有规格均须精确执行，不得自行改动」，所以这里不再做超页自动缩字号。
+ * 一页装不下时由 estimateDocxLines 报出超出几行，删内容而不是改版式。
  *
- * 几条实现上的取舍：
- * 1. 模板提示（〔〕里的字）原来是灰色，需求要求「全文不使用任何彩色文字」，
- *    改成黑色斜体——仍然能和正文区分，但不违反黑白要求。
- * 2. 教育条目原本拆成「学校 / 院系｜专业 / 起止 / 学历」四段，四列挤在一行
- *    不好看，现在把学历并进中间那段，写法是「商学院 · 经济学硕士」。
- * 3. 能否压进一页靠 estimateDocxLines 估算，不是真的排版渲染，
- *    估算时按 88% 折行、再留 4% 高度余量，宁可提前收紧也不让它溢出到第二页。
+ * 模板提示（〔〕里的字）仍然用黑色斜体，能和正文区分，也不违反「全文黑色」。
  */
 
-/** A4 尺寸，单位 twip（1 磅 = 20 twip）：210 × 297 mm。 */
-const PAGE_WIDTH = 11906;
-const PAGE_HEIGHT = 16838;
+/** Letter 尺寸，单位 twip：8.5 × 11 英寸。 */
+const PAGE_WIDTH = 12240;
+const PAGE_HEIGHT = 15840;
 
-/** 页边距四边都是 1000 twip ≈ 1.76 cm。 */
-const MARGIN_TOP = 1000;
-const MARGIN_BOTTOM = 1000;
-const MARGIN_SIDE = 1000;
+/** 页边距：上 0.5 cm、下 0.4 cm、左右 1.27 cm。 */
+const MARGIN_TOP = 283;
+const MARGIN_BOTTOM = 227;
+const MARGIN_SIDE = 720;
 
 /** 正文可用高度与宽度（宽度单位：磅）。 */
 const AVAILABLE_HEIGHT = PAGE_HEIGHT - MARGIN_TOP - MARGIN_BOTTOM;
 const TEXT_WIDTH_PT = (PAGE_WIDTH - MARGIN_SIDE * 2) / 20;
 
+/** 厘米换算成 twip，制表位用。 */
+const cm = (value: number) => Math.round((value / 2.54) * 1440);
+
 /**
  * 折行安全系数。
  *
- * Word 会在标点和西文单词处断行，实际每行装的字比"理论最大字数"少一两成。
- * 按 0.88 折算，宁可估多了提前压缩，也不要估少了导出成两页。
+ * 中文字符宽度按字号算，中文标点按 0.6 算（Word 有标点挤压），这样一行能放多少字
+ * 和实测基本对得上。宽度不再打折，高度还留 4% 余量，给标点调整留位置。
  */
-const WRAP_SAFETY = 0.88;
+const WRAP_SAFETY = 1;
 
 /**
  * 估算结果再留 4% 余量。
@@ -59,38 +58,44 @@ const FIT_MARGIN = 0.96;
 const GAP_NAME = 180;
 
 /**
- * 制表位，单位 twip。正文宽度 11906-2000=9906，所以右端停在 9906。
- * 中间那条放在 6200，比正中偏右一点，留给左边的公司名。
+ * 制表位，单位 twip。需求单指定中间 11.3 cm 居中、右端 18.4 cm 右对齐。
+ * 教育条目多一列学历，在 15.2 cm 处再加一个居中位。
  */
 const ENTRY_TABS = [
-  { type: "center" as const, position: 6200 },
-  { type: "right" as const, position: 9906 },
+  { type: "center" as const, position: cm(11.3) },
+  { type: "right" as const, position: cm(18.4) },
 ];
 
-/** 要点行的悬挂缩进：0.38 cm ≈ 215 twip。 */
+const EDUCATION_TABS = [
+  { type: "center" as const, position: cm(11.3) },
+  { type: "center" as const, position: cm(15.2) },
+  { type: "right" as const, position: cm(18.4) },
+];
+
+/** 要点行的左缩进和悬挂缩进：0.38 cm ≈ 215 twip。 */
 const BULLET_INDENT = 215;
 
-/** 中文用宋体，西文和数字用 Times New Roman（eastAsia 必须单列，否则中文会被西文字体渲染）。 */
-const FONT = { ascii: "Times New Roman", hAnsi: "Times New Roman", eastAsia: "宋体" };
+/** 中文用楷体，西文和数字用 Times New Roman（eastAsia 必须单列，否则中文会被西文字体渲染）。 */
+const FONT = { ascii: "Times New Roman", hAnsi: "Times New Roman", eastAsia: "楷体" };
 
 /** 可选板块的标题尾巴，例如「校园经历（可选择）」。 */
 const OPTIONAL_TITLE = /[（(]\s*可选择?\s*[）)]$/;
 
 const PROSE_SECTIONS = ["个人优势", "自我评价", "个人总结"];
 
-export type DocxDensity = "strict" | "compact" | "tight";
+export type DocxDensity = "strict";
 
 /**
- * 三档密度。字号单位半磅，行距单位 twip。
- * strict 就是需求单上的原始参数，另外两档只在超页时启用。
+ * 需求单上的原始参数，只有这一档。字号单位半磅，行距单位 twip。
+ *
+ * body/entry 21 = 10.5 磅，heading 24 = 12 磅，name 32 = 16 磅，contact 22 = 11 磅。
+ * line 320 = 固定行距 16 磅，nameLine 400 = 20 磅。
  */
 export const LAYOUTS: Record<
   DocxDensity,
   { body: number; entry: number; heading: number; name: number; contact: number; line: number; nameLine: number }
 > = {
-  strict: { body: 21, entry: 21, heading: 24, name: 32, contact: 21, line: 280, nameLine: 400 },
-  compact: { body: 20, entry: 20, heading: 23, name: 30, contact: 20, line: 262, nameLine: 380 },
-  tight: { body: 19, entry: 19, heading: 21, name: 28, contact: 19, line: 244, nameLine: 340 },
+  strict: { body: 21, entry: 21, heading: 24, name: 32, contact: 22, line: 320, nameLine: 400 },
 };
 
 const DATE_TOKEN = "\\d{4}\\s*(?:[.\\-/年]\\s*\\d{1,2})?";
@@ -180,11 +185,12 @@ export function parseResumeText(text: string): { name: string; contact: string; 
   return { name, contact: contactLines.join("｜"), blocks };
 }
 
-/** 估算一行文字占多宽（磅）。中文按一个字宽，西文按 0.55。 */
+/** 估算一行文字占多宽（磅）。中文按一个字宽，西文按 0.55，中文标点按 0.6（Word 会做标点挤压）。 */
 function textWidthPt(value: string, sizePt: number): number {
   let width = 0;
   for (const char of value) {
-    width += /[⺀-鿿　-〿＀-￯]/.test(char) ? sizePt : sizePt * 0.55;
+    if (/[，。、；：！？（）《》【】「」『』]/.test(char)) width += sizePt * 0.6;
+    else width += /[⺀-鿿　-〿＀-￯]/.test(char) ? sizePt : sizePt * 0.55;
   }
   return width;
 }
@@ -193,7 +199,7 @@ function textWidthPt(value: string, sizePt: number): number {
  * 估算这份草稿排出来要多少行、一页能放多少行。
  *
  * 不是真的渲染排版，是按字数折算折行，准确度到"±2 行"这个量级，
- * 够用来判断要不要切到紧凑档。
+ * 够用来判断这一页还装不装得下。
  */
 export function estimateDocxLines(
   text: string,
@@ -251,14 +257,6 @@ export function estimateDocxLines(
   const capacity = Math.floor(usable / layout.line);
   const lines = Math.ceil(height / layout.line);
   return { lines, capacity, fits: height <= usable };
-}
-
-/** 从 strict 开始逐档收紧，返回第一个装得下的档位；都装不下就用最紧的。 */
-export function pickDocxDensity(text: string): DocxDensity {
-  for (const density of ["strict", "compact", "tight"] as DocxDensity[]) {
-    if (estimateDocxLines(text, density).fits) return density;
-  }
-  return "tight";
 }
 
 /**
@@ -356,25 +354,32 @@ export async function buildResumeDocx(
       const parts = hasMarker || isProseBlock ? null : splitEntryParts(content);
 
       if (parts) {
-        // 教育条目原来把「学历」单独塞到最右一列，四段挤在一行很别扭，
-        // 现在并进中间那一段，写成「商学院 · 经济学硕士」。
-        const middleText = isEducation && parts.extra
-          ? [parts.middle, parts.extra].filter(Boolean).join(" · ")
-          : parts.middle;
+        const boldRun = (value: string) =>
+          new TextRun({ text: value, bold: true, size: layout.entry, font: FONT });
 
-        const entryRuns: InstanceType<typeof TextRun>[] = [
-          new TextRun({ text: parts.left, bold: true, size: layout.entry, font: FONT }),
-        ];
-        if (middleText) {
-          entryRuns.push(tab(), new TextRun({ text: middleText, bold: true, size: layout.entry, font: FONT }));
+        /** 教育条目按需求单排四列：学校 / 院系｜专业 / 起止 / 学历。 */
+        let middleText = parts.middle;
+        let degree = parts.extra;
+        if (isEducation && !degree) {
+          // 草稿写成「商学院｜应用经济学硕士」时，把学历拆出来单独占最后一列。
+          const matched = /^(.*?)(本科|硕士|博士|研究生|专科)$/.exec(middleText);
+          if (matched && matched[1].trim()) {
+            middleText = matched[1].trim();
+            degree = matched[2];
+          }
         }
-        entryRuns.push(tab(), new TextRun({ text: parts.date, bold: true, size: layout.entry, font: FONT }));
+
+        const entryRuns: InstanceType<typeof TextRun>[] = [boldRun(parts.left)];
+        if (middleText) entryRuns.push(tab(), boldRun(middleText));
+        entryRuns.push(tab(), boldRun(parts.date));
+        if (isEducation && degree) entryRuns.push(tab(), boldRun(degree));
 
         children.push(
           new Paragraph({
             spacing: { line: layout.line, lineRule: LineRuleType.EXACT, before: 0, after: 0 },
             widowControl: false,
-            tabStops: ENTRY_TABS.map((item) => ({
+            /** 没有学历那一列时退回三段式，日期仍然停在 18.4 cm 右端。 */
+            tabStops: (isEducation && degree ? EDUCATION_TABS : ENTRY_TABS).map((item) => ({
               type: item.type === "center" ? TabStopType.CENTER : TabStopType.RIGHT,
               position: item.position,
             })),

@@ -192,7 +192,9 @@ function buildHead(profile: TemplateProfile, existing: string[]): string {
 const SECTION_GROUPS: { title: string; keys: string[] }[] = [
   { title: "教育背景", keys: ["教育背景", "教育经历", "学历背景"] },
   { title: "实习经历", keys: ["实习经历", "工作经历", "实习与工作经历"] },
-  { title: "项目经历", keys: ["项目经历", "项目经验", "科研经历", "研究经历"] },
+  // 需求单的顺序是教育 → 实习 → 科研竞赛，所以科研类排在项目经历之前。
+  { title: "科研竞赛", keys: ["科研竞赛", "科研经历", "研究经历", "竞赛经历", "学术科研", "科研与竞赛"] },
+  { title: "项目经历", keys: ["项目经历", "项目经验"] },
   { title: "校园经历", keys: ["校园经历", "社团经历", "学生工作", "实践经历"] },
   { title: "专业技能", keys: ["专业技能", "技能特长", "技能"] },
 ];
@@ -241,7 +243,7 @@ export function buildResumeTemplate(input: TemplateInput): string {
       (group.title === "实习经历" || group.title === "项目经历") &&
       countBullets(existing.lines) < 2
     ) {
-      parts.push(`${HINT}这个板块看起来只有一条要点。每段经历写 2–5 条，一行一条，写清行动、方法、结果。`);
+      parts.push(`${HINT}这个板块看起来只有一条要点。每段经历写 2–3 条，一行一条，写清行动、方法、结果。`);
     }
   }
 
