@@ -14,14 +14,26 @@ export function ResumeUpload({ fileName, onSelect, disabled }: ResumeUploadProps
   return (
     <label
       className="btn"
-      style={{ cursor: disabled ? "not-allowed" : "pointer", opacity: disabled ? 0.45 : 1 }}
+      style={{
+        cursor: disabled ? "not-allowed" : "pointer",
+        opacity: disabled ? 0.45 : 1,
+        position: "relative",
+        overflow: "hidden",
+      }}
     >
       📄 上传 PDF / DOCX 提取
       <input
         type="file"
         accept=".pdf,.docx"
-        className="sr-only"
         disabled={disabled}
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          opacity: 0,
+          cursor: disabled ? "not-allowed" : "pointer",
+        }}
         onChange={(event) => {
           const file = event.target.files?.[0];
           event.target.value = "";

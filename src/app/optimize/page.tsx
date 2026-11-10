@@ -47,7 +47,7 @@ function OptimizePageContent() {
   const [exporting, setExporting] = useState(false);
   /** 导出时要不要把灰色提示清掉。默认保留——模板本来就是拿去改的。 */
   const [cleanExport, setCleanExport] = useState(false);
-  /** 超出 Letter 一页时自动收紧行距和字号。默认开，避免导出两三页。 */
+  /** 超出 A4 一页时自动收紧行距和字号。默认开，避免导出两三页。 */
   const [autoFit, setAutoFit] = useState(true);
   /**
    * 刚保存出来的简历版本，记下它属于哪份 JD。
@@ -202,8 +202,8 @@ function OptimizePageContent() {
         density === "strict"
           ? ""
           : density === "compact"
-            ? "内容超出一页，已自动改用紧凑排版（字号 10 磅 / 行距 14.5 磅）。"
-            : "内容超出一页，已自动改用最紧排版（字号 9.5 磅 / 行距 13 磅）。";
+            ? "内容超出一页，已自动改用紧凑排版（字号 10 磅 / 行距 13 磅）。"
+            : "内容超出一页，已自动改用最紧排版（字号 9.5 磅 / 行距 12 磅）。";
       setNotice(
         cleanExport
           ? `已导出 Word，提示已清掉。${densityText}`
@@ -403,8 +403,8 @@ function OptimizePageContent() {
           <span className="tiny">{draft.trim().length} 字</span>
         </div>
         <p className="tiny">
-          <b>导出 Word</b> 按固定版式排：Letter 纸、西文 Times New Roman / 中文楷体、固定行距 16 磅，
-          一级标题带下框线、经历行用制表位对齐。只排你草稿里写过的板块，不会凭空补段落，草稿本身不会被改动。
+          <b>导出 Word</b> 按固定版式排：A4 纸、西文 Times New Roman / 中文宋体、固定行距 14 磅，
+          四边边距 1.76 cm，一级标题带下框线、经历行用制表位对齐。只排你草稿里写过的板块，不会凭空补段落，草稿本身不会被改动。
         </p>
         <p className="tiny">
           <b>导出 txt</b> 导的是「简历草稿」框里的原样内容，不套版式。
@@ -426,7 +426,7 @@ function OptimizePageContent() {
             onChange={(event) => setAutoFit(event.target.checked)}
           />
           <span className="tiny">
-            <b>超出时自动压缩到一页</b>。先按标准版式排；放不下再依次收紧到 10 磅 / 14.5 磅，再不行 9.5 磅 / 13 磅。
+            <b>超出时自动压缩到一页</b>。先按标准版式排；放不下再依次收紧到 10 磅 / 13 磅，再不行 9.5 磅 / 12 磅。
             <b>内容一个字都不删。</b>
           </span>
         </label>

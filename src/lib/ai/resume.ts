@@ -18,6 +18,14 @@ import type { AISettings } from "@/lib/store";
 /** 系统提示词。要求只输出严格 JSON，避免模型加解释或代码块。 */
 const SYSTEM_PROMPT = "你是资深求职辅导与金融招聘专家。只输出严格 JSON，不要输出 markdown 代码块或任何解释。";
 
+/**
+ * 服务器内置模型的哨兵值。
+ *
+ * 前端不认识真实 Key，只认这个标记；请求发到同源 /api/chat，
+ * 由 deployment/app.py 从环境变量里取 Key 再转发。
+ */
+export const SERVER_AI_KEY = "__server_ai__";
+
 /** 简历解析的 Prompt。要求返回的结构和本项目的 ResumeData 一致。 */
 export function buildResumePrompt(raw: string): string {
   return `请把下面这份简历整理成严格 JSON，字段如下：
@@ -82,23 +90,33 @@ export function stripCodeFence(text: string): string {
 }
 
 /**
- * 直连调用。只有填了 apiKey 才会走到这里。
+ * 调用模型并解析 JSON。
+ *
+ * 两种通路：填了真实 Key 就直连用户配置的 OpenAI 兼容接口；
+ * 页面拿到服务器内置模型时，settings.apiKey 是哨兵值，请求改走同源 /api/chat，
+ * 真实 Key 只存在服务器环境变量里。
  * 失败时把原始错误抛出去，由界面提示可以改用零 Key 模式。
  */
-export async function callChatJSON(settings: AISettings, prompt: string): Promise<unknown> {
+export async function callChatJSON(
+  settings: AISettings,
+  prompt: string,
+  system = SYSTEM_PROMPT,
+): Promise<unknown> {
+  const useServer = settings.apiKey === SERVER_AI_KEY;
   const base = (settings.apiBase || "https://api.deepseek.com/v1").replace(/\/+$/, "");
+  const url = useServer ? "/api/chat" : `${base}/chat/completions`;
 
-  const response = await fetch(`${base}/chat/completions`, {
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  if (!useServer) headers.Authorization = `Bearer ${settings.apiKey}`;
+
+  const response = await fetch(url, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${settings.apiKey}`,
-    },
+    headers,
     body: JSON.stringify({
       model: settings.model || "deepseek-chat",
       temperature: 0.2,
       messages: [
-        { role: "system", content: SYSTEM_PROMPT },
+        { role: "system", content: system },
         { role: "user", content: prompt },
       ],
     }),

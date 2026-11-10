@@ -37,9 +37,8 @@ export default function MatchPage() {
    * 每份 JD 都重算一次，不读 jd.keywords。
    * 那个字段是加 JD 当时的快照，画像改过之后就对不上了。
    *
-   * 排序用覆盖率而不是 analyzeJD 的 score。score 的分母是 max(6, 关键词数 * 0.55)，
-   * 有个 6 的硬下限，关键词少的 JD 会被压住。实测一份关键词全中的短 JD 得 83 分，
-   * 一份只中了一半的长 JD 得 100 分。覆盖率没有这个问题，恒在 0 到 1 之间。
+   * 排序用覆盖率，和 analyzeJD 的 score 是同一个口径（命中占比，沾边算四成）。
+   * 分数打平的 JD 再用命中条数、score 依次比较。
    */
   /** 标了方向、但该方向还没有简历版本的 JD，按方向汇总。 */
   const missingDirections = useMemo(() => {
@@ -393,8 +392,8 @@ export default function MatchPage() {
                   )}
 
                   <div className="tiny mt8">
-                    本地匹配度 {row.score}，沿用 JD 拆解器那套算法，分母带 6 的下限，跨 JD 不完全可比。
-                    这张榜的排序用的是上面的覆盖率。
+                    本地匹配度 {row.score}，按命中占比算，沾边的关键词算四成，和上面的覆盖率同一口径。
+                    这张榜的排序用的是覆盖率。
                   </div>
                 </div>
               ) : null}
@@ -411,7 +410,7 @@ export default function MatchPage() {
 
       <div className="tiny mt16">
         排序依据是关键词覆盖率，等于命中数除以该 JD 提取到的关键词数，跨 JD 可比。
-        展开里的本地匹配度沿用 JD 拆解器的算法，分母有 6 的下限，JD 关键词条数不同时只作参考。
+        本地匹配度在此基础上给沾边的关键词算四成，所以可能比覆盖率略高。
         两者都按本地规则算，不联网。
       </div>
     </>

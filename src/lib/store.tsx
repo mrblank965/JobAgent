@@ -26,6 +26,7 @@ import {
   type ResumeVariant,
 } from "@/types/application";
 import { DIRECTIONS } from "@/lib/career";
+import { SERVER_AI_KEY } from "@/lib/ai/resume";
 import { splitQuestions } from "@/lib/interviewBank";
 import type { RecognizedHeading } from "@/lib/parsers/resumeText";
 import type { ResumeData } from "@/types/analysis";
@@ -202,6 +203,8 @@ type StoreValue = {
   removeCustomQuestion: (index: number) => void;
   ai: AISettings;
   setAI: (next: AISettings) => void;
+  /** 服务器是否配置了内置模型（/api/config 返回 true）。纯静态部署时一直是 false。 */
+  serverAI: boolean;
 };
 
 const emptyProfile: Profile = {
@@ -347,6 +350,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, []);
   const [customQuestions, setCustomQuestions] = useState<{ q: string; a: string; level?: QuestionLevel }[]>([]);
   const [ai, setAI] = useState<AISettings>(emptyAI);
+  const [serverAI, setServerAI] = useState(false);
   const [storageReady, setStorageReady] = useState(false);
   const [storageError, setStorageError] = useState("");
 
@@ -380,6 +384,35 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
+  /**
+   * 问一下服务器有没有内置模型。纯静态部署没有这个接口，fetch 失败就保持零 Key 模式。
+   * 用户自己填过真实 Key 时不覆盖。
+   */
+  useEffect(() => {
+    let cancelled = false;
+
+    fetch("/api/config")
+      .then(async (response) => (response.ok ? ((await response.json()) as { serverAI?: unknown }) : null))
+      .then((config) => {
+        if (!cancelled && config?.serverAI === true) setServerAI(true);
+      })
+      .catch(() => {
+        // 没有服务器模型，保持零 Key 模式
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  /** 本地数据读完、且服务器有模型时，才把哨兵值填进 AI 设置。 */
+  useEffect(() => {
+    if (!serverAI || !storageReady) return;
+    setAI((current) =>
+      current.apiKey.trim().length > 0 ? current : { ...current, apiKey: SERVER_AI_KEY },
+    );
+  }, [serverAI, storageReady]);
+
   const snapshot = useMemo<WorkspaceSnapshot>(
     () => ({
       schemaVersion: WORKSPACE_SCHEMA_VERSION,
@@ -391,7 +424,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       answerBank,
       resumeDraft,
       customQuestions,
-      ai,
+      // 哨兵值只代表「用服务器模型」，不能写进本地快照，否则换到纯静态环境会一直以为连着。
+      ai: ai.apiKey === SERVER_AI_KEY ? { ...ai, apiKey: "" } : ai,
     }),
     [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft, customQuestions, ai],
   );
@@ -633,8 +667,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
       ai,
       setAI,
+      serverAI,
     };
-  }, [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft, customQuestions, setResumeDraft, storageReady, storageError, snapshot, ai]);
+  }, [profile, jds, apps, interviews, resumeVariants, answerBank, resumeDraft, customQuestions, setResumeDraft, storageReady, storageError, snapshot, ai, serverAI]);
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }

@@ -23,6 +23,15 @@ const SKILL_VERB_PATTERN = /(?:熟悉|掌握|精通|了解|具备|擅长)\s*([A-
 const VAGUE_KEYWORD = /较|很|非常|十分|能够|可以|接受|具备|良好|一定/;
 
 /**
+ * 只剩动词的候选词，不是技能名。
+ *
+ * 「具备扎实的财务会计基础，通过 CPA 会计」按逗号切开后，后半段会剩一个「通过」，
+ * 它会被当成关键词挂进匹配表，既占分母又显示成一个假缺口。
+ */
+const BARE_VERB =
+  /^(通过|熟练|使用|完成|参与|协助|负责|具备|掌握|熟悉|精通|了解|擅长|优先|加分|下列|以上)$/;
+
+/**
  * 职责行的开头动词。只在没写分区标题、只能逐行猜的时候用。
  * 不带"分析""研究""设计"这类两头都能用的词：它们也常出现在要求行开头（"分析能力强"）。
  */
@@ -266,12 +275,24 @@ function uniqueReqs(lines: string[]): string[] {
   return result;
 }
 
-/** 在简历正文里找这个关键词的出处，作为命中证据。 */
+/**
+ * 在简历正文里找这个关键词的出处，作为命中证据。
+ *
+ * 取关键词前后各一段，保证截出来的证据里能看见这个词。
+ * 原来直接取行首 60 个字，关键词在句尾的（比如一整条长要点）截出来就看不见了，
+ * 页面上会出现「命中某项，证据里却找不到这几个字」的情况。
+ */
 export function findEvidence(resumeText: string, keyword: string): string {
   if (!resumeText) return "";
 
   for (const line of resumeText.split(/\n+/)) {
-    if (line.includes(keyword)) return line.trim().slice(0, 60);
+    const at = line.indexOf(keyword);
+    if (at < 0) continue;
+
+    const start = Math.max(0, at - 24);
+    const end = Math.min(line.length, at + keyword.length + 36);
+    const snippet = line.slice(start, end).trim();
+    return `${start > 0 ? "…" : ""}${snippet}${end < line.length ? "…" : ""}`;
   }
   return "";
 }
@@ -315,7 +336,7 @@ export function analyzeJD(raw: string, skills: string[], resumeText: string): JD
     for (const part of parts) {
       // 超过 6 个字的多半是整句，不是技能词；带程度副词的也不是。
       if (part.length < 2 || part.length > 6) continue;
-      if (VAGUE_KEYWORD.test(part)) continue;
+      if (VAGUE_KEYWORD.test(part) || BARE_VERB.test(part)) continue;
       if (!counted.some((item) => item.k === part)) counted.push({ k: part, n: 1 });
     }
   }
@@ -351,12 +372,18 @@ export function analyzeJD(raw: string, skills: string[], resumeText: string): JD
   const missing: string[] = [];
 
   for (const keyword of keywords) {
-    const direct = skills.some(
+    const inSkills = skills.some(
       (skill) => skill === keyword || skill.includes(keyword) || keyword.includes(skill),
     );
+    const evidence = findEvidence(resumeText, keyword);
 
-    if (direct) {
-      hits.push({ k: keyword, ev: findEvidence(resumeText, keyword) || "技能库已含" });
+    /**
+     * 以前只比画像里的技能标签，简历正文写了「参与尽职调查」也照样算缺口，
+     * 结果一份专门对着 JD 写的简历也被判成差距较大。
+     * 正文里对得上的一律算命中，证据就取那一行原文；标签命中但没有原文时退回「技能库已含」。
+     */
+    if (inSkills || evidence) {
+      hits.push({ k: keyword, ev: evidence || "技能库已含" });
       continue;
     }
 
@@ -370,10 +397,15 @@ export function analyzeJD(raw: string, skills: string[], resumeText: string): JD
     else missing.push(keyword);
   }
 
+  /**
+   * 匹配度按关键词覆盖率算，就是命中占比，沾边的一条算四成。
+   *
+   * 原来的分母是 max(6, 关键词数 * 0.55)，等于关键词命中一半就算满分，
+   * 页面上很容易出现「100 分」却同时列出七八个缺口，前后对不上。
+   * 现在分母就是关键词条数，和岗位匹配页的覆盖率是同一个口径。
+   */
   const score = keywords.length
-    ? Math.round(
-        Math.min(1, hits.length / Math.max(6, keywords.length * 0.55) + partial.length * 0.04) * 100,
-      )
+    ? Math.round(Math.min(1, (hits.length + partial.length * 0.4) / keywords.length) * 100)
     : 0;
 
   return {
@@ -628,14 +660,16 @@ const COMPANY_LABELS = "公司名称|公司名|公司";
 const TITLE_LABELS = "招聘岗位|岗位名称|职位名称|岗位|职位";
 
 /**
- * 读带字段标签的值，支持两种写法：
+ * 读带字段标签的值，支持三种写法：
  * 【公司名称】华泰证券 —— 值在括号后面
  * 【公司：华泰证券】 —— 值在括号里面
+ * 公司：中金公司 —— 不带括号，整行就是字段
  */
 function readLabeledField(raw: string, labels: string): string {
   const inside = new RegExp(`【\\s*(?:${labels})\\s*[:：]\\s*([^【】\\n]+?)\\s*】`).exec(raw)?.[1];
   const after = new RegExp(`【\\s*(?:${labels})\\s*】\\s*[:：]?\\s*([^\\n【】]+)`).exec(raw)?.[1];
-  return (inside ?? after ?? "").trim();
+  const plain = new RegExp(`^(?:${labels})\\s*[:：]\\s*([^\\n【】]{2,40})$`, "im").exec(raw)?.[1];
+  return (inside ?? after ?? plain ?? "").trim();
 }
 
 /**

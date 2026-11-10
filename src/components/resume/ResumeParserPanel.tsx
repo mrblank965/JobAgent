@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import { DIRECTIONS } from "@/lib/career";
+import {
+  ParseError,
+  parseResumeFile,
+  parseResumeTextInput,
+  type ParsedResume,
+} from "@/lib/parsers/parseClient";
 import { DEGREE_LABELS, type RecognizedHeading } from "@/lib/parsers/resumeText";
 import { useStore } from "@/lib/store";
 import type { ResumeData } from "@/types/analysis";
@@ -81,48 +87,12 @@ export function ResumeParserPanel() {
     setResume(next);
   }
 
-  /** 两条入口共用的请求逻辑：发出去、看状态码、取结果。 */
-  async function sendRequest(body: BodyInit, headers?: HeadersInit) {
-    const response = await fetch("/api/parse-resume", { method: "POST", headers, body });
-
-    let payload: unknown = null;
-    try {
-      payload = await response.json();
-    } catch {
-      payload = null;
-    }
-
-    if (!response.ok) {
-      const message = (payload as { error?: unknown } | null)?.error;
-      setError(
-        typeof message === "string" && message.length > 0
-          ? message
-          : `请求失败，服务器返回状态码 ${response.status}。`,
-      );
-      setResume(null);
-      return;
-    }
-
-    const parsed = (payload as { resume?: ResumeData } | null)?.resume;
-    if (!parsed) {
-      setError("服务器返回了无法识别的结果，请重试。");
-      setResume(null);
-      return;
-    }
-
-    // 上传那条路会带回提取出的文字，回填到文本框，让用户看见解析的依据。
-    const returned = (payload as { text?: unknown } | null)?.text;
-    if (typeof returned === "string" && returned.length > 0) {
-      setText(returned);
-    }
-
-    const returnedHeadings = (payload as { headings?: unknown } | null)?.headings;
-    setHeadings(Array.isArray(returnedHeadings) ? (returnedHeadings as RecognizedHeading[]) : []);
-
-    const returnedSuspected = (payload as { suspectedHeadings?: unknown } | null)?.suspectedHeadings;
-    setSuspectedHeadings(Array.isArray(returnedSuspected) ? (returnedSuspected as string[]) : []);
-
-    setResume(parsed);
+  /** 两条入口共用：把解析结果写回页面状态。 */
+  function applyParsed(parsed: ParsedResume) {
+    setText(parsed.text);
+    setHeadings(parsed.headings);
+    setSuspectedHeadings(parsed.suspectedHeadings);
+    setResume(parsed.resume);
   }
 
   async function handleSubmit() {
@@ -132,9 +102,9 @@ export function ResumeParserPanel() {
     setError("");
 
     try {
-      await sendRequest(JSON.stringify({ resumeText: text }), { "Content-Type": "application/json" });
-    } catch {
-      setError("无法连接服务器，请确认开发服务器仍在运行，然后重试。");
+      applyParsed(parseResumeTextInput(text));
+    } catch (error) {
+      setError(error instanceof ParseError ? error.message : "解析失败，请重试。");
       setResume(null);
     } finally {
       setLoading(false);
@@ -149,11 +119,9 @@ export function ResumeParserPanel() {
     setFileName(file.name);
 
     try {
-      const formData = new FormData();
-      formData.append("resume", file);
-      await sendRequest(formData);
-    } catch {
-      setError("无法连接服务器，请确认开发服务器仍在运行，然后重试。");
+      applyParsed(await parseResumeFile(file));
+    } catch (error) {
+      setError(error instanceof ParseError ? error.message : "读取文件失败，请换一个文件重试。");
       setResume(null);
     } finally {
       setExtracting(false);

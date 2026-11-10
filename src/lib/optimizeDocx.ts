@@ -4,9 +4,9 @@ import { hasHints, stripHints, tokenizeHints } from "@/lib/resumeTemplate";
 /**
  * 把简历正文排成一份 Word 文档。
  *
- * 版式按需求单执行：
- * - Letter 纸（8.5 × 11 英寸），上下边距 0.5 / 0.4 cm，左右 1.27 cm
- * - 西文与数字 Times New Roman，中文楷体，全文黑色
+ * 版式：
+ * - A4 纸（11906 × 16838 twip），四边边距 1000 twip ≈ 1.76 cm
+ * - 西文与数字 Times New Roman，中文宋体，全文黑色
  * - 固定行距、段前段后 0（姓名行、联系方式行例外）
  * - 姓名加粗居中；联系方式居中；一级标题加粗 + 下框线 0.5 磅 #666666
  * - 条目标题行用制表位做「左 / 中 / 右」三段对齐，不用空格凑
@@ -19,20 +19,20 @@ import { hasHints, stripHints, tokenizeHints } from "@/lib/resumeTemplate";
  * 几条实现上的取舍：
  * 1. 模板提示（〔〕里的字）原来是灰色，需求要求「全文不使用任何彩色文字」，
  *    改成黑色斜体——仍然能和正文区分，但不违反黑白要求。
- * 2. 教育条目有「学校 / 院系｜专业 / 起止 / 学历」四段，需求给的中间制表位
- *    只有一个，装不下四段，所以教育单独用三个制表位（见 EDUCATION_TABS）。
+ * 2. 教育条目原本拆成「学校 / 院系｜专业 / 起止 / 学历」四段，四列挤在一行
+ *    不好看，现在把学历并进中间那段，写法是「商学院 · 经济学硕士」。
  * 3. 能否压进一页靠 estimateDocxLines 估算，不是真的排版渲染，
- *    和 Word 的实际结果可能差一两行。
+ *    估算时按 88% 折行、再留 4% 高度余量，宁可提前收紧也不让它溢出到第二页。
  */
 
-/** Letter 尺寸，单位 twip（1 磅 = 20 twip）：8.5 × 11 英寸。 */
-const PAGE_WIDTH = 12240;
-const PAGE_HEIGHT = 15840;
+/** A4 尺寸，单位 twip（1 磅 = 20 twip）：210 × 297 mm。 */
+const PAGE_WIDTH = 11906;
+const PAGE_HEIGHT = 16838;
 
-/** 页边距：上 0.5 cm、下 0.4 cm、左右 1.27 cm（1 cm ≈ 567 twip）。 */
-const MARGIN_TOP = 283;
-const MARGIN_BOTTOM = 227;
-const MARGIN_SIDE = 720;
+/** 页边距四边都是 1000 twip ≈ 1.76 cm。 */
+const MARGIN_TOP = 1000;
+const MARGIN_BOTTOM = 1000;
+const MARGIN_SIDE = 1000;
 
 /** 正文可用高度与宽度（宽度单位：磅）。 */
 const AVAILABLE_HEIGHT = PAGE_HEIGHT - MARGIN_TOP - MARGIN_BOTTOM;
@@ -42,33 +42,36 @@ const TEXT_WIDTH_PT = (PAGE_WIDTH - MARGIN_SIDE * 2) / 20;
  * 折行安全系数。
  *
  * Word 会在标点和西文单词处断行，实际每行装的字比"理论最大字数"少一两成。
- * 按 0.9 折算，宁可估多了提前压缩，也不要估少了导出成两页。
+ * 按 0.88 折算，宁可估多了提前压缩，也不要估少了导出成两页。
  */
-const WRAP_SAFETY = 0.9;
+const WRAP_SAFETY = 0.88;
+
+/**
+ * 估算结果再留 4% 余量。
+ *
+ * 估算是按字数折算的，Word 真正排版时会因为标点挤压、字距微调多出一两行。
+ * 只估到"刚好等于可用高度"的话，真实排版往往就溢出了，所以判定能不能装进一页
+ * 时要求高度不超过可用高度的 96%。
+ */
+const FIT_MARGIN = 0.96;
 
 /** 姓名、联系方式行前后的间距，单位 twip：9 磅 = 180。 */
 const GAP_NAME = 180;
 
 /**
- * 制表位，单位 twip。
- * 中间 11.3 cm ≈ 6407，右端 18.4 cm ≈ 10433。
+ * 制表位，单位 twip。正文宽度 11906-2000=9906，所以右端停在 9906。
+ * 中间那条放在 6200，比正中偏右一点，留给左边的公司名。
  */
 const ENTRY_TABS = [
-  { type: "center" as const, position: 6407 },
-  { type: "right" as const, position: 10433 },
-];
-
-/** 教育条目多一列「学历」，所以在中间再加一个制表位。 */
-const EDUCATION_TABS = [
-  { type: "center" as const, position: 6407 },
-  { type: "center" as const, position: 8600 },
-  { type: "right" as const, position: 10433 },
+  { type: "center" as const, position: 6200 },
+  { type: "right" as const, position: 9906 },
 ];
 
 /** 要点行的悬挂缩进：0.38 cm ≈ 215 twip。 */
 const BULLET_INDENT = 215;
 
-const FONT = { ascii: "Times New Roman", hAnsi: "Times New Roman", eastAsia: "楷体" };
+/** 中文用宋体，西文和数字用 Times New Roman（eastAsia 必须单列，否则中文会被西文字体渲染）。 */
+const FONT = { ascii: "Times New Roman", hAnsi: "Times New Roman", eastAsia: "宋体" };
 
 /** 可选板块的标题尾巴，例如「校园经历（可选择）」。 */
 const OPTIONAL_TITLE = /[（(]\s*可选择?\s*[）)]$/;
@@ -85,9 +88,9 @@ export const LAYOUTS: Record<
   DocxDensity,
   { body: number; entry: number; heading: number; name: number; contact: number; line: number; nameLine: number }
 > = {
-  strict: { body: 21, entry: 21, heading: 24, name: 32, contact: 22, line: 320, nameLine: 400 },
-  compact: { body: 20, entry: 20, heading: 22, name: 30, contact: 21, line: 290, nameLine: 380 },
-  tight: { body: 19, entry: 19, heading: 21, name: 28, contact: 20, line: 260, nameLine: 340 },
+  strict: { body: 21, entry: 21, heading: 24, name: 32, contact: 21, line: 280, nameLine: 400 },
+  compact: { body: 20, entry: 20, heading: 23, name: 30, contact: 20, line: 262, nameLine: 380 },
+  tight: { body: 19, entry: 19, heading: 21, name: 28, contact: 19, line: 244, nameLine: 340 },
 };
 
 const DATE_TOKEN = "\\d{4}\\s*(?:[.\\-/年]\\s*\\d{1,2})?";
@@ -209,8 +212,15 @@ export function estimateDocxLines(
   if (name) height += layout.nameLine + GAP_NAME * 2;
   if (contact) height += addLines(formatContactLine(contact), layout.contact / 2, TEXT_WIDTH_PT) + GAP_NAME * 2;
 
+  /**
+   * 条目行（公司 / 部门职位 / 日期）挤在一行，估宽超过版心就会折成两行。
+   * 以前这里固定按一行算，公司名长一点就会少算一行，这正是导出超页的来源之一。
+   */
+  const entryLines = (value: string, size: number) =>
+    Math.max(1, Math.ceil(textWidthPt(value, size) / (TEXT_WIDTH_PT * WRAP_SAFETY))) * layout.line;
+
   for (const block of blocks) {
-    height += layout.line + 20; // 标题 + 下框线
+    height += layout.line + 40; // 标题行 + 下框线占用的间距
     const isProse = PROSE_SECTIONS.includes(cleanTitle(block.title));
 
     for (let index = 0; index < block.body.length; index += 1) {
@@ -220,13 +230,14 @@ export function estimateDocxLines(
       const parts = hasMarker || isProse ? null : splitEntryParts(content);
 
       if (parts) {
-        height += layout.line;
+        const merged = [parts.left, parts.middle, parts.extra].filter(Boolean).join(" ");
+        height += entryLines(`${merged} ${parts.date}`, layout.entry / 2);
         continue;
       }
 
       const isHeader = !hasMarker && !isProse && /^[-•·]\s*/.test(block.body[index + 1] ?? "");
       if (isHeader) {
-        height += layout.line;
+        height += entryLines(content, layout.entry / 2);
         continue;
       }
 
@@ -236,9 +247,10 @@ export function estimateDocxLines(
     }
   }
 
-  const capacity = Math.floor(AVAILABLE_HEIGHT / layout.line);
+  const usable = AVAILABLE_HEIGHT * FIT_MARGIN;
+  const capacity = Math.floor(usable / layout.line);
   const lines = Math.ceil(height / layout.line);
-  return { lines, capacity, fits: height <= AVAILABLE_HEIGHT };
+  return { lines, capacity, fits: height <= usable };
 }
 
 /** 从 strict 开始逐档收紧，返回第一个装得下的档位；都装不下就用最紧的。 */
@@ -297,6 +309,7 @@ export async function buildResumeDocx(
       new Paragraph({
         alignment: AlignmentType.CENTER,
         spacing: { line: layout.nameLine, lineRule: LineRuleType.EXACT, before: GAP_NAME, after: GAP_NAME },
+        widowControl: false,
         children: runsOf(name, { bold: true, size: layout.name }),
       }),
     );
@@ -307,6 +320,7 @@ export async function buildResumeDocx(
       new Paragraph({
         alignment: AlignmentType.CENTER,
         spacing: { line: layout.line, lineRule: LineRuleType.EXACT, before: GAP_NAME, after: GAP_NAME },
+        widowControl: false,
         children: runsOf(formatContactLine(contact), { size: layout.contact }),
       }),
     );
@@ -320,6 +334,7 @@ export async function buildResumeDocx(
     children.push(
       new Paragraph({
         spacing: { line: layout.line, lineRule: LineRuleType.EXACT, before: 0, after: 0 },
+        widowControl: false,
         border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "666666", space: 1 } },
         children: [
           new TextRun({
@@ -341,22 +356,25 @@ export async function buildResumeDocx(
       const parts = hasMarker || isProseBlock ? null : splitEntryParts(content);
 
       if (parts) {
-        const tabs = isEducation ? EDUCATION_TABS : ENTRY_TABS;
+        // 教育条目原来把「学历」单独塞到最右一列，四段挤在一行很别扭，
+        // 现在并进中间那一段，写成「商学院 · 经济学硕士」。
+        const middleText = isEducation && parts.extra
+          ? [parts.middle, parts.extra].filter(Boolean).join(" · ")
+          : parts.middle;
+
         const entryRuns: InstanceType<typeof TextRun>[] = [
           new TextRun({ text: parts.left, bold: true, size: layout.entry, font: FONT }),
         ];
-        if (parts.middle) {
-          entryRuns.push(tab(), new TextRun({ text: parts.middle, bold: true, size: layout.entry, font: FONT }));
+        if (middleText) {
+          entryRuns.push(tab(), new TextRun({ text: middleText, bold: true, size: layout.entry, font: FONT }));
         }
         entryRuns.push(tab(), new TextRun({ text: parts.date, bold: true, size: layout.entry, font: FONT }));
-        if (isEducation && parts.extra) {
-          entryRuns.push(tab(), new TextRun({ text: parts.extra, bold: true, size: layout.entry, font: FONT }));
-        }
 
         children.push(
           new Paragraph({
             spacing: { line: layout.line, lineRule: LineRuleType.EXACT, before: 0, after: 0 },
-            tabStops: tabs.map((item) => ({
+            widowControl: false,
+            tabStops: ENTRY_TABS.map((item) => ({
               type: item.type === "center" ? TabStopType.CENTER : TabStopType.RIGHT,
               position: item.position,
             })),
@@ -372,6 +390,7 @@ export async function buildResumeDocx(
         children.push(
           new Paragraph({
             spacing: { line: layout.line, lineRule: LineRuleType.EXACT, before: 0, after: 0 },
+            widowControl: false,
             children: [new TextRun({ text: content, bold: true, size: layout.entry, font: FONT })],
           }),
         );
@@ -397,6 +416,7 @@ export async function buildResumeDocx(
         new Paragraph({
           alignment: asBullet ? AlignmentType.JUSTIFIED : undefined,
           spacing: { line: layout.line, lineRule: LineRuleType.EXACT, before: 0, after: 0 },
+          widowControl: false,
           ...(asBullet ? { indent: { left: BULLET_INDENT, hanging: BULLET_INDENT } } : {}),
           children: asBullet
             ? [new TextRun({ text: "• ", size: layout.body, font: FONT }), ...bodyRuns]

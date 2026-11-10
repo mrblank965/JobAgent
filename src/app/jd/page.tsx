@@ -7,6 +7,8 @@ import { ItemList } from "@/components/jd/ItemList";
 import { KbMoreInfo } from "@/components/jd/KbMoreInfo";
 import type { JDDutyBreakdown } from "@/lib/ai/jd";
 import type { KbMatch } from "@/lib/kb/types";
+import { matchKb } from "@/lib/kb/client";
+import { ocrImages } from "@/lib/ocrBrowser";
 import { DIRECTIONS, buildResumeCandidate, guessDirectionFromJD } from "@/lib/career";
 import { analyzeJD, extractJDInfo } from "@/lib/jd";
 import { useStore } from "@/lib/store";
@@ -161,40 +163,33 @@ export default function JDPage() {
     }
   }
 
-  /** 把截图交给服务端做文字识别，成功返回文字，失败返回空串。 */
+  /** 把截图交给浏览器端识别，成功返回文字，失败返回空串。 */
   async function recognizeShots(): Promise<string> {
     setOcrBusy(true);
     setNotice(`正在识别 ${shots.length} 张截图，首次使用要先下载中文语言包，请稍候……`);
 
     try {
-      const formData = new FormData();
-      for (const shot of shots) formData.append("images", await enhanceForOcr(shot.file));
+      const prepared = await Promise.all(shots.map((shot) => enhanceForOcr(shot.file)));
+      const result = await ocrImages(prepared);
 
-      const response = await fetch("/api/ocr", { method: "POST", body: formData });
-      const payload = (await response.json()) as {
-        text?: string;
-        error?: string;
-        pages?: { index: number; chars: number; confidence: number }[];
-      };
-
-      if (!response.ok || typeof payload.text !== "string") {
-        setNotice(payload.error ?? "识别失败，请换清晰的截图重试。");
+      if (result.text.trim().length === 0) {
+        setNotice("识别失败，请换清晰的截图重试。");
         return "";
       }
 
-      setRaw(payload.text);
+      setRaw(result.text);
 
-      const weak = (payload.pages ?? []).filter((page) => page.confidence < 70);
-      const base = `已识别 ${payload.pages?.length ?? 0} 张，共 ${payload.text.length} 个字。`;
+      const weak = result.pages.filter((page) => page.confidence < 70);
+      const base = `已识别 ${result.pages.length} 张，共 ${result.text.length} 个字。`;
       setNotice(
         weak.length > 0
           ? `${base} 第 ${weak.map((page) => page.index).join("、")} 张置信度偏低，错字可能较多。`
           : base,
       );
 
-      return payload.text;
+      return result.text;
     } catch {
-      setNotice("无法连接服务器，请确认开发服务器仍在运行。");
+      setNotice("识别失败，请换清晰的截图重试。");
       return "";
     } finally {
       setOcrBusy(false);
@@ -296,21 +291,13 @@ export default function JDPage() {
 
     let cancelled = false;
 
-    // 配了 Key 就交给服务端用大模型语义匹配（岗位名不同、职责同类也能命中），
-    // 没配 Key 就退回词表匹配。
-    const aiKey = ai.apiKey.trim();
-    const aiPayload = aiKey.length > 0 ? { apiBase: ai.apiBase, apiKey: aiKey, model: ai.model } : undefined;
-
-    fetch("/api/kb/match", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ jd: openJdRaw, title: openJdTitle, ai: aiPayload }),
-    })
-      .then((response) => response.json())
-      .then((payload: { match?: KbMatch }) => {
+    // 配了 Key 就用大模型语义匹配（岗位名不同、职责同类也能命中），
+    // 没配 Key 就退回词表匹配。整个匹配在浏览器里跑。
+    matchKb(openJdRaw, openJdTitle, ai)
+      .then((match) => {
         if (cancelled) return;
-        // 接口没给结果也落一条空匹配，界面按「未覆盖」展示，别一直转圈
-        setKbMatches((prev) => ({ ...prev, [openJdId]: payload.match ?? emptyKbMatch }));
+        // 没给结果也落一条空匹配，界面按「未覆盖」展示，别一直转圈
+        setKbMatches((prev) => ({ ...prev, [openJdId]: match ?? emptyKbMatch }));
       })
       .catch(() => {
         // 知识库读不到不该挡住拆解，静默降级为「未覆盖」
@@ -770,8 +757,8 @@ export default function JDPage() {
           <div
             onDrop={handleDrop}
             onDragOver={(event) => event.preventDefault()}
-            onClick={() => fileRef.current?.click()}
             style={{
+              position: "relative",
               marginTop: 6,
               border: "1px dashed var(--border)",
               borderRadius: 8,
@@ -781,25 +768,33 @@ export default function JDPage() {
               cursor: "pointer",
             }}
           >
+            <input
+              ref={fileRef}
+              type="file"
+              accept="image/*"
+              multiple
+              disabled={ocrBusy}
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                opacity: 0,
+                cursor: ocrBusy ? "not-allowed" : "pointer",
+              }}
+              onChange={(event) => {
+                // 先复制成数组再清空：input.files 是活对象，value 清空后长度就变成 0 了
+                const files = Array.from(event.target.files ?? []);
+                event.target.value = "";
+                if (files.length > 0) void addShots(files);
+              }}
+            />
             <div style={{ fontSize: 22, lineHeight: 1.2 }}>🖼</div>
             <div className="tiny" style={{ marginTop: 6 }}>
               点这里选图片，或者把图片拖进来
             </div>
             <div className="tiny">一次最多 {MAX_SHOTS} 张，按下拆解时先转成文字</div>
           </div>
-          <input
-            ref={fileRef}
-            type="file"
-            accept="image/*"
-            multiple
-            className="sr-only"
-            disabled={ocrBusy}
-            onChange={(event) => {
-              const files = event.target.files;
-              event.target.value = "";
-              if (files && files.length > 0) void addShots(Array.from(files));
-            }}
-          />
 
           <label className="fl">粘贴图片或者文字</label>
           <textarea
